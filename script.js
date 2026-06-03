@@ -1,63 +1,34 @@
-const templateQuestions = [
-  {
-    q: "Solve: x + 5 = 10",
-    options: ["3", "5", "7"],
-    answer: "5",
-    explanation: "Subtract 5 from both sides: x = 5"
-  },
-  {
-    q: "Solve: 2x = 10",
-    options: ["2", "5", "10"],
-    answer: "5",
-    explanation: "Divide both sides by 2: x = 5"
-  },
-  {
-    q: "Solve: x - 3 = 4",
-    options: ["1", "7", "10"],
-    answer: "7",
-    explanation: "Add 3 to both sides: x = 7"
-  }
-];
+function checkTemplateQuiz() {
+    let score = 0;
+    let feedback = "";
 
-let userAnswers = [];
+    templateQuestions.forEach((item, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
 
-function loadQuiz() {
-  const quizDiv = document.getElementById("quiz");
-
-  templateQuestions.forEach((item, index) => {
-    let html = `<p>${item.q}</p>`;
-
-    item.options.forEach(opt => {
-      html += `
-        <label>
-          <input type="radio" name="q${index}" value="${opt}">
-          ${opt}
-        </label><br>
-      `;
+        if (selected && selected.value === item.answer) {
+            score++;
+        } else {
+            feedback += item.explanation + "\n";
+        }
     });
 
-    quizDiv.innerHTML += html + "<br>";
-  });
+    // Show score
+    document.getElementById("score").innerText =
+        "Score: " + score + "/" + templateQuestions.length;
+
+    document.getElementById("feedback").innerText = feedback;
+
+    // 🔥 SAVE PROGRESS
+    localStorage.setItem("solving_equations_score", score);
 }
+window.onload = function () {
+    loadQuiz();
 
-function checkTemplateQuiz() {
-  let score = 0;
-  let feedback = "";
+    // Load saved score
+    const saved = localStorage.getItem("solving_equations_score");
 
-  templateQuestions.forEach((item, index) => {
-    const selected = document.querySelector(`input[name="q${index}"]:checked`);
-
-    if (selected && selected.value === item.answer) {
-      score++;
-    } else {
-      feedback += item.explanation + "\n";
+    if (saved !== null) {
+        document.getElementById("score").innerText =
+            "Previous Score: " + saved + "/10";
     }
-  });
-
-  document.getElementById("score").innerText =
-    "Score: " + score + "/" + templateQuestions.length;
-
-  document.getElementById("feedback").innerText = feedback;
-}
-
-window.onload = loadQuiz;
+};
