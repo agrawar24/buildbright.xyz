@@ -39,7 +39,10 @@ function checkTemplateQuiz() {
     document.getElementById("feedback").innerText = feedback;
 
     // save progress
-    localStorage.setItem("solving_equations_score", score);
+    const params = new URLSearchParams(window.location.search);
+    const lessonKey = params.get("id");
+
+    localStorage.setItem(lessonKey + "_score", score);
 
     updateProgress();
 }
