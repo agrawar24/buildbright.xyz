@@ -53,6 +53,7 @@ const courses = {
 };
 
 function checkTemplateQuiz() {
+    localStorage.setItem(lessonKey + "_score", score);
     let score = 0;
     let feedback = "";
 
@@ -81,6 +82,18 @@ function checkTemplateQuiz() {
         "last_lesson",
         getCurrentLessonId()
     );
+    setTimeout(() => {
+        const course = courses.algebra.lessons;
+        const current = getCurrentLessonId();
+        const index = course.indexOf(current);
+
+        if (index !== -1 && index < course.length - 1) {
+            const next = course[index + 1];
+            window.location.href = "lesson.html?id=" + next;
+        } else {
+            window.location.href = "algebra-topics.html";
+        }
+    }, 1000);
 
 
 }
