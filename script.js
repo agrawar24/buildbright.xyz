@@ -53,11 +53,20 @@ const courses = {
 };
 
 function checkTemplateQuiz() {
+
     localStorage.setItem(lessonKey + "_score", score);
+
+    localStorage.setItem("last_lesson", getCurrentLessonId());
+
+    setTimeout(goToNextLesson, 1000);
+    
     let score = 0;
+    
     let feedback = "";
 
+    
     templateQuestions.forEach((item, index) => {
+    
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
 
         if (selected && selected.value === item.answer) {
@@ -203,6 +212,20 @@ window.addEventListener("load", () => {
     checkBadge();
     showBadge();
     updateStreak();
+    function goToNextLesson() {
+        const subject = "algebra";
+        const course = getCourse(subject);
+
+        const current = getCurrentLessonId();
+        const index = course.indexOf(current);
+
+        if (index !== -1 && index < course.length - 1) {
+            const next = course[index + 1];
+            window.location.href = "lesson.html?id=" + next;
+        } else {
+            window.location.href = "algebra-topics.html";
+        }
+    }
 });
 
 function checkBadge() {
@@ -303,4 +326,28 @@ function getSubjectProgress(subject) {
     });
 
     return Math.round((done / (course.lessons.length || 1)) * 100);
+}
+
+function getCourse(subject) {
+    return courses[subject]?.lessons || [];
+}
+
+function setupNextLesson() {
+    const subject = "algebra";
+    const course = getCourse(subject);
+
+    const current = getCurrentLessonId();
+    const index = course.indexOf(current);
+
+    const btn = document.getElementById("next-lesson");
+    if (!btn) return;
+
+    if (index !== -1 && index < course.length - 1) {
+        const nextLesson = course[index + 1];
+        btn.href = "lesson.html?id=" + nextLesson;
+        btn.innerText = "Next Lesson →";
+    } else {
+        btn.href = "algebra-topics.html";
+        btn.innerText = "Course Complete 🎉";
+    }
 }
