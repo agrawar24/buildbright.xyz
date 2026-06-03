@@ -86,3 +86,49 @@ body.home {
     color: white;
     font-family: Arial, sans-serif;
 }
+
+.container {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+#streak {
+    font-size: 18px;
+    margin: 10px 0 20px 0;
+}
+
+.card {
+    background: #121212;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 18px;
+    margin: 16px 0;
+    text-align: left;
+}
+
+.card h2 {
+    margin: 0 0 8px 0;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
