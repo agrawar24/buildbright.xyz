@@ -130,3 +130,4 @@ window.addEventListener("load", () => {
     loadLesson();
     updateProgress();
 });
+
