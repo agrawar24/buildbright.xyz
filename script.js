@@ -72,29 +72,54 @@ function loadQuiz() {
 }
 
 function updateProgress() {
-    const eqScore = localStorage.getItem("equations_score");
+    const eq = localStorage.getItem("equations_score");
+    const ineq = localStorage.getItem("inequalities_score");
 
-    const status = document.getElementById("eq-status");
-    const bar = document.getElementById("eq-bar");
+    let completed = 0;
+    let total = 2;
 
-    if (eqScore !== null) {
-        const score = Number(eqScore);
+    // Equations
+    if (eq !== null) {
+        completed++;
 
-        status.innerText = "Completed ✔ Score: " + score + "/10";
-        status.style.color = "lime";
+        const status = document.getElementById("eq-status");
+        const bar = document.getElementById("eq-bar");
 
-        if (bar) {
-            bar.value = score;
+        if (status) {
+            status.innerText = "Completed ✔ Score: " + eq + "/10";
+            status.style.color = "lime";
         }
 
-        // unlock next topics
-        const ineq = document.getElementById("ineq-status");
-        if (ineq) {
-            ineq.innerText = "Unlocked ✔";
-            ineq.style.color = "lime";
+        if (bar) bar.value = eq;
+    }
+
+    // Inequalities
+    if (ineq !== null) {
+        completed++;
+
+        const status = document.getElementById("ineq-status");
+
+        if (status) {
+            status.innerText = "Completed ✔";
+            status.style.color = "lime";
         }
-    } else {
-        if (bar) bar.value = 0;
+    }
+
+    // Unlock next
+    if (eq !== null) {
+        const func = document.getElementById("func-status");
+        if (func) {
+            func.innerText = "Unlocked ✔";
+            func.style.color = "lime";
+        }
+    }
+
+    // 🔥 overall progress %
+    const percent = Math.round((completed / total) * 100);
+
+    const overall = document.getElementById("overall");
+    if (overall) {
+        overall.innerText = "Progress: " + percent + "%";
     }
 }
 window.addEventListener("load", () => {
