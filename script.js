@@ -1,3 +1,24 @@
+const lessons = {
+    "equations": {
+        title: "Solving Equations",
+        explanation: "To solve equations, isolate x step by step.",
+        questions: [
+            { q: "x + 3 = 7", options: ["2", "4", "6"], answer: "4", explanation: "Subtract 3" },
+            { q: "2x = 10", options: ["2", "5", "10"], answer: "5", explanation: "Divide by 2" }
+        ]
+    },
+
+    // 👉 ADD THIS BELOW (do NOT delete equations)
+    "inequalities": {
+        title: "Inequalities",
+        explanation: "Solve like equations, but flip sign when multiplying/dividing by negatives.",
+        questions: [
+            { q: "x + 2 > 5", options: ["1", "2", "3"], answer: "3", explanation: "Subtract 2" },
+            { q: "2x < 10", options: ["3", "5", "6"], answer: "5", explanation: "Divide by 2" }
+        ]
+    }
+};
+
 function checkTemplateQuiz() {
     let score = 0;
     let feedback = "";
@@ -69,9 +90,7 @@ function updateProgress() {
         }
     }
 }
-
-// single clean startup
 window.addEventListener("load", () => {
-    loadQuiz();
+    loadLesson();
     updateProgress();
 });
