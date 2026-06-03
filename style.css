@@ -64,3 +64,25 @@ progress {
     color: white;
     border: 1px solid #333;
 }
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    color: white;
+    border: 1px solid #333;
+}
+
+body.home {
+    background: #0b0b0b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
