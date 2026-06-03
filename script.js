@@ -169,4 +169,37 @@ window.addEventListener("load", () => {
     updateHomeProgress();
     setupContinueButton();
     setupNextLesson();
+    checkBadge();
+    showBadge();
+    
 });
+
+
+function checkBadge() {
+    const algebra = courses.algebra.lessons;
+
+    let done = 0;
+
+    algebra.forEach(id => {
+        const score = localStorage.getItem(id + "_score");
+        if (score !== null) done++;
+    });
+
+    const badgeKey = "algebra_badge";
+
+    if (done === algebra.length) {
+        localStorage.setItem(badgeKey, "true");
+    }
+}
+
+function showBadge() {
+    const badge = localStorage.getItem("algebra_badge");
+    const el = document.getElementById("algebra-badge");
+
+    if (!el) return;
+
+    if (badge === "true") {
+        el.innerText = "🏆 Algebra Completed!";
+        el.style.color = "gold";
+    }
+}
