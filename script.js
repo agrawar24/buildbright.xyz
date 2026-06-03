@@ -72,25 +72,29 @@ function loadQuiz() {
 }
 
 function updateProgress() {
-    const score = localStorage.getItem("solving_equations_score");
-    const status = document.getElementById("eq-status");
+    const eqScore = localStorage.getItem("equations_score");
 
-    if (score && status) {
+    const status = document.getElementById("eq-status");
+    const bar = document.getElementById("eq-bar");
+
+    if (eqScore !== null) {
+        const score = Number(eqScore);
+
         status.innerText = "Completed ✔ Score: " + score + "/10";
         status.style.color = "lime";
 
-        const ineq = document.getElementById("ineq-status");
-        const func = document.getElementById("func-status");
+        if (bar) {
+            bar.value = score;
+        }
 
+        // unlock next topics
+        const ineq = document.getElementById("ineq-status");
         if (ineq) {
             ineq.innerText = "Unlocked ✔";
             ineq.style.color = "lime";
         }
-
-        if (func) {
-            func.innerText = "Unlocked ✔";
-            func.style.color = "lime";
-        }
+    } else {
+        if (bar) bar.value = 0;
     }
 }
 window.addEventListener("load", () => {
