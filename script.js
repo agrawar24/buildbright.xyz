@@ -20,10 +20,19 @@ const lessons = {
 };
 const courses = {
     algebra: {
-        total: 2,
+        name: "Algebra",
         lessons: ["equations", "inequalities"]
+    },
+    geometry: {
+        name: "Geometry",
+        lessons: []
+    },
+    calculus: {
+        name: "Calculus",
+        lessons: []
     }
 };
+
 function checkTemplateQuiz() {
     let score = 0;
     let feedback = "";
@@ -132,20 +141,21 @@ window.addEventListener("load", () => {
 });
 
 function updateHomeProgress() {
-    const eq = localStorage.getItem("equations_score");
-    const ineq = localStorage.getItem("inequalities_score");
+    const algebra = courses.algebra.lessons;
 
     let completed = 0;
-    let total = 2;
 
-    if (eq) completed++;
-    if (ineq) completed++;
+    algebra.forEach(id => {
+        const score = localStorage.getItem(id + "_score");
+        if (score !== null) completed++;
+    });
 
-    const percent = Math.round((completed / total) * 100);
+    const percent = Math.round((completed / algebra.length) * 100);
 
     const display = document.getElementById("algebra-progress");
+
     if (display) {
-        display.innerText = "Algebra: " + percent + "%";
+        display.innerText = "Algebra: " + (isNaN(percent) ? 0 : percent) + "%";
     }
 }
 
