@@ -17,16 +17,6 @@ function updateStreak() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 const lessons = {
     "equations": {
         title: "Solving Equations",
@@ -92,7 +82,7 @@ function checkTemplateQuiz() {
         new URLSearchParams(window.location.search).get("id")
     );
 
-    updateProgress();
+
 }
 
 function loadQuiz() {
@@ -130,7 +120,7 @@ function updateProgress() {
         if (score !== null) completed++;
     });
 
-    const percent = Math.round((completed / course.total) * 100);
+    const percent = Math.round((completed / course.lessons.length) * 100);
 
     const overall = document.getElementById("overall");
     if (overall) {
@@ -169,10 +159,7 @@ function updateProgress() {
         }
     }
 }
-window.addEventListener("load", () => {
-    loadLesson();
-    updateProgress();
-});
+
 
 function updateHomeProgress() {
     const algebra = courses.algebra.lessons;
@@ -194,17 +181,13 @@ function updateHomeProgress() {
 }
 
 window.addEventListener("load", () => {
-    loadLesson();
-    updateProgress();
     updateHomeProgress();
     setupContinueButton();
     setupNextLesson();
     checkBadge();
     showBadge();
     updateStreak();
-
 });
-
 
 function checkBadge() {
     const algebra = courses.algebra.lessons;
@@ -232,5 +215,56 @@ function showBadge() {
     if (badge === "true") {
         el.innerText = "🏆 Algebra Completed!";
         el.style.color = "gold";
+    }
+}
+
+function setupContinueButton() {
+    const btn = document.getElementById("continue-btn");
+    if (!btn) return;
+
+    const course = courses.algebra.lessons;
+
+    let nextLesson = null;
+
+    for (let id of course) {
+        const score = localStorage.getItem(id + "_score");
+
+        if (!score) {
+            nextLesson = id;
+            break;
+        }
+    }
+
+    if (nextLesson) {
+        btn.href = "lesson.html?id=" + nextLesson;
+        btn.innerText = "Continue Learning →";
+    } else {
+        btn.href = "algebra-topics.html";
+        btn.innerText = "Review Algebra ✔";
+    }
+}
+
+
+function loadLesson() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    if (!id) return;
+
+    const lesson = lessons[id];
+
+    if (!lesson) return;
+
+    const title = document.getElementById("lesson-title");
+    const explanation = document.getElementById("lesson-explanation");
+    const quiz = document.getElementById("quiz");
+
+    if (title) title.innerText = lesson.title;
+    if (explanation) explanation.innerText = lesson.explanation;
+
+    window.templateQuestions = lesson.questions;
+
+    if (quiz) {
+        loadQuiz();
     }
 }
