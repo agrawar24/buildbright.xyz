@@ -79,7 +79,7 @@ function checkTemplateQuiz() {
 
     localStorage.setItem(
         "last_lesson",
-        new URLSearchParams(window.location.search).get("id")
+        getCurrentLessonId()
     );
 
 
@@ -120,7 +120,8 @@ function updateProgress() {
         if (score !== null) completed++;
     });
 
-    const percent = Math.round((completed / course.lessons.length) * 100);
+    const total = course.lessons.length || 1;
+    const percent = Math.round((completed / total) * 100);
 
     const overall = document.getElementById("overall");
     if (overall) {
@@ -181,6 +182,8 @@ function updateHomeProgress() {
 }
 
 window.addEventListener("load", () => {
+    loadLesson();
+    updateProgress();
     updateHomeProgress();
     setupContinueButton();
     setupNextLesson();
@@ -267,4 +270,10 @@ function loadLesson() {
     if (quiz) {
         loadQuiz();
     }
+}
+
+
+function getCurrentLessonid() {
+
+    return new URLSearchParams(window.location.search).get("id");
 }
