@@ -290,3 +290,17 @@ function getCurrentLessonid() {
 
     return new URLSearchParams(window.location.search).get("id");
 }
+
+function getSubjectProgress(subject) {
+    const course = courses[subject];
+
+    let done = 0;
+
+    course.lessons.forEach(id => {
+        if (localStorage.getItem(id + "_score")) {
+            done++;
+        }
+    });
+
+    return Math.round((done / (course.lessons.length || 1)) * 100);
+}
