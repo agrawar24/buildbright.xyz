@@ -131,3 +131,24 @@ window.addEventListener("load", () => {
     updateProgress();
 });
 
+function updateHomeProgress() {
+    const eq = localStorage.getItem("equations_score");
+    const ineq = localStorage.getItem("inequalities_score");
+
+    let completed = 0;
+    let total = 2;
+
+    if (eq) completed++;
+    if (ineq) completed++;
+
+    const percent = Math.round((completed / total) * 100);
+
+    const display = document.getElementById("algebra-progress");
+    if (display) {
+        display.innerText = "Algebra: " + percent + "%";
+    }
+}
+
+window.addEventListener("load", () => {
+    updateHomeProgress();
+});
