@@ -4,6 +4,7 @@
 <head>
     <title>Solving Equations</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -11,9 +12,24 @@
     <div class="center">
 
         <h1>Solving Equations</h1>
-        <p>Use the template system</p>
 
-        <a class="button" href="lesson-template.html">Open Lesson</a>
+        <p>Goal: Find the value of x</p>
+
+        <h2>Example</h2>
+        <p>x + 5 = 10</p>
+        <p>Step 1: Subtract 5 from both sides</p>
+        <p>x = 5</p>
+
+        <hr>
+
+        <h2>Quiz</h2>
+
+        <div id="quiz"></div>
+
+        <button onclick="checkTemplateQuiz()">Submit</button>
+
+        <h2 id="score"></h2>
+        <pre id="feedback"></pre>
 
     </div>
 
