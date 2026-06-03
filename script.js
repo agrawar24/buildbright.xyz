@@ -12,34 +12,66 @@ function checkTemplateQuiz() {
         }
     });
 
-    // Show score
     document.getElementById("score").innerText =
         "Score: " + score + "/" + templateQuestions.length;
 
     document.getElementById("feedback").innerText = feedback;
 
-    // 🔥 SAVE PROGRESS
+    // save progress
     localStorage.setItem("solving_equations_score", score);
+
+    updateProgress();
 }
-window.onload = function () {
-    loadQuiz();
 
-    // Load saved score
-    const saved = localStorage.getItem("solving_equations_score");
+function loadQuiz() {
+    if (!window.templateQuestions) return;
 
-    if (saved !== null) {
-        document.getElementById("score").innerText =
-            "Previous Score: " + saved + "/10";
-    }
-};
+    const quizDiv = document.getElementById("quiz");
+    if (!quizDiv) return;
 
-window.addEventListener("load", () => {
+    quizDiv.innerHTML = "";
+
+    templateQuestions.forEach((item, index) => {
+        let html = `<p>${item.q}</p>`;
+
+        item.options.forEach(opt => {
+            html += `
+                <label>
+                    <input type="radio" name="q${index}" value="${opt}">
+                    ${opt}
+                </label><br>
+            `;
+        });
+
+        quizDiv.innerHTML += html + "<br>";
+    });
+}
+
+function updateProgress() {
     const score = localStorage.getItem("solving_equations_score");
-
     const status = document.getElementById("eq-status");
 
-    if (score !== null) {
+    if (score && status) {
         status.innerText = "Completed ✔ Score: " + score + "/10";
         status.style.color = "lime";
+
+        const ineq = document.getElementById("ineq-status");
+        const func = document.getElementById("func-status");
+
+        if (ineq) {
+            ineq.innerText = "Unlocked ✔";
+            ineq.style.color = "lime";
+        }
+
+        if (func) {
+            func.innerText = "Unlocked ✔";
+            func.style.color = "lime";
+        }
     }
+}
+
+// single clean startup
+window.addEventListener("load", () => {
+    loadQuiz();
+    updateProgress();
 });
