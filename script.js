@@ -58,6 +58,11 @@ function checkTemplateQuiz() {
 
     localStorage.setItem(lessonKey + "_score", score);
 
+    localStorage.setItem(
+        "last_lesson",
+        new URLSearchParams(window.location.search).get("id")
+    );
+
     updateProgress();
 }
 
