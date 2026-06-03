@@ -32,3 +32,14 @@ window.onload = function () {
             "Previous Score: " + saved + "/10";
     }
 };
+
+window.addEventListener("load", () => {
+    const score = localStorage.getItem("solving_equations_score");
+
+    const status = document.getElementById("eq-status");
+
+    if (score !== null) {
+        status.innerText = "Completed ✔ Score: " + score + "/10";
+        status.style.color = "lime";
+    }
+});
