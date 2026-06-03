@@ -20,7 +20,6 @@ const lessons = {
 };
 const courses = {
     algebra: {
-        name: "Algebra",
         lessons: ["equations", "inequalities"]
     },
     geometry: {
@@ -165,5 +164,9 @@ function updateHomeProgress() {
 }
 
 window.addEventListener("load", () => {
+    loadLesson();
+    updateProgress();
     updateHomeProgress();
+    setupContinueButton();
+    setupNextLesson();
 });
