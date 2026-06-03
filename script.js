@@ -18,7 +18,12 @@ const lessons = {
         ]
     }
 };
-
+const courses = {
+    algebra: {
+        total: 2,
+        lessons: ["equations", "inequalities"]
+    }
+};
 function checkTemplateQuiz() {
     let score = 0;
     let feedback = "";
@@ -72,16 +77,27 @@ function loadQuiz() {
 }
 
 function updateProgress() {
+    const course = courses.algebra;
+
+    let completed = 0;
+
+    course.lessons.forEach(id => {
+        const score = localStorage.getItem(id + "_score");
+
+        if (score !== null) completed++;
+    });
+
+    const percent = Math.round((completed / course.total) * 100);
+
+    const overall = document.getElementById("overall");
+    if (overall) {
+        overall.innerText = "Progress: " + percent + "%";
+    }
+
     const eq = localStorage.getItem("equations_score");
     const ineq = localStorage.getItem("inequalities_score");
 
-    let completed = 0;
-    let total = 2;
-
-    // Equations
-    if (eq !== null) {
-        completed++;
-
+    if (eq) {
         const status = document.getElementById("eq-status");
         const bar = document.getElementById("eq-bar");
 
@@ -93,10 +109,7 @@ function updateProgress() {
         if (bar) bar.value = eq;
     }
 
-    // Inequalities
-    if (ineq !== null) {
-        completed++;
-
+    if (ineq) {
         const status = document.getElementById("ineq-status");
 
         if (status) {
@@ -105,21 +118,12 @@ function updateProgress() {
         }
     }
 
-    // Unlock next
-    if (eq !== null) {
+    if (eq) {
         const func = document.getElementById("func-status");
         if (func) {
             func.innerText = "Unlocked ✔";
             func.style.color = "lime";
         }
-    }
-
-    // 🔥 overall progress %
-    const percent = Math.round((completed / total) * 100);
-
-    const overall = document.getElementById("overall");
-    if (overall) {
-        overall.innerText = "Progress: " + percent + "%";
     }
 }
 window.addEventListener("load", () => {
