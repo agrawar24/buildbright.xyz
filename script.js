@@ -1,3 +1,32 @@
+
+function updateStreak() {
+    const today = new Date().toDateString();
+    const last = localStorage.getItem("last_day");
+    let streak = parseInt(localStorage.getItem("streak") || "0");
+
+    if (last !== today) {
+        streak += 1;
+        localStorage.setItem("streak", streak);
+        localStorage.setItem("last_day", today);
+    }
+
+    const el = document.getElementById("streak");
+    if (el) {
+        el.innerText = "🔥 Streak: " + streak + " days";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 const lessons = {
     "equations": {
         title: "Solving Equations",
@@ -20,6 +49,7 @@ const lessons = {
 };
 const courses = {
     algebra: {
+        name: "Algebra",
         lessons: ["equations", "inequalities"]
     },
     geometry: {
@@ -171,7 +201,8 @@ window.addEventListener("load", () => {
     setupNextLesson();
     checkBadge();
     showBadge();
-    
+    updateStreak();
+
 });
 
 
