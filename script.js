@@ -59,14 +59,14 @@ function checkTemplateQuiz() {
     localStorage.setItem("last_lesson", getCurrentLessonId());
 
     setTimeout(goToNextLesson, 1000);
-    
+
     let score = 0;
-    
+
     let feedback = "";
 
-    
+
     templateQuestions.forEach((item, index) => {
-    
+
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
 
         if (selected && selected.value === item.answer) {
@@ -212,6 +212,11 @@ window.addEventListener("load", () => {
     checkBadge();
     showBadge();
     updateStreak();
+    updatePathUI();
+    highlightCurrentLesson();
+
+
+
     function goToNextLesson() {
         const subject = "algebra";
         const course = getCourse(subject);
@@ -349,5 +354,42 @@ function setupNextLesson() {
     } else {
         btn.href = "algebra-topics.html";
         btn.innerText = "Course Complete 🎉";
+    }
+}
+
+function updatePathUI() {
+    const eqScore = localStorage.getItem("equations_score");
+
+    const nodeEq = document.getElementById("node-equations");
+    const nodeIneq = document.getElementById("node-inequalities");
+
+    // ✅ If equations completed
+    if (eqScore !== null) {
+
+        // Update equations node
+        if (nodeEq) {
+            nodeEq.style.border = "2px solid lime";
+        }
+
+        // Unlock inequalities
+        if (nodeIneq) {
+            nodeIneq.classList.remove("locked");
+            nodeIneq.innerHTML = `
+                <a href="lesson.html?id=inequalities">2. Inequalities</a>
+                <p id="ineq-status">Ready ✔</p>
+            `;
+        }
+    }
+}
+
+function highlightCurrentLesson() {
+    const current = getCurrentLessonId();
+
+    if (!current) return;
+
+    const node = document.getElementById("node-" + current);
+
+    if (node) {
+        node.style.boxShadow = "0 0 15px lime";
     }
 }

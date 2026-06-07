@@ -132,3 +132,43 @@ h1 {
     text-decoration: none;
     font-weight: bold;
 }
+
+.path {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.node {
+    background: #1a1a1a;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: 1px solid #333;
+    width: 250px;
+    text-align: center;
+}
+
+.node a {
+
+    color: white;
+    text-decoration: none;
+    font-weight: cetner;
+
+}
+
+.locked {
+
+    opacity: 0.4;
+}
+
+.node {
+
+    transition: all 0.3s ease;
+}
+
+.node:hover {
+
+    transform: scale(1.05);
+}

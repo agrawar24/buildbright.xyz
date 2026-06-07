@@ -11,27 +11,21 @@
 
 <body>
 
-    <div class="center">
+    <h2 id="overall">Progress: 0%</h2>
 
-        <h1>Algebra Topics</h1>
+    <h1>Algebra Path</h1>
 
-        <div class="card" id="eq-card">
-            <h3>Solving Equations</h3>
-            <p id="eq-status">Not started</p>
+    <div class="path">
+
+        <div class="node" id="node-equations">
+            <a href="lesson.html?id=equations">1. Equations</a>
             <progress id="eq-bar" value="0" max="10"></progress>
-            <a class="button" href="lesson.html?id=equations">Start</a>
+            <p id="eq-status">Not started</p>
         </div>
 
-        <div class="card">
-            <h3>Inequalities</h3>
-            <p id="ineq-status">Locked 🔒</p>
-            <a class="button" style="opacity:0.5; pointer-events:none;">Locked</a>
-        </div>
-
-        <div class="card">
-            <h3>Linear Functions</h3>
-            <p id="func-status">Locked 🔒</p>
-            <a class="button" href="#" onclick="alert('Complete previous topics first')">Locked</a>
+        <div class="node locked" id="node-inequalities">
+            <a href="#">2. Inequalities 🔒</a>
+            <p id="ineq-status">Locked</p>
         </div>
 
     </div>
