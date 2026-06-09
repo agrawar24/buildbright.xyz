@@ -54,16 +54,11 @@ const courses = {
 
 function checkTemplateQuiz() {
 
-    localStorage.setItem(lessonKey + "_score", score);
-
-    localStorage.setItem("last_lesson", getCurrentLessonId());
-
-    setTimeout(goToNextLesson, 1000);
+    const alreadyDone = localStorage.getItem(getCurrentLessonId() + "_done");
+    if (alreadyDone) return;
 
     let score = 0;
-
     let feedback = "";
-
 
     templateQuestions.forEach((item, index) => {
 
@@ -72,6 +67,9 @@ function checkTemplateQuiz() {
         if (selected && selected.value === item.answer) {
             score++;
         } else {
+            if (selected) {
+                selected.parentElement.style.color = "red";
+            }
             feedback += item.explanation + "\n";
         }
     });
@@ -81,31 +79,28 @@ function checkTemplateQuiz() {
 
     document.getElementById("feedback").innerText = feedback;
 
-    // save progress
-    const params = new URLSearchParams(window.location.search);
-    const lessonKey = params.get("id");
+    const lessonKey = getCurrentLessonId();
 
     localStorage.setItem(lessonKey + "_score", score);
+    localStorage.setItem("last_lesson", lessonKey);
 
-    localStorage.setItem(
-        "last_lesson",
-        getCurrentLessonId()
-    );
     setTimeout(() => {
-        const course = courses.algebra.lessons;
-        const current = getCurrentLessonId();
-        const index = course.indexOf(current);
+        const btn = document.getElementById("next-lesson-msg");
 
-        if (index !== -1 && index < course.length - 1) {
-            const next = course[index + 1];
-            window.location.href = "lesson.html?id=" + next;
-        } else {
-            window.location.href = "algebra-topics.html";
+        if (btn) {
+            btn.innerText = "Loading next lesson...";
+            btn.style.color = "lime";
         }
+
+        goToNextLesson();
     }, 1000);
 
+    localStorage.setItem(getCurrentLessonId() + "_done", "true");
 
+    const inputs = document.querySelectorAll("input[type='radio']");
+    inputs.forEach(i => i.disabled = true);
 }
+
 
 function loadQuiz() {
     if (!window.templateQuestions) return;
@@ -169,7 +164,7 @@ function updateProgress() {
         const status = document.getElementById("ineq-status");
 
         if (status) {
-            status.innerText = "Completed ✔";
+            status.innerText = "Completed ✔ Score: " + ineq + "/10";
             status.style.color = "lime";
         }
     }
@@ -204,6 +199,10 @@ function updateHomeProgress() {
 
     const bar = document.getElementById("home-bar");
     if (bar) bar.value = percent;
+}
+
+function getCurrentLessonId() {
+    return new URLSearchParams(window.location.search).get("id");
 }
 
 window.addEventListener("load", () => {
