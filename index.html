@@ -8,25 +8,26 @@
 
 <body class="home">
     <div class="container">
-        <h1>BuildBright</h1>
-        <p class="tagline">Learn with structure. Build mastery.</p>
-        <p id="streak" style="font-size:18px; margin:10px 0; ">🔥 Streak: 0 days</p>
-        <div class="card">
-            <h2>Algebra</h2>
-            <p id="algebra-progress">Progress: 0%</p>
-            <a class="button" href="algebra-topics.html">Start Algebra</a>
-        </div>
+        <div class="dashboard">
 
-        <div class="card">
-            <h2>Geometry</h2>
-            <p>Not started</p>
-            <a class="button" href="#" onclick="alert('Coming soon')">Enter</a>
-        </div>
+            <div class="main-card">
+                <h2>Continue Learning</h2>
+                <a class="button" id="continue-btn">Loading...</a>
+            </div>
 
-        <div class="card">
-            <h2>Calculus</h2>
-            <p>Not started</p>
-            <a class="button" href="#" onclick="alert('Coming soon')">Enter</a>
+            <div class="card">
+                <h3>Algebra</h3>
+                <p id="algebra-progress">Progress: 0%</p>
+                
+                <progress id="home-bar" value="0" max="100"></progress>
+                <a class="button" href="algebra-topics.html">Open Path</a>
+            </div>
+
+            <div class="card">
+                <h3>Streak</h3>
+                <p id="streak">🔥 Streak: 0 days</p>
+            </div>
+
         </div>
         <script src="script.js"></script>
     </div>

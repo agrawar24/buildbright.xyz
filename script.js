@@ -201,6 +201,9 @@ function updateHomeProgress() {
     if (display) {
         display.innerText = "Algebra: " + (isNaN(percent) ? 0 : percent) + "%";
     }
+
+    const bar = document.getElementById("home-bar");
+    if (bar) bar.value = percent;
 }
 
 window.addEventListener("load", () => {
@@ -281,7 +284,7 @@ function setupContinueButton() {
 
     if (nextLesson) {
         btn.href = "lesson.html?id=" + nextLesson;
-        btn.innerText = "Continue Learning →";
+        btn.innerText = "Continue Learning → " + nextLesson;
     } else {
         btn.href = "algebra-topics.html";
         btn.innerText = "Review Algebra ✔";
