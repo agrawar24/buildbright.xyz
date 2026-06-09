@@ -52,7 +52,18 @@ const courses = {
     }
 };
 
+
+
+
+
+
+
+
+
 function checkTemplateQuiz() {
+
+    const submitBtn = document.getElementById("submit-btn");
+    if (submitBtn) submitBtn.disabled = true;
 
     const alreadyDone = localStorage.getItem(getCurrentLessonId() + "_done");
     if (alreadyDone) return;
@@ -79,11 +90,40 @@ function checkTemplateQuiz() {
 
     document.getElementById("feedback").innerText = feedback;
 
+    const result = document.getElementById("result-msg");
+
+    if (result) {
+        if (score >= Math.ceil(templateQuestions.length * 0.7)) {
+            result.innerText = "✅ Lesson Passed!";
+            result.style.color = "lime";
+        } else {
+            result.innerText = "❌ Try Again";
+            result.style.color = "red";
+        }
+    }
+
     const lessonKey = getCurrentLessonId();
 
     localStorage.setItem(lessonKey + "_score", score);
     localStorage.setItem("last_lesson", lessonKey);
 
+    if (score >= Math.ceil(templateQuestions.length * 0.7)) {
+        setTimeout(goToNextLesson, 1000);
+    }
+
+    const retryBtn = document.getElementById("retry-btn");
+
+    if (retryBtn && score < Math.ceil(templateQuestions.length * 0.7)) {
+        retryBtn.style.display = "inline-block";
+    }
+    if (score === templateQuestions.length) {
+        const result = document.getElementById("result-msg");
+
+        if (result) {
+            result.innerText = "🏆 Perfect Score!";
+            result.style.color = "gold";
+        }
+    }
     setTimeout(() => {
         const btn = document.getElementById("next-lesson-msg");
 
@@ -100,6 +140,20 @@ function checkTemplateQuiz() {
     const inputs = document.querySelectorAll("input[type='radio']");
     inputs.forEach(i => i.disabled = true);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function loadQuiz() {
@@ -161,6 +215,11 @@ function updateProgress() {
     }
 
     if (ineq) {
+
+        const card = document.getElementById("ineq-status")?.parentElement;
+        if (card) {
+            card.style.border = "2px solid lime";
+        }
         const status = document.getElementById("ineq-status");
 
         if (status) {
