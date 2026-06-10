@@ -1,38 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuildBright</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
-<body class="home">
-    <div class="container">
-        <div class="dashboard">
+<body class="landing">
 
-            <div class="main-card">
-                <h2>Continue Learning</h2>
-                <a class="button" id="continue-btn">Loading...</a>
-            </div>
-
-            <div class="card">
-                <h3>Algebra</h3>
-                <p id="algebra-progress">Progress: 0%</p>
-                
-                <progress id="home-bar" value="0" max="100"></progress>
-                <a class="button" href="algebra-topics.html">Open Path</a>
-            </div>
-
-            <div class="card">
-                <h3>Streak</h3>
-                <p id="streak">🔥 Streak: 0 days</p>
-            </div>
-
-        </div>
-        <script src="script.js"></script>
+    <div class="progress-tracker">
+        Progress: <span id="global-progress">0%</span>
     </div>
-</body>
 
-</html>
+    <main class="hero-screen">
+
+        <h1>Built for Clarity. Backed by Logic.</h1>
+
+        <p>
+            From Algebra 1 to Calculus 4. Learn with precision and simplicity, like never before.
+        </p>
+
+        <button class="button" onclick="showCourseSelector()">
+            Get Started
+        </button>
+
+        <section id="course-selector" class="selector-card" style="display: none;">
+
+            <label for="subject-select">Choose your math course</label>
+
+            <select id="subject-select" onchange="loadTopics()">
+                <option value="">Select course</option>
+                <option value="algebra1">Algebra 1</option>
+                <option value="geometry">Geometry</option>
+                <option value="algebra2">Algebra 2</option>
+                <option value="calculus1">Calculus 1</option>
+                <option value="calculus2">Calculus 2</option>
+                <option value="calculus3">Calculus 3</option>
+                <option value="calculus4">Calculus 4</option>
+            </select>
+
+            <label for="topic-select">Choose a topic</label>
+
+            <select id="topic-select">
+                <option value="">Select topic</option>
+            </select>
+
+            <button class="button" onclick="startSelectedLesson()">
+                Start Lesson
+            </button>
+
+        </section>
+
+    </main>
+
+</body>
 
 </html>

@@ -1,35 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Lesson</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildBright Lesson</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="lesson-page">
 
-    <div class="center">
-
-        <h1 id="title">Lesson</h1>
-
-        <p id="explanation"></p>
-
-        <hr>
-
-        <h2>Quiz</h2>
-        <h2 id="result-msg"></h2>
-        <div id="quiz"></div>
-        <button onclick="checkTemplateQuiz()">Submit</button>
-        <button id="retry-btn" style="display:none;" onclick="location.reload()">Retry</button>
-        <a id="next-lesson" class="button">Next Lesson</a>
-        <p id="next-lesson-msg"></p>
-
-
-        <h2 id="score"></h2>
-        <pre id="feedback"></pre>
-
+    <div class="progress-tracker">
+        Progress: <span id="global-progress">0%</span>
     </div>
+
+    <main class="lesson-container">
+
+        <section class="lesson-content-card">
+
+            <h1 id="lesson-title">Lesson Title</h1>
+            <p id="lesson-subtitle">Learn with clarity.</p>
+
+            <div id="lesson-body"></div>
+
+            <button id="start-quiz-btn" onclick="startQuiz()">
+                Next: Start Questions
+            </button>
+
+        </section>
+
+        <section id="quiz-section" class="quiz-card" style="display: none;">
+
+            <h2>Practice Questions</h2>
+            <p>20 questions: 5 easy, 5 medium, 10 hard.</p>
+
+            <div id="quiz"></div>
+
+            <button id="submit-btn" onclick="checkTemplateQuiz()">
+                Submit Answers
+            </button>
+
+            <h2 id="score"></h2>
+            <pre id="feedback"></pre>
+
+        </section>
+
+    </main>
 
 </body>
 

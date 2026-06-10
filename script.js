@@ -454,3 +454,202 @@ function highlightCurrentLesson() {
         node.style.boxShadow = "0 0 15px lime";
     }
 }
+
+function showCourseSelector() {
+    const selector = document.getElementById("course-selector");
+
+    if (selector) {
+        selector.style.display = "block";
+    }
+}
+
+const topicData = {
+
+    algebra1: [
+        "Solving Equations",
+        "Inequalities",
+        "Graphing Lines",
+        "Functions",
+        "Systems of Equations",
+        "Polynomials",
+        "Factoring",
+        "Quadratic Equations"
+    ],
+
+    geometry: [
+        "Angles",
+        "Triangles",
+        "Congruence",
+        "Similarity",
+        "Circles",
+        "Area",
+        "Volume",
+        "Coordinate Geometry"
+    ],
+
+    algebra2: [
+        "Complex Numbers",
+        "Polynomial Functions",
+        "Logarithms",
+        "Exponential Functions",
+        "Sequences",
+        "Series"
+    ],
+
+    calculus1: [
+        "Limits",
+        "Continuity",
+        "Derivatives",
+        "Applications of Derivatives"
+    ],
+
+    calculus2: [
+        "Integration",
+        "Area Between Curves",
+        "Volumes",
+        "Sequences",
+        "Series"
+    ],
+
+    calculus3: [
+        "Vectors",
+        "Partial Derivatives",
+        "Multiple Integrals",
+        "Vector Fields"
+    ],
+
+    calculus4: [
+        "Differential Equations",
+        "Laplace Transforms",
+        "Fourier Series"
+    ]
+};
+
+function loadTopics() {
+
+    const subject =
+        document.getElementById("subject-select").value;
+
+    const topicSelect =
+        document.getElementById("topic-select");
+
+    topicSelect.innerHTML =
+        '<option value="">Select topic</option>';
+
+    if (!topicData[subject]) return;
+
+    topicData[subject].forEach(topic => {
+
+        const option =
+            document.createElement("option");
+
+        option.value = topic;
+        option.textContent = topic;
+
+        topicSelect.appendChild(option);
+    });
+}
+
+function startSelectedLesson() {
+
+    const subject =
+        document.getElementById("subject-select").value;
+
+    const topic =
+        document.getElementById("topic-select").value;
+
+    if (!subject || !topic) {
+
+        alert(
+            "Please select a course and topic."
+        );
+
+        return;
+    }
+
+    localStorage.setItem(
+        "selectedSubject",
+        subject
+    );
+
+    localStorage.setItem(
+        "selectedTopic",
+        topic
+    );
+
+    const topicId = topic
+        .toLowerCase()
+        .replaceAll(" ", "-");
+
+    window.location.href =
+        "lesson.html?subject=" + subject + "&topic=" + topicId;
+}
+
+const lessonBank = {
+    algebra1: {
+        "solving-equations": {
+            title: "Solving Equations",
+            subtitle: "Learn how to isolate x step by step.",
+            body: `
+                <p>An equation says two expressions are equal.</p>
+                <p>Your goal is to find the value of the variable.</p>
+
+                <h2>Example</h2>
+                <p><strong>x + 5 = 12</strong></p>
+                <p>Subtract 5 from both sides:</p>
+                <p><strong>x = 7</strong></p>
+
+                <p>Whatever you do to one side, you must do to the other side.</p>
+            `,
+            questions: [
+                { q: "x + 3 = 8", options: ["4", "5", "6"], answer: "5", explanation: "Subtract 3 from both sides: x = 5." },
+                { q: "x - 4 = 10", options: ["6", "14", "40"], answer: "14", explanation: "Add 4 to both sides: x = 14." },
+                { q: "2x = 12", options: ["5", "6", "10"], answer: "6", explanation: "Divide both sides by 2: x = 6." },
+                { q: "x / 3 = 4", options: ["1", "7", "12"], answer: "12", explanation: "Multiply both sides by 3: x = 12." },
+                { q: "x + 9 = 20", options: ["9", "11", "29"], answer: "11", explanation: "Subtract 9 from both sides: x = 11." },
+
+                { q: "3x = 21", options: ["6", "7", "9"], answer: "7", explanation: "Divide both sides by 3: x = 7." },
+                { q: "x - 8 = 15", options: ["7", "23", "120"], answer: "23", explanation: "Add 8 to both sides: x = 23." },
+                { q: "4x = 32", options: ["6", "8", "12"], answer: "8", explanation: "Divide both sides by 4: x = 8." },
+                { q: "x / 5 = 6", options: ["11", "30", "1"], answer: "30", explanation: "Multiply both sides by 5: x = 30." },
+                { q: "x + 14 = 25", options: ["11", "39", "9"], answer: "11", explanation: "Subtract 14 from both sides: x = 11." },
+
+                { q: "2x + 3 = 11", options: ["3", "4", "7"], answer: "4", explanation: "Subtract 3: 2x = 8. Divide by 2: x = 4." },
+                { q: "5x - 10 = 15", options: ["3", "5", "25"], answer: "5", explanation: "Add 10: 5x = 25. Divide by 5: x = 5." },
+                { q: "3x + 6 = 18", options: ["4", "6", "8"], answer: "4", explanation: "Subtract 6: 3x = 12. Divide by 3: x = 4." },
+                { q: "4x - 7 = 9", options: ["2", "4", "16"], answer: "4", explanation: "Add 7: 4x = 16. Divide by 4: x = 4." },
+                { q: "6x + 2 = 20", options: ["2", "3", "6"], answer: "3", explanation: "Subtract 2: 6x = 18. Divide by 6: x = 3." },
+                { q: "7x - 5 = 30", options: ["4", "5", "7"], answer: "5", explanation: "Add 5: 7x = 35. Divide by 7: x = 5." },
+                { q: "8x + 4 = 28", options: ["3", "4", "6"], answer: "3", explanation: "Subtract 4: 8x = 24. Divide by 8: x = 3." },
+                { q: "9x - 9 = 45", options: ["4", "5", "6"], answer: "6", explanation: "Add 9: 9x = 54. Divide by 9: x = 6." },
+                { q: "10x + 5 = 65", options: ["5", "6", "7"], answer: "6", explanation: "Subtract 5: 10x = 60. Divide by 10: x = 6." },
+                { q: "12x - 6 = 30", options: ["2", "3", "4"], answer: "3", explanation: "Add 6: 12x = 36. Divide by 12: x = 3." }
+            ]
+        }
+    }
+};
+
+function loadDynamicLesson() {
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject");
+    const topic = params.get("topic");
+
+    if (!subject || !topic) return;
+
+    const lesson = lessonBank[subject]?.[topic];
+    if (!lesson) return;
+
+    document.getElementById("lesson-title").innerText = lesson.title;
+    document.getElementById("lesson-subtitle").innerText = lesson.subtitle;
+    document.getElementById("lesson-body").innerHTML = lesson.body;
+
+    window.templateQuestions = lesson.questions;
+}
+
+function startQuiz() {
+    document.getElementById("quiz-section").style.display = "block";
+    document.getElementById("start-quiz-btn").style.display = "none";
+    loadQuiz();
+}
+
+window.addEventListener("load", loadDynamicLesson);
