@@ -56,97 +56,105 @@ const courses = {
 
 
 
-
-
-
-
 function checkTemplateQuiz() {
-
     const submitBtn = document.getElementById("submit-btn");
     if (submitBtn) submitBtn.disabled = true;
-
-    const alreadyDone = localStorage.getItem(getCurrentLessonId() + "_done");
-    if (alreadyDone) return;
 
     let score = 0;
     let feedback = "";
 
     templateQuestions.forEach((item, index) => {
-
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        const allOptions = document.querySelectorAll(`input[name="q${index}"]`);
+
+        allOptions.forEach(option => {
+            const label = option.parentElement;
+
+            if (option.value === item.answer) {
+                label.style.background = "#d7f8df";
+                label.style.color = "#0b6b25";
+            }
+
+            if (selected && option === selected && selected.value !== item.answer) {
+                label.style.background = "#ffe0e0";
+                label.style.color = "#b00020";
+            }
+
+            option.disabled = true;
+        });
 
         if (selected && selected.value === item.answer) {
             score++;
         } else {
-            if (selected) {
-                selected.parentElement.style.color = "red";
-            }
-            feedback += item.explanation + "\n";
+            feedback += `Question ${index + 1}: ${item.explanation}\n\n`;
         }
     });
 
     document.getElementById("score").innerText =
         "Score: " + score + "/" + templateQuestions.length;
 
-    document.getElementById("feedback").innerText = feedback;
+    const passingScore = Math.ceil(templateQuestions.length * 0.7);
+    const feedbackBox = document.getElementById("feedback");
 
-    const result = document.getElementById("result-msg");
-
-    if (result) {
-        if (score >= Math.ceil(templateQuestions.length * 0.7)) {
-            result.innerText = "✅ Lesson Passed!";
-            result.style.color = "lime";
-        } else {
-            result.innerText = "❌ Try Again";
-            result.style.color = "red";
-        }
-    }
-
-    const lessonKey = getCurrentLessonId();
-
-    localStorage.setItem(lessonKey + "_score", score);
-    localStorage.setItem("last_lesson", lessonKey);
-
-    if (score >= Math.ceil(templateQuestions.length * 0.7)) {
-        setTimeout(goToNextLesson, 1000);
+    if (score === templateQuestions.length) {
+        feedbackBox.innerText = "🏆 Perfect score! Excellent work.";
+    } else if (score >= passingScore) {
+        feedbackBox.innerText =
+            "✅ Lesson passed!\n\nReview these explanations:\n\n" + feedback;
+    } else {
+        feedbackBox.innerText =
+            "❌ Try again.\n\nReview these explanations:\n\n" + feedback;
     }
 
     const retryBtn = document.getElementById("retry-btn");
 
-    if (retryBtn && score < Math.ceil(templateQuestions.length * 0.7)) {
+    if (retryBtn && score < passingScore) {
         retryBtn.style.display = "inline-block";
     }
-    if (score === templateQuestions.length) {
-        const result = document.getElementById("result-msg");
 
-        if (result) {
-            result.innerText = "🏆 Perfect Score!";
-            result.style.color = "gold";
-        }
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject");
+    const topic = params.get("topic");
+    const lessonKey = subject + "_" + topic;
+
+    localStorage.setItem(lessonKey + "_score", score);
+    localStorage.setItem(lessonKey + "_done", "true");
+    localStorage.setItem("last_lesson", lessonKey);
+
+    updateGlobalProgress();
+
+    const nextTopicBtn = document.getElementById("next-topic-btn");
+    if (nextTopicBtn && score >= passingScore) {
+        nextTopicBtn.style.display = "inline-block";
     }
-    setTimeout(() => {
-        const btn = document.getElementById("next-lesson-msg");
-
-        if (btn) {
-            btn.innerText = "Loading next lesson...";
-            btn.style.color = "lime";
-        }
-
-        goToNextLesson();
-    }, 1000);
-
-    localStorage.setItem(getCurrentLessonId() + "_done", "true");
-
-    const inputs = document.querySelectorAll("input[type='radio']");
-    inputs.forEach(i => i.disabled = true);
 }
 
 
+function updateGlobalProgress() {
+    const allTopics = Object.values(topicData).flat();
+    let completed = 0;
 
+    allTopics.forEach(topic => {
+        const topicId = topic.toLowerCase().replaceAll(" ", "-");
 
+        for (let subject in topicData) {
+            if (topicData[subject].includes(topic)) {
+                if (localStorage.getItem(subject + "_" + topicId + "_done")) {
+                    completed++;
+                }
+            }
+        }
+    });
 
+    const percent = Math.round((completed / allTopics.length) * 100);
+    const tracker = document.getElementById("global-progress");
 
+    if (tracker) {
+        tracker.innerText = percent + "%";
+    }
+}
 
+window.addEventListener("load", updateGlobalProgress);
 
 
 
@@ -653,3 +661,28 @@ function startQuiz() {
 }
 
 window.addEventListener("load", loadDynamicLesson);
+
+function goToNextTopic() {
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject");
+    const topic = params.get("topic");
+
+    const topics = topicData[subject];
+
+    if (!topics) return;
+
+    const topicNames = topics.map(t =>
+        t.toLowerCase().replaceAll(" ", "-")
+    );
+
+    const index = topicNames.indexOf(topic);
+
+    if (index !== -1 && index < topicNames.length - 1) {
+        const nextTopic = topicNames[index + 1];
+
+        window.location.href =
+            "lesson.html?subject=" + subject + "&topic=" + nextTopic;
+    } else {
+        window.location.href = "index.html";
+    }
+}
