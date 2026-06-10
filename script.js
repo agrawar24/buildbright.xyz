@@ -675,6 +675,7 @@ const lessonBank = {
 
         <p>Always undo addition/subtraction first, then multiplication/division.</p>
     `,
+
             questions: [
                 { q: "2x + 3 = 11", options: ["3", "4", "7"], answer: "4", explanation: "Subtract 3: 2x = 8. Divide by 2: x = 4." },
                 { q: "3x + 4 = 19", options: ["5", "6", "7"], answer: "5", explanation: "Subtract 4: 3x = 15. Divide by 3: x = 5." },
@@ -699,9 +700,67 @@ const lessonBank = {
                 { q: "7x - 5 = 4x + 16", options: ["5", "7", "9"], answer: "7", explanation: "Subtract 4x: 3x - 5 = 16. Add 5: 3x = 21. Divide by 3: x = 7." },
                 { q: "9x + 3 = 6x + 24", options: ["5", "7", "9"], answer: "7", explanation: "Subtract 6x: 3x + 3 = 24. Subtract 3: 3x = 21. Divide by 3: x = 7." }
             ]
+        },
+
+        "variables-on-both-sides": {
+            title: "Variables on Both Sides",
+            subtitle: "Move variables to one side before solving.",
+            body: `
+                <p>Some equations have variables on both sides.</p>
+                <p>Move all x terms to one side first.</p>
+
+                <h2>Example</h2>
+
+                <p><strong>3x + 4 = x + 12</strong></p>
+
+                <p>Subtract x from both sides:</p>
+                <p><strong>2x + 4 = 12</strong></p>
+
+                <p>Subtract 4:</p>
+                <p><strong>2x = 8</strong></p>
+
+                <p>Divide by 2:</p>
+                <p><strong>x = 4</strong></p>
+            `,
+            questions: [
+                {
+                    q: "2x + 3 = x + 7",
+                    options: ["2", "4", "6"],
+                    answer: "4",
+                    explanation: "Subtract x from both sides, then subtract 3."
+                }
+            ]
         }
+
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function loadDynamicLesson() {
     const params = new URLSearchParams(window.location.search);
