@@ -30,6 +30,14 @@ const topicData = {
     calculus4: []
 };
 
+function showCourseSelector() {
+    const selector = document.getElementById("course-selector");
+
+    if (selector) {
+        selector.style.display = "block";
+    }
+}
+
 function formatTopicName(topicId) {
     const lesson = lessonBank.algebra1?.[topicId];
     if (lesson && lesson.title) return lesson.title;
