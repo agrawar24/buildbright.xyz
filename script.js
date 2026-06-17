@@ -16,13 +16,14 @@ function updateStreak() {
 }
 
 const lessonBank = {
-    algebra1: algebra1Lessons
+    algebra1: algebra1Lessons,
+    geometry: geometryLessons
 };
 
 const topicData = {
     algebra1: Object.keys(algebra1Lessons),
-
-    geometry: [],
+    geometry: Object.keys(geometryLessons),
+    
     algebra2: [],
     calculus1: [],
     calculus2: [],
