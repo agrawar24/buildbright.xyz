@@ -1,3 +1,9 @@
+
+
+
+
+
+
 function updateStreak() {
     const today = new Date().toDateString();
     const last = localStorage.getItem("last_day");
@@ -11,7 +17,7 @@ function updateStreak() {
 
     const el = document.getElementById("streak");
     if (el) {
-        el.innerText = "🔥 Streak: " + streak + " days";
+        el.innerText = streak + " days";
     }
 }
 
@@ -105,10 +111,6 @@ function loadDynamicLesson() {
             <p>This topic has been added to the BuildBright roadmap.</p>
             <p>Full lesson content and practice questions will be added soon.</p>
         `;
-
-        const startQuizBtn = document.getElementById("start-quiz-btn");
-        if (startQuizBtn) startQuizBtn.style.display = "none";
-
         return;
     }
 
@@ -117,62 +119,53 @@ function loadDynamicLesson() {
     const progressPercent = Math.round(((currentIndex + 1) / lessonKeys.length) * 100);
 
     const upgradedHeader = `
-    <section class="lesson-header">
-        <div class="lesson-kicker">
-            📘 ${subject.toUpperCase()} • Lesson ${currentIndex + 1} of ${lessonKeys.length}
+        <section class="lesson-header">
+            <div class="lesson-kicker">
+                📘 ${subject.toUpperCase()} • Lesson ${currentIndex + 1} of ${lessonKeys.length}
+            </div>
+
+            <div class="lesson-title-row">
+                <div class="lesson-title-main">
+                    <h1>${lesson.title}</h1>
+                    <p>${lesson.subtitle || ""}</p>
+                </div>
+
+                <div class="lesson-badges">
+                    <span class="lesson-badge">🟢 Core</span>
+                    <span class="lesson-badge">⏱ 8–10 min</span>
+                    <span class="lesson-badge">${progressPercent}% Complete</span>
+                </div>
+            </div>
+
+            <div class="lesson-progress-wrap">
+                <div class="lesson-progress-info">
+                    <span>Course Progress</span>
+                    <span>${currentIndex + 1}/${lessonKeys.length}</span>
+                </div>
+
+                <div class="lesson-progress-bar">
+                    <div class="lesson-progress-fill" style="width:${progressPercent}%"></div>
+                </div>
+            </div>
+        </section>
+    `;
+
+    const lessonNavigation = `
+        <div class="lesson-navigation">
+            <button class="nav-prev" onclick="goToPreviousTopic()">⬅ Previous</button>
+            <button class="nav-home" onclick="window.location.href='index.html'">🏠 Home</button>
+            <button class="nav-next" onclick="goToNextTopic()">Next ➜</button>
         </div>
-
-        <div class="lesson-title-row">
-            <div class="lesson-title-main">
-                <h1>${lesson.title}</h1>
-                <p>${lesson.subtitle || ""}</p>
-            </div>
-
-            <div class="lesson-badges">
-                <span class="lesson-badge">🟢 Core</span>
-                <span class="lesson-badge">⏱ 8–10 min</span>
-                <span class="lesson-badge">${progressPercent}% Complete</span>
-            </div>
-        </div>
-
-        <div class="lesson-progress-wrap">
-            <div class="lesson-progress-info">
-                <span>Course Progress</span>
-                <span>${currentIndex + 1}/${lessonKeys.length}</span>
-            </div>
-
-            <div class="lesson-progress-bar">
-                <div class="lesson-progress-fill" style="width:${progressPercent}%"></div>
-            </div>
-        </div>
-    </section>
-`;
+    `;
 
     document.getElementById("lesson-title").innerText = "";
     document.getElementById("lesson-subtitle").innerText = "";
-    ddocument.getElementById("lesson-body").innerHTML =
-        upgradedHeader +
-        lesson.body +
-        `
-<div class="lesson-navigation">
-
-<button class="nav-prev" onclick="goToPreviousTopic()">
-⬅ Previous
-</button>
-
-<button class="nav-home" onclick="window.location.href='index.html'">
-🏠 Home
-</button>
-
-<button class="nav-next" onclick="goToNextTopic()">
-Next ➜
-</button>
-
-</div>
-`;
+    document.getElementById("lesson-body").innerHTML =
+        upgradedHeader + lesson.body + lessonNavigation;
 
     window.templateQuestions = lesson.questions;
 }
+
 
 function startQuiz() {
     const quizSection = document.getElementById("quiz-section");
@@ -280,15 +273,39 @@ function checkTemplateQuiz() {
         scoreBox.innerText = "Score: " + score + "/" + templateQuestions.length;
     }
 
+
     if (feedbackBox) {
-        if (score === templateQuestions.length) {
-            feedbackBox.innerText = "🏆 Perfect score! Excellent work.";
-        } else if (score >= passingScore) {
-            feedbackBox.innerText =
-                "✅ Lesson passed!\n\nReview these explanations:\n\n" + feedback;
+        if (score >= passingScore) {
+            feedbackBox.innerHTML = `
+            <div class="lesson-complete-card">
+                <h2>🎉 Lesson Complete!</h2>
+
+                <p>Score: ${score}/${templateQuestions.length}</p>
+
+                <div class="lesson-complete-xp">⭐ +25 XP</div>
+
+                <p>Great job! You passed this lesson.</p>
+
+                ${feedback ? `<p style="white-space:pre-line;text-align:left;margin-top:18px;">Review:\n\n${feedback}</p>` : ""}
+
+                <div class="lesson-complete-actions">
+                    <button class="complete-next-btn" onclick="goToNextTopic()">Continue ➜</button>
+                    <button class="complete-home-btn" onclick="window.location.href='index.html'">🏠 Home</button>
+                </div>
+            </div>
+        `;
         } else {
-            feedbackBox.innerText =
-                "❌ Try again.\n\nReview these explanations:\n\n" + feedback;
+            feedbackBox.innerHTML = `
+            <div class="lesson-complete-card" style="background:#fff7ed;border-color:#fed7aa;">
+                <h2 style="color:#9a3412;">Keep Practicing</h2>
+
+                <p>Score: ${score}/${templateQuestions.length}</p>
+
+                <p>You need ${passingScore}/${templateQuestions.length} to pass.</p>
+
+                <p style="white-space:pre-line;text-align:left;margin-top:18px;">Review:\n\n${feedback}</p>
+            </div>
+        `;
         }
     }
 
@@ -300,6 +317,20 @@ function checkTemplateQuiz() {
     localStorage.setItem(lessonKey + "_score", score);
     localStorage.setItem(lessonKey + "_done", "true");
     localStorage.setItem("last_lesson", lessonKey);
+
+    if (score >= passingScore) {
+
+        const xpEarned = 25;
+
+        const newXP = addXP(xpEarned);
+
+        checkAchievements(score, templateQuestions.length);
+
+        feedback += "\n\n⭐ You earned " + xpEarned + " XP!";
+        feedback += "\n🏆 Total XP: " + newXP;
+
+    }
+
 
     updateGlobalProgress();
 
@@ -313,6 +344,75 @@ function checkTemplateQuiz() {
         nextTopicBtn.style.display = "inline-block";
     }
 }
+
+
+
+function getXP() {
+    return parseInt(localStorage.getItem("buildbright_xp") || "0");
+}
+
+function addXP(amount) {
+    const total = getXP() + amount;
+    localStorage.setItem("buildbright_xp", total);
+    return total;
+}
+
+function updateXPDisplay() {
+    const xp = getXP();
+
+    const el = document.getElementById("xp-display");
+
+    if (el) {
+        el.innerText = xp + " XP";
+    }
+}
+
+/* ===============================
+   ACHIEVEMENTS
+================================ */
+
+function unlockAchievement(id, title, description) {
+    const key = "achievement_" + id;
+
+    if (localStorage.getItem(key)) return;
+
+    localStorage.setItem(key, "true");
+
+    const popup = document.createElement("div");
+    popup.className = "achievement-popup";
+    popup.innerHTML = `
+        <h3>🏆 Achievement Unlocked!</h3>
+        <strong>${title}</strong>
+        <p>${description}</p>
+    `;
+
+    document.body.appendChild(popup);
+
+    setTimeout(() => {
+        popup.remove();
+    }, 4500);
+}
+
+function checkAchievements(score, totalQuestions) {
+    const totalXP = getXP();
+
+    if (totalXP >= 25) {
+        unlockAchievement("first_xp", "First Steps", "Earned your first XP.");
+    }
+
+    if (score === totalQuestions) {
+        unlockAchievement("perfect_quiz", "Perfect Score", "Got every question correct.");
+    }
+
+    if (totalXP >= 500) {
+        unlockAchievement("xp_500", "Rising Scholar", "Earned 500 total XP.");
+    }
+
+    if (totalXP >= 1000) {
+        unlockAchievement("xp_1000", "BuildBright Champion", "Earned 1000 total XP.");
+    }
+}
+
 function updateGlobalProgress() {
     const allTopics = Object.entries(topicData).flatMap(([subject, topics]) =>
         topics.map(topic => ({ subject, topic }))
@@ -383,7 +483,13 @@ function goToPreviousTopic() {
 }
 
 window.addEventListener("load", () => {
+
     updateStreak();
+
     updateGlobalProgress();
+
+    updateXPDisplay();
+
     loadDynamicLesson();
+
 });

@@ -508,3 +508,214 @@ progress {
 .nav-next:hover {
     background: #16a34a;
 }
+
+#xp-display {
+
+    margin-top: 10px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #f59e0b;
+
+}
+
+/* ===============================
+   Lesson Complete Card
+================================ */
+
+.lesson-complete-card {
+    margin-top: 25px;
+    padding: 26px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #ecfdf5, #eff6ff);
+    border: 2px solid #bbf7d0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.lesson-complete-card h2 {
+    margin-top: 0;
+    font-size: 30px;
+    color: #166534;
+}
+
+.lesson-complete-card p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.lesson-complete-xp {
+    font-size: 28px;
+    color: #f59e0b;
+    font-weight: 900;
+    margin: 14px 0;
+}
+
+.lesson-complete-actions {
+    margin-top: 20px;
+}
+
+.lesson-complete-actions button {
+    border: none;
+    border-radius: 999px;
+    padding: 13px 22px;
+    margin: 8px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.complete-next-btn {
+    background: #22c55e;
+    color: white;
+}
+
+.complete-home-btn {
+    background: #2563eb;
+    color: white;
+}
+
+/* ===============================
+   Achievement Popup
+================================ */
+
+.achievement-popup {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 310px;
+    background: linear-gradient(135deg, #fff7ed, #fef3c7);
+    border: 2px solid #f59e0b;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    z-index: 9999;
+    animation: achievementSlideIn 0.35s ease;
+}
+
+.achievement-popup h3 {
+    margin: 0 0 10px;
+    color: #92400e;
+}
+
+.achievement-popup strong {
+    font-size: 18px;
+    color: #111827;
+}
+
+.achievement-popup p {
+    margin-bottom: 0;
+    color: #374151;
+}
+
+@keyframes achievementSlideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===============================
+   Dashboard Stats
+================================ */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin: 24px 0;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+}
+
+.stat-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.stat-card p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.stat-card h3 {
+    margin: 6px 0 0;
+    font-size: 26px;
+    color: #111827;
+}
+
+/* ===============================
+   Homepage Redesign
+================================ */
+
+.homepage {
+    min-height: 100vh;
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.hero-card {
+    background: linear-gradient(135deg, #111827, #1d4ed8);
+    color: white;
+    border-radius: 32px;
+    padding: 54px;
+    text-align: center;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
+.brand-pill {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-card h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.02;
+    margin: 0;
+}
+
+.hero-card p {
+    max-width: 720px;
+    margin: 22px auto;
+    font-size: 20px;
+    opacity: 0.92;
+}
+
+.hero-button {
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 15px 26px;
+}
+
+.selector-card h2 {
+    margin-top: 0;
+}
