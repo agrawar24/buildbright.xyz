@@ -150,7 +150,26 @@ function loadDynamicLesson() {
 
     document.getElementById("lesson-title").innerText = "";
     document.getElementById("lesson-subtitle").innerText = "";
-    document.getElementById("lesson-body").innerHTML = upgradedHeader + lesson.body;
+    ddocument.getElementById("lesson-body").innerHTML =
+        upgradedHeader +
+        lesson.body +
+        `
+<div class="lesson-navigation">
+
+<button class="nav-prev" onclick="goToPreviousTopic()">
+⬅ Previous
+</button>
+
+<button class="nav-home" onclick="window.location.href='index.html'">
+🏠 Home
+</button>
+
+<button class="nav-next" onclick="goToNextTopic()">
+Next ➜
+</button>
+
+</div>
+`;
 
     window.templateQuestions = lesson.questions;
 }
@@ -162,7 +181,34 @@ function startQuiz() {
     if (quizSection) quizSection.style.display = "block";
     if (startBtn) startBtn.style.display = "none";
 
-    loadQuiz();
+    function loadQuiz() {
+        if (!window.templateQuestions) return;
+
+        const quizDiv = document.getElementById("quiz");
+        if (!quizDiv) return;
+
+        quizDiv.innerHTML = "";
+
+        templateQuestions.forEach((item, index) => {
+            let html = `
+            <div class="quiz-card">
+                <div class="quiz-question">Q${index + 1}. ${item.q}</div>
+        `;
+
+            item.options.forEach(opt => {
+                html += `
+                <label class="quiz-option">
+                    <input type="radio" name="q${index}" value="${opt}">
+                    ${opt}
+                </label>
+            `;
+            });
+
+            html += `</div>`;
+
+            quizDiv.innerHTML += html;
+        });
+    }
 }
 
 function loadQuiz() {
@@ -196,6 +242,13 @@ function checkTemplateQuiz() {
     let score = 0;
     let feedback = "";
 
+    const scoreBox = document.getElementById("score");
+    const feedbackBox = document.getElementById("feedback");
+
+    if (feedbackBox) {
+        feedbackBox.classList.add("quiz-results-box");
+    }
+
     templateQuestions.forEach((item, index) => {
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
         const allOptions = document.querySelectorAll(`input[name="q${index}"]`);
@@ -204,13 +257,11 @@ function checkTemplateQuiz() {
             const label = option.parentElement;
 
             if (option.value === item.answer) {
-                label.style.background = "#d7f8df";
-                label.style.color = "#0b6b25";
+                label.classList.add("correct");
             }
 
             if (selected && option === selected && selected.value !== item.answer) {
-                label.style.background = "#ffe0e0";
-                label.style.color = "#b00020";
+                label.classList.add("wrong");
             }
 
             option.disabled = true;
@@ -222,9 +273,6 @@ function checkTemplateQuiz() {
             feedback += `Question ${index + 1}: ${item.explanation}\n\n`;
         }
     });
-
-    const scoreBox = document.getElementById("score");
-    const feedbackBox = document.getElementById("feedback");
 
     const passingScore = Math.ceil(templateQuestions.length * 0.7);
 
@@ -302,6 +350,38 @@ function goToNextTopic() {
         window.location.href = "index.html";
     }
 }
+
+function goToPreviousTopic() {
+
+    const params = new URLSearchParams(window.location.search);
+
+    const subject = params.get("subject");
+    const topic = params.get("topic");
+
+    const topics = topicData[subject];
+
+    if (!topics) return;
+
+    const index = topics.indexOf(topic);
+
+    if (index > 0) {
+
+        const previousTopic = topics[index - 1];
+
+        window.location.href =
+            "lesson.html?subject=" +
+            subject +
+            "&topic=" +
+            previousTopic;
+
+    } else {
+
+        window.location.href = "index.html";
+
+    }
+
+}
+
 window.addEventListener("load", () => {
     updateStreak();
     updateGlobalProgress();

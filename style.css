@@ -396,3 +396,115 @@ progress {
     background: #2563eb;
     color: white;
 }
+
+/* ===============================
+   BuildBright Quiz UI Upgrade
+   Phase 2.2
+================================ */
+
+.quiz-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.quiz-question {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    color: #111827;
+}
+
+.quiz-option {
+    display: block;
+    border: 2px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background: #f9fafb;
+    font-weight: 600;
+}
+
+.quiz-option:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.quiz-option input {
+    margin-right: 10px;
+}
+
+.quiz-option.correct {
+    background: #dcfce7 !important;
+    border-color: #22c55e !important;
+    color: #166534 !important;
+}
+
+.quiz-option.wrong {
+    background: #fee2e2 !important;
+    border-color: #ef4444 !important;
+    color: #991b1b !important;
+}
+
+.quiz-results-box {
+    background: #f8fafc;
+    border-left: 6px solid #2563eb;
+    border-radius: 14px;
+    padding: 18px;
+    margin-top: 20px;
+    white-space: pre-line;
+}
+
+/* ===============================
+   Lesson Navigation
+================================ */
+
+.lesson-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.lesson-navigation button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.nav-prev {
+    background: #f3f4f6;
+}
+
+.nav-prev:hover {
+    background: #dbe4ef;
+}
+
+.nav-home {
+    background: #2563eb;
+    color: white;
+}
+
+.nav-home:hover {
+    background: #1d4ed8;
+}
+
+.nav-next {
+    background: #22c55e;
+    color: white;
+}
+
+.nav-next:hover {
+    background: #16a34a;
+}
