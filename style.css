@@ -288,3 +288,111 @@ progress {
     }
 }
 
+/* ===============================
+   BuildBright Lesson UI Upgrade
+   Phase 2.1
+================================ */
+
+.lesson-header {
+    background: linear-gradient(135deg, #101827, #1f2a44);
+    color: white;
+    border-radius: 22px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.lesson-kicker {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.lesson-title-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.lesson-title-main h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+.lesson-title-main p {
+    margin: 8px 0 0;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.lesson-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.lesson-badge {
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.lesson-progress-wrap {
+    margin-top: 22px;
+}
+
+.lesson-progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.lesson-progress-bar {
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.lesson-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #7dd3fc, #38bdf8, #2563eb);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+}
+
+.lesson-nav-bar {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.lesson-nav-bar button {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.lesson-nav-secondary {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.lesson-nav-primary {
+    background: #2563eb;
+    color: white;
+}

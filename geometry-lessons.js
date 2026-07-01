@@ -365,7 +365,7 @@ const geometryLessons = {
 
 
 
-    "unit1-review": {
+    "unit-1-review": {
         title: "Unit 1 Review",
         subtitle: "Review everything you've learned in Geometry Unit 1.",
         body: `

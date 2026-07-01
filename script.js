@@ -23,7 +23,7 @@ const lessonBank = {
 const topicData = {
     algebra1: Object.keys(algebra1Lessons),
     geometry: Object.keys(geometryLessons),
-    
+
     algebra2: [],
     calculus1: [],
     calculus2: [],
@@ -112,9 +112,45 @@ function loadDynamicLesson() {
         return;
     }
 
-    document.getElementById("lesson-title").innerText = lesson.title;
-    document.getElementById("lesson-subtitle").innerText = lesson.subtitle;
-    document.getElementById("lesson-body").innerHTML = lesson.body;
+    const lessonKeys = Object.keys(lessonBank[subject]);
+    const currentIndex = lessonKeys.indexOf(topic);
+    const progressPercent = Math.round(((currentIndex + 1) / lessonKeys.length) * 100);
+
+    const upgradedHeader = `
+    <section class="lesson-header">
+        <div class="lesson-kicker">
+            📘 ${subject.toUpperCase()} • Lesson ${currentIndex + 1} of ${lessonKeys.length}
+        </div>
+
+        <div class="lesson-title-row">
+            <div class="lesson-title-main">
+                <h1>${lesson.title}</h1>
+                <p>${lesson.subtitle || ""}</p>
+            </div>
+
+            <div class="lesson-badges">
+                <span class="lesson-badge">🟢 Core</span>
+                <span class="lesson-badge">⏱ 8–10 min</span>
+                <span class="lesson-badge">${progressPercent}% Complete</span>
+            </div>
+        </div>
+
+        <div class="lesson-progress-wrap">
+            <div class="lesson-progress-info">
+                <span>Course Progress</span>
+                <span>${currentIndex + 1}/${lessonKeys.length}</span>
+            </div>
+
+            <div class="lesson-progress-bar">
+                <div class="lesson-progress-fill" style="width:${progressPercent}%"></div>
+            </div>
+        </div>
+    </section>
+`;
+
+    document.getElementById("lesson-title").innerText = "";
+    document.getElementById("lesson-subtitle").innerText = "";
+    document.getElementById("lesson-body").innerHTML = upgradedHeader + lesson.body;
 
     window.templateQuestions = lesson.questions;
 }
@@ -229,31 +265,24 @@ function checkTemplateQuiz() {
         nextTopicBtn.style.display = "inline-block";
     }
 }
-
 function updateGlobalProgress() {
     const allTopics = Object.entries(topicData).flatMap(([subject, topics]) =>
         topics.map(topic => ({ subject, topic }))
     );
-
     let completed = 0;
-
     allTopics.forEach(item => {
         if (localStorage.getItem(item.subject + "_" + item.topic + "_done")) {
             completed++;
         }
     });
-
     const percent = allTopics.length
         ? Math.round((completed / allTopics.length) * 100)
         : 0;
-
     const tracker = document.getElementById("global-progress");
-
     if (tracker) {
         tracker.innerText = percent + "%";
     }
 }
-
 function goToNextTopic() {
     const params = new URLSearchParams(window.location.search);
     const subject = params.get("subject");
@@ -273,7 +302,6 @@ function goToNextTopic() {
         window.location.href = "index.html";
     }
 }
-
 window.addEventListener("load", () => {
     updateStreak();
     updateGlobalProgress();
