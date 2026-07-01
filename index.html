@@ -13,36 +13,29 @@
 
 <body class="landing">
 
-    <div class="progress-tracker">
+    <header class="top-nav">
+        <div class="logo">BuildBright</div>
 
-        <div>
-            📈 Progress:
-            <span id="global-progress">0%</span>
-        </div>
-
-        <div id="streak">
-            🔥 Streak: 0 days
-        </div>
-
-        <div id="xp-display">
-            ⭐ XP: 0
-        </div>
-
-    </div>
+        <nav>
+            <a href="#">About</a>
+            <a href="#" onclick="showCourseSelector()">Get Started</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
     <main class="hero-screen">
 
-        <h1>Built for Clarity. Backed by Logic.</h1>
+        <h1>Built for Clarity.<br><span>Backed by Logic.</span></h1>
 
         <p>
             From Algebra 1 to Calculus 4. Learn with precision and simplicity, like never before.
         </p>
 
         <button class="button" onclick="showCourseSelector()">
-            Get Started
+            Start Learning
         </button>
 
-        <section id="course-selector" class="selector-card" style="display: none;">
+        <section id="course-selector" class="selector-card" style="display:none;">
 
             <label for="subject-select">Choose your math course</label>
 
