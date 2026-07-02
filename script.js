@@ -185,6 +185,41 @@ function startQuiz() {
     loadQuiz();
 }
 
+function loadQuiz() {
+    if (!window.templateQuestions || window.templateQuestions.length === 0) {
+        console.log("No questions found.");
+        return;
+    }
+
+    const quizDiv = document.getElementById("quiz");
+    if (!quizDiv) {
+        console.log("Quiz div not found.");
+        return;
+    }
+
+    quizDiv.innerHTML = "";
+
+    window.templateQuestions.forEach((item, index) => {
+        let html = `
+            <div class="quiz-card">
+                <div class="quiz-question">Q${index + 1}. ${item.q}</div>
+        `;
+
+        item.options.forEach(option => {
+            html += `
+                <label class="quiz-option">
+                    <input type="radio" name="q${index}" value="${option}">
+                    ${option}
+                </label>
+            `;
+        });
+
+        html += `</div>`;
+
+        quizDiv.innerHTML += html;
+    });
+}
+
 function checkTemplateQuiz() {
     const submitBtn = document.getElementById("submit-btn");
     if (submitBtn) submitBtn.disabled = true;
