@@ -482,6 +482,72 @@ function goToPreviousTopic() {
 
 }
 
+function loadCoursePage() {
+    const lessonList = document.getElementById("lesson-list");
+    const courseTitle = document.getElementById("course-title");
+    const courseSubtitle = document.getElementById("course-subtitle");
+
+    if (!lessonList || !courseTitle) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject");
+
+    if (!subject || !lessonBank[subject]) {
+        courseTitle.innerText = "Course Not Found";
+        lessonList.innerHTML = "<p>Please return to the Courses page.</p>";
+        return;
+    }
+
+    const courseNames = {
+        algebra1: "Algebra 1",
+        geometry: "Geometry",
+        algebra2: "Algebra 2",
+        calculus1: "Calculus 1",
+        calculus2: "Calculus 2",
+        calculus3: "Calculus 3",
+        calculus4: "Calculus 4"
+    };
+
+    courseTitle.innerText = courseNames[subject] || "Course";
+    courseSubtitle.innerText = "Choose a lesson to begin.";
+
+    const lessons = lessonBank[subject];
+    const lessonKeys = Object.keys(lessons);
+
+    lessonList.innerHTML = "";
+
+    lessonKeys.forEach((key, index) => {
+        const lesson = lessons[key];
+
+        const isDone = localStorage.getItem(subject + "_" + key + "_done");
+
+        const card = document.createElement("div");
+        card.className = "lesson-list-card";
+
+        card.innerHTML = `
+            <div class="lesson-list-number">
+                ${isDone ? "✅" : index + 1}
+            </div>
+
+            <div class="lesson-list-info">
+                <h3>${lesson.title || formatTopicName(key)}</h3>
+                <p>${lesson.subtitle || "Build your skills step by step."}</p>
+            </div>
+
+            <button>
+                ${isDone ? "Review" : "Start"}
+            </button>
+        `;
+
+        card.onclick = () => {
+            window.location.href =
+                "lesson.html?subject=" + subject + "&topic=" + key;
+        };
+
+        lessonList.appendChild(card);
+    });
+}
+
 window.addEventListener("load", () => {
 
     updateStreak();
@@ -492,4 +558,7 @@ window.addEventListener("load", () => {
 
     loadDynamicLesson();
 
+    loadCoursePage();
+
 });
+

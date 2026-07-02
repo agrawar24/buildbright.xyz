@@ -31,36 +31,11 @@
             From Algebra 1 to Calculus 4. Learn with precision and simplicity, like never before.
         </p>
 
-        <button class="button" onclick="showCourseSelector()">
-            Start Learning
+        <button class="button" onclick="window.location.href='courses.html'">
+            Get Started
+        </button>
         </button>
 
-        <section id="course-selector" class="selector-card" style="display:none;">
-
-            <label for="subject-select">Choose your math course</label>
-
-            <select id="subject-select" onchange="loadTopics()">
-                <option value="">Select course</option>
-                <option value="algebra1">Algebra 1</option>
-                <option value="geometry">Geometry</option>
-                <option value="algebra2">Algebra 2</option>
-                <option value="calculus1">Calculus 1</option>
-                <option value="calculus2">Calculus 2</option>
-                <option value="calculus3">Calculus 3</option>
-                <option value="calculus4">Calculus 4</option>
-            </select>
-
-            <label for="topic-select">Choose a topic</label>
-
-            <select id="topic-select">
-                <option value="">Select topic</option>
-            </select>
-
-            <button class="button" onclick="startSelectedLesson()">
-                Start Lesson
-            </button>
-
-        </section>
 
     </main>
 
