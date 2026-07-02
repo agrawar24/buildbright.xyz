@@ -4,37 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildBright</title>
+    <title>BuildBright Course</title>
     <link rel="stylesheet" href="style.css">
+
     <script src="algebra1-lessons.js" defer></script>
     <script src="geometry-lessons.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 
-<body class="landing">
+<body class="course-page">
 
     <header class="top-nav">
-        <div class="logo">BuildBright</div>
+        <div class="logo" onclick="window.location.href='index.html'">BuildBright</div>
 
         <nav>
-            <a href="#">About</a>
+            <a href="index.html">Home</a>
             <a href="courses.html">Courses</a>
-            <a href="#">Contact</a>
         </nav>
     </header>
 
-    <main class="hero-screen">
+    <main class="course-container">
 
-        <h1>Built for Clarity. Backed by<br>Logic.</h1>
+        <h1 id="course-title">Course</h1>
 
-        <p>
-            From Algebra 1 to Calculus 4. Learn with precision and simplicity, like never before.
+        <p id="course-subtitle" class="courses-subtitle">
+            Choose a lesson to begin.
         </p>
 
-        <button class="button" onclick="window.location.href='courses.html'">
-            Get Started
-        </button>
-
+        <div id="lesson-list" class="lesson-list"></div>
 
     </main>
 

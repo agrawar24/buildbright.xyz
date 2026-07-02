@@ -4,34 +4,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildBright Course</title>
-    <link rel="stylesheet" href="style.css">
+    <title>BuildBright Courses</title>
 
-    <script src="algebra1-lessons.js" defer></script>
-    <script src="geometry-lessons.js" defer></script>
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="course-page">
+<body class="courses-page">
 
     <header class="top-nav">
-        <div class="logo" onclick="window.location.href='index.html'">BuildBright</div>
+
+        <div class="logo" onclick="window.location.href='index.html'">
+            BuildBright
+        </div>
 
         <nav>
             <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
         </nav>
+
     </header>
 
-    <main class="course-container">
+    <main class="courses-container">
 
-        <h1 id="course-title">Course</h1>
+        <h1>Choose Your Course</h1>
 
-        <p id="course-subtitle" class="courses-subtitle">
-            Choose a lesson to begin.
+        <p class="courses-subtitle">
+            Select a course to begin your learning journey.
         </p>
 
-        <div id="lesson-list" class="lesson-list"></div>
+        <div class="course-grid">
+
+            <div class="course-card" onclick="window.location.href='course.html?subject=algebra1'">
+
+                <div class="course-icon">📘</div>
+
+                <h2>Algebra 1</h2>
+
+                <p>Master equations, graphs, inequalities and functions.</p>
+
+            </div>
+
+            <div class="course-card" onclick="window.location.href='course.html?subject=geometry'">
+
+                <div class="course-icon">📐</div>
+
+                <h2>Geometry</h2>
+
+                <p>Lines, angles, triangles, circles and coordinate geometry.</p>
+
+            </div>
+
+            <div class="course-card locked-card">
+
+                <div class="course-icon">📈</div>
+
+                <h2>Algebra 2</h2>
+
+                <p>Coming Soon</p>
+
+            </div>
+
+            <div class="course-card locked-card">
+
+                <div class="course-icon">∫</div>
+
+                <h2>Calculus 1</h2>
+
+                <p>Coming Soon</p>
+
+            </div>
+
+            <div class="course-card locked-card">
+
+                <div class="course-icon">∫</div>
+
+                <h2>Calculus 2</h2>
+
+                <p>Coming Soon</p>
+
+            </div>
+
+            <div class="course-card locked-card">
+
+                <div class="course-icon">∫</div>
+
+                <h2>Calculus 3</h2>
+
+                <p>Coming Soon</p>
+
+            </div>
+
+            <div class="course-card locked-card">
+
+                <div class="course-icon">∫</div>
+
+                <h2>Calculus 4</h2>
+
+                <p>Coming Soon</p>
+
+            </div>
+
+        </div>
 
     </main>
 
