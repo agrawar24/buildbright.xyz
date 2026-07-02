@@ -167,6 +167,8 @@ function loadDynamicLesson() {
 }
 
 
+
+
 function startQuiz() {
     const quizSection = document.getElementById("quiz-section");
     const startBtn = document.getElementById("start-quiz-btn");
@@ -174,58 +176,7 @@ function startQuiz() {
     if (quizSection) quizSection.style.display = "block";
     if (startBtn) startBtn.style.display = "none";
 
-    function loadQuiz() {
-        if (!window.templateQuestions) return;
-
-        const quizDiv = document.getElementById("quiz");
-        if (!quizDiv) return;
-
-        quizDiv.innerHTML = "";
-
-        templateQuestions.forEach((item, index) => {
-            let html = `
-            <div class="quiz-card">
-                <div class="quiz-question">Q${index + 1}. ${item.q}</div>
-        `;
-
-            item.options.forEach(opt => {
-                html += `
-                <label class="quiz-option">
-                    <input type="radio" name="q${index}" value="${opt}">
-                    ${opt}
-                </label>
-            `;
-            });
-
-            html += `</div>`;
-
-            quizDiv.innerHTML += html;
-        });
-    }
-}
-
-function loadQuiz() {
-    if (!window.templateQuestions) return;
-
-    const quizDiv = document.getElementById("quiz");
-    if (!quizDiv) return;
-
-    quizDiv.innerHTML = "";
-
-    templateQuestions.forEach((item, index) => {
-        let html = `<p><strong>Q${index + 1}. ${item.q}</strong></p>`;
-
-        item.options.forEach(opt => {
-            html += `
-                <label>
-                    <input type="radio" name="q${index}" value="${opt}">
-                    ${opt}
-                </label><br>
-            `;
-        });
-
-        quizDiv.innerHTML += html + "<br>";
-    });
+    loadQuiz();
 }
 
 function checkTemplateQuiz() {
