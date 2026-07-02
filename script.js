@@ -163,13 +163,19 @@ function loadDynamicLesson() {
     document.getElementById("lesson-body").innerHTML =
         upgradedHeader + lesson.body + lessonNavigation;
 
-    window.templateQuestions = lesson.questions;
+    window.templateQuestions = lesson.questions || [];
+
+    console.log("Loaded lesson:", lesson.title);
+    console.log("Questions loaded:", window.templateQuestions);
 }
 
 
 
 
 function startQuiz() {
+    console.log("Start quiz clicked");
+    console.log("templateQuestions:", window.templateQuestions);
+
     const quizSection = document.getElementById("quiz-section");
     const startBtn = document.getElementById("start-quiz-btn");
 
