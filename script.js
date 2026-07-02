@@ -550,15 +550,28 @@ function loadCoursePage() {
 
 window.addEventListener("load", () => {
 
-    updateStreak();
+    const isLessonPage = document.body.classList.contains("lesson-page");
+    const isCoursePage = document.body.classList.contains("course-page");
 
-    updateGlobalProgress();
+    if (document.getElementById("streak")) {
+        updateStreak();
+    }
 
-    updateXPDisplay();
+    if (document.getElementById("global-progress")) {
+        updateGlobalProgress();
+    }
 
-    loadDynamicLesson();
+    if (document.getElementById("xp-display")) {
+        updateXPDisplay();
+    }
 
-    loadCoursePage();
+    if (isLessonPage) {
+        loadDynamicLesson();
+    }
+
+    if (isCoursePage) {
+        loadCoursePage();
+    }
 
 });
 
