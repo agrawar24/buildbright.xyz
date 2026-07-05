@@ -23,7 +23,8 @@ function updateStreak() {
 
 const lessonBank = {
     algebra1: algebra1Lessons,
-    geometry: geometryLessons
+    geometry: geometryLessons,
+    algebra2: algebra2Lessons,
 };
 
 const topicData = {
