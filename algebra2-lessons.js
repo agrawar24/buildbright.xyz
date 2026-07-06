@@ -522,6 +522,417 @@ const algebra2Lessons = {
     }
     ,
 
+    "algebra2-foundations-functions-review": {
+        title: "Foundations & Functions Review",
+        subtitle: "Review the key concepts from the Foundations and Functions unit.",
+
+        body: `
+
+<h2>Unit Review</h2>
+
+<p>This review covers the most important ideas from the Foundations and Functions unit.</p>
+
+<hr>
+
+<h2>Key Concepts</h2>
+
+<ul>
+
+<li>Order of Operations (PEMDAS)</li>
+
+<li>Properties of Real Numbers</li>
+
+<li>Solving Linear Equations</li>
+
+<li>Solving Inequalities</li>
+
+<li>Absolute Value Equations</li>
+
+<li>Relations vs. Functions</li>
+
+<li>Function Notation</li>
+
+<li>Domain and Range</li>
+
+<li>Evaluating Functions</li>
+
+<li>Graphing Linear Functions</li>
+
+</ul>
+
+<hr>
+
+<h2>Important Things to Remember</h2>
+
+<ul>
+
+<li>Always follow the order of operations.</li>
+
+<li>A function assigns exactly one output to each input.</li>
+
+<li>Domain represents possible x-values.</li>
+
+<li>Range represents possible y-values.</li>
+
+<li>Function notation tells you which value to substitute.</li>
+
+<li>When solving inequalities, reverse the inequality sign when multiplying or dividing by a negative number.</li>
+
+<li>Absolute value represents distance from zero.</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Forgetting PEMDAS.</li>
+
+<li>Mixing up domain and range.</li>
+
+<li>Not reversing an inequality after dividing by a negative.</li>
+
+<li>Thinking every relation is a function.</li>
+
+<li>Substituting incorrectly into function notation.</li>
+
+</ul>
+
+<hr>
+
+<h2>Ready for the Unit Test?</h2>
+
+<p>If you understand these concepts, you're ready for the Foundations & Functions Unit Test.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "A function assigns how many outputs to each input?",
+
+                options: [
+                    "Exactly one",
+                    "Two",
+                    "As many as needed"
+                ],
+
+                answer: "Exactly one",
+
+                explanation: "Every input must have only one output."
+            },
+
+            {
+                q: "The domain represents?",
+
+                options: [
+                    "x-values",
+                    "y-values",
+                    "slopes"
+                ],
+
+                answer: "x-values",
+
+                explanation: "The domain is the set of all possible inputs."
+            },
+
+            {
+                q: "The range represents?",
+
+                options: [
+                    "y-values",
+                    "x-values",
+                    "intercepts"
+                ],
+
+                answer: "y-values",
+
+                explanation: "The range is the set of outputs."
+            },
+
+            {
+                q: "The first step when simplifying expressions is usually?",
+
+                options: [
+                    "Follow PEMDAS",
+                    "Multiply everything",
+                    "Combine all numbers"
+                ],
+
+                answer: "Follow PEMDAS",
+
+                explanation: "Order of operations is always used."
+            },
+
+            {
+                q: "When dividing an inequality by a negative number, you should?",
+
+                options: [
+                    "Reverse the inequality sign",
+                    "Leave it unchanged",
+                    "Square both sides"
+                ],
+
+                answer: "Reverse the inequality sign",
+
+                explanation: "This is a fundamental inequality rule."
+            },
+
+            {
+                q: "f(4) means?",
+
+                options: [
+                    "Evaluate the function when x=4",
+                    "Multiply by 4",
+                    "Graph the function"
+                ],
+
+                answer: "Evaluate the function when x=4",
+
+                explanation: "Substitute 4 into the function."
+            },
+
+            {
+                q: "Absolute value represents?",
+
+                options: [
+                    "Distance from zero",
+                    "The largest number",
+                    "The smallest number"
+                ],
+
+                answer: "Distance from zero",
+
+                explanation: "Absolute value is always non-negative."
+            },
+
+            {
+                q: "Which graph fails the Vertical Line Test?",
+
+                options: [
+                    "A graph with one x-value having two y-values",
+                    "A straight line",
+                    "A parabola"
+                ],
+
+                answer: "A graph with one x-value having two y-values",
+
+                explanation: "That graph is not a function."
+            },
+
+            {
+                q: "Every function is a relation?",
+
+                options: [
+                    "Yes",
+                    "No",
+                    "Only linear functions"
+                ],
+
+                answer: "Yes",
+
+                explanation: "Functions are a special type of relation."
+            },
+
+            {
+                q: "This review prepares you for?",
+
+                options: [
+                    "The Unit Test",
+                    "The Final Exam",
+                    "Geometry"
+                ],
+
+                answer: "The Unit Test",
+
+                explanation: "Reviews summarize the entire unit before testing."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-foundations-functions-unit-test": {
+        title: "Foundations & Functions Unit Test",
+        subtitle: "Test your understanding of expressions, equations, functions, linear functions, absolute value, and systems.",
+
+        body: `
+
+<h2>Unit Test</h2>
+
+<p>This test covers the full Foundations & Functions unit.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+<li>Expressions and like terms</li>
+<li>Solving linear equations</li>
+<li>Multi-step equations</li>
+<li>Function notation</li>
+<li>Linear functions</li>
+<li>Absolute value functions</li>
+<li>Systems of equations</li>
+</ul>
+
+<hr>
+
+<h2>Goal</h2>
+
+<p>Answer each question carefully. A strong score means you are ready to begin Quadratic Functions.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "Simplify: 4x + 7x - 3",
+                options: ["11x - 3", "28x - 3", "11x + 3"],
+                answer: "11x - 3",
+                explanation: "Combine like terms: 4x + 7x = 11x."
+            },
+
+            {
+                q: "In the expression 6x + 9, the coefficient is?",
+                options: ["6", "9", "x"],
+                answer: "6",
+                explanation: "The coefficient is the number multiplied by the variable."
+            },
+
+            {
+                q: "Solve: x + 8 = 15",
+                options: ["7", "23", "8"],
+                answer: "7",
+                explanation: "Subtract 8 from both sides."
+            },
+
+            {
+                q: "Solve: 3x = 24",
+                options: ["8", "21", "72"],
+                answer: "8",
+                explanation: "Divide both sides by 3."
+            },
+
+            {
+                q: "Solve: 2x + 5 = 17",
+                options: ["6", "11", "12"],
+                answer: "6",
+                explanation: "Subtract 5, then divide by 2."
+            },
+
+            {
+                q: "Solve: 4x + 6 = 2x + 18",
+                options: ["6", "12", "4"],
+                answer: "6",
+                explanation: "Subtract 2x from both sides, then subtract 6."
+            },
+
+            {
+                q: "A function assigns each input?",
+                options: ["Exactly one output", "Two outputs", "No output"],
+                answer: "Exactly one output",
+                explanation: "A function gives exactly one output for each input."
+            },
+
+            {
+                q: "f(x) means?",
+                options: ["f of x", "f times x", "x divided by f"],
+                answer: "f of x",
+                explanation: "Function notation is read as f of x."
+            },
+
+            {
+                q: "If f(x)=2x+3, then f(4)=?",
+                options: ["11", "8", "7"],
+                answer: "11",
+                explanation: "Substitute 4: 2(4)+3=11."
+            },
+
+            {
+                q: "If f(x)=x², then f(6)=?",
+                options: ["36", "12", "6"],
+                answer: "36",
+                explanation: "Substitute 6: 6²=36."
+            },
+
+            {
+                q: "A linear function graphs as a?",
+                options: ["Straight line", "Parabola", "Circle"],
+                answer: "Straight line",
+                explanation: "Linear functions always graph as straight lines."
+            },
+
+            {
+                q: "Slope-intercept form is?",
+                options: ["y = mx + b", "y = ax² + bx + c", "A = πr²"],
+                answer: "y = mx + b",
+                explanation: "Slope-intercept form is y = mx + b."
+            },
+
+            {
+                q: "In y = 5x - 2, the slope is?",
+                options: ["5", "-2", "2"],
+                answer: "5",
+                explanation: "The coefficient of x is the slope."
+            },
+
+            {
+                q: "In y = 5x - 2, the y-intercept is?",
+                options: ["-2", "5", "0"],
+                answer: "-2",
+                explanation: "The constant term is the y-intercept."
+            },
+
+            {
+                q: "A positive slope means the line?",
+                options: ["Rises left to right", "Falls left to right", "Is vertical"],
+                answer: "Rises left to right",
+                explanation: "Positive slope means y increases as x increases."
+            },
+
+            {
+                q: "|-12| equals?",
+                options: ["12", "-12", "0"],
+                answer: "12",
+                explanation: "Absolute value measures distance from zero."
+            },
+
+            {
+                q: "The graph of y = |x| is shaped like a?",
+                options: ["V", "U", "Line"],
+                answer: "V",
+                explanation: "Absolute value functions form a V-shaped graph."
+            },
+
+            {
+                q: "A system of equations contains?",
+                options: ["Two or more equations", "Only one equation", "No variables"],
+                answer: "Two or more equations",
+                explanation: "A system has multiple equations with the same variables."
+            },
+
+            {
+                q: "The solution to a system of two lines is the?",
+                options: ["Intersection point", "Y-intercept only", "Slope"],
+                answer: "Intersection point",
+                explanation: "The solution is where the graphs meet."
+            },
+
+            {
+                q: "Parallel lines have?",
+                options: ["No solution", "One solution", "Infinite solutions"],
+                answer: "No solution",
+                explanation: "Parallel lines never intersect."
+            }
+
+        ]
+
+    },
+
     "algebra2-quadratic-functions": {
         title: "Quadratic Functions",
         subtitle: "Understand parabolas and quadratic equations.",
@@ -1770,6 +2181,323 @@ const algebra2Lessons = {
                 ],
                 answer: "It predicts the number of solutions",
                 explanation: "That's its primary purpose."
+            }
+
+        ]
+
+    }
+
+    ,
+
+    "algebra2-quadratics-review": {
+        title: "Quadratics Review",
+        subtitle: "Review quadratic functions, parabolas, vertex form, factored form, completing the square, the Quadratic Formula, and the discriminant.",
+
+        body: `
+
+<h2>Unit Review</h2>
+
+<p>This review covers the most important ideas from the Quadratics unit.</p>
+
+<hr>
+
+<h2>Key Concepts</h2>
+
+<ul>
+<li>Quadratic functions have degree 2.</li>
+<li>The graph of a quadratic function is a parabola.</li>
+<li>Standard form is <strong>y = ax² + bx + c</strong>.</li>
+<li>Vertex form is <strong>y = a(x − h)² + k</strong>.</li>
+<li>Factored form is <strong>y = a(x − r₁)(x − r₂)</strong>.</li>
+<li>The vertex is the turning point of the parabola.</li>
+<li>The roots, zeros, and x-intercepts all refer to where the graph crosses the x-axis.</li>
+<li>The Quadratic Formula solves any quadratic equation.</li>
+<li>The discriminant tells how many real solutions a quadratic has.</li>
+</ul>
+
+<hr>
+
+<h2>Important Formulas</h2>
+
+<p><strong>Standard Form:</strong> y = ax² + bx + c</p>
+
+<p><strong>Vertex Form:</strong> y = a(x − h)² + k</p>
+
+<p><strong>Factored Form:</strong> y = a(x − r₁)(x − r₂)</p>
+
+<p><strong>Quadratic Formula:</strong> x = (-b ± √(b² − 4ac)) / 2a</p>
+
+<p><strong>Discriminant:</strong> b² − 4ac</p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Forgetting that the sign of <strong>a</strong> controls whether the parabola opens up or down.</li>
+<li>Mixing up the vertex in vertex form.</li>
+<li>Forgetting the ± symbol in the Quadratic Formula.</li>
+<li>Not setting a quadratic equation equal to 0 before solving.</li>
+<li>Thinking the discriminant gives the solutions instead of the number of real solutions.</li>
+</ul>
+
+<hr>
+
+<h2>Ready for the Unit Test?</h2>
+
+<p>If you understand these ideas, you are ready for the Quadratics Unit Test.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The graph of a quadratic function is called a?",
+                options: ["Parabola", "Line", "Circle"],
+                answer: "Parabola",
+                explanation: "Quadratic functions graph as parabolas."
+            },
+
+            {
+                q: "The highest exponent in a quadratic function is?",
+                options: ["2", "1", "3"],
+                answer: "2",
+                explanation: "Quadratic functions have degree 2."
+            },
+
+            {
+                q: "Standard form of a quadratic is?",
+                options: ["y = ax² + bx + c", "y = mx + b", "y = a(x − h)² + k"],
+                answer: "y = ax² + bx + c",
+                explanation: "This is the standard quadratic form."
+            },
+
+            {
+                q: "If a > 0, the parabola opens?",
+                options: ["Upward", "Downward", "Sideways"],
+                answer: "Upward",
+                explanation: "A positive leading coefficient opens upward."
+            },
+
+            {
+                q: "If a < 0, the parabola opens?",
+                options: ["Downward", "Upward", "Sideways"],
+                answer: "Downward",
+                explanation: "A negative leading coefficient opens downward."
+            },
+
+            {
+                q: "The turning point of a parabola is the?",
+                options: ["Vertex", "Slope", "Radius"],
+                answer: "Vertex",
+                explanation: "The vertex is where the parabola changes direction."
+            },
+
+            {
+                q: "Vertex form is?",
+                options: ["y = a(x − h)² + k", "y = mx + b", "y = ax² + bx + c"],
+                answer: "y = a(x − h)² + k",
+                explanation: "Vertex form shows the vertex clearly."
+            },
+
+            {
+                q: "In y = (x − 4)² + 7, the vertex is?",
+                options: ["(4, 7)", "(-4, 7)", "(7, 4)"],
+                answer: "(4, 7)",
+                explanation: "In y=a(x−h)²+k, the vertex is (h,k)."
+            },
+
+            {
+                q: "Roots are also called?",
+                options: ["Zeros", "Slopes", "Vertices"],
+                answer: "Zeros",
+                explanation: "Roots and zeros both refer to x-values where y=0."
+            },
+
+            {
+                q: "The discriminant is?",
+                options: ["b² − 4ac", "2a", "ax² + bx + c"],
+                answer: "b² − 4ac",
+                explanation: "The discriminant is the expression under the square root in the Quadratic Formula."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-quadratics-unit-test": {
+        title: "Quadratics Unit Test",
+        subtitle: "Test your understanding of quadratic functions, parabolas, solving methods, and the discriminant.",
+
+        body: `
+
+<h2>Unit Test</h2>
+
+<p>This test covers the full Quadratics unit.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+<li>Quadratic functions</li>
+<li>Graphing parabolas</li>
+<li>Vertex form</li>
+<li>Factored form</li>
+<li>Completing the square</li>
+<li>The Quadratic Formula</li>
+<li>The discriminant</li>
+</ul>
+
+<hr>
+
+<h2>Goal</h2>
+
+<p>Answer each question carefully. A strong score means you are ready to begin Polynomials.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "A quadratic function has degree?",
+                options: ["2", "1", "3"],
+                answer: "2",
+                explanation: "The highest exponent in a quadratic is 2."
+            },
+
+            {
+                q: "The graph of a quadratic function is a?",
+                options: ["Parabola", "Line", "Circle"],
+                answer: "Parabola",
+                explanation: "Quadratic functions graph as parabolas."
+            },
+
+            {
+                q: "In y = ax² + bx + c, c represents the?",
+                options: ["Y-intercept", "Slope", "Vertex"],
+                answer: "Y-intercept",
+                explanation: "The constant term is the y-intercept."
+            },
+
+            {
+                q: "If a parabola opens upward, then a is?",
+                options: ["Positive", "Negative", "Zero"],
+                answer: "Positive",
+                explanation: "Positive a-values make parabolas open upward."
+            },
+
+            {
+                q: "If a parabola opens downward, then a is?",
+                options: ["Negative", "Positive", "Zero"],
+                answer: "Negative",
+                explanation: "Negative a-values make parabolas open downward."
+            },
+
+            {
+                q: "The axis of symmetry passes through the?",
+                options: ["Vertex", "Y-intercept", "Origin only"],
+                answer: "Vertex",
+                explanation: "The axis of symmetry always passes through the vertex."
+            },
+
+            {
+                q: "Vertex form is?",
+                options: ["y = a(x − h)² + k", "y = mx + b", "y = ax + b"],
+                answer: "y = a(x − h)² + k",
+                explanation: "Vertex form shows the vertex directly."
+            },
+
+            {
+                q: "Vertex of y = (x + 3)² − 5 is?",
+                options: ["(-3, -5)", "(3, -5)", "(-5, -3)"],
+                answer: "(-3, -5)",
+                explanation: "x+3 means h=-3, and k=-5."
+            },
+
+            {
+                q: "Factored form shows the?",
+                options: ["Roots", "Slope", "Area"],
+                answer: "Roots",
+                explanation: "Factored form makes roots easy to identify."
+            },
+
+            {
+                q: "For y = (x − 2)(x − 6), the roots are?",
+                options: ["2 and 6", "-2 and -6", "2 and -6"],
+                answer: "2 and 6",
+                explanation: "Set each factor equal to zero."
+            },
+
+            {
+                q: "Roots occur where?",
+                options: ["y = 0", "x = 0", "a = 0"],
+                answer: "y = 0",
+                explanation: "Roots are the x-intercepts."
+            },
+
+            {
+                q: "Completing the square creates a?",
+                options: ["Perfect square trinomial", "Linear function", "Circle"],
+                answer: "Perfect square trinomial",
+                explanation: "Completing the square rewrites a quadratic as a perfect square."
+            },
+
+            {
+                q: "When completing the square, half of 10 squared is?",
+                options: ["25", "10", "5"],
+                answer: "25",
+                explanation: "Half of 10 is 5, and 5² = 25."
+            },
+
+            {
+                q: "After completing the square, you often solve by?",
+                options: ["Taking the square root", "Finding slope", "Adding roots"],
+                answer: "Taking the square root",
+                explanation: "Perfect square form allows square-root solving."
+            },
+
+            {
+                q: "The Quadratic Formula solves?",
+                options: ["Any quadratic equation", "Only linear equations", "Only factored equations"],
+                answer: "Any quadratic equation",
+                explanation: "The Quadratic Formula works for all quadratic equations."
+            },
+
+            {
+                q: "Before using the Quadratic Formula, the equation should be?",
+                options: ["Set equal to 0", "Set equal to 1", "Written as y=mx+b"],
+                answer: "Set equal to 0",
+                explanation: "Quadratics should be in ax²+bx+c=0 form."
+            },
+
+            {
+                q: "In x² + 5x + 6 = 0, a equals?",
+                options: ["1", "5", "6"],
+                answer: "1",
+                explanation: "The coefficient of x² is 1."
+            },
+
+            {
+                q: "In x² + 5x + 6 = 0, b equals?",
+                options: ["5", "1", "6"],
+                answer: "5",
+                explanation: "The coefficient of x is b."
+            },
+
+            {
+                q: "If the discriminant is positive, there are?",
+                options: ["Two real solutions", "One real solution", "No real solutions"],
+                answer: "Two real solutions",
+                explanation: "A positive discriminant means two distinct real roots."
+            },
+
+            {
+                q: "If the discriminant is negative, there are?",
+                options: ["No real solutions", "One real solution", "Two real solutions"],
+                answer: "No real solutions",
+                explanation: "A negative discriminant means no real roots."
             }
 
         ]
@@ -3662,7 +4390,605 @@ const algebra2Lessons = {
         ]
 
     }
+
     ,
+
+    "algebra2-polynomials-review": {
+        title: "Polynomials Review",
+        subtitle: "Review polynomial operations, graphing, division, and the remainder and factor theorems.",
+
+        body: `
+
+<h2>Unit Review</h2>
+
+<p>This review covers the major concepts from the Polynomials unit.</p>
+
+<hr>
+
+<h2>Key Concepts</h2>
+
+<ul>
+
+<li>Identifying polynomial expressions</li>
+
+<li>Degree of a polynomial</li>
+
+<li>Classifying polynomials by number of terms</li>
+
+<li>Adding and subtracting polynomials</li>
+
+<li>Multiplying polynomials</li>
+
+<li>Special products</li>
+
+<li>Factoring polynomials</li>
+
+<li>End behavior</li>
+
+<li>Polynomial long division</li>
+
+<li>Synthetic division</li>
+
+<li>Remainder Theorem</li>
+
+<li>Factor Theorem</li>
+
+</ul>
+
+<hr>
+
+<h2>Important Facts</h2>
+
+<ul>
+
+<li>The degree is the highest exponent.</li>
+
+<li>A monomial has one term.</li>
+
+<li>A binomial has two terms.</li>
+
+<li>A trinomial has three terms.</li>
+
+<li>Like terms have identical variable parts.</li>
+
+<li>FOIL is used to multiply two binomials.</li>
+
+<li>Polynomial graphs are smooth and continuous.</li>
+
+<li>The leading coefficient determines end behavior.</li>
+
+<li>Synthetic division is a shortcut for dividing by x − c.</li>
+
+<li>If the remainder is 0, then x − c is a factor.</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Adding unlike terms.</li>
+
+<li>Forgetting to distribute negatives.</li>
+
+<li>Confusing degree with the coefficient.</li>
+
+<li>Using synthetic division when the divisor is not x − c.</li>
+
+<li>Thinking every remainder of 0 means multiple roots.</li>
+
+</ul>
+
+<hr>
+
+<h2>Quick Review</h2>
+
+<p>Before taking the Unit Test, make sure you can:</p>
+
+<ul>
+
+<li>Classify polynomials.</li>
+
+<li>Perform all polynomial operations.</li>
+
+<li>Factor common polynomial expressions.</li>
+
+<li>Determine end behavior.</li>
+
+<li>Use synthetic division.</li>
+
+<li>Apply the Remainder and Factor Theorems.</li>
+
+</ul>
+
+<hr>
+
+<h2>Ready?</h2>
+
+<p>If you understand these concepts, you're ready for the Polynomial Unit Test.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The degree of 5x⁴ + 2x² − 7 is?",
+
+                options: [
+                    "4",
+                    "5",
+                    "2"
+                ],
+
+                answer: "4",
+
+                explanation: "The degree is the highest exponent."
+            },
+
+            {
+                q: "A polynomial with exactly two terms is called a?",
+
+                options: [
+                    "Binomial",
+                    "Monomial",
+                    "Trinomial"
+                ],
+
+                answer: "Binomial",
+
+                explanation: "A binomial has exactly two terms."
+            },
+
+            {
+                q: "Like terms must have the same?",
+
+                options: [
+                    "Variable part",
+                    "Coefficient",
+                    "Exponent only"
+                ],
+
+                answer: "Variable part",
+
+                explanation: "Like terms have identical variables with identical exponents."
+            },
+
+            {
+                q: "FOIL is used for?",
+
+                options: [
+                    "Multiplying two binomials",
+                    "Factoring trinomials",
+                    "Dividing polynomials"
+                ],
+
+                answer: "Multiplying two binomials",
+
+                explanation: "FOIL stands for First, Outer, Inner, Last."
+            },
+
+            {
+                q: "The graph of a polynomial is?",
+
+                options: [
+                    "Smooth",
+                    "Broken",
+                    "Always a straight line"
+                ],
+
+                answer: "Smooth",
+
+                explanation: "Polynomial graphs have no sharp corners or breaks."
+            },
+
+            {
+                q: "End behavior depends mainly on the?",
+
+                options: [
+                    "Leading coefficient and degree",
+                    "Constant term",
+                    "Y-intercept"
+                ],
+
+                answer: "Leading coefficient and degree",
+
+                explanation: "These determine how the graph behaves as x becomes very large or very small."
+            },
+
+            {
+                q: "Synthetic division works when dividing by?",
+
+                options: [
+                    "x − c",
+                    "x² + 1",
+                    "Any polynomial"
+                ],
+
+                answer: "x − c",
+
+                explanation: "Synthetic division only applies to linear divisors of the form x − c."
+            },
+
+            {
+                q: "If the remainder is zero, then?",
+
+                options: [
+                    "The divisor is a factor",
+                    "The polynomial has no roots",
+                    "The degree changes"
+                ],
+
+                answer: "The divisor is a factor",
+
+                explanation: "This is the Factor Theorem."
+            },
+
+            {
+                q: "The Remainder Theorem evaluates?",
+
+                options: [
+                    "f(c)",
+                    "The degree",
+                    "The leading coefficient"
+                ],
+
+                answer: "f(c)",
+
+                explanation: "The remainder equals the value of f(c)."
+            },
+
+            {
+                q: "The Factor Theorem states that x − c is a factor when?",
+
+                options: [
+                    "f(c)=0",
+                    "f(c)=1",
+                    "The remainder is 2"
+                ],
+
+                answer: "f(c)=0",
+
+                explanation: "A zero remainder means the divisor is a factor."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-polynomials-unit-test": {
+        title: "Polynomials Unit Test",
+        subtitle: "Test your understanding of polynomial operations, graphing, division, and polynomial theorems.",
+
+        body: `
+
+<h2>Unit Test</h2>
+
+<p>This test covers the entire Polynomials unit.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+
+<li>Polynomial vocabulary</li>
+
+<li>Degree and classification</li>
+
+<li>Adding and subtracting polynomials</li>
+
+<li>Multiplying polynomials</li>
+
+<li>Factoring</li>
+
+<li>Graphing and end behavior</li>
+
+<li>Polynomial long division</li>
+
+<li>Synthetic division</li>
+
+<li>Remainder Theorem</li>
+
+<li>Factor Theorem</li>
+
+</ul>
+
+<hr>
+
+<h2>Goal</h2>
+
+<p>Successfully completing this assessment means you're ready to begin the Radicals unit.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "What is the degree of 7x⁵ − 2x² + 9?",
+
+                options: [
+                    "5",
+                    "7",
+                    "2"
+                ],
+
+                answer: "5",
+
+                explanation: "The degree is the highest exponent."
+            },
+
+            {
+                q: "A polynomial with one term is called a?",
+
+                options: [
+                    "Monomial",
+                    "Binomial",
+                    "Trinomial"
+                ],
+
+                answer: "Monomial",
+
+                explanation: "One term is a monomial."
+            },
+
+            {
+                q: "A polynomial with three terms is called a?",
+
+                options: [
+                    "Trinomial",
+                    "Monomial",
+                    "Quadratic"
+                ],
+
+                answer: "Trinomial",
+
+                explanation: "Three terms form a trinomial."
+            },
+
+            {
+                q: "Simplify: (3x² + 2x) + (5x² − x)",
+
+                options: [
+                    "8x² + x",
+                    "8x² + 3x",
+                    "15x⁴ + x"
+                ],
+
+                answer: "8x² + x",
+
+                explanation: "Combine like terms."
+            },
+
+            {
+                q: "Multiply: x(x + 6)",
+
+                options: [
+                    "x² + 6x",
+                    "x² + 6",
+                    "2x + 6"
+                ],
+
+                answer: "x² + 6x",
+
+                explanation: "Distribute x to each term."
+            },
+
+            {
+                q: "(x + 3)(x + 2) equals?",
+
+                options: [
+                    "x² + 5x + 6",
+                    "x² + 6",
+                    "x² + x + 5"
+                ],
+
+                answer: "x² + 5x + 6",
+
+                explanation: "Use FOIL."
+            },
+
+            {
+                q: "Which expression is fully factored?",
+
+                options: [
+                    "(x − 2)(x + 5)",
+                    "x² + 3x − 10",
+                    "x² + 4"
+                ],
+
+                answer: "(x − 2)(x + 5)",
+
+                explanation: "It is written as a product of factors."
+            },
+
+            {
+                q: "The roots of (x − 4)(x + 1) are?",
+
+                options: [
+                    "4 and −1",
+                    "−4 and 1",
+                    "4 and 1"
+                ],
+
+                answer: "4 and −1",
+
+                explanation: "Set each factor equal to zero."
+            },
+
+            {
+                q: "The graph of every polynomial is?",
+
+                options: [
+                    "Smooth",
+                    "Made of line segments",
+                    "Always a parabola"
+                ],
+
+                answer: "Smooth",
+
+                explanation: "Polynomial graphs have no sharp corners."
+            },
+
+            {
+                q: "A polynomial of odd degree has opposite end behavior when?",
+
+                options: [
+                    "The leading coefficient is positive",
+                    "The constant is positive",
+                    "The coefficient of x is zero"
+                ],
+
+                answer: "The leading coefficient is positive",
+
+                explanation: "Odd-degree polynomials have opposite end behavior."
+            },
+
+            {
+                q: "Synthetic division is used when dividing by?",
+
+                options: [
+                    "x − c",
+                    "x² + 1",
+                    "Any polynomial"
+                ],
+
+                answer: "x − c",
+
+                explanation: "Synthetic division only works with divisors of the form x − c."
+            },
+
+            {
+                q: "If dividing by x − 3, what number is used in synthetic division?",
+
+                options: [
+                    "3",
+                    "−3",
+                    "0"
+                ],
+
+                answer: "3",
+
+                explanation: "Use the opposite of the constant."
+            },
+
+            {
+                q: "The Remainder Theorem states the remainder equals?",
+
+                options: [
+                    "f(c)",
+                    "c²",
+                    "The degree"
+                ],
+
+                answer: "f(c)",
+
+                explanation: "Evaluating f(c) gives the remainder."
+            },
+
+            {
+                q: "If f(5)=0, then?",
+
+                options: [
+                    "x − 5 is a factor",
+                    "x + 5 is a factor",
+                    "There are no factors"
+                ],
+
+                answer: "x − 5 is a factor",
+
+                explanation: "This is the Factor Theorem."
+            },
+
+            {
+                q: "A remainder of zero means?",
+
+                options: [
+                    "The divisor is a factor",
+                    "The polynomial is linear",
+                    "The graph has no roots"
+                ],
+
+                answer: "The divisor is a factor",
+
+                explanation: "Zero remainder means exact division."
+            },
+
+            {
+                q: "Which operation combines like terms?",
+
+                options: [
+                    "Adding polynomials",
+                    "Factoring",
+                    "Synthetic division"
+                ],
+
+                answer: "Adding polynomials",
+
+                explanation: "Like terms are combined during addition and subtraction."
+            },
+
+            {
+                q: "Which determines a polynomial's end behavior?",
+
+                options: [
+                    "Degree and leading coefficient",
+                    "Constant term",
+                    "Y-intercept"
+                ],
+
+                answer: "Degree and leading coefficient",
+
+                explanation: "These determine how the graph behaves."
+            },
+
+            {
+                q: "FOIL is primarily used for?",
+
+                options: [
+                    "Multiplying two binomials",
+                    "Factoring trinomials",
+                    "Finding roots"
+                ],
+
+                answer: "Multiplying two binomials",
+
+                explanation: "FOIL is a multiplication shortcut."
+            },
+
+            {
+                q: "Which theorem helps determine if x − c is a factor?",
+
+                options: [
+                    "Factor Theorem",
+                    "Pythagorean Theorem",
+                    "Fundamental Theorem of Arithmetic"
+                ],
+
+                answer: "Factor Theorem",
+
+                explanation: "The Factor Theorem uses f(c)=0."
+            },
+
+            {
+                q: "After mastering this unit, the next Algebra 2 topic is?",
+
+                options: [
+                    "Radicals",
+                    "Probability",
+                    "Statistics"
+                ],
+
+                answer: "Radicals",
+
+                explanation: "The next unit studies radicals and rational exponents."
+            }
+
+        ]
+
+    },
 
     "algebra2-introduction-to-radicals": {
         title: "Introduction to Radicals",
@@ -5468,6 +6794,326 @@ const algebra2Lessons = {
     }
     ,
 
+    "algebra2-radicals-review": {
+        title: "Radicals Review",
+        subtitle: "Review square roots, cube roots, simplifying radicals, rational exponents, and radical equations.",
+
+        body: `
+
+<h2>Unit Review</h2>
+
+<p>This review covers the main ideas from the Radicals unit.</p>
+
+<hr>
+
+<h2>Key Concepts</h2>
+
+<ul>
+<li>Square roots and cube roots</li>
+<li>Simplifying square roots</li>
+<li>Simplifying cube roots</li>
+<li>Adding and subtracting like radicals</li>
+<li>Multiplying radicals</li>
+<li>Dividing radicals</li>
+<li>Rationalizing denominators</li>
+<li>Rational exponents</li>
+<li>Solving radical equations</li>
+<li>Checking for extraneous solutions</li>
+</ul>
+
+<hr>
+
+<h2>Important Facts</h2>
+
+<ul>
+<li>Square roots undo squaring.</li>
+<li>Cube roots undo cubing.</li>
+<li>Only like radicals can be added or subtracted.</li>
+<li>Radicals should be simplified completely.</li>
+<li>x^(1/2) means √x.</li>
+<li>x^(1/3) means ∛x.</li>
+<li>Radical equations must always be checked.</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Combining unlike radicals.</li>
+<li>Forgetting to simplify first.</li>
+<li>Leaving radicals in the denominator.</li>
+<li>Confusing rational exponents with regular exponents.</li>
+<li>Not checking for extraneous solutions.</li>
+</ul>
+
+<hr>
+
+<h2>Ready for the Unit Test?</h2>
+
+<p>If you understand these concepts, you are ready for the Radicals Unit Test.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "√64 equals?",
+                options: ["8", "16", "32"],
+                answer: "8",
+                explanation: "8² = 64."
+            },
+
+            {
+                q: "∛125 equals?",
+                options: ["5", "25", "15"],
+                answer: "5",
+                explanation: "5³ = 125."
+            },
+
+            {
+                q: "√50 simplifies to?",
+                options: ["5√2", "25√2", "10√5"],
+                answer: "5√2",
+                explanation: "50 = 25 × 2, so √50 = 5√2."
+            },
+
+            {
+                q: "∛54 simplifies to?",
+                options: ["3∛2", "6∛3", "9∛2"],
+                answer: "3∛2",
+                explanation: "54 = 27 × 2, so ∛54 = 3∛2."
+            },
+
+            {
+                q: "Which radicals can be combined?",
+                options: ["√7 and 4√7", "√7 and √3", "√7 and ∛7"],
+                answer: "√7 and 4√7",
+                explanation: "They have the same index and radicand."
+            },
+
+            {
+                q: "3√5 + 2√5 equals?",
+                options: ["5√5", "6√5", "5√10"],
+                answer: "5√5",
+                explanation: "Add the coefficients and keep the radical the same."
+            },
+
+            {
+                q: "√3 × √12 equals?",
+                options: ["6", "√15", "12"],
+                answer: "6",
+                explanation: "√3 × √12 = √36 = 6."
+            },
+
+            {
+                q: "x^(1/2) is the same as?",
+                options: ["√x", "x²", "∛x"],
+                answer: "√x",
+                explanation: "A one-half exponent means square root."
+            },
+
+            {
+                q: "x^(1/3) is the same as?",
+                options: ["∛x", "√x", "x³"],
+                answer: "∛x",
+                explanation: "A one-third exponent means cube root."
+            },
+
+            {
+                q: "Why must radical equation answers be checked?",
+                options: ["Extraneous solutions may occur", "The answer is always negative", "Radicals cannot be solved"],
+                answer: "Extraneous solutions may occur",
+                explanation: "Squaring both sides can create invalid solutions."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-radicals-unit-test": {
+        title: "Radicals Unit Test",
+        subtitle: "Test your understanding of radicals, rational exponents, and radical equations.",
+
+        body: `
+
+<h2>Unit Test</h2>
+
+<p>This test covers the full Radicals unit.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+<li>Square roots</li>
+<li>Cube roots</li>
+<li>Simplifying radicals</li>
+<li>Adding and subtracting radicals</li>
+<li>Multiplying radicals</li>
+<li>Dividing radicals</li>
+<li>Rational exponents</li>
+<li>Solving radical equations</li>
+<li>Extraneous solutions</li>
+</ul>
+
+<hr>
+
+<h2>Goal</h2>
+
+<p>A strong score means you are ready to begin Rational Expressions.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "√81 equals?",
+                options: ["9", "18", "27"],
+                answer: "9",
+                explanation: "9² = 81."
+            },
+
+            {
+                q: "∛27 equals?",
+                options: ["3", "9", "6"],
+                answer: "3",
+                explanation: "3³ = 27."
+            },
+
+            {
+                q: "√72 simplifies to?",
+                options: ["6√2", "8√2", "9√2"],
+                answer: "6√2",
+                explanation: "72 = 36 × 2."
+            },
+
+            {
+                q: "√18 simplifies to?",
+                options: ["3√2", "9√2", "2√9"],
+                answer: "3√2",
+                explanation: "18 = 9 × 2."
+            },
+
+            {
+                q: "∛250 simplifies to?",
+                options: ["5∛2", "10∛5", "25∛2"],
+                answer: "5∛2",
+                explanation: "250 = 125 × 2."
+            },
+
+            {
+                q: "7√3 - 2√3 equals?",
+                options: ["5√3", "9√3", "5√6"],
+                answer: "5√3",
+                explanation: "Subtract the coefficients."
+            },
+
+            {
+                q: "Can √2 and √5 be combined?",
+                options: ["No", "Yes", "Always"],
+                answer: "No",
+                explanation: "They have different radicands."
+            },
+
+            {
+                q: "√6 × √6 equals?",
+                options: ["6", "12", "36"],
+                answer: "6",
+                explanation: "√6 × √6 = √36 = 6."
+            },
+
+            {
+                q: "2√3 × 4√3 equals?",
+                options: ["24", "8√6", "12"],
+                answer: "24",
+                explanation: "2×4=8 and √3×√3=3, so 8×3=24."
+            },
+
+            {
+                q: "√48 ÷ √3 equals?",
+                options: ["4", "16", "12"],
+                answer: "4",
+                explanation: "√(48/3)=√16=4."
+            },
+
+            {
+                q: "Why do we rationalize the denominator?",
+                options: ["To remove radicals from the denominator", "To make the answer larger", "To change the index"],
+                answer: "To remove radicals from the denominator",
+                explanation: "Standard simplified form avoids radicals in the denominator."
+            },
+
+            {
+                q: "2/√3 rationalizes to?",
+                options: ["2√3/3", "√3/2", "2√3"],
+                answer: "2√3/3",
+                explanation: "Multiply numerator and denominator by √3."
+            },
+
+            {
+                q: "16^(1/2) equals?",
+                options: ["4", "8", "2"],
+                answer: "4",
+                explanation: "16^(1/2)=√16=4."
+            },
+
+            {
+                q: "27^(1/3) equals?",
+                options: ["3", "9", "6"],
+                answer: "3",
+                explanation: "27^(1/3)=∛27=3."
+            },
+
+            {
+                q: "64^(2/3) equals?",
+                options: ["16", "8", "4"],
+                answer: "16",
+                explanation: "∛64=4, and 4²=16."
+            },
+
+            {
+                q: "In x^(m/n), the denominator tells you?",
+                options: ["Which root to take", "The coefficient", "The final answer"],
+                answer: "Which root to take",
+                explanation: "The denominator gives the root index."
+            },
+
+            {
+                q: "First step when solving a radical equation?",
+                options: ["Isolate the radical", "Square immediately", "Divide by 2"],
+                answer: "Isolate the radical",
+                explanation: "Always isolate the radical before removing it."
+            },
+
+            {
+                q: "√(x+9)=7. x equals?",
+                options: ["40", "49", "58"],
+                answer: "40",
+                explanation: "Square both sides: x+9=49, so x=40."
+            },
+
+            {
+                q: "√(2x−1)=5. x equals?",
+                options: ["13", "12", "25"],
+                answer: "13",
+                explanation: "Square both sides: 2x−1=25, so x=13."
+            },
+
+            {
+                q: "An extraneous solution is?",
+                options: ["A solution that does not satisfy the original equation", "A correct solution", "A simplified radical"],
+                answer: "A solution that does not satisfy the original equation",
+                explanation: "Always check radical equation solutions in the original equation."
+            }
+
+        ]
+
+    },
+
+
+
     "algebra2-introduction-to-rational-expressions": {
         title: "Introduction to Rational Expressions",
         subtitle: "Learn what rational expressions are and how they are different from polynomials.",
@@ -6840,7 +8486,479 @@ const algebra2Lessons = {
         ]
 
     }
+
     ,
+
+    "algebra2-rational-expressions-review": {
+        title: "Rational Expressions Review",
+        subtitle: "Review simplifying, multiplying, dividing, adding, subtracting, and solving rational expressions.",
+
+        body: `
+
+<h2>Unit Review</h2>
+
+<p>This review covers the major concepts from the Rational Expressions unit.</p>
+
+<hr>
+
+<h2>Key Concepts</h2>
+
+<ul>
+
+<li>Identifying rational expressions</li>
+
+<li>Finding excluded values</li>
+
+<li>Simplifying rational expressions</li>
+
+<li>Multiplying rational expressions</li>
+
+<li>Dividing rational expressions</li>
+
+<li>Adding and subtracting rational expressions</li>
+
+<li>Finding common denominators</li>
+
+<li>Complex fractions</li>
+
+<li>Solving rational equations</li>
+
+<li>Checking for extraneous solutions</li>
+
+</ul>
+
+<hr>
+
+<h2>Important Facts</h2>
+
+<ul>
+
+<li>Denominators can never equal zero.</li>
+
+<li>Always factor before simplifying.</li>
+
+<li>Only factors may be cancelled.</li>
+
+<li>Never cancel terms connected by addition or subtraction.</li>
+
+<li>When dividing fractions, multiply by the reciprocal.</li>
+
+<li>Always verify solutions to rational equations.</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Canceling terms instead of factors.</li>
+
+<li>Forgetting excluded values.</li>
+
+<li>Adding numerators without a common denominator.</li>
+
+<li>Not simplifying final answers.</li>
+
+<li>Accepting extraneous solutions.</li>
+
+</ul>
+
+<hr>
+
+<h2>Ready?</h2>
+
+<p>If you understand these concepts, you're ready for the Rational Expressions Unit Test.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "A rational expression is a fraction containing?",
+                options: [
+                    "Polynomials",
+                    "Radicals",
+                    "Logarithms"
+                ],
+                answer: "Polynomials",
+                explanation: "Rational expressions are ratios of polynomials."
+            },
+
+            {
+                q: "A denominator may never equal?",
+                options: [
+                    "0",
+                    "1",
+                    "-1"
+                ],
+                answer: "0",
+                explanation: "Division by zero is undefined."
+            },
+
+            {
+                q: "Before simplifying, you should?",
+                options: [
+                    "Factor completely",
+                    "Multiply everything",
+                    "Find a common denominator"
+                ],
+                answer: "Factor completely",
+                explanation: "Factoring exposes common factors."
+            },
+
+            {
+                q: "Only what may be cancelled?",
+                options: [
+                    "Common factors",
+                    "Terms",
+                    "Coefficients only"
+                ],
+                answer: "Common factors",
+                explanation: "Terms connected by addition or subtraction cannot be cancelled."
+            },
+
+            {
+                q: "When dividing rational expressions you should?",
+                options: [
+                    "Multiply by the reciprocal",
+                    "Add numerators",
+                    "Subtract denominators"
+                ],
+                answer: "Multiply by the reciprocal",
+                explanation: "Keep-Change-Flip."
+            },
+
+            {
+                q: "Before adding rational expressions you need?",
+                options: [
+                    "A common denominator",
+                    "A common numerator",
+                    "Matching coefficients"
+                ],
+                answer: "A common denominator",
+                explanation: "Fractions must have common denominators before adding."
+            },
+
+            {
+                q: "Values making the denominator zero are called?",
+                options: [
+                    "Excluded values",
+                    "Roots",
+                    "Solutions"
+                ],
+                answer: "Excluded values",
+                explanation: "They are not in the domain."
+            },
+
+            {
+                q: "Solutions to rational equations should always be?",
+                options: [
+                    "Checked",
+                    "Squared",
+                    "Rounded"
+                ],
+                answer: "Checked",
+                explanation: "Extraneous solutions may occur."
+            },
+
+            {
+                q: "An invalid solution is called an?",
+                options: [
+                    "Extraneous solution",
+                    "Imaginary number",
+                    "Coefficient"
+                ],
+                answer: "Extraneous solution",
+                explanation: "It works after algebraic manipulation but not in the original equation."
+            },
+
+            {
+                q: "The next Algebra 2 unit is?",
+                options: [
+                    "Exponential Functions",
+                    "Probability",
+                    "Statistics"
+                ],
+                answer: "Exponential Functions",
+                explanation: "Exponential Functions come next."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-rational-expressions-unit-test": {
+        title: "Rational Expressions Unit Test",
+        subtitle: "Test your understanding of rational expressions, operations, and rational equations.",
+
+        body: `
+
+<h2>Unit Test</h2>
+
+<p>This assessment covers the complete Rational Expressions unit.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+
+<li>Rational expressions</li>
+
+<li>Domain restrictions</li>
+
+<li>Simplifying rational expressions</li>
+
+<li>Multiplying rational expressions</li>
+
+<li>Dividing rational expressions</li>
+
+<li>Adding and subtracting rational expressions</li>
+
+<li>Complex fractions</li>
+
+<li>Solving rational equations</li>
+
+<li>Extraneous solutions</li>
+
+</ul>
+
+<hr>
+
+<h2>Goal</h2>
+
+<p>A strong score means you are ready to begin Exponential Functions.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "A rational expression is a ratio of?",
+                options: [
+                    "Two polynomials",
+                    "Two radicals",
+                    "Two logarithms"
+                ],
+                answer: "Two polynomials",
+                explanation: "A rational expression is a fraction containing polynomials."
+            },
+
+            {
+                q: "Which value can never appear in a denominator?",
+                options: [
+                    "0",
+                    "1",
+                    "-1"
+                ],
+                answer: "0",
+                explanation: "Division by zero is undefined."
+            },
+
+            {
+                q: "Before simplifying a rational expression you should?",
+                options: [
+                    "Factor completely",
+                    "Multiply numerators",
+                    "Find LCD"
+                ],
+                answer: "Factor completely",
+                explanation: "Factoring exposes common factors."
+            },
+
+            {
+                q: "Which may be cancelled?",
+                options: [
+                    "Common factors",
+                    "Terms",
+                    "Constants only"
+                ],
+                answer: "Common factors",
+                explanation: "Only entire factors can be cancelled."
+            },
+
+            {
+                q: "x²−9 factors as?",
+                options: [
+                    "(x−3)(x+3)",
+                    "(x−9)(x+1)",
+                    "(x−3)²"
+                ],
+                answer: "(x−3)(x+3)",
+                explanation: "This is a difference of squares."
+            },
+
+            {
+                q: "When multiplying rational expressions you should?",
+                options: [
+                    "Multiply numerators and denominators",
+                    "Find a common denominator",
+                    "Cross multiply"
+                ],
+                answer: "Multiply numerators and denominators",
+                explanation: "Then simplify."
+            },
+
+            {
+                q: "When dividing rational expressions you should?",
+                options: [
+                    "Multiply by the reciprocal",
+                    "Add numerators",
+                    "Subtract denominators"
+                ],
+                answer: "Multiply by the reciprocal",
+                explanation: "Keep-Change-Flip."
+            },
+
+            {
+                q: "Before adding rational expressions you need?",
+                options: [
+                    "A common denominator",
+                    "A common numerator",
+                    "Equal coefficients"
+                ],
+                answer: "A common denominator",
+                explanation: "Fractions must have common denominators."
+            },
+
+            {
+                q: "The least common denominator is used when?",
+                options: [
+                    "Adding or subtracting fractions",
+                    "Multiplying fractions",
+                    "Factoring"
+                ],
+                answer: "Adding or subtracting fractions",
+                explanation: "LCD allows addition and subtraction."
+            },
+
+            {
+                q: "Can x cancel from x+5?",
+                options: [
+                    "No",
+                    "Yes",
+                    "Always"
+                ],
+                answer: "No",
+                explanation: "Only factors—not terms—may cancel."
+            },
+
+            {
+                q: "Can (x−2) cancel with (x−2) when they are factors?",
+                options: [
+                    "Yes",
+                    "No",
+                    "Never"
+                ],
+                answer: "Yes",
+                explanation: "Entire common factors cancel."
+            },
+
+            {
+                q: "The values excluded from the domain are those that make the denominator?",
+                options: [
+                    "Equal zero",
+                    "Equal one",
+                    "Negative"
+                ],
+                answer: "Equal zero",
+                explanation: "These values are undefined."
+            },
+
+            {
+                q: "A complex fraction contains?",
+                options: [
+                    "A fraction inside another fraction",
+                    "A square root",
+                    "A logarithm"
+                ],
+                answer: "A fraction inside another fraction",
+                explanation: "Complex fractions contain nested fractions."
+            },
+
+            {
+                q: "The first step in solving a rational equation is often to?",
+                options: [
+                    "Multiply both sides by the LCD",
+                    "Take the square root",
+                    "Graph the equation"
+                ],
+                answer: "Multiply both sides by the LCD",
+                explanation: "This clears the denominators."
+            },
+
+            {
+                q: "After solving a rational equation you should?",
+                options: [
+                    "Check every solution",
+                    "Square every answer",
+                    "Round to two decimals"
+                ],
+                answer: "Check every solution",
+                explanation: "Extraneous solutions may occur."
+            },
+
+            {
+                q: "An answer that satisfies the transformed equation but not the original equation is called?",
+                options: [
+                    "An extraneous solution",
+                    "A rational root",
+                    "A factor"
+                ],
+                answer: "An extraneous solution",
+                explanation: "Always substitute answers back into the original equation."
+            },
+
+            {
+                q: "If a denominator becomes zero after substitution, the solution is?",
+                options: [
+                    "Invalid",
+                    "Correct",
+                    "Irrational"
+                ],
+                answer: "Invalid",
+                explanation: "Division by zero is undefined."
+            },
+
+            {
+                q: "Factoring before simplifying helps identify?",
+                options: [
+                    "Common factors",
+                    "Common denominators",
+                    "Slopes"
+                ],
+                answer: "Common factors",
+                explanation: "Factoring reveals factors that may cancel."
+            },
+
+            {
+                q: "The domain of a rational expression excludes?",
+                options: [
+                    "Values that make the denominator zero",
+                    "Negative numbers",
+                    "Fractions"
+                ],
+                answer: "Values that make the denominator zero",
+                explanation: "Those values make the expression undefined."
+            },
+
+            {
+                q: "After completing this unit, the next Algebra 2 topic is?",
+                options: [
+                    "Exponential Functions",
+                    "Probability",
+                    "Statistics"
+                ],
+                answer: "Exponential Functions",
+                explanation: "The next unit begins with Introduction to Exponential Functions."
+            }
+
+        ]
+
+    },
 
     "algebra2-introduction-to-exponential-functions": {
         title: "Introduction to Exponential Functions",
@@ -8520,6 +10638,5569 @@ const algebra2Lessons = {
         ]
 
     }
+    ,
+
+    "algebra2-converting-exponential-logarithmic-form": {
+        title: "Converting Between Exponential and Logarithmic Form",
+        subtitle: "Rewrite equations between exponential form and logarithmic form.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>Exponential equations and logarithmic equations are two ways to write the same relationship.</p>
+
+<hr>
+
+<h2>Main Relationship</h2>
+
+<p><strong>log<sub>b</sub>(x)=y</strong></p>
+
+<p>means</p>
+
+<p><strong>b<sup>y</sup>=x</strong></p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p><strong>log₂(16)=4</strong></p>
+
+<p>Exponential form:</p>
+
+<p><strong>2⁴=16</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p><strong>3²=9</strong></p>
+
+<p>Logarithmic form:</p>
+
+<p><strong>log₃(9)=2</strong></p>
+
+<hr>
+
+<h2>How to Remember</h2>
+
+<p>The base stays the base.</p>
+
+<p>The logarithm equals the exponent.</p>
+
+<p>The number inside the log is the result of the power.</p>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Converting between forms helps solve exponential and logarithmic equations.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "log₂(16)=4 converts to?",
+                options: ["2⁴=16", "16²=4", "4²=16"],
+                answer: "2⁴=16",
+                explanation: "The base is 2, the exponent is 4, and the result is 16."
+            },
+
+            {
+                q: "3²=9 converts to?",
+                options: ["log₃(9)=2", "log₂(9)=3", "log₉(3)=2"],
+                answer: "log₃(9)=2",
+                explanation: "The base stays 3 and the exponent becomes the log value."
+            },
+
+            {
+                q: "In log₅(25)=2, the base is?",
+                options: ["5", "25", "2"],
+                answer: "5",
+                explanation: "The base is the small number written below log."
+            },
+
+            {
+                q: "In log₅(25)=2, the exponent is?",
+                options: ["2", "5", "25"],
+                answer: "2",
+                explanation: "A logarithm gives the exponent."
+            },
+
+            {
+                q: "10³=1000 converts to?",
+                options: ["log₁₀(1000)=3", "log₃(1000)=10", "log₁₀(3)=1000"],
+                answer: "log₁₀(1000)=3",
+                explanation: "10 raised to the third power equals 1000."
+            },
+
+            {
+                q: "log₄(64)=3 converts to?",
+                options: ["4³=64", "64³=4", "3⁴=64"],
+                answer: "4³=64",
+                explanation: "The base is 4 and the exponent is 3."
+            },
+
+            {
+                q: "The answer to a logarithm is always a/an?",
+                options: ["Exponent", "Base", "Coefficient"],
+                answer: "Exponent",
+                explanation: "A logarithm asks what exponent is needed."
+            },
+
+            {
+                q: "The base changes when converting forms?",
+                options: ["No", "Yes", "Sometimes"],
+                answer: "No",
+                explanation: "The base stays the same in both forms."
+            },
+
+            {
+                q: "Which is logarithmic form?",
+                options: ["log₂(8)=3", "2³=8", "x²+3x+2"],
+                answer: "log₂(8)=3",
+                explanation: "Logarithmic form uses log notation."
+            },
+
+            {
+                q: "Which is exponential form?",
+                options: ["5²=25", "log₅(25)=2", "log₂(8)=3"],
+                answer: "5²=25",
+                explanation: "Exponential form uses a base raised to a power."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-properties-of-logarithms": {
+        title: "Properties of Logarithms",
+        subtitle: "Use the Product, Quotient, and Power Properties of logarithms.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>Logarithm properties allow us to rewrite logarithmic expressions in simpler forms.</p>
+
+<p>These properties are especially useful when solving logarithmic equations.</p>
+
+<hr>
+
+<h2>Product Property</h2>
+
+<p><strong>log<sub>b</sub>(MN) = log<sub>b</sub>(M) + log<sub>b</sub>(N)</strong></p>
+
+<p>The logarithm of a product becomes the sum of two logarithms.</p>
+
+<hr>
+
+<h2>Quotient Property</h2>
+
+<p><strong>log<sub>b</sub>(M/N) = log<sub>b</sub>(M) − log<sub>b</sub>(N)</strong></p>
+
+<p>The logarithm of a quotient becomes the difference of two logarithms.</p>
+
+<hr>
+
+<h2>Power Property</h2>
+
+<p><strong>log<sub>b</sub>(M<sup>k</sup>) = k · log<sub>b</sub>(M)</strong></p>
+
+<p>The exponent moves to the front as a coefficient.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p><strong>log₂(8 × 4)</strong></p>
+
+<p>= log₂(8) + log₂(4)</p>
+
+<p>= 3 + 2</p>
+
+<p>= <strong>5</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p><strong>log₁₀(100/10)</strong></p>
+
+<p>= log₁₀(100) − log₁₀(10)</p>
+
+<p>= 2 − 1</p>
+
+<p>= <strong>1</strong></p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p><strong>log₃(9²)</strong></p>
+
+<p>= 2 log₃(9)</p>
+
+<p>= 2 × 2</p>
+
+<p>= <strong>4</strong></p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>These properties only apply to multiplication, division, and exponents.</li>
+
+<li>They do <strong>not</strong> work for addition or subtraction inside the logarithm.</li>
+
+<li>Always keep the base the same.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>The Product, Quotient, and Power Properties allow logarithms to be rewritten into equivalent forms that are easier to work with.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The Product Property changes multiplication into?",
+
+                options: [
+                    "Addition",
+                    "Subtraction",
+                    "Division"
+                ],
+
+                answer: "Addition",
+
+                explanation: "The logarithm of a product becomes the sum of two logarithms."
+            },
+
+            {
+                q: "The Quotient Property changes division into?",
+
+                options: [
+                    "Subtraction",
+                    "Addition",
+                    "Multiplication"
+                ],
+
+                answer: "Subtraction",
+
+                explanation: "The logarithm of a quotient becomes the difference of two logarithms."
+            },
+
+            {
+                q: "The Power Property moves the exponent?",
+
+                options: [
+                    "To the front",
+                    "Inside the logarithm",
+                    "To the denominator"
+                ],
+
+                answer: "To the front",
+
+                explanation: "The exponent becomes a coefficient."
+            },
+
+            {
+                q: "log(MN) equals?",
+
+                options: [
+                    "log(M)+log(N)",
+                    "log(M)-log(N)",
+                    "log(MN²)"
+                ],
+
+                answer: "log(M)+log(N)",
+
+                explanation: "This is the Product Property."
+            },
+
+            {
+                q: "log(M/N) equals?",
+
+                options: [
+                    "log(M)-log(N)",
+                    "log(M)+log(N)",
+                    "log(N)-log(M)"
+                ],
+
+                answer: "log(M)-log(N)",
+
+                explanation: "This is the Quotient Property."
+            },
+
+            {
+                q: "log(M⁵) equals?",
+
+                options: [
+                    "5log(M)",
+                    "log(5M)",
+                    "log(M)+5"
+                ],
+
+                answer: "5log(M)",
+
+                explanation: "The exponent becomes the coefficient."
+            },
+
+            {
+                q: "Which operation becomes addition?",
+
+                options: [
+                    "Multiplication",
+                    "Division",
+                    "Exponentiation"
+                ],
+
+                answer: "Multiplication",
+
+                explanation: "Products become sums."
+            },
+
+            {
+                q: "Which operation becomes subtraction?",
+
+                options: [
+                    "Division",
+                    "Multiplication",
+                    "Addition"
+                ],
+
+                answer: "Division",
+
+                explanation: "Quotients become differences."
+            },
+
+            {
+                q: "Do logarithm properties work for log(M+N)?",
+
+                options: [
+                    "No",
+                    "Yes",
+                    "Only sometimes"
+                ],
+
+                answer: "No",
+
+                explanation: "There is no addition property for logarithms."
+            },
+
+            {
+                q: "These properties are mainly used for?",
+
+                options: [
+                    "Rewriting logarithmic expressions",
+                    "Graphing lines",
+                    "Factoring quadratics"
+                ],
+
+                answer: "Rewriting logarithmic expressions",
+
+                explanation: "They simplify logarithmic expressions and help solve equations."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-expanding-logarithms": {
+        title: "Expanding Logarithms",
+        subtitle: "Rewrite logarithms as sums and differences using logarithm properties.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>Expanding a logarithm means rewriting one logarithm as several simpler logarithms.</p>
+
+<p>To expand logarithms, we use the Product, Quotient, and Power Properties.</p>
+
+<hr>
+
+<h2>Step 1 — Apply the Product Property</h2>
+
+<p><strong>log(MN)=log(M)+log(N)</strong></p>
+
+<p>Products become sums.</p>
+
+<hr>
+
+<h2>Step 2 — Apply the Quotient Property</h2>
+
+<p><strong>log(M/N)=log(M)-log(N)</strong></p>
+
+<p>Quotients become differences.</p>
+
+<hr>
+
+<h2>Step 3 — Apply the Power Property</h2>
+
+<p><strong>log(M<sup>k</sup>)=k·log(M)</strong></p>
+
+<p>Exponents become coefficients.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p><strong>log(5x)</strong></p>
+
+<p>= log(5) + log(x)</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p><strong>log(x²)</strong></p>
+
+<p>= 2log(x)</p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p><strong>log((3x²)/y)</strong></p>
+
+<p>= log(3x²) − log(y)</p>
+
+<p>= log(3) + log(x²) − log(y)</p>
+
+<p>= <strong>log(3) + 2log(x) − log(y)</strong></p>
+
+<hr>
+
+<h2>Order Matters</h2>
+
+<p>Expand products and quotients first.</p>
+
+<p>Apply the Power Property after identifying exponents.</p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Do not expand log(x+y).</li>
+
+<li>Only products, quotients, and powers can be expanded.</li>
+
+<li>Move exponents to the front as coefficients.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Expanding logarithms uses the Product, Quotient, and Power Properties to rewrite one logarithm into simpler logarithmic expressions.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "log(ab) expands to?",
+
+                options: [
+                    "log(a)+log(b)",
+                    "log(a)-log(b)",
+                    "2log(ab)"
+                ],
+
+                answer: "log(a)+log(b)",
+
+                explanation: "Products become sums."
+            },
+
+            {
+                q: "log(a/b) expands to?",
+
+                options: [
+                    "log(a)-log(b)",
+                    "log(a)+log(b)",
+                    "log(b)-log(a)"
+                ],
+
+                answer: "log(a)-log(b)",
+
+                explanation: "Quotients become differences."
+            },
+
+            {
+                q: "log(x⁴) expands to?",
+
+                options: [
+                    "4log(x)",
+                    "log(4x)",
+                    "log(x)+4"
+                ],
+
+                answer: "4log(x)",
+
+                explanation: "The exponent becomes the coefficient."
+            },
+
+            {
+                q: "log(7x) expands to?",
+
+                options: [
+                    "log(7)+log(x)",
+                    "log(7x²)",
+                    "7log(x)"
+                ],
+
+                answer: "log(7)+log(x)",
+
+                explanation: "Products become sums."
+            },
+
+            {
+                q: "log((5x)/y) expands to?",
+
+                options: [
+                    "log(5)+log(x)-log(y)",
+                    "log(5x)-log(y²)",
+                    "log(5)+log(y)-log(x)"
+                ],
+
+                answer: "log(5)+log(x)-log(y)",
+
+                explanation: "Apply the Product Property, then the Quotient Property."
+            },
+
+            {
+                q: "Can log(x+y) be expanded?",
+
+                options: [
+                    "No",
+                    "Yes",
+                    "Only sometimes"
+                ],
+
+                answer: "No",
+
+                explanation: "There is no logarithm property for addition."
+            },
+
+            {
+                q: "Which property moves an exponent to the front?",
+
+                options: [
+                    "Power Property",
+                    "Product Property",
+                    "Quotient Property"
+                ],
+
+                answer: "Power Property",
+
+                explanation: "The exponent becomes a coefficient."
+            },
+
+            {
+                q: "Products become?",
+
+                options: [
+                    "Sums",
+                    "Differences",
+                    "Products"
+                ],
+
+                answer: "Sums",
+
+                explanation: "Use the Product Property."
+            },
+
+            {
+                q: "Quotients become?",
+
+                options: [
+                    "Differences",
+                    "Sums",
+                    "Products"
+                ],
+
+                answer: "Differences",
+
+                explanation: "Use the Quotient Property."
+            },
+
+            {
+                q: "The goal of expanding logarithms is to?",
+
+                options: [
+                    "Rewrite one logarithm as several simpler logarithms",
+                    "Solve for x immediately",
+                    "Factor polynomials"
+                ],
+
+                answer: "Rewrite one logarithm as several simpler logarithms",
+
+                explanation: "Expanding separates expressions into simpler logarithms."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-condensing-logarithms": {
+        title: "Condensing Logarithms",
+        subtitle: "Combine multiple logarithms into a single logarithm.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>Condensing logarithms is the opposite of expanding logarithms.</p>
+
+<p>Instead of breaking one logarithm into several, we combine several logarithms into one.</p>
+
+<hr>
+
+<h2>Product Property</h2>
+
+<p><strong>log(M)+log(N)=log(MN)</strong></p>
+
+<p>Addition becomes multiplication.</p>
+
+<hr>
+
+<h2>Quotient Property</h2>
+
+<p><strong>log(M)-log(N)=log(M/N)</strong></p>
+
+<p>Subtraction becomes division.</p>
+
+<hr>
+
+<h2>Power Property</h2>
+
+<p><strong>k·log(M)=log(M<sup>k</sup>)</strong></p>
+
+<p>The coefficient becomes the exponent.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p><strong>log(x)+log(y)</strong></p>
+
+<p>= <strong>log(xy)</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p><strong>log(a)-log(b)</strong></p>
+
+<p>= <strong>log(a/b)</strong></p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p><strong>2log(x)+log(y)-log(z)</strong></p>
+
+<p>Move the coefficient:</p>
+
+<p>= log(x²)+log(y)-log(z)</p>
+
+<p>Combine products:</p>
+
+<p>= log(x²y)-log(z)</p>
+
+<p>Combine quotient:</p>
+
+<p>= <strong>log((x²y)/z)</strong></p>
+
+<hr>
+
+<h2>Order Matters</h2>
+
+<p>Always move coefficients into exponents before combining logarithms.</p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Combine only logarithms with the same base.</li>
+
+<li>Move coefficients to exponents first.</li>
+
+<li>Addition becomes multiplication.</li>
+
+<li>Subtraction becomes division.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Condensing logarithms combines multiple logarithmic expressions into one using the Product, Quotient, and Power Properties.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "log(a)+log(b) condenses to?",
+
+                options: [
+                    "log(ab)",
+                    "log(a+b)",
+                    "log(a/b)"
+                ],
+
+                answer: "log(ab)",
+
+                explanation: "Addition becomes multiplication."
+            },
+
+            {
+                q: "log(a)-log(b) condenses to?",
+
+                options: [
+                    "log(a/b)",
+                    "log(ab)",
+                    "log(a-b)"
+                ],
+
+                answer: "log(a/b)",
+
+                explanation: "Subtraction becomes division."
+            },
+
+            {
+                q: "3log(x) condenses to?",
+
+                options: [
+                    "log(x³)",
+                    "log(3x)",
+                    "3+x"
+                ],
+
+                answer: "log(x³)",
+
+                explanation: "The coefficient becomes the exponent."
+            },
+
+            {
+                q: "2log(x)+log(y) condenses to?",
+
+                options: [
+                    "log(x²y)",
+                    "log(2xy)",
+                    "log(x²+y)"
+                ],
+
+                answer: "log(x²y)",
+
+                explanation: "Apply the Power Property first."
+            },
+
+            {
+                q: "log(x)+log(y)-log(z) condenses to?",
+
+                options: [
+                    "log((xy)/z)",
+                    "log(x+y-z)",
+                    "log(xyz)"
+                ],
+
+                answer: "log((xy)/z)",
+
+                explanation: "Products stay in the numerator and quotients go in the denominator."
+            },
+
+            {
+                q: "Before combining logarithms with coefficients, you should?",
+
+                options: [
+                    "Move coefficients to exponents",
+                    "Multiply everything",
+                    "Add the coefficients"
+                ],
+
+                answer: "Move coefficients to exponents",
+
+                explanation: "Use the Power Property first."
+            },
+
+            {
+                q: "Addition between logarithms becomes?",
+
+                options: [
+                    "Multiplication",
+                    "Division",
+                    "Addition"
+                ],
+
+                answer: "Multiplication",
+
+                explanation: "This is the Product Property."
+            },
+
+            {
+                q: "Subtraction between logarithms becomes?",
+
+                options: [
+                    "Division",
+                    "Multiplication",
+                    "Addition"
+                ],
+
+                answer: "Division",
+
+                explanation: "This is the Quotient Property."
+            },
+
+            {
+                q: "Condensing logarithms is the opposite of?",
+
+                options: [
+                    "Expanding logarithms",
+                    "Factoring",
+                    "Graphing"
+                ],
+
+                answer: "Expanding logarithms",
+
+                explanation: "One combines while the other separates."
+            },
+
+            {
+                q: "The final answer after condensing should usually be?",
+
+                options: [
+                    "One logarithm",
+                    "Several logarithms",
+                    "No logarithms"
+                ],
+
+                answer: "One logarithm",
+
+                explanation: "The goal is to combine everything into a single logarithm."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-solving-logarithmic-equations": {
+        title: "Solving Logarithmic Equations",
+        subtitle: "Solve logarithmic equations by rewriting them in exponential form.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>A <strong>logarithmic equation</strong> contains one or more logarithms with a variable.</p>
+
+<p>Many logarithmic equations can be solved by rewriting them in exponential form.</p>
+
+<hr>
+
+<h2>General Steps</h2>
+
+<ol>
+
+<li>Isolate the logarithm.</li>
+
+<li>Rewrite the equation in exponential form.</li>
+
+<li>Solve for the variable.</li>
+
+<li>Check your answer in the original equation.</li>
+
+</ol>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p><strong>log₂(x)=5</strong></p>
+
+<p>Rewrite in exponential form:</p>
+
+<p><strong>2⁵=x</strong></p>
+
+<p><strong>x=32</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p><strong>log₁₀(x)=3</strong></p>
+
+<p>Rewrite:</p>
+
+<p><strong>10³=x</strong></p>
+
+<p><strong>x=1000</strong></p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p><strong>log₃(x−1)=2</strong></p>
+
+<p>Rewrite:</p>
+
+<p><strong>3²=x−1</strong></p>
+
+<p>9=x−1</p>
+
+<p><strong>x=10</strong></p>
+
+<hr>
+
+<h2>Checking Solutions</h2>
+
+<p>Every logarithm requires a <strong>positive argument</strong>.</p>
+
+<p>If the value inside a logarithm is zero or negative, the solution is invalid.</p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Always isolate the logarithm first.</li>
+
+<li>Rewrite correctly into exponential form.</li>
+
+<li>Always check the final answer.</li>
+
+<li>The argument of a logarithm must be greater than zero.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Most logarithmic equations are solved by converting them into exponential form and checking that the solution makes every logarithm valid.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "First step when solving a logarithmic equation?",
+
+                options: [
+                    "Isolate the logarithm",
+                    "Square both sides",
+                    "Factor everything"
+                ],
+
+                answer: "Isolate the logarithm",
+
+                explanation: "Always isolate the logarithm before converting forms."
+            },
+
+            {
+                q: "log₂(x)=4. x=?",
+
+                options: [
+                    "16",
+                    "8",
+                    "4"
+                ],
+
+                answer: "16",
+
+                explanation: "2⁴=16."
+            },
+
+            {
+                q: "log₁₀(x)=2. x=?",
+
+                options: [
+                    "100",
+                    "20",
+                    "10"
+                ],
+
+                answer: "100",
+
+                explanation: "10²=100."
+            },
+
+            {
+                q: "log₅(x)=3. x=?",
+
+                options: [
+                    "125",
+                    "25",
+                    "15"
+                ],
+
+                answer: "125",
+
+                explanation: "5³=125."
+            },
+
+            {
+                q: "log₃(x−2)=2. x=?",
+
+                options: [
+                    "11",
+                    "9",
+                    "7"
+                ],
+
+                answer: "11",
+
+                explanation: "3²=9, so x−2=9."
+            },
+
+            {
+                q: "After rewriting into exponential form, you should?",
+
+                options: [
+                    "Solve for the variable",
+                    "Take another logarithm",
+                    "Graph the equation"
+                ],
+
+                answer: "Solve for the variable",
+
+                explanation: "The equation becomes a regular algebra problem."
+            },
+
+            {
+                q: "The argument of a logarithm must be?",
+
+                options: [
+                    "Greater than zero",
+                    "Greater than or equal to zero",
+                    "Any real number"
+                ],
+
+                answer: "Greater than zero",
+
+                explanation: "Logarithms are only defined for positive arguments."
+            },
+
+            {
+                q: "Why should every solution be checked?",
+
+                options: [
+                    "To make sure the logarithm is defined",
+                    "To find another answer",
+                    "To simplify the equation"
+                ],
+
+                answer: "To make sure the logarithm is defined",
+
+                explanation: "Some algebraic solutions make the logarithm invalid."
+            },
+
+            {
+                q: "log₂(32)=?",
+
+                options: [
+                    "5",
+                    "32",
+                    "16"
+                ],
+
+                answer: "5",
+
+                explanation: "2⁵=32."
+            },
+
+            {
+                q: "Most logarithmic equations are solved by converting them to?",
+
+                options: [
+                    "Exponential form",
+                    "Vertex form",
+                    "Slope-intercept form"
+                ],
+
+                answer: "Exponential form",
+
+                explanation: "This is the standard solution method."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-applications-of-logarithms": {
+        title: "Applications of Logarithms",
+        subtitle: "Explore how logarithms are used in science, engineering, finance, and technology.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>Logarithms are used whenever numbers grow or shrink very quickly.</p>
+
+<p>They make extremely large or extremely small numbers much easier to understand and compare.</p>
+
+<hr>
+
+<h2>Earthquakes</h2>
+
+<p>The <strong>Richter Scale</strong> measures earthquake strength using logarithms.</p>
+
+<p>Each whole-number increase represents a much larger release of energy.</p>
+
+<hr>
+
+<h2>Sound</h2>
+
+<p><strong>Decibels (dB)</strong> measure sound intensity using logarithms.</p>
+
+<p>This allows scientists to compare very quiet and very loud sounds.</p>
+
+<hr>
+
+<h2>Chemistry</h2>
+
+<p>The <strong>pH Scale</strong> measures how acidic or basic a solution is.</p>
+
+<p>The pH scale is logarithmic.</p>
+
+<hr>
+
+<h2>Finance</h2>
+
+<p>Logarithms help solve compound interest problems when the time is unknown.</p>
+
+<p>They are also used to model investment growth.</p>
+
+<hr>
+
+<h2>Computer Science</h2>
+
+<p>Algorithms and data structures often use logarithms to measure efficiency.</p>
+
+<p>For example, binary search has logarithmic performance.</p>
+
+<hr>
+
+<h2>Medicine</h2>
+
+<p>Logarithms are used to analyze medical data, population growth, and drug concentration over time.</p>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Logarithms are powerful mathematical tools used throughout science, engineering, medicine, finance, and technology to describe exponential relationships.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The Richter Scale measures?",
+
+                options: [
+                    "Earthquake strength",
+                    "Wind speed",
+                    "Temperature"
+                ],
+
+                answer: "Earthquake strength",
+
+                explanation: "The Richter Scale uses logarithms to measure earthquake magnitude."
+            },
+
+            {
+                q: "Decibels measure?",
+
+                options: [
+                    "Sound intensity",
+                    "Population",
+                    "Distance"
+                ],
+
+                answer: "Sound intensity",
+
+                explanation: "Sound intensity is measured on a logarithmic scale."
+            },
+
+            {
+                q: "The pH Scale measures?",
+
+                options: [
+                    "Acidity",
+                    "Speed",
+                    "Pressure"
+                ],
+
+                answer: "Acidity",
+
+                explanation: "The pH Scale is logarithmic."
+            },
+
+            {
+                q: "Logarithms are useful because they simplify?",
+
+                options: [
+                    "Very large and very small numbers",
+                    "Only fractions",
+                    "Only integers"
+                ],
+
+                answer: "Very large and very small numbers",
+
+                explanation: "Logarithms compress large ranges of values."
+            },
+
+            {
+                q: "Compound interest problems may require?",
+
+                options: [
+                    "Logarithms",
+                    "Quadratic Formula",
+                    "FOIL"
+                ],
+
+                answer: "Logarithms",
+
+                explanation: "Logarithms can solve for unknown time."
+            },
+
+            {
+                q: "Binary search is associated with?",
+
+                options: [
+                    "Logarithms",
+                    "Quadratics",
+                    "Geometry"
+                ],
+
+                answer: "Logarithms",
+
+                explanation: "Binary search runs in logarithmic time."
+            },
+
+            {
+                q: "Which field commonly uses logarithms?",
+
+                options: [
+                    "Medicine",
+                    "Science",
+                    "Finance",
+                    "All of the above"
+                ],
+
+                answer: "All of the above",
+
+                explanation: "Logarithms appear in many different fields."
+            },
+
+            {
+                q: "Logarithms help describe?",
+
+                options: [
+                    "Exponential relationships",
+                    "Only linear equations",
+                    "Only circles"
+                ],
+
+                answer: "Exponential relationships",
+
+                explanation: "They are the inverse of exponential functions."
+            },
+
+            {
+                q: "Why are logarithmic scales useful?",
+
+                options: [
+                    "They compress large ranges of values",
+                    "They eliminate fractions",
+                    "They avoid decimals"
+                ],
+
+                answer: "They compress large ranges of values",
+
+                explanation: "Large differences become easier to compare."
+            },
+
+            {
+                q: "Logarithms are most closely connected to?",
+
+                options: [
+                    "Exponential functions",
+                    "Linear equations",
+                    "Polynomials"
+                ],
+
+                answer: "Exponential functions",
+
+                explanation: "Logarithms are the inverse of exponential functions."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-exponential-logarithms-review": {
+        title: "Exponential & Logarithmic Functions Review",
+        subtitle: "Review exponential growth, decay, compound interest, logarithms, and logarithmic equations.",
+
+        body: `
+
+<h2>Unit Review</h2>
+
+<p>This review covers Exponential Functions and Logarithms.</p>
+
+<hr>
+
+<h2>Key Concepts</h2>
+
+<ul>
+<li>Exponential functions</li>
+<li>Exponential growth</li>
+<li>Exponential decay</li>
+<li>Compound interest</li>
+<li>Solving exponential equations</li>
+<li>Logarithms as inverse operations</li>
+<li>Converting exponential and logarithmic form</li>
+<li>Logarithm properties</li>
+<li>Expanding and condensing logarithms</li>
+<li>Solving logarithmic equations</li>
+<li>Applications of logarithms</li>
+</ul>
+
+<hr>
+
+<h2>Important Facts</h2>
+
+<ul>
+<li>Exponential functions change by multiplication.</li>
+<li>If the base is greater than 1, the function shows growth.</li>
+<li>If the base is between 0 and 1, the function shows decay.</li>
+<li>Logarithms answer the question: “What exponent?”</li>
+<li>Logarithms are the inverse of exponential functions.</li>
+<li>The argument of a logarithm must be positive.</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Confusing growth factor and growth rate.</li>
+<li>Forgetting to convert percentages to decimals.</li>
+<li>Forgetting that logarithms give exponents.</li>
+<li>Not checking logarithmic equation solutions.</li>
+<li>Trying to use log properties on addition inside a logarithm.</li>
+</ul>
+
+<hr>
+
+<h2>Ready?</h2>
+
+<p>If you understand these ideas, you are ready for the Exponential & Logarithmic Functions Unit Test.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "An exponential function has the variable where?",
+                options: ["In the exponent", "In the denominator", "In the coefficient"],
+                answer: "In the exponent",
+                explanation: "That is the defining feature of an exponential function."
+            },
+
+            {
+                q: "If b > 1 in y = a(b)^x, the function shows?",
+                options: ["Growth", "Decay", "No change"],
+                answer: "Growth",
+                explanation: "A base greater than 1 creates exponential growth."
+            },
+
+            {
+                q: "If 0 < b < 1, the function shows?",
+                options: ["Decay", "Growth", "Linear change"],
+                answer: "Decay",
+                explanation: "A base between 0 and 1 creates exponential decay."
+            },
+
+            {
+                q: "Compound interest is an example of?",
+                options: ["Exponential growth", "Linear growth", "Quadratic growth"],
+                answer: "Exponential growth",
+                explanation: "Money grows by multiplying over time."
+            },
+
+            {
+                q: "A logarithm answers what question?",
+                options: ["What exponent?", "What coefficient?", "What denominator?"],
+                answer: "What exponent?",
+                explanation: "A logarithm gives the exponent needed to produce a number."
+            },
+
+            {
+                q: "Logarithms are the inverse of?",
+                options: ["Exponential functions", "Linear functions", "Polynomials"],
+                answer: "Exponential functions",
+                explanation: "Logarithms undo exponential functions."
+            },
+
+            {
+                q: "log₂(8) equals?",
+                options: ["3", "4", "2"],
+                answer: "3",
+                explanation: "2³ = 8."
+            },
+
+            {
+                q: "log₁₀(100) equals?",
+                options: ["2", "10", "100"],
+                answer: "2",
+                explanation: "10² = 100."
+            },
+
+            {
+                q: "The argument of a logarithm must be?",
+                options: ["Positive", "Zero", "Negative"],
+                answer: "Positive",
+                explanation: "Logarithms are only defined for positive arguments."
+            },
+
+            {
+                q: "This unit prepares you for?",
+                options: ["Sequences and Series", "Geometry", "Statistics"],
+                answer: "Sequences and Series",
+                explanation: "Arithmetic sequences come next."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-exponential-logarithms-unit-test": {
+        title: "Exponential & Logarithmic Functions Unit Test",
+        subtitle: "Test your understanding of exponential functions, logarithms, and their applications.",
+
+        body: `
+
+<h2>Unit Test</h2>
+
+<p>This test covers the full Exponential and Logarithmic Functions unit.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+<li>Exponential functions</li>
+<li>Growth and decay</li>
+<li>Compound interest</li>
+<li>Solving exponential equations</li>
+<li>Logarithms</li>
+<li>Converting forms</li>
+<li>Logarithm properties</li>
+<li>Expanding and condensing logs</li>
+<li>Solving logarithmic equations</li>
+<li>Real-world logarithm applications</li>
+</ul>
+
+<hr>
+
+<h2>Goal</h2>
+
+<p>A strong score means you are ready to begin Sequences and Series.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "Which is an exponential function?",
+                options: ["y = 4(2)^x", "y = 3x + 1", "y = x² + 5"],
+                answer: "y = 4(2)^x",
+                explanation: "The variable is in the exponent."
+            },
+
+            {
+                q: "In y = 7(5)^x, the starting value is?",
+                options: ["7", "5", "x"],
+                answer: "7",
+                explanation: "The coefficient is the starting value."
+            },
+
+            {
+                q: "In y = 2(4)^x, the growth factor is?",
+                options: ["4", "2", "x"],
+                answer: "4",
+                explanation: "The base is the growth factor."
+            },
+
+            {
+                q: "A 10% growth rate is written as?",
+                options: ["0.10", "10", "1.10"],
+                answer: "0.10",
+                explanation: "Percentages must be converted to decimals."
+            },
+
+            {
+                q: "The growth factor for 8% growth is?",
+                options: ["1.08", "0.08", "8.00"],
+                answer: "1.08",
+                explanation: "1 + 0.08 = 1.08."
+            },
+
+            {
+                q: "A 20% decay factor is?",
+                options: ["0.80", "1.20", "0.20"],
+                answer: "0.80",
+                explanation: "1 − 0.20 = 0.80."
+            },
+
+            {
+                q: "Which situation shows exponential decay?",
+                options: ["Radioactive decay", "Population growth", "Compound interest"],
+                answer: "Radioactive decay",
+                explanation: "Radioactive substances decrease by a percentage."
+            },
+
+            {
+                q: "Compound interest earns interest on?",
+                options: ["Principal and previous interest", "Principal only", "Interest only"],
+                answer: "Principal and previous interest",
+                explanation: "That is why compound interest grows faster."
+            },
+
+            {
+                q: "2^x = 16. What is x?",
+                options: ["4", "8", "2"],
+                answer: "4",
+                explanation: "2⁴ = 16."
+            },
+
+            {
+                q: "5^x = 125. What is x?",
+                options: ["3", "5", "25"],
+                answer: "3",
+                explanation: "5³ = 125."
+            },
+
+            {
+                q: "A logarithm tells you the?",
+                options: ["Exponent", "Coefficient", "Denominator"],
+                answer: "Exponent",
+                explanation: "The answer to a logarithm is an exponent."
+            },
+
+            {
+                q: "log₂(16) equals?",
+                options: ["4", "2", "8"],
+                answer: "4",
+                explanation: "2⁴ = 16."
+            },
+
+            {
+                q: "log₃(27) equals?",
+                options: ["3", "9", "6"],
+                answer: "3",
+                explanation: "3³ = 27."
+            },
+
+            {
+                q: "log₅(125) equals?",
+                options: ["3", "5", "25"],
+                answer: "3",
+                explanation: "5³ = 125."
+            },
+
+            {
+                q: "log₂(16)=4 converts to?",
+                options: ["2⁴=16", "16²=4", "4²=16"],
+                answer: "2⁴=16",
+                explanation: "The base stays 2, and the logarithm value becomes the exponent."
+            },
+
+            {
+                q: "3²=9 converts to?",
+                options: ["log₃(9)=2", "log₂(9)=3", "log₉(3)=2"],
+                answer: "log₃(9)=2",
+                explanation: "The base is 3, the result is 9, and the exponent is 2."
+            },
+
+            {
+                q: "log(ab) expands to?",
+                options: ["log(a)+log(b)", "log(a)-log(b)", "log(a)/log(b)"],
+                answer: "log(a)+log(b)",
+                explanation: "Products become sums."
+            },
+
+            {
+                q: "log(a/b) expands to?",
+                options: ["log(a)-log(b)", "log(a)+log(b)", "log(ab)"],
+                answer: "log(a)-log(b)",
+                explanation: "Quotients become differences."
+            },
+
+            {
+                q: "log(x²) expands to?",
+                options: ["2log(x)", "log(2x)", "log(x)+2"],
+                answer: "2log(x)",
+                explanation: "Exponents become coefficients."
+            },
+
+            {
+                q: "When solving logarithmic equations, every solution must be checked because?",
+                options: ["Log arguments must be positive", "The answer is always negative", "Logs cannot be solved"],
+                answer: "Log arguments must be positive",
+                explanation: "Values that make a logarithm zero or negative inside are invalid."
+            }
+
+        ]
+
+    },
+
+
+    "algebra2-arithmetic-sequences": {
+        title: "Arithmetic Sequences",
+        subtitle: "Recognize and write arithmetic sequences using a common difference.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>An <strong>arithmetic sequence</strong> is a sequence where the difference between consecutive terms is always the same.</p>
+
+<p>This constant value is called the <strong>common difference</strong>.</p>
+
+<hr>
+
+<h2>Examples</h2>
+
+<p><strong>2, 5, 8, 11, 14, ...</strong></p>
+
+<p>Common difference = +3</p>
+
+<br>
+
+<p><strong>20, 15, 10, 5, 0, ...</strong></p>
+
+<p>Common difference = -5</p>
+
+<hr>
+
+<h2>Finding the Common Difference</h2>
+
+<p>Subtract consecutive terms.</p>
+
+<p><strong>d = next term − previous term</strong></p>
+
+<hr>
+
+<h2>Arithmetic Sequence Formula</h2>
+
+<p><strong>a<sub>n</sub> = a<sub>1</sub> + (n−1)d</strong></p>
+
+<ul>
+
+<li><strong>a₁</strong> = first term</li>
+
+<li><strong>d</strong> = common difference</li>
+
+<li><strong>n</strong> = term number</li>
+
+</ul>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Find the 8th term of:</p>
+
+<p><strong>4, 7, 10, 13, ...</strong></p>
+
+<p>a₁ = 4</p>
+
+<p>d = 3</p>
+
+<p>a₈ = 4 + (8−1)(3)</p>
+
+<p>= 4 + 21</p>
+
+<p>= <strong>25</strong></p>
+
+<hr>
+
+<h2>Real-Life Applications</h2>
+
+<ul>
+
+<li>Weekly savings</li>
+
+<li>Staircase patterns</li>
+
+<li>Regular salary increases</li>
+
+<li>Constant-distance travel</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>An arithmetic sequence increases or decreases by the same amount each time. The common difference makes it easy to find any term using the arithmetic sequence formula.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "What is an arithmetic sequence?",
+
+                options: [
+                    "A sequence with a constant difference",
+                    "A sequence with a constant ratio",
+                    "A random sequence"
+                ],
+
+                answer: "A sequence with a constant difference",
+
+                explanation: "Arithmetic sequences change by adding or subtracting the same amount."
+            },
+
+            {
+                q: "The common difference of 3, 8, 13, 18 is?",
+
+                options: [
+                    "5",
+                    "3",
+                    "8"
+                ],
+
+                answer: "5",
+
+                explanation: "Each term increases by 5."
+            },
+
+            {
+                q: "The common difference of 20, 16, 12, 8 is?",
+
+                options: [
+                    "-4",
+                    "4",
+                    "-8"
+                ],
+
+                answer: "-4",
+
+                explanation: "Each term decreases by 4."
+            },
+
+            {
+                q: "The arithmetic sequence formula is?",
+
+                options: [
+                    "aₙ=a₁+(n−1)d",
+                    "aₙ=a₁rⁿ",
+                    "y=mx+b"
+                ],
+
+                answer: "aₙ=a₁+(n−1)d",
+
+                explanation: "This formula finds any term of an arithmetic sequence."
+            },
+
+            {
+                q: "In the formula, d represents?",
+
+                options: [
+                    "The common difference",
+                    "The first term",
+                    "The term number"
+                ],
+
+                answer: "The common difference",
+
+                explanation: "d is the constant difference between terms."
+            },
+
+            {
+                q: "Find the next term: 6, 10, 14, 18",
+
+                options: [
+                    "22",
+                    "24",
+                    "20"
+                ],
+
+                answer: "22",
+
+                explanation: "Add the common difference of 4."
+            },
+
+            {
+                q: "Find the 5th term: 2, 5, 8, 11...",
+
+                options: [
+                    "14",
+                    "15",
+                    "13"
+                ],
+
+                answer: "14",
+
+                explanation: "Keep adding 3."
+            },
+
+            {
+                q: "Arithmetic sequences change by?",
+
+                options: [
+                    "Addition or subtraction",
+                    "Multiplication",
+                    "Division"
+                ],
+
+                answer: "Addition or subtraction",
+
+                explanation: "The change is always a constant difference."
+            },
+
+            {
+                q: "A common difference can be?",
+
+                options: [
+                    "Positive or negative",
+                    "Only positive",
+                    "Only negative"
+                ],
+
+                answer: "Positive or negative",
+
+                explanation: "Arithmetic sequences can increase or decrease."
+            },
+
+            {
+                q: "Arithmetic sequences are useful for modeling?",
+
+                options: [
+                    "Constant change",
+                    "Percent growth",
+                    "Random events"
+                ],
+
+                answer: "Constant change",
+
+                explanation: "They describe situations with equal increases or decreases."
+            }
+
+        ]
+
+    }
+
+    ,
+
+    "algebra2-geometric-sequences": {
+        title: "Geometric Sequences",
+        subtitle: "Recognize and write geometric sequences using a common ratio.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>A <strong>geometric sequence</strong> is a sequence where each term is found by multiplying the previous term by the same number.</p>
+
+<p>This constant multiplier is called the <strong>common ratio</strong>.</p>
+
+<hr>
+
+<h2>Examples</h2>
+
+<p><strong>2, 6, 18, 54, 162, ...</strong></p>
+
+<p>Common ratio = 3</p>
+
+<br>
+
+<p><strong>64, 32, 16, 8, 4, ...</strong></p>
+
+<p>Common ratio = 1/2</p>
+
+<hr>
+
+<h2>Finding the Common Ratio</h2>
+
+<p>Divide consecutive terms.</p>
+
+<p><strong>r = (next term) ÷ (previous term)</strong></p>
+
+<hr>
+
+<h2>Geometric Sequence Formula</h2>
+
+<p><strong>a<sub>n</sub> = a<sub>1</sub>r<sup>n−1</sup></strong></p>
+
+<ul>
+
+<li><strong>a₁</strong> = first term</li>
+
+<li><strong>r</strong> = common ratio</li>
+
+<li><strong>n</strong> = term number</li>
+
+</ul>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Find the 5th term of:</p>
+
+<p><strong>3, 6, 12, 24, ...</strong></p>
+
+<p>a₁ = 3</p>
+
+<p>r = 2</p>
+
+<p>a₅ = 3(2)<sup>4</sup></p>
+
+<p>= 3 × 16</p>
+
+<p>= <strong>48</strong></p>
+
+<hr>
+
+<h2>Real-Life Applications</h2>
+
+<ul>
+
+<li>Population growth</li>
+
+<li>Compound interest</li>
+
+<li>Bacteria growth</li>
+
+<li>Radioactive decay</li>
+
+<li>Computer memory growth</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Geometric sequences change by multiplying by the same ratio each time. They model exponential growth and decay.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "What is a geometric sequence?",
+
+                options: [
+                    "A sequence with a constant ratio",
+                    "A sequence with a constant difference",
+                    "A random sequence"
+                ],
+
+                answer: "A sequence with a constant ratio",
+
+                explanation: "Each term is multiplied by the same number."
+            },
+
+            {
+                q: "The common ratio of 2, 6, 18, 54 is?",
+
+                options: [
+                    "3",
+                    "6",
+                    "2"
+                ],
+
+                answer: "3",
+
+                explanation: "Each term is multiplied by 3."
+            },
+
+            {
+                q: "The common ratio of 81, 27, 9, 3 is?",
+
+                options: [
+                    "1/3",
+                    "3",
+                    "-3"
+                ],
+
+                answer: "1/3",
+
+                explanation: "Each term is divided by 3."
+            },
+
+            {
+                q: "The geometric sequence formula is?",
+
+                options: [
+                    "aₙ=a₁r^(n−1)",
+                    "aₙ=a₁+(n−1)d",
+                    "y=mx+b"
+                ],
+
+                answer: "aₙ=a₁r^(n−1)",
+
+                explanation: "This formula finds any term in a geometric sequence."
+            },
+
+            {
+                q: "In the formula, r represents?",
+
+                options: [
+                    "The common ratio",
+                    "The common difference",
+                    "The first term"
+                ],
+
+                answer: "The common ratio",
+
+                explanation: "r is the constant multiplier."
+            },
+
+            {
+                q: "Find the next term: 5, 10, 20, 40",
+
+                options: [
+                    "80",
+                    "45",
+                    "60"
+                ],
+
+                answer: "80",
+
+                explanation: "Multiply by 2."
+            },
+
+            {
+                q: "Find the next term: 64, 32, 16, 8",
+
+                options: [
+                    "4",
+                    "2",
+                    "6"
+                ],
+
+                answer: "4",
+
+                explanation: "Multiply by 1/2."
+            },
+
+            {
+                q: "Geometric sequences change by?",
+
+                options: [
+                    "Multiplication or division",
+                    "Addition",
+                    "Subtraction"
+                ],
+
+                answer: "Multiplication or division",
+
+                explanation: "Each term is multiplied by the common ratio."
+            },
+
+            {
+                q: "A common ratio can be?",
+
+                options: [
+                    "Greater than 1 or between 0 and 1",
+                    "Only greater than 1",
+                    "Only negative"
+                ],
+
+                answer: "Greater than 1 or between 0 and 1",
+
+                explanation: "Ratios greater than 1 create growth; ratios between 0 and 1 create decay."
+            },
+
+            {
+                q: "Geometric sequences are closely related to?",
+
+                options: [
+                    "Exponential functions",
+                    "Linear functions",
+                    "Quadratic functions"
+                ],
+
+                answer: "Exponential functions",
+
+                explanation: "Both involve repeated multiplication."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-arithmetic-series": {
+        title: "Arithmetic Series",
+        subtitle: "Find the sum of terms in an arithmetic sequence.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>An <strong>arithmetic series</strong> is the sum of the terms in an arithmetic sequence.</p>
+
+<p>Instead of finding just one term, we add multiple terms together.</p>
+
+<hr>
+
+<h2>Arithmetic Series Formula</h2>
+
+<p><strong>S<sub>n</sub> = (n/2)(a<sub>1</sub> + a<sub>n</sub>)</strong></p>
+
+<ul>
+
+<li><strong>Sₙ</strong> = sum of the first n terms</li>
+
+<li><strong>n</strong> = number of terms</li>
+
+<li><strong>a₁</strong> = first term</li>
+
+<li><strong>aₙ</strong> = last term</li>
+
+</ul>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Find the sum:</p>
+
+<p><strong>2 + 5 + 8 + 11 + 14</strong></p>
+
+<p>a₁ = 2</p>
+
+<p>aₙ = 14</p>
+
+<p>n = 5</p>
+
+<p>S₅ = (5/2)(2+14)</p>
+
+<p>= (5/2)(16)</p>
+
+<p>= <strong>40</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Find the sum of the first 10 terms of:</p>
+
+<p><strong>4, 7, 10, 13, ...</strong></p>
+
+<p>First find the 10th term:</p>
+
+<p>a₁₀ = 4 + (10−1)(3)</p>
+
+<p>= 31</p>
+
+<p>Now use the series formula:</p>
+
+<p>S₁₀ = (10/2)(4+31)</p>
+
+<p>= 5 × 35</p>
+
+<p>= <strong>175</strong></p>
+
+<hr>
+
+<h2>Real-Life Applications</h2>
+
+<ul>
+
+<li>Total weekly savings</li>
+
+<li>Salary increases</li>
+
+<li>Stacking objects</li>
+
+<li>Sports scoring systems</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>An arithmetic series is the sum of an arithmetic sequence. The arithmetic series formula quickly finds the total without adding every term individually.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "An arithmetic series is?",
+
+                options: [
+                    "The sum of an arithmetic sequence",
+                    "A geometric sequence",
+                    "A quadratic equation"
+                ],
+
+                answer: "The sum of an arithmetic sequence",
+
+                explanation: "A series is the sum of the terms in a sequence."
+            },
+
+            {
+                q: "The arithmetic series formula is?",
+
+                options: [
+                    "Sₙ=(n/2)(a₁+aₙ)",
+                    "aₙ=a₁+(n−1)d",
+                    "aₙ=a₁rⁿ"
+                ],
+
+                answer: "Sₙ=(n/2)(a₁+aₙ)",
+
+                explanation: "This formula finds the sum of an arithmetic series."
+            },
+
+            {
+                q: "Sₙ represents?",
+
+                options: [
+                    "The sum of the first n terms",
+                    "The nth term",
+                    "The common difference"
+                ],
+
+                answer: "The sum of the first n terms",
+
+                explanation: "S stands for sum."
+            },
+
+            {
+                q: "What information is needed to use the arithmetic series formula?",
+
+                options: [
+                    "First term, last term, and number of terms",
+                    "Only the first term",
+                    "Only the common difference"
+                ],
+
+                answer: "First term, last term, and number of terms",
+
+                explanation: "These values are substituted into the formula."
+            },
+
+            {
+                q: "Find the sum: 1+2+3+4+5",
+
+                options: [
+                    "15",
+                    "10",
+                    "20"
+                ],
+
+                answer: "15",
+
+                explanation: "The first five counting numbers add to 15."
+            },
+
+            {
+                q: "Which symbol represents the last term?",
+
+                options: [
+                    "aₙ",
+                    "a₁",
+                    "Sₙ"
+                ],
+
+                answer: "aₙ",
+
+                explanation: "aₙ represents the nth (last) term."
+            },
+
+            {
+                q: "If there are 20 terms, n equals?",
+
+                options: [
+                    "20",
+                    "10",
+                    "2"
+                ],
+
+                answer: "20",
+
+                explanation: "n is simply the number of terms."
+            },
+
+            {
+                q: "Before finding the series sum, you may need to find?",
+
+                options: [
+                    "The last term",
+                    "The slope",
+                    "The midpoint"
+                ],
+
+                answer: "The last term",
+
+                explanation: "The last term is often calculated first."
+            },
+
+            {
+                q: "Arithmetic series are based on?",
+
+                options: [
+                    "Arithmetic sequences",
+                    "Geometric sequences",
+                    "Logarithms"
+                ],
+
+                answer: "Arithmetic sequences",
+
+                explanation: "A series is the sum of a sequence."
+            },
+
+            {
+                q: "The arithmetic series formula saves time because it?",
+
+                options: [
+                    "Finds the total without adding every term",
+                    "Finds the common ratio",
+                    "Finds the slope"
+                ],
+
+                answer: "Finds the total without adding every term",
+
+                explanation: "The formula avoids lengthy addition."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-geometric-series": {
+        title: "Geometric Series",
+        subtitle: "Find the sum of the terms in a geometric sequence.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>A <strong>geometric series</strong> is the sum of the terms in a geometric sequence.</p>
+
+<p>Instead of finding just one term, we find the total of several terms.</p>
+
+<hr>
+
+<h2>Geometric Series Formula</h2>
+
+<p><strong>S<sub>n</sub> = a<sub>1</sub>[(1-r<sup>n</sup>)/(1-r)]</strong></p>
+
+<p>This formula works whenever <strong>r ≠ 1</strong>.</p>
+
+<ul>
+
+<li><strong>Sₙ</strong> = sum of the first n terms</li>
+
+<li><strong>a₁</strong> = first term</li>
+
+<li><strong>r</strong> = common ratio</li>
+
+<li><strong>n</strong> = number of terms</li>
+
+</ul>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Find the sum of:</p>
+
+<p><strong>2 + 4 + 8 + 16</strong></p>
+
+<p>a₁ = 2</p>
+
+<p>r = 2</p>
+
+<p>n = 4</p>
+
+<p>S₄ = 2[(1-2⁴)/(1-2)]</p>
+
+<p>= 2[(1-16)/(-1)]</p>
+
+<p>= 2(15)</p>
+
+<p>= <strong>30</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Find the sum of the first 5 terms of:</p>
+
+<p><strong>3, 6, 12, 24, 48</strong></p>
+
+<p>a₁ = 3</p>
+
+<p>r = 2</p>
+
+<p>n = 5</p>
+
+<p>S₅ = 3[(1-2⁵)/(1-2)]</p>
+
+<p>= 3(31)</p>
+
+<p>= <strong>93</strong></p>
+
+<hr>
+
+<h2>Real-Life Applications</h2>
+
+<ul>
+
+<li>Compound interest</li>
+
+<li>Population growth</li>
+
+<li>Bacteria growth</li>
+
+<li>Computer storage</li>
+
+<li>Investment growth</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>A geometric series is the sum of a geometric sequence. The geometric series formula quickly calculates the total without adding each term individually.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "A geometric series is?",
+
+                options: [
+                    "The sum of a geometric sequence",
+                    "A geometric sequence",
+                    "An arithmetic sequence"
+                ],
+
+                answer: "The sum of a geometric sequence",
+
+                explanation: "A series is the sum of the terms."
+            },
+
+            {
+                q: "Which value represents the common ratio?",
+
+                options: [
+                    "r",
+                    "d",
+                    "n"
+                ],
+
+                answer: "r",
+
+                explanation: "r is the constant multiplier."
+            },
+
+            {
+                q: "What does Sₙ represent?",
+
+                options: [
+                    "The sum of the first n terms",
+                    "The nth term",
+                    "The common ratio"
+                ],
+
+                answer: "The sum of the first n terms",
+
+                explanation: "S stands for sum."
+            },
+
+            {
+                q: "The sequence 2, 4, 8, 16 has common ratio?",
+
+                options: [
+                    "2",
+                    "4",
+                    "8"
+                ],
+
+                answer: "2",
+
+                explanation: "Each term is multiplied by 2."
+            },
+
+            {
+                q: "The sum of 2+4+8+16 is?",
+
+                options: [
+                    "30",
+                    "32",
+                    "28"
+                ],
+
+                answer: "30",
+
+                explanation: "2+4+8+16=30."
+            },
+
+            {
+                q: "Geometric series are based on?",
+
+                options: [
+                    "Geometric sequences",
+                    "Arithmetic sequences",
+                    "Linear equations"
+                ],
+
+                answer: "Geometric sequences",
+
+                explanation: "A geometric series is the sum of a geometric sequence."
+            },
+
+            {
+                q: "If the common ratio is greater than 1, the terms generally?",
+
+                options: [
+                    "Increase",
+                    "Decrease",
+                    "Stay constant"
+                ],
+
+                answer: "Increase",
+
+                explanation: "Multiplying by a number greater than 1 causes growth."
+            },
+
+            {
+                q: "If the common ratio is between 0 and 1, the terms generally?",
+
+                options: [
+                    "Decrease",
+                    "Increase",
+                    "Stay constant"
+                ],
+
+                answer: "Decrease",
+
+                explanation: "Multiplying by a fraction causes decay."
+            },
+
+            {
+                q: "Geometric series are commonly used to model?",
+
+                options: [
+                    "Compound interest",
+                    "Linear motion",
+                    "Constant speed"
+                ],
+
+                answer: "Compound interest",
+
+                explanation: "Compound interest grows geometrically."
+            },
+
+            {
+                q: "Why use the geometric series formula?",
+
+                options: [
+                    "To find the total quickly",
+                    "To find the slope",
+                    "To graph a parabola"
+                ],
+
+                answer: "To find the total quickly",
+
+                explanation: "The formula avoids adding every term one by one."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-sigma-notation": {
+        title: "Sigma Notation",
+        subtitle: "Write and evaluate sums using sigma notation.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p><strong>Sigma notation</strong> is a shorthand way to write the sum of many terms.</p>
+
+<p>The Greek letter <strong>Σ</strong> (sigma) means <strong>sum</strong>.</p>
+
+<hr>
+
+<h2>Parts of Sigma Notation</h2>
+
+<p><strong>Σ(expression)</strong></p>
+
+<p>The notation includes:</p>
+
+<ul>
+
+<li><strong>Starting value</strong></li>
+
+<li><strong>Ending value</strong></li>
+
+<li><strong>Expression to evaluate</strong></li>
+
+</ul>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p><strong>Σ(i)</strong></p>
+
+<p>where i = 1 to 5</p>
+
+<p>Expand it:</p>
+
+<p>1 + 2 + 3 + 4 + 5</p>
+
+<p>= <strong>15</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p><strong>Σ(2i)</strong></p>
+
+<p>where i = 1 to 4</p>
+
+<p>Expand it:</p>
+
+<p>2 + 4 + 6 + 8</p>
+
+<p>= <strong>20</strong></p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p><strong>Σ(i²)</strong></p>
+
+<p>where i = 1 to 3</p>
+
+<p>Expand it:</p>
+
+<p>1² + 2² + 3²</p>
+
+<p>= 1 + 4 + 9</p>
+
+<p>= <strong>14</strong></p>
+
+<hr>
+
+<h2>When Is Sigma Notation Used?</h2>
+
+<ul>
+
+<li>Arithmetic series</li>
+
+<li>Geometric series</li>
+
+<li>Statistics</li>
+
+<li>Calculus</li>
+
+<li>Computer science</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Sigma notation provides a compact way to represent and calculate the sum of many terms.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The symbol Σ means?",
+
+                options: [
+                    "Sum",
+                    "Difference",
+                    "Product"
+                ],
+
+                answer: "Sum",
+
+                explanation: "Sigma is the Greek letter used to represent summation."
+            },
+
+            {
+                q: "Σ(i), from i=1 to 4 equals?",
+
+                options: [
+                    "10",
+                    "8",
+                    "16"
+                ],
+
+                answer: "10",
+
+                explanation: "1+2+3+4=10."
+            },
+
+            {
+                q: "Σ(2i), from i=1 to 3 equals?",
+
+                options: [
+                    "12",
+                    "6",
+                    "18"
+                ],
+
+                answer: "12",
+
+                explanation: "2+4+6=12."
+            },
+
+            {
+                q: "Σ(i²), from i=1 to 3 equals?",
+
+                options: [
+                    "14",
+                    "9",
+                    "12"
+                ],
+
+                answer: "14",
+
+                explanation: "1+4+9=14."
+            },
+
+            {
+                q: "Sigma notation is mainly used to represent?",
+
+                options: [
+                    "Sums",
+                    "Products",
+                    "Ratios"
+                ],
+
+                answer: "Sums",
+
+                explanation: "Sigma notation represents addition."
+            },
+
+            {
+                q: "Sigma notation is commonly used in?",
+
+                options: [
+                    "Calculus",
+                    "Statistics",
+                    "Computer Science",
+                    "All of the above"
+                ],
+
+                answer: "All of the above",
+
+                explanation: "Sigma notation appears throughout higher mathematics."
+            },
+
+            {
+                q: "The variable below Σ is called the?",
+
+                options: [
+                    "Index",
+                    "Coefficient",
+                    "Base"
+                ],
+
+                answer: "Index",
+
+                explanation: "The index changes as each term is evaluated."
+            },
+
+            {
+                q: "The number above Σ represents?",
+
+                options: [
+                    "The ending value",
+                    "The starting value",
+                    "The answer"
+                ],
+
+                answer: "The ending value",
+
+                explanation: "It tells where to stop summing."
+            },
+
+            {
+                q: "The number below Σ represents?",
+
+                options: [
+                    "The starting value",
+                    "The ending value",
+                    "The coefficient"
+                ],
+
+                answer: "The starting value",
+
+                explanation: "It tells where to begin."
+            },
+
+            {
+                q: "Sigma notation is useful because it?",
+
+                options: [
+                    "Shortens long sums",
+                    "Simplifies fractions",
+                    "Factors polynomials"
+                ],
+
+                answer: "Shortens long sums",
+
+                explanation: "It provides a compact way to write long additions."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-sequences-series-review": {
+        title: "Sequences & Series Review",
+        subtitle: "Review arithmetic sequences, geometric sequences, series, and sigma notation.",
+
+        body: `
+
+<h2>Unit Review</h2>
+
+<p>This review covers sequences and series.</p>
+
+<hr>
+
+<h2>Key Concepts</h2>
+
+<ul>
+<li>Arithmetic sequences</li>
+<li>Common difference</li>
+<li>Geometric sequences</li>
+<li>Common ratio</li>
+<li>Arithmetic series</li>
+<li>Geometric series</li>
+<li>Sigma notation</li>
+</ul>
+
+<hr>
+
+<h2>Important Facts</h2>
+
+<ul>
+<li>Arithmetic sequences change by adding or subtracting the same amount.</li>
+<li>Geometric sequences change by multiplying or dividing by the same ratio.</li>
+<li>A series is the sum of a sequence.</li>
+<li>Sigma notation is shorthand for repeated addition.</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Confusing common difference with common ratio.</li>
+<li>Using the arithmetic formula for a geometric sequence.</li>
+<li>Forgetting that a series means sum.</li>
+<li>Misreading the starting and ending values in sigma notation.</li>
+</ul>
+
+<hr>
+
+<h2>Ready?</h2>
+
+<p>If you understand these concepts, you are ready for the Sequences & Series Unit Test.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "An arithmetic sequence has a constant?",
+                options: ["Difference", "Ratio", "Exponent"],
+                answer: "Difference",
+                explanation: "Arithmetic sequences change by adding or subtracting the same amount."
+            },
+
+            {
+                q: "A geometric sequence has a constant?",
+                options: ["Ratio", "Difference", "Sum"],
+                answer: "Ratio",
+                explanation: "Geometric sequences change by multiplying or dividing by the same number."
+            },
+
+            {
+                q: "The sequence 3, 6, 9, 12 has common difference?",
+                options: ["3", "6", "2"],
+                answer: "3",
+                explanation: "Each term increases by 3."
+            },
+
+            {
+                q: "The sequence 2, 6, 18, 54 has common ratio?",
+                options: ["3", "6", "2"],
+                answer: "3",
+                explanation: "Each term is multiplied by 3."
+            },
+
+            {
+                q: "A series is?",
+                options: ["The sum of a sequence", "One term only", "A graph"],
+                answer: "The sum of a sequence",
+                explanation: "A series adds the terms of a sequence."
+            },
+
+            {
+                q: "Arithmetic series are based on?",
+                options: ["Arithmetic sequences", "Geometric sequences", "Logarithms"],
+                answer: "Arithmetic sequences",
+                explanation: "An arithmetic series is the sum of an arithmetic sequence."
+            },
+
+            {
+                q: "Geometric series are based on?",
+                options: ["Geometric sequences", "Arithmetic sequences", "Linear equations"],
+                answer: "Geometric sequences",
+                explanation: "A geometric series is the sum of a geometric sequence."
+            },
+
+            {
+                q: "The symbol Σ means?",
+                options: ["Sum", "Slope", "Square root"],
+                answer: "Sum",
+                explanation: "Sigma notation represents repeated addition."
+            },
+
+            {
+                q: "The variable below Σ is called the?",
+                options: ["Index", "Coefficient", "Base"],
+                answer: "Index",
+                explanation: "The index changes as the sum is evaluated."
+            },
+
+            {
+                q: "The next Algebra 2 unit is?",
+                options: ["Probability", "Radicals", "Quadratics"],
+                answer: "Probability",
+                explanation: "Basic Probability comes next."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-sequences-series-unit-test": {
+        title: "Sequences & Series Unit Test",
+        subtitle: "Test your understanding of arithmetic sequences, geometric sequences, series, and sigma notation.",
+
+        body: `
+
+<h2>Unit Test</h2>
+
+<p>This test covers the full Sequences & Series unit.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+<li>Arithmetic sequences</li>
+<li>Geometric sequences</li>
+<li>Arithmetic series</li>
+<li>Geometric series</li>
+<li>Sigma notation</li>
+</ul>
+
+<hr>
+
+<h2>Goal</h2>
+
+<p>A strong score means you are ready to begin Probability.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "Which sequence is arithmetic?",
+                options: ["4, 7, 10, 13", "2, 4, 8, 16", "1, 4, 9, 16"],
+                answer: "4, 7, 10, 13",
+                explanation: "It increases by 3 each time."
+            },
+
+            {
+                q: "Which sequence is geometric?",
+                options: ["3, 6, 12, 24", "5, 8, 11, 14", "2, 5, 8, 11"],
+                answer: "3, 6, 12, 24",
+                explanation: "Each term is multiplied by 2."
+            },
+
+            {
+                q: "Common difference of 10, 15, 20, 25 is?",
+                options: ["5", "10", "15"],
+                answer: "5",
+                explanation: "Each term increases by 5."
+            },
+
+            {
+                q: "Common difference of 30, 25, 20, 15 is?",
+                options: ["-5", "5", "10"],
+                answer: "-5",
+                explanation: "Each term decreases by 5."
+            },
+
+            {
+                q: "Common ratio of 5, 10, 20, 40 is?",
+                options: ["2", "5", "10"],
+                answer: "2",
+                explanation: "Each term is multiplied by 2."
+            },
+
+            {
+                q: "Common ratio of 81, 27, 9, 3 is?",
+                options: ["1/3", "3", "-3"],
+                answer: "1/3",
+                explanation: "Each term is divided by 3."
+            },
+
+            {
+                q: "Arithmetic sequence formula is?",
+                options: ["aₙ=a₁+(n−1)d", "aₙ=a₁r^(n−1)", "y=mx+b"],
+                answer: "aₙ=a₁+(n−1)d",
+                explanation: "This formula finds the nth term of an arithmetic sequence."
+            },
+
+            {
+                q: "Geometric sequence formula is?",
+                options: ["aₙ=a₁r^(n−1)", "aₙ=a₁+(n−1)d", "Sₙ=n/2(a₁+aₙ)"],
+                answer: "aₙ=a₁r^(n−1)",
+                explanation: "This formula finds the nth term of a geometric sequence."
+            },
+
+            {
+                q: "Find the next term: 6, 10, 14, 18",
+                options: ["22", "20", "24"],
+                answer: "22",
+                explanation: "Add 4 each time."
+            },
+
+            {
+                q: "Find the next term: 4, 12, 36, 108",
+                options: ["324", "216", "112"],
+                answer: "324",
+                explanation: "Multiply by 3 each time."
+            },
+
+            {
+                q: "An arithmetic series finds?",
+                options: ["The sum of an arithmetic sequence", "The common ratio", "The exponent"],
+                answer: "The sum of an arithmetic sequence",
+                explanation: "A series means sum."
+            },
+
+            {
+                q: "A geometric series finds?",
+                options: ["The sum of a geometric sequence", "Only the first term", "The common difference"],
+                answer: "The sum of a geometric sequence",
+                explanation: "A geometric series adds geometric sequence terms."
+            },
+
+            {
+                q: "In a series, Sₙ represents?",
+                options: ["The sum of the first n terms", "The first term", "The common difference"],
+                answer: "The sum of the first n terms",
+                explanation: "S stands for sum."
+            },
+
+            {
+                q: "In arithmetic sequences, d represents?",
+                options: ["Common difference", "Common ratio", "Number of terms"],
+                answer: "Common difference",
+                explanation: "d is the repeated amount added or subtracted."
+            },
+
+            {
+                q: "In geometric sequences, r represents?",
+                options: ["Common ratio", "Common difference", "First term"],
+                answer: "Common ratio",
+                explanation: "r is the repeated multiplier."
+            },
+
+            {
+                q: "Sigma notation is used to write?",
+                options: ["Long sums compactly", "Only fractions", "Only exponents"],
+                answer: "Long sums compactly",
+                explanation: "Sigma notation is shorthand for repeated addition."
+            },
+
+            {
+                q: "Σ means?",
+                options: ["Add the terms", "Multiply the terms", "Divide the terms"],
+                answer: "Add the terms",
+                explanation: "Sigma means sum."
+            },
+
+            {
+                q: "The number below Σ tells you?",
+                options: ["Where to start", "Where to stop", "The final answer"],
+                answer: "Where to start",
+                explanation: "The lower value gives the starting index."
+            },
+
+            {
+                q: "The number above Σ tells you?",
+                options: ["Where to stop", "Where to start", "The coefficient"],
+                answer: "Where to stop",
+                explanation: "The upper value gives the ending index."
+            },
+
+            {
+                q: "After Sequences & Series, the next topic is?",
+                options: ["Probability", "Quadratics", "Radicals"],
+                answer: "Probability",
+                explanation: "The next unit starts with Basic Probability."
+            }
+
+        ]
+
+    },
+
+
+    "algebra2-basic-probability": {
+        title: "Basic Probability",
+        subtitle: "Calculate the likelihood of events using probability.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p><strong>Probability</strong> measures how likely an event is to happen.</p>
+
+<p>Every probability is a number between <strong>0</strong> and <strong>1</strong>.</p>
+
+<ul>
+
+<li><strong>0</strong> means impossible.</li>
+
+<li><strong>1</strong> means certain.</li>
+
+</ul>
+
+<hr>
+
+<h2>Probability Formula</h2>
+
+<p><strong>Probability = (Number of Favorable Outcomes) ÷ (Total Number of Possible Outcomes)</strong></p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>A fair six-sided die is rolled.</p>
+
+<p>What is the probability of rolling a 4?</p>
+
+<p>There is 1 favorable outcome and 6 possible outcomes.</p>
+
+<p><strong>P(4)=1/6</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>A bag contains:</p>
+
+<ul>
+
+<li>3 red marbles</li>
+
+<li>5 blue marbles</li>
+
+<li>2 green marbles</li>
+
+</ul>
+
+<p>Total marbles = 10</p>
+
+<p>Probability of selecting a blue marble:</p>
+
+<p><strong>P(Blue)=5/10=1/2</strong></p>
+
+<hr>
+
+<h2>Complement Rule</h2>
+
+<p>The probability an event does <strong>not</strong> occur is:</p>
+
+<p><strong>P(Not A)=1−P(A)</strong></p>
+
+<p>If the probability of rain is 0.30, then:</p>
+
+<p><strong>P(No Rain)=0.70</strong></p>
+
+<hr>
+
+<h2>Real-Life Applications</h2>
+
+<ul>
+
+<li>Weather forecasting</li>
+
+<li>Sports predictions</li>
+
+<li>Games of chance</li>
+
+<li>Medical testing</li>
+
+<li>Insurance</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Probability compares favorable outcomes to all possible outcomes and is always between 0 and 1.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "Probability is always between?",
+
+                options: [
+                    "0 and 1",
+                    "1 and 10",
+                    "-1 and 1"
+                ],
+
+                answer: "0 and 1",
+
+                explanation: "Probabilities cannot be less than 0 or greater than 1."
+            },
+
+            {
+                q: "The probability formula is?",
+
+                options: [
+                    "Favorable Outcomes ÷ Total Outcomes",
+                    "Total Outcomes ÷ Favorable Outcomes",
+                    "Favorable Outcomes × Total Outcomes"
+                ],
+
+                answer: "Favorable Outcomes ÷ Total Outcomes",
+
+                explanation: "This is the basic probability formula."
+            },
+
+            {
+                q: "A fair die is rolled. What is the probability of rolling a 2?",
+
+                options: [
+                    "1/6",
+                    "1/2",
+                    "2/6"
+                ],
+
+                answer: "1/6",
+
+                explanation: "Only one face shows a 2."
+            },
+
+            {
+                q: "A bag has 4 red and 6 blue marbles. What is P(Red)?",
+
+                options: [
+                    "2/5",
+                    "4/6",
+                    "6/10"
+                ],
+
+                answer: "2/5",
+
+                explanation: "4 out of 10 simplifies to 2/5."
+            },
+
+            {
+                q: "A probability of 0 means?",
+
+                options: [
+                    "Impossible",
+                    "Certain",
+                    "Likely"
+                ],
+
+                answer: "Impossible",
+
+                explanation: "The event cannot occur."
+            },
+
+            {
+                q: "A probability of 1 means?",
+
+                options: [
+                    "Certain",
+                    "Impossible",
+                    "Unlikely"
+                ],
+
+                answer: "Certain",
+
+                explanation: "The event will definitely occur."
+            },
+
+            {
+                q: "If P(A)=0.35, then P(Not A)=?",
+
+                options: [
+                    "0.65",
+                    "0.35",
+                    "1.35"
+                ],
+
+                answer: "0.65",
+
+                explanation: "Use the complement rule: 1−0.35."
+            },
+
+            {
+                q: "Which is a valid probability?",
+
+                options: [
+                    "0.72",
+                    "1.4",
+                    "-0.3"
+                ],
+
+                answer: "0.72",
+
+                explanation: "Valid probabilities lie between 0 and 1."
+            },
+
+            {
+                q: "Probability is commonly used in?",
+
+                options: [
+                    "Weather forecasting",
+                    "Insurance",
+                    "Sports",
+                    "All of the above"
+                ],
+
+                answer: "All of the above",
+
+                explanation: "Probability is used in many real-world fields."
+            },
+
+            {
+                q: "Probability compares?",
+
+                options: [
+                    "Favorable outcomes to total outcomes",
+                    "Favorable outcomes to unfavorable outcomes",
+                    "Total outcomes to impossible outcomes"
+                ],
+
+                answer: "Favorable outcomes to total outcomes",
+
+                explanation: "This is the definition of probability."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-conditional-probability": {
+        title: "Conditional Probability",
+        subtitle: "Find the probability of an event given that another event has already occurred.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p><strong>Conditional probability</strong> is the probability of an event occurring given that another event has already happened.</p>
+
+<p>The word <strong>"given"</strong> tells you that the sample space has changed.</p>
+
+<hr>
+
+<h2>Conditional Probability Formula</h2>
+
+<p><strong>P(A | B) = P(A and B) / P(B)</strong></p>
+
+<p>Read as:</p>
+
+<p><strong>"The probability of A given B."</strong></p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>A standard deck has 52 cards.</p>
+
+<p>You know the selected card is a face card.</p>
+
+<p>There are 12 face cards.</p>
+
+<p>Of those, 4 are Kings.</p>
+
+<p><strong>P(King | Face Card) = 4/12 = 1/3</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>A class has:</p>
+
+<ul>
+
+<li>12 students who play soccer</li>
+
+<li>8 of those students also play basketball</li>
+
+</ul>
+
+<p>Find the probability that a student plays basketball given they already play soccer.</p>
+
+<p><strong>P(Basketball | Soccer)=8/12=2/3</strong></p>
+
+<hr>
+
+<h2>Recognizing Conditional Probability</h2>
+
+<p>Look for words like:</p>
+
+<ul>
+
+<li>Given</li>
+
+<li>Already know</li>
+
+<li>Assuming</li>
+
+<li>Restricted to</li>
+
+</ul>
+
+<hr>
+
+<h2>Real-Life Applications</h2>
+
+<ul>
+
+<li>Medical testing</li>
+
+<li>Weather forecasting</li>
+
+<li>Insurance</li>
+
+<li>Machine learning</li>
+
+<li>Sports analytics</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Conditional probability calculates the chance of an event after new information changes the sample space.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "Conditional probability means?",
+
+                options: [
+                    "The probability given another event has occurred",
+                    "The probability of impossible events",
+                    "The probability of independent events"
+                ],
+
+                answer: "The probability given another event has occurred",
+
+                explanation: "Conditional probability uses additional information."
+            },
+
+            {
+                q: "The symbol P(A | B) means?",
+
+                options: [
+                    "The probability of A given B",
+                    "The probability of A and B",
+                    "The probability of A or B"
+                ],
+
+                answer: "The probability of A given B",
+
+                explanation: "The vertical bar means 'given.'"
+            },
+
+            {
+                q: "The word that usually signals conditional probability is?",
+
+                options: [
+                    "Given",
+                    "Or",
+                    "And"
+                ],
+
+                answer: "Given",
+
+                explanation: "'Given' indicates the sample space has changed."
+            },
+
+            {
+                q: "If there are 20 students, 5 are left-handed, and you know a selected student is left-handed, what is the new sample space?",
+
+                options: [
+                    "5",
+                    "20",
+                    "15"
+                ],
+
+                answer: "5",
+
+                explanation: "The sample space is limited to the given condition."
+            },
+
+            {
+                q: "Conditional probability changes the?",
+
+                options: [
+                    "Sample space",
+                    "Formula for addition",
+                    "Number of events"
+                ],
+
+                answer: "Sample space",
+
+                explanation: "The condition limits the possible outcomes."
+            },
+
+            {
+                q: "Medical testing commonly uses?",
+
+                options: [
+                    "Conditional probability",
+                    "Quadratic equations",
+                    "Polynomial division"
+                ],
+
+                answer: "Conditional probability",
+
+                explanation: "Doctors interpret test results using conditional probabilities."
+            },
+
+            {
+                q: "Weather forecasts often use?",
+
+                options: [
+                    "Conditional probability",
+                    "Linear equations",
+                    "Sequences"
+                ],
+
+                answer: "Conditional probability",
+
+                explanation: "Forecasts are updated as new information becomes available."
+            },
+
+            {
+                q: "The denominator in P(A | B) is?",
+
+                options: [
+                    "P(B)",
+                    "P(A)",
+                    "P(A or B)"
+                ],
+
+                answer: "P(B)",
+
+                explanation: "The probability is conditioned on event B."
+            },
+
+            {
+                q: "Conditional probability is used when?",
+
+                options: [
+                    "New information is known",
+                    "No information is available",
+                    "The sample space never changes"
+                ],
+
+                answer: "New information is known",
+
+                explanation: "The condition changes the possible outcomes."
+            },
+
+            {
+                q: "Conditional probability is important because it?",
+
+                options: [
+                    "Updates probabilities using new information",
+                    "Always equals 1",
+                    "Only applies to dice"
+                ],
+
+                answer: "Updates probabilities using new information",
+
+                explanation: "Additional information changes the likelihood of events."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-permutations": {
+        title: "Permutations",
+        subtitle: "Count arrangements where the order of objects matters.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>A <strong>permutation</strong> is an arrangement of objects where <strong>order matters</strong>.</p>
+
+<p>If changing the order creates a different arrangement, use permutations.</p>
+
+<hr>
+
+<h2>Examples</h2>
+
+<p>ABC and BAC are different permutations because the order changed.</p>
+
+<p>Choosing first, second, and third place in a race is a permutation.</p>
+
+<hr>
+
+<h2>Permutation Formula</h2>
+
+<p><strong>nP<sub>r</sub> = n! / (n-r)!</strong></p>
+
+<ul>
+
+<li><strong>n</strong> = total number of objects</li>
+
+<li><strong>r</strong> = number of objects selected</li>
+
+</ul>
+
+<hr>
+
+<h2>Factorial Review</h2>
+
+<p><strong>5! = 5 × 4 × 3 × 2 × 1 = 120</strong></p>
+
+<p><strong>4! = 24</strong></p>
+
+<p><strong>3! = 6</strong></p>
+
+<p><strong>0! = 1</strong></p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>How many ways can 3 students be chosen from 5 students to receive gold, silver, and bronze medals?</p>
+
+<p>n = 5</p>
+
+<p>r = 3</p>
+
+<p>5P₃ = 5! / 2!</p>
+
+<p>= 120 / 2</p>
+
+<p>= <strong>60</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>How many different 4-letter arrangements can be made from 6 different letters?</p>
+
+<p>6P₄ = 6! / 2!</p>
+
+<p>= 720 / 2</p>
+
+<p>= <strong>360</strong></p>
+
+<hr>
+
+<h2>When to Use Permutations</h2>
+
+<ul>
+
+<li>Race results</li>
+
+<li>Passwords</li>
+
+<li>Seat assignments</li>
+
+<li>Officer positions</li>
+
+<li>Any situation where order matters</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Use permutations whenever the order of selected objects changes the outcome.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "A permutation is used when?",
+
+                options: [
+                    "Order matters",
+                    "Order does not matter",
+                    "Probability is zero"
+                ],
+
+                answer: "Order matters",
+
+                explanation: "Permutations count arrangements where changing the order creates a different outcome."
+            },
+
+            {
+                q: "The permutation formula is?",
+
+                options: [
+                    "n!/(n-r)!",
+                    "n!/r!",
+                    "n!/(r!(n-r)!)"
+                ],
+
+                answer: "n!/(n-r)!",
+
+                explanation: "This is the permutation formula."
+            },
+
+            {
+                q: "5! equals?",
+
+                options: [
+                    "120",
+                    "60",
+                    "24"
+                ],
+
+                answer: "120",
+
+                explanation: "5×4×3×2×1=120."
+            },
+
+            {
+                q: "0! equals?",
+
+                options: [
+                    "1",
+                    "0",
+                    "Undefined"
+                ],
+
+                answer: "1",
+
+                explanation: "By definition, 0! = 1."
+            },
+
+            {
+                q: "How many ways can first and second place be awarded among 5 runners?",
+
+                options: [
+                    "20",
+                    "10",
+                    "25"
+                ],
+
+                answer: "20",
+
+                explanation: "5P₂ = 5×4 = 20."
+            },
+
+            {
+                q: "Which situation uses permutations?",
+
+                options: [
+                    "Assigning gold, silver, and bronze medals",
+                    "Choosing 3 committee members",
+                    "Selecting pizza toppings"
+                ],
+
+                answer: "Assigning gold, silver, and bronze medals",
+
+                explanation: "The order of the medals matters."
+            },
+
+            {
+                q: "Passwords are usually counted using?",
+
+                options: [
+                    "Permutations",
+                    "Combinations",
+                    "Probability only"
+                ],
+
+                answer: "Permutations",
+
+                explanation: "Changing the order creates a different password."
+            },
+
+            {
+                q: "In nPᵣ, n represents?",
+
+                options: [
+                    "Total number of objects",
+                    "Objects selected",
+                    "Factorial"
+                ],
+
+                answer: "Total number of objects",
+
+                explanation: "n is the total available."
+            },
+
+            {
+                q: "In nPᵣ, r represents?",
+
+                options: [
+                    "Objects selected",
+                    "Total objects",
+                    "Common ratio"
+                ],
+
+                answer: "Objects selected",
+
+                explanation: "r is the number chosen."
+            },
+
+            {
+                q: "The key word that signals permutations is?",
+
+                options: [
+                    "Order",
+                    "Average",
+                    "Probability"
+                ],
+
+                answer: "Order",
+
+                explanation: "If order matters, use permutations."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-combinations": {
+        title: "Combinations",
+        subtitle: "Count selections where the order of objects does not matter.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>A <strong>combination</strong> is a selection of objects where <strong>order does not matter</strong>.</p>
+
+<p>If changing the order does not create a different selection, use combinations.</p>
+
+<hr>
+
+<h2>Examples</h2>
+
+<p>Selecting Alice, Bob, and Charlie for a committee is the same as selecting Charlie, Alice, and Bob.</p>
+
+<p>The order does not matter.</p>
+
+<hr>
+
+<h2>Combination Formula</h2>
+
+<p><strong>nC<sub>r</sub> = n! / (r!(n-r)!)</strong></p>
+
+<ul>
+
+<li><strong>n</strong> = total number of objects</li>
+
+<li><strong>r</strong> = number of objects selected</li>
+
+</ul>
+
+<hr>
+
+<h2>Factorial Review</h2>
+
+<p><strong>5! = 120</strong></p>
+
+<p><strong>4! = 24</strong></p>
+
+<p><strong>3! = 6</strong></p>
+
+<p><strong>0! = 1</strong></p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>How many committees of 3 students can be chosen from 5 students?</p>
+
+<p>n = 5</p>
+
+<p>r = 3</p>
+
+<p>5C₃ = 5! / (3!2!)</p>
+
+<p>= 120 / (6×2)</p>
+
+<p>= 120 / 12</p>
+
+<p>= <strong>10</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>How many groups of 2 people can be chosen from 6 people?</p>
+
+<p>6C₂ = 6! / (2!4!)</p>
+
+<p>= 720 / (2×24)</p>
+
+<p>= 720 / 48</p>
+
+<p>= <strong>15</strong></p>
+
+<hr>
+
+<h2>Permutations vs. Combinations</h2>
+
+<table border="1" cellpadding="8">
+
+<tr>
+<th>Situation</th>
+<th>Use</th>
+</tr>
+
+<tr>
+<td>Race medals</td>
+<td>Permutation</td>
+</tr>
+
+<tr>
+<td>Committee members</td>
+<td>Combination</td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td>Permutation</td>
+</tr>
+
+<tr>
+<td>Choosing pizza toppings</td>
+<td>Combination</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Use combinations whenever the order of selected objects does not change the outcome.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "A combination is used when?",
+
+                options: [
+                    "Order does not matter",
+                    "Order matters",
+                    "Probability equals zero"
+                ],
+
+                answer: "Order does not matter",
+
+                explanation: "Combinations count selections where the order is unimportant."
+            },
+
+            {
+                q: "The combination formula is?",
+
+                options: [
+                    "n!/(r!(n-r)!)",
+                    "n!/(n-r)!",
+                    "n!/r!"
+                ],
+
+                answer: "n!/(r!(n-r)!)",
+
+                explanation: "This is the standard combination formula."
+            },
+
+            {
+                q: "Which situation uses combinations?",
+
+                options: [
+                    "Choosing a committee",
+                    "Awarding gold, silver, and bronze medals",
+                    "Creating a password"
+                ],
+
+                answer: "Choosing a committee",
+
+                explanation: "The order of committee members does not matter."
+            },
+
+            {
+                q: "Which situation uses permutations?",
+
+                options: [
+                    "Race results",
+                    "Choosing a committee",
+                    "Selecting pizza toppings"
+                ],
+
+                answer: "Race results",
+
+                explanation: "First, second, and third place are different positions."
+            },
+
+            {
+                q: "How many committees of 2 students can be chosen from 4 students?",
+
+                options: [
+                    "6",
+                    "12",
+                    "8"
+                ],
+
+                answer: "6",
+
+                explanation: "4C₂ = 4!/(2!2!) = 6."
+            },
+
+            {
+                q: "Which keyword usually signals combinations?",
+
+                options: [
+                    "Choose",
+                    "Arrange",
+                    "Order"
+                ],
+
+                answer: "Choose",
+
+                explanation: "Choosing groups usually means order does not matter."
+            },
+
+            {
+                q: "If order matters, use?",
+
+                options: [
+                    "Permutations",
+                    "Combinations",
+                    "Probability"
+                ],
+
+                answer: "Permutations",
+
+                explanation: "Order matters → permutations."
+            },
+
+            {
+                q: "If order does not matter, use?",
+
+                options: [
+                    "Combinations",
+                    "Permutations",
+                    "Sequences"
+                ],
+
+                answer: "Combinations",
+
+                explanation: "Order does not matter → combinations."
+            },
+
+            {
+                q: "In nCᵣ, r represents?",
+
+                options: [
+                    "The number selected",
+                    "The total number of objects",
+                    "The common ratio"
+                ],
+
+                answer: "The number selected",
+
+                explanation: "r is the number of objects chosen."
+            },
+
+            {
+                q: "The biggest difference between permutations and combinations is?",
+
+                options: [
+                    "Whether order matters",
+                    "The factorial formula",
+                    "The number of objects"
+                ],
+
+                answer: "Whether order matters",
+
+                explanation: "This is the key distinction students should remember."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-probability-review": {
+        title: "Probability & Counting Review",
+        subtitle: "Review probability, independent and dependent events, conditional probability, permutations, and combinations.",
+
+        body: `
+
+<h2>Unit Review</h2>
+
+<p>This review covers the major concepts from the Probability & Counting unit.</p>
+
+<hr>
+
+<h2>Key Concepts</h2>
+
+<ul>
+
+<li>Basic probability</li>
+
+<li>Experimental vs. theoretical probability</li>
+
+<li>Independent events</li>
+
+<li>Dependent events</li>
+
+<li>Conditional probability</li>
+
+<li>Permutations</li>
+
+<li>Combinations</li>
+
+</ul>
+
+<hr>
+
+<h2>Important Facts</h2>
+
+<ul>
+
+<li>Probability is always between 0 and 1.</li>
+
+<li>A probability of 0 means an event is impossible.</li>
+
+<li>A probability of 1 means an event is certain.</li>
+
+<li>Independent events do not affect each other.</li>
+
+<li>Dependent events affect future outcomes.</li>
+
+<li>Order matters for permutations.</li>
+
+<li>Order does not matter for combinations.</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Confusing permutations with combinations.</li>
+
+<li>Using multiplication when addition is needed.</li>
+
+<li>Forgetting to reduce probabilities.</li>
+
+<li>Ignoring whether events are independent or dependent.</li>
+
+<li>Forgetting that conditional probability changes the sample space.</li>
+
+</ul>
+
+<hr>
+
+<h2>Quick Review</h2>
+
+<ul>
+
+<li>Know when to add or multiply probabilities.</li>
+
+<li>Recognize independent versus dependent events.</li>
+
+<li>Determine whether order matters.</li>
+
+<li>Use permutations when order matters.</li>
+
+<li>Use combinations when order does not matter.</li>
+
+</ul>
+
+<hr>
+
+<h2>Ready?</h2>
+
+<p>If you understand these concepts, you're ready for the Probability & Counting Unit Test.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "Probability is always between?",
+                options: [
+                    "0 and 1",
+                    "1 and 100",
+                    "-1 and 1"
+                ],
+                answer: "0 and 1",
+                explanation: "Every probability lies between 0 and 1 inclusive."
+            },
+
+            {
+                q: "A probability of 0 means?",
+                options: [
+                    "Impossible",
+                    "Certain",
+                    "Likely"
+                ],
+                answer: "Impossible",
+                explanation: "An impossible event has probability 0."
+            },
+
+            {
+                q: "A probability of 1 means?",
+                options: [
+                    "Certain",
+                    "Impossible",
+                    "Unlikely"
+                ],
+                answer: "Certain",
+                explanation: "A certain event always occurs."
+            },
+
+            {
+                q: "Independent events are events that?",
+                options: [
+                    "Do not affect each other",
+                    "Always happen together",
+                    "Cannot happen"
+                ],
+                answer: "Do not affect each other",
+                explanation: "The outcome of one event does not change the probability of the other."
+            },
+
+            {
+                q: "Dependent events are events that?",
+                options: [
+                    "Affect each other",
+                    "Never occur",
+                    "Always have probability 1"
+                ],
+                answer: "Affect each other",
+                explanation: "The first event changes the probability of the second."
+            },
+
+            {
+                q: "Conditional probability means?",
+                options: [
+                    "The probability of an event given another event has occurred",
+                    "The probability of impossible events",
+                    "The probability of independent events"
+                ],
+                answer: "The probability of an event given another event has occurred",
+                explanation: "Conditional probability changes the sample space."
+            },
+
+            {
+                q: "Permutations are used when?",
+                options: [
+                    "Order matters",
+                    "Order does not matter",
+                    "There is only one object"
+                ],
+                answer: "Order matters",
+                explanation: "Different arrangements count as different outcomes."
+            },
+
+            {
+                q: "Combinations are used when?",
+                options: [
+                    "Order does not matter",
+                    "Order matters",
+                    "The numbers are negative"
+                ],
+                answer: "Order does not matter",
+                explanation: "Only the selection matters."
+            },
+
+            {
+                q: "Which is larger for the same numbers?",
+                options: [
+                    "Permutation",
+                    "Combination",
+                    "They are always equal"
+                ],
+                answer: "Permutation",
+                explanation: "Permutations count more outcomes because order matters."
+            },
+
+            {
+                q: "This unit prepares you for?",
+                options: [
+                    "Statistics",
+                    "Quadratics",
+                    "Functions"
+                ],
+                answer: "Statistics",
+                explanation: "The next Algebra 2 unit begins with Mean, Median, and Mode."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-probability-unit-test": {
+        title: "Probability & Counting Unit Test",
+        subtitle: "Test your understanding of probability, independent and dependent events, conditional probability, permutations, and combinations.",
+
+        body: `
+
+<h2>Unit Test</h2>
+
+<p>This assessment covers the complete Probability & Counting unit.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+
+<li>Basic probability</li>
+
+<li>Experimental and theoretical probability</li>
+
+<li>Independent events</li>
+
+<li>Dependent events</li>
+
+<li>Conditional probability</li>
+
+<li>Permutations</li>
+
+<li>Combinations</li>
+
+</ul>
+
+<hr>
+
+<h2>Goal</h2>
+
+<p>A strong score means you are ready to begin Statistics.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The probability of an impossible event is?",
+                options: [
+                    "0",
+                    "1",
+                    "0.5"
+                ],
+                answer: "0",
+                explanation: "Impossible events have probability 0."
+            },
+
+            {
+                q: "The probability of a certain event is?",
+                options: [
+                    "1",
+                    "0",
+                    "100"
+                ],
+                answer: "1",
+                explanation: "Certain events always occur."
+            },
+
+            {
+                q: "Probability can never be greater than?",
+                options: [
+                    "1",
+                    "10",
+                    "100"
+                ],
+                answer: "1",
+                explanation: "Probabilities are always between 0 and 1."
+            },
+
+            {
+                q: "Rolling a fair six-sided die, the probability of rolling a 4 is?",
+                options: [
+                    "1/6",
+                    "1/4",
+                    "1/3"
+                ],
+                answer: "1/6",
+                explanation: "Each outcome is equally likely."
+            },
+
+            {
+                q: "Rolling an even number on a fair die has probability?",
+                options: [
+                    "1/2",
+                    "1/6",
+                    "2/3"
+                ],
+                answer: "1/2",
+                explanation: "There are three even numbers out of six."
+            },
+
+            {
+                q: "Experimental probability is based on?",
+                options: [
+                    "Observed results",
+                    "Mathematical formulas only",
+                    "Guessing"
+                ],
+                answer: "Observed results",
+                explanation: "Experimental probability comes from actual trials."
+            },
+
+            {
+                q: "Theoretical probability is based on?",
+                options: [
+                    "Possible outcomes",
+                    "Past experiments only",
+                    "Opinion"
+                ],
+                answer: "Possible outcomes",
+                explanation: "It assumes all outcomes are equally likely."
+            },
+
+            {
+                q: "Independent events are events that?",
+                options: [
+                    "Do not affect each other",
+                    "Always occur together",
+                    "Never occur"
+                ],
+                answer: "Do not affect each other",
+                explanation: "The outcome of one event does not change the other."
+            },
+
+            {
+                q: "Dependent events are events that?",
+                options: [
+                    "Affect each other",
+                    "Never occur",
+                    "Always have equal probability"
+                ],
+                answer: "Affect each other",
+                explanation: "One outcome changes the probability of the next."
+            },
+
+            {
+                q: "Drawing two cards without replacement is?",
+                options: [
+                    "Dependent",
+                    "Independent",
+                    "Impossible"
+                ],
+                answer: "Dependent",
+                explanation: "Removing the first card changes the probabilities."
+            },
+
+            {
+                q: "Flipping a coin twice is an example of?",
+                options: [
+                    "Independent events",
+                    "Dependent events",
+                    "Conditional probability"
+                ],
+                answer: "Independent events",
+                explanation: "One flip does not affect the other."
+            },
+
+            {
+                q: "Conditional probability means?",
+                options: [
+                    "The probability of an event given another event has occurred",
+                    "The probability of impossible events",
+                    "The probability of independent events"
+                ],
+                answer: "The probability of an event given another event has occurred",
+                explanation: "The sample space changes after the first event."
+            },
+
+            {
+                q: "A permutation is used when?",
+                options: [
+                    "Order matters",
+                    "Order does not matter",
+                    "There is only one choice"
+                ],
+                answer: "Order matters",
+                explanation: "Different arrangements count separately."
+            },
+
+            {
+                q: "A combination is used when?",
+                options: [
+                    "Order does not matter",
+                    "Order matters",
+                    "There are no repetitions"
+                ],
+                answer: "Order does not matter",
+                explanation: "Only the selected items matter."
+            },
+
+            {
+                q: "Which situation uses permutations?",
+                options: [
+                    "A race with 1st, 2nd, and 3rd place",
+                    "Choosing a committee",
+                    "Picking pizza toppings"
+                ],
+                answer: "A race with 1st, 2nd, and 3rd place",
+                explanation: "Finishing order matters."
+            },
+
+            {
+                q: "Which situation uses combinations?",
+                options: [
+                    "Choosing three classmates for a committee",
+                    "A race",
+                    "Assigning lockers"
+                ],
+                answer: "Choosing three classmates for a committee",
+                explanation: "The order of committee members does not matter."
+            },
+
+            {
+                q: "Permutations generally produce?",
+                options: [
+                    "More outcomes than combinations",
+                    "Fewer outcomes than combinations",
+                    "The same number of outcomes"
+                ],
+                answer: "More outcomes than combinations",
+                explanation: "Counting different orders increases the total."
+            },
+
+            {
+                q: "A probability of 0.75 means?",
+                options: [
+                    "A 75% chance",
+                    "A 7.5% chance",
+                    "A guaranteed event"
+                ],
+                answer: "A 75% chance",
+                explanation: "0.75 is equivalent to 75%."
+            },
+
+            {
+                q: "Which probability is most likely?",
+                options: [
+                    "0.90",
+                    "0.40",
+                    "0.10"
+                ],
+                answer: "0.90",
+                explanation: "The closer a probability is to 1, the more likely the event."
+            },
+
+            {
+                q: "After completing this unit, the next Algebra 2 topic is?",
+                options: [
+                    "Statistics",
+                    "Functions",
+                    "Quadratics"
+                ],
+                answer: "Statistics",
+                explanation: "The next unit begins with Mean, Median, and Mode."
+            }
+
+        ]
+
+    },
+
+    "algebra2-mean-median-mode": {
+        title: "Mean, Median, and Mode",
+        subtitle: "Measure the center of a data set using mean, median, and mode.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>Statistics helps us understand and summarize data.</p>
+
+<p>Three common measures of center are the <strong>mean</strong>, <strong>median</strong>, and <strong>mode</strong>.</p>
+
+<hr>
+
+<h2>Mean</h2>
+
+<p>The <strong>mean</strong> is the average.</p>
+
+<p><strong>Mean = (Sum of all values) ÷ (Number of values)</strong></p>
+
+<p>Example:</p>
+
+<p>4, 6, 8</p>
+
+<p>Mean = (4 + 6 + 8) ÷ 3 = 18 ÷ 3 = <strong>6</strong></p>
+
+<hr>
+
+<h2>Median</h2>
+
+<p>The <strong>median</strong> is the middle value after arranging the numbers from smallest to largest.</p>
+
+<p>Example:</p>
+
+<p>2, 5, 7, 9, 12</p>
+
+<p>Median = <strong>7</strong></p>
+
+<p>If there are an even number of values, average the two middle numbers.</p>
+
+<p>Example:</p>
+
+<p>3, 5, 8, 12</p>
+
+<p>Median = (5 + 8) ÷ 2 = <strong>6.5</strong></p>
+
+<hr>
+
+<h2>Mode</h2>
+
+<p>The <strong>mode</strong> is the value that appears most often.</p>
+
+<p>Example:</p>
+
+<p>2, 4, 4, 5, 6</p>
+
+<p>Mode = <strong>4</strong></p>
+
+<p>A data set may have:</p>
+
+<ul>
+
+<li>No mode</li>
+
+<li>One mode</li>
+
+<li>More than one mode</li>
+
+</ul>
+
+<hr>
+
+<h2>When to Use Each Measure</h2>
+
+<ul>
+
+<li><strong>Mean</strong> — Best when there are no extreme values (outliers).</li>
+
+<li><strong>Median</strong> — Best when there are outliers.</li>
+
+<li><strong>Mode</strong> — Best for finding the most common value.</li>
+
+</ul>
+
+<hr>
+
+<h2>Real-Life Applications</h2>
+
+<ul>
+
+<li>Test scores</li>
+
+<li>House prices</li>
+
+<li>Sports statistics</li>
+
+<li>Business reports</li>
+
+<li>Survey results</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>Mean, median, and mode describe the center of a data set in different ways. Choosing the best measure depends on the type of data and whether outliers are present.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The mean is also called the?",
+
+                options: [
+                    "Average",
+                    "Middle value",
+                    "Most common value"
+                ],
+
+                answer: "Average",
+
+                explanation: "The mean is found by adding all values and dividing by the number of values."
+            },
+
+            {
+                q: "Find the mean of 2, 4, 6.",
+
+                options: [
+                    "4",
+                    "6",
+                    "3"
+                ],
+
+                answer: "4",
+
+                explanation: "(2+4+6) ÷ 3 = 4."
+            },
+
+            {
+                q: "The median of 3, 5, 8, 10, 12 is?",
+
+                options: [
+                    "8",
+                    "10",
+                    "7"
+                ],
+
+                answer: "8",
+
+                explanation: "The middle number is 8."
+            },
+
+            {
+                q: "The median of 2, 4, 6, 8 is?",
+
+                options: [
+                    "5",
+                    "4",
+                    "6"
+                ],
+
+                answer: "5",
+
+                explanation: "Average the two middle values: (4+6) ÷ 2 = 5."
+            },
+
+            {
+                q: "The mode of 1, 2, 2, 3, 5 is?",
+
+                options: [
+                    "2",
+                    "3",
+                    "5"
+                ],
+
+                answer: "2",
+
+                explanation: "2 appears more often than any other number."
+            },
+
+            {
+                q: "Which measure is most affected by outliers?",
+
+                options: [
+                    "Mean",
+                    "Median",
+                    "Mode"
+                ],
+
+                answer: "Mean",
+
+                explanation: "Very large or very small values can greatly change the mean."
+            },
+
+            {
+                q: "Which measure is usually best when outliers are present?",
+
+                options: [
+                    "Median",
+                    "Mean",
+                    "Mode"
+                ],
+
+                answer: "Median",
+
+                explanation: "The median is resistant to extreme values."
+            },
+
+            {
+                q: "A data set can have more than one?",
+
+                options: [
+                    "Mode",
+                    "Mean",
+                    "Median"
+                ],
+
+                answer: "Mode",
+
+                explanation: "A data set can be bimodal or multimodal."
+            },
+
+            {
+                q: "Which measure identifies the most frequent value?",
+
+                options: [
+                    "Mode",
+                    "Mean",
+                    "Median"
+                ],
+
+                answer: "Mode",
+
+                explanation: "The mode is the value that occurs most often."
+            },
+
+            {
+                q: "Mean, median, and mode are all measures of?",
+
+                options: [
+                    "Center",
+                    "Spread",
+                    "Probability"
+                ],
+
+                answer: "Center",
+
+                explanation: "They describe the central tendency of a data set."
+            }
+
+        ]
+
+    }
+    ,
+
+
+
+    "algebra2-normal-distribution": {
+        title: "Normal Distribution",
+        subtitle: "Understand the bell curve and how data is distributed around the mean.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+
+<p>The <strong>normal distribution</strong> is one of the most important concepts in statistics.</p>
+
+<p>It describes data that is clustered around the average and forms a symmetric, bell-shaped curve.</p>
+
+<hr>
+
+<h2>The Bell Curve</h2>
+
+<p>In a normal distribution:</p>
+
+<ul>
+
+<li>The highest point is the <strong>mean</strong>.</li>
+
+<li>The left and right sides are mirror images.</li>
+
+<li>Most values are close to the mean.</li>
+
+<li>Very large or very small values are less common.</li>
+
+</ul>
+
+<hr>
+
+<h2>The 68-95-99.7 Rule</h2>
+
+<p>For a normal distribution:</p>
+
+<ul>
+
+<li><strong>About 68%</strong> of the data lies within <strong>1 standard deviation</strong> of the mean.</li>
+
+<li><strong>About 95%</strong> lies within <strong>2 standard deviations</strong>.</li>
+
+<li><strong>About 99.7%</strong> lies within <strong>3 standard deviations</strong>.</li>
+
+</ul>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>A class has an average test score of <strong>80</strong> with a standard deviation of <strong>5</strong>.</p>
+
+<p>About 68% of students scored between:</p>
+
+<p><strong>75 and 85</strong></p>
+
+<p>About 95% scored between:</p>
+
+<p><strong>70 and 90</strong></p>
+
+<hr>
+
+<h2>Real-Life Applications</h2>
+
+<ul>
+
+<li>Exam scores</li>
+
+<li>Heights of people</li>
+
+<li>IQ scores</li>
+
+<li>Manufacturing measurements</li>
+
+<li>Scientific research</li>
+
+</ul>
+
+<hr>
+
+<h2>Important Note</h2>
+
+<p>Not every data set follows a normal distribution.</p>
+
+<p>Many real-world data sets are skewed or contain outliers.</p>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>The normal distribution is a bell-shaped model that describes many natural data sets. It helps us understand how data is distributed around the mean.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The normal distribution is commonly called the?",
+
+                options: [
+                    "Bell curve",
+                    "Parabola",
+                    "Circle"
+                ],
+
+                answer: "Bell curve",
+
+                explanation: "Its graph has a bell-shaped appearance."
+            },
+
+            {
+                q: "The center of a normal distribution is the?",
+
+                options: [
+                    "Mean",
+                    "Mode only",
+                    "Maximum value"
+                ],
+
+                answer: "Mean",
+
+                explanation: "The mean is located at the center of the distribution."
+            },
+
+            {
+                q: "The normal distribution is?",
+
+                options: [
+                    "Symmetric",
+                    "Always increasing",
+                    "Always decreasing"
+                ],
+
+                answer: "Symmetric",
+
+                explanation: "The left and right sides are mirror images."
+            },
+
+            {
+                q: "Approximately what percent of data lies within one standard deviation of the mean?",
+
+                options: [
+                    "68%",
+                    "50%",
+                    "95%"
+                ],
+
+                answer: "68%",
+
+                explanation: "This is part of the 68-95-99.7 Rule."
+            },
+
+            {
+                q: "Approximately what percent of data lies within two standard deviations?",
+
+                options: [
+                    "95%",
+                    "68%",
+                    "99.7%"
+                ],
+
+                answer: "95%",
+
+                explanation: "About 95% of the data falls within two standard deviations."
+            },
+
+            {
+                q: "Approximately what percent of data lies within three standard deviations?",
+
+                options: [
+                    "99.7%",
+                    "95%",
+                    "68%"
+                ],
+
+                answer: "99.7%",
+
+                explanation: "Nearly all the data falls within three standard deviations."
+            },
+
+            {
+                q: "Which of these often follows a normal distribution?",
+
+                options: [
+                    "Exam scores",
+                    "Lottery numbers",
+                    "Coin flips"
+                ],
+
+                answer: "Exam scores",
+
+                explanation: "Many large sets of exam scores are approximately normally distributed."
+            },
+
+            {
+                q: "Standard deviation measures?",
+
+                options: [
+                    "Spread",
+                    "Center",
+                    "Probability"
+                ],
+
+                answer: "Spread",
+
+                explanation: "Standard deviation measures how far values are from the mean."
+            },
+
+            {
+                q: "Most values in a normal distribution are?",
+
+                options: [
+                    "Near the mean",
+                    "At the maximum",
+                    "At the minimum"
+                ],
+
+                answer: "Near the mean",
+
+                explanation: "The bell curve is tallest at the mean."
+            },
+
+            {
+                q: "Do all real-world data sets follow a normal distribution?",
+
+                options: [
+                    "No",
+                    "Yes",
+                    "Always"
+                ],
+
+                answer: "No",
+
+                explanation: "Some data sets are skewed or contain outliers."
+            }
+
+        ]
+
+    },
+    "algebra2-statistics-review": {
+        title: "Statistics Review",
+        subtitle: "Review measures of center, measures of spread, data displays, correlation, and statistical analysis.",
+
+        body: `
+
+<h2>Unit Review</h2>
+
+<p>This review covers the major concepts from the Statistics unit.</p>
+
+<hr>
+
+<h2>Key Concepts</h2>
+
+<ul>
+
+<li>Mean</li>
+
+<li>Median</li>
+
+<li>Mode</li>
+
+<li>Range</li>
+
+<li>Interquartile Range (IQR)</li>
+
+<li>Box-and-Whisker Plots</li>
+
+<li>Histograms</li>
+
+<li>Scatter Plots</li>
+
+<li>Correlation</li>
+
+<li>Line of Best Fit</li>
+
+</ul>
+
+<hr>
+
+<h2>Important Facts</h2>
+
+<ul>
+
+<li>The mean is the arithmetic average.</li>
+
+<li>The median is the middle value of an ordered data set.</li>
+
+<li>The mode is the value that appears most often.</li>
+
+<li>The range is the difference between the largest and smallest values.</li>
+
+<li>The IQR measures the spread of the middle 50% of the data.</li>
+
+<li>Scatter plots help identify relationships between variables.</li>
+
+<li>Correlation describes the strength and direction of a relationship.</li>
+
+<li>Correlation does not imply causation.</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Mixing up mean and median.</li>
+
+<li>Forgetting to order data before finding the median.</li>
+
+<li>Assuming correlation means one variable causes another.</li>
+
+<li>Ignoring outliers when interpreting data.</li>
+
+<li>Misreading box-and-whisker plots.</li>
+
+</ul>
+
+<hr>
+
+<h2>Quick Review</h2>
+
+<ul>
+
+<li>Know when to use mean, median, and mode.</li>
+
+<li>Interpret common statistical graphs.</li>
+
+<li>Recognize positive, negative, and no correlation.</li>
+
+<li>Understand the purpose of the line of best fit.</li>
+
+</ul>
+
+<hr>
+
+<h2>Ready?</h2>
+
+<p>If you understand these concepts, you're ready for the Statistics Unit Test.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The mean is the?",
+                options: [
+                    "Average",
+                    "Middle value",
+                    "Most common value"
+                ],
+                answer: "Average",
+                explanation: "Add all values and divide by the number of values."
+            },
+
+            {
+                q: "The median is the?",
+                options: [
+                    "Middle value",
+                    "Average",
+                    "Highest value"
+                ],
+                answer: "Middle value",
+                explanation: "The median is the center of ordered data."
+            },
+
+            {
+                q: "The mode is the?",
+                options: [
+                    "Most frequent value",
+                    "Middle value",
+                    "Average"
+                ],
+                answer: "Most frequent value",
+                explanation: "The mode occurs most often."
+            },
+
+            {
+                q: "The range is found by?",
+                options: [
+                    "Highest minus lowest",
+                    "Mean minus median",
+                    "Median minus mode"
+                ],
+                answer: "Highest minus lowest",
+                explanation: "Range measures the total spread."
+            },
+
+            {
+                q: "The IQR measures?",
+                options: [
+                    "The middle 50% of the data",
+                    "The entire data set",
+                    "The average"
+                ],
+                answer: "The middle 50% of the data",
+                explanation: "IQR = Q3 − Q1."
+            },
+
+            {
+                q: "Scatter plots show?",
+                options: [
+                    "Relationships between two variables",
+                    "Fractions",
+                    "Angles"
+                ],
+                answer: "Relationships between two variables",
+                explanation: "Scatter plots compare paired numerical data."
+            },
+
+            {
+                q: "Positive correlation means?",
+                options: [
+                    "As one variable increases, the other tends to increase",
+                    "As one increases, the other decreases",
+                    "There is no relationship"
+                ],
+                answer: "As one variable increases, the other tends to increase",
+                explanation: "Both variables generally move in the same direction."
+            },
+
+            {
+                q: "Negative correlation means?",
+                options: [
+                    "As one variable increases, the other tends to decrease",
+                    "Both variables increase together",
+                    "There is no relationship"
+                ],
+                answer: "As one variable increases, the other tends to decrease",
+                explanation: "The variables move in opposite directions."
+            },
+
+            {
+                q: "Correlation does not imply?",
+                options: [
+                    "Causation",
+                    "Association",
+                    "A relationship"
+                ],
+                answer: "Causation",
+                explanation: "Two variables may be related without one causing the other."
+            },
+
+            {
+                q: "The final unit of Algebra 2 is?",
+                options: [
+                    "Statistics",
+                    "Probability",
+                    "Quadratics"
+                ],
+                answer: "Statistics",
+                explanation: "Statistics is the final Algebra 2 unit."
+            }
+
+        ]
+
+    }
+    ,
+
+    "algebra2-statistics-unit-test": {
+        title: "Statistics Unit Test",
+        subtitle: "Test your understanding of measures of center, spread, graphs, correlation, and data analysis.",
+
+        body: `
+
+<h2>Unit Test</h2>
+
+<p>This assessment covers the complete Statistics unit.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+<li>Mean</li>
+<li>Median</li>
+<li>Mode</li>
+<li>Range</li>
+<li>Interquartile Range (IQR)</li>
+<li>Box-and-whisker plots</li>
+<li>Histograms</li>
+<li>Scatter plots</li>
+<li>Correlation</li>
+<li>Line of best fit</li>
+</ul>
+
+<hr>
+
+<h2>Goal</h2>
+
+<p>A strong score means you have completed the Algebra 2 course.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The mean of 4, 6, and 8 is?",
+                options: ["6", "8", "18"],
+                answer: "6",
+                explanation: "Add the values: 4+6+8=18. Divide by 3 to get 6."
+            },
+
+            {
+                q: "The median of 3, 7, 9 is?",
+                options: ["7", "3", "9"],
+                answer: "7",
+                explanation: "The median is the middle value when the data is ordered."
+            },
+
+            {
+                q: "The mode of 2, 4, 4, 6, 8 is?",
+                options: ["4", "6", "8"],
+                answer: "4",
+                explanation: "The mode is the value that appears most often."
+            },
+
+            {
+                q: "The range of 5, 9, 12, 20 is?",
+                options: ["15", "20", "5"],
+                answer: "15",
+                explanation: "Range = highest value − lowest value = 20 − 5 = 15."
+            },
+
+            {
+                q: "Before finding the median, data should be?",
+                options: ["Put in order", "Multiplied", "Graphed only"],
+                answer: "Put in order",
+                explanation: "The median is based on the middle value of ordered data."
+            },
+
+            {
+                q: "If a data set has two middle values, the median is found by?",
+                options: ["Averaging the two middle values", "Choosing the larger value", "Choosing the smaller value"],
+                answer: "Averaging the two middle values",
+                explanation: "For an even number of data values, average the two middle values."
+            },
+
+            {
+                q: "The interquartile range is found by?",
+                options: ["Q3 − Q1", "Highest − lowest", "Mean − median"],
+                answer: "Q3 − Q1",
+                explanation: "IQR measures the spread of the middle 50% of the data."
+            },
+
+            {
+                q: "A box-and-whisker plot shows?",
+                options: ["The five-number summary", "Only the mean", "Only the mode"],
+                answer: "The five-number summary",
+                explanation: "Box plots display minimum, Q1, median, Q3, and maximum."
+            },
+
+            {
+                q: "A histogram is used to display?",
+                options: ["Frequency of data intervals", "Only ordered pairs", "Only exact solutions"],
+                answer: "Frequency of data intervals",
+                explanation: "Histograms group numerical data into intervals."
+            },
+
+            {
+                q: "A scatter plot shows?",
+                options: ["The relationship between two variables", "Only one number", "Only categorical data"],
+                answer: "The relationship between two variables",
+                explanation: "Scatter plots use paired data to show relationships."
+            },
+
+            {
+                q: "Positive correlation means?",
+                options: ["Both variables tend to increase together", "One increases while the other decreases", "There is no pattern"],
+                answer: "Both variables tend to increase together",
+                explanation: "Positive correlation means the variables move in the same direction."
+            },
+
+            {
+                q: "Negative correlation means?",
+                options: ["One variable increases while the other decreases", "Both variables increase together", "There is no relationship"],
+                answer: "One variable increases while the other decreases",
+                explanation: "Negative correlation means the variables move in opposite directions."
+            },
+
+            {
+                q: "No correlation means?",
+                options: ["There is no clear relationship", "The graph is always linear", "The variables are equal"],
+                answer: "There is no clear relationship",
+                explanation: "No correlation means the points do not show a clear pattern."
+            },
+
+            {
+                q: "Correlation does not prove?",
+                options: ["Causation", "Association", "A pattern"],
+                answer: "Causation",
+                explanation: "Two variables can be related without one causing the other."
+            },
+
+            {
+                q: "A line of best fit is used to?",
+                options: ["Model a trend in scatter plot data", "Find the mode", "Create a box plot"],
+                answer: "Model a trend in scatter plot data",
+                explanation: "A line of best fit summarizes the overall trend."
+            },
+
+            {
+                q: "An outlier is?",
+                options: ["A data value far from the rest", "The average value", "The middle value"],
+                answer: "A data value far from the rest",
+                explanation: "Outliers are unusually high or low values."
+            },
+
+            {
+                q: "Which measure is most affected by outliers?",
+                options: ["Mean", "Median", "Mode"],
+                answer: "Mean",
+                explanation: "The mean uses every value, so extreme values can change it a lot."
+            },
+
+            {
+                q: "Which measure is often better when outliers exist?",
+                options: ["Median", "Mean", "Range"],
+                answer: "Median",
+                explanation: "The median is less affected by extreme values."
+            },
+
+            {
+                q: "Standard deviation describes?",
+                options: ["How spread out data values are", "The middle value", "The most common value"],
+                answer: "How spread out data values are",
+                explanation: "Standard deviation measures variation from the mean."
+            },
+
+            {
+                q: "Completing this unit means you have completed?",
+                options: ["Algebra 2", "Geometry", "Only the first unit"],
+                answer: "Algebra 2",
+                explanation: "Statistics is the final Algebra 2 unit."
+            }
+
+        ]
+
+    },
+
+
+
+
+
+
 
 
 
