@@ -31,8 +31,6 @@ const topicData = {
     algebra1: Object.keys(algebra1Lessons),
     geometry: Object.keys(geometryLessons),
     algebra2: Object.keys(algebra2Lessons),
-
-    algebra2: [],
     calculus1: [],
     calculus2: [],
     calculus3: [],
