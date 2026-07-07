@@ -25,13 +25,14 @@ const lessonBank = {
     algebra1: algebra1Lessons,
     geometry: geometryLessons,
     algebra2: algebra2Lessons,
+    calculus1: calculus1Lessons,
 };
 
 const topicData = {
     algebra1: Object.keys(algebra1Lessons),
     geometry: Object.keys(geometryLessons),
     algebra2: Object.keys(algebra2Lessons),
-    calculus1: [],
+    calculus1: Object.keys(calculus1Lessons),
     calculus2: [],
     calculus3: [],
     calculus4: []

@@ -16197,18 +16197,4 @@ const algebra2Lessons = {
     },
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 };
