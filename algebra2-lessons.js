@@ -523,8 +523,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-foundations-functions-review": {
-        title: "Foundations & Functions Review",
-        subtitle: "Review the key concepts from the Foundations and Functions unit.",
+        title: "Unit 1 Review",
+        subtitle: "Review expressions, equations, function notation, linear functions, absolute value functions, and systems of equations.",
 
         body: `
 
@@ -756,8 +756,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-foundations-functions-unit-test": {
-        title: "Foundations & Functions Unit Test",
-        subtitle: "Test your understanding of expressions, equations, functions, linear functions, absolute value, and systems.",
+        title: "Unit 1 Test",
+        subtitle: "Test expressions, equations, function notation, linear functions, absolute value functions, and systems of equations.",
 
         body: `
 
@@ -2190,7 +2190,7 @@ const algebra2Lessons = {
     ,
 
     "algebra2-quadratics-review": {
-        title: "Quadratics Review",
+        title: "Unit 2 Review",
         subtitle: "Review quadratic functions, parabolas, vertex form, factored form, completing the square, the Quadratic Formula, and the discriminant.",
 
         body: `
@@ -2327,8 +2327,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-quadratics-unit-test": {
-        title: "Quadratics Unit Test",
-        subtitle: "Test your understanding of quadratic functions, parabolas, solving methods, and the discriminant.",
+        title: "Unit 2 Test",
+        subtitle: "Test quadratic functions, parabolas, vertex form, factored form, completing the square, the Quadratic Formula, and the discriminant.",
 
         body: `
 
@@ -4394,8 +4394,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-polynomials-review": {
-        title: "Polynomials Review",
-        subtitle: "Review polynomial operations, graphing, division, and the remainder and factor theorems.",
+        title: "Unit 3 Review",
+        subtitle: "Review polynomial vocabulary, operations, factoring, division, the Remainder Theorem, and the Factor Theorem.",
 
         body: `
 
@@ -4659,8 +4659,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-polynomials-unit-test": {
-        title: "Polynomials Unit Test",
-        subtitle: "Test your understanding of polynomial operations, graphing, division, and polynomial theorems.",
+        title: "Unit 3 Test",
+        subtitle: "Test polynomial vocabulary, operations, factoring, division, the Remainder Theorem, and the Factor Theorem.",
 
         body: `
 
@@ -6795,8 +6795,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-radicals-review": {
-        title: "Radicals Review",
-        subtitle: "Review square roots, cube roots, simplifying radicals, rational exponents, and radical equations.",
+        title: "Unit 4 Review",
+        subtitle: "Review square roots, cube roots, simplifying radicals, radical operations, rational exponents, and radical equations.",
 
         body: `
 
@@ -6933,8 +6933,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-radicals-unit-test": {
-        title: "Radicals Unit Test",
-        subtitle: "Test your understanding of radicals, rational exponents, and radical equations.",
+        title: "Unit 4 Test",
+        subtitle: "Test square roots, cube roots, simplifying radicals, radical operations, rational exponents, and radical equations.",
 
         body: `
 
@@ -8490,8 +8490,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-rational-expressions-review": {
-        title: "Rational Expressions Review",
-        subtitle: "Review simplifying, multiplying, dividing, adding, subtracting, and solving rational expressions.",
+        title: "Unit 5 Review",
+        subtitle: "Review rational expressions, restrictions, simplifying, multiplying, dividing, adding, subtracting, and rational equations.",
 
         body: `
 
@@ -8691,8 +8691,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-rational-expressions-unit-test": {
-        title: "Rational Expressions Unit Test",
-        subtitle: "Test your understanding of rational expressions, operations, and rational equations.",
+        title: "Unit 5 Test",
+        subtitle: "Test rational expressions, restrictions, simplifying, multiplying, dividing, adding, subtracting, and rational equations.",
 
         body: `
 
@@ -11964,8 +11964,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-exponential-logarithms-review": {
-        title: "Exponential & Logarithmic Functions Review",
-        subtitle: "Review exponential growth, decay, compound interest, logarithms, and logarithmic equations.",
+        title: "Unit 6 Review",
+        subtitle: "Review exponential functions, growth, decay, compound interest, logarithms, log properties, and logarithmic equations.",
 
         body: `
 
@@ -12102,8 +12102,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-exponential-logarithms-unit-test": {
-        title: "Exponential & Logarithmic Functions Unit Test",
-        subtitle: "Test your understanding of exponential functions, logarithms, and their applications.",
+        title: "Unit 6 Test",
+        subtitle: "Test exponential functions, growth, decay, compound interest, logarithms, log properties, and logarithmic equations.",
 
         body: `
 
@@ -13503,8 +13503,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-sequences-series-review": {
-        title: "Sequences & Series Review",
-        subtitle: "Review arithmetic sequences, geometric sequences, series, and sigma notation.",
+        title: "Unit 7 Review",
+        subtitle: "Review arithmetic sequences, geometric sequences, arithmetic series, geometric series, and sigma notation.",
 
         body: `
 
@@ -13634,8 +13634,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-sequences-series-unit-test": {
-        title: "Sequences & Series Unit Test",
-        subtitle: "Test your understanding of arithmetic sequences, geometric sequences, series, and sigma notation.",
+        title: "Unit 7 Test",
+        subtitle: "Test arithmetic sequences, geometric sequences, arithmetic series, geometric series, and sigma notation.",
 
         body: `
 
@@ -14815,8 +14815,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-probability-review": {
-        title: "Probability & Counting Review",
-        subtitle: "Review probability, independent and dependent events, conditional probability, permutations, and combinations.",
+        title: "Unit 8 Review",
+        subtitle: "Review basic probability, independent and dependent events, conditional probability, permutations, and combinations.",
 
         body: `
 
@@ -15030,8 +15030,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-probability-unit-test": {
-        title: "Probability & Counting Unit Test",
-        subtitle: "Test your understanding of probability, independent and dependent events, conditional probability, permutations, and combinations.",
+        title: "Unit 8 Test",
+        subtitle: "Test basic probability, independent and dependent events, conditional probability, permutations, and combinations.",
 
         body: `
 
@@ -15795,8 +15795,8 @@ const algebra2Lessons = {
 
     },
     "algebra2-statistics-review": {
-        title: "Statistics Review",
-        subtitle: "Review measures of center, measures of spread, data displays, correlation, and statistical analysis.",
+        title: "Unit 9 Review",
+        subtitle: "Review mean, median, mode, range, data displays, correlation, line of best fit, and normal distribution.",
 
         body: `
 
@@ -16016,8 +16016,8 @@ const algebra2Lessons = {
     ,
 
     "algebra2-statistics-unit-test": {
-        title: "Statistics Unit Test",
-        subtitle: "Test your understanding of measures of center, spread, graphs, correlation, and data analysis.",
+        title: "Unit 9 Test",
+        subtitle: "Test mean, median, mode, range, data displays, correlation, line of best fit, and normal distribution.",
 
         body: `
 
