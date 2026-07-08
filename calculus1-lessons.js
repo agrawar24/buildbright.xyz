@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 const calculus1Lessons = {
     "calculus1-course-intro": {
         title: "Calculus I Course Introduction",
@@ -5603,6 +5613,6032 @@ const calculus1Lessons = {
                 ],
                 answer: "Applications of Derivatives",
                 explanation: "Unit 3 focuses on applying derivatives to solve real-world and graphical problems."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-tangent-lines": {
+        title: "Tangent Lines",
+        subtitle: "Learn how derivatives help find the equation of a tangent line.",
+
+        body: `
+
+<h2>What is a Tangent Line?</h2>
+
+<p>A <strong>tangent line</strong> is a line that touches a curve at one point and has the same slope as the curve at that point.</p>
+
+<p>In calculus, the derivative gives the slope of the tangent line.</p>
+
+<hr>
+
+<h2>Key Idea</h2>
+
+<p>If you know:</p>
+
+<ul>
+<li>A point on the curve</li>
+<li>The derivative at that point</li>
+</ul>
+
+<p>then you can write the equation of the tangent line.</p>
+
+<hr>
+
+<h2>Step-by-Step Process</h2>
+
+<ol>
+<li>Find the derivative f'(x).</li>
+<li>Plug in the x-value to find the slope.</li>
+<li>Find the y-value using the original function.</li>
+<li>Use point-slope form.</li>
+</ol>
+
+<hr>
+
+<h2>Point-Slope Form</h2>
+
+<p><strong>y − y₁ = m(x − x₁)</strong></p>
+
+<ul>
+<li>m = slope</li>
+<li>(x₁, y₁) = point of tangency</li>
+</ul>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Find the tangent line to:</p>
+
+<p><strong>f(x)=x²</strong></p>
+
+<p>at x = 3.</p>
+
+<p>Step 1: Find the derivative.</p>
+
+<p><strong>f'(x)=2x</strong></p>
+
+<p>Step 2: Find the slope at x = 3.</p>
+
+<p><strong>f'(3)=6</strong></p>
+
+<p>Step 3: Find the point.</p>
+
+<p><strong>f(3)=9</strong></p>
+
+<p>Point: <strong>(3,9)</strong></p>
+
+<p>Step 4: Use point-slope form.</p>
+
+<p><strong>y − 9 = 6(x − 3)</strong></p>
+
+<p>Simplified:</p>
+
+<p><strong>y = 6x − 9</strong></p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Using the function value as the slope.</li>
+<li>Forgetting to find the y-value from the original function.</li>
+<li>Using f(x) instead of f'(x) for slope.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<p>The derivative gives the slope of the tangent line, and point-slope form gives the equation of the line.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The derivative gives the slope of the?",
+                options: [
+                    "Tangent line",
+                    "Area under the curve",
+                    "Original function only"
+                ],
+                answer: "Tangent line",
+                explanation: "The derivative gives the slope of the curve at a point."
+            },
+
+            {
+                q: "To find a tangent line, you need?",
+                options: [
+                    "A point and a slope",
+                    "Only a graph",
+                    "Only the y-intercept"
+                ],
+                answer: "A point and a slope",
+                explanation: "A line is determined by a point and slope."
+            },
+
+            {
+                q: "The slope of the tangent line comes from?",
+                options: [
+                    "The derivative",
+                    "The original function value",
+                    "The x-axis"
+                ],
+                answer: "The derivative",
+                explanation: "Evaluate f'(x) at the given x-value."
+            },
+
+            {
+                q: "Point-slope form is?",
+                options: [
+                    "y − y₁ = m(x − x₁)",
+                    "y = mx + b",
+                    "x² + y² = r²"
+                ],
+                answer: "y − y₁ = m(x − x₁)",
+                explanation: "Point-slope form uses a known point and slope."
+            },
+
+            {
+                q: "For f(x)=x², f'(x)=?",
+                options: [
+                    "2x",
+                    "x",
+                    "x²"
+                ],
+                answer: "2x",
+                explanation: "Apply the Power Rule."
+            },
+
+            {
+                q: "For f(x)=x² at x=3, the slope is?",
+                options: [
+                    "6",
+                    "9",
+                    "3"
+                ],
+                answer: "6",
+                explanation: "f'(x)=2x, so f'(3)=6."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-normal-lines": {
+        title: "Normal Lines",
+        subtitle: "Learn how to find the equation of a normal line using derivatives.",
+
+        body: `
+
+<h2>What is a Normal Line?</h2>
+
+<p>A <strong>normal line</strong> is a line that is <strong>perpendicular</strong> to the tangent line at a point on a curve.</p>
+
+<p>If the derivative gives the slope of the tangent line, then the normal line has the negative reciprocal of that slope.</p>
+
+<hr>
+
+<h2>Relationship Between Tangent and Normal Lines</h2>
+
+<ul>
+
+<li>Tangent Line Slope = f'(x)</li>
+
+<li>Normal Line Slope = −1 / f'(x)</li>
+
+</ul>
+
+<p>If the tangent line has slope <strong>m</strong>, then the normal line has slope:</p>
+
+<p><strong>−1/m</strong></p>
+
+<hr>
+
+<h2>Step-by-Step Process</h2>
+
+<ol>
+
+<li>Find the derivative.</li>
+
+<li>Evaluate the derivative at the given x-value.</li>
+
+<li>Find the point on the graph.</li>
+
+<li>Find the negative reciprocal of the tangent slope.</li>
+
+<li>Use point-slope form.</li>
+
+</ol>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Find the normal line to:</p>
+
+<p><strong>f(x)=x²</strong></p>
+
+<p>at x = 2.</p>
+
+<p>Derivative:</p>
+
+<p><strong>f'(x)=2x</strong></p>
+
+<p>Tangent slope:</p>
+
+<p><strong>f'(2)=4</strong></p>
+
+<p>Normal slope:</p>
+
+<p><strong>−1/4</strong></p>
+
+<p>Point:</p>
+
+<p><strong>(2,4)</strong></p>
+
+<p>Equation:</p>
+
+<p><strong>y−4 = (−1/4)(x−2)</strong></p>
+
+<hr>
+
+<h2>Special Cases</h2>
+
+<p>If the tangent line is horizontal (slope = 0), then the normal line is vertical.</p>
+
+<p>If the tangent line is vertical, then the normal line is horizontal.</p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Using the tangent slope instead of the normal slope.</li>
+
+<li>Forgetting to take the negative reciprocal.</li>
+
+<li>Using the wrong point from the graph.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>The derivative gives the tangent slope.</li>
+
+<li>The normal slope is the negative reciprocal.</li>
+
+<li>Use point-slope form to write the equation.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "A normal line is always?",
+                options: [
+                    "Perpendicular to the tangent line",
+                    "Parallel to the tangent line",
+                    "Horizontal"
+                ],
+                answer: "Perpendicular to the tangent line",
+                explanation: "Normal lines are perpendicular to tangent lines."
+            },
+
+            {
+                q: "If the tangent slope is 5, the normal slope is?",
+                options: [
+                    "−1/5",
+                    "5",
+                    "1/5"
+                ],
+                answer: "−1/5",
+                explanation: "Take the negative reciprocal."
+            },
+
+            {
+                q: "If the tangent slope is 2, the normal slope is?",
+                options: [
+                    "−1/2",
+                    "2",
+                    "1/2"
+                ],
+                answer: "−1/2",
+                explanation: "The normal slope is the negative reciprocal."
+            },
+
+            {
+                q: "The tangent slope comes from?",
+                options: [
+                    "The derivative",
+                    "The y-intercept",
+                    "The x-coordinate"
+                ],
+                answer: "The derivative",
+                explanation: "Evaluate the derivative at the point."
+            },
+
+            {
+                q: "If the tangent line is horizontal, the normal line is?",
+                options: [
+                    "Vertical",
+                    "Horizontal",
+                    "Parallel"
+                ],
+                answer: "Vertical",
+                explanation: "Horizontal and vertical lines are perpendicular."
+            },
+
+            {
+                q: "The equation of the normal line uses?",
+                options: [
+                    "Point-slope form",
+                    "Slope-intercept form only",
+                    "Quadratic formula"
+                ],
+                answer: "Point-slope form",
+                explanation: "Point-slope form is the easiest method."
+
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-increasing-and-decreasing-functions": {
+        title: "Increasing and Decreasing Functions",
+        subtitle: "Learn how the first derivative determines where a function increases or decreases.",
+
+        body: `
+
+<h2>What Does Increasing Mean?</h2>
+
+<p>A function is <strong>increasing</strong> when its y-values get larger as x increases.</p>
+
+<p>Graphically, the curve rises as you move from left to right.</p>
+
+<hr>
+
+<h2>What Does Decreasing Mean?</h2>
+
+<p>A function is <strong>decreasing</strong> when its y-values get smaller as x increases.</p>
+
+<p>Graphically, the curve falls as you move from left to right.</p>
+
+<hr>
+
+<h2>Using the First Derivative</h2>
+
+<p>The sign of the derivative tells us whether a function is increasing or decreasing.</p>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Derivative</th>
+<th>Behavior</th>
+</tr>
+
+<tr>
+<td>f'(x) > 0</td>
+<td>Increasing</td>
+</tr>
+
+<tr>
+<td>f'(x) < 0</td>
+<td>Decreasing</td>
+</tr>
+
+<tr>
+<td>f'(x) = 0</td>
+<td>Possible critical point</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Critical Points</h2>
+
+<p>A <strong>critical point</strong> occurs where:</p>
+
+<ul>
+
+<li>f'(x)=0</li>
+
+<li>or the derivative does not exist.</li>
+
+</ul>
+
+<p>Critical points are possible locations of maximums or minimums.</p>
+
+<hr>
+
+<h2>Example</h2>
+
+<p><strong>f(x)=x³−3x</strong></p>
+
+<p>Derivative:</p>
+
+<p><strong>f'(x)=3x²−3</strong></p>
+
+<p>Set the derivative equal to zero:</p>
+
+<p><strong>3x²−3=0</strong></p>
+
+<p><strong>x=−1 and x=1</strong></p>
+
+<p>These values divide the graph into intervals.</p>
+
+<p>Test the sign of the derivative in each interval to determine whether the function is increasing or decreasing.</p>
+
+<hr>
+
+<h2>First Derivative Test</h2>
+
+<ul>
+
+<li>If the derivative changes from positive to negative, there is a local maximum.</li>
+
+<li>If the derivative changes from negative to positive, there is a local minimum.</li>
+
+<li>If the sign does not change, there is neither.</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Using the function instead of the derivative.</li>
+
+<li>Forgetting to test intervals.</li>
+
+<li>Assuming every critical point is a maximum or minimum.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Positive derivative → Increasing.</li>
+
+<li>Negative derivative → Decreasing.</li>
+
+<li>Derivative equal to zero identifies critical points.</li>
+
+<li>Use the First Derivative Test to classify critical points.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "If f'(x) > 0, the function is?",
+                options: [
+                    "Increasing",
+                    "Decreasing",
+                    "Constant"
+                ],
+                answer: "Increasing",
+                explanation: "A positive derivative means the graph rises from left to right."
+            },
+
+            {
+                q: "If f'(x) < 0, the function is?",
+                options: [
+                    "Decreasing",
+                    "Increasing",
+                    "Undefined"
+                ],
+                answer: "Decreasing",
+                explanation: "A negative derivative means the graph falls from left to right."
+            },
+
+            {
+                q: "A critical point occurs when?",
+                options: [
+                    "f'(x)=0 or does not exist",
+                    "f(x)=0 only",
+                    "The graph crosses the y-axis"
+                ],
+                answer: "f'(x)=0 or does not exist",
+                explanation: "These are the possible locations of local extrema."
+            },
+
+            {
+                q: "If the derivative changes from positive to negative, the function has a?",
+                options: [
+                    "Local maximum",
+                    "Local minimum",
+                    "Point of inflection"
+                ],
+                answer: "Local maximum",
+                explanation: "The function changes from increasing to decreasing."
+            },
+
+            {
+                q: "If the derivative changes from negative to positive, the function has a?",
+                options: [
+                    "Local minimum",
+                    "Local maximum",
+                    "Horizontal asymptote"
+                ],
+                answer: "Local minimum",
+                explanation: "The function changes from decreasing to increasing."
+            },
+
+            {
+                q: "To determine increasing and decreasing intervals, you should analyze?",
+                options: [
+                    "The sign of the first derivative",
+                    "The y-intercept",
+                    "The second derivative only"
+                ],
+                answer: "The sign of the first derivative",
+                explanation: "The first derivative tells whether the function is increasing or decreasing."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-local-maximums-and-minimums": {
+        title: "Local Maximums and Minimums",
+        subtitle: "Learn how to identify and classify relative extrema using derivatives.",
+
+        body: `
+
+<h2>What are Local Maximums and Minimums?</h2>
+
+<p>A <strong>local maximum</strong> is a point where a function has the greatest value compared to nearby points.</p>
+
+<p>A <strong>local minimum</strong> is a point where a function has the smallest value compared to nearby points.</p>
+
+<hr>
+
+<h2>Critical Points</h2>
+
+<p>Local extrema occur only at <strong>critical points</strong>.</p>
+
+<p>A critical point is where:</p>
+
+<ul>
+
+<li>f'(x)=0</li>
+
+<li>or the derivative does not exist.</li>
+
+</ul>
+
+<hr>
+
+<h2>The First Derivative Test</h2>
+
+<p>Use the sign of the derivative before and after a critical point.</p>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Derivative Changes</th>
+<th>Conclusion</th>
+</tr>
+
+<tr>
+<td>Positive → Negative</td>
+<td>Local Maximum</td>
+</tr>
+
+<tr>
+<td>Negative → Positive</td>
+<td>Local Minimum</td>
+</tr>
+
+<tr>
+<td>No Sign Change</td>
+<td>Neither</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Example</h2>
+
+<p><strong>f(x)=x³−3x</strong></p>
+
+<p>Derivative:</p>
+
+<p><strong>f'(x)=3x²−3</strong></p>
+
+<p>Critical points:</p>
+
+<p><strong>x=-1 and x=1</strong></p>
+
+<ul>
+
+<li>At x = -1, the derivative changes from positive to negative.</li>
+
+<li>This gives a local maximum.</li>
+
+<li>At x = 1, the derivative changes from negative to positive.</li>
+
+<li>This gives a local minimum.</li>
+
+</ul>
+
+<hr>
+
+<h2>Local vs Absolute Extrema</h2>
+
+<p>A <strong>local</strong> maximum or minimum only compares nearby points.</p>
+
+<p>An <strong>absolute</strong> maximum or minimum is the highest or lowest value on the entire domain.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Finding the highest profit</li>
+
+<li>Finding the lowest cost</li>
+
+<li>Determining optimal dimensions</li>
+
+<li>Modeling real-world systems</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Assuming every critical point is an extremum.</li>
+
+<li>Forgetting to test the sign of the derivative.</li>
+
+<li>Confusing local and absolute extrema.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Find critical points.</li>
+
+<li>Use the First Derivative Test.</li>
+
+<li>Classify each point as a local maximum, local minimum, or neither.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "A local maximum occurs when the derivative changes from?",
+                options: [
+                    "Positive to negative",
+                    "Negative to positive",
+                    "Positive to positive"
+                ],
+                answer: "Positive to negative",
+                explanation: "The function changes from increasing to decreasing."
+            },
+
+            {
+                q: "A local minimum occurs when the derivative changes from?",
+                options: [
+                    "Negative to positive",
+                    "Positive to negative",
+                    "Negative to negative"
+                ],
+                answer: "Negative to positive",
+                explanation: "The function changes from decreasing to increasing."
+            },
+
+            {
+                q: "Local extrema occur at?",
+                options: [
+                    "Critical points",
+                    "Every x-intercept",
+                    "Every y-intercept"
+                ],
+                answer: "Critical points",
+                explanation: "Critical points are the only possible locations of local extrema."
+            },
+
+            {
+                q: "A critical point occurs where?",
+                options: [
+                    "f'(x)=0 or the derivative does not exist",
+                    "f(x)=0 only",
+                    "The graph crosses the y-axis"
+                ],
+                answer: "f'(x)=0 or the derivative does not exist",
+                explanation: "This is the definition of a critical point."
+            },
+
+            {
+                q: "If the derivative does not change sign at a critical point, the point is?",
+                options: [
+                    "Neither a local maximum nor a local minimum",
+                    "A local maximum",
+                    "A local minimum"
+                ],
+                answer: "Neither a local maximum nor a local minimum",
+                explanation: "A sign change is required for a local extremum."
+            },
+
+            {
+                q: "An absolute maximum is?",
+                options: [
+                    "The greatest value on the entire domain",
+                    "The greatest nearby value only",
+                    "The derivative equals zero"
+                ],
+                answer: "The greatest value on the entire domain",
+                explanation: "Absolute extrema consider the entire domain, not just nearby points."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-concavity-and-second-derivative": {
+        title: "Concavity and the Second Derivative",
+        subtitle: "Learn how the second derivative determines the shape of a graph.",
+
+        body: `
+
+<h2>What is Concavity?</h2>
+
+<p><strong>Concavity</strong> describes the direction in which a graph bends.</p>
+
+<p>A graph can bend upward or downward as x changes.</p>
+
+<hr>
+
+<h2>Concave Up</h2>
+
+<p>A function is <strong>concave up</strong> when the graph bends upward like a bowl.</p>
+
+<p>The slope of the tangent lines is increasing.</p>
+
+<p>This occurs when:</p>
+
+<p><strong>f''(x) > 0</strong></p>
+
+<hr>
+
+<h2>Concave Down</h2>
+
+<p>A function is <strong>concave down</strong> when the graph bends downward like an upside-down bowl.</p>
+
+<p>The slope of the tangent lines is decreasing.</p>
+
+<p>This occurs when:</p>
+
+<p><strong>f''(x) < 0</strong></p>
+
+<hr>
+
+<h2>Using the Second Derivative</h2>
+
+<p>The second derivative tells us how the first derivative changes.</p>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Second Derivative</th>
+<th>Concavity</th>
+</tr>
+
+<tr>
+<td>f''(x) > 0</td>
+<td>Concave Up</td>
+</tr>
+
+<tr>
+<td>f''(x) < 0</td>
+<td>Concave Down</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Example</h2>
+
+<p><strong>f(x)=x³</strong></p>
+
+<p>First derivative:</p>
+
+<p><strong>f'(x)=3x²</strong></p>
+
+<p>Second derivative:</p>
+
+<p><strong>f''(x)=6x</strong></p>
+
+<ul>
+
+<li>When x > 0, f''(x) > 0, so the graph is concave up.</li>
+
+<li>When x < 0, f''(x) < 0, so the graph is concave down.</li>
+
+</ul>
+
+<hr>
+
+<h2>Relationship to the First Derivative</h2>
+
+<ul>
+
+<li>If the first derivative is increasing, the graph is concave up.</li>
+
+<li>If the first derivative is decreasing, the graph is concave down.</li>
+
+</ul>
+
+<hr>
+
+<h2>Real-World Example</h2>
+
+<p>A car that is speeding up has increasing velocity.</p>
+
+<p>The graph of its position is often concave up because the rate of change is increasing.</p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Using the first derivative instead of the second derivative.</li>
+
+<li>Confusing increasing/decreasing with concavity.</li>
+
+<li>Thinking every graph changes concavity.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>If f''(x) > 0, the graph is concave up.</li>
+
+<li>If f''(x) < 0, the graph is concave down.</li>
+
+<li>The second derivative measures how the slope changes.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "If f''(x) > 0, the graph is?",
+                options: [
+                    "Concave up",
+                    "Concave down",
+                    "Linear"
+                ],
+                answer: "Concave up",
+                explanation: "A positive second derivative means the graph bends upward."
+            },
+
+            {
+                q: "If f''(x) < 0, the graph is?",
+                options: [
+                    "Concave down",
+                    "Concave up",
+                    "Constant"
+                ],
+                answer: "Concave down",
+                explanation: "A negative second derivative means the graph bends downward."
+            },
+
+            {
+                q: "Concavity is determined by the?",
+                options: [
+                    "Second derivative",
+                    "First derivative",
+                    "Original function only"
+                ],
+                answer: "Second derivative",
+                explanation: "The second derivative determines whether the graph is concave up or down."
+            },
+
+            {
+                q: "A concave up graph looks like?",
+                options: [
+                    "A bowl opening upward",
+                    "A bowl opening downward",
+                    "A straight line"
+                ],
+                answer: "A bowl opening upward",
+                explanation: "This is the standard visual description of concave up."
+            },
+
+            {
+                q: "The second derivative describes?",
+                options: [
+                    "How the slope changes",
+                    "The y-intercept",
+                    "The domain"
+                ],
+                answer: "How the slope changes",
+                explanation: "It measures whether the first derivative is increasing or decreasing."
+            },
+
+            {
+                q: "Increasing and decreasing are determined by the ________, while concavity is determined by the ________.",
+                options: [
+                    "First derivative; second derivative",
+                    "Second derivative; first derivative",
+                    "Original function; derivative"
+                ],
+                answer: "First derivative; second derivative",
+                explanation: "The first derivative determines increasing/decreasing, while the second derivative determines concavity."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-points-of-inflection": {
+        title: "Points of Inflection",
+        subtitle: "Learn how to identify where a graph changes concavity.",
+
+        body: `
+
+<h2>What is a Point of Inflection?</h2>
+
+<p>A <strong>point of inflection</strong> is a point where a function changes concavity.</p>
+
+<p>The graph changes from:</p>
+
+<ul>
+
+<li>Concave up to concave down, or</li>
+
+<li>Concave down to concave up.</li>
+
+</ul>
+
+<hr>
+
+<h2>Finding Possible Inflection Points</h2>
+
+<p>Possible inflection points occur where:</p>
+
+<ul>
+
+<li><strong>f''(x)=0</strong></li>
+
+<li>or the second derivative does not exist.</li>
+
+</ul>
+
+<p>However, these values are only <strong>candidates</strong>. You must verify that the concavity actually changes.</p>
+
+<hr>
+
+<h2>Second Derivative Sign Test</h2>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Before</th>
+<th>After</th>
+<th>Result</th>
+</tr>
+
+<tr>
+<td>Positive</td>
+<td>Negative</td>
+<td>Inflection Point</td>
+</tr>
+
+<tr>
+<td>Negative</td>
+<td>Positive</td>
+<td>Inflection Point</td>
+</tr>
+
+<tr>
+<td>Positive</td>
+<td>Positive</td>
+<td>No Inflection Point</td>
+</tr>
+
+<tr>
+<td>Negative</td>
+<td>Negative</td>
+<td>No Inflection Point</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Example</h2>
+
+<p><strong>f(x)=x³</strong></p>
+
+<p>First derivative:</p>
+
+<p><strong>f'(x)=3x²</strong></p>
+
+<p>Second derivative:</p>
+
+<p><strong>f''(x)=6x</strong></p>
+
+<p>Set the second derivative equal to zero:</p>
+
+<p><strong>6x=0</strong></p>
+
+<p><strong>x=0</strong></p>
+
+<p>Test values:</p>
+
+<ul>
+
+<li>x=-1 → f''(x)&lt;0 (Concave Down)</li>
+
+<li>x=1 → f''(x)&gt;0 (Concave Up)</li>
+
+</ul>
+
+<p>Since the concavity changes, <strong>(0,0)</strong> is a point of inflection.</p>
+
+<hr>
+
+<h2>Important Note</h2>
+
+<p>If the second derivative equals zero but the concavity does not change, then there is <strong>no point of inflection</strong>.</p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Assuming every solution to f''(x)=0 is an inflection point.</li>
+
+<li>Forgetting to test intervals.</li>
+
+<li>Using the first derivative instead of the second derivative.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Find where f''(x)=0 or is undefined.</li>
+
+<li>Test the sign of the second derivative on both sides.</li>
+
+<li>A point of inflection exists only if the concavity changes.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "A point of inflection occurs when?",
+                options: [
+                    "The graph changes concavity",
+                    "The derivative equals zero",
+                    "The graph crosses the x-axis"
+                ],
+                answer: "The graph changes concavity",
+                explanation: "A point of inflection is defined by a change in concavity."
+            },
+
+            {
+                q: "Possible inflection points occur where?",
+                options: [
+                    "f''(x)=0 or is undefined",
+                    "f'(x)=0 only",
+                    "f(x)=0"
+                ],
+                answer: "f''(x)=0 or is undefined",
+                explanation: "These are candidate points that must be tested."
+            },
+
+            {
+                q: "If the second derivative changes from positive to negative, then?",
+                options: [
+                    "There is a point of inflection",
+                    "There is a local maximum",
+                    "There is a local minimum"
+                ],
+                answer: "There is a point of inflection",
+                explanation: "The concavity changes from up to down."
+            },
+
+            {
+                q: "If the second derivative stays positive on both sides, then?",
+                options: [
+                    "There is no point of inflection",
+                    "There is always a point of inflection",
+                    "There is a local maximum"
+                ],
+                answer: "There is no point of inflection",
+                explanation: "Concavity did not change."
+            },
+
+            {
+                q: "Which derivative determines concavity?",
+                options: [
+                    "The second derivative",
+                    "The first derivative",
+                    "The original function"
+                ],
+                answer: "The second derivative",
+                explanation: "The second derivative determines whether a graph is concave up or down."
+            },
+
+            {
+                q: "To confirm a point of inflection, you must?",
+                options: [
+                    "Check that the concavity changes",
+                    "Only solve f''(x)=0",
+                    "Find the y-intercept"
+                ],
+                answer: "Check that the concavity changes",
+                explanation: "A sign change in the second derivative confirms an inflection point."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-second-derivative-test": {
+        title: "Second Derivative Test",
+        subtitle: "Learn how to classify critical points using the second derivative.",
+
+        body: `
+
+<h2>What is the Second Derivative Test?</h2>
+
+<p>The <strong>Second Derivative Test</strong> is a shortcut for determining whether a critical point is a local maximum or a local minimum.</p>
+
+<p>Instead of checking the sign of the first derivative on either side of a critical point, we evaluate the second derivative.</p>
+
+<hr>
+
+<h2>Step 1</h2>
+
+<p>Find the first derivative.</p>
+
+<p>Set:</p>
+
+<p><strong>f'(x)=0</strong></p>
+
+<p>to locate all critical points.</p>
+
+<hr>
+
+<h2>Step 2</h2>
+
+<p>Find the second derivative:</p>
+
+<p><strong>f''(x)</strong></p>
+
+<p>Evaluate it at each critical point.</p>
+
+<hr>
+
+<h2>How to Interpret the Results</h2>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Second Derivative</th>
+<th>Conclusion</th>
+</tr>
+
+<tr>
+<td>f''(x) > 0</td>
+<td>Local Minimum</td>
+</tr>
+
+<tr>
+<td>f''(x) < 0</td>
+<td>Local Maximum</td>
+</tr>
+
+<tr>
+<td>f''(x)=0</td>
+<td>Test Inconclusive</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Example</h2>
+
+<p><strong>f(x)=x³−3x</strong></p>
+
+<p>First derivative:</p>
+
+<p><strong>f'(x)=3x²−3</strong></p>
+
+<p>Critical points:</p>
+
+<p><strong>x=-1 and x=1</strong></p>
+
+<p>Second derivative:</p>
+
+<p><strong>f''(x)=6x</strong></p>
+
+<ul>
+
+<li>f''(-1)=-6 &lt; 0 → Local Maximum</li>
+
+<li>f''(1)=6 &gt; 0 → Local Minimum</li>
+
+</ul>
+
+<hr>
+
+<h2>When the Test Fails</h2>
+
+<p>If:</p>
+
+<p><strong>f''(x)=0</strong></p>
+
+<p>the Second Derivative Test cannot determine what happens.</p>
+
+<p>You must instead use the <strong>First Derivative Test</strong> or another method.</p>
+
+<hr>
+
+<h2>Advantages</h2>
+
+<ul>
+
+<li>Usually faster than the First Derivative Test.</li>
+
+<li>Requires only one evaluation of the second derivative.</li>
+
+<li>Very useful for optimization problems.</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Applying the test before finding critical points.</li>
+
+<li>Assuming f''(x)=0 means there is an inflection point.</li>
+
+<li>Using the second derivative without first solving f'(x)=0.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Find critical points using the first derivative.</li>
+
+<li>Evaluate the second derivative at each critical point.</li>
+
+<li>Positive → Local Minimum.</li>
+
+<li>Negative → Local Maximum.</li>
+
+<li>Zero → Test is inconclusive.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "The Second Derivative Test is used to determine?",
+                options: [
+                    "Whether a critical point is a local maximum or minimum",
+                    "The slope of the tangent line",
+                    "The equation of the curve"
+                ],
+                answer: "Whether a critical point is a local maximum or minimum",
+                explanation: "The Second Derivative Test classifies critical points."
+            },
+
+            {
+                q: "Before using the Second Derivative Test, you must first?",
+                options: [
+                    "Find the critical points using the first derivative",
+                    "Find the y-intercept",
+                    "Graph the function"
+                ],
+                answer: "Find the critical points using the first derivative",
+                explanation: "The Second Derivative Test is only applied at critical points."
+            },
+
+            {
+                q: "If f''(x) > 0 at a critical point, the function has a?",
+                options: [
+                    "Local minimum",
+                    "Local maximum",
+                    "Point of inflection"
+                ],
+                answer: "Local minimum",
+                explanation: "A positive second derivative means the graph is concave up."
+            },
+
+            {
+                q: "If f''(x) < 0 at a critical point, the function has a?",
+                options: [
+                    "Local maximum",
+                    "Local minimum",
+                    "Absolute minimum"
+                ],
+                answer: "Local maximum",
+                explanation: "A negative second derivative means the graph is concave down."
+            },
+
+            {
+                q: "If f''(x)=0, then?",
+                options: [
+                    "The test is inconclusive",
+                    "There is a local minimum",
+                    "There is always an inflection point"
+                ],
+                answer: "The test is inconclusive",
+                explanation: "Another method, such as the First Derivative Test, is needed."
+            },
+
+            {
+                q: "Why is the Second Derivative Test often preferred?",
+                options: [
+                    "It is usually faster than the First Derivative Test",
+                    "It always works",
+                    "It eliminates the need to find critical points"
+                ],
+                answer: "It is usually faster than the First Derivative Test",
+                explanation: "When applicable, it classifies critical points with less work."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-curve-sketching": {
+        title: "Curve Sketching",
+        subtitle: "Learn how derivatives help sketch accurate graphs of functions.",
+
+        body: `
+
+<h2>Why Sketch Curves?</h2>
+
+<p>Calculus allows us to sketch graphs without plotting dozens of individual points.</p>
+
+<p>By studying derivatives, we can understand a function's overall behavior.</p>
+
+<hr>
+
+<h2>Information Needed</h2>
+
+<p>To sketch a graph, determine:</p>
+
+<ul>
+
+<li>Domain</li>
+
+<li>x-intercepts</li>
+
+<li>y-intercept</li>
+
+<li>Critical points</li>
+
+<li>Increasing intervals</li>
+
+<li>Decreasing intervals</li>
+
+<li>Local maximums</li>
+
+<li>Local minimums</li>
+
+<li>Concavity</li>
+
+<li>Points of inflection</li>
+
+<li>End behavior</li>
+
+</ul>
+
+<hr>
+
+<h2>General Procedure</h2>
+
+<ol>
+
+<li>Find the domain.</li>
+
+<li>Find intercepts.</li>
+
+<li>Compute the first derivative.</li>
+
+<li>Locate critical points.</li>
+
+<li>Determine increasing and decreasing intervals.</li>
+
+<li>Compute the second derivative.</li>
+
+<li>Determine concavity.</li>
+
+<li>Locate inflection points.</li>
+
+<li>Combine all information to sketch the graph.</li>
+
+</ol>
+
+<hr>
+
+<h2>Example</h2>
+
+<p><strong>f(x)=x³−3x</strong></p>
+
+<p>First derivative:</p>
+
+<p><strong>f'(x)=3x²−3</strong></p>
+
+<p>Critical points:</p>
+
+<p><strong>x=-1, x=1</strong></p>
+
+<p>Second derivative:</p>
+
+<p><strong>f''(x)=6x</strong></p>
+
+<p>Inflection point:</p>
+
+<p><strong>x=0</strong></p>
+
+<p>The graph:</p>
+
+<ul>
+
+<li>Increases on (-∞,-1)</li>
+
+<li>Decreases on (-1,1)</li>
+
+<li>Increases on (1,∞)</li>
+
+<li>Is concave down for x&lt;0</li>
+
+<li>Is concave up for x&gt;0</li>
+
+</ul>
+
+<hr>
+
+<h2>Reading Graphs</h2>
+
+<p>Even if you are given only a graph, derivatives allow you to identify:</p>
+
+<ul>
+
+<li>Maximums</li>
+
+<li>Minimums</li>
+
+<li>Intervals of increase</li>
+
+<li>Intervals of decrease</li>
+
+<li>Concavity</li>
+
+<li>Inflection points</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Ignoring concavity.</li>
+
+<li>Forgetting to test intervals.</li>
+
+<li>Confusing local and absolute extrema.</li>
+
+<li>Sketching without finding critical points.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Use the first derivative to study slopes.</li>
+
+<li>Use the second derivative to study concavity.</li>
+
+<li>Combine all information to produce an accurate graph.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "The first derivative is primarily used to determine?",
+                options: [
+                    "Increasing and decreasing intervals",
+                    "Domain",
+                    "Intercepts"
+                ],
+                answer: "Increasing and decreasing intervals",
+                explanation: "The sign of the first derivative determines whether a function is increasing or decreasing."
+            },
+
+            {
+                q: "The second derivative is primarily used to determine?",
+                options: [
+                    "Concavity",
+                    "Domain",
+                    "Intercepts"
+                ],
+                answer: "Concavity",
+                explanation: "The second derivative tells whether the graph is concave up or concave down."
+            },
+
+            {
+                q: "Critical points are found using?",
+                options: [
+                    "The first derivative",
+                    "The second derivative",
+                    "The original function only"
+                ],
+                answer: "The first derivative",
+                explanation: "Critical points occur where the first derivative is zero or undefined."
+            },
+
+            {
+                q: "Points of inflection are determined using?",
+                options: [
+                    "The second derivative",
+                    "The first derivative only",
+                    "The y-intercept"
+                ],
+                answer: "The second derivative",
+                explanation: "A change in the sign of the second derivative indicates an inflection point."
+            },
+
+            {
+                q: "Before sketching a graph, you should identify?",
+                options: [
+                    "Critical points and concavity",
+                    "Only the intercepts",
+                    "Only the domain"
+                ],
+                answer: "Critical points and concavity",
+                explanation: "These are essential features for producing an accurate sketch."
+            },
+
+            {
+                q: "Curve sketching combines information from?",
+                options: [
+                    "The function, first derivative, and second derivative",
+                    "Only the original function",
+                    "Only the first derivative"
+                ],
+                answer: "The function, first derivative, and second derivative",
+                explanation: "All three provide important information about the graph."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-optimization": {
+        title: "Optimization",
+        subtitle: "Learn how derivatives are used to maximize or minimize real-world quantities.",
+
+        body: `
+
+<h2>What is Optimization?</h2>
+
+<p><strong>Optimization</strong> is the process of finding the largest or smallest possible value of a quantity while satisfying given conditions.</p>
+
+<p>Calculus allows us to determine these values using derivatives.</p>
+
+<hr>
+
+<h2>Common Optimization Problems</h2>
+
+<ul>
+
+<li>Maximum profit</li>
+
+<li>Minimum cost</li>
+
+<li>Maximum area</li>
+
+<li>Minimum surface area</li>
+
+<li>Maximum volume</li>
+
+<li>Shortest distance</li>
+
+<li>Fastest time</li>
+
+</ul>
+
+<hr>
+
+<h2>General Strategy</h2>
+
+<ol>
+
+<li>Read the problem carefully.</li>
+
+<li>Draw a diagram if helpful.</li>
+
+<li>Identify the quantity to maximize or minimize.</li>
+
+<li>Write an equation for that quantity.</li>
+
+<li>Rewrite the equation using only one variable.</li>
+
+<li>Differentiate the function.</li>
+
+<li>Find critical points by solving f'(x)=0.</li>
+
+<li>Use the First or Second Derivative Test.</li>
+
+<li>Answer the original question with correct units.</li>
+
+</ol>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>A farmer has 100 meters of fencing to build a rectangular pen.</p>
+
+<p>What dimensions maximize the area?</p>
+
+<p>Perimeter:</p>
+
+<p><strong>2L + 2W = 100</strong></p>
+
+<p>Solve for one variable:</p>
+
+<p><strong>W = 50 − L</strong></p>
+
+<p>Area:</p>
+
+<p><strong>A = L(50 − L)</strong></p>
+
+<p><strong>A = 50L − L²</strong></p>
+
+<p>Differentiate:</p>
+
+<p><strong>A' = 50 − 2L</strong></p>
+
+<p>Set equal to zero:</p>
+
+<p><strong>50 − 2L = 0</strong></p>
+
+<p><strong>L = 25</strong></p>
+
+<p>Then:</p>
+
+<p><strong>W = 25</strong></p>
+
+<p>The maximum area occurs when the rectangle is actually a square.</p>
+
+<hr>
+
+<h2>Why Critical Points Matter</h2>
+
+<p>Maximums and minimums occur at critical points or endpoints.</p>
+
+<p>Always verify that the critical point produces the desired maximum or minimum.</p>
+
+<hr>
+
+<h2>Real-World Applications</h2>
+
+<ul>
+
+<li>Business and economics</li>
+
+<li>Engineering design</li>
+
+<li>Architecture</li>
+
+<li>Manufacturing</li>
+
+<li>Physics</li>
+
+<li>Medicine</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Optimizing the wrong equation.</li>
+
+<li>Forgetting to rewrite everything using one variable.</li>
+
+<li>Not answering the original question.</li>
+
+<li>Ignoring units.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Create an equation for the quantity being optimized.</li>
+
+<li>Rewrite it using one variable.</li>
+
+<li>Differentiate.</li>
+
+<li>Find critical points.</li>
+
+<li>Verify the maximum or minimum.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "Optimization problems are used to find?",
+                options: [
+                    "Maximums and minimums",
+                    "Only derivatives",
+                    "Only limits"
+                ],
+                answer: "Maximums and minimums",
+                explanation: "Optimization finds the largest or smallest possible value of a quantity."
+            },
+
+            {
+                q: "Before differentiating an optimization function, you should?",
+                options: [
+                    "Rewrite it using one variable",
+                    "Graph it immediately",
+                    "Find the integral"
+                ],
+                answer: "Rewrite it using one variable",
+                explanation: "Optimization requires a function of a single variable."
+            },
+
+            {
+                q: "Critical points are found by solving?",
+                options: [
+                    "f'(x)=0",
+                    "f(x)=0",
+                    "f''(x)=0"
+                ],
+                answer: "f'(x)=0",
+                explanation: "Critical points occur where the first derivative is zero or undefined."
+            },
+
+            {
+                q: "Optimization problems often involve?",
+                options: [
+                    "Area, volume, profit, and cost",
+                    "Triangle congruence",
+                    "Polynomial long division"
+                ],
+                answer: "Area, volume, profit, and cost",
+                explanation: "These are common real-world optimization applications."
+            },
+
+            {
+                q: "After finding a critical point, you should?",
+                options: [
+                    "Verify that it gives the required maximum or minimum",
+                    "Immediately stop",
+                    "Integrate the function"
+                ],
+                answer: "Verify that it gives the required maximum or minimum",
+                explanation: "Not every critical point is the desired solution."
+            },
+
+            {
+                q: "A common mistake in optimization is?",
+                options: [
+                    "Using more than one variable in the final equation",
+                    "Finding the derivative",
+                    "Using the Chain Rule"
+                ],
+                answer: "Using more than one variable in the final equation",
+                explanation: "The function being optimized must be written in terms of one variable."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-related-rates": {
+        title: "Related Rates",
+        subtitle: "Learn how to relate the rates of change of two or more variables.",
+
+        body: `
+
+<h2>What are Related Rates?</h2>
+
+<p><strong>Related rates</strong> problems involve two or more quantities that change over time and are connected by an equation.</p>
+
+<p>As one quantity changes, the others change as well.</p>
+
+<hr>
+
+<h2>Examples of Related Rates</h2>
+
+<ul>
+
+<li>Inflating balloons</li>
+
+<li>Expanding circles</li>
+
+<li>Rising water in a tank</li>
+
+<li>Sliding ladders</li>
+
+<li>Moving shadows</li>
+
+<li>Growing spheres</li>
+
+</ul>
+
+<hr>
+
+<h2>The General Strategy</h2>
+
+<ol>
+
+<li>Draw a diagram.</li>
+
+<li>Assign variables.</li>
+
+<li>Write an equation relating the variables.</li>
+
+<li>Differentiate both sides with respect to time.</li>
+
+<li>Substitute the known values.</li>
+
+<li>Solve for the unknown rate.</li>
+
+<li>Include units in your answer.</li>
+
+</ol>
+
+<hr>
+
+<h2>Important Idea</h2>
+
+<p>Every changing variable depends on time.</p>
+
+<p>When differentiating with respect to time, use the Chain Rule.</p>
+
+<p>For example:</p>
+
+<p><strong>d/dt(x²)=2x(dx/dt)</strong></p>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>A circle's radius increases at:</p>
+
+<p><strong>dr/dt = 3 cm/s</strong></p>
+
+<p>Find how fast the area changes when:</p>
+
+<p><strong>r = 5 cm</strong></p>
+
+<p>Area formula:</p>
+
+<p><strong>A = πr²</strong></p>
+
+<p>Differentiate:</p>
+
+<p><strong>dA/dt = 2πr(dr/dt)</strong></p>
+
+<p>Substitute the values:</p>
+
+<p><strong>dA/dt = 2π(5)(3)</strong></p>
+
+<p><strong>dA/dt = 30π cm²/s</strong></p>
+
+<hr>
+
+<h2>Common Formulas Used</h2>
+
+<ul>
+
+<li>Circle Area: A = πr²</li>
+
+<li>Circle Circumference: C = 2πr</li>
+
+<li>Sphere Volume: V = (4/3)πr³</li>
+
+<li>Cylinder Volume: V = πr²h</li>
+
+<li>Pythagorean Theorem: x²+y²=z²</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Forgetting to differentiate with respect to time.</li>
+
+<li>Substituting values too early.</li>
+
+<li>Ignoring the Chain Rule.</li>
+
+<li>Leaving out units.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Write an equation relating the variables.</li>
+
+<li>Differentiate with respect to time.</li>
+
+<li>Substitute known values only after differentiating.</li>
+
+<li>Solve for the unknown rate.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "Related rates problems involve?",
+                options: [
+                    "Quantities changing with time",
+                    "Only derivatives of polynomials",
+                    "Only limits"
+                ],
+                answer: "Quantities changing with time",
+                explanation: "Related rates study how multiple changing quantities are connected."
+            },
+
+            {
+                q: "In related rates, differentiation is usually performed with respect to?",
+                options: [
+                    "Time",
+                    "x",
+                    "y"
+                ],
+                answer: "Time",
+                explanation: "Rates are measured with respect to time."
+            },
+
+            {
+                q: "When differentiating x² with respect to time, the result is?",
+                options: [
+                    "2x(dx/dt)",
+                    "2x",
+                    "x²"
+                ],
+                answer: "2x(dx/dt)",
+                explanation: "Apply the Chain Rule because x depends on time."
+            },
+
+            {
+                q: "In the circle example, if r=5 and dr/dt=3, then dA/dt equals?",
+                options: [
+                    "30π",
+                    "15π",
+                    "6π"
+                ],
+                answer: "30π",
+                explanation: "Use dA/dt = 2πr(dr/dt)."
+            },
+
+            {
+                q: "When should you substitute numerical values into a related rates problem?",
+                options: [
+                    "After differentiating",
+                    "Before differentiating",
+                    "Before writing the equation"
+                ],
+                answer: "After differentiating",
+                explanation: "Substituting too early often produces incorrect results."
+            },
+
+            {
+                q: "A common mistake in related rates is?",
+                options: [
+                    "Forgetting the Chain Rule",
+                    "Using the Power Rule",
+                    "Finding the derivative"
+                ],
+                answer: "Forgetting the Chain Rule",
+                explanation: "Every changing variable is a function of time."
+
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-linear-approximation": {
+        title: "Linear Approximation",
+        subtitle: "Learn how tangent lines can be used to estimate function values.",
+
+        body: `
+
+<h2>What is Linear Approximation?</h2>
+
+<p><strong>Linear approximation</strong> uses the tangent line at a point to estimate nearby values of a function.</p>
+
+<p>Since a tangent line closely follows the curve near the point of tangency, it provides an excellent approximation.</p>
+
+<hr>
+
+<h2>The Linear Approximation Formula</h2>
+
+<p>If the function is differentiable at x=a, then:</p>
+
+<p><strong>L(x)=f(a)+f'(a)(x−a)</strong></p>
+
+<p>where:</p>
+
+<ul>
+
+<li>f(a) is the function value.</li>
+
+<li>f'(a) is the slope of the tangent line.</li>
+
+<li>L(x) is the approximation.</li>
+
+</ul>
+
+<hr>
+
+<h2>When Should You Use It?</h2>
+
+<p>Linear approximation works best when x is very close to a known value.</p>
+
+<p>The farther away you move from the point of tangency, the less accurate the approximation becomes.</p>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Estimate:</p>
+
+<p><strong>√4.1</strong></p>
+
+<p>Let:</p>
+
+<p><strong>f(x)=√x</strong></p>
+
+<p>Choose:</p>
+
+<p><strong>a=4</strong></p>
+
+<p>Compute:</p>
+
+<p><strong>f(4)=2</strong></p>
+
+<p><strong>f'(x)=1/(2√x)</strong></p>
+
+<p><strong>f'(4)=1/4</strong></p>
+
+<p>Apply the formula:</p>
+
+<p><strong>L(x)=2+(1/4)(4.1−4)</strong></p>
+
+<p><strong>L(4.1)=2.025</strong></p>
+
+<p>The actual value is very close to this estimate.</p>
+
+<hr>
+
+<h2>Differentials</h2>
+
+<p>Differentials provide another way to estimate small changes.</p>
+
+<p>If:</p>
+
+<p><strong>dy=f'(x)dx</strong></p>
+
+<p>then:</p>
+
+<ul>
+
+<li>dx is a small change in x.</li>
+
+<li>dy approximates the resulting change in y.</li>
+
+</ul>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Estimating square roots</li>
+
+<li>Approximating cube roots</li>
+
+<li>Error estimation</li>
+
+<li>Engineering measurements</li>
+
+<li>Scientific calculations</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Choosing a point far from the desired value.</li>
+
+<li>Using the wrong derivative.</li>
+
+<li>Confusing the approximation with the exact answer.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Linear approximation uses the tangent line.</li>
+
+<li>The approximation is most accurate near the point of tangency.</li>
+
+<li>Differentials estimate small changes in a function.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "Linear approximation uses the?",
+                options: [
+                    "Tangent line",
+                    "Secant line",
+                    "Normal line"
+                ],
+                answer: "Tangent line",
+                explanation: "The tangent line provides the best local linear approximation."
+            },
+
+            {
+                q: "The linear approximation formula is?",
+                options: [
+                    "L(x)=f(a)+f'(a)(x−a)",
+                    "L(x)=mx+b",
+                    "f(x)=ax²+bx+c"
+                ],
+                answer: "L(x)=f(a)+f'(a)(x−a)",
+                explanation: "This is the standard linear approximation formula."
+            },
+
+            {
+                q: "Linear approximation is most accurate when?",
+                options: [
+                    "x is close to a",
+                    "x is very large",
+                    "x is very small"
+                ],
+                answer: "x is close to a",
+                explanation: "Accuracy decreases as you move farther from the point of tangency."
+            },
+
+            {
+                q: "In differentials, dy approximately equals?",
+                options: [
+                    "f'(x)dx",
+                    "f(x)dx",
+                    "xdy"
+                ],
+                answer: "f'(x)dx",
+                explanation: "This is the differential approximation formula."
+            },
+
+            {
+                q: "A common use of linear approximation is?",
+                options: [
+                    "Estimating square roots",
+                    "Factoring polynomials",
+                    "Solving triangles"
+                ],
+                answer: "Estimating square roots",
+                explanation: "Linear approximation is often used to estimate values that are difficult to compute exactly."
+            },
+
+            {
+                q: "A common mistake is?",
+                options: [
+                    "Using a point too far from the desired value",
+                    "Applying the Power Rule",
+                    "Finding the derivative"
+                ],
+                answer: "Using a point too far from the desired value",
+                explanation: "The tangent line only approximates the curve well near the point of tangency."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-newtons-method": {
+        title: "Newton's Method",
+        subtitle: "Learn how tangent lines can approximate solutions to equations.",
+
+        body: `
+
+<h2>What is Newton's Method?</h2>
+
+<p><strong>Newton's Method</strong> is a numerical technique for approximating solutions (roots) of equations.</p>
+
+<p>Instead of solving an equation exactly, Newton's Method repeatedly improves an estimate using tangent lines.</p>
+
+<hr>
+
+<h2>When is Newton's Method Used?</h2>
+
+<p>Some equations are difficult or impossible to solve exactly.</p>
+
+<p>Examples include:</p>
+
+<ul>
+
+<li>x = cos(x)</li>
+
+<li>x³ − x − 1 = 0</li>
+
+<li>e<sup>x</sup> = 5x</li>
+
+</ul>
+
+<p>Newton's Method provides an efficient approximation.</p>
+
+<hr>
+
+<h2>The Formula</h2>
+
+<p>If xₙ is the current estimate, then the next estimate is:</p>
+
+<p><strong>xₙ₊₁ = xₙ − f(xₙ) / f'(xₙ)</strong></p>
+
+<p>Each iteration usually gets closer to the actual solution.</p>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Solve:</p>
+
+<p><strong>x² − 2 = 0</strong></p>
+
+<p>Choose an initial guess:</p>
+
+<p><strong>x₀ = 1.5</strong></p>
+
+<p>Function:</p>
+
+<p><strong>f(x)=x²−2</strong></p>
+
+<p>Derivative:</p>
+
+<p><strong>f'(x)=2x</strong></p>
+
+<p>Apply Newton's Method:</p>
+
+<p><strong>x₁ = 1.5 − (1.5²−2)/(2·1.5)</strong></p>
+
+<p><strong>x₁ ≈ 1.4167</strong></p>
+
+<p>Repeating the process gives:</p>
+
+<p><strong>x ≈ 1.4142</strong></p>
+
+<p>This is an excellent approximation of √2.</p>
+
+<hr>
+
+<h2>Advantages</h2>
+
+<ul>
+
+<li>Very fast convergence when the initial guess is close.</li>
+
+<li>Works for many equations that cannot be solved algebraically.</li>
+
+<li>Widely used in engineering, physics, finance, and computer science.</li>
+
+</ul>
+
+<hr>
+
+<h2>Limitations</h2>
+
+<ul>
+
+<li>A poor initial guess may not converge.</li>
+
+<li>The derivative cannot be zero.</li>
+
+<li>Some functions require many iterations.</li>
+
+</ul>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Engineering design</li>
+
+<li>Computer graphics</li>
+
+<li>Machine learning</li>
+
+<li>Physics simulations</li>
+
+<li>Financial modeling</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Using the wrong derivative.</li>
+
+<li>Choosing a poor starting value.</li>
+
+<li>Stopping after only one iteration when greater accuracy is needed.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Newton's Method uses tangent lines to approximate roots.</li>
+
+<li>Each iteration improves the estimate.</li>
+
+<li>The method is fast when the initial guess is close to the actual solution.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "Newton's Method is primarily used to?",
+                options: [
+                    "Approximate solutions to equations",
+                    "Find exact integrals",
+                    "Compute limits"
+                ],
+                answer: "Approximate solutions to equations",
+                explanation: "Newton's Method is a numerical root-finding algorithm."
+            },
+
+            {
+                q: "Newton's Method uses?",
+                options: [
+                    "Tangent lines",
+                    "Normal lines",
+                    "Secant lines only"
+                ],
+                answer: "Tangent lines",
+                explanation: "Each tangent line provides the next approximation."
+            },
+
+            {
+                q: "What information is required to apply Newton's Method?",
+                options: [
+                    "The function and its derivative",
+                    "Only the function",
+                    "Only the derivative"
+                ],
+                answer: "The function and its derivative",
+                explanation: "The iteration formula requires both f(x) and f'(x)."
+            },
+
+            {
+                q: "Choosing a good initial guess will generally?",
+                options: [
+                    "Improve convergence",
+                    "Prevent differentiation",
+                    "Eliminate the derivative"
+                ],
+                answer: "Improve convergence",
+                explanation: "A starting value near the actual root usually leads to rapid convergence."
+            },
+
+            {
+                q: "A limitation of Newton's Method is?",
+                options: [
+                    "The derivative cannot be zero",
+                    "The function must be linear",
+                    "It only works for polynomials"
+                ],
+                answer: "The derivative cannot be zero",
+                explanation: "Division by zero makes the iteration impossible."
+            },
+
+            {
+                q: "Newton's Method is an example of?",
+                options: [
+                    "A numerical approximation technique",
+                    "An exact algebraic method",
+                    "A geometry theorem"
+                ],
+                answer: "A numerical approximation technique",
+                explanation: "It approximates solutions through repeated iterations."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-unit-3-review": {
+        title: "Unit 3 Review",
+        subtitle: "Review all applications of derivatives from Unit 3.",
+
+        body: `
+
+<h2>Unit 3 Review</h2>
+
+<p>This review summarizes every major concept covered in Unit 3.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+
+<li>Tangent Lines</li>
+
+<li>Normal Lines</li>
+
+<li>Increasing and Decreasing Functions</li>
+
+<li>Local Maximums and Minimums</li>
+
+<li>Concavity and the Second Derivative</li>
+
+<li>Points of Inflection</li>
+
+<li>Second Derivative Test</li>
+
+<li>Curve Sketching</li>
+
+<li>Optimization</li>
+
+<li>Related Rates</li>
+
+<li>Linear Approximation (Differentials)</li>
+
+<li>Newton's Method</li>
+
+</ul>
+
+<hr>
+
+<h2>Important Ideas</h2>
+
+<ul>
+
+<li>The derivative gives the slope of the tangent line.</li>
+
+<li>The normal line is perpendicular to the tangent line.</li>
+
+<li>The first derivative determines increasing and decreasing intervals.</li>
+
+<li>The second derivative determines concavity.</li>
+
+<li>Critical points occur where f'(x)=0 or is undefined.</li>
+
+<li>Inflection points occur where concavity changes.</li>
+
+<li>Optimization problems use derivatives to maximize or minimize quantities.</li>
+
+<li>Related rates connect variables that change with time.</li>
+
+<li>Linear approximation estimates nearby function values using tangent lines.</li>
+
+<li>Newton's Method approximates roots numerically.</li>
+
+</ul>
+
+<hr>
+
+<h2>Key Tests</h2>
+
+<ul>
+
+<li>First Derivative Test</li>
+
+<li>Second Derivative Test</li>
+
+<li>Second Derivative Sign Test for Concavity</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Using the original function instead of its derivative.</li>
+
+<li>Forgetting to test intervals.</li>
+
+<li>Confusing local and absolute extrema.</li>
+
+<li>Forgetting the Chain Rule in related rates.</li>
+
+<li>Substituting values before differentiating in related rates.</li>
+
+<li>Using linear approximation far from the point of tangency.</li>
+
+<li>Using a poor initial guess in Newton's Method.</li>
+
+</ul>
+
+<hr>
+
+<h2>Ready?</h2>
+
+<p>If you can analyze graphs, classify extrema, solve optimization and related rates problems, estimate values with linear approximation, and apply Newton's Method, you are ready for the Unit 3 Test.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The slope of a tangent line is given by?",
+                options: [
+                    "The derivative",
+                    "The second derivative",
+                    "The integral"
+                ],
+                answer: "The derivative",
+                explanation: "The derivative gives the slope of the tangent line."
+            },
+
+            {
+                q: "The first derivative determines?",
+                options: [
+                    "Increasing and decreasing intervals",
+                    "Concavity",
+                    "Area under the curve"
+                ],
+                answer: "Increasing and decreasing intervals",
+                explanation: "The sign of the first derivative determines whether a function is increasing or decreasing."
+            },
+
+            {
+                q: "The second derivative determines?",
+                options: [
+                    "Concavity",
+                    "Domain",
+                    "Intercepts"
+                ],
+                answer: "Concavity",
+                explanation: "The second derivative tells whether the graph is concave up or down."
+            },
+
+            {
+                q: "Optimization problems are used to find?",
+                options: [
+                    "Maximums and minimums",
+                    "Only derivatives",
+                    "Only limits"
+                ],
+                answer: "Maximums and minimums",
+                explanation: "Optimization uses derivatives to maximize or minimize quantities."
+            },
+
+            {
+                q: "Related rates problems involve variables changing with respect to?",
+                options: [
+                    "Time",
+                    "x only",
+                    "Distance only"
+                ],
+                answer: "Time",
+                explanation: "Related rates describe quantities that change over time."
+            },
+
+            {
+                q: "Newton's Method is used to?",
+                options: [
+                    "Approximate solutions to equations",
+                    "Find exact derivatives",
+                    "Evaluate limits"
+                ],
+                answer: "Approximate solutions to equations",
+                explanation: "Newton's Method uses tangent lines to approximate roots."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-unit-3-test": {
+        title: "Unit 3 Test",
+        subtitle: "Test your understanding of applications of derivatives.",
+
+        body: `
+
+<h2>Unit 3 Test</h2>
+
+<p>This assessment covers every topic from Unit 3.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+
+<li>Tangent Lines</li>
+
+<li>Normal Lines</li>
+
+<li>Increasing and Decreasing Functions</li>
+
+<li>Local Maximums and Minimums</li>
+
+<li>Concavity and the Second Derivative</li>
+
+<li>Points of Inflection</li>
+
+<li>Second Derivative Test</li>
+
+<li>Curve Sketching</li>
+
+<li>Optimization</li>
+
+<li>Related Rates</li>
+
+<li>Linear Approximation (Differentials)</li>
+
+<li>Newton's Method</li>
+
+</ul>
+
+<hr>
+
+<h2>Instructions</h2>
+
+<p>Complete this assessment without using notes. A strong score means you are ready to continue studying integral calculus.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "The derivative represents the slope of the?",
+                options: [
+                    "Tangent line",
+                    "Normal line",
+                    "Secant line"
+                ],
+                answer: "Tangent line",
+                explanation: "The derivative gives the slope of the tangent line."
+            },
+
+            {
+                q: "The normal line is always?",
+                options: [
+                    "Perpendicular to the tangent line",
+                    "Parallel to the tangent line",
+                    "Horizontal"
+                ],
+                answer: "Perpendicular to the tangent line",
+                explanation: "Normal lines are perpendicular to tangent lines."
+            },
+
+            {
+                q: "If f'(x)>0, the function is?",
+                options: [
+                    "Increasing",
+                    "Decreasing",
+                    "Concave up"
+                ],
+                answer: "Increasing",
+                explanation: "A positive first derivative means the function is increasing."
+            },
+
+            {
+                q: "If f'(x)<0, the function is?",
+                options: [
+                    "Decreasing",
+                    "Increasing",
+                    "Concave down"
+                ],
+                answer: "Decreasing",
+                explanation: "A negative first derivative means the function is decreasing."
+            },
+
+            {
+                q: "A critical point occurs where?",
+                options: [
+                    "f'(x)=0 or does not exist",
+                    "f''(x)=0 only",
+                    "f(x)=0"
+                ],
+                answer: "f'(x)=0 or does not exist",
+                explanation: "Critical points occur where the first derivative is zero or undefined."
+            },
+
+            {
+                q: "If f''(x)>0 at a critical point, the point is a?",
+                options: [
+                    "Local minimum",
+                    "Local maximum",
+                    "Point of inflection"
+                ],
+                answer: "Local minimum",
+                explanation: "A positive second derivative indicates the graph is concave up."
+            },
+
+            {
+                q: "If f''(x)<0 at a critical point, the point is a?",
+                options: [
+                    "Local maximum",
+                    "Local minimum",
+                    "Absolute minimum"
+                ],
+                answer: "Local maximum",
+                explanation: "A negative second derivative indicates the graph is concave down."
+            },
+
+            {
+                q: "A point of inflection occurs when?",
+                options: [
+                    "The graph changes concavity",
+                    "The derivative equals zero",
+                    "The graph crosses the x-axis"
+                ],
+                answer: "The graph changes concavity",
+                explanation: "Inflection points occur when concavity changes."
+            },
+
+            {
+                q: "Optimization problems are used to find?",
+                options: [
+                    "Maximums and minimums",
+                    "Only derivatives",
+                    "Only limits"
+                ],
+                answer: "Maximums and minimums",
+                explanation: "Optimization finds the largest or smallest possible value."
+            },
+
+            {
+                q: "Related rates problems involve variables changing with respect to?",
+                options: [
+                    "Time",
+                    "x",
+                    "Distance"
+                ],
+                answer: "Time",
+                explanation: "Related rates measure how variables change over time."
+            },
+
+            {
+                q: "In related rates, values should usually be substituted?",
+                options: [
+                    "After differentiating",
+                    "Before differentiating",
+                    "Before writing the equation"
+                ],
+                answer: "After differentiating",
+                explanation: "Differentiate first, then substitute known values."
+            },
+
+            {
+                q: "Linear approximation uses the?",
+                options: [
+                    "Tangent line",
+                    "Normal line",
+                    "Secant line"
+                ],
+                answer: "Tangent line",
+                explanation: "The tangent line provides a local linear approximation."
+            },
+
+            {
+                q: "Linear approximation is most accurate when?",
+                options: [
+                    "x is close to the point of tangency",
+                    "x is very large",
+                    "x is near zero"
+                ],
+                answer: "x is close to the point of tangency",
+                explanation: "Accuracy decreases as you move farther from the tangent point."
+            },
+
+            {
+                q: "Newton's Method is used to?",
+                options: [
+                    "Approximate roots of equations",
+                    "Find exact integrals",
+                    "Compute limits"
+                ],
+                answer: "Approximate roots of equations",
+                explanation: "Newton's Method is a numerical root-finding technique."
+            },
+
+            {
+                q: "Newton's Method requires?",
+                options: [
+                    "The function and its derivative",
+                    "Only the function",
+                    "Only the derivative"
+                ],
+                answer: "The function and its derivative",
+                explanation: "The iteration formula requires both f(x) and f'(x)."
+            },
+
+            {
+                q: "The Second Derivative Test is used to classify?",
+                options: [
+                    "Critical points",
+                    "Domains",
+                    "Intercepts"
+                ],
+                answer: "Critical points",
+                explanation: "It determines whether critical points are local maximums or local minimums."
+            },
+
+            {
+                q: "Curve sketching combines information from?",
+                options: [
+                    "The function, first derivative, and second derivative",
+                    "Only the first derivative",
+                    "Only the original function"
+                ],
+                answer: "The function, first derivative, and second derivative",
+                explanation: "All three provide information needed for an accurate sketch."
+            },
+
+            {
+                q: "A common optimization mistake is?",
+                options: [
+                    "Leaving more than one variable in the objective function",
+                    "Finding the derivative",
+                    "Using the Chain Rule"
+                ],
+                answer: "Leaving more than one variable in the objective function",
+                explanation: "The objective function should be written using only one variable."
+            },
+
+            {
+                q: "A common related rates mistake is?",
+                options: [
+                    "Substituting values before differentiating",
+                    "Using the Power Rule",
+                    "Finding critical points"
+                ],
+                answer: "Substituting values before differentiating",
+                explanation: "Differentiate first, then substitute the known values."
+            },
+
+            {
+                q: "Completing Unit 3 prepares you to study?",
+                options: [
+                    "Integral Calculus",
+                    "Geometry",
+                    "Statistics"
+                ],
+                answer: "Integral Calculus",
+                explanation: "The next major unit introduces antiderivatives and definite integrals."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-introduction-to-antiderivatives": {
+        title: "Introduction to Antiderivatives",
+        subtitle: "Learn how integration reverses differentiation.",
+
+        body: `
+
+<h2>What is an Antiderivative?</h2>
+
+<p>An <strong>antiderivative</strong> is a function whose derivative is another given function.</p>
+
+<p>In other words, integration is the opposite of differentiation.</p>
+
+<hr>
+
+<h2>Differentiation vs. Integration</h2>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Differentiation</th>
+<th>Integration</th>
+</tr>
+
+<tr>
+<td>Finds the slope</td>
+<td>Finds the original function</td>
+</tr>
+
+<tr>
+<td>Derivative</td>
+<td>Antiderivative</td>
+</tr>
+
+<tr>
+<td>Rate of change</td>
+<td>Accumulation</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Examples</h2>
+
+<p>If:</p>
+
+<p><strong>f(x)=x²</strong></p>
+
+<p>then:</p>
+
+<p><strong>f'(x)=2x</strong></p>
+
+<p>Working backwards:</p>
+
+<p>The antiderivative of <strong>2x</strong> is:</p>
+
+<p><strong>x²</strong></p>
+
+<hr>
+
+<h2>Another Example</h2>
+
+<p>The derivative of:</p>
+
+<p><strong>x³</strong></p>
+
+<p>is:</p>
+
+<p><strong>3x²</strong></p>
+
+<p>Therefore, an antiderivative of:</p>
+
+<p><strong>3x²</strong></p>
+
+<p>is:</p>
+
+<p><strong>x³</strong></p>
+
+<hr>
+
+<h2>Why There Are Many Answers</h2>
+
+<p>The derivative of every constant is zero.</p>
+
+<p>That means:</p>
+
+<ul>
+
+<li>x²</li>
+
+<li>x²+5</li>
+
+<li>x²−8</li>
+
+<li>x²+100</li>
+
+</ul>
+
+<p>all have the same derivative.</p>
+
+<hr>
+
+<h2>The Constant of Integration</h2>
+
+<p>To account for every possible constant, we write:</p>
+
+<p><strong>+ C</strong></p>
+
+<p>This is called the <strong>constant of integration</strong>.</p>
+
+<p>Every indefinite integral must include +C.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Recovering position from velocity</li>
+
+<li>Recovering velocity from acceleration</li>
+
+<li>Finding original functions</li>
+
+<li>Modeling accumulated change</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Forgetting +C.</li>
+
+<li>Thinking there is only one antiderivative.</li>
+
+<li>Confusing differentiation with integration.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Integration reverses differentiation.</li>
+
+<li>An antiderivative is an original function.</li>
+
+<li>Always include the constant of integration (+C).</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "Integration is the ________ of differentiation.",
+                options: [
+                    "Inverse",
+                    "Square",
+                    "Derivative"
+                ],
+                answer: "Inverse",
+                explanation: "Integration reverses differentiation."
+            },
+
+            {
+                q: "An antiderivative of 2x is?",
+                options: [
+                    "x²",
+                    "2x²",
+                    "x"
+                ],
+                answer: "x²",
+                explanation: "The derivative of x² is 2x."
+            },
+
+            {
+                q: "Why do indefinite integrals include +C?",
+                options: [
+                    "Because constants disappear during differentiation",
+                    "Because every answer must be positive",
+                    "Because derivatives increase by one"
+                ],
+                answer: "Because constants disappear during differentiation",
+                explanation: "Any constant has a derivative of zero."
+            },
+
+            {
+                q: "The derivative of x³ is?",
+                options: [
+                    "3x²",
+                    "x²",
+                    "3x³"
+                ],
+                answer: "3x²",
+                explanation: "Apply the Power Rule."
+            },
+
+            {
+                q: "Which of the following has the derivative 2x?",
+                options: [
+                    "x²+7",
+                    "x³",
+                    "2x²"
+                ],
+                answer: "x²+7",
+                explanation: "The derivative of x²+7 is 2x."
+            },
+
+            {
+                q: "A common mistake in integration is?",
+                options: [
+                    "Forgetting +C",
+                    "Using the Power Rule",
+                    "Finding the derivative"
+                ],
+                answer: "Forgetting +C",
+                explanation: "Every indefinite integral should include the constant of integration."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-indefinite-integrals": {
+        title: "Indefinite Integrals",
+        subtitle: "Learn the notation and meaning of indefinite integrals.",
+
+        body: `
+
+<h2>What is an Indefinite Integral?</h2>
+
+<p>An <strong>indefinite integral</strong> represents the family of all antiderivatives of a function.</p>
+
+<p>Instead of finding a slope, integration finds the original function.</p>
+
+<hr>
+
+<h2>The Integral Symbol</h2>
+
+<p>The symbol for an indefinite integral is:</p>
+
+<p><strong>∫</strong></p>
+
+<p>It is read as:</p>
+
+<p><strong>"The integral of..."</strong></p>
+
+<p>For example:</p>
+
+<p><strong>∫f(x) dx</strong></p>
+
+<p>is read as:</p>
+
+<p><strong>"The integral of f(x) with respect to x."</strong></p>
+
+<hr>
+
+<h2>What Does dx Mean?</h2>
+
+<p>The <strong>dx</strong> tells us that we are integrating with respect to the variable x.</p>
+
+<p>Later in calculus, you may also see:</p>
+
+<ul>
+
+<li>dy</li>
+
+<li>dt</li>
+
+<li>du</li>
+
+</ul>
+
+<p>depending on the variable being used.</p>
+
+<hr>
+
+<h2>Examples</h2>
+
+<p><strong>∫2x dx = x² + C</strong></p>
+
+<p><strong>∫3x² dx = x³ + C</strong></p>
+
+<p><strong>∫5 dx = 5x + C</strong></p>
+
+<hr>
+
+<h2>Checking Your Answer</h2>
+
+<p>You can always verify an indefinite integral by differentiating your answer.</p>
+
+<p>Example:</p>
+
+<p><strong>∫4x³ dx = x⁴ + C</strong></p>
+
+<p>Differentiate:</p>
+
+<p><strong>d/dx(x⁴+C)=4x³</strong></p>
+
+<p>The original function is recovered.</p>
+
+<hr>
+
+<h2>Important Vocabulary</h2>
+
+<ul>
+
+<li>Integrand → the function being integrated.</li>
+
+<li>Integral → the entire expression.</li>
+
+<li>Antiderivative → the result.</li>
+
+<li>Constant of Integration → +C.</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Forgetting the constant of integration.</li>
+
+<li>Leaving off dx.</li>
+
+<li>Thinking the integral always has one unique answer.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>An indefinite integral represents all antiderivatives.</li>
+
+<li>The symbol ∫ means "integral."</li>
+
+<li>dx indicates the variable of integration.</li>
+
+<li>Always include +C.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "The symbol ∫ represents?",
+                options: [
+                    "An integral",
+                    "A derivative",
+                    "A limit"
+                ],
+                answer: "An integral",
+                explanation: "The symbol ∫ denotes integration."
+            },
+
+            {
+                q: "The dx in ∫f(x) dx tells us?",
+                options: [
+                    "The variable of integration",
+                    "The derivative",
+                    "The domain"
+                ],
+                answer: "The variable of integration",
+                explanation: "dx indicates we are integrating with respect to x."
+            },
+
+            {
+                q: "An indefinite integral represents?",
+                options: [
+                    "All antiderivatives",
+                    "Only one function",
+                    "The derivative"
+                ],
+                answer: "All antiderivatives",
+                explanation: "There are infinitely many antiderivatives because of the constant of integration."
+            },
+
+            {
+                q: "∫2x dx equals?",
+                options: [
+                    "x² + C",
+                    "2x² + C",
+                    "x + C"
+                ],
+                answer: "x² + C",
+                explanation: "Differentiate x²+C to verify the result."
+            },
+
+            {
+                q: "The function being integrated is called the?",
+                options: [
+                    "Integrand",
+                    "Derivative",
+                    "Domain"
+                ],
+                answer: "Integrand",
+                explanation: "The integrand is the function inside the integral."
+            },
+
+            {
+                q: "A correct indefinite integral should always include?",
+                options: [
+                    "+C",
+                    "An endpoint",
+                    "A denominator"
+                ],
+                answer: "+C",
+                explanation: "The constant of integration accounts for all possible antiderivatives."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-basic-integration-rules": {
+        title: "Basic Integration Rules",
+        subtitle: "Learn the fundamental rules used to evaluate indefinite integrals.",
+
+        body: `
+
+<h2>Why Do We Need Integration Rules?</h2>
+
+<p>Just as differentiation has rules, integration also follows a set of standard rules.</p>
+
+<p>Most integrals can be solved by applying these basic rules.</p>
+
+<hr>
+
+<h2>The Reverse Power Rule</h2>
+
+<p>The most important integration rule is the <strong>Reverse Power Rule</strong>.</p>
+
+<p>If <strong>n ≠ -1</strong>, then:</p>
+
+<p><strong>∫xⁿ dx = xⁿ⁺¹/(n+1) + C</strong></p>
+
+<p>Notice that this is the opposite of the Power Rule for derivatives.</p>
+
+<hr>
+
+<h2>Examples</h2>
+
+<p><strong>∫x² dx = x³/3 + C</strong></p>
+
+<p><strong>∫x⁵ dx = x⁶/6 + C</strong></p>
+
+<p><strong>∫√x dx = ∫x^(1/2) dx = (2/3)x^(3/2)+C</strong></p>
+
+<hr>
+
+<h2>Constant Rule</h2>
+
+<p>The integral of a constant is:</p>
+
+<p><strong>∫a dx = ax + C</strong></p>
+
+<p>Example:</p>
+
+<p><strong>∫8 dx = 8x + C</strong></p>
+
+<hr>
+
+<h2>Constant Multiple Rule</h2>
+
+<p>Constants can be factored outside the integral.</p>
+
+<p><strong>∫cf(x) dx = c∫f(x) dx</strong></p>
+
+<p>Example:</p>
+
+<p><strong>∫5x³ dx = 5∫x³ dx = (5/4)x⁴ + C</strong></p>
+
+<hr>
+
+<h2>Sum and Difference Rules</h2>
+
+<p>You may integrate each term separately.</p>
+
+<p><strong>∫[f(x)+g(x)]dx = ∫f(x)dx + ∫g(x)dx</strong></p>
+
+<p>Example:</p>
+
+<p><strong>∫(x²+4x−7)dx</strong></p>
+
+<p>equals</p>
+
+<p><strong>x³/3 + 2x² − 7x + C</strong></p>
+
+<hr>
+
+<h2>Important Exception</h2>
+
+<p>The Reverse Power Rule does <strong>not</strong> work when:</p>
+
+<p><strong>n = -1</strong></p>
+
+<p>That special case becomes:</p>
+
+<p><strong>∫1/x dx = ln|x| + C</strong></p>
+
+<p>This will be studied later.</p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Forgetting to divide by the new exponent.</li>
+
+<li>Forgetting +C.</li>
+
+<li>Applying the Reverse Power Rule when n=-1.</li>
+
+<li>Forgetting to increase the exponent first.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Add one to the exponent.</li>
+
+<li>Divide by the new exponent.</li>
+
+<li>Always include +C.</li>
+
+<li>Remember that x⁻¹ is a special case.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "The Reverse Power Rule says to first?",
+                options: [
+                    "Add one to the exponent",
+                    "Subtract one from the exponent",
+                    "Multiply by the exponent"
+                ],
+                answer: "Add one to the exponent",
+                explanation: "The exponent increases by one before dividing."
+            },
+
+            {
+                q: "After increasing the exponent, you should?",
+                options: [
+                    "Divide by the new exponent",
+                    "Multiply by the old exponent",
+                    "Subtract the exponent"
+                ],
+                answer: "Divide by the new exponent",
+                explanation: "This completes the Reverse Power Rule."
+            },
+
+            {
+                q: "∫x⁴ dx equals?",
+                options: [
+                    "x⁵/5 + C",
+                    "5x⁴ + C",
+                    "x⁴/5 + C"
+                ],
+                answer: "x⁵/5 + C",
+                explanation: "Increase the exponent to 5 and divide by 5."
+            },
+
+            {
+                q: "∫7 dx equals?",
+                options: [
+                    "7x + C",
+                    "7 + C",
+                    "x⁷ + C"
+                ],
+                answer: "7x + C",
+                explanation: "The integral of a constant is the constant multiplied by x."
+            },
+
+            {
+                q: "Which exponent is the exception to the Reverse Power Rule?",
+                options: [
+                    "-1",
+                    "0",
+                    "1"
+                ],
+                answer: "-1",
+                explanation: "When n = -1, the integral is ln|x| + C."
+            },
+
+            {
+                q: "A common mistake when evaluating indefinite integrals is?",
+                options: [
+                    "Forgetting +C",
+                    "Finding the derivative",
+                    "Using the Chain Rule"
+                ],
+                answer: "Forgetting +C",
+                explanation: "Every indefinite integral should include the constant of integration."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-u-substitution": {
+        title: "u-Substitution",
+        subtitle: "Learn how to reverse the Chain Rule when evaluating integrals.",
+
+        body: `
+
+<h2>What is u-Substitution?</h2>
+
+<p><strong>u-Substitution</strong> is an integration technique used when an integral contains a composite function.</p>
+
+<p>It is essentially the <strong>reverse of the Chain Rule</strong> from differentiation.</p>
+
+<hr>
+
+<h2>When Should You Use It?</h2>
+
+<p>Use u-substitution when:</p>
+
+<ul>
+
+<li>You see one function inside another.</li>
+
+<li>The derivative of the inside function also appears in the integral.</li>
+
+</ul>
+
+<hr>
+
+<h2>The General Process</h2>
+
+<ol>
+
+<li>Choose the inside function and let it equal <strong>u</strong>.</li>
+
+<li>Differentiate to find <strong>du</strong>.</li>
+
+<li>Rewrite the entire integral using u.</li>
+
+<li>Integrate with respect to u.</li>
+
+<li>Substitute the original expression back.</li>
+
+</ol>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Evaluate:</p>
+
+<p><strong>∫2x(x²+3)⁵ dx</strong></p>
+
+<p>Choose:</p>
+
+<p><strong>u=x²+3</strong></p>
+
+<p>Then:</p>
+
+<p><strong>du=2x dx</strong></p>
+
+<p>The integral becomes:</p>
+
+<p><strong>∫u⁵ du</strong></p>
+
+<p>Integrate:</p>
+
+<p><strong>u⁶/6 + C</strong></p>
+
+<p>Replace u:</p>
+
+<p><strong>(x²+3)⁶/6 + C</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Evaluate:</p>
+
+<p><strong>∫3(3x+1)² dx</strong></p>
+
+<p>Choose:</p>
+
+<p><strong>u=3x+1</strong></p>
+
+<p>Then:</p>
+
+<p><strong>du=3 dx</strong></p>
+
+<p>The integral becomes:</p>
+
+<p><strong>∫u² du</strong></p>
+
+<p>Answer:</p>
+
+<p><strong>u³/3 + C</strong></p>
+
+<p>Substitute back:</p>
+
+<p><strong>(3x+1)³/3 + C</strong></p>
+
+<hr>
+
+<h2>Why It Works</h2>
+
+<p>The substitution simplifies a complicated integral into one that uses the basic integration rules.</p>
+
+<p>After solving the simpler integral, replace u with the original expression.</p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Choosing the wrong expression for u.</li>
+
+<li>Forgetting to replace u at the end.</li>
+
+<li>Not converting the entire integral into u.</li>
+
+<li>Forgetting the constant of integration.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>u-Substitution reverses the Chain Rule.</li>
+
+<li>Choose the inside function for u.</li>
+
+<li>Rewrite the integral completely in terms of u.</li>
+
+<li>Integrate.</li>
+
+<li>Substitute the original expression back.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "u-Substitution reverses which differentiation rule?",
+                options: [
+                    "Chain Rule",
+                    "Product Rule",
+                    "Quotient Rule"
+                ],
+                answer: "Chain Rule",
+                explanation: "u-Substitution is the reverse process of the Chain Rule."
+            },
+
+            {
+                q: "When choosing u, you should usually select?",
+                options: [
+                    "The inside function",
+                    "The outside function",
+                    "The constant"
+                ],
+                answer: "The inside function",
+                explanation: "The inside function is typically the best choice."
+            },
+
+            {
+                q: "After integrating with respect to u, what must you do?",
+                options: [
+                    "Substitute the original expression back",
+                    "Differentiate the answer",
+                    "Multiply by u"
+                ],
+                answer: "Substitute the original expression back",
+                explanation: "The final answer should be written using the original variable."
+            },
+
+            {
+                q: "In ∫2x(x²+3)⁵ dx, the best choice for u is?",
+                options: [
+                    "x²+3",
+                    "2x",
+                    "(x²+3)⁵"
+                ],
+                answer: "x²+3",
+                explanation: "Its derivative, 2x, also appears in the integral."
+            },
+
+            {
+                q: "A common mistake in u-substitution is?",
+                options: [
+                    "Forgetting to substitute back",
+                    "Using the Power Rule",
+                    "Finding the derivative"
+                ],
+                answer: "Forgetting to substitute back",
+                explanation: "The final answer should be expressed in terms of the original variable."
+            },
+
+            {
+                q: "Which statement about u-substitution is true?",
+                options: [
+                    "It simplifies complicated integrals into easier ones",
+                    "It only works for logarithms",
+                    "It replaces differentiation"
+                ],
+                answer: "It simplifies complicated integrals into easier ones",
+                explanation: "Substitution transforms the integral into a simpler form."
+
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-area-under-a-curve": {
+        title: "Area Under a Curve",
+        subtitle: "Learn how integration measures accumulated area beneath a graph.",
+
+        body: `
+
+<h2>What Does an Integral Represent?</h2>
+
+<p>One of the most important interpretations of an integral is that it measures the <strong>area under a curve</strong>.</p>
+
+<p>If a function stays above the x-axis, the definite integral gives the exact area between the curve and the x-axis.</p>
+
+<hr>
+
+<h2>Positive Area</h2>
+
+<p>If the graph remains above the x-axis, every piece of area is positive.</p>
+
+<p>The total area equals the value of the definite integral.</p>
+
+<hr>
+
+<h2>Negative Area</h2>
+
+<p>If part of the graph lies below the x-axis, that portion contributes negative area.</p>
+
+<p>The definite integral measures <strong>signed area</strong>, not always geometric area.</p>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Suppose a function forms a region above the x-axis between x = 1 and x = 4.</p>
+
+<p>The definite integral measures the total area enclosed by:</p>
+
+<ul>
+
+<li>The curve</li>
+
+<li>The x-axis</li>
+
+<li>The vertical lines x = 1 and x = 4</li>
+
+</ul>
+
+<hr>
+
+<h2>Area vs Signed Area</h2>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Situation</th>
+<th>Integral Result</th>
+</tr>
+
+<tr>
+<td>Above x-axis</td>
+<td>Positive</td>
+</tr>
+
+<tr>
+<td>Below x-axis</td>
+<td>Negative</td>
+</tr>
+
+<tr>
+<td>Crosses x-axis</td>
+<td>Positive and negative areas combine</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Real-World Meaning</h2>
+
+<p>Area under a curve represents accumulated change.</p>
+
+<p>Examples include:</p>
+
+<ul>
+
+<li>Total distance from velocity</li>
+
+<li>Total water collected over time</li>
+
+<li>Total profit over a period</li>
+
+<li>Total electrical charge</li>
+
+</ul>
+
+<hr>
+
+<h2>Visualization</h2>
+
+<p>Imagine slicing the region beneath the curve into many thin rectangles.</p>
+
+<p>As the rectangles become thinner and thinner, their total area approaches the exact area under the curve.</p>
+
+<p>This idea leads directly to <strong>Riemann Sums</strong>, the next topic.</p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Thinking an integral always represents positive area.</li>
+
+<li>Confusing geometric area with signed area.</li>
+
+<li>Ignoring portions of the graph below the x-axis.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Definite integrals measure accumulated area.</li>
+
+<li>Area above the x-axis is positive.</li>
+
+<li>Area below the x-axis is negative.</li>
+
+<li>Riemann sums approximate this area using rectangles.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "A definite integral can represent?",
+                options: [
+                    "Area under a curve",
+                    "The slope of a tangent line",
+                    "A derivative"
+                ],
+                answer: "Area under a curve",
+                explanation: "One of the primary interpretations of a definite integral is accumulated area."
+            },
+
+            {
+                q: "If a graph is entirely above the x-axis, the definite integral is?",
+                options: [
+                    "Positive",
+                    "Negative",
+                    "Zero"
+                ],
+                answer: "Positive",
+                explanation: "Area above the x-axis contributes positively."
+            },
+
+            {
+                q: "If part of the graph lies below the x-axis, the integral measures?",
+                options: [
+                    "Signed area",
+                    "Only positive area",
+                    "Only geometric area"
+                ],
+                answer: "Signed area",
+                explanation: "Regions below the x-axis contribute negative values."
+            },
+
+            {
+                q: "Area under a velocity curve represents?",
+                options: [
+                    "Distance or displacement",
+                    "Slope",
+                    "Acceleration only"
+                ],
+                answer: "Distance or displacement",
+                explanation: "Integrating velocity accumulates motion over time."
+            },
+
+            {
+                q: "The idea of approximating area with rectangles leads to?",
+                options: [
+                    "Riemann Sums",
+                    "Chain Rule",
+                    "Newton's Method"
+                ],
+                answer: "Riemann Sums",
+                explanation: "Riemann sums approximate the area beneath a curve using rectangles."
+            },
+
+            {
+                q: "A common mistake is?",
+                options: [
+                    "Assuming all area is positive",
+                    "Forgetting the Power Rule",
+                    "Using the Product Rule"
+                ],
+                answer: "Assuming all area is positive",
+                explanation: "Definite integrals measure signed area, so regions below the x-axis contribute negatively."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-riemann-sums": {
+        title: "Riemann Sums",
+        subtitle: "Learn how rectangles approximate the area under a curve.",
+
+        body: `
+
+<h2>What are Riemann Sums?</h2>
+
+<p>A <strong>Riemann Sum</strong> approximates the area under a curve by dividing the interval into many small rectangles.</p>
+
+<p>The total area is estimated by adding the area of every rectangle.</p>
+
+<hr>
+
+<h2>The Basic Idea</h2>
+
+<p>Suppose a function is defined on an interval.</p>
+
+<p>Instead of finding the exact area immediately, we divide the interval into many equal pieces.</p>
+
+<p>Each piece forms a rectangle.</p>
+
+<p>The sum of the rectangle areas approximates the total area.</p>
+
+<hr>
+
+<h2>The Width of Each Rectangle</h2>
+
+<p>The width of every rectangle is written as:</p>
+
+<p><strong>Δx = (b − a)/n</strong></p>
+
+<ul>
+
+<li>a = left endpoint</li>
+
+<li>b = right endpoint</li>
+
+<li>n = number of rectangles</li>
+
+</ul>
+
+<p>As n increases, Δx becomes smaller.</p>
+
+<hr>
+
+<h2>Choosing the Height</h2>
+
+<p>The rectangle's height can be chosen using:</p>
+
+<ul>
+
+<li>Left endpoints</li>
+
+<li>Right endpoints</li>
+
+<li>Midpoints</li>
+
+</ul>
+
+<p>Each method produces a slightly different approximation.</p>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Approximate the area under a curve on the interval [0,4] using four rectangles.</p>
+
+<p>The interval length is:</p>
+
+<p><strong>4−0 = 4</strong></p>
+
+<p>The rectangle width is:</p>
+
+<p><strong>Δx = 4/4 = 1</strong></p>
+
+<p>Each rectangle has width 1.</p>
+
+<p>The heights are determined from the function values.</p>
+
+<p>Add the areas of all four rectangles to obtain the approximation.</p>
+
+<hr>
+
+<h2>More Rectangles = Better Approximation</h2>
+
+<p>As the number of rectangles increases:</p>
+
+<ul>
+
+<li>The rectangles become thinner.</li>
+
+<li>The approximation becomes more accurate.</li>
+
+<li>The error becomes smaller.</li>
+
+</ul>
+
+<p>In the limit, the Riemann Sum becomes the definite integral.</p>
+
+<hr>
+
+<h2>Left vs Right vs Midpoint</h2>
+
+<table border="1" cellpadding="6">
+
+<tr>
+<th>Method</th>
+<th>Rectangle Height</th>
+</tr>
+
+<tr>
+<td>Left Sum</td>
+<td>Left endpoint</td>
+</tr>
+
+<tr>
+<td>Right Sum</td>
+<td>Right endpoint</td>
+</tr>
+
+<tr>
+<td>Midpoint Sum</td>
+<td>Midpoint</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Using the wrong rectangle width.</li>
+
+<li>Choosing incorrect evaluation points.</li>
+
+<li>Forgetting to multiply height by width.</li>
+
+<li>Assuming every approximation is exact.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Riemann Sums approximate area.</li>
+
+<li>Rectangles become thinner as n increases.</li>
+
+<li>More rectangles produce better approximations.</li>
+
+<li>The definite integral is the limit of a Riemann Sum.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "A Riemann Sum approximates?",
+                options: [
+                    "The area under a curve",
+                    "The derivative",
+                    "The slope of a tangent line"
+                ],
+                answer: "The area under a curve",
+                explanation: "Riemann Sums estimate the area beneath a graph."
+            },
+
+            {
+                q: "The width of each rectangle is represented by?",
+                options: [
+                    "Δx",
+                    "dy",
+                    "f(x)"
+                ],
+                answer: "Δx",
+                explanation: "Δx represents the width of each subinterval."
+            },
+
+            {
+                q: "As the number of rectangles increases, the approximation becomes?",
+                options: [
+                    "More accurate",
+                    "Less accurate",
+                    "Unchanged"
+                ],
+                answer: "More accurate",
+                explanation: "Smaller rectangles provide a better approximation."
+            },
+
+            {
+                q: "Which is NOT a common Riemann Sum method?",
+                options: [
+                    "Average Endpoint Rule",
+                    "Left Endpoint Rule",
+                    "Right Endpoint Rule"
+                ],
+                answer: "Average Endpoint Rule",
+                explanation: "The standard methods are Left, Right, and Midpoint."
+            },
+
+            {
+                q: "A midpoint Riemann Sum uses?",
+                options: [
+                    "The midpoint of each interval",
+                    "The left endpoint",
+                    "The right endpoint"
+                ],
+                answer: "The midpoint of each interval",
+                explanation: "Each rectangle's height is determined from the midpoint."
+            },
+
+            {
+                q: "The definite integral is best described as?",
+                options: [
+                    "The limit of a Riemann Sum",
+                    "A derivative",
+                    "A tangent line"
+                ],
+                answer: "The limit of a Riemann Sum",
+                explanation: "As the number of rectangles approaches infinity, the Riemann Sum becomes the definite integral."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-definite-integrals": {
+        title: "Definite Integrals",
+        subtitle: "Learn how definite integrals measure exact accumulated change over an interval.",
+
+        body: `
+
+<h2>What is a Definite Integral?</h2>
+
+<p>A <strong>definite integral</strong> measures the accumulated value of a function over a specific interval.</p>
+
+<p>Unlike an indefinite integral, a definite integral produces a <strong>single numerical answer</strong>.</p>
+
+<hr>
+
+<h2>Notation</h2>
+
+<p>A definite integral is written as:</p>
+
+<p><strong>∫<sub>a</sub><sup>b</sup> f(x) dx</strong></p>
+
+<ul>
+
+<li><strong>a</strong> = lower limit</li>
+
+<li><strong>b</strong> = upper limit</li>
+
+<li><strong>f(x)</strong> = integrand</li>
+
+<li><strong>dx</strong> = variable of integration</li>
+
+</ul>
+
+<hr>
+
+<h2>Geometric Meaning</h2>
+
+<p>If the graph stays above the x-axis, the definite integral equals the exact area under the curve between x=a and x=b.</p>
+
+<p>If portions of the graph lie below the x-axis, the integral represents <strong>signed area</strong>.</p>
+
+<hr>
+
+<h2>Evaluating a Definite Integral</h2>
+
+<p>The Fundamental Theorem of Calculus tells us to:</p>
+
+<ol>
+
+<li>Find an antiderivative F(x).</li>
+
+<li>Evaluate F(b).</li>
+
+<li>Evaluate F(a).</li>
+
+<li>Compute:</li>
+
+</ol>
+
+<p><strong>F(b) − F(a)</strong></p>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Evaluate:</p>
+
+<p><strong>∫<sub>0</sub><sup>2</sup> 2x dx</strong></p>
+
+<p>An antiderivative is:</p>
+
+<p><strong>x²</strong></p>
+
+<p>Evaluate:</p>
+
+<p><strong>F(2)=4</strong></p>
+
+<p><strong>F(0)=0</strong></p>
+
+<p>Therefore:</p>
+
+<p><strong>4−0=4</strong></p>
+
+<hr>
+
+<h2>Units</h2>
+
+<p>If x has units of seconds and f(x) has units of meters per second, then the definite integral has units of meters.</p>
+
+<p>Definite integrals often represent accumulated quantities.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Total distance traveled</li>
+
+<li>Total revenue</li>
+
+<li>Total accumulated rainfall</li>
+
+<li>Total electrical charge</li>
+
+<li>Area under curves</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Reversing the order of subtraction.</li>
+
+<li>Adding +C to a definite integral.</li>
+
+<li>Forgetting to evaluate both limits.</li>
+
+<li>Ignoring negative area.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Definite integrals evaluate accumulated change.</li>
+
+<li>They produce one numerical value.</li>
+
+<li>Evaluate the antiderivative at both limits.</li>
+
+<li>Subtract lower from upper.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "A definite integral produces?",
+                options: [
+                    "A single numerical value",
+                    "A family of functions",
+                    "A derivative"
+                ],
+                answer: "A single numerical value",
+                explanation: "Unlike an indefinite integral, a definite integral evaluates to one number."
+            },
+
+            {
+                q: "The lower limit of integration is?",
+                options: [
+                    "a",
+                    "b",
+                    "dx"
+                ],
+                answer: "a",
+                explanation: "The lower limit is represented by a."
+            },
+
+            {
+                q: "To evaluate a definite integral, compute?",
+                options: [
+                    "F(b)-F(a)",
+                    "F(a)-F(b)",
+                    "F(a)+F(b)"
+                ],
+                answer: "F(b)-F(a)",
+                explanation: "Evaluate the antiderivative at the upper limit and subtract its value at the lower limit."
+            },
+
+            {
+                q: "Should a definite integral include +C?",
+                options: [
+                    "No",
+                    "Yes",
+                    "Only sometimes"
+                ],
+                answer: "No",
+                explanation: "The constant of integration cancels when evaluating both limits."
+            },
+
+            {
+                q: "If the graph is below the x-axis, the definite integral contributes?",
+                options: [
+                    "Negative signed area",
+                    "Positive area",
+                    "Zero"
+                ],
+                answer: "Negative signed area",
+                explanation: "Regions below the x-axis contribute negatively."
+            },
+
+            {
+                q: "A definite integral is commonly used to calculate?",
+                options: [
+                    "Accumulated quantities",
+                    "Only derivatives",
+                    "Only limits"
+                ],
+                answer: "Accumulated quantities",
+                explanation: "Definite integrals model accumulated change over an interval."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-properties-of-definite-integrals": {
+        title: "Properties of Definite Integrals",
+        subtitle: "Learn the fundamental properties that simplify definite integrals.",
+
+        body: `
+
+<h2>Why Learn the Properties?</h2>
+
+<p>Definite integrals follow several important rules that make calculations easier.</p>
+
+<p>Instead of evaluating every integral from scratch, these properties allow us to simplify many problems.</p>
+
+<hr>
+
+<h2>Property 1: Same Limits</h2>
+
+<p>If the upper and lower limits are the same, then:</p>
+
+<p><strong>∫<sub>a</sub><sup>a</sup> f(x) dx = 0</strong></p>
+
+<p>No interval means no accumulated area.</p>
+
+<hr>
+
+<h2>Property 2: Reversing the Limits</h2>
+
+<p>If the limits are reversed, the sign changes.</p>
+
+<p><strong>∫<sub>a</sub><sup>b</sup> f(x) dx = −∫<sub>b</sub><sup>a</sup> f(x) dx</strong></p>
+
+<hr>
+
+<h2>Property 3: Constant Multiple Rule</h2>
+
+<p>A constant may be factored outside the integral.</p>
+
+<p><strong>∫<sub>a</sub><sup>b</sup> cf(x) dx = c∫<sub>a</sub><sup>b</sup> f(x) dx</strong></p>
+
+<hr>
+
+<h2>Property 4: Sum Rule</h2>
+
+<p>The integral of a sum equals the sum of the integrals.</p>
+
+<p><strong>∫(f(x)+g(x))dx = ∫f(x)dx + ∫g(x)dx</strong></p>
+
+<p>The same property applies to differences.</p>
+
+<hr>
+
+<h2>Property 5: Additivity of Intervals</h2>
+
+<p>If c lies between a and b, then:</p>
+
+<p><strong>∫<sub>a</sub><sup>b</sup> f(x) dx = ∫<sub>a</sub><sup>c</sup> f(x) dx + ∫<sub>c</sub><sup>b</sup> f(x) dx</strong></p>
+
+<p>This allows large intervals to be split into smaller pieces.</p>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Suppose:</p>
+
+<p><strong>∫<sub>0</sub><sup>5</sup> f(x) dx = 12</strong></p>
+
+<p>Then:</p>
+
+<p><strong>∫<sub>5</sub><sup>0</sup> f(x) dx = -12</strong></p>
+
+<p>Simply reversing the limits changes only the sign.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Simplifying difficult integrals</li>
+
+<li>Breaking intervals into pieces</li>
+
+<li>Comparing accumulated quantities</li>
+
+<li>Preparing for the Fundamental Theorem of Calculus</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Forgetting to change the sign when reversing limits.</li>
+
+<li>Thinking equal limits produce one instead of zero.</li>
+
+<li>Not factoring constants outside the integral.</li>
+
+<li>Adding intervals incorrectly.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Equal limits produce zero.</li>
+
+<li>Reversing limits changes the sign.</li>
+
+<li>Constants factor outside the integral.</li>
+
+<li>Integrals may be split across intervals.</li>
+
+<li>These properties simplify many calculations.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "If the upper and lower limits are the same, the definite integral equals?",
+                options: [
+                    "0",
+                    "1",
+                    "The function value"
+                ],
+                answer: "0",
+                explanation: "There is no interval over which to accumulate area."
+            },
+
+            {
+                q: "Reversing the limits of integration causes the integral to?",
+                options: [
+                    "Change sign",
+                    "Double",
+                    "Become zero"
+                ],
+                answer: "Change sign",
+                explanation: "Reversing the limits multiplies the integral by -1."
+            },
+
+            {
+                q: "A constant inside a definite integral may be?",
+                options: [
+                    "Factored outside",
+                    "Removed completely",
+                    "Squared"
+                ],
+                answer: "Factored outside",
+                explanation: "The Constant Multiple Rule applies to definite integrals."
+            },
+
+            {
+                q: "The Additivity Property allows you to?",
+                options: [
+                    "Split an interval into smaller intervals",
+                    "Differentiate the integral",
+                    "Reverse the Power Rule"
+                ],
+                answer: "Split an interval into smaller intervals",
+                explanation: "The total integral equals the sum of the pieces."
+            },
+
+            {
+                q: "If ∫₀⁵ f(x)dx = 10, then ∫₅⁰ f(x)dx equals?",
+                options: [
+                    "-10",
+                    "10",
+                    "0"
+                ],
+                answer: "-10",
+                explanation: "Reversing the limits changes only the sign."
+            },
+
+            {
+                q: "These properties are most useful because they?",
+                options: [
+                    "Simplify definite integral calculations",
+                    "Replace derivatives",
+                    "Eliminate antiderivatives"
+                ],
+                answer: "Simplify definite integral calculations",
+                explanation: "They make many definite integrals easier to evaluate."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-fundamental-theorem-of-calculus-part-1": {
+        title: "Fundamental Theorem of Calculus (Part 1)",
+        subtitle: "Learn how differentiation and integration are connected.",
+
+        body: `
+
+<h2>What is the Fundamental Theorem of Calculus?</h2>
+
+<p>The <strong>Fundamental Theorem of Calculus (FTC)</strong> connects the two major ideas of calculus:</p>
+
+<ul>
+
+<li>Differentiation</li>
+
+<li>Integration</li>
+
+</ul>
+
+<p>It shows that differentiation and integration are inverse operations.</p>
+
+<hr>
+
+<h2>The Theorem</h2>
+
+<p>Suppose:</p>
+
+<p><strong>F(x)=∫<sub>a</sub><sup>x</sup> f(t) dt</strong></p>
+
+<p>where:</p>
+
+<ul>
+
+<li>f is continuous.</li>
+
+<li>a is a constant.</li>
+
+<li>x is the variable upper limit.</li>
+
+</ul>
+
+<p>Then:</p>
+
+<p><strong>F'(x)=f(x)</strong></p>
+
+<hr>
+
+<h2>What Does This Mean?</h2>
+
+<p>If you build a function by accumulating area under a curve, then differentiate that function, you recover the original function.</p>
+
+<p>In short:</p>
+
+<p><strong>Differentiation undoes integration.</strong></p>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Let:</p>
+
+<p><strong>F(x)=∫<sub>0</sub><sup>x</sup> (t²+1) dt</strong></p>
+
+<p>Without evaluating the integral:</p>
+
+<p><strong>F'(x)=x²+1</strong></p>
+
+<p>The derivative is simply the original integrand with x replacing t.</p>
+
+<hr>
+
+<h2>Why Use t Instead of x?</h2>
+
+<p>The variable inside the integral is called a <strong>dummy variable</strong>.</p>
+
+<p>It can be written as:</p>
+
+<ul>
+
+<li>t</li>
+
+<li>u</li>
+
+<li>s</li>
+
+<li>or almost any other variable.</li>
+
+</ul>
+
+<p>Only the upper limit x remains after differentiation.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Accumulated distance</li>
+
+<li>Accumulated profit</li>
+
+<li>Population growth</li>
+
+<li>Fluid flow</li>
+
+<li>Electrical charge</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Trying to evaluate the integral first.</li>
+
+<li>Differentiating the dummy variable.</li>
+
+<li>Confusing the upper limit with the dummy variable.</li>
+
+<li>Thinking FTC Part 1 evaluates definite integrals.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>FTC Part 1 connects differentiation and integration.</li>
+
+<li>The derivative of an accumulated area function is the original integrand.</li>
+
+<li>The dummy variable disappears after differentiation.</li>
+
+<li>This theorem is one of the foundations of calculus.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "The Fundamental Theorem of Calculus connects?",
+                options: [
+                    "Differentiation and integration",
+                    "Geometry and algebra",
+                    "Functions and matrices"
+                ],
+                answer: "Differentiation and integration",
+                explanation: "The theorem shows these two operations are inverses."
+            },
+
+            {
+                q: "If F(x)=∫₀ˣ f(t)dt, then F'(x) equals?",
+                options: [
+                    "f(x)",
+                    "F(x)",
+                    "t"
+                ],
+                answer: "f(x)",
+                explanation: "FTC Part 1 states that the derivative of the accumulated area function is the original integrand."
+            },
+
+            {
+                q: "The variable inside the integral (such as t) is called?",
+                options: [
+                    "A dummy variable",
+                    "A dependent variable",
+                    "A constant"
+                ],
+                answer: "A dummy variable",
+                explanation: "The integration variable is temporary and disappears after differentiation."
+            },
+
+            {
+                q: "In FTC Part 1, do you evaluate the integral first?",
+                options: [
+                    "No",
+                    "Yes",
+                    "Only sometimes"
+                ],
+                answer: "No",
+                explanation: "Differentiate the accumulated area function directly."
+            },
+
+            {
+                q: "FTC Part 1 shows that differentiation ______ integration.",
+                options: [
+                    "Undoes",
+                    "Doubles",
+                    "Approximates"
+                ],
+                answer: "Undoes",
+                explanation: "Differentiation and integration are inverse operations."
+            },
+
+            {
+                q: "A common mistake is?",
+                options: [
+                    "Trying to evaluate the integral before differentiating",
+                    "Forgetting the Chain Rule",
+                    "Using the Product Rule"
+                ],
+                answer: "Trying to evaluate the integral before differentiating",
+                explanation: "FTC Part 1 allows direct differentiation of the accumulated area function."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-fundamental-theorem-of-calculus-part-2": {
+        title: "Fundamental Theorem of Calculus (Part 2)",
+        subtitle: "Learn how to evaluate definite integrals using antiderivatives.",
+
+        body: `
+
+<h2>What is the Fundamental Theorem of Calculus (Part 2)?</h2>
+
+<p>The <strong>Fundamental Theorem of Calculus (Part 2)</strong> provides a simple method for evaluating definite integrals.</p>
+
+<p>Instead of approximating area with rectangles, we use an antiderivative.</p>
+
+<hr>
+
+<h2>The Formula</h2>
+
+<p>If <strong>F(x)</strong> is an antiderivative of <strong>f(x)</strong>, then:</p>
+
+<p><strong>∫<sub>a</sub><sup>b</sup> f(x) dx = F(b) − F(a)</strong></p>
+
+<p>This means we evaluate the antiderivative at the upper limit and subtract its value at the lower limit.</p>
+
+<hr>
+
+<h2>Step-by-Step Process</h2>
+
+<ol>
+
+<li>Find an antiderivative F(x).</li>
+
+<li>Substitute the upper limit b.</li>
+
+<li>Substitute the lower limit a.</li>
+
+<li>Compute F(b) − F(a).</li>
+
+</ol>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Evaluate:</p>
+
+<p><strong>∫<sub>1</sub><sup>3</sup> 2x dx</strong></p>
+
+<p>Antiderivative:</p>
+
+<p><strong>F(x)=x²</strong></p>
+
+<p>Evaluate:</p>
+
+<p><strong>F(3)=9</strong></p>
+
+<p><strong>F(1)=1</strong></p>
+
+<p>Answer:</p>
+
+<p><strong>9−1=8</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Evaluate:</p>
+
+<p><strong>∫<sub>0</sub><sup>2</sup> (3x²+1) dx</strong></p>
+
+<p>Antiderivative:</p>
+
+<p><strong>x³+x</strong></p>
+
+<p>Evaluate:</p>
+
+<p><strong>(8+2)−(0+0)=10</strong></p>
+
+<hr>
+
+<h2>Why Doesn't +C Appear?</h2>
+
+<p>For definite integrals, the constant of integration cancels:</p>
+
+<p><strong>(F(b)+C)−(F(a)+C)=F(b)−F(a)</strong></p>
+
+<p>Therefore, <strong>+C is never included</strong> when evaluating a definite integral.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Finding exact areas</li>
+
+<li>Total distance traveled</li>
+
+<li>Accumulated profit</li>
+
+<li>Population growth</li>
+
+<li>Fluid flow</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Reversing the subtraction order.</li>
+
+<li>Including +C.</li>
+
+<li>Evaluating the original function instead of its antiderivative.</li>
+
+<li>Making arithmetic errors when substituting the limits.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Find an antiderivative.</li>
+
+<li>Evaluate the upper limit.</li>
+
+<li>Evaluate the lower limit.</li>
+
+<li>Subtract: F(b) − F(a).</li>
+
+<li>Do not include +C.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "FTC Part 2 is used to?",
+                options: [
+                    "Evaluate definite integrals",
+                    "Find derivatives",
+                    "Approximate limits"
+                ],
+                answer: "Evaluate definite integrals",
+                explanation: "FTC Part 2 provides the standard method for evaluating definite integrals."
+            },
+
+            {
+                q: "The correct evaluation formula is?",
+                options: [
+                    "F(b)-F(a)",
+                    "F(a)-F(b)",
+                    "F(a)+F(b)"
+                ],
+                answer: "F(b)-F(a)",
+                explanation: "Evaluate the antiderivative at the upper limit, then subtract its value at the lower limit."
+            },
+
+            {
+                q: "To evaluate a definite integral, you first find?",
+                options: [
+                    "An antiderivative",
+                    "A derivative",
+                    "A tangent line"
+                ],
+                answer: "An antiderivative",
+                explanation: "FTC Part 2 requires an antiderivative of the integrand."
+            },
+
+            {
+                q: "Should +C be included in a definite integral?",
+                options: [
+                    "No",
+                    "Yes",
+                    "Only if the limits are positive"
+                ],
+                answer: "No",
+                explanation: "The constant of integration cancels when evaluating both limits."
+            },
+
+            {
+                q: "Which is a common mistake?",
+                options: [
+                    "Evaluating the original function instead of its antiderivative",
+                    "Using the Reverse Power Rule",
+                    "Finding an antiderivative"
+                ],
+                answer: "Evaluating the original function instead of its antiderivative",
+                explanation: "Always evaluate the antiderivative, not the original function."
+            },
+
+            {
+                q: "FTC Part 2 replaces which earlier approximation method?",
+                options: [
+                    "Riemann Sums",
+                    "Chain Rule",
+                    "Product Rule"
+                ],
+                answer: "Riemann Sums",
+                explanation: "Instead of approximating area with rectangles, FTC Part 2 computes the exact value using antiderivatives."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-average-value-of-a-function": {
+        title: "Average Value of a Function",
+        subtitle: "Learn how definite integrals are used to find the average value of a function.",
+
+        body: `
+
+<h2>What is the Average Value of a Function?</h2>
+
+<p>The <strong>average value of a function</strong> over an interval represents the average height of the graph between two x-values.</p>
+
+<p>Unlike averaging a list of numbers, calculus uses a definite integral to average infinitely many values.</p>
+
+<hr>
+
+<h2>The Formula</h2>
+
+<p>If a function is continuous on the interval <strong>[a,b]</strong>, then its average value is:</p>
+
+<p><strong>Average = (1 / (b − a)) ∫<sub>a</sub><sup>b</sup> f(x) dx</strong></p>
+
+<p>The definite integral finds the total accumulated value, and dividing by the interval length gives the average.</p>
+
+<hr>
+
+<h2>Step-by-Step Process</h2>
+
+<ol>
+
+<li>Evaluate the definite integral.</li>
+
+<li>Compute the interval length: <strong>b − a</strong>.</li>
+
+<li>Divide the integral by the interval length.</li>
+
+</ol>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Find the average value of:</p>
+
+<p><strong>f(x)=x²</strong></p>
+
+<p>on the interval <strong>[0,2]</strong>.</p>
+
+<p>Evaluate the integral:</p>
+
+<p><strong>∫<sub>0</sub><sup>2</sup> x² dx</strong></p>
+
+<p>Antiderivative:</p>
+
+<p><strong>x³/3</strong></p>
+
+<p>Evaluate:</p>
+
+<p><strong>(8/3)−0 = 8/3</strong></p>
+
+<p>Interval length:</p>
+
+<p><strong>2−0 = 2</strong></p>
+
+<p>Average value:</p>
+
+<p><strong>(1/2)(8/3)=4/3</strong></p>
+
+<hr>
+
+<h2>Geometric Interpretation</h2>
+
+<p>The average value represents the height of a rectangle that has:</p>
+
+<ul>
+
+<li>The same width as the interval.</li>
+
+<li>The same area as the region under the curve.</li>
+
+</ul>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Average speed</li>
+
+<li>Average temperature</li>
+
+<li>Average population</li>
+
+<li>Average revenue</li>
+
+<li>Average concentration</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Forgetting to divide by <strong>b−a</strong>.</li>
+
+<li>Using the original function instead of the definite integral.</li>
+
+<li>Adding +C to the definite integral.</li>
+
+<li>Computing the interval length incorrectly.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Find the definite integral.</li>
+
+<li>Divide by the interval length.</li>
+
+<li>The result is the average value of the function.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "The average value of a function is found using?",
+                options: [
+                    "A definite integral",
+                    "A derivative",
+                    "A limit"
+                ],
+                answer: "A definite integral",
+                explanation: "The average value formula is based on a definite integral."
+            },
+
+            {
+                q: "After evaluating the definite integral, you divide by?",
+                options: [
+                    "b−a",
+                    "a+b",
+                    "b+a²"
+                ],
+                answer: "b−a",
+                explanation: "The interval length is the denominator of the average value formula."
+            },
+
+            {
+                q: "The average value of a function represents?",
+                options: [
+                    "The average height of the graph",
+                    "The slope of the tangent line",
+                    "The maximum value"
+                ],
+                answer: "The average height of the graph",
+                explanation: "It is the average height over the interval."
+            },
+
+            {
+                q: "A common mistake when finding the average value is?",
+                options: [
+                    "Forgetting to divide by b−a",
+                    "Forgetting the Chain Rule",
+                    "Using Newton's Method"
+                ],
+                answer: "Forgetting to divide by b−a",
+                explanation: "The interval length must always be included."
+            },
+
+            {
+                q: "The average value formula requires?",
+                options: [
+                    "A continuous function on an interval",
+                    "Only a derivative",
+                    "Only a graph"
+                ],
+                answer: "A continuous function on an interval",
+                explanation: "The standard theorem assumes continuity on the interval."
+            },
+
+            {
+                q: "One application of the average value of a function is?",
+                options: [
+                    "Average speed",
+                    "Triangle congruence",
+                    "Polynomial factoring"
+                ],
+                answer: "Average speed",
+                explanation: "Average speed is a common application of the average value theorem for integrals."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-applications-of-definite-integrals": {
+        title: "Applications of Definite Integrals",
+        subtitle: "Learn how definite integrals are used to solve real-world problems involving accumulation.",
+
+        body: `
+
+<h2>Why Are Definite Integrals Useful?</h2>
+
+<p>Definite integrals measure <strong>accumulated change</strong>.</p>
+
+<p>Whenever a quantity changes continuously over an interval, a definite integral can often determine the total accumulated amount.</p>
+
+<hr>
+
+<h2>Common Applications</h2>
+
+<ul>
+
+<li>Total distance traveled</li>
+
+<li>Total displacement</li>
+
+<li>Area under a curve</li>
+
+<li>Area between two curves</li>
+
+<li>Total profit</li>
+
+<li>Total revenue</li>
+
+<li>Total population growth</li>
+
+<li>Total electrical charge</li>
+
+<li>Total fluid flow</li>
+
+</ul>
+
+<hr>
+
+<h2>Example 1: Distance</h2>
+
+<p>If:</p>
+
+<p><strong>v(t)</strong> represents velocity, then:</p>
+
+<p><strong>∫v(t)dt</strong></p>
+
+<p>represents displacement.</p>
+
+<p>If velocity remains positive throughout the interval, then the integral also represents the total distance traveled.</p>
+
+<hr>
+
+<h2>Example 2: Revenue</h2>
+
+<p>If:</p>
+
+<p><strong>R'(t)</strong></p>
+
+<p>represents the rate of revenue earned, then:</p>
+
+<p><strong>∫R'(t)dt</strong></p>
+
+<p>gives the total revenue accumulated during the interval.</p>
+
+<hr>
+
+<h2>Example 3: Population Growth</h2>
+
+<p>If:</p>
+
+<p><strong>P'(t)</strong></p>
+
+<p>represents the rate at which a population changes, then:</p>
+
+<p><strong>∫P'(t)dt</strong></p>
+
+<p>gives the total population change over time.</p>
+
+<hr>
+
+<h2>Example 4: Area Between Curves</h2>
+
+<p>If one function lies above another, then:</p>
+
+<p><strong>Area = ∫(Top Function − Bottom Function) dx</strong></p>
+
+<p>This computes the exact area enclosed between the two graphs.</p>
+
+<hr>
+
+<h2>Why Integration Works</h2>
+
+<p>Every small change contributes to the total accumulated quantity.</p>
+
+<p>The definite integral adds together infinitely many tiny contributions to produce one exact answer.</p>
+
+<hr>
+
+<h2>Real-World Uses</h2>
+
+<ul>
+
+<li>Engineering</li>
+
+<li>Economics</li>
+
+<li>Medicine</li>
+
+<li>Physics</li>
+
+<li>Computer science</li>
+
+<li>Environmental science</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Confusing displacement with total distance.</li>
+
+<li>Using the wrong interval.</li>
+
+<li>Subtracting curves in the wrong order.</li>
+
+<li>Ignoring units.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Definite integrals measure accumulated quantities.</li>
+
+<li>They solve many real-world problems.</li>
+
+<li>Area, distance, revenue, and population are common applications.</li>
+
+<li>Integration combines infinitely many small changes into one exact value.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                q: "A definite integral primarily measures?",
+                options: [
+                    "Accumulated change",
+                    "The slope of a tangent line",
+                    "A derivative"
+                ],
+                answer: "Accumulated change",
+                explanation: "Definite integrals add together small changes over an interval."
+            },
+
+            {
+                q: "If velocity is always positive, integrating velocity gives?",
+                options: [
+                    "Total distance traveled",
+                    "Acceleration",
+                    "The derivative"
+                ],
+                answer: "Total distance traveled",
+                explanation: "When velocity never becomes negative, displacement equals total distance."
+            },
+
+            {
+                q: "The area between two curves is found by integrating?",
+                options: [
+                    "Top function minus bottom function",
+                    "Bottom function minus top function",
+                    "The derivative of both functions"
+                ],
+                answer: "Top function minus bottom function",
+                explanation: "Subtract the lower function from the upper function."
+            },
+
+            {
+                q: "If R'(t) represents the rate of revenue, then integrating R'(t) gives?",
+                options: [
+                    "Total revenue",
+                    "Average revenue",
+                    "Revenue per second"
+                ],
+                answer: "Total revenue",
+                explanation: "Integration accumulates the rate into the total amount."
+            },
+
+            {
+                q: "One common application of definite integrals is?",
+                options: [
+                    "Population growth",
+                    "Triangle congruence",
+                    "Factoring quadratics"
+                ],
+                answer: "Population growth",
+                explanation: "Integrals model accumulated population change over time."
+            },
+
+            {
+                q: "A common mistake when finding the area between curves is?",
+                options: [
+                    "Subtracting the functions in the wrong order",
+                    "Forgetting the Power Rule",
+                    "Using Newton's Method"
+                ],
+                answer: "Subtracting the functions in the wrong order",
+                explanation: "Always subtract the lower function from the upper function."
+
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-unit-4-review": {
+        title: "Unit 4 Review",
+        subtitle: "Review all integration concepts from Unit 4.",
+
+        body: `
+
+<h2>Unit 4 Review</h2>
+
+<p>This review summarizes every major concept covered in Unit 4.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+
+<li>Introduction to Antiderivatives</li>
+
+<li>Indefinite Integrals</li>
+
+<li>Basic Integration Rules</li>
+
+<li>u-Substitution</li>
+
+<li>Area Under a Curve</li>
+
+<li>Riemann Sums</li>
+
+<li>Definite Integrals</li>
+
+<li>Properties of Definite Integrals</li>
+
+<li>Fundamental Theorem of Calculus (Part 1)</li>
+
+<li>Fundamental Theorem of Calculus (Part 2)</li>
+
+<li>Average Value of a Function</li>
+
+<li>Applications of Definite Integrals</li>
+
+</ul>
+
+<hr>
+
+<h2>Key Ideas</h2>
+
+<ul>
+
+<li>Integration reverses differentiation.</li>
+
+<li>An antiderivative is an original function.</li>
+
+<li>Indefinite integrals always include the constant of integration (+C).</li>
+
+<li>The Reverse Power Rule is the most common integration rule.</li>
+
+<li>u-Substitution reverses the Chain Rule.</li>
+
+<li>Definite integrals measure accumulated change.</li>
+
+<li>Riemann Sums approximate area using rectangles.</li>
+
+<li>The Fundamental Theorem of Calculus connects differentiation and integration.</li>
+
+<li>Average value uses a definite integral divided by the interval length.</li>
+
+<li>Definite integrals solve many real-world accumulation problems.</li>
+
+</ul>
+
+<hr>
+
+<h2>Important Formulas</h2>
+
+<ul>
+
+<li>∫xⁿ dx = xⁿ⁺¹/(n+1) + C &nbsp;&nbsp;(n ≠ -1)</li>
+
+<li>∫1/x dx = ln|x| + C</li>
+
+<li>∫ₐᵇ f(x)dx = F(b) − F(a)</li>
+
+<li>Average Value = (1/(b−a)) ∫ₐᵇ f(x)dx</li>
+
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Forgetting +C on indefinite integrals.</li>
+
+<li>Using the Reverse Power Rule when n = -1.</li>
+
+<li>Reversing F(b) − F(a).</li>
+
+<li>Adding +C to definite integrals.</li>
+
+<li>Forgetting to divide by b−a when finding average value.</li>
+
+<li>Choosing the wrong expression for u during substitution.</li>
+
+<li>Subtracting curves in the wrong order.</li>
+
+</ul>
+
+<hr>
+
+<h2>Ready?</h2>
+
+<p>If you understand antiderivatives, integration rules, definite integrals, the Fundamental Theorem of Calculus, average value, and applications of integration, you are ready for the Unit 4 Test.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "Integration is the inverse of?",
+                options: [
+                    "Differentiation",
+                    "Multiplication",
+                    "Factoring"
+                ],
+                answer: "Differentiation",
+                explanation: "Integration reverses differentiation."
+            },
+
+            {
+                q: "Indefinite integrals always include?",
+                options: [
+                    "+C",
+                    "The interval length",
+                    "The derivative"
+                ],
+                answer: "+C",
+                explanation: "The constant of integration accounts for all possible antiderivatives."
+            },
+
+            {
+                q: "u-Substitution reverses which rule?",
+                options: [
+                    "Chain Rule",
+                    "Product Rule",
+                    "Quotient Rule"
+                ],
+                answer: "Chain Rule",
+                explanation: "u-Substitution is the reverse of the Chain Rule."
+            },
+
+            {
+                q: "The Fundamental Theorem of Calculus Part 2 evaluates?",
+                options: [
+                    "Definite integrals",
+                    "Limits",
+                    "Derivatives"
+                ],
+                answer: "Definite integrals",
+                explanation: "FTC Part 2 evaluates definite integrals using antiderivatives."
+            },
+
+            {
+                q: "Average value is found by dividing the definite integral by?",
+                options: [
+                    "b−a",
+                    "a+b",
+                    "b"
+                ],
+                answer: "b−a",
+                explanation: "The interval length is the denominator."
+            },
+
+            {
+                q: "Riemann Sums approximate?",
+                options: [
+                    "Area under a curve",
+                    "Tangent slopes",
+                    "Limits"
+                ],
+                answer: "Area under a curve",
+                explanation: "Riemann Sums approximate the area beneath a graph."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus1-unit-4-test": {
+        title: "Unit 4 Test",
+        subtitle: "Test your understanding of integration and the Fundamental Theorem of Calculus.",
+
+        body: `
+
+<h2>Unit 4 Test</h2>
+
+<p>This assessment covers every topic from Unit 4.</p>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+
+<li>Introduction to Antiderivatives</li>
+
+<li>Indefinite Integrals</li>
+
+<li>Basic Integration Rules</li>
+
+<li>u-Substitution</li>
+
+<li>Area Under a Curve</li>
+
+<li>Riemann Sums</li>
+
+<li>Definite Integrals</li>
+
+<li>Properties of Definite Integrals</li>
+
+<li>Fundamental Theorem of Calculus (Part 1)</li>
+
+<li>Fundamental Theorem of Calculus (Part 2)</li>
+
+<li>Average Value of a Function</li>
+
+<li>Applications of Definite Integrals</li>
+
+</ul>
+
+<hr>
+
+<h2>Instructions</h2>
+
+<p>Complete this assessment without using notes. A strong score indicates you are ready for Calculus II.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "Integration is the inverse of?",
+                options: [
+                    "Differentiation",
+                    "Factoring",
+                    "Multiplication"
+                ],
+                answer: "Differentiation",
+                explanation: "Integration reverses differentiation."
+            },
+
+            {
+                q: "Every indefinite integral should include?",
+                options: [
+                    "+C",
+                    "The interval length",
+                    "The derivative"
+                ],
+                answer: "+C",
+                explanation: "The constant of integration accounts for all possible antiderivatives."
+            },
+
+            {
+                q: "Which rule is used to integrate x⁵?",
+                options: [
+                    "Reverse Power Rule",
+                    "Product Rule",
+                    "Quotient Rule"
+                ],
+                answer: "Reverse Power Rule",
+                explanation: "Increase the exponent by one and divide by the new exponent."
+            },
+
+            {
+                q: "u-Substitution reverses which differentiation rule?",
+                options: [
+                    "Chain Rule",
+                    "Power Rule",
+                    "Quotient Rule"
+                ],
+                answer: "Chain Rule",
+                explanation: "u-Substitution is the reverse of the Chain Rule."
+            },
+
+            {
+                q: "Riemann Sums approximate?",
+                options: [
+                    "Area under a curve",
+                    "Derivatives",
+                    "Tangent lines"
+                ],
+                answer: "Area under a curve",
+                explanation: "Riemann Sums approximate the area beneath a graph."
+            },
+
+            {
+                q: "A definite integral evaluates to?",
+                options: [
+                    "A single numerical value",
+                    "A family of functions",
+                    "A derivative"
+                ],
+                answer: "A single numerical value",
+                explanation: "Definite integrals produce one numerical answer."
+            },
+
+            {
+                q: "The Fundamental Theorem of Calculus Part 1 states that differentiation ______ integration.",
+                options: [
+                    "Undoes",
+                    "Doubles",
+                    "Approximates"
+                ],
+                answer: "Undoes",
+                explanation: "FTC Part 1 shows differentiation and integration are inverse operations."
+            },
+
+            {
+                q: "The Fundamental Theorem of Calculus Part 2 evaluates?",
+                options: [
+                    "Definite integrals",
+                    "Derivatives",
+                    "Limits"
+                ],
+                answer: "Definite integrals",
+                explanation: "FTC Part 2 evaluates definite integrals using antiderivatives."
+            },
+
+            {
+                q: "The correct evaluation of a definite integral is?",
+                options: [
+                    "F(b)-F(a)",
+                    "F(a)-F(b)",
+                    "F(a)+F(b)"
+                ],
+                answer: "F(b)-F(a)",
+                explanation: "Evaluate the antiderivative at the upper limit and subtract its value at the lower limit."
+            },
+
+            {
+                q: "Should +C be included when evaluating a definite integral?",
+                options: [
+                    "No",
+                    "Yes",
+                    "Only sometimes"
+                ],
+                answer: "No",
+                explanation: "The constant of integration cancels."
+            },
+
+            {
+                q: "The average value of a function is found by dividing the definite integral by?",
+                options: [
+                    "b-a",
+                    "a+b",
+                    "b"
+                ],
+                answer: "b-a",
+                explanation: "Divide by the length of the interval."
+            },
+
+            {
+                q: "Area between two curves is found using?",
+                options: [
+                    "Top function minus bottom function",
+                    "Bottom function minus top function",
+                    "The derivative"
+                ],
+                answer: "Top function minus bottom function",
+                explanation: "Subtract the lower function from the upper function."
+            },
+
+            {
+                q: "If velocity remains positive, integrating velocity gives?",
+                options: [
+                    "Total distance traveled",
+                    "Acceleration",
+                    "Speed"
+                ],
+                answer: "Total distance traveled",
+                explanation: "Positive velocity means displacement equals total distance."
+            },
+
+            {
+                q: "If the limits of integration are reversed, the integral?",
+                options: [
+                    "Changes sign",
+                    "Becomes zero",
+                    "Doubles"
+                ],
+                answer: "Changes sign",
+                explanation: "Reversing the limits multiplies the integral by -1."
+            },
+
+            {
+                q: "If the upper and lower limits are equal, the definite integral equals?",
+                options: [
+                    "0",
+                    "1",
+                    "The function value"
+                ],
+                answer: "0",
+                explanation: "There is no interval over which to accumulate area."
+            },
+
+            {
+                q: "The width of each rectangle in a Riemann Sum is represented by?",
+                options: [
+                    "Δx",
+                    "dx",
+                    "x"
+                ],
+                answer: "Δx",
+                explanation: "Δx represents the width of each subinterval."
+            },
+
+            {
+                q: "A common mistake when evaluating definite integrals is?",
+                options: [
+                    "Reversing F(b)-F(a)",
+                    "Forgetting the Chain Rule",
+                    "Using the Product Rule"
+                ],
+                answer: "Reversing F(b)-F(a)",
+                explanation: "Always evaluate the upper limit first, then subtract the lower limit."
+            },
+
+            {
+                q: "A common mistake with u-Substitution is?",
+                options: [
+                    "Forgetting to substitute back",
+                    "Using the Power Rule",
+                    "Finding the derivative"
+                ],
+                answer: "Forgetting to substitute back",
+                explanation: "The final answer should be written using the original variable."
+            },
+
+            {
+                q: "One major application of definite integrals is?",
+                options: [
+                    "Accumulated change",
+                    "Factoring polynomials",
+                    "Triangle congruence"
+                ],
+                answer: "Accumulated change",
+                explanation: "Definite integrals measure accumulated quantities such as distance, revenue, and area."
+            },
+
+            {
+                q: "Completing Unit 4 prepares you for?",
+                options: [
+                    "Calculus II",
+                    "Geometry",
+                    "Pre-Algebra"
+                ],
+                answer: "Calculus II",
+                explanation: "Calculus II expands on integration techniques, sequences and series, and differential equations."
             }
 
         ]
