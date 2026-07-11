@@ -26,7 +26,7 @@ const lessonBank = {
     geometry: geometryLessons,
     algebra2: algebra2Lessons,
     calculus1: calculus1Lessons,
-    calculus2: calculus2Lessons,
+    calculus2: calculus2Lessons
 };
 
 const topicData = {
