@@ -21947,14 +21947,10997 @@ const calculus2Lessons = {
 
         ]
 
-    },  
+    },
+    "calculus2-taylor-maclaurin-series": {
+        title: "Taylor and Maclaurin Series",
+        subtitle: "Represent functions as infinite polynomial series centered at a chosen value.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+<ul>
+<li>Explain Taylor and Maclaurin series.</li>
+<li>Construct a Taylor series from derivatives.</li>
+<li>Recognize common Maclaurin series.</li>
+<li>Create new series by substitution, differentiation, and integration.</li>
+<li>Use Taylor polynomials for approximation.</li>
+<li>Estimate error with the Lagrange remainder.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>A Taylor series represents a function as an infinite polynomial centered at <strong>x = a</strong>.</p>
+
+<p><strong>
+f(x)=f(a)+f'(a)(x-a)+[f''(a)/2!](x-a)²+[f'''(a)/3!](x-a)³+...
+</strong></p>
+
+<p>In summation notation:</p>
+
+<p><strong>
+f(x)=Σ from n=0 to ∞ of [f⁽ⁿ⁾(a)/n!](x-a)ⁿ
+</strong></p>
+
+<hr>
+
+<h2>Intuition</h2>
+
+<p>A Taylor polynomial matches a function and several of its derivatives at the center. As more terms are added, the polynomial usually becomes a better approximation near that center.</p>
+
+<hr>
+
+<h2>Taylor Polynomial</h2>
+
+<p>The degree-n Taylor polynomial centered at x=a is:</p>
+
+<p><strong>
+Pₙ(x)=Σ from k=0 to n of [f⁽ᵏ⁾(a)/k!](x-a)ᵏ
+</strong></p>
+
+<p>A Taylor polynomial has finitely many terms. A Taylor series has infinitely many terms.</p>
+
+<hr>
+
+<h2>Maclaurin Series</h2>
+
+<p>A Maclaurin series is a Taylor series centered at <strong>a=0</strong>:</p>
+
+<p><strong>
+f(x)=Σ from n=0 to ∞ of [f⁽ⁿ⁾(0)/n!]xⁿ
+</strong></p>
+
+<hr>
+
+<h2>Example 1: eˣ</h2>
+
+<p>Every derivative of eˣ is eˣ, and each derivative evaluated at zero equals 1.</p>
+
+<p><strong>
+eˣ=1+x+x²/2!+x³/3!+x⁴/4!+...
+</strong></p>
+
+<p><strong>
+eˣ=Σ from n=0 to ∞ of xⁿ/n!
+</strong></p>
+
+<p>This series converges for every real x.</p>
+
+<hr>
+
+<h2>Example 2: sin(x)</h2>
+
+<p>The derivatives cycle through sin(x), cos(x), -sin(x), and -cos(x).</p>
+
+<p><strong>
+sin(x)=x-x³/3!+x⁵/5!-x⁷/7!+...
+</strong></p>
+
+<p><strong>
+sin(x)=Σ from n=0 to ∞ of (-1)ⁿx²ⁿ⁺¹/(2n+1)!
+</strong></p>
+
+<hr>
+
+<h2>Example 3: cos(x)</h2>
+
+<p><strong>
+cos(x)=1-x²/2!+x⁴/4!-x⁶/6!+...
+</strong></p>
+
+<p><strong>
+cos(x)=Σ from n=0 to ∞ of (-1)ⁿx²ⁿ/(2n)!
+</strong></p>
+
+<hr>
+
+<h2>Example 4: Geometric-Series Foundation</h2>
+
+<p><strong>
+1/(1-r)=Σ from n=0 to ∞ of rⁿ
+</strong></p>
+
+<p>when |r|&lt;1.</p>
+
+<p>Setting r=x gives:</p>
+
+<p><strong>
+1/(1-x)=1+x+x²+x³+...
+</strong></p>
+
+<hr>
+
+<h2>Example 5: 1/(1+x)</h2>
+
+<p>Replace x with -x:</p>
+
+<p><strong>
+1/(1+x)=1-x+x²-x³+x⁴-...
+</strong></p>
+
+<p>This converges for |x|&lt;1.</p>
+
+<hr>
+
+<h2>Example 6: Nonzero Center</h2>
+
+<p>Find the Taylor series for eˣ centered at a=2.</p>
+
+<p>Since every derivative of eˣ equals eˣ:</p>
+
+<p><strong>
+f⁽ⁿ⁾(2)=e²
+</strong></p>
+
+<p>Therefore:</p>
+
+<p><strong>
+eˣ=e²+e²(x-2)+[e²/2!](x-2)²+[e²/3!](x-2)³+...
+</strong></p>
+
+<hr>
+
+<h2>Example 7: Third-Degree Taylor Polynomial</h2>
+
+<p>The third-degree Maclaurin polynomial for eˣ is:</p>
+
+<p><strong>
+P₃(x)=1+x+x²/2+x³/6
+</strong></p>
+
+<hr>
+
+<h2>Example 8: Approximation</h2>
+
+<p>Approximate e⁰·¹:</p>
+
+<p><strong>
+P₃(0.1)=1+0.1+(0.1)²/2+(0.1)³/6≈1.1051667
+</strong></p>
+
+<hr>
+
+<h2>Example 9: Substitution</h2>
+
+<p>Replace x with x² in the series for eˣ:</p>
+
+<p><strong>
+eˣ²=1+x²+x⁴/2!+x⁶/3!+...
+</strong></p>
+
+<hr>
+
+<h2>Example 10: Multiplication</h2>
+
+<p>Multiply the series for eˣ by x²:</p>
+
+<p><strong>
+x²eˣ=x²+x³+x⁴/2!+x⁵/3!+...
+</strong></p>
+
+<hr>
+
+<h2>Example 11: Differentiation</h2>
+
+<p>Start with:</p>
+
+<p><strong>
+1/(1-x)=1+x+x²+x³+...
+</strong></p>
+
+<p>Differentiate term by term:</p>
+
+<p><strong>
+1/(1-x)²=1+2x+3x²+4x³+...
+</strong></p>
+
+<hr>
+
+<h2>Example 12: Integration</h2>
+
+<p>Start with:</p>
+
+<p><strong>
+1/(1+x)=1-x+x²-x³+...
+</strong></p>
+
+<p>Integrating from 0 to x gives:</p>
+
+<p><strong>
+ln(1+x)=x-x²/2+x³/3-x⁴/4+...
+</strong></p>
+
+<p>This representation is valid for -1&lt;x≤1.</p>
+
+<hr>
+
+<h2>Important Maclaurin Series</h2>
+
+<ul>
+<li>1/(1-x)=Σxⁿ, |x|&lt;1</li>
+<li>eˣ=Σxⁿ/n!, all real x</li>
+<li>sin(x)=Σ(-1)ⁿx²ⁿ⁺¹/(2n+1)!, all real x</li>
+<li>cos(x)=Σ(-1)ⁿx²ⁿ/(2n)!, all real x</li>
+<li>ln(1+x)=Σ(-1)ⁿ⁺¹xⁿ/n, -1&lt;x≤1</li>
+<li>arctan(x)=Σ(-1)ⁿx²ⁿ⁺¹/(2n+1), -1≤x≤1</li>
+</ul>
+
+<hr>
+
+<h2>Taylor Series and the Original Function</h2>
+
+<p>The remainder is:</p>
+
+<p><strong>
+Rₙ(x)=f(x)-Pₙ(x)
+</strong></p>
+
+<p>The Taylor series represents the original function when:</p>
+
+<p><strong>
+lim as n→∞ of Rₙ(x)=0
+</strong></p>
+
+<hr>
+
+<h2>Lagrange Error Bound</h2>
+
+<p><strong>
+|Rₙ(x)|≤M|x-a|ⁿ⁺¹/(n+1)!
+</strong></p>
+
+<p>M is an upper bound for |f⁽ⁿ⁺¹⁾(z)| between a and x.</p>
+
+<hr>
+
+<h2>How to Construct a Taylor Series</h2>
+
+<ol>
+<li>Identify f(x) and the center a.</li>
+<li>Compute derivatives.</li>
+<li>Evaluate the derivatives at a.</li>
+<li>Substitute into the Taylor formula.</li>
+<li>Find a pattern.</li>
+<li>Write summation notation.</li>
+<li>Determine the interval of convergence.</li>
+</ol>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Forgetting n! in the denominator.</li>
+<li>Using xⁿ instead of (x-a)ⁿ for a nonzero center.</li>
+<li>Confusing a finite Taylor polynomial with an infinite Taylor series.</li>
+<li>Using the wrong signs or powers for sine and cosine.</li>
+<li>Ignoring the interval of convergence.</li>
+<li>Assuming every Taylor series equals its function everywhere.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Taylor series are infinite polynomial representations centered at x=a.</li>
+<li>Maclaurin series are centered at x=0.</li>
+<li>Coefficients come from derivatives evaluated at the center.</li>
+<li>Known series can be transformed by substitution, multiplication, differentiation, and integration.</li>
+<li>Taylor polynomials approximate functions.</li>
+<li>The Lagrange remainder estimates approximation error.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "What is a Maclaurin series?",
+                options: ["A Taylor series centered at x = 0", "A Taylor series centered at x = 1", "A geometric series only", "A polynomial with two terms"],
+                answer: "A Taylor series centered at x = 0",
+                explanation: "A Maclaurin series is the special case of a Taylor series with center a=0."
+            },
+            {
+                question: "Which expression is the Taylor-series formula centered at x=a?",
+                options: ["Σ [f⁽ⁿ⁾(a)/n!](x-a)ⁿ", "Σ f(a)xⁿ", "Σ (x+a)ⁿ", "Σ f⁽ⁿ⁾(x)aⁿ"],
+                answer: "Σ [f⁽ⁿ⁾(a)/n!](x-a)ⁿ",
+                explanation: "Taylor coefficients use derivatives evaluated at the center and divided by n!."
+            },
+            {
+                question: "What is the Maclaurin series for eˣ?",
+                options: ["1+x+x²/2!+x³/3!+...", "1-x+x²-x³+...", "x-x³/3!+...", "1-x²/2!+..."],
+                answer: "1+x+x²/2!+x³/3!+...",
+                explanation: "Every derivative of eˣ evaluated at zero equals 1."
+            },
+            {
+                question: "What is the Maclaurin series for sin(x)?",
+                options: ["x-x³/3!+x⁵/5!-...", "1-x²/2!+x⁴/4!-...", "1+x+x²/2!+...", "1-x+x²-x³+..."],
+                answer: "x-x³/3!+x⁵/5!-...",
+                explanation: "The sine series contains odd powers with alternating signs."
+            },
+            {
+                question: "What is the Maclaurin series for cos(x)?",
+                options: ["1-x²/2!+x⁴/4!-...", "x-x³/3!+x⁵/5!-...", "1+x+x²/2!+...", "x+x²+x³+..."],
+                answer: "1-x²/2!+x⁴/4!-...",
+                explanation: "The cosine series contains even powers with alternating signs."
+            },
+            {
+                question: "Which powers occur in the Maclaurin series for sin(x)?",
+                options: ["Only odd powers", "Only even powers", "Only negative powers", "Only fractional powers"],
+                answer: "Only odd powers",
+                explanation: "The sine series contains x, x³, x⁵, and so on."
+            },
+            {
+                question: "Which powers occur in the Maclaurin series for cos(x)?",
+                options: ["Only even powers", "Only odd powers", "Only negative powers", "Only fractional powers"],
+                answer: "Only even powers",
+                explanation: "The cosine series contains x⁰, x², x⁴, and so on."
+            },
+            {
+                question: "What is the series for 1/(1-x)?",
+                options: ["1+x+x²+x³+...", "1-x+x²-x³+...", "x+x²/2+x³/3+...", "1+x²+x⁴+..."],
+                answer: "1+x+x²+x³+...",
+                explanation: "This is the geometric series with common ratio x."
+            },
+            {
+                question: "When does 1+x+x²+x³+... converge?",
+                options: ["|x|<1", "|x|>1", "x≥1", "For all real x"],
+                answer: "|x|<1",
+                explanation: "A geometric series converges when the absolute value of its ratio is less than 1."
+            },
+            {
+                question: "What is the third-degree Maclaurin polynomial for eˣ?",
+                options: ["1+x+x²/2+x³/6", "1+x²/2+x³/3", "x-x³/6", "1-x²/2"],
+                answer: "1+x+x²/2+x³/6",
+                explanation: "Keep the eˣ series terms through degree three."
+            },
+            {
+                question: "What does a Taylor polynomial do near its center?",
+                options: ["Approximates the function", "Always equals zero", "Makes the function periodic", "Changes the domain"],
+                answer: "Approximates the function",
+                explanation: "It matches the function and several derivatives at the center."
+            },
+            {
+                question: "How does a Taylor polynomial differ from a Taylor series?",
+                options: ["The polynomial is finite; the series is infinite", "The polynomial must be centered at zero", "The series has no derivatives", "The polynomial always diverges"],
+                answer: "The polynomial is finite; the series is infinite",
+                explanation: "A Taylor polynomial stops after a finite number of terms."
+            },
+            {
+                question: "What power appears in a Taylor series centered at a?",
+                options: ["(x-a)ⁿ", "(x+a)ⁿ", "aⁿ", "x-aⁿ"],
+                answer: "(x-a)ⁿ",
+                explanation: "Taylor powers measure displacement from the center."
+            },
+            {
+                question: "For eˣ centered at a=2, what is f⁽ⁿ⁾(2)?",
+                options: ["e²", "1", "2ⁿ", "0"],
+                answer: "e²",
+                explanation: "Every derivative of eˣ is eˣ."
+            },
+            {
+                question: "How is the series for eˣ² obtained from eˣ?",
+                options: ["Substitute x² for x", "Differentiate the constant", "Remove factorials", "Replace x with 2x only"],
+                answer: "Substitute x² for x",
+                explanation: "Direct substitution transforms the known exponential series."
+            },
+            {
+                question: "What is the first nonzero term of sin(x)'s Maclaurin series?",
+                options: ["x", "1", "x²", "-x³"],
+                answer: "x",
+                explanation: "The sine series begins with x."
+            },
+            {
+                question: "What is the first term of cos(x)'s Maclaurin series?",
+                options: ["1", "x", "-x", "x²"],
+                answer: "1",
+                explanation: "cos(0)=1."
+            },
+            {
+                question: "What results from multiplying the eˣ series by x²?",
+                options: ["x²+x³+x⁴/2!+x⁵/3!+...", "1+x²+x⁴/2!+...", "x+x³/3!+...", "x²-x³+x⁴-..."],
+                answer: "x²+x³+x⁴/2!+x⁵/3!+...",
+                explanation: "Multiplying by x² increases each exponent by 2."
+            },
+            {
+                question: "Differentiating the series for 1/(1-x) gives a series for:",
+                options: ["1/(1-x)²", "ln(1-x)", "eˣ", "1/(1+x)"],
+                answer: "1/(1-x)²",
+                explanation: "The derivative of (1-x)⁻¹ is (1-x)⁻²."
+            },
+            {
+                question: "Integrating the series for 1/(1+x) from 0 to x gives:",
+                options: ["ln(1+x)", "eˣ", "sin(x)", "1/(1-x)²"],
+                answer: "ln(1+x)",
+                explanation: "The antiderivative of 1/(1+x) is ln(1+x)."
+            },
+            {
+                question: "What must happen to Rₙ(x) for the Taylor series to equal the function?",
+                options: ["It must approach zero", "It must approach infinity", "It must equal 1", "It must alternate"],
+                answer: "It must approach zero",
+                explanation: "The approximation error must vanish."
+            },
+            {
+                question: "Which expression is the Lagrange error bound?",
+                options: ["M|x-a|ⁿ⁺¹/(n+1)!", "M|x+a|ⁿ/n!", "M(x-a)/(n+1)", "n!M|x-a|"],
+                answer: "M|x-a|ⁿ⁺¹/(n+1)!",
+                explanation: "This formula bounds the Taylor-polynomial error."
+            },
+            {
+                question: "What does M represent in the Lagrange error bound?",
+                options: ["An upper bound for the next derivative", "The center", "The number of terms", "The exact error"],
+                answer: "An upper bound for the next derivative",
+                explanation: "M bounds |f⁽ⁿ⁺¹⁾(z)| on the relevant interval."
+            },
+            {
+                question: "Where does the Maclaurin series for eˣ converge?",
+                options: ["For every real x", "Only for |x|<1", "Only for x>0", "Nowhere"],
+                answer: "For every real x",
+                explanation: "The exponential series has an infinite radius of convergence."
+            },
+            {
+                question: "Which statement is always true?",
+                options: ["Every Maclaurin series is a Taylor series", "Every Taylor series is centered at zero", "Every Taylor series is geometric", "Every Taylor polynomial is infinite"],
+                answer: "Every Maclaurin series is a Taylor series",
+                explanation: "Maclaurin series are Taylor series centered at zero."
+            }
+        ]
+    },
+    "calculus2-applications-of-taylor-maclaurin-series": {
+        title: "Applications of Taylor and Maclaurin Series",
+        subtitle: "Approximate complicated functions using finite Taylor polynomials.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Use Taylor polynomials to approximate function values.</li>
+<li>Determine how many terms are needed for a desired accuracy.</li>
+<li>Estimate approximation errors using the Lagrange Error Bound.</li>
+<li>Approximate functions that cannot be evaluated easily by hand.</li>
+<li>Create new approximations from known power series.</li>
+<li>Recognize real-world applications of Taylor series.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>Many functions are difficult or impossible to evaluate exactly without a calculator.</p>
+
+<p>For example:</p>
+
+<ul>
+<li>e<sup>0.12</sup></li>
+<li>sin(0.08)</li>
+<li>ln(1.04)</li>
+<li>√1.03</li>
+</ul>
+
+<p>Taylor polynomials allow us to replace these complicated functions with simple polynomials that are much easier to compute.</p>
+
+<hr>
+
+<h2>Why Taylor Polynomials Work</h2>
+
+<p>A Taylor polynomial matches the function and several of its derivatives at the center.</p>
+
+<p>Near the center, the polynomial behaves almost exactly like the original function.</p>
+
+<p>The more terms we include, the better the approximation becomes.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Approximate:</p>
+
+<p><strong>e<sup>0.1</sup></strong></p>
+
+<p>The Maclaurin series for e<sup>x</sup> is</p>
+
+<p><strong>
+1+x+x²/2!+x³/3!+...
+</strong></p>
+
+<p>Using the third-degree polynomial:</p>
+
+<p><strong>
+1+0.1+0.1²/2+0.1³/6
+</strong></p>
+
+<p><strong>
+≈1.105167
+</strong></p>
+
+<p>The true value is</p>
+
+<p><strong>
+1.105171
+</strong></p>
+
+<p>The approximation is extremely accurate.</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Approximate</p>
+
+<p><strong>sin(0.2)</strong></p>
+
+<p>Using</p>
+
+<p><strong>
+sin(x)=x−x³/6+x⁵/120−...
+</strong></p>
+
+<p>Using only the first two terms:</p>
+
+<p><strong>
+0.2−0.2³/6
+</strong></p>
+
+<p><strong>
+≈0.198667
+</strong></p>
+
+<p>The actual value is approximately</p>
+
+<p><strong>
+0.198669
+</strong></p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p>Approximate</p>
+
+<p><strong>cos(0.3)</strong></p>
+
+<p>Use</p>
+
+<p><strong>
+1−x²/2+x⁴/24
+</strong></p>
+
+<p>Substituting x=0.3 gives</p>
+
+<p><strong>
+1−0.045+0.003375
+</strong></p>
+
+<p><strong>
+≈0.955338
+</strong></p>
+
+<hr>
+
+<h2>Approximating ln(1+x)</h2>
+
+<p>The Maclaurin series is</p>
+
+<p><strong>
+x−x²/2+x³/3−x⁴/4+...
+</strong></p>
+
+<p>Approximate ln(1.1).</p>
+
+<p>Since x=0.1, use</p>
+
+<p><strong>
+0.1−0.01/2+0.001/3
+</strong></p>
+
+<p><strong>
+≈0.09533
+</strong></p>
+
+<p>The true value is 0.09531.</p>
+
+<hr>
+
+<h2>Approximating √(1+x)</h2>
+
+<p>The binomial expansion gives</p>
+
+<p><strong>
+√(1+x)=1+x/2−x²/8+x³/16−...
+</strong></p>
+
+<p>Approximate</p>
+
+<p><strong>
+√1.04
+</strong></p>
+
+<p>Substitute x=0.04.</p>
+
+<p><strong>
+≈1.0198
+</strong></p>
+
+<hr>
+
+<h2>Choosing the Degree</h2>
+
+<p>Using more terms generally produces a better approximation.</p>
+
+<table>
+
+<tr>
+<th>Degree</th>
+<th>Accuracy</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Rough estimate</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Good approximation</td>
+</tr>
+
+<tr>
+<td>3–5</td>
+<td>Very accurate near the center</td>
+</tr>
+
+<tr>
+<td>Large n</td>
+<td>Extremely accurate</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Lagrange Error Bound</h2>
+
+<p>The error satisfies</p>
+
+<p><strong>
+
+|Rₙ(x)| ≤ M|x−a|ⁿ⁺¹/(n+1)!
+
+</strong></p>
+
+<p>This tells us the maximum possible error when using a Taylor polynomial.</p>
+
+<hr>
+
+<h2>Example 4</h2>
+
+<p>Approximate e<sup>0.2</sup> using the third-degree polynomial.</p>
+
+<p>The fourth derivative of e<sup>x</sup> is e<sup>x</sup>.</p>
+
+<p>Between 0 and 0.2, choose</p>
+
+<p><strong>
+
+M=e<sup>0.2</sup>
+
+</strong></p>
+
+<p>The error satisfies</p>
+
+<p><strong>
+
+|R₃|≤e<sup>0.2</sup>(0.2)⁴/24
+
+</strong></p>
+
+<p>This guarantees the approximation is extremely accurate.</p>
+
+<hr>
+
+<h2>Real-World Applications</h2>
+
+<ul>
+
+<li>Scientific calculators</li>
+
+<li>Computer graphics</li>
+
+<li>Physics simulations</li>
+
+<li>Engineering software</li>
+
+<li>Machine learning optimization</li>
+
+<li>Robotics</li>
+
+<li>Astronomy</li>
+
+<li>Signal processing</li>
+
+</ul>
+
+<hr>
+
+<h2>Applications in Physics</h2>
+
+<p>Physicists often simplify equations by replacing complicated functions with Taylor polynomials.</p>
+
+<p>For very small angles,</p>
+
+<p><strong>
+
+sin(x)≈x
+
+</strong></p>
+
+<p>and</p>
+
+<p><strong>
+
+cos(x)≈1−x²/2
+
+</strong></p>
+
+<p>These approximations are used throughout mechanics and oscillation problems.</p>
+
+<hr>
+
+<h2>Applications in Engineering</h2>
+
+<p>Engineers frequently approximate exponential growth, heat transfer, electrical signals, and vibration models using Taylor series.</p>
+
+<hr>
+
+<h2>Applications in Numerical Methods</h2>
+
+<p>Computers rarely calculate transcendental functions directly.</p>
+
+<p>Instead, they often use polynomial approximations generated from Taylor series.</p>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+
+<li>Using too few terms.</li>
+
+<li>Forgetting factorials.</li>
+
+<li>Using the wrong center.</li>
+
+<li>Ignoring the interval of convergence.</li>
+
+<li>Forgetting that the approximation is best near the center.</li>
+
+<li>Using a Taylor polynomial far away from its expansion point.</li>
+
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Taylor polynomials provide polynomial approximations.</li>
+
+<li>More terms generally improve accuracy.</li>
+
+<li>The Lagrange Error Bound estimates the maximum error.</li>
+
+<li>Taylor approximations are used extensively in science, engineering, and computing.</li>
+
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "What is the main purpose of a Taylor polynomial?",
+                options: [
+                    "Approximate a function near a chosen center",
+                    "Find derivatives only",
+                    "Compute definite integrals",
+                    "Solve differential equations exactly"
+                ],
+                answer: "Approximate a function near a chosen center",
+                explanation: "Taylor polynomials provide polynomial approximations that closely match a function near the expansion point."
+            },
+            {
+                question: "Taylor polynomials are most accurate...",
+                options: [
+                    "Near the center of expansion",
+                    "Far from the center",
+                    "Only when x = 100",
+                    "Only for trigonometric functions"
+                ],
+                answer: "Near the center of expansion",
+                explanation: "Accuracy decreases as x moves farther from the center."
+            },
+            {
+                question: "Which Maclaurin series is used to approximate eˣ?",
+                options: [
+                    "1+x+x²/2!+x³/3!+...",
+                    "1−x+x²−x³+...",
+                    "x−x³/3!+...",
+                    "1−x²/2!+..."
+                ],
+                answer: "1+x+x²/2!+x³/3!+...",
+                explanation: "This is the standard Maclaurin series for eˣ."
+            },
+            {
+                question: "The approximation e⁰·¹≈1.10517 comes from which series?",
+                options: [
+                    "Maclaurin series for eˣ",
+                    "Maclaurin series for sin(x)",
+                    "Geometric series",
+                    "Binomial series"
+                ],
+                answer: "Maclaurin series for eˣ",
+                explanation: "Substituting x=0.1 into the exponential series gives the approximation."
+            },
+            {
+                question: "Which approximation is commonly used for small angles?",
+                options: [
+                    "sin(x)≈x",
+                    "sin(x)≈1",
+                    "sin(x)≈x²",
+                    "sin(x)≈cos(x)"
+                ],
+                answer: "sin(x)≈x",
+                explanation: "This is one of the most frequently used small-angle approximations in physics."
+            },
+            {
+                question: "For small angles, cos(x) is approximately",
+                options: [
+                    "1−x²/2",
+                    "x",
+                    "1+x",
+                    "x²"
+                ],
+                answer: "1−x²/2",
+                explanation: "Keeping the first two nonzero terms gives this approximation."
+            },
+            {
+                question: "Adding more Taylor-series terms generally",
+                options: [
+                    "Improves accuracy",
+                    "Makes the approximation worse",
+                    "Has no effect",
+                    "Always causes divergence"
+                ],
+                answer: "Improves accuracy",
+                explanation: "More matching derivatives generally produce a better approximation."
+            },
+            {
+                question: "Which quantity estimates the maximum approximation error?",
+                options: [
+                    "Lagrange Error Bound",
+                    "Ratio Test",
+                    "Root Test",
+                    "Comparison Test"
+                ],
+                answer: "Lagrange Error Bound",
+                explanation: "The Lagrange remainder gives an upper bound on the error."
+            },
+            {
+                question: "Taylor polynomials replace complicated functions with",
+                options: [
+                    "Simple polynomials",
+                    "Matrices",
+                    "Logarithms",
+                    "Vectors"
+                ],
+                answer: "Simple polynomials",
+                explanation: "Polynomials are easier to evaluate, differentiate, and integrate."
+            },
+            {
+                question: "The Maclaurin series for ln(1+x) begins with",
+                options: [
+                    "x−x²/2+x³/3−...",
+                    "1+x+x²/2!...",
+                    "1−x+x²−...",
+                    "x+x²+x³"
+                ],
+                answer: "x−x²/2+x³/3−...",
+                explanation: "This alternating series is valid for −1<x≤1."
+            },
+            {
+                question: "Taylor approximations are used heavily in",
+                options: [
+                    "Engineering",
+                    "Physics",
+                    "Computer science",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Taylor series appear throughout science and engineering."
+            },
+            {
+                question: "Scientific calculators frequently compute functions using",
+                options: [
+                    "Polynomial approximations",
+                    "Infinite decimal tables",
+                    "Hand calculations",
+                    "Only lookup charts"
+                ],
+                answer: "Polynomial approximations",
+                explanation: "Taylor and related polynomial approximations are commonly used internally."
+            },
+            {
+                question: "Approximating √(1+x) often uses",
+                options: [
+                    "The binomial series",
+                    "The harmonic series",
+                    "The ratio test",
+                    "The divergence test"
+                ],
+                answer: "The binomial series",
+                explanation: "The binomial expansion provides a power series for fractional exponents."
+            },
+            {
+                question: "Using a Taylor polynomial far from its center usually",
+                options: [
+                    "Reduces accuracy",
+                    "Improves accuracy",
+                    "Makes no difference",
+                    "Guarantees exact values"
+                ],
+                answer: "Reduces accuracy",
+                explanation: "Taylor polynomials are local approximations."
+            },
+            {
+                question: "The center of a Maclaurin series is",
+                options: [
+                    "0",
+                    "1",
+                    "−1",
+                    "π"
+                ],
+                answer: "0",
+                explanation: "Maclaurin series are Taylor series centered at x=0."
+            },
+            {
+                question: "Which function is commonly approximated by 1+x+x²/2!+x³/3!?",
+                options: [
+                    "eˣ",
+                    "sin(x)",
+                    "cos(x)",
+                    "ln(1+x)"
+                ],
+                answer: "eˣ",
+                explanation: "This is the Maclaurin polynomial for eˣ."
+            },
+            {
+                question: "Which approximation is generally more accurate?",
+                options: [
+                    "Using five Taylor terms instead of two",
+                    "Using fewer terms",
+                    "Using only the constant term",
+                    "None of the above"
+                ],
+                answer: "Using five Taylor terms instead of two",
+                explanation: "Including more terms generally increases accuracy."
+            },
+            {
+                question: "Which field relies heavily on Taylor approximations for simulations?",
+                options: [
+                    "Engineering",
+                    "Medicine only",
+                    "History",
+                    "Literature"
+                ],
+                answer: "Engineering",
+                explanation: "Engineering simulations frequently approximate complicated functions with Taylor polynomials."
+            },
+            {
+                question: "The Lagrange Error Bound provides",
+                options: [
+                    "An upper bound on approximation error",
+                    "The exact error",
+                    "The derivative",
+                    "The radius of convergence"
+                ],
+                answer: "An upper bound on approximation error",
+                explanation: "It guarantees that the actual error is no larger than the computed bound."
+            },
+            {
+                question: "Taylor series are especially useful because polynomials are",
+                options: [
+                    "Easy to evaluate",
+                    "Hard to differentiate",
+                    "Impossible to integrate",
+                    "Always exact"
+                ],
+                answer: "Easy to evaluate",
+                explanation: "Polynomials are simple to compute, differentiate, and integrate."
+            },
+            {
+                question: "A Taylor polynomial becomes exact when",
+                options: [
+                    "All infinitely many terms are included (when the series converges to the function)",
+                    "Only the first term is used",
+                    "Only two terms are used",
+                    "Never"
+                ],
+                answer: "All infinitely many terms are included (when the series converges to the function)",
+                explanation: "The full Taylor series equals the original function whenever it converges to that function."
+            },
+            {
+                question: "Which statement is TRUE?",
+                options: [
+                    "Taylor polynomials approximate functions locally.",
+                    "Taylor polynomials are always exact everywhere.",
+                    "Taylor polynomials never use derivatives.",
+                    "Taylor polynomials only work for exponential functions."
+                ],
+                answer: "Taylor polynomials approximate functions locally.",
+                explanation: "They are designed to match the function near the center of expansion."
+            },
+            {
+                question: "What happens to the approximation error as more terms are added?",
+                options: [
+                    "It usually decreases.",
+                    "It always increases.",
+                    "It stays constant.",
+                    "It becomes undefined."
+                ],
+                answer: "It usually decreases.",
+                explanation: "Higher-degree Taylor polynomials typically provide better approximations within the interval of convergence."
+            },
+            {
+                question: "Taylor series are especially useful for approximating values that are",
+                options: [
+                    "Close to the center of expansion",
+                    "Extremely far from the center",
+                    "Only integers",
+                    "Only negative numbers"
+                ],
+                answer: "Close to the center of expansion",
+                explanation: "Accuracy is greatest near the expansion point."
+            },
+            {
+                question: "One advantage of Taylor approximations is that they allow computers to",
+                options: [
+                    "Evaluate complicated functions efficiently",
+                    "Avoid using arithmetic",
+                    "Eliminate rounding errors completely",
+                    "Solve every equation exactly"
+                ],
+                answer: "Evaluate complicated functions efficiently",
+                explanation: "Polynomial approximations are computationally fast and efficient."
+            }
+
+        ]
+    },
+    "calculus2-applications-of-taylor-maclaurin-series-quiz": {
+        title: "Applications of Taylor and Maclaurin Series Quiz",
+        subtitle: "Test your understanding of Taylor polynomial approximations and error bounds.",
+
+        body: `
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Use known Taylor and Maclaurin series when needed.</li>
+<li>Pay attention to the center of expansion.</li>
+<li>Remember that Taylor polynomials are generally most accurate near their center.</li>
+<li>Use the Lagrange Error Bound when asked about maximum possible error.</li>
+</ul>
+`,
+
+        questions: [
+            {
+                question: "What is the main purpose of using a Taylor polynomial?",
+                options: [
+                    "To approximate a function near a selected center",
+                    "To calculate only the first derivative",
+                    "To convert every function into a rational function",
+                    "To determine whether an improper integral converges"
+                ],
+                answer: "To approximate a function near a selected center",
+                explanation: "A Taylor polynomial uses derivatives at a center to approximate the original function near that center."
+            },
+            {
+                question: "A Maclaurin series is a Taylor series centered at",
+                options: [
+                    "x = 0",
+                    "x = 1",
+                    "x = -1",
+                    "x = π"
+                ],
+                answer: "x = 0",
+                explanation: "A Maclaurin series is the special case of a Taylor series in which the center is zero."
+            },
+            {
+                question: "Which expression is the third-degree Maclaurin polynomial for eˣ?",
+                options: [
+                    "1 + x + x²/2! + x³/3!",
+                    "x - x³/3!",
+                    "1 - x²/2!",
+                    "1 + x² + x³"
+                ],
+                answer: "1 + x + x²/2! + x³/3!",
+                explanation: "The Maclaurin series for eˣ is 1 + x + x²/2! + x³/3! + ⋯."
+            },
+            {
+                question: "Using 1 + x + x²/2 to approximate e⁰·¹ gives",
+                options: [
+                    "1.105",
+                    "0.905",
+                    "1.015",
+                    "0.105"
+                ],
+                answer: "1.105",
+                explanation: "Substituting x = 0.1 gives 1 + 0.1 + 0.01/2 = 1.105."
+            },
+            {
+                question: "Which polynomial approximates sin(x) using the first three nonzero Maclaurin terms?",
+                options: [
+                    "x - x³/3! + x⁵/5!",
+                    "1 - x²/2! + x⁴/4!",
+                    "1 + x + x²/2!",
+                    "x + x²/2 + x³/3"
+                ],
+                answer: "x - x³/3! + x⁵/5!",
+                explanation: "The Maclaurin series for sin(x) alternates and contains only odd powers."
+            },
+            {
+                question: "Which polynomial approximates cos(x) using the first three nonzero Maclaurin terms?",
+                options: [
+                    "1 - x²/2! + x⁴/4!",
+                    "x - x³/3! + x⁵/5!",
+                    "1 + x + x²/2!",
+                    "x - x²/2 + x³/3"
+                ],
+                answer: "1 - x²/2! + x⁴/4!",
+                explanation: "The Maclaurin series for cos(x) alternates and contains only even powers."
+            },
+            {
+                question: "For a very small value of x, sin(x) is commonly approximated by",
+                options: [
+                    "x",
+                    "1",
+                    "x²",
+                    "1 - x"
+                ],
+                answer: "x",
+                explanation: "The first nonzero term of the Maclaurin series for sin(x) is x."
+            },
+            {
+                question: "For a small value of x, cos(x) is commonly approximated by",
+                options: [
+                    "1 - x²/2",
+                    "x",
+                    "1 + x",
+                    "x²/2"
+                ],
+                answer: "1 - x²/2",
+                explanation: "The first two nonzero terms of the cosine series give cos(x) ≈ 1 - x²/2."
+            },
+            {
+                question: "Which series can be used to approximate ln(1 + x)?",
+                options: [
+                    "x - x²/2 + x³/3 - x⁴/4 + ⋯",
+                    "1 + x + x²/2! + x³/3! + ⋯",
+                    "1 - x²/2! + x⁴/4! - ⋯",
+                    "x - x³/3! + x⁵/5! - ⋯"
+                ],
+                answer: "x - x²/2 + x³/3 - x⁴/4 + ⋯",
+                explanation: "This is the standard Maclaurin series for ln(1 + x)."
+            },
+            {
+                question: "To approximate ln(1.05) using the series for ln(1 + x), which value should replace x?",
+                options: [
+                    "0.05",
+                    "1.05",
+                    "-0.05",
+                    "0.5"
+                ],
+                answer: "0.05",
+                explanation: "Since 1 + x = 1.05, x = 0.05."
+            },
+            {
+                question: "Which series is useful for approximating √(1 + x)?",
+                options: [
+                    "The binomial series",
+                    "The harmonic series",
+                    "The geometric divergence test",
+                    "The alternating series test only"
+                ],
+                answer: "The binomial series",
+                explanation: "The binomial series allows powers such as (1 + x)^(1/2) to be expanded into a power series."
+            },
+            {
+                question: "The approximation √(1 + x) ≈ 1 + x/2 is most accurate when",
+                options: [
+                    "x is close to 0",
+                    "x is extremely large",
+                    "x is close to 100",
+                    "x is any complex number"
+                ],
+                answer: "x is close to 0",
+                explanation: "This is a Maclaurin approximation, so it is generally most accurate near x = 0."
+            },
+            {
+                question: "What generally happens when more nonzero terms are included in a Taylor polynomial?",
+                options: [
+                    "The approximation usually becomes more accurate near the center",
+                    "The approximation always becomes less accurate",
+                    "The function becomes discontinuous",
+                    "The center of expansion changes automatically"
+                ],
+                answer: "The approximation usually becomes more accurate near the center",
+                explanation: "Higher-degree Taylor polynomials match more derivatives of the original function."
+            },
+            {
+                question: "Why are Taylor polynomials useful in computer calculations?",
+                options: [
+                    "Polynomials are relatively easy and efficient to evaluate",
+                    "Polynomials eliminate all rounding error",
+                    "Polynomials never require multiplication",
+                    "Polynomials always give exact answers with one term"
+                ],
+                answer: "Polynomials are relatively easy and efficient to evaluate",
+                explanation: "Computers can efficiently evaluate polynomial expressions using arithmetic operations."
+            },
+            {
+                question: "Which formula represents the Lagrange Error Bound?",
+                options: [
+                    "|Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!",
+                    "|Rₙ(x)| = n!/(x-a)",
+                    "|Rₙ(x)| ≤ M|x-a|ⁿ/n!",
+                    "|Rₙ(x)| = f(x)-f(a)"
+                ],
+                answer: "|Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)!",
+                explanation: "The Lagrange Error Bound uses a maximum value of the next derivative and the distance from the center."
+            },
+            {
+                question: "In the Lagrange Error Bound, M represents",
+                options: [
+                    "An upper bound for the absolute value of the next derivative",
+                    "The exact value of the error",
+                    "The center of the series",
+                    "The number of terms in the polynomial"
+                ],
+                answer: "An upper bound for the absolute value of the next derivative",
+                explanation: "M must be at least as large as the absolute value of f⁽ⁿ⁺¹⁾ on the relevant interval."
+            },
+            {
+                question: "When using a third-degree Taylor polynomial, which derivative is used in the Lagrange Error Bound?",
+                options: [
+                    "The fourth derivative",
+                    "The third derivative",
+                    "The second derivative",
+                    "The first derivative"
+                ],
+                answer: "The fourth derivative",
+                explanation: "The error for a degree-n polynomial depends on the derivative of order n + 1."
+            },
+            {
+                question: "The Lagrange Error Bound gives",
+                options: [
+                    "A maximum possible error",
+                    "The exact error in every case",
+                    "The radius of convergence",
+                    "The derivative at the center"
+                ],
+                answer: "A maximum possible error",
+                explanation: "It guarantees that the actual error does not exceed the calculated bound."
+            },
+            {
+                question: "If the Lagrange Error Bound is 0.0001, then the actual error",
+                options: [
+                    "Is at most 0.0001",
+                    "Is exactly 0.0001",
+                    "Must be greater than 0.0001",
+                    "Cannot be estimated"
+                ],
+                answer: "Is at most 0.0001",
+                explanation: "An error bound is an upper limit, not necessarily the exact error."
+            },
+            {
+                question: "A Taylor polynomial centered at x = 2 will generally be most accurate",
+                options: [
+                    "Near x = 2",
+                    "Near x = 0 only",
+                    "Near x = 100",
+                    "Only at negative values of x"
+                ],
+                answer: "Near x = 2",
+                explanation: "Taylor polynomials provide local approximations around their chosen center."
+            },
+            {
+                question: "Which is a likely source of error when constructing a Taylor polynomial?",
+                options: [
+                    "Forgetting factorial denominators",
+                    "Using derivatives",
+                    "Choosing a center",
+                    "Writing powers of x"
+                ],
+                answer: "Forgetting factorial denominators",
+                explanation: "Each Taylor term includes division by the appropriate factorial."
+            },
+            {
+                question: "Which is another common mistake when applying a Taylor approximation?",
+                options: [
+                    "Using the approximation too far from its center",
+                    "Including additional terms",
+                    "Checking the error",
+                    "Using exact arithmetic"
+                ],
+                answer: "Using the approximation too far from its center",
+                explanation: "A Taylor polynomial may become inaccurate when evaluated far from the expansion point."
+            },
+            {
+                question: "Why is the approximation sin(x) ≈ x important in physics?",
+                options: [
+                    "It simplifies equations involving small-angle motion",
+                    "It proves that sine is a polynomial",
+                    "It works exactly for all real numbers",
+                    "It eliminates the need for units"
+                ],
+                answer: "It simplifies equations involving small-angle motion",
+                explanation: "The small-angle approximation is widely used in pendulum motion, waves, and oscillations."
+            },
+            {
+                question: "Which field commonly uses Taylor approximations for vibration, heat transfer, and electrical models?",
+                options: [
+                    "Engineering",
+                    "Literary criticism",
+                    "Ancient history",
+                    "Music notation only"
+                ],
+                answer: "Engineering",
+                explanation: "Engineering models frequently simplify complicated functions with polynomial approximations."
+            },
+            {
+                question: "Which statement about Taylor series is correct?",
+                options: [
+                    "A Taylor series may equal the original function within an interval where it converges appropriately",
+                    "Every Taylor series equals its function for every real number",
+                    "Taylor series never involve derivatives",
+                    "Taylor series contain only a finite number of terms"
+                ],
+                answer: "A Taylor series may equal the original function within an interval where it converges appropriately",
+                explanation: "Convergence of the series alone must also correspond to the original function, and this generally occurs on an appropriate interval."
+            },
+            {
+                question: "What is the main difference between a Taylor polynomial and a Taylor series?",
+                options: [
+                    "A Taylor polynomial has finitely many terms, while a Taylor series has infinitely many terms",
+                    "A Taylor polynomial has infinitely many terms",
+                    "A Taylor series never uses derivatives",
+                    "There is no difference"
+                ],
+                answer: "A Taylor polynomial has finitely many terms, while a Taylor series has infinitely many terms",
+                explanation: "A Taylor polynomial is a finite approximation formed by truncating the infinite Taylor series."
+            },
+            {
+                question: "Suppose two Taylor approximations are centered at the same point. Which is generally more accurate nearby?",
+                options: [
+                    "The approximation with the higher degree",
+                    "The approximation with the lower degree",
+                    "They must always have identical errors",
+                    "The one with fewer derivatives"
+                ],
+                answer: "The approximation with the higher degree",
+                explanation: "The higher-degree polynomial typically matches more derivatives and provides a closer local approximation."
+            },
+            {
+                question: "To guarantee an approximation is accurate to within 0.001, the error bound should be",
+                options: [
+                    "Less than or equal to 0.001",
+                    "Greater than 0.001",
+                    "Exactly 1",
+                    "Less than or equal to 1"
+                ],
+                answer: "Less than or equal to 0.001",
+                explanation: "The maximum possible error must not exceed the desired tolerance."
+            },
+            {
+                question: "Which statement best describes the relationship between Taylor polynomials and complicated functions?",
+                options: [
+                    "Taylor polynomials replace complicated local behavior with manageable polynomial expressions",
+                    "Taylor polynomials make every function linear",
+                    "Taylor polynomials remove the need for derivatives",
+                    "Taylor polynomials are useful only for rational functions"
+                ],
+                answer: "Taylor polynomials replace complicated local behavior with manageable polynomial expressions",
+                explanation: "Their main advantage is that polynomials are easier to compute and analyze."
+            },
+            {
+                question: "Which application is most directly connected to Taylor and Maclaurin approximations?",
+                options: [
+                    "Approximating e⁰·⁰² without directly evaluating the exponential function",
+                    "Sorting names alphabetically",
+                    "Finding the median of a list",
+                    "Drawing a frequency table"
+                ],
+                answer: "Approximating e⁰·⁰² without directly evaluating the exponential function",
+                explanation: "The exponential Maclaurin series provides a direct polynomial approximation for values near zero."
+            }
+        ]
+    },
+    "calculus2-unit7-review": {
+        title: "Unit 7 Review",
+        subtitle: "Review sequences, series, convergence tests, power series, and Taylor series.",
+
+        body: `
+
+<h2>Unit 7 Overview</h2>
+
+<p>This unit introduced one of the most important topics in Calculus II: infinite sequences and infinite series.</p>
+
+<p>You learned how to determine whether an infinite process converges, how to recognize different types of series, and how to represent functions using power series.</p>
+
+<hr>
+
+<h2>Key Concepts</h2>
+
+<ul>
+<li>Sequences</li>
+<li>Limits of sequences</li>
+<li>Infinite series</li>
+<li>Geometric series</li>
+<li>Divergence Test</li>
+<li>Integral Test</li>
+<li>Comparison Test</li>
+<li>Limit Comparison Test</li>
+<li>Ratio Test</li>
+<li>Root Test</li>
+<li>Alternating Series Test</li>
+<li>Absolute vs Conditional Convergence</li>
+<li>Power Series</li>
+<li>Taylor Series</li>
+<li>Maclaurin Series</li>
+<li>Taylor Polynomial Applications</li>
+</ul>
+
+<hr>
+
+<h2>Sequences</h2>
+
+<p>A sequence is an ordered list of numbers.</p>
+
+<p>To determine whether a sequence converges, compute</p>
+
+<p><strong>lim n→∞ aₙ</strong></p>
+
+<p>If the limit exists and is finite, the sequence converges.</p>
+
+<hr>
+
+<h2>Infinite Series</h2>
+
+<p>An infinite series is the sum of infinitely many terms.</p>
+
+<p>Always remember:</p>
+
+<p><strong>
+Series converge or diverge.<br>
+Sequences approach limits.
+</strong></p>
+
+<hr>
+
+<h2>Geometric Series</h2>
+
+<p>A geometric series has the form</p>
+
+<p><strong>
+
+Σ arⁿ
+
+</strong></p>
+
+<p>or</p>
+
+<p><strong>
+
+Σ arⁿ⁻¹
+
+</strong></p>
+
+<p>The series converges only if</p>
+
+<p><strong>|r| &lt; 1</strong></p>
+
+<p>Sum:</p>
+
+<p><strong>
+
+a/(1-r)
+
+</strong></p>
+
+<hr>
+
+<h2>Divergence Test</h2>
+
+<p>If</p>
+
+<p><strong>
+
+lim aₙ ≠ 0
+
+</strong></p>
+
+<p>the series definitely diverges.</p>
+
+<p>If the limit equals zero, use another convergence test.</p>
+
+<hr>
+
+<h2>Integral Test</h2>
+
+<p>Use when</p>
+
+<ul>
+<li>Positive</li>
+<li>Continuous</li>
+<li>Decreasing</li>
+</ul>
+
+<p>Compare the improper integral with the series.</p>
+
+<hr>
+
+<h2>Comparison Tests</h2>
+
+<p>Use known benchmark series.</p>
+
+<ul>
+<li>Direct Comparison Test</li>
+<li>Limit Comparison Test</li>
+</ul>
+
+<p>Most common benchmarks:</p>
+
+<ul>
+<li>Geometric series</li>
+<li>p-series</li>
+</ul>
+
+<hr>
+
+<h2>Ratio Test</h2>
+
+<p>Compute</p>
+
+<p><strong>
+
+L = lim |aₙ₊₁ / aₙ|
+
+</strong></p>
+
+<ul>
+<li>L &lt; 1 → Converges</li>
+<li>L &gt; 1 → Diverges</li>
+<li>L = 1 → Inconclusive</li>
+</ul>
+
+<p>Best for:</p>
+
+<ul>
+<li>Factorials</li>
+<li>Exponentials</li>
+</ul>
+
+<hr>
+
+<h2>Root Test</h2>
+
+<p>Compute</p>
+
+<p><strong>
+
+L = lim ⁿ√|aₙ|
+
+</strong></p>
+
+<ul>
+<li>L &lt; 1 → Converges</li>
+<li>L &gt; 1 → Diverges</li>
+<li>L = 1 → Inconclusive</li>
+</ul>
+
+<p>Best for nth powers.</p>
+
+<hr>
+
+<h2>Alternating Series Test</h2>
+
+<p>For</p>
+
+<p><strong>
+
+(-1)ⁿaₙ
+
+</strong></p>
+
+<p>Requirements:</p>
+
+<ul>
+<li>aₙ decreases</li>
+<li>lim aₙ = 0</li>
+</ul>
+
+<hr>
+
+<h2>Absolute vs Conditional Convergence</h2>
+
+<p>Absolute convergence:</p>
+
+<p><strong>
+
+Σ |aₙ|
+
+</strong>
+
+converges.</p>
+
+<p>Conditional convergence:</p>
+
+<p><strong>
+
+Σ aₙ
+
+</strong>
+
+converges but</p>
+
+<p><strong>
+
+Σ |aₙ|
+
+</strong>
+
+diverges.</p>
+
+<hr>
+
+<h2>Power Series</h2>
+
+<p>General form:</p>
+
+<p><strong>
+
+Σ cₙ(x-a)ⁿ
+
+</strong></p>
+
+<p>Always determine:</p>
+
+<ul>
+<li>Radius of convergence</li>
+<li>Interval of convergence</li>
+</ul>
+
+<hr>
+
+<h2>Taylor Series</h2>
+
+<p>A Taylor series represents a function using infinitely many derivatives.</p>
+
+<p>Centered at x=a.</p>
+
+<p>Maclaurin series are centered at x=0.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+<li>Approximating functions</li>
+<li>Computer graphics</li>
+<li>Engineering</li>
+<li>Physics</li>
+<li>Scientific computing</li>
+<li>Machine learning</li>
+</ul>
+
+<hr>
+
+<h2>Common Exam Strategy</h2>
+
+<ol>
+<li>Check the Divergence Test first.</li>
+<li>Recognize geometric or p-series immediately.</li>
+<li>Look for factorials → Ratio Test.</li>
+<li>Look for nth powers → Root Test.</li>
+<li>Positive decreasing functions → Integral Test.</li>
+<li>Alternating signs → Alternating Series Test.</li>
+<li>Need interval → Ratio Test on power series.</li>
+</ol>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Know every convergence test.</li>
+<li>Know when each test applies.</li>
+<li>Memorize common Taylor and Maclaurin series.</li>
+<li>Practice identifying the fastest convergence test.</li>
+<li>Always verify endpoints for power series.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "Which convergence test should you always consider first?",
+                options: [
+                    "Divergence Test",
+                    "Ratio Test",
+                    "Root Test",
+                    "Integral Test"
+                ],
+                answer: "Divergence Test",
+                explanation: "The Divergence Test is quick to apply. If lim aₙ ≠ 0, the series immediately diverges."
+            },
+            {
+                question: "A geometric series converges when",
+                options: [
+                    "|r| < 1",
+                    "|r| > 1",
+                    "r > 0",
+                    "r = 1"
+                ],
+                answer: "|r| < 1",
+                explanation: "A geometric series converges only when the common ratio has absolute value less than 1."
+            },
+            {
+                question: "The sum of a convergent geometric series is",
+                options: [
+                    "a/(1-r)",
+                    "1/(1-r)",
+                    "ar",
+                    "r/(1-a)"
+                ],
+                answer: "a/(1-r)",
+                explanation: "For |r|<1, the infinite geometric series sums to a/(1-r)."
+            },
+            {
+                question: "If lim aₙ ≠ 0, then Σaₙ",
+                options: [
+                    "Diverges",
+                    "Converges",
+                    "Needs the Ratio Test",
+                    "Needs the Integral Test"
+                ],
+                answer: "Diverges",
+                explanation: "This is exactly the Divergence Test."
+            },
+            {
+                question: "The Integral Test requires the function to be",
+                options: [
+                    "Positive, continuous, and decreasing",
+                    "Continuous only",
+                    "Positive only",
+                    "Increasing"
+                ],
+                answer: "Positive, continuous, and decreasing",
+                explanation: "All three conditions must hold before applying the Integral Test."
+            },
+            {
+                question: "The Ratio Test works especially well for series containing",
+                options: [
+                    "Factorials",
+                    "Linear terms only",
+                    "Square roots only",
+                    "Logarithms only"
+                ],
+                answer: "Factorials",
+                explanation: "Factorials simplify nicely when consecutive terms are divided."
+            },
+            {
+                question: "The Root Test is especially useful for",
+                options: [
+                    "Terms raised to the nth power",
+                    "Alternating series",
+                    "Geometric series only",
+                    "Improper integrals"
+                ],
+                answer: "Terms raised to the nth power",
+                explanation: "Taking the nth root eliminates powers involving n."
+            },
+            {
+                question: "If the Ratio Test gives L = 0.4, the series",
+                options: [
+                    "Converges",
+                    "Diverges",
+                    "Is inconclusive",
+                    "Needs the Divergence Test"
+                ],
+                answer: "Converges",
+                explanation: "If L<1, the Ratio Test guarantees convergence."
+            },
+            {
+                question: "If the Root Test gives L = 2, the series",
+                options: [
+                    "Diverges",
+                    "Converges",
+                    "Is geometric",
+                    "Is alternating"
+                ],
+                answer: "Diverges",
+                explanation: "If L>1, the Root Test guarantees divergence."
+            },
+            {
+                question: "An alternating series usually contains",
+                options: [
+                    "(-1)ⁿ or (-1)ⁿ⁺¹",
+                    "Factorials",
+                    "Only positive terms",
+                    "Only logarithms"
+                ],
+                answer: "(-1)ⁿ or (-1)ⁿ⁺¹",
+                explanation: "These factors cause the signs of the terms to alternate."
+            },
+            {
+                question: "Absolute convergence means",
+                options: [
+                    "Σ|aₙ| converges",
+                    "Σaₙ diverges",
+                    "The Divergence Test fails",
+                    "The series is geometric"
+                ],
+                answer: "Σ|aₙ| converges",
+                explanation: "If the absolute value series converges, the original series converges absolutely."
+            },
+            {
+                question: "Conditional convergence occurs when",
+                options: [
+                    "Σaₙ converges but Σ|aₙ| diverges",
+                    "Both converge",
+                    "Both diverge",
+                    "The Ratio Test equals 1"
+                ],
+                answer: "Σaₙ converges but Σ|aₙ| diverges",
+                explanation: "Conditional convergence means the alternating behavior is necessary for convergence."
+            },
+            {
+                question: "A power series is centered at",
+                options: [
+                    "x = a",
+                    "x = 0 only",
+                    "x = 1 only",
+                    "The origin only"
+                ],
+                answer: "x = a",
+                explanation: "General power series are centered at x=a."
+            },
+            {
+                question: "A Maclaurin series is centered at",
+                options: [
+                    "0",
+                    "1",
+                    "-1",
+                    "π"
+                ],
+                answer: "0",
+                explanation: "Maclaurin series are Taylor series centered at zero."
+            },
+            {
+                question: "When finding the interval of convergence, you must always",
+                options: [
+                    "Check the endpoints separately",
+                    "Use the Root Test",
+                    "Differentiate first",
+                    "Integrate first"
+                ],
+                answer: "Check the endpoints separately",
+                explanation: "The Ratio Test does not determine convergence at the endpoints."
+            },
+
+            {
+                question: "The radius of convergence tells you",
+                options: [
+                    "How far from the center the power series converges",
+                    "The exact sum of the series",
+                    "How many terms are in the series",
+                    "The derivative of the series"
+                ],
+                answer: "How far from the center the power series converges",
+                explanation: "The radius of convergence gives the distance from the center over which the power series converges."
+            },
+            {
+                question: "Taylor series are constructed using",
+                options: [
+                    "Successive derivatives of the function",
+                    "Only integrals",
+                    "Only limits",
+                    "Only algebraic manipulation"
+                ],
+                answer: "Successive derivatives of the function",
+                explanation: "Each Taylor series term comes from a derivative evaluated at the center."
+            },
+            {
+                question: "A Taylor polynomial differs from a Taylor series because it",
+                options: [
+                    "Contains only finitely many terms",
+                    "Contains infinitely many terms",
+                    "Never approximates functions",
+                    "Does not use derivatives"
+                ],
+                answer: "Contains only finitely many terms",
+                explanation: "A Taylor polynomial is simply a truncated Taylor series."
+            },
+            {
+                question: "Taylor polynomials are generally most accurate",
+                options: [
+                    "Near their center of expansion",
+                    "Far away from the center",
+                    "Only at x = 0",
+                    "Only at x = 1"
+                ],
+                answer: "Near their center of expansion",
+                explanation: "The approximation becomes less accurate as you move farther from the center."
+            },
+            {
+                question: "The Lagrange Error Bound provides",
+                options: [
+                    "A maximum possible approximation error",
+                    "The exact error",
+                    "The interval of convergence",
+                    "The radius of convergence"
+                ],
+                answer: "A maximum possible approximation error",
+                explanation: "It guarantees the error cannot exceed the calculated bound."
+            },
+            {
+                question: "Which convergence test is usually best for factorials?",
+                options: [
+                    "Ratio Test",
+                    "Root Test",
+                    "Integral Test",
+                    "Comparison Test"
+                ],
+                answer: "Ratio Test",
+                explanation: "Factorials cancel naturally when consecutive terms are divided."
+            },
+            {
+                question: "Which convergence test is usually best for nth powers?",
+                options: [
+                    "Root Test",
+                    "Ratio Test",
+                    "Integral Test",
+                    "Alternating Series Test"
+                ],
+                answer: "Root Test",
+                explanation: "Taking the nth root simplifies expressions involving nth powers."
+            },
+            {
+                question: "Which convergence test compares a series to a known benchmark?",
+                options: [
+                    "Comparison Test",
+                    "Root Test",
+                    "Ratio Test",
+                    "Alternating Series Test"
+                ],
+                answer: "Comparison Test",
+                explanation: "The Direct and Limit Comparison Tests compare a series with another whose behavior is already known."
+            },
+            {
+                question: "Which benchmark series are used most often in Comparison Tests?",
+                options: [
+                    "Geometric series and p-series",
+                    "Taylor series only",
+                    "Alternating series only",
+                    "Harmonic series only"
+                ],
+                answer: "Geometric series and p-series",
+                explanation: "These two benchmark series are the most common comparison targets."
+            },
+            {
+                question: "Which statement is TRUE?",
+                options: [
+                    "Every convergent series has terms approaching zero.",
+                    "If terms approach zero, the series must converge.",
+                    "Every alternating series converges.",
+                    "Every power series converges everywhere."
+                ],
+                answer: "Every convergent series has terms approaching zero.",
+                explanation: "A limit of zero is necessary but not sufficient for convergence."
+            },
+            {
+                question: "What should you do after finding the radius of convergence?",
+                options: [
+                    "Check both endpoints separately",
+                    "Apply the Divergence Test only",
+                    "Stop immediately",
+                    "Take another derivative"
+                ],
+                answer: "Check both endpoints separately",
+                explanation: "Endpoints must always be tested individually because the Ratio Test is inconclusive there."
+            },
+            {
+                question: "Which topic is the foundation for representing functions as infinite polynomials?",
+                options: [
+                    "Taylor and Maclaurin Series",
+                    "Geometric Series",
+                    "Improper Integrals",
+                    "Partial Fractions"
+                ],
+                answer: "Taylor and Maclaurin Series",
+                explanation: "Taylor and Maclaurin series express functions as infinite polynomial expansions."
+            },
+            {
+                question: "Which topic from this unit is used heavily in engineering, physics, and scientific computing?",
+                options: [
+                    "Taylor and Maclaurin Series",
+                    "The Divergence Test",
+                    "Comparison Tests only",
+                    "Sequences only"
+                ],
+                answer: "Taylor and Maclaurin Series",
+                explanation: "Taylor approximations are used extensively throughout science and engineering."
+            },
+            {
+                question: "Which statement best summarizes Unit 7?",
+                options: [
+                    "Infinite series can often be analyzed using specialized convergence tests and represented using power series.",
+                    "Every infinite series converges.",
+                    "Taylor series never approximate functions.",
+                    "All convergence tests give identical results."
+                ],
+                answer: "Infinite series can often be analyzed using specialized convergence tests and represented using power series.",
+                explanation: "This is the central idea tying together the entire unit."
+            }
+        ]
+    },
+
+    "calculus2-unit7-test": {
+        title: "Unit 7 Test",
+        subtitle: "Assess your understanding of sequences, series, convergence tests, power series, and Taylor series.",
+
+        body: `
+
+<h2>Unit 7 Test Instructions</h2>
+
+<p>This test covers everything from Unit 7.</p>
+
+<ul>
+<li>Read every question carefully.</li>
+<li>Select the single best answer.</li>
+<li>Some questions require choosing the most appropriate convergence test.</li>
+<li>Others require understanding power series and Taylor series concepts.</li>
+<li>No calculator is required.</li>
+</ul>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+<li>Sequences</li>
+<li>Infinite Series</li>
+<li>Geometric Series</li>
+<li>Divergence Test</li>
+<li>Integral Test</li>
+<li>Comparison Tests</li>
+<li>Ratio Test</li>
+<li>Root Test</li>
+<li>Alternating Series Test</li>
+<li>Absolute & Conditional Convergence</li>
+<li>Power Series</li>
+<li>Taylor & Maclaurin Series</li>
+<li>Applications of Taylor Series</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "If lim aₙ ≠ 0, then Σaₙ",
+                options: [
+                    "Diverges",
+                    "Converges",
+                    "May converge",
+                    "Needs the Ratio Test"
+                ],
+                answer: "Diverges",
+                explanation: "By the Divergence Test, a necessary condition for convergence is that the terms approach zero."
+            },
+            {
+                question: "A geometric series converges whenever",
+                options: [
+                    "|r| < 1",
+                    "|r| > 1",
+                    "r > 0",
+                    "r = 1"
+                ],
+                answer: "|r| < 1",
+                explanation: "This is the convergence criterion for infinite geometric series."
+            },
+            {
+                question: "Which convergence test is usually best for factorials?",
+                options: [
+                    "Ratio Test",
+                    "Root Test",
+                    "Integral Test",
+                    "Comparison Test"
+                ],
+                answer: "Ratio Test",
+                explanation: "The Ratio Test simplifies factorial expressions naturally."
+            },
+            {
+                question: "Which convergence test is usually best for nth powers?",
+                options: [
+                    "Root Test",
+                    "Ratio Test",
+                    "Integral Test",
+                    "Alternating Series Test"
+                ],
+                answer: "Root Test",
+                explanation: "Taking the nth root removes nth powers immediately."
+            },
+            {
+                question: "A Maclaurin series is centered at",
+                options: [
+                    "0",
+                    "1",
+                    "-1",
+                    "π"
+                ],
+                answer: "0",
+                explanation: "Maclaurin series are Taylor series centered at x = 0."
+            },
+            {
+                question: "Taylor polynomials are generally most accurate",
+                options: [
+                    "Near their center",
+                    "Far from their center",
+                    "Only at x = 100",
+                    "Only for trigonometric functions"
+                ],
+                answer: "Near their center",
+                explanation: "Taylor polynomials provide local approximations."
+            },
+            {
+                question: "Absolute convergence means",
+                options: [
+                    "Σ|aₙ| converges",
+                    "Σaₙ diverges",
+                    "The Divergence Test fails",
+                    "The Ratio Test equals 1"
+                ],
+                answer: "Σ|aₙ| converges",
+                explanation: "If the absolute value series converges, the original series converges absolutely."
+            },
+            {
+                question: "Conditional convergence means",
+                options: [
+                    "Σaₙ converges but Σ|aₙ| diverges",
+                    "Both converge",
+                    "Both diverge",
+                    "Neither exists"
+                ],
+                answer: "Σaₙ converges but Σ|aₙ| diverges",
+                explanation: "Conditional convergence relies on alternating signs."
+            },
+            {
+                question: "The Radius of Convergence tells you",
+                options: [
+                    "How far the power series converges from its center",
+                    "The sum of the series",
+                    "The derivative",
+                    "The integral"
+                ],
+                answer: "How far the power series converges from its center",
+                explanation: "The radius measures the distance from the center where convergence occurs."
+            },
+            {
+                question: "After finding the radius of convergence you should",
+                options: [
+                    "Check both endpoints separately",
+                    "Stop immediately",
+                    "Differentiate",
+                    "Integrate"
+                ],
+                answer: "Check both endpoints separately",
+                explanation: "Endpoints must always be tested individually."
+            },
+            {
+                question: "The Lagrange Error Bound estimates",
+                options: [
+                    "The maximum approximation error",
+                    "The exact error",
+                    "The derivative",
+                    "The radius of convergence"
+                ],
+                answer: "The maximum approximation error",
+                explanation: "It provides an upper bound on the error."
+            },
+            {
+                question: "Taylor series are built using",
+                options: [
+                    "Successive derivatives",
+                    "Integrals only",
+                    "Matrices",
+                    "Probability"
+                ],
+                answer: "Successive derivatives",
+                explanation: "Every coefficient comes from a derivative evaluated at the center."
+            },
+            {
+                question: "Which convergence test requires positive, continuous, decreasing functions?",
+                options: [
+                    "Integral Test",
+                    "Ratio Test",
+                    "Root Test",
+                    "Alternating Series Test"
+                ],
+                answer: "Integral Test",
+                explanation: "These are the required hypotheses for the Integral Test."
+            },
+            {
+                question: "Which benchmark series are commonly used in Comparison Tests?",
+                options: [
+                    "Geometric series and p-series",
+                    "Taylor series",
+                    "Alternating series",
+                    "Arithmetic series"
+                ],
+                answer: "Geometric series and p-series",
+                explanation: "These serve as the standard comparison benchmarks."
+            },
+            {
+                question: "The first convergence test you should usually check is",
+                options: [
+                    "Divergence Test",
+                    "Ratio Test",
+                    "Root Test",
+                    "Integral Test"
+                ],
+                answer: "Divergence Test",
+                explanation: "It can immediately prove divergence if the terms fail to approach zero."
+            },
+            {
+                question: "Power series are written in the form",
+                options: [
+                    "Σcₙ(x-a)ⁿ",
+                    "Σ1/n",
+                    "Σarⁿ",
+                    "Σln(n)"
+                ],
+                answer: "Σcₙ(x-a)ⁿ",
+                explanation: "This is the general form of a power series."
+            },
+            {
+                question: "Which statement is TRUE?",
+                options: [
+                    "Every convergent series has terms approaching zero.",
+                    "Every series with terms approaching zero converges.",
+                    "Every alternating series converges.",
+                    "Every power series converges."
+                ],
+                answer: "Every convergent series has terms approaching zero.",
+                explanation: "A limit of zero is necessary but not sufficient."
+            },
+            {
+                question: "Which application commonly uses Taylor series?",
+                options: [
+                    "Engineering and scientific computing",
+                    "Alphabetizing names",
+                    "Voting systems",
+                    "Accounting ledgers"
+                ],
+                answer: "Engineering and scientific computing",
+                explanation: "Taylor approximations are fundamental throughout science and engineering."
+            },
+            {
+                question: "Taylor polynomials replace complicated functions with",
+                options: [
+                    "Polynomials",
+                    "Matrices",
+                    "Fractions",
+                    "Vectors"
+                ],
+                answer: "Polynomials",
+                explanation: "Polynomials are much easier to compute and analyze."
+            },
+            {
+                question: "Unit 7 is primarily about",
+                options: [
+                    "Infinite sequences, infinite series, convergence, and power series",
+                    "Differential equations",
+                    "Vector calculus",
+                    "Multivariable optimization"
+                ],
+                answer: "Infinite sequences, infinite series, convergence, and power series",
+                explanation: "These are the central topics of Unit 7."
+            }
+        ]
+    },
+
+    "calculus2-parametric-equations": {
+        title: "Parametric Equations",
+        subtitle: "Represent curves using independent parameter equations.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Understand what a parametric equation is.</li>
+<li>Sketch curves defined parametrically.</li>
+<li>Eliminate the parameter to obtain a Cartesian equation.</li>
+<li>Determine the direction of motion on a parametric curve.</li>
+<li>Interpret real-world applications of parametric equations.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>Until now, most curves have been written in the form</p>
+
+<p><strong>y = f(x)</strong></p>
+
+<p>However, many curves cannot be described by a single function of x.</p>
+
+<p>Instead, both x and y can depend on another variable called the <strong>parameter</strong>.</p>
+
+<p>Usually the parameter is written as <strong>t</strong>.</p>
+
+<hr>
+
+<h2>Definition</h2>
+
+<p>A parametric curve is described by two equations.</p>
+
+<p><strong>
+
+x=f(t)
+
+</strong></p>
+
+<p><strong>
+
+y=g(t)
+
+</strong></p>
+
+<p>As t changes, the point (x,y) moves along the curve.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Given</p>
+
+<p><strong>
+
+x=t
+
+</strong></p>
+
+<p><strong>
+
+y=t²
+
+</strong></p>
+
+<p>Eliminate the parameter.</p>
+
+<p>Since x=t, substitute into y.</p>
+
+<p><strong>
+
+y=x²
+
+</strong></p>
+
+<p>The graph is the familiar parabola.</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Given</p>
+
+<p><strong>
+
+x=3cos(t)
+
+</strong></p>
+
+<p><strong>
+
+y=3sin(t)
+
+</strong></p>
+
+<p>Use the identities</p>
+
+<p><strong>
+
+cos²(t)+sin²(t)=1
+
+</strong></p>
+
+<p>Then</p>
+
+<p><strong>
+
+x²+y²=9
+
+</strong></p>
+
+<p>This is a circle of radius 3 centered at the origin.</p>
+
+<hr>
+
+<h2>Direction of Motion</h2>
+
+<p>Unlike ordinary graphs, parametric equations describe motion.</p>
+
+<p>As t increases, the point moves along the curve.</p>
+
+<p>Always indicate the direction using arrows when sketching.</p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p>Suppose</p>
+
+<p><strong>
+
+x=t
+
+</strong></p>
+
+<p><strong>
+
+y=t³
+
+</strong></p>
+
+<p>As t increases:</p>
+
+<ul>
+<li>t=-2 gives (-2,-8)</li>
+<li>t=-1 gives (-1,-1)</li>
+<li>t=0 gives (0,0)</li>
+<li>t=1 gives (1,1)</li>
+<li>t=2 gives (2,8)</li>
+</ul>
+
+<p>The motion is from left to right.</p>
+
+<hr>
+
+<h2>Constructing a Table</h2>
+
+<p>A convenient way to sketch parametric curves is to make a table.</p>
+
+<table>
+
+<tr>
+<th>t</th>
+<th>x</th>
+<th>y</th>
+</tr>
+
+<tr>
+<td>-2</td>
+<td>-2</td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>-1</td>
+<td>-1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Eliminating the Parameter</h2>
+
+<p>To convert a parametric curve into Cartesian form:</p>
+
+<ol>
+<li>Solve one equation for t.</li>
+<li>Substitute into the other equation.</li>
+<li>Simplify.</li>
+</ol>
+
+<hr>
+
+<h2>Real-World Applications</h2>
+
+<ul>
+<li>Projectile motion</li>
+<li>Planetary motion</li>
+<li>Robot paths</li>
+<li>Animation</li>
+<li>Computer graphics</li>
+<li>Vehicle navigation</li>
+<li>Engineering design</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Ignoring the parameter.</li>
+<li>Forgetting the direction of motion.</li>
+<li>Eliminating the parameter incorrectly.</li>
+<li>Sketching only the Cartesian curve without indicating orientation.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Parametric equations describe both x and y using a parameter.</li>
+<li>The parameter often represents time.</li>
+<li>Always determine the direction of motion.</li>
+<li>Many familiar curves can be represented parametrically.</li>
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                question: "A parametric curve is described by",
+                options: [
+                    "Two equations involving a parameter",
+                    "One equation only",
+                    "Three independent variables",
+                    "A table only"
+                ],
+                answer: "Two equations involving a parameter",
+                explanation: "Parametric curves are defined by x=f(t) and y=g(t)."
+            },
+            {
+                question: "The parameter is most commonly represented by",
+                options: [
+                    "t",
+                    "x",
+                    "y",
+                    "r"
+                ],
+                answer: "t",
+                explanation: "The variable t is commonly used as the parameter, often representing time."
+            },
+            {
+                question: "If x=t and y=t², what Cartesian equation is obtained?",
+                options: [
+                    "y=x²",
+                    "y=x",
+                    "x=y²",
+                    "x²+y²=1"
+                ],
+                answer: "y=x²",
+                explanation: "Since x=t, substitute t=x into y=t²."
+            },
+            {
+                question: "If x=3cos(t) and y=3sin(t), the curve is",
+                options: [
+                    "A circle of radius 3",
+                    "A parabola",
+                    "A line",
+                    "A hyperbola"
+                ],
+                answer: "A circle of radius 3",
+                explanation: "Using cos²(t)+sin²(t)=1 gives x²+y²=9."
+            },
+            {
+                question: "The equation x²+y²=9 represents",
+                options: [
+                    "A circle centered at the origin",
+                    "A parabola",
+                    "An ellipse",
+                    "A line"
+                ],
+                answer: "A circle centered at the origin",
+                explanation: "The radius is √9 = 3."
+            },
+            {
+                question: "As the parameter increases, the point",
+                options: [
+                    "Moves along the curve",
+                    "Always moves upward",
+                    "Always moves right",
+                    "Never moves"
+                ],
+                answer: "Moves along the curve",
+                explanation: "The parameter controls the motion of the point."
+            },
+            {
+                question: "Why are arrows drawn on parametric graphs?",
+                options: [
+                    "To indicate direction of motion",
+                    "To show slope",
+                    "To indicate intercepts",
+                    "To show symmetry"
+                ],
+                answer: "To indicate direction of motion",
+                explanation: "Parametric equations describe motion, so orientation matters."
+            },
+            {
+                question: "To eliminate the parameter, you usually",
+                options: [
+                    "Solve one equation for the parameter and substitute",
+                    "Differentiate both equations",
+                    "Integrate both equations",
+                    "Multiply the equations together"
+                ],
+                answer: "Solve one equation for the parameter and substitute",
+                explanation: "This produces an equation relating x and y only."
+            },
+            {
+                question: "Projectile motion is commonly modeled using",
+                options: [
+                    "Parametric equations",
+                    "Piecewise functions",
+                    "Matrices",
+                    "Logarithms"
+                ],
+                answer: "Parametric equations",
+                explanation: "Horizontal and vertical motion are naturally represented parametrically."
+            },
+            {
+                question: "Which field commonly uses parametric equations?",
+                options: [
+                    "Computer graphics",
+                    "Engineering",
+                    "Robotics",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Parametric curves are widely used in many scientific and engineering applications."
+            },
+            {
+                question: "Which identity helps eliminate the parameter for x=acos(t), y=asin(t)?",
+                options: [
+                    "sin²(t)+cos²(t)=1",
+                    "tan²(t)+1=sec²(t)",
+                    "1+cot²(t)=csc²(t)",
+                    "e⁰=1"
+                ],
+                answer: "sin²(t)+cos²(t)=1",
+                explanation: "This identity allows cosine and sine to be eliminated."
+            },
+            {
+                question: "If x=t and y=t³, the point moves",
+                options: [
+                    "From left to right as t increases",
+                    "From right to left",
+                    "In a circle",
+                    "Randomly"
+                ],
+                answer: "From left to right as t increases",
+                explanation: "Since x=t, increasing t increases x."
+            },
+            {
+                question: "A table of values is useful because it helps",
+                options: [
+                    "Sketch the parametric curve",
+                    "Differentiate automatically",
+                    "Find integrals",
+                    "Compute limits"
+                ],
+                answer: "Sketch the parametric curve",
+                explanation: "Evaluating several parameter values shows the path of the curve."
+            },
+            {
+                question: "One common mistake when graphing parametric equations is",
+                options: [
+                    "Ignoring the direction of motion",
+                    "Using too many points",
+                    "Using graph paper",
+                    "Labeling axes"
+                ],
+                answer: "Ignoring the direction of motion",
+                explanation: "The orientation is an important part of every parametric graph."
+            },
+            {
+                question: "Which statement about parametric equations is TRUE?",
+                options: [
+                    "Many different parameterizations can represent the same curve.",
+                    "Every curve has only one parameterization.",
+                    "Parametric equations cannot describe circles.",
+                    "Parameters are never time."
+                ],
+                answer: "Many different parameterizations can represent the same curve.",
+                explanation: "A single curve can often be represented by many different parametric equations."
+            }
+
+        ]
+    },
+    "calculus2-parametric-equations-quiz": {
+        title: "Parametric Equations Quiz",
+        subtitle: "Test your understanding of parametric equations and their graphs.",
+
+        body: `
+
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Remember that both x and y depend on the parameter.</li>
+<li>Pay attention to the direction of motion.</li>
+<li>Know how to eliminate the parameter.</li>
+<li>Sketch curves using tables of values when needed.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "Parametric equations express",
+                options: [
+                    "Both x and y as functions of a parameter",
+                    "Only y as a function of x",
+                    "Only x as a function of y",
+                    "Neither x nor y"
+                ],
+                answer: "Both x and y as functions of a parameter",
+                explanation: "Parametric equations define both coordinates using a common parameter."
+            },
+            {
+                question: "The parameter is most commonly represented by",
+                options: [
+                    "t",
+                    "x",
+                    "y",
+                    "r"
+                ],
+                answer: "t",
+                explanation: "The variable t is the standard parameter."
+            },
+            {
+                question: "If x=t and y=t², the Cartesian equation is",
+                options: [
+                    "y=x²",
+                    "x=y²",
+                    "y=2x",
+                    "x²+y²=1"
+                ],
+                answer: "y=x²",
+                explanation: "Since x=t, substitute x for t in y=t²."
+            },
+            {
+                question: "If x=5cos(t) and y=5sin(t), the graph is",
+                options: [
+                    "A circle of radius 5",
+                    "A parabola",
+                    "An ellipse",
+                    "A hyperbola"
+                ],
+                answer: "A circle of radius 5",
+                explanation: "Using sin²(t)+cos²(t)=1 gives x²+y²=25."
+            },
+            {
+                question: "When graphing a parametric curve, arrows indicate",
+                options: [
+                    "The direction of motion",
+                    "The slope",
+                    "The intercepts",
+                    "The center"
+                ],
+                answer: "The direction of motion",
+                explanation: "The parameter determines the orientation of the curve."
+            },
+            {
+                question: "As t increases, the point",
+                options: [
+                    "Moves along the curve",
+                    "Always moves upward",
+                    "Always moves right",
+                    "Remains fixed"
+                ],
+                answer: "Moves along the curve",
+                explanation: "The parameter controls the position of the point."
+            },
+            {
+                question: "To eliminate the parameter, you usually",
+                options: [
+                    "Solve one equation for t and substitute",
+                    "Differentiate both equations",
+                    "Integrate both equations",
+                    "Multiply the equations"
+                ],
+                answer: "Solve one equation for t and substitute",
+                explanation: "This produces an equation involving only x and y."
+            },
+            {
+                question: "Which identity is commonly used when eliminating parameters involving sine and cosine?",
+                options: [
+                    "sin²(t)+cos²(t)=1",
+                    "1+tan²(t)=sec²(t)",
+                    "1+cot²(t)=csc²(t)",
+                    "e⁰=1"
+                ],
+                answer: "sin²(t)+cos²(t)=1",
+                explanation: "This identity converts parametric circles into Cartesian form."
+            },
+            {
+                question: "Projectile motion is commonly represented using",
+                options: [
+                    "Parametric equations",
+                    "Implicit equations",
+                    "Piecewise functions",
+                    "Matrices"
+                ],
+                answer: "Parametric equations",
+                explanation: "Horizontal and vertical positions are naturally functions of time."
+            },
+            {
+                question: "Which profession commonly uses parametric equations?",
+                options: [
+                    "Engineers",
+                    "Computer graphics designers",
+                    "Robotics engineers",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Parametric equations are fundamental in many STEM fields."
+            },
+            {
+                question: "A table of values is useful because it",
+                options: [
+                    "Helps sketch the curve",
+                    "Computes derivatives automatically",
+                    "Finds integrals",
+                    "Determines convergence"
+                ],
+                answer: "Helps sketch the curve",
+                explanation: "Evaluating several values of t shows the path of the curve."
+            },
+            {
+                question: "If x=t and y=t³, the motion is generally",
+                options: [
+                    "From left to right",
+                    "From right to left",
+                    "Clockwise",
+                    "Counterclockwise"
+                ],
+                answer: "From left to right",
+                explanation: "Since x=t, increasing t increases x."
+            },
+            {
+                question: "One common mistake when graphing parametric curves is",
+                options: [
+                    "Ignoring the direction of motion",
+                    "Using graph paper",
+                    "Labeling axes",
+                    "Evaluating several points"
+                ],
+                answer: "Ignoring the direction of motion",
+                explanation: "The orientation is part of every parametric graph."
+            },
+            {
+                question: "Two different parameterizations can",
+                options: [
+                    "Represent the same curve",
+                    "Never represent the same curve",
+                    "Always represent circles",
+                    "Always have different graphs"
+                ],
+                answer: "Represent the same curve",
+                explanation: "Many different parametric equations can trace the same graph."
+            },
+            {
+                question: "The biggest advantage of parametric equations is that they",
+                options: [
+                    "Can describe curves and motion that ordinary functions cannot",
+                    "Always eliminate variables",
+                    "Never require graphing",
+                    "Only represent straight lines"
+                ],
+                answer: "Can describe curves and motion that ordinary functions cannot",
+                explanation: "Parametric equations naturally describe motion and many curves that are difficult or impossible to write as y=f(x)."
+            }
+        ]
+    },
+
+    "calculus2-polar-coordinates": {
+        title: "Polar Coordinates",
+        subtitle: "Represent points using distance and angle instead of x- and y-coordinates.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Understand the polar coordinate system.</li>
+<li>Convert between polar and Cartesian coordinates.</li>
+<li>Plot points in polar coordinates.</li>
+<li>Recognize multiple representations of the same point.</li>
+<li>Understand negative values of r.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>Up to this point, points have been located using rectangular (Cartesian) coordinates.</p>
+
+<p>A point is written as</p>
+
+<p><strong>(x,y)</strong></p>
+
+<p>where x represents horizontal distance and y represents vertical distance.</p>
+
+<p>In many applications, however, it is easier to describe a point using:</p>
+
+<ul>
+<li>Its distance from the origin.</li>
+<li>The angle measured from the positive x-axis.</li>
+</ul>
+
+<p>This is called the <strong>polar coordinate system</strong>.</p>
+
+<hr>
+
+<h2>Polar Coordinates</h2>
+
+<p>A point in polar form is written as</p>
+
+<p><strong>(r, θ)</strong></p>
+
+<ul>
+<li><strong>r</strong> = distance from the origin</li>
+<li><strong>θ</strong> = angle measured counterclockwise from the positive x-axis</li>
+</ul>
+
+<hr>
+
+<h2>Converting Polar to Cartesian</h2>
+
+<p>Use the formulas</p>
+
+<p><strong>
+
+x = r cos(θ)
+
+</strong></p>
+
+<p><strong>
+
+y = r sin(θ)
+
+</strong></p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Convert</p>
+
+<p><strong>(4, π/3)</strong></p>
+
+<p>Compute</p>
+
+<p><strong>
+
+x = 4 cos(π/3)=2
+
+</strong></p>
+
+<p><strong>
+
+y = 4 sin(π/3)=2√3
+
+</strong></p>
+
+<p>Answer:</p>
+
+<p><strong>(2,2√3)</strong></p>
+
+<hr>
+
+<h2>Converting Cartesian to Polar</h2>
+
+<p>Use</p>
+
+<p><strong>
+
+r = √(x²+y²)
+
+</strong></p>
+
+<p><strong>
+
+tan(θ)=y/x
+
+</strong></p>
+
+<p>Then determine the correct quadrant.</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Convert</p>
+
+<p><strong>(3,3)</strong></p>
+
+<p>Compute</p>
+
+<p><strong>
+
+r=√18=3√2
+
+</strong></p>
+
+<p><strong>
+
+θ=π/4
+
+</strong></p>
+
+<p>Answer:</p>
+
+<p><strong>(3√2, π/4)</strong></p>
+
+<hr>
+
+<h2>Negative Radius</h2>
+
+<p>Unlike Cartesian coordinates, polar coordinates allow negative values of r.</p>
+
+<p>If r is negative, move in the opposite direction of the angle.</p>
+
+<p>For example,</p>
+
+<p><strong>
+
+(-2, π/6)
+
+</strong></p>
+
+<p>is the same point as</p>
+
+<p><strong>
+
+(2, 7π/6)
+
+</strong></p>
+
+<hr>
+
+<h2>Equivalent Polar Coordinates</h2>
+
+<p>The same point has infinitely many representations.</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>(3, π/2)</li>
+<li>(3, 5π/2)</li>
+<li>(3, -3π/2)</li>
+<li>(-3, 3π/2)</li>
+</ul>
+
+<p>All represent the same location.</p>
+
+<hr>
+
+<h2>Real-World Applications</h2>
+
+<ul>
+<li>Radar systems</li>
+<li>Navigation</li>
+<li>Astronomy</li>
+<li>Satellite tracking</li>
+<li>Circular motion</li>
+<li>Robotics</li>
+<li>Physics</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Using degrees instead of radians.</li>
+<li>Forgetting to identify the correct quadrant.</li>
+<li>Ignoring negative radius values.</li>
+<li>Assuming each point has only one polar representation.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Polar coordinates use distance and angle.</li>
+<li>Convert using x=r cosθ and y=r sinθ.</li>
+<li>Convert back using r=√(x²+y²).</li>
+<li>Always determine the correct quadrant.</li>
+<li>A single point has infinitely many polar representations.</li>
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                question: "A point in polar coordinates is written as",
+                options: [
+                    "(r, θ)",
+                    "(x, y)",
+                    "(θ, r²)",
+                    "(r², θ)"
+                ],
+                answer: "(r, θ)",
+                explanation: "Polar coordinates use the distance from the origin (r) and the angle (θ)."
+            },
+            {
+                question: "In polar coordinates, r represents",
+                options: [
+                    "The distance from the origin",
+                    "The angle from the x-axis",
+                    "The x-coordinate",
+                    "The y-coordinate"
+                ],
+                answer: "The distance from the origin",
+                explanation: "The value r measures how far the point is from the origin."
+            },
+            {
+                question: "The angle θ is measured from",
+                options: [
+                    "The positive x-axis",
+                    "The positive y-axis",
+                    "The origin",
+                    "The negative x-axis"
+                ],
+                answer: "The positive x-axis",
+                explanation: "By convention, θ is measured counterclockwise from the positive x-axis."
+            },
+            {
+                question: "Which formula converts polar coordinates to x?",
+                options: [
+                    "x = r cos(θ)",
+                    "x = r sin(θ)",
+                    "x = r tan(θ)",
+                    "x = r²"
+                ],
+                answer: "x = r cos(θ)",
+                explanation: "The x-coordinate equals r multiplied by cos(θ)."
+            },
+            {
+                question: "Which formula converts polar coordinates to y?",
+                options: [
+                    "y = r sin(θ)",
+                    "y = r cos(θ)",
+                    "y = r tan(θ)",
+                    "y = r²"
+                ],
+                answer: "y = r sin(θ)",
+                explanation: "The y-coordinate equals r multiplied by sin(θ)."
+            },
+            {
+                question: "To convert Cartesian coordinates to polar coordinates, r equals",
+                options: [
+                    "√(x²+y²)",
+                    "x+y",
+                    "x²+y²",
+                    "tan⁻¹(y/x)"
+                ],
+                answer: "√(x²+y²)",
+                explanation: "The distance from the origin is found using the Pythagorean Theorem."
+            },
+            {
+                question: "After computing tan(θ)=y/x, you must",
+                options: [
+                    "Determine the correct quadrant",
+                    "Always choose θ=π/4",
+                    "Multiply by r",
+                    "Take another square root"
+                ],
+                answer: "Determine the correct quadrant",
+                explanation: "Inverse tangent alone does not determine the correct quadrant."
+            },
+            {
+                question: "The Cartesian coordinates of (4, π/3) are",
+                options: [
+                    "(2, 2√3)",
+                    "(2√3, 2)",
+                    "(4, √3)",
+                    "(√3, 4)"
+                ],
+                answer: "(2, 2√3)",
+                explanation: "x=4cos(π/3)=2 and y=4sin(π/3)=2√3."
+            },
+            {
+                question: "The polar coordinates of (3,3) are",
+                options: [
+                    "(3√2, π/4)",
+                    "(6, π/2)",
+                    "(9, π/3)",
+                    "(3, π/6)"
+                ],
+                answer: "(3√2, π/4)",
+                explanation: "r=√18=3√2 and θ=π/4."
+            },
+            {
+                question: "A negative value of r means",
+                options: [
+                    "Move in the opposite direction of θ",
+                    "The point does not exist",
+                    "The angle must be negative",
+                    "The graph is reflected across the x-axis"
+                ],
+                answer: "Move in the opposite direction of θ",
+                explanation: "A negative radius moves the point in the direction opposite the given angle."
+            },
+            {
+                question: "The point (-2, π/6) is equivalent to",
+                options: [
+                    "(2, 7π/6)",
+                    "(2, π/6)",
+                    "(2, π/3)",
+                    "(2, 5π/6)"
+                ],
+                answer: "(2, 7π/6)",
+                explanation: "Adding π to the angle changes the direction, allowing a positive radius."
+            },
+            {
+                question: "A single point in polar coordinates has",
+                options: [
+                    "Infinitely many representations",
+                    "Exactly one representation",
+                    "Exactly two representations",
+                    "Exactly four representations"
+                ],
+                answer: "Infinitely many representations",
+                explanation: "Adding multiples of 2π or changing the sign of r creates equivalent coordinates."
+            },
+            {
+                question: "Which application commonly uses polar coordinates?",
+                options: [
+                    "Radar systems",
+                    "Astronomy",
+                    "Navigation",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Polar coordinates naturally describe direction and distance."
+            },
+            {
+                question: "A common mistake when converting to polar coordinates is",
+                options: [
+                    "Choosing the wrong quadrant",
+                    "Using addition instead of multiplication",
+                    "Squaring the angle",
+                    "Ignoring x completely"
+                ],
+                answer: "Choosing the wrong quadrant",
+                explanation: "Always verify the signs of x and y when determining θ."
+            },
+            {
+                question: "Which statement about polar coordinates is TRUE?",
+                options: [
+                    "Different polar coordinates can represent the same point.",
+                    "Every point has exactly one polar coordinate.",
+                    "Negative values of r are not allowed.",
+                    "Angles must always be positive."
+                ],
+                answer: "Different polar coordinates can represent the same point.",
+                explanation: "Equivalent angles and negative radii allow multiple valid representations of the same point."
+            }
+
+        ]
+    },
+
+    "calculus2-polar-graphs": {
+        title: "Graphing Polar Equations",
+        subtitle: "Learn how to sketch curves defined in polar coordinates.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Interpret equations written in polar form.</li>
+<li>Sketch common polar graphs.</li>
+<li>Identify symmetry.</li>
+<li>Create tables of values.</li>
+<li>Recognize circles, roses, limacons, cardioids, and lemniscates.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>Instead of graphing points using x and y, polar graphs use</p>
+
+<p><strong>(r, θ)</strong></p>
+
+<p>where</p>
+
+<ul>
+<li>r is the distance from the origin.</li>
+<li>θ is the angle measured from the positive x-axis.</li>
+</ul>
+
+<hr>
+
+<h2>Making a Table</h2>
+
+<p>The easiest way to sketch a polar graph is to evaluate several values of θ.</p>
+
+<table>
+
+<tr>
+<th>θ</th>
+<th>r</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>π/4</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>π/2</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>3π/4</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>π</td>
+<td>2</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Graph</p>
+
+<p><strong>
+
+r=2
+
+</strong></p>
+
+<p>This represents every point that is exactly 2 units from the origin.</p>
+
+<p>The graph is a circle centered at the origin with radius 2.</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Graph</p>
+
+<p><strong>
+
+r=4cos(θ)
+
+</strong></p>
+
+<p>Convert to Cartesian form.</p>
+
+<p>Multiply both sides by r.</p>
+
+<p><strong>
+
+r²=4r cos(θ)
+
+</strong></p>
+
+<p>Using</p>
+
+<p><strong>
+
+r²=x²+y²
+
+</strong></p>
+
+<p><strong>
+
+r cos(θ)=x
+
+</strong></p>
+
+<p>gives</p>
+
+<p><strong>
+
+x²+y²=4x
+
+</strong></p>
+
+<p>Completing the square gives</p>
+
+<p><strong>
+
+(x-2)²+y²=4
+
+</strong></p>
+
+<p>This is a circle centered at (2,0).</p>
+
+<hr>
+
+<h2>Symmetry Tests</h2>
+
+<p>Many polar graphs are symmetric.</p>
+
+<ul>
+<li>Replace θ with −θ.</li>
+<li>Replace θ with π−θ.</li>
+<li>Replace r with −r.</li>
+</ul>
+
+<p>If the equation is unchanged, that symmetry exists.</p>
+
+<hr>
+
+<h2>Rose Curves</h2>
+
+<p>Equations:</p>
+
+<p><strong>
+
+r=a cos(nθ)
+
+</strong></p>
+
+<p>or</p>
+
+<p><strong>
+
+r=a sin(nθ)
+
+</strong></p>
+
+<ul>
+<li>If n is odd → n petals.</li>
+<li>If n is even → 2n petals.</li>
+</ul>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p><strong>
+
+r=3cos(2θ)
+
+</strong></p>
+
+<p>Since n=2 is even, the graph has</p>
+
+<p><strong>4 petals.</strong></p>
+
+<hr>
+
+<h2>Cardioids</h2>
+
+<p>Equations such as</p>
+
+<p><strong>
+
+r=a(1+cosθ)
+
+</strong></p>
+
+<p>or</p>
+
+<p><strong>
+
+r=a(1−sinθ)
+
+</strong></p>
+
+<p>produce heart-shaped curves called cardioids.</p>
+
+<hr>
+
+<h2>Limacons</h2>
+
+<p>General form</p>
+
+<p><strong>
+
+r=a+bcosθ
+
+</strong></p>
+
+<p>or</p>
+
+<p><strong>
+
+r=a+bsinθ
+
+</strong></p>
+
+<p>Different values of a and b produce different shapes.</p>
+
+<hr>
+
+<h2>Lemniscates</h2>
+
+<p>Equations such as</p>
+
+<p><strong>
+
+r²=a²cos(2θ)
+
+</strong></p>
+
+<p>produce figure-eight graphs.</p>
+
+<hr>
+
+<h2>Real-World Applications</h2>
+
+<ul>
+<li>Radar displays</li>
+<li>Satellite communication</li>
+<li>Signal processing</li>
+<li>Antenna design</li>
+<li>Mechanical engineering</li>
+<li>Computer graphics</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Using degrees instead of radians.</li>
+<li>Ignoring negative values of r.</li>
+<li>Sketching too few points.</li>
+<li>Forgetting symmetry.</li>
+<li>Using the wrong petal count for rose curves.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Polar graphs describe curves using distance and angle.</li>
+<li>Tables help produce accurate sketches.</li>
+<li>Symmetry greatly reduces graphing work.</li>
+<li>Recognize the major families of polar curves.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "A polar graph is drawn using",
+                options: [
+                    "Distance and angle",
+                    "Length and width",
+                    "Slope and intercept",
+                    "Height and depth"
+                ],
+                answer: "Distance and angle",
+                explanation: "Polar coordinates locate points using the distance from the origin and an angle."
+            },
+            {
+                question: "The equation r = 2 represents",
+                options: [
+                    "A circle centered at the origin with radius 2",
+                    "A line",
+                    "A parabola",
+                    "A spiral"
+                ],
+                answer: "A circle centered at the origin with radius 2",
+                explanation: "Every point is exactly 2 units from the origin."
+            },
+            {
+                question: "The easiest way to sketch most polar graphs is to",
+                options: [
+                    "Create a table of values",
+                    "Use long division",
+                    "Take derivatives first",
+                    "Find the inverse function"
+                ],
+                answer: "Create a table of values",
+                explanation: "Evaluating several values of θ helps accurately sketch the graph."
+            },
+            {
+                question: "The equation r = 4cos(θ) represents",
+                options: [
+                    "A circle",
+                    "A parabola",
+                    "A hyperbola",
+                    "A straight line"
+                ],
+                answer: "A circle",
+                explanation: "It converts to (x − 2)² + y² = 4, which is a circle."
+            },
+            {
+                question: "The circle represented by r = 4cos(θ) is centered at",
+                options: [
+                    "(2, 0)",
+                    "(0, 2)",
+                    "(4, 0)",
+                    "(0, 4)"
+                ],
+                answer: "(2, 0)",
+                explanation: "Completing the square gives (x − 2)² + y² = 4."
+            },
+            {
+                question: "A graph of the form r = a cos(nθ) is called a",
+                options: [
+                    "Rose curve",
+                    "Cardioid",
+                    "Lemniscate",
+                    "Limacon"
+                ],
+                answer: "Rose curve",
+                explanation: "Equations involving cos(nθ) or sin(nθ) produce rose curves."
+            },
+            {
+                question: "For the rose curve r = 3cos(2θ), the graph has",
+                options: [
+                    "4 petals",
+                    "2 petals",
+                    "3 petals",
+                    "6 petals"
+                ],
+                answer: "4 petals",
+                explanation: "When n is even, a rose curve has 2n petals."
+            },
+            {
+                question: "If n is odd in a rose curve, the graph has",
+                options: [
+                    "n petals",
+                    "2n petals",
+                    "n + 1 petals",
+                    "n² petals"
+                ],
+                answer: "n petals",
+                explanation: "Odd values of n produce exactly n petals."
+            },
+            {
+                question: "Which equation typically produces a cardioid?",
+                options: [
+                    "r = a(1 + cosθ)",
+                    "r = a cos(2θ)",
+                    "r² = a² cos(2θ)",
+                    "r = a"
+                ],
+                answer: "r = a(1 + cosθ)",
+                explanation: "Cardioids have equations such as r = a(1 + cosθ) or r = a(1 − sinθ)."
+            },
+            {
+                question: "A limacon generally has the form",
+                options: [
+                    "r = a + bcosθ",
+                    "r² = a² cos(2θ)",
+                    "r = acos(nθ)",
+                    "r = a"
+                ],
+                answer: "r = a + bcosθ",
+                explanation: "Limacons are commonly written as r = a + bcosθ or r = a + bsinθ."
+            },
+            {
+                question: "The equation r² = a² cos(2θ) represents a",
+                options: [
+                    "Lemniscate",
+                    "Circle",
+                    "Cardioid",
+                    "Rose curve"
+                ],
+                answer: "Lemniscate",
+                explanation: "Lemniscates are figure-eight shaped curves."
+            },
+            {
+                question: "To test symmetry about the polar axis, replace",
+                options: [
+                    "θ with −θ",
+                    "r with −r",
+                    "θ with θ + π",
+                    "r with r²"
+                ],
+                answer: "θ with −θ",
+                explanation: "If the equation remains unchanged, the graph is symmetric about the polar axis."
+            },
+            {
+                question: "One common mistake when graphing polar equations is",
+                options: [
+                    "Ignoring negative values of r",
+                    "Using tables of values",
+                    "Checking symmetry",
+                    "Using radians"
+                ],
+                answer: "Ignoring negative values of r",
+                explanation: "Negative radius values often generate important parts of the graph."
+            },
+            {
+                question: "Polar graphs are widely used in",
+                options: [
+                    "Radar and satellite systems",
+                    "Accounting",
+                    "Word processing",
+                    "Spreadsheet formatting"
+                ],
+                answer: "Radar and satellite systems",
+                explanation: "Polar coordinates naturally describe direction and distance, making them useful in navigation and communication."
+            },
+            {
+                question: "Which statement about polar graphing is TRUE?",
+                options: [
+                    "Recognizing common graph families makes sketching much easier.",
+                    "Every polar graph is a circle.",
+                    "Symmetry is never useful.",
+                    "Tables of values should never be used."
+                ],
+                answer: "Recognizing common graph families makes sketching much easier.",
+                explanation: "Knowing the standard forms of circles, roses, cardioids, limacons, and lemniscates greatly simplifies graphing."
+            }
+
+        ]
+    },
+
+    "calculus2-polar-graphs-quiz": {
+        title: "Graphing Polar Equations Quiz",
+        subtitle: "Test your understanding of graphing equations in polar coordinates.",
+
+        body: `
+
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Identify common polar graph families.</li>
+<li>Recognize symmetry.</li>
+<li>Know the number of petals for rose curves.</li>
+<li>Understand how to sketch graphs using tables of values.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "Polar graphs are drawn using",
+                options: [
+                    "Distance and angle",
+                    "Slope and intercept",
+                    "Length and width",
+                    "x- and y-intercepts"
+                ],
+                answer: "Distance and angle",
+                explanation: "Polar coordinates use the distance from the origin (r) and an angle (θ)."
+            },
+            {
+                question: "The graph of r = 3 is",
+                options: [
+                    "A circle centered at the origin",
+                    "A parabola",
+                    "A line",
+                    "A spiral"
+                ],
+                answer: "A circle centered at the origin",
+                explanation: "Every point is exactly 3 units from the origin."
+            },
+            {
+                question: "The first step when sketching an unfamiliar polar equation is often to",
+                options: [
+                    "Create a table of values",
+                    "Differentiate the equation",
+                    "Integrate the equation",
+                    "Convert everything to Cartesian form"
+                ],
+                answer: "Create a table of values",
+                explanation: "Evaluating several values of θ helps reveal the graph's shape."
+            },
+            {
+                question: "The equation r = 4cos(θ) represents",
+                options: [
+                    "A circle",
+                    "A cardioid",
+                    "A rose curve",
+                    "A lemniscate"
+                ],
+                answer: "A circle",
+                explanation: "It converts to (x − 2)² + y² = 4."
+            },
+            {
+                question: "The circle represented by r = 4cos(θ) has center",
+                options: [
+                    "(2, 0)",
+                    "(0, 2)",
+                    "(4, 0)",
+                    "(0, 4)"
+                ],
+                answer: "(2, 0)",
+                explanation: "Completing the square shows the center is (2, 0)."
+            },
+            {
+                question: "Equations of the form r = a cos(nθ) usually produce",
+                options: [
+                    "Rose curves",
+                    "Circles",
+                    "Parabolas",
+                    "Hyperbolas"
+                ],
+                answer: "Rose curves",
+                explanation: "These equations generate petal-shaped graphs."
+            },
+            {
+                question: "The graph of r = 5sin(3θ) has",
+                options: [
+                    "3 petals",
+                    "5 petals",
+                    "6 petals",
+                    "10 petals"
+                ],
+                answer: "3 petals",
+                explanation: "When n is odd, a rose curve has n petals."
+            },
+            {
+                question: "The graph of r = 2cos(4θ) has",
+                options: [
+                    "8 petals",
+                    "4 petals",
+                    "2 petals",
+                    "16 petals"
+                ],
+                answer: "8 petals",
+                explanation: "When n is even, a rose curve has 2n petals."
+            },
+            {
+                question: "Which equation represents a cardioid?",
+                options: [
+                    "r = a(1 + cosθ)",
+                    "r = acos(3θ)",
+                    "r² = a²cos(2θ)",
+                    "r = 4"
+                ],
+                answer: "r = a(1 + cosθ)",
+                explanation: "Cardioids have the general form r = a(1 ± cosθ) or r = a(1 ± sinθ)."
+            },
+            {
+                question: "Which equation is a limacon?",
+                options: [
+                    "r = a + bcosθ",
+                    "r = acos(2θ)",
+                    "r² = a²cos(2θ)",
+                    "r = a"
+                ],
+                answer: "r = a + bcosθ",
+                explanation: "Limacons have equations of the form r = a + bcosθ or r = a + bsinθ."
+            },
+            {
+                question: "A figure-eight polar graph is called a",
+                options: [
+                    "Lemniscate",
+                    "Rose curve",
+                    "Circle",
+                    "Cardioid"
+                ],
+                answer: "Lemniscate",
+                explanation: "Lemniscates are produced by equations such as r² = a²cos(2θ)."
+            },
+            {
+                question: "To test symmetry about the polar axis, replace",
+                options: [
+                    "θ with −θ",
+                    "r with −r",
+                    "θ with θ + π",
+                    "r with r²"
+                ],
+                answer: "θ with −θ",
+                explanation: "If the equation is unchanged, the graph is symmetric about the polar axis."
+            },
+            {
+                question: "One common graphing mistake is",
+                options: [
+                    "Ignoring negative values of r",
+                    "Using radians",
+                    "Checking symmetry",
+                    "Making a table"
+                ],
+                answer: "Ignoring negative values of r",
+                explanation: "Negative values of r often produce essential parts of the graph."
+            },
+            {
+                question: "Polar graphs are especially useful in",
+                options: [
+                    "Radar and navigation",
+                    "Accounting",
+                    "Grammar",
+                    "History"
+                ],
+                answer: "Radar and navigation",
+                explanation: "Distance and direction are naturally represented in polar coordinates."
+            },
+            {
+                question: "Which statement is TRUE about graphing polar equations?",
+                options: [
+                    "Recognizing common graph families makes sketching much easier.",
+                    "Every polar equation represents a circle.",
+                    "Symmetry is never useful.",
+                    "Tables of values should always be avoided."
+                ],
+                answer: "Recognizing common graph families makes sketching much easier.",
+                explanation: "Knowing the standard forms of circles, roses, cardioids, limacons, and lemniscates makes graphing much more efficient."
+            }
+        ]
+    },
+
+    "calculus2-area-in-polar-coordinates": {
+        title: "Area in Polar Coordinates",
+        subtitle: "Find the area enclosed by curves using polar integration.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Understand why the polar area formula works.</li>
+<li>Use the area formula to find regions enclosed by polar curves.</li>
+<li>Determine appropriate limits of integration.</li>
+<li>Find the area of one petal of a rose curve.</li>
+<li>Find the area between two polar curves.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>In rectangular coordinates, area is often found using</p>
+
+<p><strong>
+
+A = ∫ y dx
+
+</strong></p>
+
+<p>In polar coordinates, the shape of a small region is a sector instead of a rectangle, so a different formula is required.</p>
+
+<hr>
+
+<h2>The Polar Area Formula</h2>
+
+<p>If a curve is described by</p>
+
+<p><strong>
+
+r = f(θ)
+
+</strong></p>
+
+<p>then the area enclosed from θ = a to θ = b is</p>
+
+<p><strong>
+
+A = ½ ∫<sub>a</sub><sup>b</sup> r² dθ
+
+</strong></p>
+
+<p>The factor of ½ comes from the area formula for a sector of a circle.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Find the area inside the circle</p>
+
+<p><strong>
+
+r = 2
+
+</strong></p>
+
+<p>Use</p>
+
+<p><strong>
+
+0 ≤ θ ≤ 2π
+
+</strong></p>
+
+<p>Compute</p>
+
+<p><strong>
+
+A = ½ ∫₀²π 4 dθ
+
+</strong></p>
+
+<p><strong>
+
+= 2(2π)
+
+</strong></p>
+
+<p><strong>
+
+= 4π
+
+</strong></p>
+
+<p>This matches the familiar formula πr².</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Find the area enclosed by</p>
+
+<p><strong>
+
+r = 1 + cos(θ)
+
+</strong></p>
+
+<p>Integrate over one complete revolution:</p>
+
+<p><strong>
+
+0 ≤ θ ≤ 2π
+
+</strong></p>
+
+<p>Use</p>
+
+<p><strong>
+
+A = ½ ∫₀²π (1 + cosθ)² dθ
+
+</strong></p>
+
+<p>Expand, simplify, and integrate.</p>
+
+<hr>
+
+<h2>Area of One Rose Petal</h2>
+
+<p>For rose curves, integrate only over the interval that traces one petal.</p>
+
+<p>Example:</p>
+
+<p><strong>
+
+r = 2cos(2θ)
+
+</strong></p>
+
+<p>One petal is traced for</p>
+
+<p><strong>
+
+−π/4 ≤ θ ≤ π/4
+
+</strong></p>
+
+<p>Use</p>
+
+<p><strong>
+
+A = ½ ∫ r² dθ
+
+</strong></p>
+
+<hr>
+
+<h2>Area Between Two Polar Curves</h2>
+
+<p>If two curves are given by</p>
+
+<p><strong>
+
+r_outer
+
+</strong></p>
+
+<p>and</p>
+
+<p><strong>
+
+r_inner
+
+</strong></p>
+
+<p>then</p>
+
+<p><strong>
+
+A = ½ ∫ (r_outer² − r_inner²) dθ
+
+</strong></p>
+
+<p>This is analogous to the washer method used in Cartesian coordinates.</p>
+
+<hr>
+
+<h2>Choosing the Limits</h2>
+
+<p>The limits of integration should correspond to the portion of the graph being enclosed.</p>
+
+<ul>
+<li>Sketch the graph first.</li>
+<li>Identify where the curve begins and ends.</li>
+<li>Use symmetry whenever possible.</li>
+</ul>
+
+<hr>
+
+<h2>Real-World Applications</h2>
+
+<ul>
+<li>Radar coverage</li>
+<li>Satellite communication regions</li>
+<li>Circular antenna patterns</li>
+<li>Mechanical design</li>
+<li>Computer graphics</li>
+<li>Physics</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Forgetting the factor of ½.</li>
+<li>Using incorrect limits of integration.</li>
+<li>Using r instead of r².</li>
+<li>Integrating over more than one petal unintentionally.</li>
+<li>Choosing the wrong outer and inner curves.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>The polar area formula is A = ½∫r² dθ.</li>
+<li>Always square the radius.</li>
+<li>Choose limits carefully.</li>
+<li>For regions between curves, subtract the squared radii.</li>
+<li>Sketching first usually makes the problem much easier.</li>
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                question: "The formula for the area enclosed by a polar curve is",
+                options: [
+                    "A = ½∫r² dθ",
+                    "A = ∫r dθ",
+                    "A = πr²",
+                    "A = ∫y dx"
+                ],
+                answer: "A = ½∫r² dθ",
+                explanation: "The standard area formula for a polar region is A = ½∫r² dθ."
+            },
+            {
+                question: "The factor ½ appears in the polar area formula because",
+                options: [
+                    "It comes from the area formula for a sector of a circle",
+                    "It simplifies integration",
+                    "It is always needed when squaring r",
+                    "It converts radians to degrees"
+                ],
+                answer: "It comes from the area formula for a sector of a circle",
+                explanation: "The derivation uses the area of a sector, which is ½r²θ."
+            },
+            {
+                question: "When computing polar area, you must integrate",
+                options: [
+                    "r²",
+                    "r",
+                    "√r",
+                    "1/r"
+                ],
+                answer: "r²",
+                explanation: "The radius is always squared in the polar area formula."
+            },
+            {
+                question: "The area inside the circle r = 2 is",
+                options: [
+                    "4π",
+                    "2π",
+                    "8π",
+                    "16π"
+                ],
+                answer: "4π",
+                explanation: "Using A = ½∫₀²π4 dθ gives 4π."
+            },
+            {
+                question: "To find the area enclosed by a cardioid, you usually integrate over",
+                options: [
+                    "One complete revolution",
+                    "Only π/4",
+                    "Only π/2",
+                    "One petal"
+                ],
+                answer: "One complete revolution",
+                explanation: "Integrating from 0 to 2π traces the entire cardioid."
+            },
+            {
+                question: "To find the area of one rose petal, you should",
+                options: [
+                    "Integrate only over the interval that traces one petal",
+                    "Always integrate from 0 to 2π",
+                    "Multiply the total area by two",
+                    "Ignore symmetry"
+                ],
+                answer: "Integrate only over the interval that traces one petal",
+                explanation: "Each petal is traced over a specific interval of θ."
+            },
+            {
+                question: "The formula for the area between two polar curves is",
+                options: [
+                    "A = ½∫(router² − rinner²)dθ",
+                    "A = ∫(router − rinner)dθ",
+                    "A = π(router − rinner)",
+                    "A = ∫(router² + rinner²)dθ"
+                ],
+                answer: "A = ½∫(router² − rinner²)dθ",
+                explanation: "Subtract the square of the inner radius from the square of the outer radius."
+            },
+            {
+                question: "Before setting up a polar area integral, you should first",
+                options: [
+                    "Sketch the graph",
+                    "Differentiate the equation",
+                    "Find the inverse function",
+                    "Convert everything to Cartesian form"
+                ],
+                answer: "Sketch the graph",
+                explanation: "A sketch helps determine the correct limits of integration."
+            },
+            {
+                question: "One common mistake when finding polar area is",
+                options: [
+                    "Forgetting the factor of ½",
+                    "Using radians",
+                    "Sketching the graph",
+                    "Squaring the radius"
+                ],
+                answer: "Forgetting the factor of ½",
+                explanation: "Leaving out the factor of ½ produces an area that is twice as large."
+            },
+            {
+                question: "Another common mistake is",
+                options: [
+                    "Using r instead of r²",
+                    "Using π",
+                    "Sketching too many points",
+                    "Using symmetry"
+                ],
+                answer: "Using r instead of r²",
+                explanation: "The radius must always be squared in the formula."
+            },
+            {
+                question: "The limits of integration should represent",
+                options: [
+                    "The portion of the curve enclosing the desired region",
+                    "Always 0 to 2π",
+                    "Only positive angles",
+                    "The x-coordinates"
+                ],
+                answer: "The portion of the curve enclosing the desired region",
+                explanation: "The interval depends on the region whose area is being calculated."
+            },
+            {
+                question: "The area formula between two curves is analogous to",
+                options: [
+                    "The washer method",
+                    "The midpoint rule",
+                    "The chain rule",
+                    "The quotient rule"
+                ],
+                answer: "The washer method",
+                explanation: "Both formulas subtract the area of the inner region from the outer region."
+            },
+            {
+                question: "Which application commonly uses polar area calculations?",
+                options: [
+                    "Radar coverage analysis",
+                    "Typing documents",
+                    "Balancing equations",
+                    "Word processing"
+                ],
+                answer: "Radar coverage analysis",
+                explanation: "Polar area formulas naturally model regions defined by direction and distance."
+            },
+            {
+                question: "If you accidentally integrate over two petals instead of one, the result will",
+                options: [
+                    "Be larger than the desired area",
+                    "Always be zero",
+                    "Be unchanged",
+                    "Become negative"
+                ],
+                answer: "Be larger than the desired area",
+                explanation: "Integrating over a larger interval includes additional enclosed regions."
+            },
+            {
+                question: "Which statement about polar area is TRUE?",
+                options: [
+                    "Sketching the graph first usually makes choosing the limits much easier.",
+                    "The factor of ½ can always be ignored.",
+                    "The radius should never be squared.",
+                    "Every polar area problem uses limits from 0 to 2π."
+                ],
+                answer: "Sketching the graph first usually makes choosing the limits much easier.",
+                explanation: "A graph helps identify the correct interval and avoids integrating over unwanted regions."
+            }
+
+        ]
+    },
+
+    "calculus2-area-in-polar-coordinates-quiz": {
+        title: "Area in Polar Coordinates Quiz",
+        subtitle: "Test your understanding of finding areas enclosed by polar curves.",
+
+        body: `
+
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Know the polar area formula.</li>
+<li>Choose the correct limits of integration.</li>
+<li>Remember to square the radius.</li>
+<li>Understand how to find the area between two polar curves.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "The formula for the area enclosed by a polar curve is",
+                options: [
+                    "A = ½∫r² dθ",
+                    "A = ∫r dθ",
+                    "A = πr²",
+                    "A = ∫y dx"
+                ],
+                answer: "A = ½∫r² dθ",
+                explanation: "The standard formula for area in polar coordinates is A = ½∫r² dθ."
+            },
+            {
+                question: "In the polar area formula, the variable of integration is",
+                options: [
+                    "θ",
+                    "r",
+                    "x",
+                    "y"
+                ],
+                answer: "θ",
+                explanation: "Polar area is found by integrating with respect to the angle θ."
+            },
+            {
+                question: "Why is the radius squared in the area formula?",
+                options: [
+                    "Because the area of a sector depends on r²",
+                    "To simplify integration",
+                    "To convert to Cartesian coordinates",
+                    "Because every graph is circular"
+                ],
+                answer: "Because the area of a sector depends on r²",
+                explanation: "The formula is derived from the area of a sector, which is proportional to r²."
+            },
+            {
+                question: "The area inside the circle r = 2 is",
+                options: [
+                    "4π",
+                    "2π",
+                    "8π",
+                    "16π"
+                ],
+                answer: "4π",
+                explanation: "Using A = ½∫₀²π4 dθ gives 4π."
+            },
+            {
+                question: "When finding the area of one rose petal, you should",
+                options: [
+                    "Integrate only over the interval tracing one petal",
+                    "Always integrate from 0 to 2π",
+                    "Multiply the final answer by ½",
+                    "Ignore symmetry"
+                ],
+                answer: "Integrate only over the interval tracing one petal",
+                explanation: "Each petal is traced over a specific interval of θ."
+            },
+            {
+                question: "The area between two polar curves is found using",
+                options: [
+                    "A = ½∫(router² − rinner²)dθ",
+                    "A = ∫(router − rinner)dθ",
+                    "A = π(router² − rinner²)",
+                    "A = ∫(router² + rinner²)dθ"
+                ],
+                answer: "A = ½∫(router² − rinner²)dθ",
+                explanation: "Subtract the square of the inner radius from the square of the outer radius."
+            },
+            {
+                question: "Before setting up the integral, you should usually",
+                options: [
+                    "Sketch the graph",
+                    "Differentiate the equation",
+                    "Convert to Cartesian coordinates",
+                    "Find the derivative"
+                ],
+                answer: "Sketch the graph",
+                explanation: "A sketch helps determine the correct interval and identify the enclosed region."
+            },
+            {
+                question: "One common mistake is",
+                options: [
+                    "Forgetting the factor of ½",
+                    "Using radians",
+                    "Sketching the graph",
+                    "Squaring the radius"
+                ],
+                answer: "Forgetting the factor of ½",
+                explanation: "Leaving out the factor of ½ doubles the calculated area."
+            },
+            {
+                question: "Another common mistake is",
+                options: [
+                    "Using r instead of r²",
+                    "Using too many points",
+                    "Checking symmetry",
+                    "Using π"
+                ],
+                answer: "Using r instead of r²",
+                explanation: "The radius must always be squared."
+            },
+            {
+                question: "The limits of integration should correspond to",
+                options: [
+                    "The portion of the curve enclosing the desired region",
+                    "Always 0 to 2π",
+                    "The x-axis",
+                    "The y-axis"
+                ],
+                answer: "The portion of the curve enclosing the desired region",
+                explanation: "Different regions require different intervals of θ."
+            },
+            {
+                question: "The area-between-curves formula is similar to which Cartesian method?",
+                options: [
+                    "Washer method",
+                    "Disk method",
+                    "Substitution",
+                    "Integration by parts"
+                ],
+                answer: "Washer method",
+                explanation: "Both methods subtract the area of the inner region from the outer region."
+            },
+            {
+                question: "Which quantity is integrated in the polar area formula?",
+                options: [
+                    "The square of the radius",
+                    "The radius",
+                    "The angle squared",
+                    "The derivative of the radius"
+                ],
+                answer: "The square of the radius",
+                explanation: "The integrand is always r²."
+            },
+            {
+                question: "Polar area calculations are useful in",
+                options: [
+                    "Radar coverage",
+                    "Satellite communication",
+                    "Antenna design",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Many engineering applications involve regions naturally described using polar coordinates."
+            },
+            {
+                question: "If you accidentally integrate over the entire rose instead of one petal, your answer will",
+                options: [
+                    "Be larger than the desired area",
+                    "Be unchanged",
+                    "Always equal zero",
+                    "Become negative"
+                ],
+                answer: "Be larger than the desired area",
+                explanation: "The integral includes additional petals, increasing the area."
+            },
+            {
+                question: "Which statement about polar area problems is TRUE?",
+                options: [
+                    "Sketching the graph first usually makes the problem much easier.",
+                    "The factor of ½ can be omitted if r is constant.",
+                    "The radius should never be squared.",
+                    "Every problem uses limits from 0 to 2π."
+                ],
+                answer: "Sketching the graph first usually makes the problem much easier.",
+                explanation: "A sketch helps identify the correct interval, symmetry, and enclosed region before integrating."
+            }
+        ]
+    },
+
+    "calculus2-arc-length-polar": {
+        title: "Arc Length in Polar Coordinates",
+        subtitle: "Find the length of curves represented in polar form.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Understand the arc length formula for polar curves.</li>
+<li>Compute the derivative dr/dθ.</li>
+<li>Evaluate arc length integrals.</li>
+<li>Find the length of complete curves and selected portions.</li>
+<li>Recognize when numerical methods are needed.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>Previously, you learned how to find the area enclosed by a polar curve.</p>
+
+<p>Another important quantity is the <strong>length</strong> of the curve itself.</p>
+
+<p>In Cartesian coordinates, arc length uses derivatives with respect to x.</p>
+
+<p>For polar curves, both the radius and the angle affect the distance traveled, leading to a different formula.</p>
+
+<hr>
+
+<h2>The Polar Arc Length Formula</h2>
+
+<p>If a curve is described by</p>
+
+<p><strong>
+
+r = f(θ)
+
+</strong></p>
+
+<p>for</p>
+
+<p><strong>
+
+a ≤ θ ≤ b
+
+</strong></p>
+
+<p>then its arc length is</p>
+
+<p><strong>
+
+L = ∫<sub>a</sub><sup>b</sup> √(r² + (dr/dθ)²) dθ
+
+</strong></p>
+
+<hr>
+
+<h2>Using the Formula</h2>
+
+<p>To compute arc length:</p>
+
+<ol>
+<li>Find r.</li>
+<li>Differentiate to obtain dr/dθ.</li>
+<li>Square both quantities.</li>
+<li>Add them.</li>
+<li>Take the square root.</li>
+<li>Integrate over the given interval.</li>
+</ol>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Find the length of the circle</p>
+
+<p><strong>
+
+r = 3
+
+</strong></p>
+
+<p>Since</p>
+
+<p><strong>
+
+dr/dθ = 0
+
+</strong></p>
+
+<p>the formula becomes</p>
+
+<p><strong>
+
+L = ∫₀²π √9 dθ
+
+</strong></p>
+
+<p><strong>
+
+= ∫₀²π 3 dθ
+
+</strong></p>
+
+<p><strong>
+
+= 6π
+
+</strong></p>
+
+<p>This matches the familiar circumference formula.</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Find the arc length of</p>
+
+<p><strong>
+
+r = 2θ
+
+</strong></p>
+
+<p>over</p>
+
+<p><strong>
+
+0 ≤ θ ≤ π
+
+</strong></p>
+
+<p>Compute</p>
+
+<p><strong>
+
+dr/dθ = 2
+
+</strong></p>
+
+<p>The integrand becomes</p>
+
+<p><strong>
+
+√(4θ² + 4)
+
+</strong></p>
+
+<p>Then evaluate the definite integral.</p>
+
+<hr>
+
+<h2>Numerical Integration</h2>
+
+<p>Many arc length integrals cannot be evaluated exactly.</p>
+
+<p>In these cases, numerical methods such as calculators or computer software are commonly used.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+<li>Designing roads and railways</li>
+<li>Robot path planning</li>
+<li>Satellite trajectories</li>
+<li>Mechanical engineering</li>
+<li>Computer graphics</li>
+<li>Physics</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Forgetting to differentiate r.</li>
+<li>Using r instead of r².</li>
+<li>Forgetting to square dr/dθ.</li>
+<li>Using incorrect limits of integration.</li>
+<li>Making algebra mistakes while simplifying the square root.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>The polar arc length formula is L = ∫√(r² + (dr/dθ)²)dθ.</li>
+<li>Differentiate r with respect to θ before substituting.</li>
+<li>Square both r and dr/dθ.</li>
+<li>Many problems require numerical integration.</li>
+<li>Always check the interval of integration carefully.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "The formula for the arc length of a polar curve is",
+                options: [
+                    "L = ∫√(r² + (dr/dθ)²)dθ",
+                    "L = ∫r² dθ",
+                    "L = ∫√(1 + (dy/dx)²)dx",
+                    "L = 2πr"
+                ],
+                answer: "L = ∫√(r² + (dr/dθ)²)dθ",
+                explanation: "This is the standard arc length formula for curves expressed in polar coordinates."
+            },
+            {
+                question: "Before applying the polar arc length formula, you must first",
+                options: [
+                    "Differentiate r with respect to θ",
+                    "Convert to Cartesian coordinates",
+                    "Integrate r",
+                    "Square θ"
+                ],
+                answer: "Differentiate r with respect to θ",
+                explanation: "The formula requires both r and dr/dθ."
+            },
+            {
+                question: "If r = 3, then dr/dθ equals",
+                options: [
+                    "0",
+                    "3",
+                    "1",
+                    "θ"
+                ],
+                answer: "0",
+                explanation: "The derivative of a constant is zero."
+            },
+            {
+                question: "The circumference of the circle r = 3 is",
+                options: [
+                    "6π",
+                    "3π",
+                    "9π",
+                    "12π"
+                ],
+                answer: "6π",
+                explanation: "The arc length formula gives L = ∫₀²π3 dθ = 6π."
+            },
+            {
+                question: "If r = 2θ, then dr/dθ equals",
+                options: [
+                    "2",
+                    "θ",
+                    "2θ",
+                    "4"
+                ],
+                answer: "2",
+                explanation: "The derivative of 2θ with respect to θ is 2."
+            },
+            {
+                question: "The quantity inside the square root is",
+                options: [
+                    "r² + (dr/dθ)²",
+                    "r + dr/dθ",
+                    "r² − (dr/dθ)²",
+                    "(r + θ)²"
+                ],
+                answer: "r² + (dr/dθ)²",
+                explanation: "Both quantities are squared and added before taking the square root."
+            },
+            {
+                question: "Which quantity is integrated to find polar arc length?",
+                options: [
+                    "√(r² + (dr/dθ)²)",
+                    "r²",
+                    "dr/dθ",
+                    "θ²"
+                ],
+                answer: "√(r² + (dr/dθ)²)",
+                explanation: "This expression represents the infinitesimal arc length element."
+            },
+            {
+                question: "Many polar arc length problems require",
+                options: [
+                    "Numerical integration",
+                    "No calculus",
+                    "Matrix multiplication",
+                    "Partial fractions"
+                ],
+                answer: "Numerical integration",
+                explanation: "Many arc length integrals cannot be evaluated exactly."
+            },
+            {
+                question: "One common mistake is",
+                options: [
+                    "Forgetting to differentiate r",
+                    "Using radians",
+                    "Sketching the graph",
+                    "Using symmetry"
+                ],
+                answer: "Forgetting to differentiate r",
+                explanation: "The derivative is required in every polar arc length calculation."
+            },
+            {
+                question: "Another common mistake is",
+                options: [
+                    "Forgetting to square dr/dθ",
+                    "Using π",
+                    "Sketching first",
+                    "Differentiating correctly"
+                ],
+                answer: "Forgetting to square dr/dθ",
+                explanation: "Both r and dr/dθ must be squared before adding."
+            },
+            {
+                question: "The interval of integration should correspond to",
+                options: [
+                    "The portion of the curve whose length is required",
+                    "Always 0 to 2π",
+                    "Only positive values of r",
+                    "Only one revolution"
+                ],
+                answer: "The portion of the curve whose length is required",
+                explanation: "The limits depend on the specific section of the curve."
+            },
+            {
+                question: "Which application commonly uses polar arc length?",
+                options: [
+                    "Robot path planning",
+                    "Road design",
+                    "Satellite trajectories",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Arc length calculations are important whenever the distance traveled along a curved path is needed."
+            },
+            {
+                question: "If r is constant, the arc length formula simplifies because",
+                options: [
+                    "dr/dθ = 0",
+                    "r = 0",
+                    "θ = 0",
+                    "The square root disappears completely"
+                ],
+                answer: "dr/dθ = 0",
+                explanation: "A constant radius has zero derivative, simplifying the integrand."
+            },
+            {
+                question: "Before evaluating a polar arc length integral, you should",
+                options: [
+                    "Simplify the expression inside the square root whenever possible",
+                    "Differentiate the integral",
+                    "Convert to degrees",
+                    "Ignore constants"
+                ],
+                answer: "Simplify the expression inside the square root whenever possible",
+                explanation: "Simplifying first often makes the integral much easier to evaluate."
+            },
+            {
+                question: "Which statement about polar arc length is TRUE?",
+                options: [
+                    "Many arc length integrals cannot be evaluated exactly and require numerical methods.",
+                    "Every polar arc length problem has a simple antiderivative.",
+                    "The derivative dr/dθ is never needed.",
+                    "The square root can always be removed before integrating."
+                ],
+                answer: "Many arc length integrals cannot be evaluated exactly and require numerical methods.",
+                explanation: "Unlike many area problems, arc length integrals frequently require numerical approximation."
+            }
+
+        ]
+    },
+
+    "calculus2-arc-length-polar-quiz": {
+        title: "Arc Length in Polar Coordinates Quiz",
+        subtitle: "Test your understanding of finding the length of curves in polar coordinates.",
+
+        body: `
+
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Know the polar arc length formula.</li>
+<li>Compute dr/dθ correctly.</li>
+<li>Simplify the integrand before integrating.</li>
+<li>Recognize when numerical integration is required.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "The formula for the arc length of a polar curve is",
+                options: [
+                    "L = ∫√(r² + (dr/dθ)²)dθ",
+                    "L = ½∫r²dθ",
+                    "L = ∫√(1 + (dy/dx)²)dx",
+                    "L = 2πr"
+                ],
+                answer: "L = ∫√(r² + (dr/dθ)²)dθ",
+                explanation: "This is the standard arc length formula for curves expressed in polar coordinates."
+            },
+            {
+                question: "Before using the polar arc length formula, you must calculate",
+                options: [
+                    "dr/dθ",
+                    "dy/dx",
+                    "dx/dy",
+                    "r²"
+                ],
+                answer: "dr/dθ",
+                explanation: "The formula requires both r and its derivative with respect to θ."
+            },
+            {
+                question: "If r = 5, then dr/dθ equals",
+                options: [
+                    "0",
+                    "5",
+                    "1",
+                    "θ"
+                ],
+                answer: "0",
+                explanation: "The derivative of a constant is zero."
+            },
+            {
+                question: "The circumference of the circle r = 5 is",
+                options: [
+                    "10π",
+                    "5π",
+                    "25π",
+                    "20π"
+                ],
+                answer: "10π",
+                explanation: "Using the arc length formula gives L = ∫₀²π5 dθ = 10π."
+            },
+            {
+                question: "If r = 4θ, then dr/dθ equals",
+                options: [
+                    "4",
+                    "θ",
+                    "4θ",
+                    "8"
+                ],
+                answer: "4",
+                explanation: "Differentiate 4θ with respect to θ."
+            },
+            {
+                question: "Inside the square root of the polar arc length formula is",
+                options: [
+                    "r² + (dr/dθ)²",
+                    "r + dr/dθ",
+                    "r² − (dr/dθ)²",
+                    "θ² + r²"
+                ],
+                answer: "r² + (dr/dθ)²",
+                explanation: "Both quantities are squared before being added."
+            },
+            {
+                question: "The variable of integration in the polar arc length formula is",
+                options: [
+                    "θ",
+                    "r",
+                    "x",
+                    "y"
+                ],
+                answer: "θ",
+                explanation: "Polar arc length is integrated with respect to θ."
+            },
+            {
+                question: "Many polar arc length integrals require",
+                options: [
+                    "Numerical integration",
+                    "Long division",
+                    "Partial fractions",
+                    "No integration"
+                ],
+                answer: "Numerical integration",
+                explanation: "Many arc length integrals do not have elementary antiderivatives."
+            },
+            {
+                question: "A common mistake is",
+                options: [
+                    "Forgetting to differentiate r",
+                    "Using radians",
+                    "Sketching the graph",
+                    "Checking the interval"
+                ],
+                answer: "Forgetting to differentiate r",
+                explanation: "The derivative is an essential part of the formula."
+            },
+            {
+                question: "Another common mistake is",
+                options: [
+                    "Forgetting to square dr/dθ",
+                    "Using π",
+                    "Writing θ in radians",
+                    "Simplifying first"
+                ],
+                answer: "Forgetting to square dr/dθ",
+                explanation: "Both r and dr/dθ must be squared before adding."
+            },
+            {
+                question: "The limits of integration should represent",
+                options: [
+                    "The portion of the curve whose length is desired",
+                    "Always 0 to 2π",
+                    "Only positive values of θ",
+                    "Only one revolution"
+                ],
+                answer: "The portion of the curve whose length is desired",
+                explanation: "Choose limits that trace exactly the section of the curve being measured."
+            },
+            {
+                question: "Which application commonly uses polar arc length calculations?",
+                options: [
+                    "Robot path planning",
+                    "Road and railway design",
+                    "Satellite trajectories",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Arc length is useful whenever the distance traveled along a curved path must be determined."
+            },
+            {
+                question: "If r is constant, the integrand simplifies because",
+                options: [
+                    "dr/dθ = 0",
+                    "r = 0",
+                    "θ = 0",
+                    "The square root always equals 1"
+                ],
+                answer: "dr/dθ = 0",
+                explanation: "A constant radius has zero derivative, simplifying the integrand."
+            },
+            {
+                question: "Before evaluating the integral, it is often helpful to",
+                options: [
+                    "Simplify the expression inside the square root",
+                    "Convert everything to Cartesian coordinates",
+                    "Differentiate twice",
+                    "Convert radians to degrees"
+                ],
+                answer: "Simplify the expression inside the square root",
+                explanation: "Algebraic simplification can make the integral easier to evaluate."
+            },
+            {
+                question: "Which statement about polar arc length is TRUE?",
+                options: [
+                    "Many arc length problems require numerical methods because an elementary antiderivative does not exist.",
+                    "Every polar arc length integral can be evaluated exactly.",
+                    "The derivative dr/dθ is optional.",
+                    "The square root is never necessary."
+                ],
+                answer: "Many arc length problems require numerical methods because an elementary antiderivative does not exist.",
+                explanation: "Unlike many basic integration problems, polar arc length integrals often require numerical approximation."
+            }
+        ]
+    },
+
+    "calculus2-unit8-review": {
+        title: "Unit 8 Review",
+        subtitle: "Review Parametric Equations and Polar Coordinates.",
+
+        body: `
+
+<h2>Unit 8 Overview</h2>
+
+<p>This unit introduced two new ways of representing curves:</p>
+
+<ul>
+<li>Parametric equations</li>
+<li>Polar coordinates</li>
+</ul>
+
+<p>Instead of expressing y directly as a function of x, these systems allow much more flexibility when describing curves, motion, and circular behavior.</p>
+
+<hr>
+
+<h2>Parametric Equations</h2>
+
+<ul>
+<li>Represent x and y using a parameter t.</li>
+<li>Commonly used to describe motion.</li>
+<li>Eliminate the parameter when converting to Cartesian form.</li>
+<li>Always indicate the direction of motion.</li>
+<li>Different parameterizations may describe the same curve.</li>
+</ul>
+
+<hr>
+
+<h2>Polar Coordinates</h2>
+
+<ul>
+<li>Represent points as (r, θ).</li>
+<li>r measures distance from the origin.</li>
+<li>θ measures angle from the positive x-axis.</li>
+<li>A point has infinitely many equivalent polar representations.</li>
+<li>Negative values of r are allowed.</li>
+</ul>
+
+<hr>
+
+<h2>Coordinate Conversion</h2>
+
+<p>Know these formulas:</p>
+
+<table>
+
+<tr>
+<th>Conversion</th>
+<th>Formula</th>
+</tr>
+
+<tr>
+<td>Polar → Cartesian</td>
+<td>x=r cosθ, y=r sinθ</td>
+</tr>
+
+<tr>
+<td>Cartesian → Polar</td>
+<td>r=√(x²+y²)</td>
+</tr>
+
+<tr>
+<td>Angle</td>
+<td>tanθ=y/x (check quadrant)</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Graphing Polar Equations</h2>
+
+<ul>
+<li>Use tables of values.</li>
+<li>Check symmetry.</li>
+<li>Recognize standard graph families.</li>
+<li>Know petal counts for rose curves.</li>
+</ul>
+
+<p>Common graphs include:</p>
+
+<ul>
+<li>Circles</li>
+<li>Rose curves</li>
+<li>Cardioids</li>
+<li>Limacons</li>
+<li>Lemniscates</li>
+</ul>
+
+<hr>
+
+<h2>Area in Polar Coordinates</h2>
+
+<p>The area formula is</p>
+
+<p><strong>
+
+A = ½∫r² dθ
+
+</strong></p>
+
+<ul>
+<li>Always square the radius.</li>
+<li>Choose limits carefully.</li>
+<li>Sketch first whenever possible.</li>
+<li>For regions between curves, subtract squared radii.</li>
+</ul>
+
+<hr>
+
+<h2>Arc Length in Polar Coordinates</h2>
+
+<p>The arc length formula is</p>
+
+<p><strong>
+
+L = ∫√(r² + (dr/dθ)²)dθ
+
+</strong></p>
+
+<ul>
+<li>Differentiate r first.</li>
+<li>Square both terms.</li>
+<li>Simplify before integrating.</li>
+<li>Many problems require numerical integration.</li>
+</ul>
+
+<hr>
+
+<h2>Exam Tips</h2>
+
+<ul>
+<li>Know every major formula from memory.</li>
+<li>Sketch graphs before integrating.</li>
+<li>Always determine the correct interval.</li>
+<li>Use symmetry whenever possible.</li>
+<li>Watch for negative values of r.</li>
+<li>Remember that multiple polar coordinates can represent the same point.</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Ignoring direction of motion for parametric curves.</li>
+<li>Using the wrong quadrant when converting coordinates.</li>
+<li>Using r instead of r² in area problems.</li>
+<li>Forgetting the factor of ½.</li>
+<li>Forgetting to compute dr/dθ in arc length problems.</li>
+<li>Integrating over the wrong interval.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Parametric equations describe curves using a parameter.</li>
+<li>Polar coordinates describe points using distance and angle.</li>
+<li>Recognize common polar graph families quickly.</li>
+<li>Know both the polar area and arc length formulas.</li>
+<li>Sketch first and choose limits carefully.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "Parametric equations express",
+                options: [
+                    "Both x and y as functions of a parameter",
+                    "Only y as a function of x",
+                    "Only x as a function of y",
+                    "Only r as a function of θ"
+                ],
+                answer: "Both x and y as functions of a parameter",
+                explanation: "Parametric equations define both coordinates using a common parameter, usually t."
+            },
+            {
+                question: "The most common parameter used in parametric equations is",
+                options: [
+                    "t",
+                    "x",
+                    "y",
+                    "r"
+                ],
+                answer: "t",
+                explanation: "The variable t commonly represents time or another independent parameter."
+            },
+            {
+                question: "Polar coordinates are written in the form",
+                options: [
+                    "(r, θ)",
+                    "(x, y)",
+                    "(θ, r²)",
+                    "(r², θ)"
+                ],
+                answer: "(r, θ)",
+                explanation: "Polar coordinates consist of a radius and an angle."
+            },
+            {
+                question: "The formula for converting polar coordinates to Cartesian x is",
+                options: [
+                    "x = r cosθ",
+                    "x = r sinθ",
+                    "x = r tanθ",
+                    "x = r²"
+                ],
+                answer: "x = r cosθ",
+                explanation: "Multiply the radius by the cosine of the angle."
+            },
+            {
+                question: "The formula for converting polar coordinates to Cartesian y is",
+                options: [
+                    "y = r sinθ",
+                    "y = r cosθ",
+                    "y = r tanθ",
+                    "y = r²"
+                ],
+                answer: "y = r sinθ",
+                explanation: "Multiply the radius by the sine of the angle."
+            },
+            {
+                question: "The formula for converting Cartesian coordinates to polar radius is",
+                options: [
+                    "r = √(x² + y²)",
+                    "r = x + y",
+                    "r = x² + y²",
+                    "r = tan⁻¹(y/x)"
+                ],
+                answer: "r = √(x² + y²)",
+                explanation: "Use the Pythagorean Theorem to find the distance from the origin."
+            },
+            {
+                question: "When finding θ from Cartesian coordinates, you must always",
+                options: [
+                    "Determine the correct quadrant",
+                    "Use only positive angles",
+                    "Ignore the signs of x and y",
+                    "Assume θ = π/4"
+                ],
+                answer: "Determine the correct quadrant",
+                explanation: "Inverse tangent alone does not identify the correct quadrant."
+            },
+            {
+                question: "A negative value of r means",
+                options: [
+                    "Move in the opposite direction of the given angle",
+                    "The point is invalid",
+                    "The angle must also be negative",
+                    "The graph is reflected over the x-axis"
+                ],
+                answer: "Move in the opposite direction of the given angle",
+                explanation: "Negative radii represent the same point by moving in the opposite direction."
+            },
+            {
+                question: "A rose curve with n = 5 has",
+                options: [
+                    "5 petals",
+                    "10 petals",
+                    "25 petals",
+                    "2 petals"
+                ],
+                answer: "5 petals",
+                explanation: "When n is odd, a rose curve has n petals."
+            },
+            {
+                question: "A rose curve with n = 4 has",
+                options: [
+                    "8 petals",
+                    "4 petals",
+                    "16 petals",
+                    "2 petals"
+                ],
+                answer: "8 petals",
+                explanation: "When n is even, a rose curve has 2n petals."
+            },
+            {
+                question: "The formula for the area enclosed by a polar curve is",
+                options: [
+                    "A = ½∫r² dθ",
+                    "A = ∫r dθ",
+                    "A = ∫√(r²)dθ",
+                    "A = πr²"
+                ],
+                answer: "A = ½∫r² dθ",
+                explanation: "Always square the radius and include the factor of ½."
+            },
+            {
+                question: "The formula for the arc length of a polar curve is",
+                options: [
+                    "L = ∫√(r² + (dr/dθ)²)dθ",
+                    "L = ½∫r²dθ",
+                    "L = ∫√(1+(dy/dx)²)dx",
+                    "L = 2πr"
+                ],
+                answer: "L = ∫√(r² + (dr/dθ)²)dθ",
+                explanation: "The integrand contains both the radius and its derivative."
+            },
+            {
+                question: "Which quantity must be calculated before using the polar arc length formula?",
+                options: [
+                    "dr/dθ",
+                    "dx/dy",
+                    "dy/dx",
+                    "r²"
+                ],
+                answer: "dr/dθ",
+                explanation: "Differentiate the radius with respect to θ before substituting into the formula."
+            },
+            {
+                question: "One of the best strategies before solving a polar integration problem is to",
+                options: [
+                    "Sketch the graph",
+                    "Convert everything to Cartesian coordinates",
+                    "Use degrees instead of radians",
+                    "Ignore symmetry"
+                ],
+                answer: "Sketch the graph",
+                explanation: "Sketching helps identify symmetry and the correct interval of integration."
+            },
+            {
+                question: "Which statement best summarizes Unit 8?",
+                options: [
+                    "Parametric and polar systems provide powerful ways to represent and analyze curves that are difficult to describe using ordinary Cartesian equations.",
+                    "Every parametric curve can only be represented one way.",
+                    "Polar coordinates replace Cartesian coordinates in all applications.",
+                    "Area and arc length formulas in polar coordinates are identical."
+                ],
+                answer: "Parametric and polar systems provide powerful ways to represent and analyze curves that are difficult to describe using ordinary Cartesian equations.",
+                explanation: "Unit 8 introduced alternative coordinate systems and techniques that simplify modeling, graphing, and integration for many important curves."
+            }
+
+        ]
+    },
+
+    "calculus2-unit8-test": {
+        title: "Unit 8 Test",
+        subtitle: "Comprehensive assessment covering Parametric Equations and Polar Coordinates.",
+
+        body: `
+
+<h2>Unit 8 Test Instructions</h2>
+
+<p>This assessment covers every major topic from Unit 8.</p>
+
+<ul>
+<li>Parametric equations</li>
+<li>Polar coordinates</li>
+<li>Coordinate conversions</li>
+<li>Graphing polar equations</li>
+<li>Area in polar coordinates</li>
+<li>Arc length in polar coordinates</li>
+</ul>
+
+<p>Select the best answer for each question.</p>
+
+`,
+
+        questions: [
+            {
+                question: "A parametric curve is defined by",
+                options: [
+                    "Two equations involving a parameter",
+                    "One equation only",
+                    "A table of values only",
+                    "A single polar equation"
+                ],
+                answer: "Two equations involving a parameter",
+                explanation: "Parametric equations define both x and y using a common parameter."
+            },
+            {
+                question: "If x=t and y=t², the Cartesian equation is",
+                options: [
+                    "y=x²",
+                    "x=y²",
+                    "y=2x",
+                    "x²+y²=1"
+                ],
+                answer: "y=x²",
+                explanation: "Substitute x=t into y=t²."
+            },
+            {
+                question: "Polar coordinates are written as",
+                options: [
+                    "(r, θ)",
+                    "(x, y)",
+                    "(θ, r²)",
+                    "(r², θ)"
+                ],
+                answer: "(r, θ)",
+                explanation: "Polar coordinates consist of a radius and an angle."
+            },
+            {
+                question: "The formula x = r cosθ converts",
+                options: [
+                    "Polar coordinates to Cartesian coordinates",
+                    "Cartesian coordinates to polar coordinates",
+                    "Parametric equations to polar form",
+                    "Cartesian equations to parametric form"
+                ],
+                answer: "Polar coordinates to Cartesian coordinates",
+                explanation: "Multiply the radius by cosθ to obtain the x-coordinate."
+            },
+            {
+                question: "The radius in polar coordinates is computed by",
+                options: [
+                    "r = √(x²+y²)",
+                    "r = x+y",
+                    "r = x²+y²",
+                    "r = tan⁻¹(y/x)"
+                ],
+                answer: "r = √(x²+y²)",
+                explanation: "The distance from the origin is found using the Pythagorean Theorem."
+            },
+            {
+                question: "The equation r=2 represents",
+                options: [
+                    "A circle centered at the origin",
+                    "A parabola",
+                    "A line",
+                    "A spiral"
+                ],
+                answer: "A circle centered at the origin",
+                explanation: "Every point is exactly 2 units from the origin."
+            },
+            {
+                question: "A rose curve with n=6 has",
+                options: [
+                    "12 petals",
+                    "6 petals",
+                    "3 petals",
+                    "18 petals"
+                ],
+                answer: "12 petals",
+                explanation: "If n is even, the rose curve has 2n petals."
+            },
+            {
+                question: "Which equation represents a cardioid?",
+                options: [
+                    "r=a(1+cosθ)",
+                    "r=a cos(2θ)",
+                    "r²=a²cos(2θ)",
+                    "r=4"
+                ],
+                answer: "r=a(1+cosθ)",
+                explanation: "Cardioids have the form r=a(1±cosθ) or r=a(1±sinθ)."
+            },
+            {
+                question: "The formula for area in polar coordinates is",
+                options: [
+                    "A=½∫r² dθ",
+                    "A=∫r dθ",
+                    "A=πr²",
+                    "A=∫√(r²)dθ"
+                ],
+                answer: "A=½∫r² dθ",
+                explanation: "Always square the radius and include the factor of one-half."
+            },
+            {
+                question: "To find the area between two polar curves, you subtract",
+                options: [
+                    "The squared inner radius from the squared outer radius",
+                    "The radii directly",
+                    "The derivatives",
+                    "The angles"
+                ],
+                answer: "The squared inner radius from the squared outer radius",
+                explanation: "The formula is A=½∫(router²−rinner²)dθ."
+            },
+            {
+                question: "The formula for polar arc length is",
+                options: [
+                    "L=∫√(r²+(dr/dθ)²)dθ",
+                    "L=½∫r²dθ",
+                    "L=∫r dθ",
+                    "L=2πr"
+                ],
+                answer: "L=∫√(r²+(dr/dθ)²)dθ",
+                explanation: "This is the standard arc length formula for polar curves."
+            },
+            {
+                question: "Before applying the arc length formula, you must compute",
+                options: [
+                    "dr/dθ",
+                    "dy/dx",
+                    "dx/dθ",
+                    "d²r/dθ²"
+                ],
+                answer: "dr/dθ",
+                explanation: "Differentiate the radius with respect to θ."
+            },
+            {
+                question: "A negative value of r means",
+                options: [
+                    "Move in the opposite direction of the given angle",
+                    "The point is undefined",
+                    "The graph disappears",
+                    "The angle must also be negative"
+                ],
+                answer: "Move in the opposite direction of the given angle",
+                explanation: "Negative radii represent the same point using the opposite direction."
+            },
+            {
+                question: "Before solving most polar integration problems, it is best to",
+                options: [
+                    "Sketch the graph",
+                    "Differentiate twice",
+                    "Convert to degrees",
+                    "Ignore symmetry"
+                ],
+                answer: "Sketch the graph",
+                explanation: "A sketch helps identify the correct limits and enclosed region."
+            },
+            {
+                question: "Which statement about polar coordinates is TRUE?",
+                options: [
+                    "A single point can have infinitely many polar representations.",
+                    "Every point has exactly one polar representation.",
+                    "Negative values of r are not allowed.",
+                    "Angles must always be positive."
+                ],
+                answer: "A single point can have infinitely many polar representations.",
+                explanation: "Equivalent angles and negative radii produce multiple valid representations of the same point."
+            },
+            {
+                question: "Which graph family has a figure-eight shape?",
+                options: [
+                    "Lemniscate",
+                    "Cardioid",
+                    "Rose curve",
+                    "Circle"
+                ],
+                answer: "Lemniscate",
+                explanation: "Lemniscates are produced by equations such as r²=a²cos(2θ)."
+            },
+            {
+                question: "A common mistake in polar area problems is",
+                options: [
+                    "Forgetting the factor of ½",
+                    "Differentiating r",
+                    "Sketching the graph",
+                    "Checking symmetry"
+                ],
+                answer: "Forgetting the factor of ½",
+                explanation: "Omitting the factor of one-half doubles the computed area."
+            },
+            {
+                question: "Many polar arc length problems require",
+                options: [
+                    "Numerical integration",
+                    "No integration",
+                    "Partial fractions",
+                    "Long division"
+                ],
+                answer: "Numerical integration",
+                explanation: "Many arc length integrals do not have elementary antiderivatives."
+            },
+            {
+                question: "Which topic was NOT covered in Unit 8?",
+                options: [
+                    "Taylor Series",
+                    "Polar Coordinates",
+                    "Parametric Equations",
+                    "Arc Length in Polar Coordinates"
+                ],
+                answer: "Taylor Series",
+                explanation: "Taylor Series was covered in Unit 7, while Unit 8 focused on parametric and polar topics."
+            },
+            {
+                question: "The main purpose of Unit 8 is to teach students how to",
+                options: [
+                    "Represent, graph, and analyze curves using parametric equations and polar coordinates",
+                    "Solve differential equations",
+                    "Study infinite series",
+                    "Evaluate improper integrals"
+                ],
+                answer: "Represent, graph, and analyze curves using parametric equations and polar coordinates",
+                explanation: "Unit 8 introduces alternative coordinate systems and integration techniques for describing and analyzing curves."
+            }
+        ]
+    },
+
+    "calculus2-functions-of-several-variables": {
+        title: "Functions of Several Variables",
+        subtitle: "Extend functions from two dimensions into three-dimensional space.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Understand functions of two variables.</li>
+<li>Evaluate multivariable functions.</li>
+<li>Determine the domain of a multivariable function.</li>
+<li>Interpret level curves.</li>
+<li>Visualize three-dimensional surfaces.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>Until now, most functions have depended on a single variable.</p>
+
+<p>For example,</p>
+
+<p><strong>
+
+y = x²
+
+</strong></p>
+
+<p>depends only on x.</p>
+
+<p>Many real-world problems depend on multiple independent variables.</p>
+
+<p>Examples include:</p>
+
+<ul>
+<li>Temperature depending on latitude and longitude.</li>
+<li>Profit depending on price and demand.</li>
+<li>Elevation depending on horizontal position.</li>
+<li>Pressure depending on position in space.</li>
+</ul>
+
+<p>These are called <strong>functions of several variables</strong>.</p>
+
+<hr>
+
+<h2>Functions of Two Variables</h2>
+
+<p>A function of two variables is written as</p>
+
+<p><strong>
+
+z = f(x,y)
+
+</strong></p>
+
+<p>where</p>
+
+<ul>
+<li>x is an independent variable.</li>
+<li>y is another independent variable.</li>
+<li>z is the output.</li>
+</ul>
+
+<p>Each ordered pair (x,y) produces exactly one value of z.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Given</p>
+
+<p><strong>
+
+f(x,y)=x²+y²
+
+</strong></p>
+
+<p>Find</p>
+
+<p><strong>
+
+f(2,3)
+
+</strong></p>
+
+<p>Compute</p>
+
+<p><strong>
+
+2²+3²=4+9=13
+
+</strong></p>
+
+<p>Answer:</p>
+
+<p><strong>
+
+13
+
+</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Given</p>
+
+<p><strong>
+
+f(x,y)=3x−2y
+
+</strong></p>
+
+<p>Find</p>
+
+<p><strong>
+
+f(4,5)
+
+</strong></p>
+
+<p>Compute</p>
+
+<p><strong>
+
+3(4)-2(5)=12-10=2
+
+</strong></p>
+
+<hr>
+
+<h2>The Domain</h2>
+
+<p>The domain consists of every pair (x,y) for which the formula is defined.</p>
+
+<p>Restrictions may come from:</p>
+
+<ul>
+<li>Square roots</li>
+<li>Denominators</li>
+<li>Logarithms</li>
+</ul>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p>Find the domain of</p>
+
+<p><strong>
+
+f(x,y)=√(9−x²−y²)
+
+</strong></p>
+
+<p>The expression inside the square root must satisfy</p>
+
+<p><strong>
+
+9−x²−y² ≥ 0
+
+</strong></p>
+
+<p>Therefore</p>
+
+<p><strong>
+
+x²+y² ≤ 9
+
+</strong></p>
+
+<p>The domain is the disk of radius 3 centered at the origin.</p>
+
+<hr>
+
+<h2>Graphs of Functions of Two Variables</h2>
+
+<p>The graph of</p>
+
+<p><strong>
+
+z=f(x,y)
+
+</strong></p>
+
+<p>is generally a surface in three-dimensional space.</p>
+
+<p>Examples include:</p>
+
+<ul>
+<li>Planes</li>
+<li>Paraboloids</li>
+<li>Spheres (upper or lower halves)</li>
+<li>Saddles</li>
+</ul>
+
+<hr>
+
+<h2>Level Curves</h2>
+
+<p>Instead of graphing the surface, we often graph curves obtained by setting</p>
+
+<p><strong>
+
+f(x,y)=c
+
+</strong></p>
+
+<p>for various constants c.</p>
+
+<p>These are called <strong>level curves</strong>.</p>
+
+<hr>
+
+<h2>Example 4</h2>
+
+<p>For</p>
+
+<p><strong>
+
+f(x,y)=x²+y²
+
+</strong></p>
+
+<p>Setting</p>
+
+<p><strong>
+
+x²+y²=c
+
+</strong></p>
+
+<p>produces circles centered at the origin.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+<li>Weather forecasting</li>
+<li>Economics</li>
+<li>Engineering</li>
+<li>Fluid dynamics</li>
+<li>Topographic maps</li>
+<li>Machine learning</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Ignoring domain restrictions.</li>
+<li>Substituting values incorrectly.</li>
+<li>Confusing level curves with surfaces.</li>
+<li>Forgetting that the graph exists in three dimensions.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Functions may depend on multiple variables.</li>
+<li>The graph of z=f(x,y) is usually a surface.</li>
+<li>The domain may have restrictions.</li>
+<li>Level curves provide two-dimensional representations of surfaces.</li>
+<li>Multivariable calculus extends many ideas from single-variable calculus.</li>
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                question: "A function of two variables is commonly written as",
+                options: [
+                    "z = f(x,y)",
+                    "y = f(x)",
+                    "r = f(θ)",
+                    "x = f(y)"
+                ],
+                answer: "z = f(x,y)",
+                explanation: "A function of two variables takes two independent variables as inputs and produces one output."
+            },
+            {
+                question: "In the expression z = f(x,y), the variables x and y are",
+                options: [
+                    "Independent variables",
+                    "Dependent variables",
+                    "Constants",
+                    "Parameters"
+                ],
+                answer: "Independent variables",
+                explanation: "The values of x and y determine the value of z."
+            },
+            {
+                question: "For f(x,y)=x²+y², the value of f(2,3) is",
+                options: [
+                    "13",
+                    "25",
+                    "12",
+                    "9"
+                ],
+                answer: "13",
+                explanation: "Substitute x=2 and y=3: 2²+3²=4+9=13."
+            },
+            {
+                question: "For f(x,y)=3x−2y, the value of f(4,5) is",
+                options: [
+                    "2",
+                    "22",
+                    "7",
+                    "-2"
+                ],
+                answer: "2",
+                explanation: "Compute 3(4)−2(5)=12−10=2."
+            },
+            {
+                question: "The domain of a multivariable function consists of",
+                options: [
+                    "All input pairs (x,y) for which the function is defined",
+                    "Only positive x-values",
+                    "All output values",
+                    "Only points where x=y"
+                ],
+                answer: "All input pairs (x,y) for which the function is defined",
+                explanation: "The domain contains every ordered pair that makes the function meaningful."
+            },
+            {
+                question: "Which operation commonly creates domain restrictions?",
+                options: [
+                    "Square roots",
+                    "Addition",
+                    "Multiplication",
+                    "Subtraction"
+                ],
+                answer: "Square roots",
+                explanation: "The expression inside a square root must be nonnegative."
+            },
+            {
+                question: "The domain of f(x,y)=√(9−x²−y²) satisfies",
+                options: [
+                    "x²+y²≤9",
+                    "x²+y²≥9",
+                    "x+y≤9",
+                    "x−y≤9"
+                ],
+                answer: "x²+y²≤9",
+                explanation: "The quantity inside the square root must be greater than or equal to zero."
+            },
+            {
+                question: "The graph of z=f(x,y) is generally a",
+                options: [
+                    "Surface in three-dimensional space",
+                    "Straight line",
+                    "Circle",
+                    "Plane curve"
+                ],
+                answer: "Surface in three-dimensional space",
+                explanation: "Functions of two variables are graphed as surfaces."
+            },
+            {
+                question: "Level curves are obtained by",
+                options: [
+                    "Setting f(x,y)=c",
+                    "Differentiating the function",
+                    "Finding the domain",
+                    "Setting x=y"
+                ],
+                answer: "Setting f(x,y)=c",
+                explanation: "A level curve consists of all points where the function has the same constant value."
+            },
+            {
+                question: "The level curves of f(x,y)=x²+y² are",
+                options: [
+                    "Circles",
+                    "Lines",
+                    "Parabolas",
+                    "Hyperbolas"
+                ],
+                answer: "Circles",
+                explanation: "The equation x²+y²=c represents circles centered at the origin."
+            },
+            {
+                question: "Which of the following is NOT a common surface?",
+                options: [
+                    "Triangle",
+                    "Plane",
+                    "Paraboloid",
+                    "Saddle"
+                ],
+                answer: "Triangle",
+                explanation: "Planes, paraboloids, and saddles are common multivariable surfaces."
+            },
+            {
+                question: "Level curves are useful because they",
+                options: [
+                    "Provide a two-dimensional view of a three-dimensional surface",
+                    "Compute derivatives automatically",
+                    "Eliminate variables",
+                    "Always produce straight lines"
+                ],
+                answer: "Provide a two-dimensional view of a three-dimensional surface",
+                explanation: "Level curves help visualize surfaces without drawing them in three dimensions."
+            },
+            {
+                question: "Which field commonly uses functions of several variables?",
+                options: [
+                    "Weather forecasting",
+                    "Engineering",
+                    "Economics",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Many real-world systems depend on multiple independent variables."
+            },
+            {
+                question: "A common mistake when working with multivariable functions is",
+                options: [
+                    "Ignoring domain restrictions",
+                    "Substituting values",
+                    "Checking the domain",
+                    "Drawing level curves"
+                ],
+                answer: "Ignoring domain restrictions",
+                explanation: "Always verify that the input values satisfy the function's restrictions."
+            },
+            {
+                question: "Which statement about functions of several variables is TRUE?",
+                options: [
+                    "They extend single-variable calculus by allowing multiple independent variables.",
+                    "They always produce circles.",
+                    "They only have one input variable.",
+                    "Their graphs are always flat planes."
+                ],
+                answer: "They extend single-variable calculus by allowing multiple independent variables.",
+                explanation: "Multivariable calculus generalizes calculus concepts to functions with two or more independent variables."
+            }
+
+        ]
+    },
+
+    "calculus2-functions-of-several-variables-quiz": {
+        title: "Functions of Several Variables Quiz",
+        subtitle: "Test your understanding of multivariable functions, domains, graphs, and level curves.",
+
+        body: `
+
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Evaluate functions of two variables.</li>
+<li>Determine domains.</li>
+<li>Interpret three-dimensional surfaces.</li>
+<li>Recognize level curves.</li>
+<li>Understand real-world applications.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "A function of two variables is usually written as",
+                options: [
+                    "z = f(x,y)",
+                    "y = f(x)",
+                    "r = f(θ)",
+                    "x = f(y)"
+                ],
+                answer: "z = f(x,y)",
+                explanation: "Functions of two variables take two independent variables as inputs and produce one output."
+            },
+            {
+                question: "In z = f(x,y), the variables x and y are",
+                options: [
+                    "Independent variables",
+                    "Dependent variables",
+                    "Constants",
+                    "Parameters"
+                ],
+                answer: "Independent variables",
+                explanation: "The output z depends on the chosen values of x and y."
+            },
+            {
+                question: "For f(x,y)=x²+y², the value of f(1,4) is",
+                options: [
+                    "17",
+                    "16",
+                    "9",
+                    "8"
+                ],
+                answer: "17",
+                explanation: "Substitute x=1 and y=4: 1²+4²=1+16=17."
+            },
+            {
+                question: "For f(x,y)=4x−y, the value of f(3,5) is",
+                options: [
+                    "7",
+                    "17",
+                    "-7",
+                    "12"
+                ],
+                answer: "7",
+                explanation: "Compute 4(3)−5=12−5=7."
+            },
+            {
+                question: "The domain of a function of two variables consists of",
+                options: [
+                    "All ordered pairs (x,y) for which the function is defined",
+                    "Only positive values of x",
+                    "Only positive values of y",
+                    "All output values"
+                ],
+                answer: "All ordered pairs (x,y) for which the function is defined",
+                explanation: "The domain includes every input pair that makes the function meaningful."
+            },
+            {
+                question: "Which operation often creates domain restrictions?",
+                options: [
+                    "Square roots",
+                    "Addition",
+                    "Multiplication",
+                    "Subtraction"
+                ],
+                answer: "Square roots",
+                explanation: "The quantity inside a square root must be greater than or equal to zero."
+            },
+            {
+                question: "The domain of f(x,y)=√(16−x²−y²) satisfies",
+                options: [
+                    "x²+y²≤16",
+                    "x²+y²≥16",
+                    "x+y≤16",
+                    "x−y≤16"
+                ],
+                answer: "x²+y²≤16",
+                explanation: "The expression inside the square root must be nonnegative."
+            },
+            {
+                question: "The graph of z=f(x,y) is generally a",
+                options: [
+                    "Surface in three-dimensional space",
+                    "Straight line",
+                    "Circle",
+                    "Plane curve"
+                ],
+                answer: "Surface in three-dimensional space",
+                explanation: "Functions of two variables are represented as surfaces in 3D."
+            },
+            {
+                question: "Level curves are found by",
+                options: [
+                    "Setting f(x,y)=c",
+                    "Differentiating the function",
+                    "Integrating the function",
+                    "Setting x=y"
+                ],
+                answer: "Setting f(x,y)=c",
+                explanation: "Each level curve consists of points where the function has the same constant value."
+            },
+            {
+                question: "The level curves of f(x,y)=x²+y² are",
+                options: [
+                    "Circles",
+                    "Parabolas",
+                    "Lines",
+                    "Ellipses"
+                ],
+                answer: "Circles",
+                explanation: "The equation x²+y²=c represents circles centered at the origin."
+            },
+            {
+                question: "Level curves help us",
+                options: [
+                    "Visualize three-dimensional surfaces using two-dimensional graphs",
+                    "Compute derivatives automatically",
+                    "Convert to polar coordinates",
+                    "Determine limits"
+                ],
+                answer: "Visualize three-dimensional surfaces using two-dimensional graphs",
+                explanation: "Contour maps are two-dimensional representations of surfaces."
+            },
+            {
+                question: "Which of the following is a common multivariable surface?",
+                options: [
+                    "Paraboloid",
+                    "Triangle",
+                    "Pentagon",
+                    "Hexagon"
+                ],
+                answer: "Paraboloid",
+                explanation: "Paraboloids are one of the most common surfaces encountered in multivariable calculus."
+            },
+            {
+                question: "Functions of several variables are commonly used in",
+                options: [
+                    "Weather forecasting",
+                    "Engineering",
+                    "Economics",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Many scientific and engineering models depend on more than one independent variable."
+            },
+            {
+                question: "A common mistake when evaluating multivariable functions is",
+                options: [
+                    "Ignoring domain restrictions",
+                    "Checking the domain",
+                    "Substituting correctly",
+                    "Drawing level curves"
+                ],
+                answer: "Ignoring domain restrictions",
+                explanation: "Always verify that the chosen input values belong to the domain."
+            },
+            {
+                question: "Which statement about functions of several variables is TRUE?",
+                options: [
+                    "They extend calculus to functions with multiple independent variables.",
+                    "Their graphs are always planes.",
+                    "They only use one independent variable.",
+                    "Their level curves are always straight lines."
+                ],
+                answer: "They extend calculus to functions with multiple independent variables.",
+                explanation: "Multivariable calculus generalizes the ideas of single-variable calculus to functions involving two or more independent variables."
+            }
+        ]
+    },
+
+    "calculus2-partial-derivatives": {
+        title: "Partial Derivatives",
+        subtitle: "Differentiate multivariable functions one variable at a time.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Understand the meaning of a partial derivative.</li>
+<li>Compute first-order partial derivatives.</li>
+<li>Compute higher-order partial derivatives.</li>
+<li>Interpret partial derivatives graphically.</li>
+<li>Apply partial derivatives to real-world problems.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>For functions of one variable, derivatives measure how rapidly the function changes.</p>
+
+<p>For functions of several variables, we measure how the function changes with respect to <strong>one variable at a time</strong>.</p>
+
+<p>These derivatives are called <strong>partial derivatives</strong>.</p>
+
+<hr>
+
+<h2>Definition</h2>
+
+<p>Given</p>
+
+<p><strong>
+
+z=f(x,y)
+
+</strong></p>
+
+<p>there are two first-order partial derivatives:</p>
+
+<p><strong>
+
+∂f/∂x
+
+</strong></p>
+
+<p>and</p>
+
+<p><strong>
+
+∂f/∂y
+
+</strong></p>
+
+<p>When differentiating with respect to one variable, treat all other variables as constants.</p>
+
+<hr>
+
+<h2>Finding ∂f/∂x</h2>
+
+<p>Differentiate only with respect to x.</p>
+
+<p>Hold y constant.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Given</p>
+
+<p><strong>
+
+f(x,y)=3x²y+5y²
+
+</strong></p>
+
+<p>Differentiate with respect to x.</p>
+
+<p><strong>
+
+∂f/∂x=6xy
+
+</strong></p>
+
+<p>The term 5y² is treated as a constant.</p>
+
+<hr>
+
+<h2>Finding ∂f/∂y</h2>
+
+<p>Differentiate only with respect to y.</p>
+
+<p>Hold x constant.</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Using the same function</p>
+
+<p><strong>
+
+f(x,y)=3x²y+5y²
+
+</strong></p>
+
+<p><strong>
+
+∂f/∂y=3x²+10y
+
+</strong></p>
+
+<hr>
+
+<h2>Higher-Order Partial Derivatives</h2>
+
+<p>Differentiate more than once.</p>
+
+<p>Examples include</p>
+
+<p><strong>
+
+∂²f/∂x²
+
+</strong></p>
+
+<p><strong>
+
+∂²f/∂y²
+
+</strong></p>
+
+<p><strong>
+
+∂²f/(∂x∂y)
+
+</strong></p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p>If</p>
+
+<p><strong>
+
+f(x,y)=x³y²
+
+</strong></p>
+
+<p>Then</p>
+
+<p><strong>
+
+∂f/∂x=3x²y²
+
+</strong></p>
+
+<p><strong>
+
+∂²f/∂x²=6xy²
+
+</strong></p>
+
+<p><strong>
+
+∂²f/(∂y∂x)=6x²y
+
+</strong></p>
+
+<hr>
+
+<h2>Geometric Interpretation</h2>
+
+<p>Partial derivatives describe the slope of the surface in one direction.</p>
+
+<ul>
+<li>∂f/∂x measures the slope parallel to the x-axis.</li>
+<li>∂f/∂y measures the slope parallel to the y-axis.</li>
+</ul>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+<li>Heat transfer</li>
+<li>Fluid dynamics</li>
+<li>Machine learning</li>
+<li>Economics</li>
+<li>Optimization</li>
+<li>Engineering</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Forgetting to treat the other variable as constant.</li>
+<li>Differentiating every variable simultaneously.</li>
+<li>Dropping constant coefficients.</li>
+<li>Confusing mixed partial derivatives.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Partial derivatives measure change in one variable at a time.</li>
+<li>Treat all remaining variables as constants.</li>
+<li>Higher-order partial derivatives are found by differentiating repeatedly.</li>
+<li>Partial derivatives describe slopes of surfaces.</li>
+<li>They are fundamental throughout multivariable calculus.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "A partial derivative measures how a function changes with respect to",
+                options: [
+                    "One variable while holding the others constant",
+                    "All variables simultaneously",
+                    "Only the dependent variable",
+                    "Time only"
+                ],
+                answer: "One variable while holding the others constant",
+                explanation: "When taking a partial derivative, only one independent variable changes while the others are treated as constants."
+            },
+            {
+                question: "The symbol ∂ is used to represent",
+                options: [
+                    "A partial derivative",
+                    "A definite integral",
+                    "A summation",
+                    "A limit"
+                ],
+                answer: "A partial derivative",
+                explanation: "The symbol ∂ distinguishes partial derivatives from ordinary derivatives."
+            },
+            {
+                question: "When computing ∂f/∂x, the variable y is treated as",
+                options: [
+                    "A constant",
+                    "Another function",
+                    "Zero",
+                    "A derivative"
+                ],
+                answer: "A constant",
+                explanation: "Only x is allowed to vary when computing ∂f/∂x."
+            },
+            {
+                question: "For f(x,y)=3x²y+5y², the partial derivative ∂f/∂x is",
+                options: [
+                    "6xy",
+                    "3x²+10y",
+                    "6x²y",
+                    "10y"
+                ],
+                answer: "6xy",
+                explanation: "Treat y as a constant. The derivative of 3x²y is 6xy, while 5y² differentiates to 0."
+            },
+            {
+                question: "For f(x,y)=3x²y+5y², the partial derivative ∂f/∂y is",
+                options: [
+                    "3x²+10y",
+                    "6xy",
+                    "6x²y",
+                    "10"
+                ],
+                answer: "3x²+10y",
+                explanation: "Treat x as a constant. Differentiate each term with respect to y."
+            },
+            {
+                question: "Higher-order partial derivatives are found by",
+                options: [
+                    "Differentiating more than once",
+                    "Integrating first",
+                    "Finding the domain",
+                    "Converting to polar coordinates"
+                ],
+                answer: "Differentiating more than once",
+                explanation: "Second-order and higher-order partial derivatives are obtained by repeated differentiation."
+            },
+            {
+                question: "For f(x,y)=x³y², the partial derivative ∂f/∂x is",
+                options: [
+                    "3x²y²",
+                    "2x³y",
+                    "6xy²",
+                    "3xy²"
+                ],
+                answer: "3x²y²",
+                explanation: "Treat y² as a constant and differentiate x³."
+            },
+            {
+                question: "For f(x,y)=x³y², the second partial derivative ∂²f/∂x² is",
+                options: [
+                    "6xy²",
+                    "3x²y²",
+                    "6x²y",
+                    "2y²"
+                ],
+                answer: "6xy²",
+                explanation: "Differentiate 3x²y² once more with respect to x."
+            },
+            {
+                question: "The mixed partial derivative ∂²f/(∂y∂x) means",
+                options: [
+                    "Differentiate with respect to x first, then y",
+                    "Differentiate with respect to y twice",
+                    "Differentiate with respect to x twice",
+                    "Integrate with respect to x and y"
+                ],
+                answer: "Differentiate with respect to x first, then y",
+                explanation: "The order shown indicates the order of differentiation from right to left."
+            },
+            {
+                question: "Geometrically, ∂f/∂x represents",
+                options: [
+                    "The slope of the surface in the x-direction",
+                    "The area under the surface",
+                    "The volume below the surface",
+                    "The domain of the function"
+                ],
+                answer: "The slope of the surface in the x-direction",
+                explanation: "It measures how the surface changes as x changes while y is fixed."
+            },
+            {
+                question: "Geometrically, ∂f/∂y represents",
+                options: [
+                    "The slope of the surface in the y-direction",
+                    "The height of the surface",
+                    "The domain of the function",
+                    "The curvature of the surface"
+                ],
+                answer: "The slope of the surface in the y-direction",
+                explanation: "It measures the rate of change in the y-direction."
+            },
+            {
+                question: "Which field commonly uses partial derivatives?",
+                options: [
+                    "Machine learning",
+                    "Engineering",
+                    "Economics",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Partial derivatives are fundamental in many scientific and engineering disciplines."
+            },
+            {
+                question: "A common mistake when finding partial derivatives is",
+                options: [
+                    "Differentiating every variable instead of treating the others as constants",
+                    "Using the power rule",
+                    "Applying the product rule",
+                    "Writing variables in alphabetical order"
+                ],
+                answer: "Differentiating every variable instead of treating the others as constants",
+                explanation: "Only the chosen variable should be differentiated; all others remain constant."
+            },
+            {
+                question: "Mixed partial derivatives involve",
+                options: [
+                    "Differentiating with respect to more than one variable",
+                    "Integrating twice",
+                    "Only first derivatives",
+                    "Only constant functions"
+                ],
+                answer: "Differentiating with respect to more than one variable",
+                explanation: "Mixed partial derivatives are obtained by differentiating with respect to different variables in sequence."
+            },
+            {
+                question: "Which statement about partial derivatives is TRUE?",
+                options: [
+                    "They measure how a multivariable function changes in one direction while holding the other variables constant.",
+                    "They are only used for functions of one variable.",
+                    "They always produce constant values.",
+                    "They eliminate the need for ordinary derivatives."
+                ],
+                answer: "They measure how a multivariable function changes in one direction while holding the other variables constant.",
+                explanation: "Partial derivatives extend the idea of derivatives to functions of several variables by isolating the effect of one variable at a time."
+            }
+
+        ]
+    },
+
+    "calculus2-partial-derivatives-quiz": {
+        title: "Partial Derivatives Quiz",
+        subtitle: "Test your understanding of first-order and higher-order partial derivatives.",
+
+        body: `
+
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Find first-order partial derivatives.</li>
+<li>Find second-order and mixed partial derivatives.</li>
+<li>Interpret partial derivatives graphically.</li>
+<li>Recognize common mistakes.</li>
+<li>Apply partial derivatives to multivariable functions.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "A partial derivative measures the rate of change of a function with respect to",
+                options: [
+                    "One variable while keeping the others constant",
+                    "All variables simultaneously",
+                    "Only the dependent variable",
+                    "Only time"
+                ],
+                answer: "One variable while keeping the others constant",
+                explanation: "Partial derivatives isolate the effect of changing one independent variable while all others remain fixed."
+            },
+            {
+                question: "Which symbol represents a partial derivative?",
+                options: [
+                    "∂",
+                    "Δ",
+                    "Σ",
+                    "∫"
+                ],
+                answer: "∂",
+                explanation: "The symbol ∂ denotes a partial derivative."
+            },
+            {
+                question: "When computing ∂f/∂x, the variable y is treated as",
+                options: [
+                    "A constant",
+                    "Zero",
+                    "A function of x",
+                    "A derivative"
+                ],
+                answer: "A constant",
+                explanation: "Only x changes while every other variable remains constant."
+            },
+            {
+                question: "If f(x,y)=4x³y+7y², then ∂f/∂x equals",
+                options: [
+                    "12x²y",
+                    "4x³+14y",
+                    "12xy",
+                    "14y"
+                ],
+                answer: "12x²y",
+                explanation: "Treat y as a constant. Differentiate 4x³ to obtain 12x²."
+            },
+            {
+                question: "If f(x,y)=4x³y+7y², then ∂f/∂y equals",
+                options: [
+                    "4x³+14y",
+                    "12x²y",
+                    "14",
+                    "8x³y"
+                ],
+                answer: "4x³+14y",
+                explanation: "Treat x as a constant and differentiate with respect to y."
+            },
+            {
+                question: "Second-order partial derivatives are obtained by",
+                options: [
+                    "Differentiating a partial derivative again",
+                    "Integrating the function",
+                    "Finding the domain",
+                    "Evaluating the function"
+                ],
+                answer: "Differentiating a partial derivative again",
+                explanation: "Higher-order partial derivatives are computed by repeated differentiation."
+            },
+            {
+                question: "For f(x,y)=x²y³, ∂f/∂x equals",
+                options: [
+                    "2xy³",
+                    "3x²y²",
+                    "6xy²",
+                    "x²y²"
+                ],
+                answer: "2xy³",
+                explanation: "Treat y³ as a constant while differentiating x²."
+            },
+            {
+                question: "For f(x,y)=x²y³, ∂²f/∂x² equals",
+                options: [
+                    "2y³",
+                    "4xy³",
+                    "6xy²",
+                    "2xy²"
+                ],
+                answer: "2y³",
+                explanation: "Differentiate 2xy³ with respect to x once more."
+            },
+            {
+                question: "The mixed partial derivative ∂²f/(∂y∂x) means",
+                options: [
+                    "Differentiate with respect to x first, then y",
+                    "Differentiate with respect to y twice",
+                    "Differentiate with respect to x twice",
+                    "Integrate twice"
+                ],
+                answer: "Differentiate with respect to x first, then y",
+                explanation: "The differentiation order is read from right to left."
+            },
+            {
+                question: "Geometrically, ∂f/∂x represents",
+                options: [
+                    "The slope of the surface in the x-direction",
+                    "The maximum value of the surface",
+                    "The area under the surface",
+                    "The volume below the surface"
+                ],
+                answer: "The slope of the surface in the x-direction",
+                explanation: "It measures how the surface changes as x changes while y remains fixed."
+            },
+            {
+                question: "Geometrically, ∂f/∂y represents",
+                options: [
+                    "The slope of the surface in the y-direction",
+                    "The curvature of the surface",
+                    "The highest point of the surface",
+                    "The domain of the function"
+                ],
+                answer: "The slope of the surface in the y-direction",
+                explanation: "It measures the rate of change as y changes while x remains constant."
+            },
+            {
+                question: "Partial derivatives are commonly used in",
+                options: [
+                    "Optimization",
+                    "Engineering",
+                    "Machine learning",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Partial derivatives are essential in many scientific, engineering, and mathematical applications."
+            },
+            {
+                question: "A common mistake when computing ∂f/∂x is",
+                options: [
+                    "Differentiating y instead of treating it as a constant",
+                    "Using the power rule",
+                    "Simplifying the answer",
+                    "Writing variables alphabetically"
+                ],
+                answer: "Differentiating y instead of treating it as a constant",
+                explanation: "Only the selected variable should be differentiated."
+            },
+            {
+                question: "Mixed partial derivatives involve",
+                options: [
+                    "Differentiating with respect to different variables",
+                    "Only first derivatives",
+                    "Only one independent variable",
+                    "Integration"
+                ],
+                answer: "Differentiating with respect to different variables",
+                explanation: "Mixed partial derivatives apply differentiation with respect to more than one variable."
+            },
+            {
+                question: "Which statement about partial derivatives is TRUE?",
+                options: [
+                    "They extend ordinary derivatives to functions of several variables.",
+                    "They only exist for polynomial functions.",
+                    "They are identical to definite integrals.",
+                    "They always equal zero."
+                ],
+                answer: "They extend ordinary derivatives to functions of several variables.",
+                explanation: "Partial derivatives generalize the concept of derivatives to multivariable functions by measuring change along one variable at a time."
+            }
+        ]
+    },
+
+    "calculus2-gradient-vector": {
+        title: "The Gradient Vector",
+        subtitle: "Use partial derivatives to find the direction of greatest increase.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Define the gradient vector.</li>
+<li>Compute the gradient of a multivariable function.</li>
+<li>Interpret the geometric meaning of the gradient.</li>
+<li>Understand the relationship between the gradient and level curves.</li>
+<li>Apply gradients to optimization and real-world problems.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>Partial derivatives tell us how a function changes in the x-direction and y-direction individually.</p>
+
+<p>The <strong>gradient vector</strong> combines these partial derivatives into a single vector that describes the direction of the greatest increase of the function.</p>
+
+<hr>
+
+<h2>Definition</h2>
+
+<p>For a function</p>
+
+<p><strong>
+
+f(x,y)
+
+</strong></p>
+
+<p>the gradient is written as</p>
+
+<p><strong>
+
+∇f(x,y)
+
+</strong></p>
+
+<p>and is defined by</p>
+
+<p><strong>
+
+∇f(x,y)=&lt;∂f/∂x, ∂f/∂y&gt;
+
+</strong></p>
+
+<p>The gradient is a vector.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Find the gradient of</p>
+
+<p><strong>
+
+f(x,y)=x²+3y²
+
+</strong></p>
+
+<p>Compute the partial derivatives.</p>
+
+<p><strong>
+
+∂f/∂x=2x
+
+</strong></p>
+
+<p><strong>
+
+∂f/∂y=6y
+
+</strong></p>
+
+<p>Therefore</p>
+
+<p><strong>
+
+∇f=&lt;2x,6y&gt;
+
+</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Evaluate the gradient at (2,1).</p>
+
+<p><strong>
+
+∇f(2,1)=&lt;4,6&gt;
+
+</strong></p>
+
+<hr>
+
+<h2>Geometric Interpretation</h2>
+
+<p>The gradient vector points in the direction where the function increases most rapidly.</p>
+
+<p>The magnitude of the gradient tells how quickly the function increases.</p>
+
+<hr>
+
+<h2>Gradient and Level Curves</h2>
+
+<p>The gradient vector is always <strong>perpendicular</strong> to a level curve.</p>
+
+<p>If you walk along a level curve, the function value remains constant.</p>
+
+<p>If you walk in the gradient direction, the function increases as quickly as possible.</p>
+
+<hr>
+
+<h2>Magnitude of the Gradient</h2>
+
+<p>The length of the gradient vector is</p>
+
+<p><strong>
+
+|∇f|=√[(∂f/∂x)²+(∂f/∂y)²]
+
+</strong></p>
+
+<p>A larger magnitude means a steeper surface.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+<li>Machine learning</li>
+<li>Optimization</li>
+<li>Physics</li>
+<li>Economics</li>
+<li>Engineering</li>
+<li>Computer graphics</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Confusing the gradient with a scalar.</li>
+<li>Forgetting that the gradient is a vector.</li>
+<li>Mixing the order of the partial derivatives.</li>
+<li>Thinking the gradient is tangent to a level curve instead of perpendicular.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>The gradient combines all first-order partial derivatives.</li>
+<li>The gradient points toward the direction of greatest increase.</li>
+<li>The gradient is perpendicular to level curves.</li>
+<li>The magnitude measures the steepness of the surface.</li>
+<li>Gradients are fundamental in optimization and multivariable calculus.</li>
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                question: "The gradient of a function is a",
+                options: [
+                    "Vector",
+                    "Scalar",
+                    "Matrix",
+                    "Constant"
+                ],
+                answer: "Vector",
+                explanation: "The gradient combines all first-order partial derivatives into a vector."
+            },
+            {
+                question: "The gradient of f(x,y) is written as",
+                options: [
+                    "∇f",
+                    "Δf",
+                    "∫f",
+                    "Σf"
+                ],
+                answer: "∇f",
+                explanation: "The symbol ∇ (nabla) denotes the gradient operator."
+            },
+            {
+                question: "The gradient of f(x,y)=x²+3y² is",
+                options: [
+                    "<2x,6y>",
+                    "<x,3y>",
+                    "<2,6>",
+                    "<6y,2x>"
+                ],
+                answer: "<2x,6y>",
+                explanation: "Differentiate with respect to x and y separately to obtain the two components."
+            },
+            {
+                question: "The gradient of f(x,y)=x²+3y² evaluated at (2,1) is",
+                options: [
+                    "<4,6>",
+                    "<2,3>",
+                    "<6,4>",
+                    "<4,3>"
+                ],
+                answer: "<4,6>",
+                explanation: "Substitute x=2 and y=1 into the gradient <2x,6y>."
+            },
+            {
+                question: "The gradient points in the direction of",
+                options: [
+                    "Greatest increase of the function",
+                    "Greatest decrease of the function",
+                    "No change in the function",
+                    "The x-axis"
+                ],
+                answer: "Greatest increase of the function",
+                explanation: "The gradient always points in the direction where the function increases most rapidly."
+            },
+            {
+                question: "The magnitude of the gradient measures",
+                options: [
+                    "How steeply the function increases",
+                    "The area under the surface",
+                    "The domain of the function",
+                    "The volume below the surface"
+                ],
+                answer: "How steeply the function increases",
+                explanation: "A larger gradient magnitude indicates a steeper rate of increase."
+            },
+            {
+                question: "The gradient is always __________ to a level curve.",
+                options: [
+                    "Perpendicular",
+                    "Parallel",
+                    "Tangent",
+                    "Equal"
+                ],
+                answer: "Perpendicular",
+                explanation: "The gradient vector is normal (perpendicular) to every level curve."
+            },
+            {
+                question: "Walking along a level curve means",
+                options: [
+                    "The function value stays constant",
+                    "The function increases as fast as possible",
+                    "The function always decreases",
+                    "The gradient becomes zero"
+                ],
+                answer: "The function value stays constant",
+                explanation: "Every point on a level curve has the same function value."
+            },
+            {
+                question: "Walking in the direction of the gradient causes the function to",
+                options: [
+                    "Increase most rapidly",
+                    "Remain constant",
+                    "Decrease most rapidly",
+                    "Become undefined"
+                ],
+                answer: "Increase most rapidly",
+                explanation: "The gradient identifies the direction of maximum increase."
+            },
+            {
+                question: "The magnitude of ∇f is computed using",
+                options: [
+                    "The Pythagorean Theorem",
+                    "The Product Rule",
+                    "The Quotient Rule",
+                    "Integration"
+                ],
+                answer: "The Pythagorean Theorem",
+                explanation: "The length of a vector is found using the square root of the sum of the squares of its components."
+            },
+            {
+                question: "Which field commonly uses gradient vectors?",
+                options: [
+                    "Machine learning",
+                    "Optimization",
+                    "Engineering",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Gradient vectors are widely used across science, engineering, and artificial intelligence."
+            },
+            {
+                question: "A common mistake is thinking the gradient is",
+                options: [
+                    "Tangent to a level curve",
+                    "Perpendicular to a level curve",
+                    "A vector",
+                    "Based on partial derivatives"
+                ],
+                answer: "Tangent to a level curve",
+                explanation: "The gradient is perpendicular—not tangent—to level curves."
+            },
+            {
+                question: "Which of the following is NOT part of the gradient?",
+                options: [
+                    "Second-order partial derivatives",
+                    "∂f/∂x",
+                    "∂f/∂y",
+                    "First-order partial derivatives"
+                ],
+                answer: "Second-order partial derivatives",
+                explanation: "The gradient contains only first-order partial derivatives."
+            },
+            {
+                question: "The components of the gradient are arranged in the order",
+                options: [
+                    "<∂f/∂x, ∂f/∂y>",
+                    "<∂f/∂y, ∂f/∂x>",
+                    "<f, ∂f>",
+                    "<x, y>"
+                ],
+                answer: "<∂f/∂x, ∂f/∂y>",
+                explanation: "The standard order lists the x-partial first, followed by the y-partial."
+            },
+            {
+                question: "Which statement about the gradient vector is TRUE?",
+                options: [
+                    "It combines first-order partial derivatives into a vector that points toward the direction of greatest increase.",
+                    "It is always tangent to level curves.",
+                    "It is a scalar quantity.",
+                    "It always has magnitude equal to 1."
+                ],
+                answer: "It combines first-order partial derivatives into a vector that points toward the direction of greatest increase.",
+                explanation: "The gradient summarizes how a multivariable function changes and indicates the direction of maximum increase."
+            }
+
+        ]
+    },
+    "calculus2-gradient-vector-quiz": {
+        title: "The Gradient Vector Quiz",
+        subtitle: "Test your understanding of gradient vectors, their computation, and their geometric meaning.",
+
+        body: `
+
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Compute gradient vectors.</li>
+<li>Evaluate gradients at specific points.</li>
+<li>Interpret the geometric meaning of gradients.</li>
+<li>Understand gradient magnitude.</li>
+<li>Relate gradients to level curves.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "The gradient of a function is",
+                options: [
+                    "A vector of first-order partial derivatives",
+                    "A scalar value",
+                    "A second-order derivative",
+                    "An integral"
+                ],
+                answer: "A vector of first-order partial derivatives",
+                explanation: "The gradient combines all first-order partial derivatives into a single vector."
+            },
+            {
+                question: "The symbol used to represent the gradient is",
+                options: [
+                    "∇",
+                    "Δ",
+                    "Σ",
+                    "∫"
+                ],
+                answer: "∇",
+                explanation: "The nabla symbol (∇) denotes the gradient operator."
+            },
+            {
+                question: "The gradient of f(x,y)=x²+3y² is",
+                options: [
+                    "<2x,6y>",
+                    "<6y,2x>",
+                    "<x,3y>",
+                    "<2,6>"
+                ],
+                answer: "<2x,6y>",
+                explanation: "Take the partial derivative with respect to x and y separately."
+            },
+            {
+                question: "The gradient of f(x,y)=x²+3y² evaluated at (1,2) is",
+                options: [
+                    "<2,12>",
+                    "<1,6>",
+                    "<2,6>",
+                    "<4,12>"
+                ],
+                answer: "<2,12>",
+                explanation: "Substitute x=1 and y=2 into <2x,6y>."
+            },
+            {
+                question: "The gradient always points in the direction of",
+                options: [
+                    "Greatest increase",
+                    "Greatest decrease",
+                    "Zero change",
+                    "The x-axis"
+                ],
+                answer: "Greatest increase",
+                explanation: "The gradient indicates the direction in which the function increases most rapidly."
+            },
+            {
+                question: "The magnitude of the gradient represents",
+                options: [
+                    "The steepness of the function",
+                    "The area under the surface",
+                    "The domain",
+                    "The function value"
+                ],
+                answer: "The steepness of the function",
+                explanation: "The larger the magnitude, the steeper the surface at that point."
+            },
+            {
+                question: "The gradient is always __________ to a level curve.",
+                options: [
+                    "Perpendicular",
+                    "Parallel",
+                    "Tangent",
+                    "Equal"
+                ],
+                answer: "Perpendicular",
+                explanation: "The gradient is normal (perpendicular) to every level curve."
+            },
+            {
+                question: "Moving along a level curve causes the function value to",
+                options: [
+                    "Remain constant",
+                    "Increase rapidly",
+                    "Decrease rapidly",
+                    "Become undefined"
+                ],
+                answer: "Remain constant",
+                explanation: "Every point on a level curve has the same function value."
+            },
+            {
+                question: "Moving in the direction of the gradient causes the function value to",
+                options: [
+                    "Increase as rapidly as possible",
+                    "Remain constant",
+                    "Decrease most rapidly",
+                    "Become zero"
+                ],
+                answer: "Increase as rapidly as possible",
+                explanation: "The gradient points in the direction of maximum increase."
+            },
+            {
+                question: "The magnitude of ∇f is found using",
+                options: [
+                    "The Pythagorean Theorem",
+                    "The Chain Rule",
+                    "The Product Rule",
+                    "Integration by Parts"
+                ],
+                answer: "The Pythagorean Theorem",
+                explanation: "Compute the square root of the sum of the squares of the gradient components."
+            },
+            {
+                question: "Which expression gives the magnitude of ∇f=<a,b>?",
+                options: [
+                    "√(a²+b²)",
+                    "a+b",
+                    "a²+b²",
+                    "|a−b|"
+                ],
+                answer: "√(a²+b²)",
+                explanation: "The magnitude of a vector is computed using the distance formula."
+            },
+            {
+                question: "Which subject commonly uses gradient vectors?",
+                options: [
+                    "Machine learning",
+                    "Optimization",
+                    "Physics",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Gradient vectors are fundamental in many scientific and engineering fields."
+            },
+            {
+                question: "A common mistake is believing the gradient is",
+                options: [
+                    "Tangent to a level curve",
+                    "Perpendicular to a level curve",
+                    "A vector",
+                    "Based on partial derivatives"
+                ],
+                answer: "Tangent to a level curve",
+                explanation: "The gradient is perpendicular—not tangent—to level curves."
+            },
+            {
+                question: "Which derivatives make up the gradient?",
+                options: [
+                    "First-order partial derivatives",
+                    "Second-order partial derivatives",
+                    "Ordinary derivatives only",
+                    "Mixed partial derivatives only"
+                ],
+                answer: "First-order partial derivatives",
+                explanation: "The gradient contains the first-order partial derivatives with respect to each variable."
+            },
+            {
+                question: "Which statement about the gradient vector is TRUE?",
+                options: [
+                    "It is a vector that points toward the direction of greatest increase and is perpendicular to level curves.",
+                    "It is always tangent to level curves.",
+                    "It is a scalar equal to the function value.",
+                    "It always has length equal to 1."
+                ],
+                answer: "It is a vector that points toward the direction of greatest increase and is perpendicular to level curves.",
+                explanation: "The gradient combines first-order partial derivatives, points toward the direction of greatest increase, and is normal to level curves."
+            }
+        ]
+    },
+
+
+    "calculus2-directional-derivatives": {
+        title: "Directional Derivatives",
+        subtitle: "Measure the rate of change of a function in any direction.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Understand the meaning of a directional derivative.</li>
+<li>Compute directional derivatives using the gradient.</li>
+<li>Normalize direction vectors.</li>
+<li>Interpret directional derivatives geometrically.</li>
+<li>Apply directional derivatives to real-world problems.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>Partial derivatives measure the rate of change only along the coordinate axes.</p>
+
+<p>In many applications, we want to know how quickly a function changes in <strong>any direction</strong>.</p>
+
+<p>This rate of change is called the <strong>directional derivative</strong>.</p>
+
+<hr>
+
+<h2>Definition</h2>
+
+<p>If</p>
+
+<p><strong>
+
+f(x,y)
+
+</strong></p>
+
+<p>has gradient</p>
+
+<p><strong>
+
+∇f
+
+</strong></p>
+
+<p>and <strong>u</strong> is a <strong>unit vector</strong>, then the directional derivative is</p>
+
+<p><strong>
+
+D<sub>u</sub>f = ∇f · u
+
+</strong></p>
+
+<p>where "·" denotes the dot product.</p>
+
+<hr>
+
+<h2>Step 1: Find the Gradient</h2>
+
+<p>Compute the partial derivatives.</p>
+
+<p><strong>
+
+∇f = &lt;∂f/∂x, ∂f/∂y&gt;
+
+</strong></p>
+
+<hr>
+
+<h2>Step 2: Find a Unit Vector</h2>
+
+<p>If the given direction vector is not a unit vector, normalize it.</p>
+
+<p>For a direction vector</p>
+
+<p><strong>
+
+v=&lt;a,b&gt;
+
+</strong></p>
+
+<p>the corresponding unit vector is</p>
+
+<p><strong>
+
+u = &lt;a,b&gt;/√(a²+b²)
+
+</strong></p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Given</p>
+
+<p><strong>
+
+f(x,y)=x²+y²
+
+</strong></p>
+
+<p>Find the directional derivative at (1,2) in the direction &lt;3,4&gt;.</p>
+
+<p>First compute</p>
+
+<p><strong>
+
+∇f=&lt;2x,2y&gt;
+
+</strong></p>
+
+<p>At (1,2),</p>
+
+<p><strong>
+
+∇f=&lt;2,4&gt;
+
+</strong></p>
+
+<p>The unit vector is</p>
+
+<p><strong>
+
+u=&lt;3/5,4/5&gt;
+
+</strong></p>
+
+<p>Then</p>
+
+<p><strong>
+
+D<sub>u</sub>f=(2)(3/5)+(4)(4/5)=22/5
+
+</strong></p>
+
+<hr>
+
+<h2>Geometric Interpretation</h2>
+
+<p>The directional derivative tells how quickly the function changes when moving in a specified direction.</p>
+
+<ul>
+<li>Positive value → function increases.</li>
+<li>Negative value → function decreases.</li>
+<li>Zero → no instantaneous change.</li>
+</ul>
+
+<hr>
+
+<h2>Maximum Directional Derivative</h2>
+
+<p>The largest possible directional derivative occurs in the direction of the gradient.</p>
+
+<p>The maximum value equals</p>
+
+<p><strong>
+
+|∇f|
+
+</strong></p>
+
+<hr>
+
+<h2>Minimum Directional Derivative</h2>
+
+<p>The most rapid decrease occurs in the opposite direction of the gradient.</p>
+
+<p>The minimum value equals</p>
+
+<p><strong>
+
+-|∇f|
+
+</strong></p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+<li>Optimization</li>
+<li>Heat flow</li>
+<li>Fluid mechanics</li>
+<li>Machine learning</li>
+<li>Economics</li>
+<li>Engineering</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Forgetting to normalize the direction vector.</li>
+<li>Using the gradient instead of the unit vector.</li>
+<li>Making errors in the dot product.</li>
+<li>Confusing directional derivatives with partial derivatives.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Directional derivatives measure change in any direction.</li>
+<li>Always use a unit direction vector.</li>
+<li>The directional derivative is the dot product of the gradient and the unit vector.</li>
+<li>The gradient gives the direction of maximum increase.</li>
+<li>The maximum directional derivative equals the magnitude of the gradient.</li>
+</ul>
+
+`,
+
+        questions: [
+
+            {
+                question: "A directional derivative measures the rate of change of a function",
+                options: [
+                    "In any specified direction",
+                    "Only along the x-axis",
+                    "Only along the y-axis",
+                    "Only at the origin"
+                ],
+                answer: "In any specified direction",
+                explanation: "Directional derivatives generalize partial derivatives by measuring change in any chosen direction."
+            },
+            {
+                question: "The directional derivative is computed using",
+                options: [
+                    "The dot product of the gradient and a unit vector",
+                    "The cross product of the gradient and a unit vector",
+                    "The sum of two partial derivatives",
+                    "The magnitude of the gradient only"
+                ],
+                answer: "The dot product of the gradient and a unit vector",
+                explanation: "The formula is Dᵤf = ∇f · u, where u is a unit vector."
+            },
+            {
+                question: "Before computing a directional derivative, the direction vector should be",
+                options: [
+                    "Normalized into a unit vector",
+                    "Squared",
+                    "Differentiated",
+                    "Integrated"
+                ],
+                answer: "Normalized into a unit vector",
+                explanation: "The directional derivative formula requires a unit direction vector."
+            },
+            {
+                question: "The gradient of f(x,y)=x²+y² is",
+                options: [
+                    "<2x,2y>",
+                    "<x,y>",
+                    "<2,2>",
+                    "<x²,y²>"
+                ],
+                answer: "<2x,2y>",
+                explanation: "Take the partial derivative with respect to x and y separately."
+            },
+            {
+                question: "The unit vector in the direction of <3,4> is",
+                options: [
+                    "<3/5,4/5>",
+                    "<4/5,3/5>",
+                    "<3,4>",
+                    "<5,5>"
+                ],
+                answer: "<3/5,4/5>",
+                explanation: "Divide each component by the vector's magnitude, which is 5."
+            },
+            {
+                question: "If the directional derivative is positive, then the function is",
+                options: [
+                    "Increasing in that direction",
+                    "Decreasing in that direction",
+                    "Constant in every direction",
+                    "Undefined"
+                ],
+                answer: "Increasing in that direction",
+                explanation: "A positive directional derivative means the function increases as you move in that direction."
+            },
+            {
+                question: "If the directional derivative is negative, then the function is",
+                options: [
+                    "Decreasing in that direction",
+                    "Increasing in that direction",
+                    "Constant in every direction",
+                    "Undefined"
+                ],
+                answer: "Decreasing in that direction",
+                explanation: "A negative value indicates the function decreases in that direction."
+            },
+            {
+                question: "If the directional derivative equals zero, then",
+                options: [
+                    "There is no instantaneous change in that direction",
+                    "The function reaches its maximum",
+                    "The function reaches its minimum",
+                    "The gradient is zero"
+                ],
+                answer: "There is no instantaneous change in that direction",
+                explanation: "A directional derivative of zero means the function is momentarily flat in that direction."
+            },
+            {
+                question: "The maximum directional derivative occurs in the direction of the",
+                options: [
+                    "Gradient vector",
+                    "Negative gradient vector",
+                    "x-axis",
+                    "y-axis"
+                ],
+                answer: "Gradient vector",
+                explanation: "The gradient points in the direction of greatest increase."
+            },
+            {
+                question: "The maximum directional derivative equals",
+                options: [
+                    "The magnitude of the gradient",
+                    "The sum of the partial derivatives",
+                    "The dot product of the partial derivatives",
+                    "One"
+                ],
+                answer: "The magnitude of the gradient",
+                explanation: "The largest possible directional derivative is |∇f|."
+            },
+            {
+                question: "The minimum directional derivative equals",
+                options: [
+                    "-|∇f|",
+                    "|∇f|",
+                    "0",
+                    "1"
+                ],
+                answer: "-|∇f|",
+                explanation: "The greatest decrease occurs in the direction opposite the gradient."
+            },
+            {
+                question: "Directional derivatives are commonly used in",
+                options: [
+                    "Optimization",
+                    "Heat transfer",
+                    "Machine learning",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Directional derivatives have many applications across mathematics, science, and engineering."
+            },
+            {
+                question: "A common mistake when computing a directional derivative is",
+                options: [
+                    "Forgetting to normalize the direction vector",
+                    "Using partial derivatives",
+                    "Finding the gradient first",
+                    "Computing a dot product"
+                ],
+                answer: "Forgetting to normalize the direction vector",
+                explanation: "The direction vector must always have length 1 before using the formula."
+            },
+            {
+                question: "The directional derivative uses which vector operation?",
+                options: [
+                    "Dot product",
+                    "Cross product",
+                    "Vector subtraction",
+                    "Vector projection only"
+                ],
+                answer: "Dot product",
+                explanation: "The directional derivative is computed by taking the dot product of the gradient and a unit vector."
+            },
+            {
+                question: "Which statement about directional derivatives is TRUE?",
+                options: [
+                    "They measure the rate of change of a function in any specified direction using the gradient and a unit vector.",
+                    "They are identical to partial derivatives in every case.",
+                    "They never require normalization of a direction vector.",
+                    "They always equal the magnitude of the gradient."
+                ],
+                answer: "They measure the rate of change of a function in any specified direction using the gradient and a unit vector.",
+                explanation: "Directional derivatives extend partial derivatives by allowing the rate of change to be measured in any chosen direction."
+            }
+
+        ]
+    },
+    "calculus2-directional-derivatives-quiz": {
+        title: "Directional Derivatives Quiz",
+        subtitle: "Test your understanding of directional derivatives, unit vectors, and the gradient.",
+
+        body: `
+
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Compute directional derivatives.</li>
+<li>Normalize direction vectors.</li>
+<li>Use the gradient vector.</li>
+<li>Interpret directional derivatives.</li>
+<li>Recognize maximum and minimum rates of change.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "A directional derivative measures the rate of change of a function",
+                options: [
+                    "In a specified direction",
+                    "Only along the x-axis",
+                    "Only along the y-axis",
+                    "Only at critical points"
+                ],
+                answer: "In a specified direction",
+                explanation: "Directional derivatives measure how a function changes as you move in any chosen direction."
+            },
+            {
+                question: "The formula for the directional derivative is",
+                options: [
+                    "Dᵤf = ∇f · u",
+                    "Dᵤf = ∇f × u",
+                    "Dᵤf = ∇f + u",
+                    "Dᵤf = |∇f|"
+                ],
+                answer: "Dᵤf = ∇f · u",
+                explanation: "The directional derivative is the dot product of the gradient and a unit direction vector."
+            },
+            {
+                question: "The vector u used in the directional derivative formula must be",
+                options: [
+                    "A unit vector",
+                    "Any vector",
+                    "A zero vector",
+                    "A gradient vector"
+                ],
+                answer: "A unit vector",
+                explanation: "The direction vector must have magnitude 1 before applying the formula."
+            },
+            {
+                question: "To normalize a vector, you divide each component by",
+                options: [
+                    "Its magnitude",
+                    "Its largest component",
+                    "Its smallest component",
+                    "Two"
+                ],
+                answer: "Its magnitude",
+                explanation: "Normalization produces a unit vector by dividing by the vector's length."
+            },
+            {
+                question: "The magnitude of the vector <3,4> is",
+                options: [
+                    "5",
+                    "7",
+                    "25",
+                    "1"
+                ],
+                answer: "5",
+                explanation: "√(3²+4²)=√25=5."
+            },
+            {
+                question: "The unit vector in the direction of <3,4> is",
+                options: [
+                    "<3/5,4/5>",
+                    "<4/5,3/5>",
+                    "<3,4>",
+                    "<5,5>"
+                ],
+                answer: "<3/5,4/5>",
+                explanation: "Each component is divided by the magnitude 5."
+            },
+            {
+                question: "If the directional derivative is positive, the function is",
+                options: [
+                    "Increasing in that direction",
+                    "Decreasing in that direction",
+                    "Constant in every direction",
+                    "Undefined"
+                ],
+                answer: "Increasing in that direction",
+                explanation: "A positive directional derivative indicates an increase in the function value."
+            },
+            {
+                question: "If the directional derivative is negative, the function is",
+                options: [
+                    "Decreasing in that direction",
+                    "Increasing in that direction",
+                    "Constant in every direction",
+                    "Undefined"
+                ],
+                answer: "Decreasing in that direction",
+                explanation: "A negative directional derivative indicates the function decreases in that direction."
+            },
+            {
+                question: "If the directional derivative equals zero, then",
+                options: [
+                    "There is no instantaneous change in that direction",
+                    "The function is at its maximum",
+                    "The function is at its minimum",
+                    "The gradient is undefined"
+                ],
+                answer: "There is no instantaneous change in that direction",
+                explanation: "A value of zero means the function is momentarily flat in the chosen direction."
+            },
+            {
+                question: "The direction of maximum increase is given by the",
+                options: [
+                    "Gradient vector",
+                    "Negative gradient vector",
+                    "x-axis",
+                    "y-axis"
+                ],
+                answer: "Gradient vector",
+                explanation: "The gradient always points toward the greatest increase of the function."
+            },
+            {
+                question: "The maximum directional derivative is equal to",
+                options: [
+                    "|∇f|",
+                    "0",
+                    "1",
+                    "∂f/∂x"
+                ],
+                answer: "|∇f|",
+                explanation: "The maximum possible directional derivative equals the magnitude of the gradient."
+            },
+            {
+                question: "The minimum directional derivative equals",
+                options: [
+                    "-|∇f|",
+                    "|∇f|",
+                    "0",
+                    "1"
+                ],
+                answer: "-|∇f|",
+                explanation: "The greatest rate of decrease occurs opposite the gradient."
+            },
+            {
+                question: "Which operation is used to compute a directional derivative?",
+                options: [
+                    "Dot product",
+                    "Cross product",
+                    "Matrix multiplication",
+                    "Vector subtraction"
+                ],
+                answer: "Dot product",
+                explanation: "The directional derivative is found by taking the dot product of the gradient and a unit vector."
+            },
+            {
+                question: "A common mistake when computing directional derivatives is",
+                options: [
+                    "Forgetting to normalize the direction vector",
+                    "Using the dot product",
+                    "Finding the gradient",
+                    "Evaluating the gradient at the point"
+                ],
+                answer: "Forgetting to normalize the direction vector",
+                explanation: "Using a non-unit direction vector produces an incorrect directional derivative."
+            },
+            {
+                question: "Which statement about directional derivatives is TRUE?",
+                options: [
+                    "They measure the rate of change of a function in any chosen direction using a unit vector and the gradient.",
+                    "They always equal the partial derivative with respect to x.",
+                    "They are only defined for functions of one variable.",
+                    "They never involve the gradient vector."
+                ],
+                answer: "They measure the rate of change of a function in any chosen direction using a unit vector and the gradient.",
+                explanation: "Directional derivatives generalize partial derivatives by measuring change along any specified direction using the gradient and a unit vector."
+            }
+        ]
+    },
+
+    "calculus2-chain-rule-multivariable": {
+        title: "The Multivariable Chain Rule",
+        subtitle: "Differentiate composite functions involving multiple variables.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Understand the multivariable chain rule.</li>
+<li>Apply the chain rule to composite functions.</li>
+<li>Recognize dependency diagrams.</li>
+<li>Differentiate functions with intermediate variables.</li>
+<li>Solve real-world rate-of-change problems.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>In single-variable calculus, the chain rule is used whenever one function is inside another.</p>
+
+<p>In multivariable calculus, a function may depend on several intermediate variables, each of which depends on one or more additional variables.</p>
+
+<p>The <strong>multivariable chain rule</strong> allows us to compute derivatives through these layers of dependence.</p>
+
+<hr>
+
+<h2>Basic Situation</h2>
+
+<p>Suppose</p>
+
+<p><strong>
+
+z=f(x,y)
+
+</strong></p>
+
+<p>where</p>
+
+<p><strong>
+
+x=x(t)
+
+</strong></p>
+
+<p>and</p>
+
+<p><strong>
+
+y=y(t)
+
+</strong></p>
+
+<p>Then z is ultimately a function of t.</p>
+
+<hr>
+
+<h2>Chain Rule Formula</h2>
+
+<p>The derivative of z with respect to t is</p>
+
+<p><strong>
+
+dz/dt = (∂f/∂x)(dx/dt) + (∂f/∂y)(dy/dt)
+
+</strong></p>
+
+<p>Each path from t to z contributes to the total derivative.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Let</p>
+
+<p><strong>
+
+z=x²+y²
+
+</strong></p>
+
+<p>where</p>
+
+<p><strong>
+
+x=t²
+
+</strong></p>
+
+<p>and</p>
+
+<p><strong>
+
+y=3t
+
+</strong></p>
+
+<p>Compute the partial derivatives.</p>
+
+<p><strong>
+
+∂z/∂x=2x
+
+</strong></p>
+
+<p><strong>
+
+∂z/∂y=2y
+
+</strong></p>
+
+<p>Differentiate the intermediate variables.</p>
+
+<p><strong>
+
+dx/dt=2t
+
+</strong></p>
+
+<p><strong>
+
+dy/dt=3
+
+</strong></p>
+
+<p>Apply the chain rule.</p>
+
+<p><strong>
+
+dz/dt=(2x)(2t)+(2y)(3)
+
+</strong></p>
+
+<p>Finally substitute</p>
+
+<p><strong>
+
+x=t²
+
+</strong></p>
+
+<p>and</p>
+
+<p><strong>
+
+y=3t
+
+</strong></p>
+
+<p>to obtain</p>
+
+<p><strong>
+
+dz/dt=4t³+18t
+
+</strong></p>
+
+<hr>
+
+<h2>Dependency Diagrams</h2>
+
+<p>Tree diagrams help organize complicated chain rule problems.</p>
+
+<p>Each branch represents one path of dependence.</p>
+
+<p>The total derivative is found by adding the contribution from every path.</p>
+
+<hr>
+
+<h2>Functions of Several Intermediate Variables</h2>
+
+<p>A function may depend on more than two intermediate variables.</p>
+
+<p>The chain rule simply extends by adding another product for each additional path.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+<li>Physics</li>
+<li>Engineering</li>
+<li>Economics</li>
+<li>Machine learning</li>
+<li>Optimization</li>
+<li>Fluid dynamics</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Forgetting one dependency path.</li>
+<li>Using ordinary derivatives instead of partial derivatives.</li>
+<li>Not substituting intermediate variables at the end.</li>
+<li>Multiplying instead of adding separate paths.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>The multivariable chain rule extends the single-variable chain rule.</li>
+<li>Every dependency path contributes to the derivative.</li>
+<li>Use partial derivatives for intermediate variables.</li>
+<li>Dependency diagrams help organize complex problems.</li>
+<li>The chain rule is essential throughout multivariable calculus.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "The multivariable chain rule is used to differentiate",
+                options: [
+                    "Composite functions involving multiple variables",
+                    "Only polynomial functions",
+                    "Only trigonometric functions",
+                    "Only implicit functions"
+                ],
+                answer: "Composite functions involving multiple variables",
+                explanation: "The multivariable chain rule extends the ordinary chain rule to functions with several dependent variables."
+            },
+            {
+                question: "Suppose z=f(x,y), where x=x(t) and y=y(t). Then z is ultimately a function of",
+                options: [
+                    "t",
+                    "x",
+                    "y",
+                    "Both x and y only"
+                ],
+                answer: "t",
+                explanation: "Since both x and y depend on t, the function z also depends on t."
+            },
+            {
+                question: "The multivariable chain rule for z=f(x,y) is",
+                options: [
+                    "dz/dt=(∂f/∂x)(dx/dt)+(∂f/∂y)(dy/dt)",
+                    "dz/dt=(dx/dt)+(dy/dt)",
+                    "dz/dt=(∂f/∂x)(∂f/∂y)",
+                    "dz/dt=(dx/dt)(dy/dt)"
+                ],
+                answer: "dz/dt=(∂f/∂x)(dx/dt)+(∂f/∂y)(dy/dt)",
+                explanation: "The total derivative is the sum of the contributions from each dependency path."
+            },
+            {
+                question: "In the multivariable chain rule, ∂f/∂x represents",
+                options: [
+                    "The partial derivative of f with respect to x",
+                    "The ordinary derivative of x",
+                    "The derivative of t",
+                    "The derivative of y"
+                ],
+                answer: "The partial derivative of f with respect to x",
+                explanation: "Since f depends on more than one variable, partial derivatives are used."
+            },
+            {
+                question: "If z=x²+y², then ∂z/∂x equals",
+                options: [
+                    "2x",
+                    "2y",
+                    "x²",
+                    "y²"
+                ],
+                answer: "2x",
+                explanation: "Treat y as a constant while differentiating with respect to x."
+            },
+            {
+                question: "If z=x²+y², then ∂z/∂y equals",
+                options: [
+                    "2y",
+                    "2x",
+                    "x²",
+                    "y²"
+                ],
+                answer: "2y",
+                explanation: "Treat x as a constant while differentiating with respect to y."
+            },
+            {
+                question: "If x=t², then dx/dt equals",
+                options: [
+                    "2t",
+                    "t",
+                    "2",
+                    "t²"
+                ],
+                answer: "2t",
+                explanation: "Differentiate t² with respect to t."
+            },
+            {
+                question: "If y=3t, then dy/dt equals",
+                options: [
+                    "3",
+                    "t",
+                    "6t",
+                    "9"
+                ],
+                answer: "3",
+                explanation: "The derivative of 3t with respect to t is 3."
+            },
+            {
+                question: "In a dependency diagram, each branch represents",
+                options: [
+                    "One path of dependence",
+                    "A second derivative",
+                    "A level curve",
+                    "A gradient vector"
+                ],
+                answer: "One path of dependence",
+                explanation: "Each branch shows one way the variables are connected."
+            },
+            {
+                question: "The total derivative is found by",
+                options: [
+                    "Adding the contributions from every dependency path",
+                    "Multiplying every derivative together",
+                    "Using only one dependency path",
+                    "Ignoring intermediate variables"
+                ],
+                answer: "Adding the contributions from every dependency path",
+                explanation: "Every path contributes to the total rate of change."
+            },
+            {
+                question: "When using the multivariable chain rule, intermediate variables are differentiated using",
+                options: [
+                    "Ordinary derivatives",
+                    "Partial derivatives",
+                    "Definite integrals",
+                    "Limits"
+                ],
+                answer: "Ordinary derivatives",
+                explanation: "Variables such as x(t) and y(t) are functions of a single variable, so ordinary derivatives are used for them."
+            },
+            {
+                question: "A common mistake when applying the multivariable chain rule is",
+                options: [
+                    "Forgetting one dependency path",
+                    "Finding partial derivatives",
+                    "Drawing a dependency diagram",
+                    "Using substitution"
+                ],
+                answer: "Forgetting one dependency path",
+                explanation: "Missing a dependency path leads to an incomplete total derivative."
+            },
+            {
+                question: "Dependency diagrams are helpful because they",
+                options: [
+                    "Organize complicated chains of dependence",
+                    "Replace differentiation",
+                    "Eliminate partial derivatives",
+                    "Always simplify algebra"
+                ],
+                answer: "Organize complicated chains of dependence",
+                explanation: "They provide a visual guide for applying the chain rule correctly."
+            },
+            {
+                question: "The multivariable chain rule is commonly used in",
+                options: [
+                    "Physics, engineering, and optimization",
+                    "Only geometry",
+                    "Only algebra",
+                    "Only statistics"
+                ],
+                answer: "Physics, engineering, and optimization",
+                explanation: "Composite functions naturally occur in many scientific and engineering applications."
+            },
+            {
+                question: "Which statement about the multivariable chain rule is TRUE?",
+                options: [
+                    "Every dependency path contributes a product, and all products are added together.",
+                    "Only the longest dependency path is used.",
+                    "Partial derivatives are never needed.",
+                    "The chain rule only applies to functions of one variable."
+                ],
+                answer: "Every dependency path contributes a product, and all products are added together.",
+                explanation: "The multivariable chain rule sums the contribution from every path connecting the independent variable to the final output."
+            }
+
+        ]
+    },
+
+    "calculus2-chain-rule-multivariable-quiz": {
+        title: "The Multivariable Chain Rule Quiz",
+        subtitle: "Test your understanding of the multivariable chain rule and dependency diagrams.",
+
+        body: `
+
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Recognize composite functions.</li>
+<li>Apply the multivariable chain rule.</li>
+<li>Use partial and ordinary derivatives correctly.</li>
+<li>Interpret dependency diagrams.</li>
+<li>Avoid common chain rule mistakes.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "The multivariable chain rule is used when",
+                options: [
+                    "A function depends on intermediate variables",
+                    "A function is constant",
+                    "A function has only one variable",
+                    "A function has no derivatives"
+                ],
+                answer: "A function depends on intermediate variables",
+                explanation: "The chain rule applies whenever variables are connected through one or more intermediate functions."
+            },
+            {
+                question: "If z=f(x,y), x=x(t), and y=y(t), then z ultimately depends on",
+                options: [
+                    "t",
+                    "x only",
+                    "y only",
+                    "Neither x nor y"
+                ],
+                answer: "t",
+                explanation: "Since both x and y depend on t, z is also a function of t."
+            },
+            {
+                question: "Which formula correctly represents the multivariable chain rule?",
+                options: [
+                    "dz/dt=(∂f/∂x)(dx/dt)+(∂f/∂y)(dy/dt)",
+                    "dz/dt=(∂f/∂x)+(∂f/∂y)",
+                    "dz/dt=(dx/dt)(dy/dt)",
+                    "dz/dt=(∂f/∂x)(∂f/∂y)"
+                ],
+                answer: "dz/dt=(∂f/∂x)(dx/dt)+(∂f/∂y)(dy/dt)",
+                explanation: "The total derivative is the sum of the contributions from every dependency path."
+            },
+            {
+                question: "For z=x²+y², the partial derivative ∂z/∂x is",
+                options: [
+                    "2x",
+                    "2y",
+                    "x+y",
+                    "x²"
+                ],
+                answer: "2x",
+                explanation: "Treat y as a constant when differentiating with respect to x."
+            },
+            {
+                question: "For z=x²+y², the partial derivative ∂z/∂y is",
+                options: [
+                    "2y",
+                    "2x",
+                    "x+y",
+                    "y²"
+                ],
+                answer: "2y",
+                explanation: "Treat x as a constant when differentiating with respect to y."
+            },
+            {
+                question: "If x=t², then dx/dt equals",
+                options: [
+                    "2t",
+                    "t²",
+                    "2",
+                    "t"
+                ],
+                answer: "2t",
+                explanation: "Differentiate x=t² with respect to t."
+            },
+            {
+                question: "If y=5t, then dy/dt equals",
+                options: [
+                    "5",
+                    "10t",
+                    "t",
+                    "25"
+                ],
+                answer: "5",
+                explanation: "The derivative of a linear function at+b is simply a."
+            },
+            {
+                question: "Each branch in a dependency diagram represents",
+                options: [
+                    "A dependency path",
+                    "A level curve",
+                    "A gradient vector",
+                    "A second derivative"
+                ],
+                answer: "A dependency path",
+                explanation: "Each branch shows one route through which the independent variable affects the final output."
+            },
+            {
+                question: "The total derivative is found by",
+                options: [
+                    "Adding the contribution from every dependency path",
+                    "Multiplying all derivatives together",
+                    "Using only one dependency path",
+                    "Ignoring intermediate variables"
+                ],
+                answer: "Adding the contribution from every dependency path",
+                explanation: "Every dependency path contributes one product, and these products are added."
+            },
+            {
+                question: "When differentiating x(t), you use",
+                options: [
+                    "An ordinary derivative",
+                    "A partial derivative",
+                    "A mixed partial derivative",
+                    "No derivative"
+                ],
+                answer: "An ordinary derivative",
+                explanation: "Since x depends on only one variable, t, ordinary differentiation is used."
+            },
+            {
+                question: "When differentiating f(x,y) with respect to x, you use",
+                options: [
+                    "A partial derivative",
+                    "An ordinary derivative",
+                    "A definite integral",
+                    "A limit"
+                ],
+                answer: "A partial derivative",
+                explanation: "Because f depends on more than one variable, partial derivatives are required."
+            },
+            {
+                question: "A common mistake when applying the multivariable chain rule is",
+                options: [
+                    "Forgetting one dependency path",
+                    "Finding partial derivatives",
+                    "Drawing a dependency diagram",
+                    "Substituting intermediate variables"
+                ],
+                answer: "Forgetting one dependency path",
+                explanation: "Every dependency path contributes to the total derivative."
+            },
+            {
+                question: "Dependency diagrams help by",
+                options: [
+                    "Organizing complicated chains of dependence",
+                    "Replacing differentiation",
+                    "Eliminating algebra",
+                    "Avoiding substitution"
+                ],
+                answer: "Organizing complicated chains of dependence",
+                explanation: "They visually identify every path that contributes to the derivative."
+            },
+            {
+                question: "The multivariable chain rule is commonly applied in",
+                options: [
+                    "Physics, engineering, and optimization",
+                    "Only geometry",
+                    "Only algebra",
+                    "Only probability"
+                ],
+                answer: "Physics, engineering, and optimization",
+                explanation: "Many real-world models involve variables that depend on other variables."
+            },
+            {
+                question: "Which statement about the multivariable chain rule is TRUE?",
+                options: [
+                    "Every dependency path contributes one product term, and all such terms are added together.",
+                    "Only one dependency path is ever used.",
+                    "Partial derivatives are never required.",
+                    "The chain rule only applies to functions of one variable."
+                ],
+                answer: "Every dependency path contributes one product term, and all such terms are added together.",
+                explanation: "The multivariable chain rule extends the ordinary chain rule by accounting for every path through which variables influence the final function."
+            }
+        ]
+    },
+
+    "calculus2-optimization-multivariable": {
+        title: "Optimization of Functions of Several Variables",
+        subtitle: "Find local maxima, local minima, and saddle points using partial derivatives.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Locate critical points of multivariable functions.</li>
+<li>Use first-order partial derivatives to find candidates for extrema.</li>
+<li>Apply the Second Derivative Test.</li>
+<li>Classify critical points as maxima, minima, or saddle points.</li>
+<li>Apply multivariable optimization to real-world problems.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>Optimization is the process of finding the largest or smallest values of a function.</p>
+
+<p>For functions of several variables, we first locate <strong>critical points</strong>, then determine whether each is a local maximum, local minimum, or saddle point.</p>
+
+<hr>
+
+<h2>Critical Points</h2>
+
+<p>A point is a <strong>critical point</strong> if</p>
+
+<p><strong>
+
+∂f/∂x = 0
+
+</strong></p>
+
+<p>and</p>
+
+<p><strong>
+
+∂f/∂y = 0
+
+</strong></p>
+
+<p>or if one or both partial derivatives do not exist.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Find the critical points of</p>
+
+<p><strong>
+
+f(x,y)=x²+y²−4x−6y
+
+</strong></p>
+
+<p>Compute the first-order partial derivatives.</p>
+
+<p><strong>
+
+∂f/∂x=2x−4
+
+</strong></p>
+
+<p><strong>
+
+∂f/∂y=2y−6
+
+</strong></p>
+
+<p>Set both equal to zero.</p>
+
+<p><strong>
+
+2x−4=0
+
+</strong></p>
+
+<p><strong>
+
+2y−6=0
+
+</strong></p>
+
+<p>Therefore the critical point is</p>
+
+<p><strong>
+
+(2,3)
+
+</strong></p>
+
+<hr>
+
+<h2>Second Derivative Test</h2>
+
+<p>Compute the second-order partial derivatives.</p>
+
+<p><strong>
+
+f<sub>xx</sub>
+
+</strong></p>
+
+<p><strong>
+
+f<sub>yy</sub>
+
+</strong></p>
+
+<p><strong>
+
+f<sub>xy</sub>
+
+</strong></p>
+
+<p>Then compute the discriminant</p>
+
+<p><strong>
+
+D = f<sub>xx</sub>f<sub>yy</sub> − (f<sub>xy</sub>)²
+
+</strong></p>
+
+<hr>
+
+<h2>Classification Rules</h2>
+
+<table>
+<tr>
+<th>Condition</th>
+<th>Classification</th>
+</tr>
+
+<tr>
+<td>D &gt; 0 and f<sub>xx</sub> &gt; 0</td>
+<td>Local Minimum</td>
+</tr>
+
+<tr>
+<td>D &gt; 0 and f<sub>xx</sub> &lt; 0</td>
+<td>Local Maximum</td>
+</tr>
+
+<tr>
+<td>D &lt; 0</td>
+<td>Saddle Point</td>
+</tr>
+
+<tr>
+<td>D = 0</td>
+<td>Test Inconclusive</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>For</p>
+
+<p><strong>
+
+f(x,y)=x²+y²−4x−6y
+
+</strong></p>
+
+<p>the second derivatives are</p>
+
+<p><strong>
+
+f<sub>xx</sub>=2
+
+</strong></p>
+
+<p><strong>
+
+f<sub>yy</sub>=2
+
+</strong></p>
+
+<p><strong>
+
+f<sub>xy</sub>=0
+
+</strong></p>
+
+<p>Compute</p>
+
+<p><strong>
+
+D=(2)(2)-0²=4
+
+</strong></p>
+
+<p>Since</p>
+
+<p><strong>
+
+D&gt;0
+
+</strong></p>
+
+<p>and</p>
+
+<p><strong>
+
+f<sub>xx</sub>&gt;0
+
+</strong></p>
+
+<p>the point (2,3) is a <strong>local minimum</strong>.</p>
+
+<hr>
+
+<h2>Saddle Points</h2>
+
+<p>A saddle point is neither a local maximum nor a local minimum.</p>
+
+<p>The function increases in some directions and decreases in others.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+<li>Business profit optimization</li>
+<li>Engineering design</li>
+<li>Machine learning</li>
+<li>Economics</li>
+<li>Physics</li>
+<li>Operations research</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Forgetting to solve both partial derivative equations.</li>
+<li>Using the wrong discriminant formula.</li>
+<li>Confusing local maxima with local minima.</li>
+<li>Ignoring the case D = 0.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Critical points occur where the first-order partial derivatives are zero or undefined.</li>
+<li>The Second Derivative Test classifies critical points.</li>
+<li>The discriminant is D=f<sub>xx</sub>f<sub>yy</sub>−(f<sub>xy</sub>)².</li>
+<li>Saddle points occur when D&lt;0.</li>
+<li>Optimization is widely used throughout science, engineering, and economics.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "A critical point of a function occurs where",
+                options: [
+                    "All first-order partial derivatives are zero or undefined",
+                    "The function equals zero",
+                    "The second derivatives are zero",
+                    "The gradient has maximum magnitude"
+                ],
+                answer: "All first-order partial derivatives are zero or undefined",
+                explanation: "Critical points occur where every first-order partial derivative is zero or does not exist."
+            },
+            {
+                question: "To find critical points of f(x,y), you first compute",
+                options: [
+                    "The first-order partial derivatives",
+                    "The second-order partial derivatives",
+                    "The gradient magnitude",
+                    "The directional derivative"
+                ],
+                answer: "The first-order partial derivatives",
+                explanation: "Critical points are found by setting the first-order partial derivatives equal to zero."
+            },
+            {
+                question: "For f(x,y)=x²+y²−4x−6y, ∂f/∂x equals",
+                options: [
+                    "2x−4",
+                    "2y−6",
+                    "2x",
+                    "2y"
+                ],
+                answer: "2x−4",
+                explanation: "Differentiate with respect to x while treating y as a constant."
+            },
+            {
+                question: "For f(x,y)=x²+y²−4x−6y, ∂f/∂y equals",
+                options: [
+                    "2y−6",
+                    "2x−4",
+                    "2y",
+                    "2x"
+                ],
+                answer: "2y−6",
+                explanation: "Differentiate with respect to y while treating x as a constant."
+            },
+            {
+                question: "The critical point of f(x,y)=x²+y²−4x−6y is",
+                options: [
+                    "(2,3)",
+                    "(4,6)",
+                    "(1,2)",
+                    "(0,0)"
+                ],
+                answer: "(2,3)",
+                explanation: "Solve 2x−4=0 and 2y−6=0 to obtain x=2 and y=3."
+            },
+            {
+                question: "The discriminant used in the Second Derivative Test is",
+                options: [
+                    "D=fxx·fyy−(fxy)²",
+                    "D=fxx+fyy",
+                    "D=fxy−fxx",
+                    "D=fxx²+fyy²"
+                ],
+                answer: "D=fxx·fyy−(fxy)²",
+                explanation: "This discriminant determines the nature of a critical point."
+            },
+            {
+                question: "If D>0 and fxx>0, the critical point is a",
+                options: [
+                    "Local minimum",
+                    "Local maximum",
+                    "Saddle point",
+                    "Point of inflection"
+                ],
+                answer: "Local minimum",
+                explanation: "Positive discriminant with positive fxx indicates a local minimum."
+            },
+            {
+                question: "If D>0 and fxx<0, the critical point is a",
+                options: [
+                    "Local maximum",
+                    "Local minimum",
+                    "Saddle point",
+                    "Inflection point"
+                ],
+                answer: "Local maximum",
+                explanation: "Positive discriminant with negative fxx indicates a local maximum."
+            },
+            {
+                question: "If D<0, the critical point is classified as a",
+                options: [
+                    "Saddle point",
+                    "Local minimum",
+                    "Local maximum",
+                    "Global minimum"
+                ],
+                answer: "Saddle point",
+                explanation: "A negative discriminant indicates the surface curves in opposite directions."
+            },
+            {
+                question: "If D=0, the Second Derivative Test is",
+                options: [
+                    "Inconclusive",
+                    "A local maximum",
+                    "A local minimum",
+                    "A saddle point"
+                ],
+                answer: "Inconclusive",
+                explanation: "Additional analysis is required when the discriminant equals zero."
+            },
+            {
+                question: "A saddle point is a point where the function",
+                options: [
+                    "Increases in some directions and decreases in others",
+                    "Has its largest value",
+                    "Has its smallest value",
+                    "Is always zero"
+                ],
+                answer: "Increases in some directions and decreases in others",
+                explanation: "A saddle point is neither a local maximum nor a local minimum."
+            },
+            {
+                question: "For f(x,y)=x²+y²−4x−6y, the value of fxx is",
+                options: [
+                    "2",
+                    "0",
+                    "-2",
+                    "4"
+                ],
+                answer: "2",
+                explanation: "Differentiate ∂f/∂x=2x−4 once more with respect to x."
+            },
+            {
+                question: "For f(x,y)=x²+y²−4x−6y, the mixed partial derivative fxy equals",
+                options: [
+                    "0",
+                    "2",
+                    "-2",
+                    "1"
+                ],
+                answer: "0",
+                explanation: "Differentiating 2x−4 with respect to y gives zero."
+            },
+            {
+                question: "A common mistake when using the Second Derivative Test is",
+                options: [
+                    "Using the wrong discriminant formula",
+                    "Finding first-order partial derivatives",
+                    "Solving the critical point equations",
+                    "Computing second-order derivatives"
+                ],
+                answer: "Using the wrong discriminant formula",
+                explanation: "The correct discriminant is D=fxx·fyy−(fxy)²."
+            },
+            {
+                question: "Which statement about multivariable optimization is TRUE?",
+                options: [
+                    "Critical points are found using first-order partial derivatives and classified using the Second Derivative Test.",
+                    "Only second-order partial derivatives are needed to locate critical points.",
+                    "Every critical point is a local maximum.",
+                    "A saddle point is always a local minimum."
+                ],
+                answer: "Critical points are found using first-order partial derivatives and classified using the Second Derivative Test.",
+                explanation: "The standard optimization procedure is to locate critical points first and then classify them using the Second Derivative Test."
+            }
+
+        ]
+    },
+    "calculus2-optimization-multivariable-quiz": {
+        title: "Optimization of Functions of Several Variables Quiz",
+        subtitle: "Test your understanding of critical points, the Second Derivative Test, and classifying extrema.",
+
+        body: `
+
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Find critical points.</li>
+<li>Compute first- and second-order partial derivatives.</li>
+<li>Use the Second Derivative Test.</li>
+<li>Classify local maxima, local minima, and saddle points.</li>
+<li>Recognize common optimization mistakes.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "A critical point occurs where",
+                options: [
+                    "All first-order partial derivatives are zero or undefined",
+                    "The function equals zero",
+                    "All second-order partial derivatives are zero",
+                    "The gradient has maximum magnitude"
+                ],
+                answer: "All first-order partial derivatives are zero or undefined",
+                explanation: "Critical points occur where every first-order partial derivative is zero or does not exist."
+            },
+            {
+                question: "To locate critical points, you first compute",
+                options: [
+                    "The first-order partial derivatives",
+                    "The second-order partial derivatives",
+                    "The directional derivative",
+                    "The gradient magnitude"
+                ],
+                answer: "The first-order partial derivatives",
+                explanation: "Critical points are found by solving the equations formed by setting the first-order partial derivatives equal to zero."
+            },
+            {
+                question: "For f(x,y)=x²+y²−4x−6y, the partial derivative ∂f/∂x is",
+                options: [
+                    "2x−4",
+                    "2y−6",
+                    "2x",
+                    "2y"
+                ],
+                answer: "2x−4",
+                explanation: "Differentiate with respect to x while treating y as a constant."
+            },
+            {
+                question: "For f(x,y)=x²+y²−4x−6y, the partial derivative ∂f/∂y is",
+                options: [
+                    "2y−6",
+                    "2x−4",
+                    "2y",
+                    "2x"
+                ],
+                answer: "2y−6",
+                explanation: "Differentiate with respect to y while treating x as a constant."
+            },
+            {
+                question: "The critical point of f(x,y)=x²+y²−4x−6y is",
+                options: [
+                    "(2,3)",
+                    "(4,6)",
+                    "(1,2)",
+                    "(0,0)"
+                ],
+                answer: "(2,3)",
+                explanation: "Solve 2x−4=0 and 2y−6=0 to obtain x=2 and y=3."
+            },
+            {
+                question: "The discriminant in the Second Derivative Test is",
+                options: [
+                    "D=fxx·fyy−(fxy)²",
+                    "D=fxx+fyy",
+                    "D=fxx−fyy",
+                    "D=fxy²"
+                ],
+                answer: "D=fxx·fyy−(fxy)²",
+                explanation: "This discriminant is used to classify critical points."
+            },
+            {
+                question: "If D>0 and fxx>0, the critical point is a",
+                options: [
+                    "Local minimum",
+                    "Local maximum",
+                    "Saddle point",
+                    "Global maximum"
+                ],
+                answer: "Local minimum",
+                explanation: "A positive discriminant together with fxx>0 indicates a local minimum."
+            },
+            {
+                question: "If D>0 and fxx<0, the critical point is a",
+                options: [
+                    "Local maximum",
+                    "Local minimum",
+                    "Saddle point",
+                    "Global minimum"
+                ],
+                answer: "Local maximum",
+                explanation: "A positive discriminant together with fxx<0 indicates a local maximum."
+            },
+            {
+                question: "If D<0, then the critical point is a",
+                options: [
+                    "Saddle point",
+                    "Local minimum",
+                    "Local maximum",
+                    "Point of inflection"
+                ],
+                answer: "Saddle point",
+                explanation: "A negative discriminant means the surface bends in opposite directions."
+            },
+            {
+                question: "If D=0, the Second Derivative Test is",
+                options: [
+                    "Inconclusive",
+                    "A local maximum",
+                    "A local minimum",
+                    "A saddle point"
+                ],
+                answer: "Inconclusive",
+                explanation: "When D=0, additional methods are needed to classify the critical point."
+            },
+            {
+                question: "For f(x,y)=x²+y²−4x−6y, the second partial derivative fxx is",
+                options: [
+                    "2",
+                    "0",
+                    "-2",
+                    "4"
+                ],
+                answer: "2",
+                explanation: "Differentiate ∂f/∂x=2x−4 once more with respect to x."
+            },
+            {
+                question: "For f(x,y)=x²+y²−4x−6y, the mixed partial derivative fxy is",
+                options: [
+                    "0",
+                    "2",
+                    "-2",
+                    "1"
+                ],
+                answer: "0",
+                explanation: "The derivative of 2x−4 with respect to y is zero."
+            },
+            {
+                question: "A saddle point is best described as a point where the function",
+                options: [
+                    "Increases in some directions and decreases in others",
+                    "Always reaches a maximum",
+                    "Always reaches a minimum",
+                    "Always equals zero"
+                ],
+                answer: "Increases in some directions and decreases in others",
+                explanation: "A saddle point is neither a local maximum nor a local minimum."
+            },
+            {
+                question: "A common mistake when applying the Second Derivative Test is",
+                options: [
+                    "Using an incorrect formula for the discriminant",
+                    "Finding first-order partial derivatives",
+                    "Computing second-order partial derivatives",
+                    "Solving for critical points"
+                ],
+                answer: "Using an incorrect formula for the discriminant",
+                explanation: "The correct discriminant is D=fxx·fyy−(fxy)²."
+            },
+            {
+                question: "Which statement about multivariable optimization is TRUE?",
+                options: [
+                    "Critical points are located using first-order partial derivatives and classified using the Second Derivative Test.",
+                    "Every critical point is a local minimum.",
+                    "Only second-order partial derivatives are needed.",
+                    "A negative discriminant always indicates a local maximum."
+                ],
+                answer: "Critical points are located using first-order partial derivatives and classified using the Second Derivative Test.",
+                explanation: "The standard optimization process is to locate critical points using first-order partial derivatives and then classify them using the Second Derivative Test."
+            }
+        ]
+    },
+    "calculus2-lagrange-multipliers": {
+        title: "Lagrange Multipliers",
+        subtitle: "Find maximum and minimum values of a function subject to a constraint.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>By the end of this lesson, you should be able to:</p>
+
+<ul>
+<li>Understand constrained optimization.</li>
+<li>Apply the method of Lagrange multipliers.</li>
+<li>Solve optimization problems with one constraint.</li>
+<li>Interpret the geometric meaning of Lagrange multipliers.</li>
+<li>Recognize real-world applications.</li>
+</ul>
+
+<hr>
+
+<h2>Introduction</h2>
+
+<p>Previously, we optimized functions without restrictions.</p>
+
+<p>Many real-world problems require optimization while satisfying one or more constraints.</p>
+
+<p>Examples include:</p>
+
+<ul>
+<li>Maximizing profit with a limited budget.</li>
+<li>Minimizing material while maintaining a fixed volume.</li>
+<li>Finding the closest point on a curve.</li>
+</ul>
+
+<p>The method of <strong>Lagrange multipliers</strong> solves these constrained optimization problems.</p>
+
+<hr>
+
+<h2>The Optimization Problem</h2>
+
+<p>Suppose we want to optimize</p>
+
+<p><strong>
+
+f(x,y)
+
+</strong></p>
+
+<p>subject to the constraint</p>
+
+<p><strong>
+
+g(x,y)=c
+
+</strong></p>
+
+<hr>
+
+<h2>Key Idea</h2>
+
+<p>At an optimal point, the gradient of the objective function is parallel to the gradient of the constraint.</p>
+
+<p>This gives the equation</p>
+
+<p><strong>
+
+∇f = λ∇g
+
+</strong></p>
+
+<p>where λ (lambda) is called the <strong>Lagrange multiplier</strong>.</p>
+
+<hr>
+
+<h2>System of Equations</h2>
+
+<p>To solve a constrained optimization problem, solve</p>
+
+<p><strong>
+
+∇f = λ∇g
+
+</strong></p>
+
+<p>together with</p>
+
+<p><strong>
+
+g(x,y)=c
+
+</strong></p>
+
+<hr>
+
+<h2>Example</h2>
+
+<p>Find the maximum and minimum values of</p>
+
+<p><strong>
+
+f(x,y)=xy
+
+</strong></p>
+
+<p>subject to</p>
+
+<p><strong>
+
+x²+y²=25
+
+</strong></p>
+
+<p>Compute the gradients.</p>
+
+<p><strong>
+
+∇f=&lt;y,x&gt;
+
+</strong></p>
+
+<p><strong>
+
+∇g=&lt;2x,2y&gt;
+
+</strong></p>
+
+<p>Set</p>
+
+<p><strong>
+
+&lt;y,x&gt; = λ&lt;2x,2y&gt;
+
+</strong></p>
+
+<p>Then solve these equations together with</p>
+
+<p><strong>
+
+x²+y²=25
+
+</strong></p>
+
+<p>The solutions produce the constrained maximum and minimum values.</p>
+
+<hr>
+
+<h2>Geometric Interpretation</h2>
+
+<p>At the optimal point, the level curve of the objective function just touches the constraint curve.</p>
+
+<p>The two curves are tangent, so their gradients point in the same (or opposite) direction.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+<li>Engineering design</li>
+<li>Economics</li>
+<li>Machine learning</li>
+<li>Business optimization</li>
+<li>Operations research</li>
+<li>Physics</li>
+</ul>
+
+<hr>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Forgetting to include the constraint equation.</li>
+<li>Using the wrong gradient.</li>
+<li>Ignoring possible solutions.</li>
+<li>Not checking all candidate points.</li>
+</ul>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Lagrange multipliers solve constrained optimization problems.</li>
+<li>The key equation is ∇f=λ∇g.</li>
+<li>The constraint equation must always be included.</li>
+<li>Optimal points occur where the gradients are parallel.</li>
+<li>This method is widely used in science, engineering, and economics.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "Lagrange multipliers are used to solve",
+                options: [
+                    "Constrained optimization problems",
+                    "Ordinary differential equations",
+                    "Indefinite integrals",
+                    "Matrix multiplication problems"
+                ],
+                answer: "Constrained optimization problems",
+                explanation: "Lagrange multipliers are specifically designed for finding maxima or minima subject to one or more constraints."
+            },
+            {
+                question: "The method of Lagrange multipliers requires optimizing a function while",
+                options: [
+                    "Satisfying a constraint",
+                    "Ignoring all restrictions",
+                    "Keeping the function constant",
+                    "Taking only first derivatives"
+                ],
+                answer: "Satisfying a constraint",
+                explanation: "The defining feature of Lagrange multipliers is that optimization occurs under one or more constraints."
+            },
+            {
+                question: "The key equation in the method of Lagrange multipliers is",
+                options: [
+                    "∇f = λ∇g",
+                    "∇f = ∇g",
+                    "∇g = λf",
+                    "f = λg"
+                ],
+                answer: "∇f = λ∇g",
+                explanation: "At an optimal constrained point, the gradient vectors are parallel, giving ∇f = λ∇g."
+            },
+            {
+                question: "The symbol λ represents the",
+                options: [
+                    "Lagrange multiplier",
+                    "Gradient",
+                    "Constraint",
+                    "Directional derivative"
+                ],
+                answer: "Lagrange multiplier",
+                explanation: "The scalar λ is called the Lagrange multiplier."
+            },
+            {
+                question: "If the objective function is f(x,y)=xy, then its gradient is",
+                options: [
+                    "<y,x>",
+                    "<x,y>",
+                    "<2x,2y>",
+                    "<1,1>"
+                ],
+                answer: "<y,x>",
+                explanation: "Since ∂f/∂x=y and ∂f/∂y=x, the gradient is <y,x>."
+            },
+            {
+                question: "For the constraint g(x,y)=x²+y², the gradient is",
+                options: [
+                    "<2x,2y>",
+                    "<x,y>",
+                    "<2y,2x>",
+                    "<1,1>"
+                ],
+                answer: "<2x,2y>",
+                explanation: "Differentiate the constraint with respect to x and y."
+            },
+            {
+                question: "In addition to ∇f = λ∇g, you must also solve",
+                options: [
+                    "The constraint equation",
+                    "The Hessian matrix",
+                    "A differential equation",
+                    "A line integral"
+                ],
+                answer: "The constraint equation",
+                explanation: "The original constraint must always be satisfied."
+            },
+            {
+                question: "At a constrained optimum, the gradients of the objective and constraint are",
+                options: [
+                    "Parallel",
+                    "Perpendicular",
+                    "Equal to zero",
+                    "Independent"
+                ],
+                answer: "Parallel",
+                explanation: "The gradients point in the same or opposite direction."
+            },
+            {
+                question: "Geometrically, the level curve of the objective function and the constraint are",
+                options: [
+                    "Tangent to each other",
+                    "Perpendicular",
+                    "Parallel lines",
+                    "Always intersecting at right angles"
+                ],
+                answer: "Tangent to each other",
+                explanation: "At the optimum, the level curve just touches the constraint."
+            },
+            {
+                question: "A common mistake when using Lagrange multipliers is",
+                options: [
+                    "Forgetting the constraint equation",
+                    "Computing gradients",
+                    "Using partial derivatives",
+                    "Finding candidate points"
+                ],
+                answer: "Forgetting the constraint equation",
+                explanation: "Both the Lagrange equations and the original constraint must be solved together."
+            },
+            {
+                question: "The method of Lagrange multipliers is primarily used to find",
+                options: [
+                    "Maximum and minimum values with constraints",
+                    "Antiderivatives",
+                    "Solutions to differential equations",
+                    "Taylor polynomials"
+                ],
+                answer: "Maximum and minimum values with constraints",
+                explanation: "It is a constrained optimization technique."
+            },
+            {
+                question: "If there is no constraint, Lagrange multipliers are generally",
+                options: [
+                    "Not needed",
+                    "Always required",
+                    "Impossible to apply",
+                    "Used to compute gradients"
+                ],
+                answer: "Not needed",
+                explanation: "Without constraints, ordinary multivariable optimization methods are sufficient."
+            },
+            {
+                question: "Which field commonly uses Lagrange multipliers?",
+                options: [
+                    "Engineering",
+                    "Economics",
+                    "Machine learning",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Constrained optimization appears throughout science, engineering, economics, and data science."
+            },
+            {
+                question: "The equation x²+y²=25 is an example of a",
+                options: [
+                    "Constraint",
+                    "Gradient",
+                    "Objective function",
+                    "Partial derivative"
+                ],
+                answer: "Constraint",
+                explanation: "It restricts the allowable values of x and y."
+            },
+            {
+                question: "Which statement about Lagrange multipliers is TRUE?",
+                options: [
+                    "The gradients of the objective and constraint are parallel at constrained extrema.",
+                    "The gradients are always perpendicular.",
+                    "The objective function must be linear.",
+                    "The constraint equation is ignored after finding the gradients."
+                ],
+                answer: "The gradients of the objective and constraint are parallel at constrained extrema.",
+                explanation: "The fundamental idea behind the method is that the gradients are parallel at constrained maximum and minimum points."
+            }
+
+        ]
+    },
+
+    "calculus2-lagrange-multipliers-quiz": {
+        title: "Lagrange Multipliers Quiz",
+        subtitle: "Test your understanding of constrained optimization and the method of Lagrange multipliers.",
+
+        body: `
+
+<h2>Quiz Instructions</h2>
+
+<p>Select the best answer for each question.</p>
+
+<ul>
+<li>Identify constrained optimization problems.</li>
+<li>Apply the equation ∇f = λ∇g.</li>
+<li>Compute gradients.</li>
+<li>Interpret the geometric meaning of Lagrange multipliers.</li>
+<li>Recognize common mistakes and applications.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "The method of Lagrange multipliers is used to solve",
+                options: [
+                    "Constrained optimization problems",
+                    "Differential equations",
+                    "Indefinite integrals",
+                    "Systems of linear equations"
+                ],
+                answer: "Constrained optimization problems",
+                explanation: "Lagrange multipliers are used to find maximum and minimum values subject to one or more constraints."
+            },
+            {
+                question: "A constraint is",
+                options: [
+                    "A restriction placed on the variables",
+                    "The objective function",
+                    "A partial derivative",
+                    "A gradient vector"
+                ],
+                answer: "A restriction placed on the variables",
+                explanation: "A constraint limits the possible values the variables can take."
+            },
+            {
+                question: "The key equation in the method of Lagrange multipliers is",
+                options: [
+                    "∇f = λ∇g",
+                    "∇f = ∇g",
+                    "f = λg",
+                    "∇g = λf"
+                ],
+                answer: "∇f = λ∇g",
+                explanation: "This equation states that the gradients of the objective function and the constraint are parallel."
+            },
+            {
+                question: "The symbol λ represents the",
+                options: [
+                    "Lagrange multiplier",
+                    "Constraint",
+                    "Gradient",
+                    "Level curve"
+                ],
+                answer: "Lagrange multiplier",
+                explanation: "λ is an unknown scalar introduced to relate the two gradients."
+            },
+            {
+                question: "If f(x,y)=xy, then ∇f equals",
+                options: [
+                    "<y,x>",
+                    "<x,y>",
+                    "<2x,2y>",
+                    "<1,1>"
+                ],
+                answer: "<y,x>",
+                explanation: "Since ∂f/∂x=y and ∂f/∂y=x, the gradient is <y,x>."
+            },
+            {
+                question: "If g(x,y)=x²+y², then ∇g equals",
+                options: [
+                    "<2x,2y>",
+                    "<x,y>",
+                    "<2y,2x>",
+                    "<1,1>"
+                ],
+                answer: "<2x,2y>",
+                explanation: "Differentiate g with respect to x and y."
+            },
+            {
+                question: "In addition to solving ∇f = λ∇g, you must also satisfy",
+                options: [
+                    "The original constraint equation",
+                    "The Hessian matrix",
+                    "A Taylor polynomial",
+                    "A line integral"
+                ],
+                answer: "The original constraint equation",
+                explanation: "The solution must satisfy both the Lagrange equations and the constraint."
+            },
+            {
+                question: "At a constrained maximum or minimum, the gradients of f and g are",
+                options: [
+                    "Parallel",
+                    "Perpendicular",
+                    "Equal to zero",
+                    "Independent"
+                ],
+                answer: "Parallel",
+                explanation: "Parallel gradients indicate that the objective function cannot increase without violating the constraint."
+            },
+            {
+                question: "Geometrically, the level curve of the objective function and the constraint curve are",
+                options: [
+                    "Tangent to each other",
+                    "Perpendicular",
+                    "Parallel lines",
+                    "Always intersecting twice"
+                ],
+                answer: "Tangent to each other",
+                explanation: "At an optimum, the level curve just touches the constraint curve."
+            },
+            {
+                question: "A common mistake when solving Lagrange multiplier problems is",
+                options: [
+                    "Ignoring the constraint equation",
+                    "Computing gradients",
+                    "Finding partial derivatives",
+                    "Using variables x and y"
+                ],
+                answer: "Ignoring the constraint equation",
+                explanation: "The constraint must always be solved together with the Lagrange equations."
+            },
+            {
+                question: "Lagrange multipliers are most useful when",
+                options: [
+                    "Optimizing a function subject to restrictions",
+                    "Finding antiderivatives",
+                    "Solving separable differential equations",
+                    "Evaluating definite integrals"
+                ],
+                answer: "Optimizing a function subject to restrictions",
+                explanation: "They provide a systematic method for constrained optimization."
+            },
+            {
+                question: "If there is no constraint, Lagrange multipliers are generally",
+                options: [
+                    "Unnecessary",
+                    "Required",
+                    "The only method available",
+                    "Used to compute gradients"
+                ],
+                answer: "Unnecessary",
+                explanation: "Without constraints, ordinary optimization techniques are sufficient."
+            },
+            {
+                question: "Which of the following is a common application of Lagrange multipliers?",
+                options: [
+                    "Engineering design",
+                    "Business optimization",
+                    "Economics",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Constrained optimization appears in many scientific and engineering disciplines."
+            },
+            {
+                question: "The equation x²+y²=25 is an example of",
+                options: [
+                    "A constraint",
+                    "An objective function",
+                    "A gradient equation",
+                    "A directional derivative"
+                ],
+                answer: "A constraint",
+                explanation: "It limits the possible values of x and y."
+            },
+            {
+                question: "Which statement about Lagrange multipliers is TRUE?",
+                options: [
+                    "The gradients of the objective function and the constraint are parallel at constrained extrema.",
+                    "The gradients are always perpendicular.",
+                    "The objective function must be linear.",
+                    "The constraint equation is ignored after computing the gradients."
+                ],
+                answer: "The gradients of the objective function and the constraint are parallel at constrained extrema.",
+                explanation: "This is the fundamental principle behind the method of Lagrange multipliers."
+            }
+        ]
+    },
+    "calculus2-multivariable-review": {
+        title: "Multivariable Calculus Review",
+        subtitle: "Review the major concepts from functions of several variables through Lagrange multipliers.",
+
+        body: `
+
+<h2>Learning Objectives</h2>
+
+<p>This review summarizes the major ideas covered in the Multivariable Calculus unit.</p>
+
+<ul>
+<li>Review functions of several variables.</li>
+<li>Review partial derivatives.</li>
+<li>Review gradient vectors.</li>
+<li>Review directional derivatives.</li>
+<li>Review the multivariable chain rule.</li>
+<li>Review unconstrained optimization.</li>
+<li>Review constrained optimization using Lagrange multipliers.</li>
+</ul>
+
+<hr>
+
+<h2>Functions of Several Variables</h2>
+
+<ul>
+<li>A multivariable function has two or more independent variables.</li>
+<li>Example: f(x,y)=x²+y².</li>
+<li>The graph of a function of two variables is generally a surface in three-dimensional space.</li>
+<li>Level curves connect points with the same function value.</li>
+</ul>
+
+<hr>
+
+<h2>Partial Derivatives</h2>
+
+<ul>
+<li>Differentiate with respect to one variable while treating all others as constants.</li>
+<li>First-order partial derivatives describe the rate of change in each coordinate direction.</li>
+<li>Second-order partial derivatives are used for optimization.</li>
+</ul>
+
+<hr>
+
+<h2>Gradient Vector</h2>
+
+<ul>
+<li>The gradient is the vector of first-order partial derivatives.</li>
+<li>∇f = &lt;fx, fy&gt;</li>
+<li>The gradient points in the direction of greatest increase.</li>
+<li>The gradient is perpendicular to level curves.</li>
+</ul>
+
+<hr>
+
+<h2>Directional Derivatives</h2>
+
+<ul>
+<li>Measure the rate of change in any chosen direction.</li>
+<li>Use a unit vector.</li>
+<li>Formula:</li>
+<li>D<sub>u</sub>f = ∇f · u</li>
+<li>The maximum directional derivative equals |∇f|.</li>
+</ul>
+
+<hr>
+
+<h2>The Multivariable Chain Rule</h2>
+
+<ul>
+<li>Used when variables depend on intermediate variables.</li>
+<li>Compute one contribution for every dependency path.</li>
+<li>Add all contributions together.</li>
+<li>Dependency diagrams help organize complicated problems.</li>
+</ul>
+
+<hr>
+
+<h2>Optimization</h2>
+
+<ul>
+<li>Find critical points by solving fx=0 and fy=0.</li>
+<li>Classify points using the Second Derivative Test.</li>
+<li>D = fxxfyy − (fxy)²</li>
+</ul>
+
+<table>
+<tr>
+<th>Condition</th>
+<th>Classification</th>
+</tr>
+
+<tr>
+<td>D &gt; 0 and fxx &gt; 0</td>
+<td>Local Minimum</td>
+</tr>
+
+<tr>
+<td>D &gt; 0 and fxx &lt; 0</td>
+<td>Local Maximum</td>
+</tr>
+
+<tr>
+<td>D &lt; 0</td>
+<td>Saddle Point</td>
+</tr>
+
+<tr>
+<td>D = 0</td>
+<td>Inconclusive</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Lagrange Multipliers</h2>
+
+<ul>
+<li>Used for constrained optimization.</li>
+<li>Objective function: f(x,y)</li>
+<li>Constraint: g(x,y)=c</li>
+<li>Key equation:</li>
+<li>∇f = λ∇g</li>
+<li>Always solve together with the constraint equation.</li>
+</ul>
+
+<hr>
+
+<h2>Common Exam Mistakes</h2>
+
+<ul>
+<li>Forgetting to hold variables constant when computing partial derivatives.</li>
+<li>Using a non-unit vector for directional derivatives.</li>
+<li>Missing dependency paths in the chain rule.</li>
+<li>Using the wrong discriminant in the Second Derivative Test.</li>
+<li>Forgetting the constraint equation in Lagrange multiplier problems.</li>
+</ul>
+
+<hr>
+
+<h2>Key Formulas</h2>
+
+<table>
+<tr>
+<th>Concept</th>
+<th>Formula</th>
+</tr>
+
+<tr>
+<td>Gradient</td>
+<td>∇f=&lt;fx,fy&gt;</td>
+</tr>
+
+<tr>
+<td>Directional Derivative</td>
+<td>D<sub>u</sub>f=∇f·u</td>
+</tr>
+
+<tr>
+<td>Chain Rule</td>
+<td>Add one product for every dependency path.</td>
+</tr>
+
+<tr>
+<td>Discriminant</td>
+<td>D=fxxfyy−(fxy)²</td>
+</tr>
+
+<tr>
+<td>Lagrange Multipliers</td>
+<td>∇f=λ∇g</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Summary</h2>
+
+<ul>
+<li>Partial derivatives describe change in coordinate directions.</li>
+<li>The gradient points toward the direction of greatest increase.</li>
+<li>Directional derivatives measure change in any direction.</li>
+<li>The chain rule handles composite multivariable functions.</li>
+<li>Critical points are classified using the Second Derivative Test.</li>
+<li>Lagrange multipliers solve constrained optimization problems.</li>
+<li>Together, these topics form the foundation of multivariable calculus.</li>
+</ul>
+
+`,
+
+        questions: [
+            {
+                question: "A function of several variables is a function that depends on",
+                options: [
+                    "Two or more independent variables",
+                    "Only one variable",
+                    "Only constants",
+                    "Only parameters"
+                ],
+                answer: "Two or more independent variables",
+                explanation: "Multivariable functions have two or more input variables."
+            },
+            {
+                question: "A partial derivative measures",
+                options: [
+                    "The rate of change with respect to one variable while holding the others constant",
+                    "The average rate of change",
+                    "The total derivative",
+                    "The slope of a line"
+                ],
+                answer: "The rate of change with respect to one variable while holding the others constant",
+                explanation: "Partial derivatives isolate the effect of changing one variable."
+            },
+            {
+                question: "The gradient vector is",
+                options: [
+                    "The vector of first-order partial derivatives",
+                    "The vector of second derivatives",
+                    "A unit vector",
+                    "The position vector"
+                ],
+                answer: "The vector of first-order partial derivatives",
+                explanation: "The gradient is formed using all first-order partial derivatives."
+            },
+            {
+                question: "The gradient points in the direction of",
+                options: [
+                    "Greatest increase of the function",
+                    "Greatest decrease of the function",
+                    "Constant function value",
+                    "Zero slope"
+                ],
+                answer: "Greatest increase of the function",
+                explanation: "The gradient indicates the direction of steepest ascent."
+            },
+            {
+                question: "The gradient vector is always perpendicular to",
+                options: [
+                    "Level curves",
+                    "Coordinate axes",
+                    "The x-axis",
+                    "The y-axis"
+                ],
+                answer: "Level curves",
+                explanation: "Gradient vectors are normal to level curves."
+            },
+            {
+                question: "The directional derivative is computed using",
+                options: [
+                    "The dot product of the gradient and a unit vector",
+                    "The cross product",
+                    "The Hessian matrix",
+                    "The Laplacian"
+                ],
+                answer: "The dot product of the gradient and a unit vector",
+                explanation: "Dᵤf = ∇f · u."
+            },
+            {
+                question: "When computing a directional derivative, the direction vector should be",
+                options: [
+                    "A unit vector",
+                    "Any vector",
+                    "A zero vector",
+                    "A gradient vector"
+                ],
+                answer: "A unit vector",
+                explanation: "The direction vector must have magnitude 1."
+            },
+            {
+                question: "The multivariable chain rule is used when",
+                options: [
+                    "Variables depend on intermediate variables",
+                    "A function has only one variable",
+                    "No derivatives exist",
+                    "The function is constant"
+                ],
+                answer: "Variables depend on intermediate variables",
+                explanation: "The chain rule handles composite multivariable functions."
+            },
+            {
+                question: "A dependency diagram helps by",
+                options: [
+                    "Showing every dependency path",
+                    "Finding gradients automatically",
+                    "Computing second derivatives",
+                    "Eliminating algebra"
+                ],
+                answer: "Showing every dependency path",
+                explanation: "Dependency diagrams organize the chain rule."
+            },
+            {
+                question: "Critical points are found by solving",
+                options: [
+                    "fx=0 and fy=0",
+                    "fxx=0",
+                    "fxy=0",
+                    "D=0"
+                ],
+                answer: "fx=0 and fy=0",
+                explanation: "Critical points occur where all first-order partial derivatives are zero or undefined."
+            },
+            {
+                question: "The discriminant used in the Second Derivative Test is",
+                options: [
+                    "D=fxxfyy−(fxy)²",
+                    "D=fxx+fyy",
+                    "D=fxx−fyy",
+                    "D=fxy²"
+                ],
+                answer: "D=fxxfyy−(fxy)²",
+                explanation: "This discriminant classifies critical points."
+            },
+            {
+                question: "If D<0, the critical point is a",
+                options: [
+                    "Saddle point",
+                    "Local maximum",
+                    "Local minimum",
+                    "Global minimum"
+                ],
+                answer: "Saddle point",
+                explanation: "A negative discriminant indicates opposite curvature directions."
+            },
+            {
+                question: "Lagrange multipliers are used for",
+                options: [
+                    "Constrained optimization",
+                    "Unconstrained optimization",
+                    "Differential equations",
+                    "Numerical integration"
+                ],
+                answer: "Constrained optimization",
+                explanation: "Lagrange multipliers optimize a function subject to constraints."
+            },
+            {
+                question: "The key equation in the method of Lagrange multipliers is",
+                options: [
+                    "∇f = λ∇g",
+                    "∇f = ∇g",
+                    "f = λg",
+                    "∇g = λf"
+                ],
+                answer: "∇f = λ∇g",
+                explanation: "At constrained extrema, the gradients are parallel."
+            },
+            {
+                question: "Which statement best summarizes this unit?",
+                options: [
+                    "Multivariable calculus extends single-variable calculus to functions with multiple variables and provides tools for differentiation and optimization.",
+                    "Every multivariable function has exactly one maximum.",
+                    "Partial derivatives replace ordinary derivatives in every situation.",
+                    "Lagrange multipliers are used without constraints."
+                ],
+                answer: "Multivariable calculus extends single-variable calculus to functions with multiple variables and provides tools for differentiation and optimization.",
+                explanation: "This unit introduced multivariable functions, partial derivatives, gradients, directional derivatives, the chain rule, optimization, and constrained optimization using Lagrange multipliers."
+            }
+
+        ]
+    },
+
+    "calculus2-multivariable-test": {
+        title: "Multivariable Calculus Unit Test",
+        subtitle: "Assess your understanding of functions of several variables, partial derivatives, gradients, directional derivatives, the chain rule, optimization, and Lagrange multipliers.",
+
+        body: `
+
+<h2>Unit Test Instructions</h2>
+
+<p>This unit test covers all topics in the Multivariable Calculus unit.</p>
+
+<ul>
+<li>Answer every question.</li>
+<li>Select the single best answer.</li>
+<li>No calculator is required unless instructed.</li>
+<li>Read each question carefully before choosing an answer.</li>
+</ul>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+<li>Functions of Several Variables</li>
+<li>Partial Derivatives</li>
+<li>Gradient Vectors</li>
+<li>Directional Derivatives</li>
+<li>Multivariable Chain Rule</li>
+<li>Optimization</li>
+<li>Lagrange Multipliers</li>
+</ul>
+
+<hr>
+
+<p><strong>Good luck!</strong></p>
+
+`,
+
+        questions: [
+            {
+                question: "A function of several variables is a function that depends on",
+                options: [
+                    "Two or more independent variables",
+                    "Only one variable",
+                    "Only constants",
+                    "Only parameters"
+                ],
+                answer: "Two or more independent variables",
+                explanation: "Multivariable functions have two or more input variables."
+            },
+            {
+                question: "A partial derivative is computed by",
+                options: [
+                    "Holding all other variables constant",
+                    "Differentiating every variable simultaneously",
+                    "Ignoring constants",
+                    "Finding a limit only"
+                ],
+                answer: "Holding all other variables constant",
+                explanation: "When taking a partial derivative, all other variables are treated as constants."
+            },
+            {
+                question: "The gradient vector of f(x,y) consists of",
+                options: [
+                    "All first-order partial derivatives",
+                    "All second-order derivatives",
+                    "Only mixed partial derivatives",
+                    "Only ordinary derivatives"
+                ],
+                answer: "All first-order partial derivatives",
+                explanation: "The gradient is formed from the first-order partial derivatives."
+            },
+            {
+                question: "The gradient points in the direction of",
+                options: [
+                    "Greatest increase",
+                    "Greatest decrease",
+                    "Constant value",
+                    "Zero slope"
+                ],
+                answer: "Greatest increase",
+                explanation: "The gradient always points toward the direction of steepest ascent."
+            },
+            {
+                question: "The gradient is perpendicular to",
+                options: [
+                    "Level curves",
+                    "Coordinate axes",
+                    "Position vectors",
+                    "Unit vectors"
+                ],
+                answer: "Level curves",
+                explanation: "Gradient vectors are normal to level curves."
+            },
+            {
+                question: "The directional derivative is computed using",
+                options: [
+                    "The dot product of the gradient and a unit vector",
+                    "The cross product",
+                    "The Hessian matrix",
+                    "The Laplacian"
+                ],
+                answer: "The dot product of the gradient and a unit vector",
+                explanation: "The directional derivative is Dᵤf = ∇f · u."
+            },
+            {
+                question: "Before computing a directional derivative, the direction vector should be",
+                options: [
+                    "Normalized into a unit vector",
+                    "Squared",
+                    "Converted into a gradient",
+                    "Made perpendicular to the gradient"
+                ],
+                answer: "Normalized into a unit vector",
+                explanation: "Directional derivatives require a unit direction vector."
+            },
+            {
+                question: "The multivariable chain rule is used when",
+                options: [
+                    "Variables depend on intermediate variables",
+                    "Only one variable exists",
+                    "The function is constant",
+                    "No derivatives exist"
+                ],
+                answer: "Variables depend on intermediate variables",
+                explanation: "Composite multivariable functions require the chain rule."
+            },
+            {
+                question: "A dependency diagram helps identify",
+                options: [
+                    "Every dependency path",
+                    "Only gradients",
+                    "Only critical points",
+                    "Only constraints"
+                ],
+                answer: "Every dependency path",
+                explanation: "Each dependency path contributes one term in the chain rule."
+            },
+            {
+                question: "Critical points occur where",
+                options: [
+                    "All first-order partial derivatives are zero or undefined",
+                    "The function equals zero",
+                    "Second derivatives equal zero",
+                    "The gradient has maximum magnitude"
+                ],
+                answer: "All first-order partial derivatives are zero or undefined",
+                explanation: "Critical points are found using the first-order partial derivatives."
+            },
+            {
+                question: "The discriminant used in the Second Derivative Test is",
+                options: [
+                    "D=fxxfyy−(fxy)²",
+                    "D=fxx+fyy",
+                    "D=fxx−fyy",
+                    "D=fxy²"
+                ],
+                answer: "D=fxxfyy−(fxy)²",
+                explanation: "This discriminant classifies critical points."
+            },
+            {
+                question: "If D>0 and fxx>0, the critical point is",
+                options: [
+                    "A local minimum",
+                    "A local maximum",
+                    "A saddle point",
+                    "Inconclusive"
+                ],
+                answer: "A local minimum",
+                explanation: "Positive discriminant and positive fxx indicate a local minimum."
+            },
+            {
+                question: "If D<0, the critical point is",
+                options: [
+                    "A saddle point",
+                    "A local minimum",
+                    "A local maximum",
+                    "A global maximum"
+                ],
+                answer: "A saddle point",
+                explanation: "A negative discriminant identifies a saddle point."
+            },
+            {
+                question: "Lagrange multipliers are used for",
+                options: [
+                    "Constrained optimization",
+                    "Finding antiderivatives",
+                    "Solving differential equations",
+                    "Approximating limits"
+                ],
+                answer: "Constrained optimization",
+                explanation: "They optimize an objective function subject to one or more constraints."
+            },
+            {
+                question: "The fundamental equation of the method of Lagrange multipliers is",
+                options: [
+                    "∇f = λ∇g",
+                    "∇f = ∇g",
+                    "f = λg",
+                    "∇g = λf"
+                ],
+                answer: "∇f = λ∇g",
+                explanation: "At constrained extrema, the gradients of the objective and constraint are parallel."
+            }
+        ]
+    },
+    "calculus2-course-review": {
+        title: "Calculus II Course Review",
+        subtitle: "Review the major concepts from the entire Calculus II course.",
+
+        body: `
+
+<h2>Course Review</h2>
+
+<p>This lesson reviews the major topics covered throughout Calculus II.</p>
+
+<ul>
+<li>Integration Techniques</li>
+<li>Applications of Integration</li>
+<li>Sequences</li>
+<li>Series</li>
+<li>Power Series</li>
+<li>Parametric Equations</li>
+<li>Polar Coordinates</li>
+<li>Multivariable Calculus</li>
+</ul>
+
+<hr>
+
+<h2>Integration Techniques</h2>
+
+<ul>
+<li>Integration by Parts</li>
+<li>Trigonometric Integrals</li>
+<li>Trigonometric Substitution</li>
+<li>Partial Fraction Decomposition</li>
+<li>Improper Integrals</li>
+</ul>
+
+<hr>
+
+<h2>Applications of Integration</h2>
+
+<ul>
+<li>Area Between Curves</li>
+<li>Volumes by Disks and Washers</li>
+<li>Volumes by Cylindrical Shells</li>
+<li>Arc Length</li>
+<li>Surface Area</li>
+<li>Work</li>
+<li>Fluid Force</li>
+</ul>
+
+<hr>
+
+<h2>Sequences and Series</h2>
+
+<ul>
+<li>Limits of Sequences</li>
+<li>Infinite Series</li>
+<li>Geometric Series</li>
+<li>Telescoping Series</li>
+<li>Integral Test</li>
+<li>Comparison Tests</li>
+<li>Ratio Test</li>
+<li>Root Test</li>
+<li>Alternating Series</li>
+<li>Absolute and Conditional Convergence</li>
+</ul>
+
+<hr>
+
+<h2>Power Series</h2>
+
+<ul>
+<li>Power Series</li>
+<li>Radius of Convergence</li>
+<li>Interval of Convergence</li>
+<li>Taylor Polynomials</li>
+<li>Taylor Series</li>
+<li>Maclaurin Series</li>
+</ul>
+
+<hr>
+
+<h2>Parametric and Polar Topics</h2>
+
+<ul>
+<li>Parametric Equations</li>
+<li>Parametric Derivatives</li>
+<li>Arc Length for Parametric Curves</li>
+<li>Polar Coordinates</li>
+<li>Polar Graphs</li>
+<li>Area in Polar Coordinates</li>
+<li>Arc Length in Polar Coordinates</li>
+</ul>
+
+<hr>
+
+<h2>Multivariable Calculus</h2>
+
+<ul>
+<li>Functions of Several Variables</li>
+<li>Partial Derivatives</li>
+<li>Gradient Vectors</li>
+<li>Directional Derivatives</li>
+<li>Multivariable Chain Rule</li>
+<li>Optimization</li>
+<li>Lagrange Multipliers</li>
+</ul>
+
+<hr>
+
+<h2>Essential Formulas</h2>
+
+<table>
+<tr>
+<th>Topic</th>
+<th>Formula</th>
+</tr>
+
+<tr>
+<td>Integration by Parts</td>
+<td>∫u dv = uv − ∫v du</td>
+</tr>
+
+<tr>
+<td>Disk Method</td>
+<td>V = π∫R² dx</td>
+</tr>
+
+<tr>
+<td>Shell Method</td>
+<td>V = 2π∫(radius)(height) dx</td>
+</tr>
+
+<tr>
+<td>Ratio Test</td>
+<td>L = lim |a<sub>n+1</sub>/a<sub>n</sub>|</td>
+</tr>
+
+<tr>
+<td>Taylor Series</td>
+<td>Σ f⁽ⁿ⁾(a)(x−a)ⁿ/n!</td>
+</tr>
+
+<tr>
+<td>Gradient</td>
+<td>∇f=&lt;fx,fy&gt;</td>
+</tr>
+
+<tr>
+<td>Directional Derivative</td>
+<td>D<sub>u</sub>f=∇f·u</td>
+</tr>
+
+<tr>
+<td>Lagrange Multipliers</td>
+<td>∇f=λ∇g</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Final Exam Tips</h2>
+
+<ul>
+<li>Draw diagrams whenever possible.</li>
+<li>Check domains and intervals of convergence carefully.</li>
+<li>Use the correct convergence test.</li>
+<li>Normalize direction vectors before computing directional derivatives.</li>
+<li>Always include constraint equations in Lagrange multiplier problems.</li>
+<li>Show all work clearly.</li>
+<li>Verify units in application problems.</li>
+</ul>
+
+<hr>
+
+<h2>Congratulations!</h2>
+
+<p>You have completed the Calculus II course. You now have the tools to solve advanced integration problems, analyze infinite series, work with parametric and polar curves, and solve multivariable optimization problems.</p>
+
+`,
+
+        questions: [
+            {
+                question: "Which integration technique is most appropriate for integrals involving a product of two different types of functions?",
+                options: [
+                    "Integration by Parts",
+                    "Partial Fraction Decomposition",
+                    "Trigonometric Substitution",
+                    "The Ratio Test"
+                ],
+                answer: "Integration by Parts",
+                explanation: "Integration by Parts is used when the integrand is the product of two functions."
+            },
+            {
+                question: "The Disk Method is primarily used to find",
+                options: [
+                    "Volumes of solids of revolution",
+                    "Surface area",
+                    "Arc length",
+                    "Work"
+                ],
+                answer: "Volumes of solids of revolution",
+                explanation: "The Disk Method computes volumes by slicing the solid into circular disks."
+            },
+            {
+                question: "Which convergence test is especially useful when factorials or exponential expressions appear in a series?",
+                options: [
+                    "Ratio Test",
+                    "Integral Test",
+                    "Alternating Series Test",
+                    "Comparison Test"
+                ],
+                answer: "Ratio Test",
+                explanation: "The Ratio Test works especially well with factorials and exponential terms."
+            },
+            {
+                question: "A geometric series converges only when",
+                options: [
+                    "|r| < 1",
+                    "|r| > 1",
+                    "r > 0",
+                    "r = 1"
+                ],
+                answer: "|r| < 1",
+                explanation: "A geometric series converges only if the absolute value of the common ratio is less than 1."
+            },
+            {
+                question: "The interval of convergence tells you",
+                options: [
+                    "The x-values for which a power series converges",
+                    "The derivative of a series",
+                    "The slope of a tangent line",
+                    "The maximum term of a sequence"
+                ],
+                answer: "The x-values for which a power series converges",
+                explanation: "The interval of convergence specifies all x-values where the power series converges."
+            },
+            {
+                question: "Parametric equations describe",
+                options: [
+                    "A curve using one or more parameters",
+                    "Only straight lines",
+                    "Only circles",
+                    "Only functions of one variable"
+                ],
+                answer: "A curve using one or more parameters",
+                explanation: "Parametric equations express x and y as functions of a parameter."
+            },
+            {
+                question: "Polar coordinates describe a point using",
+                options: [
+                    "A distance from the origin and an angle",
+                    "Two perpendicular distances",
+                    "Three coordinates",
+                    "A slope and intercept"
+                ],
+                answer: "A distance from the origin and an angle",
+                explanation: "Polar coordinates use the ordered pair (r, θ)."
+            },
+            {
+                question: "The gradient vector points in the direction of",
+                options: [
+                    "Greatest increase of the function",
+                    "Greatest decrease of the function",
+                    "Zero change",
+                    "Constant value"
+                ],
+                answer: "Greatest increase of the function",
+                explanation: "The gradient always points toward the direction of steepest ascent."
+            },
+            {
+                question: "Directional derivatives measure",
+                options: [
+                    "The rate of change in a specified direction",
+                    "The area under a curve",
+                    "The volume of a solid",
+                    "The convergence of a series"
+                ],
+                answer: "The rate of change in a specified direction",
+                explanation: "Directional derivatives measure how quickly a function changes in a chosen direction."
+            },
+            {
+                question: "The multivariable chain rule is applied when",
+                options: [
+                    "Variables depend on intermediate variables",
+                    "A function has no derivatives",
+                    "Only one variable is present",
+                    "The gradient equals zero"
+                ],
+                answer: "Variables depend on intermediate variables",
+                explanation: "Composite multivariable functions require the chain rule."
+            },
+            {
+                question: "Critical points are found by solving",
+                options: [
+                    "All first-order partial derivatives equal zero",
+                    "All second-order partial derivatives equal zero",
+                    "The gradient magnitude equals one",
+                    "The Hessian determinant equals zero"
+                ],
+                answer: "All first-order partial derivatives equal zero",
+                explanation: "Critical points occur where all first-order partial derivatives are zero or undefined."
+            },
+            {
+                question: "Lagrange multipliers are used when",
+                options: [
+                    "Optimization is subject to constraints",
+                    "Finding indefinite integrals",
+                    "Computing Taylor series",
+                    "Evaluating improper integrals"
+                ],
+                answer: "Optimization is subject to constraints",
+                explanation: "Lagrange multipliers solve constrained optimization problems."
+            },
+            {
+                question: "Which topic studies infinite sums?",
+                options: [
+                    "Series",
+                    "Polar Coordinates",
+                    "Partial Derivatives",
+                    "Arc Length"
+                ],
+                answer: "Series",
+                explanation: "Series are sums of infinitely many terms."
+            },
+            {
+                question: "Taylor series are used to",
+                options: [
+                    "Represent functions as infinite polynomial series",
+                    "Compute gradients",
+                    "Find polar coordinates",
+                    "Solve optimization constraints"
+                ],
+                answer: "Represent functions as infinite polynomial series",
+                explanation: "Taylor series approximate functions using infinitely many polynomial terms."
+            },
+            {
+                question: "Which statement best summarizes Calculus II?",
+                options: [
+                    "Calculus II extends integration, infinite series, parametric and polar curves, and multivariable calculus to solve advanced mathematical and real-world problems.",
+                    "Calculus II studies only derivatives.",
+                    "Calculus II focuses exclusively on limits.",
+                    "Calculus II contains only integration techniques."
+                ],
+                answer: "Calculus II extends integration, infinite series, parametric and polar curves, and multivariable calculus to solve advanced mathematical and real-world problems.",
+                explanation: "Calculus II combines advanced integration, infinite series, coordinate systems, and multivariable concepts into a comprehensive study of higher mathematics."
+            }
+
+        ]
+    },
+    "calculus2-final-exam": {
+        title: "Calculus II Final Exam",
+        subtitle: "Comprehensive assessment covering the entire Calculus II course.",
+
+        body: `
+
+<h2>Final Exam Instructions</h2>
+
+<p>This exam covers all major topics from Calculus II.</p>
+
+<ul>
+<li>Answer every question.</li>
+<li>Select the single best answer.</li>
+<li>No calculator is required unless instructed.</li>
+<li>Read each question carefully before answering.</li>
+<li>This exam is cumulative.</li>
+</ul>
+
+<hr>
+
+<h2>Topics Covered</h2>
+
+<ul>
+<li>Integration Techniques</li>
+<li>Applications of Integration</li>
+<li>Sequences</li>
+<li>Infinite Series</li>
+<li>Power Series</li>
+<li>Taylor & Maclaurin Series</li>
+<li>Parametric Equations</li>
+<li>Polar Coordinates</li>
+<li>Multivariable Calculus</li>
+</ul>
+
+<hr>
+
+<p><strong>Good luck!</strong></p>
+
+`,
+
+        questions: [
+            {
+                question: "Which integration technique is most appropriate for evaluating ∫x·eˣ dx?",
+                options: [
+                    "Integration by Parts",
+                    "Partial Fraction Decomposition",
+                    "Trigonometric Substitution",
+                    "The Ratio Test"
+                ],
+                answer: "Integration by Parts",
+                explanation: "Products of polynomial and exponential functions are typically evaluated using Integration by Parts."
+            },
+            {
+                question: "The Washer Method is primarily used to compute",
+                options: [
+                    "Volumes of solids with holes",
+                    "Arc length",
+                    "Surface area",
+                    "Work"
+                ],
+                answer: "Volumes of solids with holes",
+                explanation: "The Washer Method subtracts the inner radius from the outer radius to determine volume."
+            },
+            {
+                question: "A geometric series converges when",
+                options: [
+                    "|r| < 1",
+                    "|r| > 1",
+                    "r = 1",
+                    "r ≥ 1"
+                ],
+                answer: "|r| < 1",
+                explanation: "A geometric series converges only if the absolute value of the common ratio is less than 1."
+            },
+            {
+                question: "Which convergence test is especially useful for factorials?",
+                options: [
+                    "Ratio Test",
+                    "Integral Test",
+                    "Root Test",
+                    "Alternating Series Test"
+                ],
+                answer: "Ratio Test",
+                explanation: "The Ratio Test simplifies expressions involving factorials and exponentials."
+            },
+            {
+                question: "A Taylor series represents a function as",
+                options: [
+                    "An infinite polynomial",
+                    "A definite integral",
+                    "A matrix",
+                    "A differential equation"
+                ],
+                answer: "An infinite polynomial",
+                explanation: "Taylor series approximate functions using infinitely many polynomial terms."
+            },
+            {
+                question: "Parametric equations describe curves using",
+                options: [
+                    "A parameter",
+                    "Only x",
+                    "Only y",
+                    "Polar radius"
+                ],
+                answer: "A parameter",
+                explanation: "Both x and y are written as functions of a parameter."
+            },
+            {
+                question: "Polar coordinates describe a point using",
+                options: [
+                    "A radius and an angle",
+                    "Two perpendicular distances",
+                    "Three coordinates",
+                    "Slope and intercept"
+                ],
+                answer: "A radius and an angle",
+                explanation: "Polar coordinates are written as (r, θ)."
+            },
+            {
+                question: "The gradient vector points in the direction of",
+                options: [
+                    "Greatest increase",
+                    "Greatest decrease",
+                    "Zero change",
+                    "Constant value"
+                ],
+                answer: "Greatest increase",
+                explanation: "The gradient always points toward the direction of maximum increase."
+            },
+            {
+                question: "The directional derivative requires",
+                options: [
+                    "A unit direction vector",
+                    "A second derivative",
+                    "A Hessian matrix",
+                    "A tangent line"
+                ],
+                answer: "A unit direction vector",
+                explanation: "The direction vector must be normalized before computing the directional derivative."
+            },
+            {
+                question: "The multivariable chain rule is used when",
+                options: [
+                    "Variables depend on other variables",
+                    "The function has one variable",
+                    "There are no derivatives",
+                    "The gradient is zero"
+                ],
+                answer: "Variables depend on other variables",
+                explanation: "Composite multivariable functions require the chain rule."
+            },
+            {
+                question: "Critical points occur where",
+                options: [
+                    "All first-order partial derivatives are zero or undefined",
+                    "All second derivatives are zero",
+                    "The function equals zero",
+                    "The gradient is largest"
+                ],
+                answer: "All first-order partial derivatives are zero or undefined",
+                explanation: "Critical points are found by solving the first-order partial derivative equations."
+            },
+            {
+                question: "If the Second Derivative Test gives D<0, the critical point is a",
+                options: [
+                    "Saddle point",
+                    "Local minimum",
+                    "Local maximum",
+                    "Global maximum"
+                ],
+                answer: "Saddle point",
+                explanation: "A negative discriminant indicates opposite curvature directions."
+            },
+            {
+                question: "Lagrange multipliers are used for",
+                options: [
+                    "Constrained optimization",
+                    "Improper integrals",
+                    "Infinite series",
+                    "Differential equations"
+                ],
+                answer: "Constrained optimization",
+                explanation: "Lagrange multipliers optimize an objective function subject to one or more constraints."
+            },
+            {
+                question: "The key equation for Lagrange multipliers is",
+                options: [
+                    "∇f = λ∇g",
+                    "∇f = ∇g",
+                    "f = λg",
+                    "∇g = λf"
+                ],
+                answer: "∇f = λ∇g",
+                explanation: "At constrained extrema, the objective and constraint gradients are parallel."
+            },
+            {
+                question: "Which statement best summarizes Calculus II?",
+                options: [
+                    "Calculus II develops advanced integration techniques, applications of integration, infinite series, parametric and polar curves, and multivariable calculus.",
+                    "Calculus II only studies derivatives.",
+                    "Calculus II is limited to integration by substitution.",
+                    "Calculus II contains only multivariable calculus."
+                ],
+                answer: "Calculus II develops advanced integration techniques, applications of integration, infinite series, parametric and polar curves, and multivariable calculus.",
+                explanation: "Calculus II builds on Calculus I by introducing powerful integration methods, infinite series, alternative coordinate systems, and multivariable concepts."
+            }
+        ]
+    },
+    "calculus2-course-complete": {
+        title: "Congratulations!",
+        subtitle: "You have successfully completed Calculus II.",
+
+        body: `
+
+<h2>Course Complete</h2>
+
+<p>Congratulations on completing the Calculus II course!</p>
+
+<p>Throughout this course, you have developed a strong foundation in advanced calculus concepts, including:</p>
+
+<ul>
+<li>Advanced Integration Techniques</li>
+<li>Applications of Integration</li>
+<li>Sequences and Infinite Series</li>
+<li>Power, Taylor, and Maclaurin Series</li>
+<li>Parametric Equations</li>
+<li>Polar Coordinates</li>
+<li>Functions of Several Variables</li>
+<li>Partial Derivatives</li>
+<li>Gradient Vectors</li>
+<li>Directional Derivatives</li>
+<li>The Multivariable Chain Rule</li>
+<li>Optimization</li>
+<li>Lagrange Multipliers</li>
+</ul>
+
+<hr>
+
+<h2>Skills You Have Developed</h2>
+
+<ul>
+<li>Solve advanced integration problems.</li>
+<li>Model physical applications using definite integrals.</li>
+<li>Analyze the convergence of infinite series.</li>
+<li>Approximate functions using Taylor and Maclaurin series.</li>
+<li>Work confidently with parametric and polar equations.</li>
+<li>Differentiate multivariable functions.</li>
+<li>Solve unconstrained and constrained optimization problems.</li>
+<li>Apply calculus techniques to engineering, physics, economics, and data science.</li>
+</ul>
+
+<hr>
+
+<h2>What's Next?</h2>
+
+<p>You are now well prepared to continue into subjects such as:</p>
+
+<ul>
+<li>Calculus III (Vector Calculus)</li>
+<li>Differential Equations</li>
+<li>Linear Algebra</li>
+<li>Probability and Statistics</li>
+<li>Mathematical Modeling</li>
+<li>Machine Learning</li>
+<li>Engineering Mathematics</li>
+</ul>
+
+<hr>
+
+<h2>Final Message</h2>
+
+<p>Mathematics is built through consistent practice. Continue solving problems, reviewing concepts, and challenging yourself with new applications.</p>
+
+<p><strong>Congratulations once again, and best of luck in your future studies!</strong></p>
+
+`,
+
+        questions: []
+    },
 
 
 
 
-
-
-
-
-
-}
+};

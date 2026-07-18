@@ -1,9 +1,3 @@
-
-
-
-
-
-
 function updateStreak() {
     const today = new Date().toDateString();
     const last = localStorage.getItem("last_day");
