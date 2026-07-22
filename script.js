@@ -20,7 +20,8 @@ const lessonBank = {
     geometry: geometryLessons,
     algebra2: algebra2Lessons,
     calculus1: calculus1Lessons,
-    calculus2: calculus2Lessons
+    calculus2: calculus2Lessons,
+    calculus3: calculus3Lessons,
 };
 
 const topicData = {
@@ -29,7 +30,7 @@ const topicData = {
     algebra2: Object.keys(algebra2Lessons),
     calculus1: Object.keys(calculus1Lessons),
     calculus2: Object.keys(calculus2Lessons),
-    calculus3: [],
+    calculus3: Object.keys(calculus3Lessons),
     calculus4: []
 };
 
@@ -198,7 +199,7 @@ function loadQuiz() {
     window.templateQuestions.forEach((item, index) => {
         let html = `
             <div class="quiz-card">
-                <div class="quiz-question">Q${index + 1}. ${item.q}</div>
+                <div class="quiz-question">Q${index + 1}. ${item.q || item.question}</div>
         `;
 
         item.options.forEach(option => {
@@ -319,6 +320,17 @@ function checkTemplateQuiz() {
 
     }
 
+    // Mark course as completed when the congratulations lesson is passed
+    if (
+        subject === "calculus2" &&
+        topic === "calculus2-course-complete"
+    ) {
+        localStorage.setItem(
+            "calculus2_calculus2-course-complete_done",
+            "true"
+        );
+    }
+
 
     updateGlobalProgress();
 
@@ -424,6 +436,13 @@ function goToNextTopic() {
     const subject = params.get("subject");
     const topic = params.get("topic");
 
+    // After the Calculus II Final Exam, open the congratulations page.
+    if (subject === "calculus2" && topic === "calculus2-final-exam") {
+        window.location.href =
+            "lesson.html?subject=calculus2&topic=calculus2-course-complete";
+        return;
+    }
+
     const topics = topicData[subject];
     if (!topics) return;
 
@@ -505,6 +524,19 @@ function loadCoursePage() {
     lessonList.innerHTML = "";
 
     lessonKeys.forEach((key, index) => {
+        if (lessonKeys.length === 0) {
+            lessonList.innerHTML = `
+        <div class="lesson-list-card">
+            <div class="lesson-list-info">
+                <h3>Lessons Coming Soon</h3>
+                <p>We're preparing the Calculus III course. Check back soon!</p>
+            </div>
+        </div>
+    `;
+            return;
+        }
+
+
         const lesson = lessons[key];
 
         const isDone = localStorage.getItem(subject + "_" + key + "_done");
@@ -536,10 +568,68 @@ function loadCoursePage() {
     });
 }
 
+function updateCourseLocks() {
+
+    const calc3Card = document.getElementById("calculus3-card");
+    const calc4Card = document.getElementById("calculus4-card");
+
+    if (!calc3Card || !calc4Card) return;
+
+    const calc2Complete = localStorage.getItem(
+        "calculus2_calculus2-final-exam_done"
+    );
+
+    const calc3Complete = localStorage.getItem(
+        "calculus3_calculus3-final-exam_done"
+    );
+
+    // ---------- Calculus III ----------
+
+    if (calc2Complete) {
+
+        calc3Card.classList.remove("locked-card");
+
+        calc3Card.onclick = () => {
+            window.location.href = "course.html?subject=calculus3";
+        };
+
+    } else {
+
+        calc3Card.classList.add("locked-card");
+
+        calc3Card.onclick = () => {
+            alert("Complete Calculus II to unlock Calculus III.");
+        };
+
+    }
+
+    // ---------- Calculus IV ----------
+
+    if (calc3Complete) {
+
+        calc4Card.classList.remove("locked-card");
+
+        calc4Card.onclick = () => {
+            window.location.href = "course.html?subject=calculus4";
+        };
+
+    } else {
+
+        calc4Card.classList.add("locked-card");
+
+        calc4Card.onclick = () => {
+            alert("Complete Calculus III to unlock Calculus IV.");
+        };
+
+    }
+
+}
+
 window.addEventListener("load", () => {
 
     const isLessonPage = document.body.classList.contains("lesson-page");
     const isCoursePage = document.body.classList.contains("course-page");
+    const isCoursesPage = document.body.classList.contains("courses-page");
 
     if (document.getElementById("streak")) {
         updateStreak();
@@ -561,5 +651,18 @@ window.addEventListener("load", () => {
         loadCoursePage();
     }
 
+    if (isCoursesPage) {
+        updateCoursesLocks();
+    }
+
 });
+
+
+
+
+
+
+
+
+
 
