@@ -652,7 +652,7 @@ window.addEventListener("load", () => {
     }
 
     if (isCoursesPage) {
-        updateCoursesLocks();
+        updateCourseLocks();
     }
 
 });
