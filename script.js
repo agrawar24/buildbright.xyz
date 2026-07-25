@@ -16,21 +16,21 @@ function updateStreak() {
 }
 
 const lessonBank = {
-    algebra1: algebra1Lessons,
-    geometry: geometryLessons,
-    algebra2: algebra2Lessons,
-    calculus1: calculus1Lessons,
-    calculus2: calculus2Lessons,
-    calculus3: calculus3Lessons,
+    algebra1: typeof algebra1Lessons !== "undefined" ? algebra1Lessons : {},
+    geometry: typeof geometryLessons !== "undefined" ? geometryLessons : {},
+    algebra2: typeof algebra2Lessons !== "undefined" ? algebra2Lessons : {},
+    calculus1: typeof calculus1Lessons !== "undefined" ? calculus1Lessons : {},
+    calculus2: typeof calculus2Lessons !== "undefined" ? calculus2Lessons : {},
+    calculus3: typeof calculus3Lessons !== "undefined" ? calculus3Lessons : {}
 };
 
 const topicData = {
-    algebra1: Object.keys(algebra1Lessons),
-    geometry: Object.keys(geometryLessons),
-    algebra2: Object.keys(algebra2Lessons),
-    calculus1: Object.keys(calculus1Lessons),
-    calculus2: Object.keys(calculus2Lessons),
-    calculus3: Object.keys(calculus3Lessons),
+    algebra1: Object.keys(lessonBank.algebra1),
+    geometry: Object.keys(lessonBank.geometry),
+    algebra2: Object.keys(lessonBank.algebra2),
+    calculus1: Object.keys(lessonBank.calculus1),
+    calculus2: Object.keys(lessonBank.calculus2),
+    calculus3: Object.keys(lessonBank.calculus3),
     calculus4: []
 };
 
