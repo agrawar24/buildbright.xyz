@@ -15,6 +15,8 @@ function updateStreak() {
     }
 }
 
+
+
 const lessonBank = {
     algebra1: typeof algebra1Lessons !== "undefined" ? algebra1Lessons : {},
     geometry: typeof geometryLessons !== "undefined" ? geometryLessons : {},
@@ -568,63 +570,6 @@ function loadCoursePage() {
     });
 }
 
-function updateCourseLocks() {
-
-    const calc3Card = document.getElementById("calculus3-card");
-    const calc4Card = document.getElementById("calculus4-card");
-
-    if (!calc3Card || !calc4Card) return;
-
-    const calc2Complete = localStorage.getItem(
-        "calculus2_calculus2-final-exam_done"
-    );
-
-    const calc3Complete = localStorage.getItem(
-        "calculus3_calculus3-final-exam_done"
-    );
-
-    // ---------- Calculus III ----------
-
-    if (calc2Complete) {
-
-        calc3Card.classList.remove("locked-card");
-
-        calc3Card.onclick = () => {
-            window.location.href = "course.html?subject=calculus3";
-        };
-
-    } else {
-
-        calc3Card.classList.add("locked-card");
-
-        calc3Card.onclick = () => {
-            alert("Complete Calculus II to unlock Calculus III.");
-        };
-
-    }
-
-    // ---------- Calculus IV ----------
-
-    if (calc3Complete) {
-
-        calc4Card.classList.remove("locked-card");
-
-        calc4Card.onclick = () => {
-            window.location.href = "course.html?subject=calculus4";
-        };
-
-    } else {
-
-        calc4Card.classList.add("locked-card");
-
-        calc4Card.onclick = () => {
-            alert("Complete Calculus III to unlock Calculus IV.");
-        };
-
-    }
-
-}
-
 window.addEventListener("load", () => {
 
     const isLessonPage = document.body.classList.contains("lesson-page");
@@ -651,9 +596,8 @@ window.addEventListener("load", () => {
         loadCoursePage();
     }
 
-    if (isCoursesPage) {
-        updateCourseLocks();
-    }
+
+
 
 });
 

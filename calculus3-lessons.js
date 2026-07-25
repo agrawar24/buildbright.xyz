@@ -4637,6 +4637,406 @@ const calculus3Lessons = {
     },
 
 
+    "calculus3-vector-valued-functions": {
+
+        title: "Vector-Valued Functions",
+
+        subtitle: "Learn how functions can describe curves and motion in two-dimensional and three-dimensional space.",
+
+        body: `
+
+<h2>Unit 2: Vector-Valued Functions and Motion in Space</h2>
+
+<p>In earlier courses, most functions produced a single number as an output.</p>
+
+<p>For example:</p>
+
+<p><strong>f(t) = t²</strong></p>
+
+<p>For every value of <strong>t</strong>, the function produces one number.</p>
+
+<p>A <strong>vector-valued function</strong> produces a vector instead of a single number.</p>
+
+<hr>
+
+<h2>General Form</h2>
+
+<p>A vector-valued function in three-dimensional space is commonly written as:</p>
+
+<p><strong>r(t) = ⟨x(t), y(t), z(t)⟩</strong></p>
+
+<p>The functions <strong>x(t)</strong>, <strong>y(t)</strong>, and <strong>z(t)</strong> are called the component functions.</p>
+
+<ul>
+<li><strong>x(t)</strong> gives the x-coordinate.</li>
+<li><strong>y(t)</strong> gives the y-coordinate.</li>
+<li><strong>z(t)</strong> gives the z-coordinate.</li>
+</ul>
+
+<p>As the parameter <strong>t</strong> changes, the point moves through space and traces a curve.</p>
+
+<hr>
+
+<h2>Position Vector</h2>
+
+<p>A vector-valued function can describe the position of a moving object.</p>
+
+<p>The function:</p>
+
+<p><strong>r(t) = ⟨x(t), y(t), z(t)⟩</strong></p>
+
+<p>is called the object's <strong>position vector</strong>.</p>
+
+<p>The parameter <strong>t</strong> often represents time.</p>
+
+<p>For each value of time, the position vector gives the object's location.</p>
+
+<hr>
+
+<h2>Evaluating a Vector-Valued Function</h2>
+
+<p>Evaluate each component separately.</p>
+
+<p>Consider:</p>
+
+<p><strong>r(t) = ⟨t, t², 2t + 1⟩</strong></p>
+
+<p>To find <strong>r(2)</strong>, substitute <strong>t = 2</strong> into every component.</p>
+
+<p><strong>r(2) = ⟨2, 2², 2(2) + 1⟩</strong></p>
+
+<p><strong>r(2) = ⟨2, 4, 5⟩</strong></p>
+
+<p>At <strong>t = 2</strong>, the object is located at the point <strong>(2, 4, 5)</strong>.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Let:</p>
+
+<p><strong>r(t) = ⟨3t, 1 − t, t²⟩</strong></p>
+
+<p>Find <strong>r(3)</strong>.</p>
+
+<p>Substitute <strong>t = 3</strong> into each component.</p>
+
+<p><strong>r(3) = ⟨3(3), 1 − 3, 3²⟩</strong></p>
+
+<p><strong>r(3) = ⟨9, −2, 9⟩</strong></p>
+
+<hr>
+
+<h2>Curves in Space</h2>
+
+<p>A vector-valued function describes a curve by giving the coordinates of every point on the curve.</p>
+
+<p>For example:</p>
+
+<p><strong>r(t) = ⟨cos(t), sin(t), t⟩</strong></p>
+
+<p>The x-coordinate and y-coordinate move around a circle because:</p>
+
+<p><strong>x = cos(t)</strong></p>
+
+<p><strong>y = sin(t)</strong></p>
+
+<p>Therefore:</p>
+
+<p><strong>x² + y² = 1</strong></p>
+
+<p>At the same time, the z-coordinate increases because:</p>
+
+<p><strong>z = t</strong></p>
+
+<p>The resulting curve is a spiral called a <strong>helix</strong>.</p>
+
+<hr>
+
+<h2>Eliminating the Parameter</h2>
+
+<p>Sometimes we can remove the parameter and find a Cartesian equation for the curve.</p>
+
+<p>Consider:</p>
+
+<p><strong>r(t) = ⟨t, t²⟩</strong></p>
+
+<p>This means:</p>
+
+<p><strong>x = t</strong></p>
+
+<p><strong>y = t²</strong></p>
+
+<p>Because <strong>x = t</strong>, substitute <strong>x</strong> for <strong>t</strong>.</p>
+
+<p><strong>y = x²</strong></p>
+
+<p>The vector-valued function traces the parabola <strong>y = x²</strong>.</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Consider:</p>
+
+<p><strong>r(t) = ⟨2t, 4t²⟩</strong></p>
+
+<p>Write the component equations.</p>
+
+<p><strong>x = 2t</strong></p>
+
+<p><strong>y = 4t²</strong></p>
+
+<p>Solve the first equation for <strong>t</strong>.</p>
+
+<p><strong>t = x/2</strong></p>
+
+<p>Substitute into the equation for y.</p>
+
+<p><strong>y = 4(x/2)²</strong></p>
+
+<p><strong>y = x²</strong></p>
+
+<p>This function also traces the parabola <strong>y = x²</strong>.</p>
+
+<hr>
+
+<h2>Orientation of a Curve</h2>
+
+<p>The <strong>orientation</strong> of a curve describes the direction in which the curve is traced as the parameter increases.</p>
+
+<p>Consider:</p>
+
+<p><strong>r(t) = ⟨t, t²⟩</strong></p>
+
+<p>As <strong>t</strong> increases:</p>
+
+<ul>
+<li>The x-coordinate increases.</li>
+<li>The point moves from left to right along the parabola.</li>
+</ul>
+
+<p>Changing the parameterization can change the direction in which the same curve is traced.</p>
+
+<hr>
+
+<h2>Domains of Vector-Valued Functions</h2>
+
+<p>The domain of a vector-valued function consists of all values of <strong>t</strong> for which every component is defined.</p>
+
+<p>Consider:</p>
+
+<p><strong>r(t) = ⟨√t, 1/(t − 2), ln(t)⟩</strong></p>
+
+<p>Each component places a restriction on t.</p>
+
+<ul>
+<li><strong>√t</strong> requires <strong>t ≥ 0</strong>.</li>
+<li><strong>1/(t − 2)</strong> requires <strong>t ≠ 2</strong>.</li>
+<li><strong>ln(t)</strong> requires <strong>t &gt; 0</strong>.</li>
+</ul>
+
+<p>The combined domain is:</p>
+
+<p><strong>t &gt; 0, t ≠ 2</strong></p>
+
+<hr>
+
+<h2>Limits of Vector-Valued Functions</h2>
+
+<p>The limit of a vector-valued function is found by taking the limit of each component.</p>
+
+<p>If:</p>
+
+<p><strong>r(t) = ⟨x(t), y(t), z(t)⟩</strong></p>
+
+<p>then:</p>
+
+<p><strong>lim r(t) = ⟨lim x(t), lim y(t), lim z(t)⟩</strong></p>
+
+<p>provided that each component limit exists.</p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p>Find:</p>
+
+<p><strong>lim as t → 2 of ⟨t², 3t − 1, t³⟩</strong></p>
+
+<p>Evaluate each component.</p>
+
+<p><strong>lim t² = 4</strong></p>
+
+<p><strong>lim (3t − 1) = 5</strong></p>
+
+<p><strong>lim t³ = 8</strong></p>
+
+<p>Therefore:</p>
+
+<p><strong>lim r(t) = ⟨4, 5, 8⟩</strong></p>
+
+<hr>
+
+<h2>Continuity</h2>
+
+<p>A vector-valued function is continuous at <strong>t = a</strong> when every component function is continuous at <strong>t = a</strong>.</p>
+
+<p>Equivalently:</p>
+
+<p><strong>lim as t → a of r(t) = r(a)</strong></p>
+
+<p>Polynomial, sine, cosine, and exponential component functions are continuous everywhere in their domains.</p>
+
+<hr>
+
+<h2>Important Ideas</h2>
+
+<ul>
+<li>A vector-valued function produces a vector.</li>
+<li>The component functions determine the coordinates of a moving point.</li>
+<li>The position vector describes an object's location.</li>
+<li>A vector-valued function traces a curve as the parameter changes.</li>
+<li>The parameter can sometimes be eliminated to find a Cartesian equation.</li>
+<li>The domain must satisfy the restrictions of every component.</li>
+<li>Limits and continuity are evaluated component by component.</li>
+</ul>
+
+<hr>
+
+<h2>Practice Questions</h2>
+
+<p>Select the best answer for each question.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "What does a vector-valued function produce as its output?",
+                options: [
+                    "A vector",
+                    "Only a scalar",
+                    "Only an angle",
+                    "A matrix"
+                ],
+                answer: "A vector",
+                explanation: "A vector-valued function produces a vector containing two or more component functions."
+            },
+
+            {
+                q: "Which is the standard form of a vector-valued function in three-dimensional space?",
+                options: [
+                    "r(t) = ⟨x(t), y(t), z(t)⟩",
+                    "r(t) = x + y + z",
+                    "r(t) = xyz",
+                    "r(t) = x/y"
+                ],
+                answer: "r(t) = ⟨x(t), y(t), z(t)⟩",
+                explanation: "A three-dimensional vector-valued function has x, y, and z component functions."
+            },
+
+            {
+                q: "If r(t) = ⟨t, t², 2t + 1⟩, what is r(2)?",
+                options: [
+                    "⟨2, 4, 5⟩",
+                    "⟨2, 2, 3⟩",
+                    "⟨4, 4, 5⟩",
+                    "⟨2, 4, 3⟩"
+                ],
+                answer: "⟨2, 4, 5⟩",
+                explanation: "Substituting t = 2 gives ⟨2, 2², 2(2)+1⟩ = ⟨2,4,5⟩."
+            },
+
+            {
+                q: "What does the parameter t commonly represent in a position function?",
+                options: [
+                    "Time",
+                    "Mass",
+                    "Temperature",
+                    "Area"
+                ],
+                answer: "Time",
+                explanation: "In motion problems, t usually represents time."
+            },
+
+            {
+                q: "The function r(t) = ⟨cos(t), sin(t), t⟩ traces which type of curve?",
+                options: [
+                    "A helix",
+                    "A straight line",
+                    "A parabola",
+                    "A sphere"
+                ],
+                answer: "A helix",
+                explanation: "The x- and y-components trace a circle while the z-component increases."
+            },
+
+            {
+                q: "Eliminating the parameter from x = t and y = t² gives:",
+                options: [
+                    "y = x²",
+                    "x = y²",
+                    "y = 2x",
+                    "x² + y² = 1"
+                ],
+                answer: "y = x²",
+                explanation: "Because x = t, substitute x for t in y = t²."
+            },
+
+            {
+                q: "What does the orientation of a curve describe?",
+                options: [
+                    "The direction in which the curve is traced",
+                    "The length of the curve",
+                    "The area under the curve",
+                    "The number of coordinates"
+                ],
+                answer: "The direction in which the curve is traced",
+                explanation: "Orientation indicates the direction of motion as the parameter increases."
+            },
+
+            {
+                q: "How is the domain of a vector-valued function determined?",
+                options: [
+                    "By finding values allowed by every component",
+                    "By using only the first component",
+                    "By using only positive values",
+                    "Every vector-valued function has all real numbers as its domain"
+                ],
+                answer: "By finding values allowed by every component",
+                explanation: "The domain is the intersection of the domains of all component functions."
+            },
+
+            {
+                q: "How is the limit of a vector-valued function evaluated?",
+                options: [
+                    "Component by component",
+                    "By multiplying all components",
+                    "By ignoring the z-component",
+                    "By finding only the magnitude"
+                ],
+                answer: "Component by component",
+                explanation: "Take the limit of each component function separately."
+            },
+
+            {
+                q: "A vector-valued function is continuous when:",
+                options: [
+                    "Every component function is continuous",
+                    "At least one component is continuous",
+                    "Its magnitude is always 1",
+                    "Its components are all equal"
+                ],
+                answer: "Every component function is continuous",
+                explanation: "Continuity of a vector-valued function requires continuity of all its components."
+            }
+
+        ]
+
+    }
+
+
 
 
 };
