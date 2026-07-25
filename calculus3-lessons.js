@@ -5035,6 +5035,5129 @@ const calculus3Lessons = {
         ]
 
     }
+    ,
+
+    "calculus3-vector-derivatives": {
+
+        title: "Derivatives and Integrals of Vector-Valued Functions",
+
+        subtitle: "Differentiate and integrate vector-valued functions component by component.",
+
+        body: `
+
+<h2>Derivatives of Vector-Valued Functions</h2>
+
+<p>Just as ordinary functions have derivatives, vector-valued functions also have derivatives.</p>
+
+<p>If</p>
+
+<p><strong>r(t)=⟨x(t),y(t),z(t)⟩</strong></p>
+
+<p>then the derivative is found by differentiating each component separately.</p>
+
+<p><strong>r'(t)=⟨x'(t),y'(t),z'(t)⟩</strong></p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Find the derivative of</p>
+
+<p><strong>r(t)=⟨t²,3t,sin(t)⟩</strong></p>
+
+<p>Differentiate each component.</p>
+
+<ul>
+<li>d/dt(t²)=2t</li>
+<li>d/dt(3t)=3</li>
+<li>d/dt(sin(t))=cos(t)</li>
+</ul>
+
+<p>Therefore</p>
+
+<p><strong>r'(t)=⟨2t,3,cos(t)⟩</strong></p>
+
+<hr>
+
+<h2>Second Derivative</h2>
+
+<p>The second derivative is simply the derivative of the first derivative.</p>
+
+<p><strong>r''(t)=⟨x''(t),y''(t),z''(t)⟩</strong></p>
+
+<p>In physics, this often represents acceleration.</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>If</p>
+
+<p><strong>r(t)=⟨t²,3t,sin(t)⟩</strong></p>
+
+<p>then</p>
+
+<p><strong>r''(t)=⟨2,0,-sin(t)⟩</strong></p>
+
+<hr>
+
+<h2>Integrals of Vector-Valued Functions</h2>
+
+<p>Integration also occurs one component at a time.</p>
+
+<p>If</p>
+
+<p><strong>r(t)=⟨f(t),g(t),h(t)⟩</strong></p>
+
+<p>then</p>
+
+<p><strong>∫r(t)dt=⟨∫f(t)dt,∫g(t)dt,∫h(t)dt⟩+C</strong></p>
+
+<p>The constant of integration becomes a constant vector.</p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p>Evaluate</p>
+
+<p><strong>∫⟨2t,3,cos(t)⟩dt</strong></p>
+
+<p>Integrate each component.</p>
+
+<ul>
+<li>∫2tdt=t²</li>
+<li>∫3dt=3t</li>
+<li>∫cos(t)dt=sin(t)</li>
+</ul>
+
+<p>The answer is</p>
+
+<p><strong>⟨t²,3t,sin(t)⟩+C</strong></p>
+
+<hr>
+
+<h2>Velocity</h2>
+
+<p>If a vector-valued function represents position, then its derivative represents velocity.</p>
+
+<p><strong>v(t)=r'(t)</strong></p>
+
+<p>Velocity tells both the speed and direction of motion.</p>
+
+<hr>
+
+<h2>Acceleration</h2>
+
+<p>The derivative of velocity is acceleration.</p>
+
+<p><strong>a(t)=v'(t)=r''(t)</strong></p>
+
+<p>Acceleration describes how velocity changes over time.</p>
+
+<hr>
+
+<h2>Example 4</h2>
+
+<p>Suppose</p>
+
+<p><strong>r(t)=⟨t²,4t,t³⟩</strong></p>
+
+<p>Find the velocity.</p>
+
+<p><strong>v(t)=⟨2t,4,3t²⟩</strong></p>
+
+<p>Find the acceleration.</p>
+
+<p><strong>a(t)=⟨2,0,6t⟩</strong></p>
+
+<hr>
+
+<h2>Important Ideas</h2>
+
+<ul>
+<li>Differentiate each component separately.</li>
+<li>Integrate each component separately.</li>
+<li>The derivative of position is velocity.</li>
+<li>The derivative of velocity is acceleration.</li>
+<li>The constant of integration is a constant vector.</li>
+</ul>
+
+<hr>
+
+<h2>Practice Questions</h2>
+
+`,
+
+        questions: [
+
+            {
+                q: "How do you differentiate a vector-valued function?",
+                options: [
+                    "Differentiate each component separately",
+                    "Differentiate only the x-component",
+                    "Take the magnitude first",
+                    "Differentiate the vector as one quantity"
+                ],
+                answer: "Differentiate each component separately",
+                explanation: "Each component function is differentiated independently."
+            },
+
+            {
+                q: "If r(t)=⟨t²,3t,sin(t)⟩, what is r'(t)?",
+                options: [
+                    "⟨2t,3,cos(t)⟩",
+                    "⟨t,3,sin(t)⟩",
+                    "⟨2,3,-sin(t)⟩",
+                    "⟨2t,3,sin(t)⟩"
+                ],
+                answer: "⟨2t,3,cos(t)⟩",
+                explanation: "Differentiate each component separately."
+            },
+
+            {
+                q: "The derivative of a position vector represents:",
+                options: [
+                    "Velocity",
+                    "Acceleration",
+                    "Distance",
+                    "Curvature"
+                ],
+                answer: "Velocity",
+                explanation: "The first derivative of position is velocity."
+            },
+
+            {
+                q: "The derivative of velocity is:",
+                options: [
+                    "Acceleration",
+                    "Speed",
+                    "Position",
+                    "Distance"
+                ],
+                answer: "Acceleration",
+                explanation: "Acceleration is the rate of change of velocity."
+            },
+
+            {
+                q: "How are vector-valued functions integrated?",
+                options: [
+                    "Component by component",
+                    "Using matrices",
+                    "Only the first component",
+                    "Using dot products"
+                ],
+                answer: "Component by component",
+                explanation: "Each component is integrated independently."
+            },
+
+            {
+                q: "The constant of integration for a vector-valued function is:",
+                options: [
+                    "A constant vector",
+                    "Always zero",
+                    "A scalar only",
+                    "Not needed"
+                ],
+                answer: "A constant vector",
+                explanation: "Each component contributes its own constant."
+            },
+
+            {
+                q: "If v(t)=⟨2t,4,3t²⟩, then a(t) equals:",
+                options: [
+                    "⟨2,0,6t⟩",
+                    "⟨2t,4,6t⟩",
+                    "⟨0,4,6⟩",
+                    "⟨2,4,3t⟩"
+                ],
+                answer: "⟨2,0,6t⟩",
+                explanation: "Differentiate every component."
+            },
+
+            {
+                q: "If position is constant, velocity is:",
+                options: [
+                    "Zero",
+                    "Increasing",
+                    "Undefined",
+                    "Always positive"
+                ],
+                answer: "Zero",
+                explanation: "A constant position has zero derivative."
+            },
+
+            {
+                q: "The second derivative of position represents:",
+                options: [
+                    "Acceleration",
+                    "Speed",
+                    "Distance",
+                    "Curvature"
+                ],
+                answer: "Acceleration",
+                explanation: "The second derivative measures how velocity changes."
+            },
+
+            {
+                q: "Which operation is performed independently on every component?",
+                options: [
+                    "Differentiation and integration",
+                    "Matrix multiplication",
+                    "Cross products",
+                    "Determinants"
+                ],
+                answer: "Differentiation and integration",
+                explanation: "Both operations are carried out component by component."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus3-velocity-speed-acceleration": {
+
+        title: "Velocity, Speed, and Acceleration",
+
+        subtitle: "Use vector-valued functions to describe position, velocity, speed, and acceleration in space.",
+
+        body: `
+
+<h2>Position and Motion</h2>
+
+<p>A vector-valued function can describe the position of a moving object.</p>
+
+<p>The position function is written as:</p>
+
+<p><strong>r(t)=⟨x(t),y(t),z(t)⟩</strong></p>
+
+<p>The parameter <strong>t</strong> usually represents time.</p>
+
+<p>At each time, the vector <strong>r(t)</strong> gives the location of the object.</p>
+
+<hr>
+
+<h2>Velocity</h2>
+
+<p>Velocity is the derivative of the position function.</p>
+
+<p><strong>v(t)=r'(t)</strong></p>
+
+<p>If:</p>
+
+<p><strong>r(t)=⟨x(t),y(t),z(t)⟩</strong></p>
+
+<p>then:</p>
+
+<p><strong>v(t)=⟨x'(t),y'(t),z'(t)⟩</strong></p>
+
+<p>Velocity describes both the direction and rate of motion.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Suppose:</p>
+
+<p><strong>r(t)=⟨t²,3t,t³⟩</strong></p>
+
+<p>Find the velocity.</p>
+
+<p>Differentiate each component.</p>
+
+<p><strong>v(t)=⟨2t,3,3t²⟩</strong></p>
+
+<p>At <strong>t=2</strong>:</p>
+
+<p><strong>v(2)=⟨4,3,12⟩</strong></p>
+
+<hr>
+
+<h2>Speed</h2>
+
+<p>Speed is the magnitude of the velocity vector.</p>
+
+<p><strong>Speed=|v(t)|</strong></p>
+
+<p>If:</p>
+
+<p><strong>v(t)=⟨a,b,c⟩</strong></p>
+
+<p>then:</p>
+
+<p><strong>|v(t)|=√(a²+b²+c²)</strong></p>
+
+<p>Velocity is a vector, but speed is a scalar.</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Suppose:</p>
+
+<p><strong>v(t)=⟨3,4,0⟩</strong></p>
+
+<p>Then the speed is:</p>
+
+<p><strong>|v(t)|=√(3²+4²+0²)</strong></p>
+
+<p><strong>|v(t)|=√25</strong></p>
+
+<p><strong>|v(t)|=5</strong></p>
+
+<hr>
+
+<h2>Acceleration</h2>
+
+<p>Acceleration is the derivative of velocity.</p>
+
+<p><strong>a(t)=v'(t)</strong></p>
+
+<p>Because velocity is the derivative of position:</p>
+
+<p><strong>a(t)=r''(t)</strong></p>
+
+<p>Acceleration describes how the velocity vector changes over time.</p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p>Suppose:</p>
+
+<p><strong>r(t)=⟨t²,3t,t³⟩</strong></p>
+
+<p>The velocity is:</p>
+
+<p><strong>v(t)=⟨2t,3,3t²⟩</strong></p>
+
+<p>Differentiate again to find acceleration.</p>
+
+<p><strong>a(t)=⟨2,0,6t⟩</strong></p>
+
+<p>At <strong>t=2</strong>:</p>
+
+<p><strong>a(2)=⟨2,0,12⟩</strong></p>
+
+<hr>
+
+<h2>Constant Velocity</h2>
+
+<p>An object has constant velocity when its velocity vector does not change.</p>
+
+<p>For example:</p>
+
+<p><strong>r(t)=⟨2t+1,-3t,5t-4⟩</strong></p>
+
+<p>The velocity is:</p>
+
+<p><strong>v(t)=⟨2,-3,5⟩</strong></p>
+
+<p>The acceleration is:</p>
+
+<p><strong>a(t)=⟨0,0,0⟩</strong></p>
+
+<p>Constant velocity always produces zero acceleration.</p>
+
+<hr>
+
+<h2>Finding Position from Velocity</h2>
+
+<p>If velocity is known, position can be found by integration.</p>
+
+<p><strong>r(t)=∫v(t)dt</strong></p>
+
+<p>An initial position is usually needed to determine the constant vector.</p>
+
+<hr>
+
+<h2>Example 4</h2>
+
+<p>Suppose:</p>
+
+<p><strong>v(t)=⟨2t,3,4t³⟩</strong></p>
+
+<p>and:</p>
+
+<p><strong>r(0)=⟨1,-2,5⟩</strong></p>
+
+<p>Integrate each velocity component.</p>
+
+<p><strong>r(t)=⟨t²+C₁,3t+C₂,t⁴+C₃⟩</strong></p>
+
+<p>Use the initial position.</p>
+
+<p>At <strong>t=0</strong>:</p>
+
+<p><strong>r(0)=⟨C₁,C₂,C₃⟩</strong></p>
+
+<p>Therefore:</p>
+
+<p><strong>C₁=1</strong></p>
+
+<p><strong>C₂=-2</strong></p>
+
+<p><strong>C₃=5</strong></p>
+
+<p>The position function is:</p>
+
+<p><strong>r(t)=⟨t²+1,3t-2,t⁴+5⟩</strong></p>
+
+<hr>
+
+<h2>Finding Velocity from Acceleration</h2>
+
+<p>If acceleration is known, integrate to find velocity.</p>
+
+<p><strong>v(t)=∫a(t)dt</strong></p>
+
+<p>An initial velocity is needed to determine the constant vector.</p>
+
+<hr>
+
+<h2>Example 5</h2>
+
+<p>Suppose:</p>
+
+<p><strong>a(t)=⟨6t,2,-4⟩</strong></p>
+
+<p>and:</p>
+
+<p><strong>v(0)=⟨1,3,2⟩</strong></p>
+
+<p>Integrate each acceleration component.</p>
+
+<p><strong>v(t)=⟨3t²+C₁,2t+C₂,-4t+C₃⟩</strong></p>
+
+<p>Use <strong>v(0)=⟨1,3,2⟩</strong>.</p>
+
+<p><strong>C₁=1</strong></p>
+
+<p><strong>C₂=3</strong></p>
+
+<p><strong>C₃=2</strong></p>
+
+<p>Therefore:</p>
+
+<p><strong>v(t)=⟨3t²+1,2t+3,-4t+2⟩</strong></p>
+
+<hr>
+
+<h2>Projectile Motion</h2>
+
+<p>Projectile motion is an important application of vector-valued functions.</p>
+
+<p>Near Earth's surface, gravity produces a constant downward acceleration.</p>
+
+<p>Using the z-axis as the vertical direction:</p>
+
+<p><strong>a(t)=⟨0,0,-g⟩</strong></p>
+
+<p>where <strong>g</strong> is the acceleration due to gravity.</p>
+
+<p>Integrating gives the velocity:</p>
+
+<p><strong>v(t)=⟨v₀x,v₀y,v₀z-gt⟩</strong></p>
+
+<p>Integrating again gives the position:</p>
+
+<p><strong>r(t)=⟨x₀+v₀x t,y₀+v₀y t,z₀+v₀z t-(1/2)gt²⟩</strong></p>
+
+<hr>
+
+<h2>Example 6</h2>
+
+<p>An object has position:</p>
+
+<p><strong>r(t)=⟨4t,3t,20t-4.9t²⟩</strong></p>
+
+<p>Find its velocity.</p>
+
+<p><strong>v(t)=⟨4,3,20-9.8t⟩</strong></p>
+
+<p>Find its acceleration.</p>
+
+<p><strong>a(t)=⟨0,0,-9.8⟩</strong></p>
+
+<p>The negative z-component shows that gravity acts downward.</p>
+
+<hr>
+
+<h2>When Is an Object at Rest?</h2>
+
+<p>An object is at rest when its velocity vector is the zero vector.</p>
+
+<p><strong>v(t)=⟨0,0,0⟩</strong></p>
+
+<p>Every velocity component must equal zero at the same time.</p>
+
+<hr>
+
+<h2>Example 7</h2>
+
+<p>Suppose:</p>
+
+<p><strong>v(t)=⟨t-2,2t-4,3t-6⟩</strong></p>
+
+<p>Set every component equal to zero.</p>
+
+<p><strong>t-2=0</strong></p>
+
+<p><strong>2t-4=0</strong></p>
+
+<p><strong>3t-6=0</strong></p>
+
+<p>Each equation gives:</p>
+
+<p><strong>t=2</strong></p>
+
+<p>The object is at rest at <strong>t=2</strong>.</p>
+
+<hr>
+
+<h2>Important Ideas</h2>
+
+<ul>
+<li>Position gives the location of an object.</li>
+<li>Velocity is the derivative of position.</li>
+<li>Speed is the magnitude of velocity.</li>
+<li>Acceleration is the derivative of velocity.</li>
+<li>Position can be found by integrating velocity.</li>
+<li>Velocity can be found by integrating acceleration.</li>
+<li>Initial conditions determine constants of integration.</li>
+<li>An object is at rest when its velocity is the zero vector.</li>
+</ul>
+
+<hr>
+
+<h2>Practice Questions</h2>
+
+<p>Select the best answer for each question.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "What is the relationship between position and velocity?",
+                options: [
+                    "Velocity is the derivative of position",
+                    "Position is the derivative of velocity",
+                    "Velocity is the magnitude of position",
+                    "Position and velocity are always equal"
+                ],
+                answer: "Velocity is the derivative of position",
+                explanation: "The velocity function is v(t)=r'(t)."
+            },
+
+            {
+                q: "What is speed?",
+                options: [
+                    "The magnitude of velocity",
+                    "The derivative of acceleration",
+                    "The position vector",
+                    "The direction of motion only"
+                ],
+                answer: "The magnitude of velocity",
+                explanation: "Speed is the scalar magnitude |v(t)|."
+            },
+
+            {
+                q: "If v(t)=⟨3,4,0⟩, what is the speed?",
+                options: [
+                    "5",
+                    "7",
+                    "12",
+                    "25"
+                ],
+                answer: "5",
+                explanation: "The speed is √(3²+4²+0²)=5."
+            },
+
+            {
+                q: "Acceleration is equal to:",
+                options: [
+                    "v'(t)",
+                    "r(t)",
+                    "|r(t)|",
+                    "∫r(t)dt"
+                ],
+                answer: "v'(t)",
+                explanation: "Acceleration is the derivative of velocity."
+            },
+
+            {
+                q: "If r(t)=⟨t²,3t,t³⟩, what is a(t)?",
+                options: [
+                    "⟨2,0,6t⟩",
+                    "⟨2t,3,3t²⟩",
+                    "⟨t,3,t²⟩",
+                    "⟨2,3,6⟩"
+                ],
+                answer: "⟨2,0,6t⟩",
+                explanation: "Differentiate the position function twice."
+            },
+
+            {
+                q: "What is the acceleration of an object moving with constant velocity?",
+                options: [
+                    "The zero vector",
+                    "A constant nonzero vector",
+                    "Undefined",
+                    "Equal to its position"
+                ],
+                answer: "The zero vector",
+                explanation: "The derivative of a constant velocity vector is zero."
+            },
+
+            {
+                q: "How can position be found from velocity?",
+                options: [
+                    "Integrate velocity",
+                    "Differentiate velocity",
+                    "Find the magnitude of velocity",
+                    "Divide velocity by time"
+                ],
+                answer: "Integrate velocity",
+                explanation: "Position is an antiderivative of velocity."
+            },
+
+            {
+                q: "Why are initial conditions needed when integrating velocity or acceleration?",
+                options: [
+                    "To determine the constant vector",
+                    "To calculate a dot product",
+                    "To remove the parameter",
+                    "To find the domain"
+                ],
+                answer: "To determine the constant vector",
+                explanation: "Integration introduces constants that are determined using initial conditions."
+            },
+
+            {
+                q: "When is an object at rest?",
+                options: [
+                    "When its velocity is the zero vector",
+                    "When its acceleration is positive",
+                    "When its position is zero",
+                    "When its speed is increasing"
+                ],
+                answer: "When its velocity is the zero vector",
+                explanation: "An object is at rest only when every velocity component is zero."
+            },
+
+            {
+                q: "In projectile motion, the acceleration caused by gravity points:",
+                options: [
+                    "Downward",
+                    "Upward",
+                    "Horizontally",
+                    "In the direction of velocity"
+                ],
+                answer: "Downward",
+                explanation: "Gravity produces a constant downward acceleration."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus3-arc-length": {
+
+        title: "Arc Length and Unit Tangent Vectors",
+
+        subtitle: "Measure the distance traveled along a space curve and determine the direction of motion.",
+
+        body: `
+
+<h2>Arc Length</h2>
+
+<p>When an object moves along a curve, the total distance traveled is called the <strong>arc length</strong>.</p>
+
+<p>Unlike the straight-line distance between two points, arc length follows the path of the curve.</p>
+
+<hr>
+
+<h2>The Arc Length Formula</h2>
+
+<p>If the position function is</p>
+
+<p><strong>r(t)=⟨x(t),y(t),z(t)⟩</strong></p>
+
+<p>for <strong>a ≤ t ≤ b</strong>, then the arc length is</p>
+
+<p><strong>s=∫<sub>a</sub><sup>b</sup>|r'(t)|dt</strong></p>
+
+<p>This means:</p>
+
+<ol>
+<li>Differentiate the position function.</li>
+<li>Find the magnitude of the velocity vector.</li>
+<li>Integrate over the interval.</li>
+</ol>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>Let</p>
+
+<p><strong>r(t)=⟨3t,4t,0⟩</strong></p>
+
+<p>for <strong>0≤t≤2</strong>.</p>
+
+<p>Differentiate.</p>
+
+<p><strong>r'(t)=⟨3,4,0⟩</strong></p>
+
+<p>Find the magnitude.</p>
+
+<p><strong>|r'(t)|=√(3²+4²)=5</strong></p>
+
+<p>Integrate.</p>
+
+<p><strong>s=∫₀²5dt=10</strong></p>
+
+<p>The object travels 10 units.</p>
+
+<hr>
+
+<h2>Speed Revisited</h2>
+
+<p>The magnitude of the velocity vector is called the <strong>speed</strong>.</p>
+
+<p><strong>Speed=|v(t)|</strong></p>
+
+<p>The arc length formula simply adds all of the tiny distances traveled.</p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>Suppose</p>
+
+<p><strong>v(t)=⟨2t,2,0⟩</strong></p>
+
+<p>Find the speed.</p>
+
+<p><strong>|v(t)|=√((2t)²+2²)</strong></p>
+
+<p><strong>=√(4t²+4)</strong></p>
+
+<hr>
+
+<h2>Arc Length Function</h2>
+
+<p>Instead of measuring the entire curve, we may measure the distance from a starting point to a variable time.</p>
+
+<p>This is called the <strong>arc length function</strong>.</p>
+
+<p><strong>s(t)=∫<sub>a</sub><sup>t</sup>|r'(u)|du</strong></p>
+
+<p>Notice that a different variable, usually <strong>u</strong>, is used inside the integral.</p>
+
+<hr>
+
+<h2>Unit Tangent Vector</h2>
+
+<p>The velocity vector points in the direction of motion.</p>
+
+<p>To obtain a direction vector of length 1, divide the velocity vector by its magnitude.</p>
+
+<p><strong>T(t)=v(t)/|v(t)|</strong></p>
+
+<p>This is called the <strong>unit tangent vector</strong>.</p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p>Suppose</p>
+
+<p><strong>v(t)=⟨3,4,0⟩</strong></p>
+
+<p>The speed is</p>
+
+<p><strong>|v(t)|=5</strong></p>
+
+<p>Therefore</p>
+
+<p><strong>T(t)=⟨3/5,4/5,0⟩</strong></p>
+
+<p>This vector has length 1 and points in the direction of motion.</p>
+
+<hr>
+
+<h2>Why Use a Unit Tangent Vector?</h2>
+
+<p>The velocity vector contains both speed and direction.</p>
+
+<p>The unit tangent vector removes the speed and keeps only the direction.</p>
+
+<p>This makes it useful when studying the geometry of curves.</p>
+
+<hr>
+
+<h2>Example 4</h2>
+
+<p>Suppose</p>
+
+<p><strong>v(t)=⟨6,8,0⟩</strong></p>
+
+<p>The speed is</p>
+
+<p><strong>10</strong></p>
+
+<p>The unit tangent vector is</p>
+
+<p><strong>T(t)=⟨3/5,4/5,0⟩</strong></p>
+
+<p>Notice that both vectors point in exactly the same direction.</p>
+
+<hr>
+
+<h2>Important Ideas</h2>
+
+<ul>
+
+<li>Arc length measures the actual distance traveled along a curve.</li>
+
+<li>Arc length is found by integrating the speed.</li>
+
+<li>The speed is the magnitude of the velocity vector.</li>
+
+<li>The unit tangent vector has magnitude 1.</li>
+
+<li>The unit tangent vector describes only the direction of motion.</li>
+
+</ul>
+
+<hr>
+
+<h2>Practice Questions</h2>
+
+`,
+
+        questions: [
+
+            {
+                q: "What does arc length measure?",
+                options: [
+                    "The distance traveled along a curve",
+                    "The straight-line distance",
+                    "The acceleration",
+                    "The area under the curve"
+                ],
+                answer: "The distance traveled along a curve",
+                explanation: "Arc length follows the actual path of the curve."
+            },
+
+            {
+                q: "What quantity is integrated to find arc length?",
+                options: [
+                    "The speed",
+                    "The position",
+                    "The acceleration",
+                    "The unit tangent vector"
+                ],
+                answer: "The speed",
+                explanation: "Arc length is the integral of the magnitude of velocity."
+            },
+
+            {
+                q: "The speed of an object equals:",
+                options: [
+                    "|v(t)|",
+                    "|r(t)|",
+                    "|a(t)|",
+                    "T(t)"
+                ],
+                answer: "|v(t)|",
+                explanation: "Speed is the magnitude of the velocity vector."
+            },
+
+            {
+                q: "What is the purpose of the unit tangent vector?",
+                options: [
+                    "To describe the direction of motion",
+                    "To measure acceleration",
+                    "To calculate distance",
+                    "To find curvature"
+                ],
+                answer: "To describe the direction of motion",
+                explanation: "It removes the speed and leaves only direction."
+            },
+
+            {
+                q: "A unit tangent vector always has magnitude:",
+                options: [
+                    "1",
+                    "0",
+                    "2",
+                    "Depends on the curve"
+                ],
+                answer: "1",
+                explanation: "Every unit vector has magnitude 1."
+            },
+
+            {
+                q: "If v=⟨3,4,0⟩, the unit tangent vector is:",
+                options: [
+                    "⟨3/5,4/5,0⟩",
+                    "⟨5,5,0⟩",
+                    "⟨4/3,5/4,0⟩",
+                    "⟨3,4,0⟩"
+                ],
+                answer: "⟨3/5,4/5,0⟩",
+                explanation: "Divide each component by the magnitude 5."
+            },
+
+            {
+                q: "What is the magnitude of the vector ⟨6,8,0⟩?",
+                options: [
+                    "10",
+                    "14",
+                    "8",
+                    "6"
+                ],
+                answer: "10",
+                explanation: "√(6²+8²)=10."
+            },
+
+            {
+                q: "Velocity contains:",
+                options: [
+                    "Speed and direction",
+                    "Only speed",
+                    "Only direction",
+                    "Only acceleration"
+                ],
+                answer: "Speed and direction",
+                explanation: "Velocity is a vector quantity."
+            },
+
+            {
+                q: "The arc length formula requires first computing:",
+                options: [
+                    "The derivative of the position function",
+                    "The second derivative",
+                    "The dot product",
+                    "The cross product"
+                ],
+                answer: "The derivative of the position function",
+                explanation: "Differentiate first to obtain the velocity vector."
+            },
+
+            {
+                q: "The unit tangent vector is obtained by:",
+                options: [
+                    "Dividing velocity by its magnitude",
+                    "Adding acceleration",
+                    "Integrating velocity",
+                    "Taking the cross product"
+                ],
+                answer: "Dividing velocity by its magnitude",
+                explanation: "Normalize the velocity vector to produce a unit vector."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus3-curvature-normal-vectors": {
+
+        title: "Curvature and Unit Normal Vectors",
+
+        subtitle: "Measure how sharply a curve bends and identify the direction in which the path is turning.",
+
+        body: `
+
+<h2>What Is Curvature?</h2>
+
+<p>Curvature measures how quickly a curve changes direction.</p>
+
+<p>A straight line has zero curvature because its direction does not change.</p>
+
+<p>A curve that bends sharply has greater curvature than a curve that bends gently.</p>
+
+<hr>
+
+<h2>The Unit Tangent Vector</h2>
+
+<p>The unit tangent vector describes the direction of motion along a curve.</p>
+
+<p><strong>T(t)=r'(t)/|r'(t)|</strong></p>
+
+<p>Because <strong>T(t)</strong> has magnitude 1, it contains direction but not speed.</p>
+
+<hr>
+
+<h2>Curvature Formula</h2>
+
+<p>Curvature is represented by the Greek letter <strong>κ</strong>, pronounced “kappa.”</p>
+
+<p>One common formula is:</p>
+
+<p><strong>κ(t)=|T'(t)|/|r'(t)|</strong></p>
+
+<p>This formula compares how quickly the direction changes with how quickly the object moves along the curve.</p>
+
+<hr>
+
+<h2>Alternative Curvature Formula</h2>
+
+<p>For many three-dimensional curves, curvature can also be found using:</p>
+
+<p><strong>κ(t)=|r'(t)×r''(t)|/|r'(t)|³</strong></p>
+
+<p>This formula uses the cross product of the velocity and acceleration vectors.</p>
+
+<hr>
+
+<h2>Example 1: A Straight Line</h2>
+
+<p>Consider:</p>
+
+<p><strong>r(t)=⟨2t,3t,4t⟩</strong></p>
+
+<p>Then:</p>
+
+<p><strong>r'(t)=⟨2,3,4⟩</strong></p>
+
+<p><strong>r''(t)=⟨0,0,0⟩</strong></p>
+
+<p>Because the acceleration vector is zero, the direction does not change.</p>
+
+<p>Therefore:</p>
+
+<p><strong>κ(t)=0</strong></p>
+
+<p>A straight line has zero curvature.</p>
+
+<hr>
+
+<h2>Example 2: A Circle</h2>
+
+<p>Consider the circle:</p>
+
+<p><strong>r(t)=⟨R cos(t),R sin(t),0⟩</strong></p>
+
+<p>Its radius is <strong>R</strong>.</p>
+
+<p>For a circle, the curvature is constant:</p>
+
+<p><strong>κ=1/R</strong></p>
+
+<p>A smaller circle has greater curvature because it bends more sharply.</p>
+
+<p>A larger circle has smaller curvature because it bends more gently.</p>
+
+<hr>
+
+<h2>Radius of Curvature</h2>
+
+<p>The reciprocal of curvature is called the <strong>radius of curvature</strong>.</p>
+
+<p><strong>ρ=1/κ</strong></p>
+
+<p>For a circle, the radius of curvature is simply the radius of the circle.</p>
+
+<hr>
+
+<h2>The Unit Normal Vector</h2>
+
+<p>The unit normal vector points in the direction in which the curve is turning.</p>
+
+<p>It is written as:</p>
+
+<p><strong>N(t)=T'(t)/|T'(t)|</strong></p>
+
+<p>The vector <strong>N(t)</strong> is perpendicular to the unit tangent vector.</p>
+
+<hr>
+
+<h2>Tangent and Normal Directions</h2>
+
+<p>The unit tangent vector points along the path.</p>
+
+<p>The unit normal vector points toward the inside of the turn.</p>
+
+<ul>
+<li><strong>T(t)</strong> describes forward direction.</li>
+<li><strong>N(t)</strong> describes turning direction.</li>
+</ul>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p>Suppose:</p>
+
+<p><strong>T(t)=⟨cos(t),sin(t),0⟩</strong></p>
+
+<p>Differentiate:</p>
+
+<p><strong>T'(t)=⟨-sin(t),cos(t),0⟩</strong></p>
+
+<p>The magnitude of <strong>T'(t)</strong> is:</p>
+
+<p><strong>|T'(t)|=1</strong></p>
+
+<p>Therefore:</p>
+
+<p><strong>N(t)=⟨-sin(t),cos(t),0⟩</strong></p>
+
+<hr>
+
+<h2>Acceleration Components</h2>
+
+<p>Acceleration can be separated into two perpendicular components.</p>
+
+<p><strong>a(t)=a<sub>T</sub>T(t)+a<sub>N</sub>N(t)</strong></p>
+
+<p>The tangential component changes speed.</p>
+
+<p>The normal component changes direction.</p>
+
+<hr>
+
+<h2>Tangential Acceleration</h2>
+
+<p>The tangential component is:</p>
+
+<p><strong>a<sub>T</sub>=d|v|/dt</strong></p>
+
+<p>It measures how quickly the speed changes.</p>
+
+<p>If <strong>a<sub>T</sub></strong> is positive, the object speeds up.</p>
+
+<p>If <strong>a<sub>T</sub></strong> is negative, the object slows down.</p>
+
+<hr>
+
+<h2>Normal Acceleration</h2>
+
+<p>The normal component is:</p>
+
+<p><strong>a<sub>N</sub>=κ|v|²</strong></p>
+
+<p>It measures how strongly the object turns.</p>
+
+<p>A larger speed or greater curvature produces greater normal acceleration.</p>
+
+<hr>
+
+<h2>Another Formula for Normal Acceleration</h2>
+
+<p>Because <strong>κ=1/ρ</strong>, normal acceleration can also be written as:</p>
+
+<p><strong>a<sub>N</sub>=|v|²/ρ</strong></p>
+
+<p>This is especially useful for circular motion.</p>
+
+<hr>
+
+<h2>Example 4</h2>
+
+<p>An object moves with speed 6 along a curve with curvature 1/3.</p>
+
+<p>Find the normal acceleration.</p>
+
+<p><strong>a<sub>N</sub>=κ|v|²</strong></p>
+
+<p><strong>a<sub>N</sub>=(1/3)(6²)</strong></p>
+
+<p><strong>a<sub>N</sub>=12</strong></p>
+
+<hr>
+
+<h2>Finding Tangential Acceleration Using Dot Products</h2>
+
+<p>Tangential acceleration can also be found using:</p>
+
+<p><strong>a<sub>T</sub>=(v·a)/|v|</strong></p>
+
+<p>This formula measures how much of acceleration points in the direction of motion.</p>
+
+<hr>
+
+<h2>Finding Normal Acceleration</h2>
+
+<p>Once the total acceleration and tangential acceleration are known:</p>
+
+<p><strong>|a|²=a<sub>T</sub>²+a<sub>N</sub>²</strong></p>
+
+<p>Therefore:</p>
+
+<p><strong>a<sub>N</sub>=√(|a|²-a<sub>T</sub>²)</strong></p>
+
+<hr>
+
+<h2>Example 5</h2>
+
+<p>Suppose:</p>
+
+<p><strong>v=⟨3,4,0⟩</strong></p>
+
+<p>and:</p>
+
+<p><strong>a=⟨2,1,0⟩</strong></p>
+
+<p>First find the speed:</p>
+
+<p><strong>|v|=5</strong></p>
+
+<p>Find the dot product:</p>
+
+<p><strong>v·a=3(2)+4(1)=10</strong></p>
+
+<p>Then:</p>
+
+<p><strong>a<sub>T</sub>=10/5=2</strong></p>
+
+<p>The magnitude of acceleration is:</p>
+
+<p><strong>|a|=√(2²+1²)=√5</strong></p>
+
+<p>Now find the normal component:</p>
+
+<p><strong>a<sub>N</sub>=√(5-4)=1</strong></p>
+
+<hr>
+
+<h2>Geometric Meaning</h2>
+
+<p>Curvature and normal vectors help describe the geometry of motion.</p>
+
+<p>Two objects may travel at the same speed but have different accelerations if one path bends more sharply.</p>
+
+<p>An object moving around a circle at constant speed still accelerates because its direction is continually changing.</p>
+
+<hr>
+
+<h2>Important Ideas</h2>
+
+<ul>
+<li>Curvature measures how sharply a curve bends.</li>
+<li>A straight line has zero curvature.</li>
+<li>A circle of radius R has curvature 1/R.</li>
+<li>The unit normal vector points in the direction of turning.</li>
+<li>The tangent and normal vectors are perpendicular.</li>
+<li>Tangential acceleration changes speed.</li>
+<li>Normal acceleration changes direction.</li>
+<li>Acceleration can be written as a combination of tangent and normal components.</li>
+</ul>
+
+<hr>
+
+<h2>Practice Questions</h2>
+
+<p>Select the best answer for each question.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "What does curvature measure?",
+                options: [
+                    "How sharply a curve bends",
+                    "The total distance traveled",
+                    "The position of an object",
+                    "The area under a curve"
+                ],
+                answer: "How sharply a curve bends",
+                explanation: "Curvature measures how quickly the direction of a curve changes."
+            },
+
+            {
+                q: "What is the curvature of a straight line?",
+                options: [
+                    "0",
+                    "1",
+                    "Undefined",
+                    "Infinity"
+                ],
+                answer: "0",
+                explanation: "The direction of a straight line does not change."
+            },
+
+            {
+                q: "What is the curvature of a circle with radius R?",
+                options: [
+                    "1/R",
+                    "R",
+                    "R²",
+                    "2πR"
+                ],
+                answer: "1/R",
+                explanation: "The curvature of a circle is the reciprocal of its radius."
+            },
+
+            {
+                q: "A smaller circle has:",
+                options: [
+                    "Greater curvature",
+                    "Smaller curvature",
+                    "Zero curvature",
+                    "The same curvature as every circle"
+                ],
+                answer: "Greater curvature",
+                explanation: "Since κ=1/R, decreasing the radius increases curvature."
+            },
+
+            {
+                q: "What direction does the unit normal vector point?",
+                options: [
+                    "Toward the direction in which the curve is turning",
+                    "Directly backward",
+                    "Always upward",
+                    "Along the position vector"
+                ],
+                answer: "Toward the direction in which the curve is turning",
+                explanation: "The unit normal vector points toward the inside of the turn."
+            },
+
+            {
+                q: "The unit tangent vector and unit normal vector are:",
+                options: [
+                    "Perpendicular",
+                    "Parallel",
+                    "Equal",
+                    "Opposite in every case"
+                ],
+                answer: "Perpendicular",
+                explanation: "The tangent and normal directions form a right angle."
+            },
+
+            {
+                q: "Which acceleration component changes speed?",
+                options: [
+                    "Tangential acceleration",
+                    "Normal acceleration",
+                    "Position acceleration",
+                    "Curvature acceleration"
+                ],
+                answer: "Tangential acceleration",
+                explanation: "Tangential acceleration measures the rate of change of speed."
+            },
+
+            {
+                q: "Which acceleration component changes direction?",
+                options: [
+                    "Normal acceleration",
+                    "Tangential acceleration",
+                    "Scalar acceleration",
+                    "Constant acceleration"
+                ],
+                answer: "Normal acceleration",
+                explanation: "Normal acceleration points toward the direction of turning."
+            },
+
+            {
+                q: "If speed is 6 and curvature is 1/3, what is normal acceleration?",
+                options: [
+                    "12",
+                    "2",
+                    "18",
+                    "36"
+                ],
+                answer: "12",
+                explanation: "Use aN=κ|v|²=(1/3)(36)=12."
+            },
+
+            {
+                q: "An object moving at constant speed around a circle:",
+                options: [
+                    "Still has acceleration because its direction changes",
+                    "Has zero acceleration",
+                    "Has zero velocity",
+                    "Moves in a straight line"
+                ],
+                answer: "Still has acceleration because its direction changes",
+                explanation: "Circular motion has normal acceleration even when speed is constant."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus3-motion-space": {
+
+        title: "Motion in Space Applications",
+
+        subtitle: "Apply vector-valued functions to analyze motion in three-dimensional space.",
+
+        body: `
+
+<h2>Motion in Three Dimensions</h2>
+
+<p>Vector-valued functions allow us to describe the motion of airplanes, satellites, rockets, drones, and moving particles.</p>
+
+<p>The position of an object at time <strong>t</strong> is given by:</p>
+
+<p><strong>r(t)=⟨x(t),y(t),z(t)⟩</strong></p>
+
+<p>Each coordinate changes with time, allowing the object to move freely through space.</p>
+
+<hr>
+
+<h2>Position</h2>
+
+<p>The position vector tells us exactly where the object is located.</p>
+
+<p>For example:</p>
+
+<p><strong>r(t)=⟨2t,3t,t²⟩</strong></p>
+
+<p>At <strong>t=2</strong>:</p>
+
+<p><strong>r(2)=⟨4,6,4⟩</strong></p>
+
+<p>The object is located at the point (4,6,4).</p>
+
+<hr>
+
+<h2>Velocity</h2>
+
+<p>The velocity vector describes how fast the position is changing.</p>
+
+<p><strong>v(t)=r'(t)</strong></p>
+
+<p>Differentiate each component separately.</p>
+
+<p>For the previous example:</p>
+
+<p><strong>v(t)=⟨2,3,2t⟩</strong></p>
+
+<p>At <strong>t=2</strong>:</p>
+
+<p><strong>v(2)=⟨2,3,4⟩</strong></p>
+
+<hr>
+
+<h2>Acceleration</h2>
+
+<p>Acceleration measures how quickly the velocity changes.</p>
+
+<p><strong>a(t)=v'(t)=r''(t)</strong></p>
+
+<p>For the same motion:</p>
+
+<p><strong>a(t)=⟨0,0,2⟩</strong></p>
+
+<p>The acceleration always points upward in the positive z-direction.</p>
+
+<hr>
+
+<h2>Example 1</h2>
+
+<p>A particle moves according to</p>
+
+<p><strong>r(t)=⟨t²,4t,5−t²⟩</strong></p>
+
+<p>Find the position, velocity, and acceleration when <strong>t=3</strong>.</p>
+
+<p><strong>Position:</strong></p>
+
+<p>r(3)=⟨9,12,-4⟩</p>
+
+<p><strong>Velocity:</strong></p>
+
+<p>v(t)=⟨2t,4,-2⟩</p>
+
+<p>v(3)=⟨6,4,-2⟩</p>
+
+<p><strong>Acceleration:</strong></p>
+
+<p>a(t)=⟨2,0,0⟩</p>
+
+<hr>
+
+<h2>Finding Speed</h2>
+
+<p>Speed is the magnitude of the velocity vector.</p>
+
+<p><strong>Speed=|v(t)|</strong></p>
+
+<p>For Example 1:</p>
+
+<p><strong>|v(3)|=√(6²+4²+(-2)²)</strong></p>
+
+<p><strong>=√56</strong></p>
+
+<p><strong>≈7.48 units per second</strong></p>
+
+<hr>
+
+<h2>Example 2</h2>
+
+<p>An airplane follows the path</p>
+
+<p><strong>r(t)=⟨250t,180t,12t⟩</strong></p>
+
+<p>The coordinates represent miles.</p>
+
+<p>Find its velocity.</p>
+
+<p><strong>v(t)=⟨250,180,12⟩</strong></p>
+
+<p>The airplane moves with constant velocity.</p>
+
+<p>Since the velocity never changes,</p>
+
+<p><strong>a(t)=⟨0,0,0⟩</strong></p>
+
+<hr>
+
+<h2>Changing Direction</h2>
+
+<p>An object can travel at constant speed while continually changing direction.</p>
+
+<p>In this situation, the acceleration is not zero because the direction of motion changes.</p>
+
+<p>This occurs whenever an object travels along a curved path.</p>
+
+<hr>
+
+<h2>Circular Motion</h2>
+
+<p>Suppose an object moves around a circle.</p>
+
+<p><strong>r(t)=⟨5cos(t),5sin(t),0⟩</strong></p>
+
+<p>The velocity is</p>
+
+<p><strong>v(t)=⟨−5sin(t),5cos(t),0⟩</strong></p>
+
+<p>The acceleration is</p>
+
+<p><strong>a(t)=⟨−5cos(t),−5sin(t),0⟩</strong></p>
+
+<p>The acceleration always points toward the center of the circle.</p>
+
+<hr>
+
+<h2>Centripetal Acceleration</h2>
+
+<p>The inward acceleration that keeps an object moving in a circle is called <strong>centripetal acceleration</strong>.</p>
+
+<p>Its magnitude is</p>
+
+<p><strong>a=v²/r</strong></p>
+
+<p>where</p>
+
+<ul>
+
+<li>v = speed</li>
+
+<li>r = radius</li>
+
+</ul>
+
+<p>The faster the object moves, the greater the required centripetal acceleration.</p>
+
+<hr>
+
+<h2>Example 3</h2>
+
+<p>A race car travels around a circular track of radius 100 meters at a speed of 20 meters per second.</p>
+
+<p>Find its centripetal acceleration.</p>
+
+<p><strong>a=v²/r</strong></p>
+
+<p><strong>a=20²/100</strong></p>
+
+<p><strong>a=400/100=4 m/s²</strong></p>
+
+<hr>
+
+<h2>Projectile Motion</h2>
+
+<p>Ignoring air resistance, projectiles move with constant downward acceleration due to gravity.</p>
+
+<p>The acceleration vector is</p>
+
+<p><strong>a(t)=⟨0,0,-9.8⟩</strong></p>
+
+<p>Integrating produces the velocity function.</p>
+
+<p>Integrating again produces the position function.</p>
+
+<hr>
+
+<h2>Example 4</h2>
+
+<p>A ball is thrown upward.</p>
+
+<p>The position function is</p>
+
+<p><strong>r(t)=⟨15t,8t,2+20t−4.9t²⟩</strong></p>
+
+<p>Find its velocity.</p>
+
+<p><strong>v(t)=⟨15,8,20−9.8t⟩</strong></p>
+
+<p>The ball rises while the third component is positive.</p>
+
+<p>It reaches its highest point when the vertical velocity becomes zero.</p>
+
+<hr>
+
+<h2>Maximum Height</h2>
+
+<p>The highest point occurs when the vertical component of velocity equals zero.</p>
+
+<p>Set</p>
+
+<p><strong>20−9.8t=0</strong></p>
+
+<p>Solve for t.</p>
+
+<p><strong>t≈2.04 seconds</strong></p>
+
+<p>Substitute this value into the position function to find the maximum height.</p>
+
+<hr>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Rocket trajectories</li>
+
+<li>Satellite motion</li>
+
+<li>Aircraft navigation</li>
+
+<li>Drone flight paths</li>
+
+<li>Planetary motion</li>
+
+<li>Roller coaster design</li>
+
+<li>Computer animation</li>
+
+<li>Robotics</li>
+
+</ul>
+
+<hr>
+
+<h2>Practice Questions</h2>
+
+`,
+
+        questions: [
+
+            {
+                q: "What does a position vector describe?",
+                options: [
+                    "The location of an object",
+                    "Its acceleration",
+                    "Its speed",
+                    "Its mass"
+                ],
+                answer: "The location of an object",
+                explanation: "The position vector gives the object's location in space."
+            },
+
+            {
+                q: "The derivative of the position vector is the:",
+                options: [
+                    "Velocity vector",
+                    "Acceleration vector",
+                    "Speed",
+                    "Force"
+                ],
+                answer: "Velocity vector",
+                explanation: "Velocity is the derivative of position."
+            },
+
+            {
+                q: "The derivative of velocity is the:",
+                options: [
+                    "Acceleration vector",
+                    "Position vector",
+                    "Speed",
+                    "Distance"
+                ],
+                answer: "Acceleration vector",
+                explanation: "Acceleration is the rate of change of velocity."
+            },
+
+            {
+                q: "Speed is equal to:",
+                options: [
+                    "The magnitude of the velocity vector",
+                    "The magnitude of the position vector",
+                    "The derivative of speed",
+                    "The magnitude of acceleration"
+                ],
+                answer: "The magnitude of the velocity vector",
+                explanation: "Speed is the length of the velocity vector."
+            },
+
+            {
+                q: "If an airplane has constant velocity, its acceleration is:",
+                options: [
+                    "Zero",
+                    "Constant but nonzero",
+                    "Increasing",
+                    "Undefined"
+                ],
+                answer: "Zero",
+                explanation: "If velocity never changes, its derivative is zero."
+            },
+
+            {
+                q: "In circular motion, the acceleration points:",
+                options: [
+                    "Toward the center of the circle",
+                    "Away from the center",
+                    "Along the tangent",
+                    "Straight upward"
+                ],
+                answer: "Toward the center of the circle",
+                explanation: "Centripetal acceleration always points toward the center."
+            },
+
+            {
+                q: "The formula for centripetal acceleration is:",
+                options: [
+                    "v²/r",
+                    "r²/v",
+                    "rv",
+                    "2πr"
+                ],
+                answer: "v²/r",
+                explanation: "Centripetal acceleration depends on the square of speed divided by the radius."
+            },
+
+            {
+                q: "Ignoring air resistance, projectile motion has acceleration:",
+                options: [
+                    "⟨0,0,-9.8⟩",
+                    "⟨9.8,0,0⟩",
+                    "⟨0,9.8,0⟩",
+                    "⟨0,0,0⟩"
+                ],
+                answer: "⟨0,0,-9.8⟩",
+                explanation: "Gravity provides a constant downward acceleration."
+            },
+
+            {
+                q: "A projectile reaches its highest point when:",
+                options: [
+                    "Its vertical velocity is zero",
+                    "Its horizontal velocity is zero",
+                    "Its acceleration is zero",
+                    "Its speed is zero"
+                ],
+                answer: "Its vertical velocity is zero",
+                explanation: "At the highest point, the vertical component of velocity changes from positive to negative."
+            },
+
+            {
+                q: "Which of the following is a real-world application of vector-valued functions?",
+                options: [
+                    "Satellite motion",
+                    "Robot navigation",
+                    "Aircraft flight paths",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Vector-valued functions are used extensively to model motion in engineering, physics, robotics, and aerospace."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus3-unit2-review": {
+
+        title: "Unit 2 Review",
+
+        subtitle: "Review vector-valued functions and motion in space before taking the unit test.",
+
+        body: `
+
+<h2>Unit Overview</h2>
+
+<p>In this unit, you learned how vector-valued functions describe motion through three-dimensional space. You explored how to compute velocity, acceleration, speed, arc length, curvature, and how these ideas are applied to real-world motion.</p>
+
+<hr>
+
+<h2>Lesson 1 Review — Vector-Valued Functions</h2>
+
+<h3>Key Ideas</h3>
+
+<ul>
+
+<li>A vector-valued function has multiple component functions.</li>
+
+<li>r(t)=⟨x(t),y(t),z(t)⟩</li>
+
+<li>The parameter is usually time.</li>
+
+<li>Evaluating r(t) gives the object's position.</li>
+
+<li>The graph of a vector-valued function is called a space curve.</li>
+
+</ul>
+
+<h3>Quick Example</h3>
+
+<p>If</p>
+
+<p><strong>r(t)=⟨t²,3t,5⟩</strong></p>
+
+<p>find r(2).</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>⟨4,6,5⟩</p>
+
+<hr>
+
+<h2>Lesson 2 Review — Derivatives and Integrals</h2>
+
+<h3>Remember</h3>
+
+<ul>
+
+<li>Differentiate each component separately.</li>
+
+<li>Integrate each component separately.</li>
+
+<li>The derivative of position is velocity.</li>
+
+<li>The second derivative is acceleration.</li>
+
+</ul>
+
+<h3>Quick Example</h3>
+
+<p>r(t)=⟨t²,4t,sin(t)⟩</p>
+
+<p>Velocity:</p>
+
+<p><strong>v(t)=⟨2t,4,cos(t)⟩</strong></p>
+
+<p>Acceleration:</p>
+
+<p><strong>a(t)=⟨2,0,-sin(t)⟩</strong></p>
+
+<hr>
+
+<h2>Lesson 3 Review — Velocity, Speed, and Acceleration</h2>
+
+<h3>Important Formulas</h3>
+
+<ul>
+
+<li>v(t)=r'(t)</li>
+
+<li>a(t)=v'(t)=r''(t)</li>
+
+<li>Speed=|v(t)|</li>
+
+</ul>
+
+<h3>Example</h3>
+
+<p>v(t)=⟨3,4,0⟩</p>
+
+<p>Speed:</p>
+
+<p><strong>√(3²+4²)=5</strong></p>
+
+<hr>
+
+<h2>Lesson 4 Review — Arc Length</h2>
+
+<h3>Arc Length Formula</h3>
+
+<p><strong>s=∫|r'(t)|dt</strong></p>
+
+<p>The magnitude of the velocity vector is integrated over the interval.</p>
+
+<h3>Unit Tangent Vector</h3>
+
+<p><strong>T=v/|v|</strong></p>
+
+<p>The unit tangent vector has length 1 and points in the direction of motion.</p>
+
+<hr>
+
+<h2>Lesson 5 Review — Curvature</h2>
+
+<h3>Key Ideas</h3>
+
+<ul>
+
+<li>Curvature measures how sharply a curve bends.</li>
+
+<li>A straight line has curvature 0.</li>
+
+<li>A circle of radius R has curvature 1/R.</li>
+
+<li>The unit normal vector points toward the direction of turning.</li>
+
+</ul>
+
+<h3>Important Relationships</h3>
+
+<ul>
+
+<li>Tangent acceleration changes speed.</li>
+
+<li>Normal acceleration changes direction.</li>
+
+<li>a=aT+aN</li>
+
+</ul>
+
+<hr>
+
+<h2>Lesson 6 Review — Motion in Space</h2>
+
+<ul>
+
+<li>Position describes location.</li>
+
+<li>Velocity describes motion.</li>
+
+<li>Acceleration describes changes in velocity.</li>
+
+<li>Projectile motion uses constant downward acceleration.</li>
+
+<li>Circular motion has centripetal acceleration.</li>
+
+<li>Real-world applications include satellites, aircraft, rockets, and robotics.</li>
+
+</ul>
+
+<hr>
+
+<h2>Important Formulas to Know</h2>
+
+<table>
+
+<tr><th>Concept</th><th>Formula</th></tr>
+
+<tr><td>Velocity</td><td>v=r'</td></tr>
+
+<tr><td>Acceleration</td><td>a=r''</td></tr>
+
+<tr><td>Speed</td><td>|v|</td></tr>
+
+<tr><td>Arc Length</td><td>∫|r'|dt</td></tr>
+
+<tr><td>Unit Tangent</td><td>T=v/|v|</td></tr>
+
+<tr><td>Curvature</td><td>κ=|T'|/|r'|</td></tr>
+
+<tr><td>Radius of Curvature</td><td>ρ=1/κ</td></tr>
+
+<tr><td>Normal Acceleration</td><td>aN=κv²</td></tr>
+
+<tr><td>Centripetal Acceleration</td><td>v²/r</td></tr>
+
+</table>
+
+<hr>
+
+<h2>Mixed Review Questions</h2>
+
+`,
+
+        questions: [
+
+            {
+                q: "A vector-valued function describes:",
+                options: [
+                    "Motion in space",
+                    "Only straight lines",
+                    "Only circles",
+                    "Only scalar functions"
+                ],
+                answer: "Motion in space",
+                explanation: "Vector-valued functions describe positions in two or three dimensions."
+            },
+
+            {
+                q: "The derivative of the position vector is:",
+                options: [
+                    "Velocity",
+                    "Acceleration",
+                    "Speed",
+                    "Distance"
+                ],
+                answer: "Velocity",
+                explanation: "Velocity is the first derivative of position."
+            },
+
+            {
+                q: "The derivative of velocity is:",
+                options: [
+                    "Acceleration",
+                    "Speed",
+                    "Position",
+                    "Distance"
+                ],
+                answer: "Acceleration",
+                explanation: "Acceleration measures how velocity changes."
+            },
+
+            {
+                q: "Speed equals:",
+                options: [
+                    "The magnitude of velocity",
+                    "The derivative of acceleration",
+                    "The magnitude of position",
+                    "The unit tangent vector"
+                ],
+                answer: "The magnitude of velocity",
+                explanation: "Speed is |v|."
+            },
+
+            {
+                q: "A unit tangent vector has magnitude:",
+                options: [
+                    "1",
+                    "0",
+                    "2",
+                    "It depends on velocity"
+                ],
+                answer: "1",
+                explanation: "Every unit vector has length one."
+            },
+
+            {
+                q: "Arc length measures:",
+                options: [
+                    "The distance traveled along a curve",
+                    "The straight-line distance",
+                    "The acceleration",
+                    "The radius"
+                ],
+                answer: "The distance traveled along a curve",
+                explanation: "Arc length follows the path of the curve."
+            },
+
+            {
+                q: "The unit normal vector points:",
+                options: [
+                    "Toward the direction of turning",
+                    "Backward",
+                    "Along the position vector",
+                    "Straight upward"
+                ],
+                answer: "Toward the direction of turning",
+                explanation: "It indicates how the curve is changing direction."
+            },
+
+            {
+                q: "A straight line has curvature:",
+                options: [
+                    "0",
+                    "1",
+                    "Undefined",
+                    "Infinite"
+                ],
+                answer: "0",
+                explanation: "Straight lines never change direction."
+            },
+
+            {
+                q: "The curvature of a circle with radius R is:",
+                options: [
+                    "1/R",
+                    "R",
+                    "R²",
+                    "2πR"
+                ],
+                answer: "1/R",
+                explanation: "Curvature is the reciprocal of the radius."
+            },
+
+            {
+                q: "Projectile motion experiences constant acceleration due to:",
+                options: [
+                    "Gravity",
+                    "Velocity",
+                    "Wind",
+                    "Position"
+                ],
+                answer: "Gravity",
+                explanation: "Ignoring air resistance, gravity provides constant downward acceleration."
+            },
+            {
+                q: "An object moving with constant velocity has acceleration:",
+                options: [
+                    "0",
+                    "1",
+                    "Equal to its speed",
+                    "Undefined"
+                ],
+                answer: "0",
+                explanation: "If velocity does not change, its derivative is zero."
+            },
+
+            {
+                q: "Velocity is found by:",
+                options: [
+                    "Differentiating the position function",
+                    "Integrating acceleration twice",
+                    "Finding the magnitude of position",
+                    "Taking the dot product"
+                ],
+                answer: "Differentiating the position function",
+                explanation: "Velocity is the first derivative of position."
+            },
+
+            {
+                q: "Acceleration is found by:",
+                options: [
+                    "Differentiating velocity",
+                    "Integrating velocity",
+                    "Taking the magnitude of velocity",
+                    "Finding arc length"
+                ],
+                answer: "Differentiating velocity",
+                explanation: "Acceleration is the derivative of velocity."
+            },
+
+            {
+                q: "Speed is always:",
+                options: [
+                    "A scalar",
+                    "A vector",
+                    "A matrix",
+                    "A point"
+                ],
+                answer: "A scalar",
+                explanation: "Speed has magnitude only and no direction."
+            },
+
+            {
+                q: "The unit tangent vector describes:",
+                options: [
+                    "The direction of motion",
+                    "The speed of motion",
+                    "The position of the object",
+                    "The acceleration"
+                ],
+                answer: "The direction of motion",
+                explanation: "The unit tangent vector removes the speed and keeps only the direction."
+            },
+
+            {
+                q: "Which quantity measures how sharply a curve bends?",
+                options: [
+                    "Curvature",
+                    "Velocity",
+                    "Speed",
+                    "Arc length"
+                ],
+                answer: "Curvature",
+                explanation: "Curvature measures the rate of change of direction."
+            },
+
+            {
+                q: "Normal acceleration changes:",
+                options: [
+                    "The direction of motion",
+                    "The speed only",
+                    "The position only",
+                    "The mass"
+                ],
+                answer: "The direction of motion",
+                explanation: "Normal acceleration points toward the inside of the curve."
+            },
+
+            {
+                q: "Tangential acceleration changes:",
+                options: [
+                    "The speed",
+                    "The position",
+                    "The radius",
+                    "The curvature"
+                ],
+                answer: "The speed",
+                explanation: "Tangential acceleration changes how fast the object moves."
+            },
+
+            {
+                q: "An object moving in a perfect circle at constant speed has:",
+                options: [
+                    "Acceleration but no tangential acceleration",
+                    "No acceleration",
+                    "Only tangential acceleration",
+                    "Zero velocity"
+                ],
+                answer: "Acceleration but no tangential acceleration",
+                explanation: "Its direction changes continuously, producing normal (centripetal) acceleration."
+            },
+
+            {
+                q: "Which formula gives centripetal acceleration?",
+                options: [
+                    "v²/r",
+                    "r²/v",
+                    "v/r²",
+                    "2πr"
+                ],
+                answer: "v²/r",
+                explanation: "Centripetal acceleration equals the square of the speed divided by the radius."
+            },
+
+            {
+                q: "The magnitude of the velocity vector is called:",
+                options: [
+                    "Speed",
+                    "Acceleration",
+                    "Curvature",
+                    "Radius"
+                ],
+                answer: "Speed",
+                explanation: "Speed is the length of the velocity vector."
+            },
+
+            {
+                q: "The graph of a vector-valued function is called a:",
+                options: [
+                    "Space curve",
+                    "Line segment",
+                    "Plane",
+                    "Matrix"
+                ],
+                answer: "Space curve",
+                explanation: "A vector-valued function traces out a curve in two or three dimensions."
+            },
+
+            {
+                q: "If position is constant, velocity is:",
+                options: [
+                    "Zero",
+                    "Positive",
+                    "Negative",
+                    "Undefined"
+                ],
+                answer: "Zero",
+                explanation: "The derivative of a constant is zero."
+            },
+
+            {
+                q: "Which quantity is integrated to compute arc length?",
+                options: [
+                    "Speed",
+                    "Acceleration",
+                    "Position",
+                    "Curvature"
+                ],
+                answer: "Speed",
+                explanation: "Arc length is the integral of the magnitude of the velocity vector."
+            },
+
+            {
+                q: "The unit normal vector is always:",
+                options: [
+                    "Perpendicular to the unit tangent vector",
+                    "Parallel to the velocity vector",
+                    "Equal to the position vector",
+                    "Parallel to acceleration"
+                ],
+                answer: "Perpendicular to the unit tangent vector",
+                explanation: "The tangent and normal vectors form an orthogonal pair."
+            },
+
+            {
+                q: "The acceleration of projectile motion (ignoring air resistance) always points:",
+                options: [
+                    "Downward",
+                    "Upward",
+                    "In the direction of travel",
+                    "Horizontally"
+                ],
+                answer: "Downward",
+                explanation: "Gravity acts downward throughout the motion."
+            },
+
+            {
+                q: "Which of the following is NOT a vector quantity?",
+                options: [
+                    "Speed",
+                    "Velocity",
+                    "Acceleration",
+                    "Position"
+                ],
+                answer: "Speed",
+                explanation: "Speed is a scalar, while the others are vectors."
+            },
+
+            {
+                q: "If the curvature of a curve increases, the curve becomes:",
+                options: [
+                    "Sharper",
+                    "Straighter",
+                    "Longer",
+                    "Slower"
+                ],
+                answer: "Sharper",
+                explanation: "Greater curvature means the curve bends more tightly."
+            },
+
+            {
+                q: "Which field commonly uses vector-valued functions?",
+                options: [
+                    "Robotics",
+                    "Satellite navigation",
+                    "Computer graphics",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Vector-valued functions are fundamental in many areas of science and engineering."
+            },
+
+            {
+                q: "After completing this review, you should be prepared to:",
+                options: [
+                    "Take the Unit 2 Test",
+                    "Begin Algebra I",
+                    "Skip Calculus III",
+                    "Study Differential Equations"
+                ],
+                answer: "Take the Unit 2 Test",
+                explanation: "This review covers all major topics from Unit 2."
+            }
+
+        ]
+
+    }
+    ,
+
+    "calculus3-unit2-test": {
+
+        title: "Unit 2 Test",
+
+        subtitle: "Test your understanding of Vector-Valued Functions and Motion in Space.",
+
+        body: `
+
+<h2>Unit 2 Test</h2>
+
+<p>This test covers everything from Unit 2.</p>
+
+<p>Topics include:</p>
+
+<ul>
+
+<li>Vector-valued functions</li>
+
+<li>Derivatives and integrals</li>
+
+<li>Velocity</li>
+
+<li>Speed</li>
+
+<li>Acceleration</li>
+
+<li>Arc length</li>
+
+<li>Unit tangent vectors</li>
+
+<li>Curvature</li>
+
+<li>Unit normal vectors</li>
+
+<li>Motion in space</li>
+
+</ul>
+
+<p>Select the best answer for each question.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "Which of the following is a vector-valued function?",
+                options: [
+                    "r(t)=⟨t²,3t,sin(t)⟩",
+                    "f(x)=x²",
+                    "g(x)=sin(x)",
+                    "h(x)=5x+2"
+                ],
+                answer: "r(t)=⟨t²,3t,sin(t)⟩",
+                explanation: "A vector-valued function has multiple component functions."
+            },
+
+            {
+                q: "If r(t)=⟨t²,4t,3⟩, then r(2) equals:",
+                options: [
+                    "⟨4,8,3⟩",
+                    "⟨2,8,6⟩",
+                    "⟨8,4,3⟩",
+                    "⟨4,4,3⟩"
+                ],
+                answer: "⟨4,8,3⟩",
+                explanation: "Evaluate each component separately."
+            },
+
+            {
+                q: "The derivative of the position vector is called:",
+                options: [
+                    "Velocity",
+                    "Acceleration",
+                    "Speed",
+                    "Curvature"
+                ],
+                answer: "Velocity",
+                explanation: "Velocity is the first derivative of position."
+            },
+
+            {
+                q: "The second derivative of position is:",
+                options: [
+                    "Acceleration",
+                    "Speed",
+                    "Distance",
+                    "Curvature"
+                ],
+                answer: "Acceleration",
+                explanation: "Acceleration is the second derivative of the position vector."
+            },
+
+            {
+                q: "Differentiating a vector-valued function means:",
+                options: [
+                    "Differentiate each component separately",
+                    "Differentiate only the x-component",
+                    "Take the magnitude first",
+                    "Differentiate the vector as a whole"
+                ],
+                answer: "Differentiate each component separately",
+                explanation: "Each component function is differentiated independently."
+            },
+
+            {
+                q: "Integrating a vector-valued function means:",
+                options: [
+                    "Integrate each component separately",
+                    "Take the cross product",
+                    "Take the dot product",
+                    "Integrate only one component"
+                ],
+                answer: "Integrate each component separately",
+                explanation: "Each component is integrated individually."
+            },
+
+            {
+                q: "If v(t)=⟨3,4,0⟩, the speed is:",
+                options: [
+                    "5",
+                    "7",
+                    "25",
+                    "1"
+                ],
+                answer: "5",
+                explanation: "Speed is the magnitude of the velocity vector."
+            },
+
+            {
+                q: "Speed is:",
+                options: [
+                    "A scalar",
+                    "A vector",
+                    "A matrix",
+                    "A point"
+                ],
+                answer: "A scalar",
+                explanation: "Speed has magnitude but no direction."
+            },
+
+            {
+                q: "The graph of a vector-valued function is called a:",
+                options: [
+                    "Space curve",
+                    "Plane",
+                    "Matrix",
+                    "Surface"
+                ],
+                answer: "Space curve",
+                explanation: "The graph traced by a vector-valued function is called a space curve."
+            },
+
+            {
+                q: "If position remains constant, velocity is:",
+                options: [
+                    "Zero",
+                    "Positive",
+                    "Negative",
+                    "Undefined"
+                ],
+                answer: "Zero",
+                explanation: "The derivative of a constant is zero."
+            },
+            {
+                q: "The magnitude of the velocity vector is called:",
+                options: [
+                    "Speed",
+                    "Acceleration",
+                    "Curvature",
+                    "Arc length"
+                ],
+                answer: "Speed",
+                explanation: "Speed is the length (magnitude) of the velocity vector."
+            },
+
+            {
+                q: "Arc length measures:",
+                options: [
+                    "The distance traveled along a curve",
+                    "The straight-line distance",
+                    "The acceleration",
+                    "The displacement only"
+                ],
+                answer: "The distance traveled along a curve",
+                explanation: "Arc length follows the actual path of the curve."
+            },
+
+            {
+                q: "The unit tangent vector has magnitude:",
+                options: [
+                    "1",
+                    "0",
+                    "2",
+                    "It depends on the curve"
+                ],
+                answer: "1",
+                explanation: "A unit vector always has length 1."
+            },
+
+            {
+                q: "The unit tangent vector describes:",
+                options: [
+                    "The direction of motion",
+                    "The speed of motion",
+                    "The acceleration",
+                    "The position"
+                ],
+                answer: "The direction of motion",
+                explanation: "The unit tangent vector points in the direction the object is moving."
+            },
+
+            {
+                q: "Curvature measures:",
+                options: [
+                    "How sharply a curve bends",
+                    "The total distance traveled",
+                    "The object's speed",
+                    "The object's mass"
+                ],
+                answer: "How sharply a curve bends",
+                explanation: "Curvature describes how rapidly a curve changes direction."
+            },
+
+            {
+                q: "The curvature of a straight line is:",
+                options: [
+                    "0",
+                    "1",
+                    "Undefined",
+                    "Infinite"
+                ],
+                answer: "0",
+                explanation: "A straight line never changes direction."
+            },
+
+            {
+                q: "The curvature of a circle with radius R is:",
+                options: [
+                    "1/R",
+                    "R",
+                    "R²",
+                    "2πR"
+                ],
+                answer: "1/R",
+                explanation: "Curvature is the reciprocal of the radius."
+            },
+
+            {
+                q: "The unit normal vector points:",
+                options: [
+                    "In the direction the curve is turning",
+                    "Backward along the curve",
+                    "Straight upward",
+                    "Toward the origin"
+                ],
+                answer: "In the direction the curve is turning",
+                explanation: "The unit normal vector indicates the direction of the curve's bend."
+            },
+
+            {
+                q: "Tangential acceleration changes:",
+                options: [
+                    "The speed",
+                    "The direction only",
+                    "The position only",
+                    "The curvature"
+                ],
+                answer: "The speed",
+                explanation: "Tangential acceleration increases or decreases the object's speed."
+            },
+
+            {
+                q: "Normal acceleration changes:",
+                options: [
+                    "The direction of motion",
+                    "The mass",
+                    "The position only",
+                    "The speed only"
+                ],
+                answer: "The direction of motion",
+                explanation: "Normal acceleration changes the direction of the velocity vector."
+            },
+            {
+                q: "Ignoring air resistance, the acceleration of a projectile is:",
+                options: [
+                    "⟨0,0,-9.8⟩",
+                    "⟨9.8,0,0⟩",
+                    "⟨0,9.8,0⟩",
+                    "⟨0,0,0⟩"
+                ],
+                answer: "⟨0,0,-9.8⟩",
+                explanation: "Gravity produces a constant downward acceleration."
+            },
+
+            {
+                q: "An object moving in a circle at constant speed has:",
+                options: [
+                    "Normal acceleration but zero tangential acceleration",
+                    "No acceleration",
+                    "Only tangential acceleration",
+                    "Zero velocity"
+                ],
+                answer: "Normal acceleration but zero tangential acceleration",
+                explanation: "Its speed stays constant, but its direction changes continuously."
+            },
+
+            {
+                q: "The formula for centripetal acceleration is:",
+                options: [
+                    "v²/r",
+                    "r²/v",
+                    "2πr",
+                    "rv"
+                ],
+                answer: "v²/r",
+                explanation: "Centripetal acceleration equals the square of the speed divided by the radius."
+            },
+
+            {
+                q: "Which of the following is a real-world application of vector-valued functions?",
+                options: [
+                    "Satellite motion",
+                    "Robot navigation",
+                    "Aircraft flight paths",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Vector-valued functions are widely used in engineering, physics, robotics, aerospace, and computer graphics."
+            },
+
+            {
+                q: "Which statement best summarizes Unit 2?",
+                options: [
+                    "Vector-valued functions describe motion in space using position, velocity, acceleration, and curvature.",
+                    "Calculus III studies only single-variable functions.",
+                    "Curvature measures the area under a curve.",
+                    "Velocity and speed are always the same quantity."
+                ],
+                answer: "Vector-valued functions describe motion in space using position, velocity, acceleration, and curvature.",
+                explanation: "This unit introduced the mathematics used to model and analyze motion in two and three dimensions."
+            }
+
+        ]
+
+    },
+    "calculus3-unit3-lesson1": {
+
+        title: "Functions of Several Variables",
+
+        subtitle: "Learn how functions can depend on two or more independent variables.",
+
+        body: `
+
+<h2>Functions of Several Variables</h2>
+
+<p>In Calculus I and II, you studied functions with a single independent variable, such as <strong>f(x)</strong>. In many real-world situations, however, a quantity depends on two, three, or even more variables. These are called <strong>functions of several variables</strong> and form the foundation of multivariable calculus.</p>
+
+<h3>What is a Function of Several Variables?</h3>
+
+<p>A function of several variables assigns one output value to every valid combination of two or more input variables.</p>
+
+<p>Examples include:</p>
+
+<ul>
+<li>Temperature at different locations on Earth</li>
+<li>Air pressure depending on latitude, longitude, and altitude</li>
+<li>The volume of a box depending on its length, width, and height</li>
+<li>The profit of a business depending on price and advertising budget</li>
+</ul>
+
+<p>Examples of multivariable functions include:</p>
+
+<ul>
+<li>f(x,y)=x²+y²</li>
+<li>f(x,y)=xy+3x−2y</li>
+<li>f(x,y,z)=x²+y²+z²</li>
+<li>f(x,y,z)=xyz</li>
+</ul>
+
+<p>The variables x, y, and z are called the <strong>independent variables</strong>. The value of the function is the <strong>dependent variable</strong>.</p>
+
+<h3>Evaluating Functions</h3>
+
+<p>Evaluating a multivariable function works the same way as evaluating a single-variable function. Simply substitute the given values into the formula.</p>
+
+<p><strong>Example 1</strong></p>
+
+<p>If</p>
+
+<p>f(x,y)=x²+y²</p>
+
+<p>find f(2,3).</p>
+
+<p>Substitute the values:</p>
+
+<p>2²+3²=4+9=13</p>
+
+<p>Therefore,</p>
+
+<p><strong>f(2,3)=13</strong></p>
+
+<p><strong>Example 2</strong></p>
+
+<p>If</p>
+
+<p>g(x,y,z)=xyz</p>
+
+<p>find g(2,3,4).</p>
+
+<p>Multiply the three variables:</p>
+
+<p>2×3×4=24</p>
+
+<p>Therefore,</p>
+
+<p><strong>g(2,3,4)=24</strong></p>
+
+<h3>Domain of a Function</h3>
+
+<p>The <strong>domain</strong> of a multivariable function is the set of every input for which the function is defined.</p>
+
+<p>Some functions have no restrictions.</p>
+
+<p>Example:</p>
+
+<p>f(x,y)=x²+y²</p>
+
+<p>Every pair (x,y) works, so the domain is all real numbers.</p>
+
+<p>Other functions have restrictions.</p>
+
+<p>Example:</p>
+
+<p>f(x,y)=√(x−y)</p>
+
+<p>The quantity inside the square root must be nonnegative.</p>
+
+<p>Therefore,</p>
+
+<p>x−y≥0</p>
+
+<p>or</p>
+
+<p>x≥y</p>
+
+<p>This inequality describes the domain.</p>
+
+<h3>Functions of Three Variables</h3>
+
+<p>Many physical problems involve three independent variables.</p>
+
+<p>For example, pressure inside the atmosphere depends on:</p>
+
+<ul>
+<li>x-coordinate</li>
+<li>y-coordinate</li>
+<li>z-coordinate</li>
+</ul>
+
+<p>A common example is</p>
+
+<p>f(x,y,z)=x²+y²+z²</p>
+
+<p>This function assigns a number to every point in three-dimensional space.</p>
+
+<h3>Graphs of Functions</h3>
+
+<p>A function of two variables produces a surface instead of a curve.</p>
+
+<p>For example,</p>
+
+<p>z=x²+y²</p>
+
+<p>forms a bowl-shaped surface called a <strong>paraboloid</strong>.</p>
+
+<p>Unlike single-variable calculus, where graphs are curves in the xy-plane, multivariable calculus studies surfaces in three-dimensional space.</p>
+
+<h3>Level Curves</h3>
+
+<p>Instead of graphing the entire surface, we often examine <strong>level curves</strong>.</p>
+
+<p>A level curve is obtained by setting the function equal to a constant.</p>
+
+<p>Example:</p>
+
+<p>x²+y²=4</p>
+
+<p>This represents a circle of radius 2.</p>
+
+<p>Different constants produce different level curves that help visualize the surface.</p>
+
+<h3>Applications</h3>
+
+<p>Functions of several variables appear throughout science and engineering.</p>
+
+<ul>
+<li>Weather forecasting</li>
+<li>Economics</li>
+<li>Machine learning</li>
+<li>Engineering design</li>
+<li>Computer graphics</li>
+<li>Fluid dynamics</li>
+<li>Physics</li>
+<li>Medical imaging</li>
+</ul>
+
+<p>Nearly every modern scientific field uses multivariable functions to model real-world systems.</p>
+
+`,
+        questions: [
+
+            {
+                q: "A function of several variables has:",
+                options: [
+                    "Two or more independent variables",
+                    "Exactly one independent variable",
+                    "No variables",
+                    "Only dependent variables"
+                ],
+                answer: "Two or more independent variables",
+                explanation: "Functions of several variables depend on two or more independent variables."
+            },
+
+            {
+                q: "Which of the following is a function of two variables?",
+                options: [
+                    "f(x,y)=x²+y²",
+                    "f(x)=x²",
+                    "g(t)=sin(t)",
+                    "h(x)=5x+2"
+                ],
+                answer: "f(x,y)=x²+y²",
+                explanation: "The function depends on both x and y."
+            },
+
+            {
+                q: "Evaluate f(x,y)=x²+y² at (2,3).",
+                options: [
+                    "13",
+                    "12",
+                    "9",
+                    "25"
+                ],
+                answer: "13",
+                explanation: "2²+3²=4+9=13."
+            },
+
+            {
+                q: "Evaluate g(x,y,z)=xyz at (2,3,4).",
+                options: [
+                    "24",
+                    "12",
+                    "18",
+                    "9"
+                ],
+                answer: "24",
+                explanation: "Multiply the three variables: 2×3×4=24."
+            },
+
+            {
+                q: "The domain of a multivariable function is:",
+                options: [
+                    "The set of all allowable input values",
+                    "The set of all output values",
+                    "The graph of the function",
+                    "The derivative of the function"
+                ],
+                answer: "The set of all allowable input values",
+                explanation: "The domain contains every input where the function is defined."
+            },
+
+            {
+                q: "Which function has no domain restrictions?",
+                options: [
+                    "f(x,y)=x²+y²",
+                    "f(x,y)=√(x−y)",
+                    "f(x,y)=1/(x−y)",
+                    "f(x,y)=ln(x−y)"
+                ],
+                answer: "f(x,y)=x²+y²",
+                explanation: "Squares are defined for every real number."
+            },
+
+            {
+                q: "For f(x,y)=√(x−y), which condition must be true?",
+                options: [
+                    "x≥y",
+                    "x≤y",
+                    "x=y²",
+                    "x+y≥0"
+                ],
+                answer: "x≥y",
+                explanation: "The expression inside a square root must be greater than or equal to zero."
+            },
+
+            {
+                q: "The graph of a function of two variables is generally a:",
+                options: [
+                    "Surface",
+                    "Line",
+                    "Circle",
+                    "Vector"
+                ],
+                answer: "Surface",
+                explanation: "Functions of two variables typically produce surfaces in three-dimensional space."
+            },
+
+            {
+                q: "A level curve is obtained by:",
+                options: [
+                    "Setting the function equal to a constant",
+                    "Taking the derivative",
+                    "Finding the domain",
+                    "Integrating the function"
+                ],
+                answer: "Setting the function equal to a constant",
+                explanation: "Level curves are created by fixing the function value."
+            },
+
+            {
+                q: "Which field commonly uses functions of several variables?",
+                options: [
+                    "Weather forecasting",
+                    "Engineering",
+                    "Machine learning",
+                    "All of the above"
+                ],
+                answer: "All of the above",
+                explanation: "Functions of several variables are fundamental in science, engineering, economics, and many other fields."
+            }
+
+        ]
+
+    },
+    "calculus3-unit3-lesson2": {
+
+        title: "Limits and Continuity",
+
+        subtitle: "Learn how limits and continuity extend to functions of several variables.",
+
+        body: `
+
+<h2>Limits and Continuity</h2>
+
+<p>In Calculus I, limits described how a function behaved as the input approached a particular value from the left and right. In multivariable calculus, the same idea applies, but now a point can be approached from <strong>infinitely many directions</strong> instead of just two.</p>
+
+<p>This makes limits of functions of several variables much more interesting—and sometimes much more difficult—to evaluate.</p>
+
+<h3>Limits of Functions of Two Variables</h3>
+
+<p>Suppose we have a function</p>
+
+<p>f(x,y)</p>
+
+<p>We write</p>
+
+<p>lim<sub>(x,y)→(a,b)</sub> f(x,y)=L</p>
+
+<p>if the function values become closer and closer to L as the point (x,y) approaches (a,b) from every possible direction.</p>
+
+<p>Unlike single-variable calculus, approaching from only one or two directions is not enough. Since there are infinitely many paths to a point, the limit must be the same along every path.</p>
+
+<h3>Example 1</h3>
+
+<p>Consider</p>
+
+<p>f(x,y)=x+y</p>
+
+<p>Find the limit as (x,y) approaches (2,3).</p>
+
+<p>Because this is a polynomial, we simply substitute the values.</p>
+
+<p>2+3=5</p>
+
+<p>Therefore,</p>
+
+<p><strong>lim<sub>(x,y)→(2,3)</sub>(x+y)=5</strong></p>
+
+<h3>Direct Substitution</h3>
+
+<p>Whenever a multivariable function is continuous, limits are evaluated by direct substitution.</p>
+
+<p>This works for:</p>
+
+<ul>
+
+<li>Polynomials</li>
+
+<li>Exponential functions</li>
+
+<li>Trigonometric functions</li>
+
+<li>Most rational functions where the denominator is not zero</li>
+
+</ul>
+
+<h3>Different Paths</h3>
+
+<p>To determine whether a limit exists, mathematicians often compare the function along different paths.</p>
+
+<p>If two different paths produce different answers, the limit does not exist.</p>
+
+<p>Example:</p>
+
+<p>Approach a point along</p>
+
+<ul>
+
+<li>the x-axis</li>
+
+<li>the y-axis</li>
+
+<li>the line y=x</li>
+
+<li>the parabola y=x²</li>
+
+</ul>
+
+<p>If the answers differ, the limit cannot exist.</p>
+
+<h3>Example 2</h3>
+
+<p>Suppose a function approaches 3 along the x-axis but approaches 5 along the line y=x.</p>
+
+<p>Since different paths produce different values, the limit does not exist.</p>
+
+<h3>When Limits Do Not Exist</h3>
+
+<p>A multivariable limit fails to exist if:</p>
+
+<ul>
+
+<li>Different paths give different answers.</li>
+
+<li>The function grows without bound.</li>
+
+<li>The function oscillates without approaching one value.</li>
+
+</ul>
+
+<h3>Continuity</h3>
+
+<p>A function is <strong>continuous</strong> at a point if:</p>
+
+<ol>
+
+<li>The function exists at that point.</li>
+
+<li>The limit exists.</li>
+
+<li>The limit equals the function value.</li>
+
+</ol>
+
+<p>This definition is exactly the same as in single-variable calculus.</p>
+
+<h3>Continuous Functions</h3>
+
+<p>Many familiar functions are continuous wherever they are defined.</p>
+
+<ul>
+
+<li>Polynomials</li>
+
+<li>Exponential functions</li>
+
+<li>Trigonometric functions</li>
+
+<li>Logarithmic functions (on their domains)</li>
+
+<li>Square root functions (on their domains)</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<p>Limits and continuity are essential because they allow us to define derivatives, gradients, tangent planes, optimization methods, and multiple integrals later in Calculus III.</p>
+
+<p>Without continuity, many of the techniques developed throughout multivariable calculus would not work.</p>
+
+`,
+        questions: [
+
+            {
+                q: "A multivariable limit exists only if:",
+                options: [
+                    "The function approaches the same value along every path",
+                    "The function is a polynomial",
+                    "The point is the origin",
+                    "The function is continuous everywhere"
+                ],
+                answer: "The function approaches the same value along every path",
+                explanation: "Unlike single-variable limits, multivariable limits must agree along every possible path."
+            },
+
+            {
+                q: "In multivariable calculus, a point can be approached from:",
+                options: [
+                    "Infinitely many directions",
+                    "Only two directions",
+                    "Only four directions",
+                    "Exactly one direction"
+                ],
+                answer: "Infinitely many directions",
+                explanation: "There are infinitely many possible paths leading to a point in two or more dimensions."
+            },
+
+            {
+                q: "Evaluate lim(x,y)→(2,3) (x+y).",
+                options: [
+                    "5",
+                    "6",
+                    "1",
+                    "Does not exist"
+                ],
+                answer: "5",
+                explanation: "Since x+y is a polynomial, substitute directly: 2+3=5."
+            },
+
+            {
+                q: "Direct substitution works whenever:",
+                options: [
+                    "The function is continuous at the point",
+                    "The variables are positive",
+                    "x=y",
+                    "The denominator equals zero"
+                ],
+                answer: "The function is continuous at the point",
+                explanation: "Continuous functions allow limits to be evaluated by direct substitution."
+            },
+
+            {
+                q: "If two different paths give different limit values, then:",
+                options: [
+                    "The limit does not exist",
+                    "The limit equals zero",
+                    "The function is continuous",
+                    "The limit equals the average of the two values"
+                ],
+                answer: "The limit does not exist",
+                explanation: "A multivariable limit must have the same value along every possible path."
+            },
+
+            {
+                q: "Which of the following is commonly used to test whether a limit exists?",
+                options: [
+                    "Approaching along different paths",
+                    "Finding the derivative first",
+                    "Integrating the function",
+                    "Using the quadratic formula"
+                ],
+                answer: "Approaching along different paths",
+                explanation: "Comparing different paths is a common way to determine whether a multivariable limit exists."
+            },
+
+            {
+                q: "A function is continuous at a point if:",
+                options: [
+                    "The limit exists, the function exists, and both are equal",
+                    "The derivative equals zero",
+                    "The function is positive",
+                    "The graph passes through the origin"
+                ],
+                answer: "The limit exists, the function exists, and both are equal",
+                explanation: "These are the three requirements for continuity."
+            },
+
+            {
+                q: "Which of the following functions is continuous everywhere?",
+                options: [
+                    "f(x,y)=x²+y²",
+                    "f(x,y)=1/(x−y)",
+                    "f(x,y)=√(x−y)",
+                    "f(x,y)=ln(x−y)"
+                ],
+                answer: "f(x,y)=x²+y²",
+                explanation: "Polynomials are continuous for all real values."
+            },
+
+            {
+                q: "A rational function is continuous wherever:",
+                options: [
+                    "Its denominator is not zero",
+                    "The numerator is zero",
+                    "x=y",
+                    "The variables are positive"
+                ],
+                answer: "Its denominator is not zero",
+                explanation: "Division by zero is undefined, so rational functions are continuous only where the denominator is nonzero."
+            },
+
+            {
+                q: "Why are limits and continuity important in Calculus III?",
+                options: [
+                    "They provide the foundation for derivatives, tangent planes, gradients, and optimization",
+                    "They eliminate the need for derivatives",
+                    "They are only used for graphing",
+                    "They apply only to geometry"
+                ],
+                answer: "They provide the foundation for derivatives, tangent planes, gradients, and optimization",
+                explanation: "Much of multivariable calculus relies on the concepts of limits and continuity."
+            }
+
+        ]
+
+    },
+
+    "calculus3-unit3-lesson3": {
+
+        title: "Partial Derivatives",
+
+        subtitle: "Learn how to differentiate functions of several variables one variable at a time.",
+
+        body: `
+
+<h2>Partial Derivatives</h2>
+
+<p>In Calculus I, every function depended on a single variable, so taking a derivative was straightforward. In multivariable calculus, functions often depend on two or more variables. A <strong>partial derivative</strong> measures how a function changes with respect to one variable while keeping all other variables constant.</p>
+
+<h3>What is a Partial Derivative?</h3>
+
+<p>Suppose we have the function</p>
+
+<p>f(x,y)=x²+3xy+y²</p>
+
+<p>To find the partial derivative with respect to x, we treat y as a constant.</p>
+
+<p>The notation is</p>
+
+<p>∂f/∂x or f<sub>x</sub></p>
+
+<p>Differentiate each term:</p>
+
+<ul>
+
+<li>The derivative of x² is 2x.</li>
+
+<li>The derivative of 3xy is 3y because y is treated as a constant.</li>
+
+<li>The derivative of y² is 0 because it is constant with respect to x.</li>
+
+</ul>
+
+<p>Therefore,</p>
+
+<p><strong>∂f/∂x = 2x + 3y</strong></p>
+
+<h3>Partial Derivative with Respect to y</h3>
+
+<p>Now differentiate the same function with respect to y.</p>
+
+<p>This time x is treated as a constant.</p>
+
+<ul>
+
+<li>The derivative of x² is 0.</li>
+
+<li>The derivative of 3xy is 3x.</li>
+
+<li>The derivative of y² is 2y.</li>
+
+</ul>
+
+<p>Therefore,</p>
+
+<p><strong>∂f/∂y = 3x + 2y</strong></p>
+
+<h3>Example</h3>
+
+<p>Find both partial derivatives of</p>
+
+<p>f(x,y)=4x³−2xy+5y²</p>
+
+<p>With respect to x:</p>
+
+<p>∂f/∂x = 12x²−2y</p>
+
+<p>With respect to y:</p>
+
+<p>∂f/∂y = −2x+10y</p>
+
+<h3>Higher-Order Partial Derivatives</h3>
+
+<p>Just as ordinary derivatives can be differentiated again, partial derivatives can also be differentiated multiple times.</p>
+
+<p>For example,</p>
+
+<p>f(x,y)=x²+3xy+y²</p>
+
+<p>First partial derivative:</p>
+
+<p>∂f/∂x = 2x+3y</p>
+
+<p>Differentiate again with respect to x:</p>
+
+<p><strong>∂²f/∂x² = 2</strong></p>
+
+<p>This is called a <strong>second-order partial derivative</strong>.</p>
+
+<h3>Mixed Partial Derivatives</h3>
+
+<p>You can also differentiate with respect to different variables.</p>
+
+<p>For example:</p>
+
+<p>First differentiate with respect to x:</p>
+
+<p>∂f/∂x = 2x+3y</p>
+
+<p>Then differentiate that result with respect to y:</p>
+
+<p><strong>∂²f/∂y∂x = 3</strong></p>
+
+<p>Or reverse the order:</p>
+
+<p>First differentiate with respect to y:</p>
+
+<p>∂f/∂y = 3x+2y</p>
+
+<p>Then differentiate with respect to x:</p>
+
+<p><strong>∂²f/∂x∂y = 3</strong></p>
+
+<p>Notice both mixed partial derivatives are equal.</p>
+
+<h3>Clairaut's Theorem</h3>
+
+<p>For most functions encountered in calculus, the mixed partial derivatives are equal.</p>
+
+<p>That is,</p>
+
+<p>∂²f/∂x∂y = ∂²f/∂y∂x</p>
+
+<p>This important result is known as <strong>Clairaut's Theorem</strong> (also called Schwarz's Theorem).</p>
+
+<p>The theorem applies whenever the second-order partial derivatives are continuous.</p>
+
+<h3>Physical Interpretation</h3>
+
+<p>Partial derivatives describe how a quantity changes when only one variable changes.</p>
+
+<p>Examples include:</p>
+
+<ul>
+
+<li>Temperature changing with east-west movement while north-south position remains fixed.</li>
+
+<li>Profit changing as production increases while advertising stays constant.</li>
+
+<li>Pressure changing with altitude while latitude and longitude remain fixed.</li>
+
+</ul>
+
+<p>Because many real-world systems depend on multiple variables, partial derivatives are fundamental tools in engineering, economics, physics, biology, computer science, and machine learning.</p>
+
+`,
+        questions: [
+
+            {
+                q: "A partial derivative measures how a function changes with respect to:",
+                options: [
+                    "One variable while keeping the others constant",
+                    "All variables changing together",
+                    "The output only",
+                    "The graph only"
+                ],
+                answer: "One variable while keeping the others constant",
+                explanation: "When taking a partial derivative, one variable changes while all remaining variables are treated as constants."
+            },
+
+            {
+                q: "When finding ∂f/∂x, the variable y is treated as:",
+                options: [
+                    "A constant",
+                    "Another derivative",
+                    "Zero",
+                    "A function of x"
+                ],
+                answer: "A constant",
+                explanation: "To compute ∂f/∂x, every variable except x is considered constant."
+            },
+
+            {
+                q: "If f(x,y)=x²+3xy+y², what is ∂f/∂x?",
+                options: [
+                    "2x+3y",
+                    "3x+2y",
+                    "2x+y²",
+                    "x²+3y"
+                ],
+                answer: "2x+3y",
+                explanation: "Differentiate each term with respect to x while treating y as a constant."
+            },
+
+            {
+                q: "If f(x,y)=x²+3xy+y², what is ∂f/∂y?",
+                options: [
+                    "3x+2y",
+                    "2x+3y",
+                    "2y",
+                    "3y"
+                ],
+                answer: "3x+2y",
+                explanation: "Treat x as a constant and differentiate each term with respect to y."
+            },
+
+            {
+                q: "Find ∂f/∂x if f(x,y)=4x³−2xy+5y².",
+                options: [
+                    "12x²−2y",
+                    "12x²+10y",
+                    "4x²−2y",
+                    "12x²−2x"
+                ],
+                answer: "12x²−2y",
+                explanation: "Differentiate each term with respect to x while treating y as a constant."
+            },
+
+            {
+                q: "Find ∂f/∂y if f(x,y)=4x³−2xy+5y².",
+                options: [
+                    "−2x+10y",
+                    "12x²−2y",
+                    "10y",
+                    "−2y+10x"
+                ],
+                answer: "−2x+10y",
+                explanation: "Treat x as a constant while differentiating with respect to y."
+            },
+
+            {
+                q: "A second-order partial derivative is obtained by:",
+                options: [
+                    "Taking a partial derivative twice",
+                    "Integrating twice",
+                    "Finding two functions",
+                    "Setting the derivative equal to zero"
+                ],
+                answer: "Taking a partial derivative twice",
+                explanation: "Higher-order partial derivatives are found by differentiating a partial derivative again."
+            },
+
+            {
+                q: "A mixed partial derivative is found by:",
+                options: [
+                    "Differentiating with respect to different variables",
+                    "Adding two partial derivatives",
+                    "Multiplying two derivatives",
+                    "Integrating the function"
+                ],
+                answer: "Differentiating with respect to different variables",
+                explanation: "Mixed partial derivatives involve differentiating with respect to one variable and then another."
+            },
+
+            {
+                q: "According to Clairaut's Theorem, if the second-order partial derivatives are continuous, then:",
+                options: [
+                    "∂²f/∂x∂y = ∂²f/∂y∂x",
+                    "∂f/∂x = ∂f/∂y",
+                    "Every derivative equals zero",
+                    "The function is constant"
+                ],
+                answer: "∂²f/∂x∂y = ∂²f/∂y∂x",
+                explanation: "Clairaut's Theorem states that the mixed partial derivatives are equal when they are continuous."
+            },
+
+            {
+                q: "Partial derivatives are commonly used in:",
+                options: [
+                    "Engineering, physics, economics, and machine learning",
+                    "Only geometry",
+                    "Only algebra",
+                    "Only statistics"
+                ],
+                answer: "Engineering, physics, economics, and machine learning",
+                explanation: "Partial derivatives are fundamental tools in many scientific and engineering disciplines."
+            }
+
+        ]
+
+    },
+    "calculus3-unit3-lesson4": {
+
+        title: "The Chain Rule and Directional Derivatives",
+
+        subtitle: "Learn how to differentiate composite multivariable functions and measure rates of change in any direction.",
+
+        body: `
+
+<h2>The Chain Rule and Directional Derivatives</h2>
+
+<p>In Calculus I, the <strong>Chain Rule</strong> allowed us to differentiate composite functions. In multivariable calculus, the Chain Rule becomes more powerful because variables often depend on several other variables.</p>
+
+<p>For example, temperature may depend on a location (x,y), while the location itself depends on time. The multivariable Chain Rule connects all of these rates of change.</p>
+
+<h3>The Multivariable Chain Rule</h3>
+
+<p>Suppose</p>
+
+<p>z=f(x,y)</p>
+
+<p>where both x and y depend on t.</p>
+
+<p>That is,</p>
+
+<p>x=x(t)</p>
+
+<p>y=y(t)</p>
+
+<p>The derivative of z with respect to t is found by adding the contributions from both variables.</p>
+
+<p>The Chain Rule tells us that the total rate of change equals the sum of the partial derivative with respect to x multiplied by dx/dt and the partial derivative with respect to y multiplied by dy/dt.</p>
+
+<h3>Example 1</h3>
+
+<p>Suppose</p>
+
+<p>z=x²+y²</p>
+
+<p>where</p>
+
+<p>x=t</p>
+
+<p>y=t²</p>
+
+<p>First compute the partial derivatives.</p>
+
+<ul>
+
+<li>∂z/∂x = 2x</li>
+
+<li>∂z/∂y = 2y</li>
+
+</ul>
+
+<p>Now compute</p>
+
+<ul>
+
+<li>dx/dt = 1</li>
+
+<li>dy/dt = 2t</li>
+
+</ul>
+
+<p>Substituting these values into the Chain Rule gives the rate of change of z with respect to time.</p>
+
+<h3>Directional Derivatives</h3>
+
+<p>A partial derivative measures the rate of change along one coordinate direction, such as the x-axis or y-axis.</p>
+
+<p>Sometimes we want the rate of change in an arbitrary direction.</p>
+
+<p>This is called the <strong>directional derivative</strong>.</p>
+
+<p>The direction must be specified using a <strong>unit vector</strong>.</p>
+
+<h3>Unit Vectors</h3>
+
+<p>A unit vector has magnitude 1.</p>
+
+<p>For example,</p>
+
+<ul>
+
+<li>⟨1,0⟩ points along the positive x-axis.</li>
+
+<li>⟨0,1⟩ points along the positive y-axis.</li>
+
+<li>⟨1/√2,1/√2⟩ points halfway between the x-axis and y-axis.</li>
+
+</ul>
+
+<p>Using unit vectors allows directional derivatives to measure change per unit distance.</p>
+
+<h3>The Gradient Vector</h3>
+
+<p>The gradient vector combines all first-order partial derivatives into a single vector.</p>
+
+<p>For a function of two variables, the gradient is</p>
+
+<p>∇f = ⟨fx, fy⟩</p>
+
+<p>The gradient points in the direction of greatest increase of the function.</p>
+
+<p>It also plays an important role in computing directional derivatives.</p>
+
+<h3>Computing a Directional Derivative</h3>
+
+<p>The directional derivative is found by taking the dot product of the gradient vector with a unit direction vector.</p>
+
+<p>This gives the rate of change of the function as you move in the chosen direction.</p>
+
+<h3>Example 2</h3>
+
+<p>Suppose</p>
+
+<p>f(x,y)=x²+y²</p>
+
+<p>At the point (1,2), the gradient vector is</p>
+
+<p>⟨2,4⟩</p>
+
+<p>If we move along the positive x-axis, represented by the unit vector ⟨1,0⟩, the directional derivative equals the dot product:</p>
+
+<p>⟨2,4⟩·⟨1,0⟩ = 2</p>
+
+<p>This means the function is increasing at a rate of 2 units per unit distance in that direction.</p>
+
+<h3>Applications</h3>
+
+<p>The Chain Rule and directional derivatives have many practical applications.</p>
+
+<ul>
+
+<li>Heat transfer</li>
+
+<li>Weather prediction</li>
+
+<li>Fluid flow</li>
+
+<li>Machine learning</li>
+
+<li>Optimization</li>
+
+<li>Economics</li>
+
+<li>Robotics</li>
+
+<li>Engineering design</li>
+
+</ul>
+
+<p>These concepts help scientists and engineers understand how quantities change when several variables are changing simultaneously and how functions behave in any direction through space.</p>
+
+`,
+        questions: [
+
+            {
+                q: "The multivariable Chain Rule is used when:",
+                options: [
+                    "Variables depend on other variables",
+                    "The function has only one variable",
+                    "The derivative equals zero",
+                    "The function is constant"
+                ],
+                answer: "Variables depend on other variables",
+                explanation: "The multivariable Chain Rule computes the rate of change when variables are functions of other variables."
+            },
+
+            {
+                q: "If z=f(x,y) and both x and y depend on t, then dz/dt depends on:",
+                options: [
+                    "The contributions from both x and y",
+                    "Only x",
+                    "Only y",
+                    "Neither x nor y"
+                ],
+                answer: "The contributions from both x and y",
+                explanation: "Both variables affect the overall rate of change of z with respect to t."
+            },
+
+            {
+                q: "A directional derivative measures:",
+                options: [
+                    "The rate of change in a specified direction",
+                    "The area under a curve",
+                    "The average value of a function",
+                    "The slope of a tangent line only"
+                ],
+                answer: "The rate of change in a specified direction",
+                explanation: "Directional derivatives extend partial derivatives to any direction."
+            },
+
+            {
+                q: "A partial derivative measures change along:",
+                options: [
+                    "One coordinate direction",
+                    "Every direction simultaneously",
+                    "A curved path",
+                    "No direction"
+                ],
+                answer: "One coordinate direction",
+                explanation: "Partial derivatives measure change while varying only one variable."
+            },
+
+            {
+                q: "A direction used in a directional derivative should be represented by:",
+                options: [
+                    "A unit vector",
+                    "Any vector",
+                    "A matrix",
+                    "A scalar"
+                ],
+                answer: "A unit vector",
+                explanation: "Using a unit vector ensures the rate of change is measured per unit distance."
+            },
+
+            {
+                q: "A unit vector has magnitude:",
+                options: [
+                    "1",
+                    "0",
+                    "2",
+                    "It depends on the function"
+                ],
+                answer: "1",
+                explanation: "By definition, every unit vector has length 1."
+            },
+
+            {
+                q: "The gradient vector of f(x,y) consists of:",
+                options: [
+                    "The first-order partial derivatives",
+                    "The second-order partial derivatives",
+                    "The function values",
+                    "The unit tangent vector"
+                ],
+                answer: "The first-order partial derivatives",
+                explanation: "The gradient is formed using all first-order partial derivatives."
+            },
+
+            {
+                q: "The gradient vector points in the direction of:",
+                options: [
+                    "The greatest increase of the function",
+                    "The greatest decrease of the function",
+                    "Zero change",
+                    "The origin"
+                ],
+                answer: "The greatest increase of the function",
+                explanation: "The gradient always points toward the direction of maximum increase."
+            },
+
+            {
+                q: "A directional derivative is computed using:",
+                options: [
+                    "The dot product of the gradient and a unit vector",
+                    "The cross product of two vectors",
+                    "The determinant of a matrix",
+                    "The second derivative"
+                ],
+                answer: "The dot product of the gradient and a unit vector",
+                explanation: "The directional derivative equals the gradient dotted with a unit direction vector."
+            },
+
+            {
+                q: "The Chain Rule and directional derivatives are commonly applied in:",
+                options: [
+                    "Engineering, robotics, weather prediction, and machine learning",
+                    "Only geometry",
+                    "Only algebra",
+                    "Only statistics"
+                ],
+                answer: "Engineering, robotics, weather prediction, and machine learning",
+                explanation: "These concepts are widely used to model changing systems involving multiple variables."
+            }
+
+        ]
+
+    },
+    "calculus3-unit3-lesson5": {
+
+        title: "Gradient Vectors, Tangent Planes, and Linear Approximations",
+
+        subtitle: "Learn how gradients describe the direction of greatest increase and how tangent planes approximate surfaces.",
+
+        body: `
+
+<h2>Gradient Vectors, Tangent Planes, and Linear Approximations</h2>
+
+<p>One of the most important ideas in multivariable calculus is the <strong>gradient vector</strong>. It combines the partial derivatives of a function into a single vector that describes how the function changes at a point.</p>
+
+<p>The gradient is useful because it tells us:</p>
+
+<ul>
+
+<li>The direction in which a function increases the fastest.</li>
+
+<li>How steeply the function increases.</li>
+
+<li>How to construct tangent planes.</li>
+
+<li>How to approximate complicated functions near a point.</li>
+
+</ul>
+
+<h3>The Gradient Vector</h3>
+
+<p>For a function of two variables</p>
+
+<p>f(x,y)</p>
+
+<p>the gradient is written as</p>
+
+<p>∇f</p>
+
+<p>It is formed by placing the first-order partial derivatives into a vector.</p>
+
+<p>For example, if</p>
+
+<p>f(x,y)=x²+y²</p>
+
+<p>then</p>
+
+<ul>
+
+<li>fx=2x</li>
+
+<li>fy=2y</li>
+
+</ul>
+
+<p>Therefore,</p>
+
+<p>∇f=⟨2x,2y⟩</p>
+
+<p>At the point (1,2),</p>
+
+<p>∇f(1,2)=⟨2,4⟩</p>
+
+<h3>Meaning of the Gradient</h3>
+
+<p>The gradient vector always points in the direction of the greatest increase of the function.</p>
+
+<p>Its magnitude tells us how rapidly the function increases in that direction.</p>
+
+<p>If you travel in the opposite direction of the gradient, the function decreases as quickly as possible.</p>
+
+<h3>Tangent Planes</h3>
+
+<p>In single-variable calculus, every smooth curve has a tangent line.</p>
+
+<p>In multivariable calculus, smooth surfaces have <strong>tangent planes</strong>.</p>
+
+<p>A tangent plane touches the surface at one point and provides the best flat approximation to the surface nearby.</p>
+
+<p>The partial derivatives determine the slope of the tangent plane in both the x-direction and the y-direction.</p>
+
+<h3>Example</h3>
+
+<p>Suppose</p>
+
+<p>z=x²+y²</p>
+
+<p>At the point (1,2),</p>
+
+<ul>
+
+<li>fx=2</li>
+
+<li>fy=4</li>
+
+</ul>
+
+<p>These slopes determine the orientation of the tangent plane at that point.</p>
+
+<h3>Normal Vectors</h3>
+
+<p>A vector that is perpendicular to a tangent plane is called a <strong>normal vector</strong>.</p>
+
+<p>Normal vectors are useful for describing surfaces, computing angles between surfaces, and solving optimization problems.</p>
+
+<p>Every tangent plane has infinitely many tangent directions but only one normal direction (up to opposite orientation).</p>
+
+<h3>Linear Approximation</h3>
+
+<p>Complicated functions are often difficult to evaluate exactly.</p>
+
+<p>Near a known point, however, a smooth surface behaves almost like its tangent plane.</p>
+
+<p>This idea is called a <strong>linear approximation</strong>.</p>
+
+<p>Linear approximations allow us to estimate function values quickly without performing lengthy calculations.</p>
+
+<h3>Differentials</h3>
+
+<p>Differentials provide another way to estimate small changes in a function.</p>
+
+<p>If x and y change by very small amounts, the differential estimates how much the function changes.</p>
+
+<p>Differentials are widely used in science and engineering to estimate measurement errors and uncertainty.</p>
+
+<h3>Applications</h3>
+
+<p>Gradient vectors, tangent planes, and linear approximations appear throughout mathematics and science.</p>
+
+<ul>
+
+<li>Computer graphics and 3D modeling</li>
+
+<li>Machine learning optimization</li>
+
+<li>Engineering design</li>
+
+<li>Economics</li>
+
+<li>Physics</li>
+
+<li>Medical imaging</li>
+
+<li>Robotics</li>
+
+<li>Navigation systems</li>
+
+</ul>
+
+<p>These concepts make it possible to understand complicated surfaces and efficiently approximate functions in many practical situations.</p>
+
+`,
+        questions: [
+
+            {
+                q: "The gradient vector is composed of:",
+                options: [
+                    "The first-order partial derivatives",
+                    "The second-order partial derivatives",
+                    "The function values",
+                    "The directional derivatives"
+                ],
+                answer: "The first-order partial derivatives",
+                explanation: "The gradient vector contains all first-order partial derivatives of the function."
+            },
+
+            {
+                q: "The gradient vector points in the direction of:",
+                options: [
+                    "The greatest increase of the function",
+                    "The greatest decrease of the function",
+                    "Zero change",
+                    "The origin"
+                ],
+                answer: "The greatest increase of the function",
+                explanation: "The gradient always points in the direction where the function increases most rapidly."
+            },
+
+            {
+                q: "For f(x,y)=x²+y², the gradient is:",
+                options: [
+                    "⟨2x,2y⟩",
+                    "⟨x,y⟩",
+                    "⟨2,2⟩",
+                    "⟨x²,y²⟩"
+                ],
+                answer: "⟨2x,2y⟩",
+                explanation: "The partial derivatives are fx=2x and fy=2y."
+            },
+
+            {
+                q: "Evaluate the gradient of f(x,y)=x²+y² at the point (1,2).",
+                options: [
+                    "⟨2,4⟩",
+                    "⟨1,2⟩",
+                    "⟨4,8⟩",
+                    "⟨3,3⟩"
+                ],
+                answer: "⟨2,4⟩",
+                explanation: "Substitute x=1 and y=2 into ⟨2x,2y⟩."
+            },
+
+            {
+                q: "A tangent plane is the:",
+                options: [
+                    "Best flat approximation to a surface near a point",
+                    "Curve touching a surface",
+                    "Highest point on a surface",
+                    "Average value of the function"
+                ],
+                answer: "Best flat approximation to a surface near a point",
+                explanation: "A tangent plane closely approximates a smooth surface near the point of tangency."
+            },
+
+            {
+                q: "The slopes that determine the orientation of a tangent plane come from:",
+                options: [
+                    "The partial derivatives",
+                    "The second derivatives only",
+                    "The function values",
+                    "The domain"
+                ],
+                answer: "The partial derivatives",
+                explanation: "The partial derivatives describe the slopes in the coordinate directions."
+            },
+
+            {
+                q: "A normal vector is:",
+                options: [
+                    "A vector perpendicular to the tangent plane",
+                    "A vector tangent to the surface",
+                    "A unit vector only",
+                    "A vector parallel to the gradient"
+                ],
+                answer: "A vector perpendicular to the tangent plane",
+                explanation: "A normal vector is perpendicular to the tangent plane. For graphs of functions, the gradient helps determine this normal direction."
+            },
+
+            {
+                q: "A linear approximation uses the:",
+                options: [
+                    "Tangent plane to estimate nearby function values",
+                    "Second derivative only",
+                    "Gradient magnitude only",
+                    "Domain of the function"
+                ],
+                answer: "Tangent plane to estimate nearby function values",
+                explanation: "Linear approximations replace a complicated surface with its tangent plane near a known point."
+            },
+
+            {
+                q: "Differentials are commonly used to:",
+                options: [
+                    "Estimate small changes and measurement errors",
+                    "Find exact solutions only",
+                    "Compute definite integrals",
+                    "Find vector magnitudes"
+                ],
+                answer: "Estimate small changes and measurement errors",
+                explanation: "Differentials provide useful approximations for small changes in variables."
+            },
+
+            {
+                q: "Gradient vectors, tangent planes, and linear approximations are widely used in:",
+                options: [
+                    "Computer graphics, engineering, machine learning, and physics",
+                    "Only algebra",
+                    "Only geometry",
+                    "Only statistics"
+                ],
+                answer: "Computer graphics, engineering, machine learning, and physics",
+                explanation: "These concepts have numerous applications in science, engineering, optimization, graphics, and many other technical fields."
+            }
+
+        ]
+
+    },
+    "calculus3-unit3-lesson6": {
+
+        title: "Optimization and Applications",
+
+        subtitle: "Learn how to find maximum and minimum values of multivariable functions and apply them to real-world problems.",
+
+        body: `
+
+<h2>Optimization and Applications</h2>
+
+<p>One of the most important applications of multivariable calculus is <strong>optimization</strong>. Optimization involves finding the largest or smallest value of a function while considering one or more variables.</p>
+
+<p>Businesses maximize profits, engineers minimize costs, scientists optimize experiments, and machine learning algorithms optimize prediction accuracy. Calculus provides the mathematical tools to solve these problems.</p>
+
+<h3>Critical Points</h3>
+
+<p>A <strong>critical point</strong> of a function occurs where all first-order partial derivatives are zero or where one or more partial derivatives do not exist.</p>
+
+<p>For a function f(x,y), a critical point satisfies:</p>
+
+<ul>
+
+<li>fx = 0</li>
+
+<li>fy = 0</li>
+
+</ul>
+
+<p>Critical points are candidates for local maximums, local minimums, or saddle points.</p>
+
+<h3>Local Maximum</h3>
+
+<p>A <strong>local maximum</strong> is a point where the function has a greater value than all nearby points.</p>
+
+<p>Imagine standing on the top of a hill. Every nearby direction leads downward.</p>
+
+<h3>Local Minimum</h3>
+
+<p>A <strong>local minimum</strong> is a point where the function has a smaller value than all nearby points.</p>
+
+<p>Imagine standing at the bottom of a bowl. Every nearby direction leads upward.</p>
+
+<h3>Saddle Points</h3>
+
+<p>Some critical points are neither maximums nor minimums.</p>
+
+<p>These are called <strong>saddle points</strong>.</p>
+
+<p>A saddle point curves upward in one direction and downward in another, similar to the shape of a horse saddle.</p>
+
+<p>For example, the function</p>
+
+<p>z = x² − y²</p>
+
+<p>has a saddle point at the origin.</p>
+
+<h3>The Second Derivative Test</h3>
+
+<p>After finding a critical point, we often use the <strong>Second Derivative Test</strong> to classify it.</p>
+
+<p>The test uses the second-order partial derivatives of the function to determine whether the point is a local maximum, local minimum, or saddle point.</p>
+
+<p>If the test is inconclusive, other techniques may be required.</p>
+
+<h3>Constrained Optimization</h3>
+
+<p>Sometimes optimization problems include restrictions called <strong>constraints</strong>.</p>
+
+<p>Examples include:</p>
+
+<ul>
+
+<li>A fixed budget</li>
+
+<li>A limited amount of material</li>
+
+<li>A required production capacity</li>
+
+<li>A specified surface area</li>
+
+</ul>
+
+<p>More advanced constrained optimization uses a technique called <strong>Lagrange Multipliers</strong>, which will be studied later in Calculus III.</p>
+
+<h3>Real-World Applications</h3>
+
+<p>Optimization appears throughout science, engineering, economics, and technology.</p>
+
+<ul>
+
+<li>Maximizing company profits</li>
+
+<li>Minimizing manufacturing costs</li>
+
+<li>Designing efficient aircraft and automobiles</li>
+
+<li>Optimizing machine learning models</li>
+
+<li>Finding the shortest or fastest routes</li>
+
+<li>Reducing energy consumption</li>
+
+<li>Medical treatment planning</li>
+
+<li>Resource allocation</li>
+
+</ul>
+
+<h3>Summary</h3>
+
+<p>Optimization combines many ideas learned throughout this unit, including partial derivatives, gradients, and tangent planes. By identifying critical points and analyzing the behavior of a function nearby, we can solve practical problems involving maximums and minimums in many different fields.</p>
+
+`,
+        questions: [
+
+            {
+                q: "The primary goal of optimization is to:",
+                options: [
+                    "Find the maximum or minimum value of a function",
+                    "Find the derivative only",
+                    "Compute definite integrals",
+                    "Draw the graph"
+                ],
+                answer: "Find the maximum or minimum value of a function",
+                explanation: "Optimization is the process of finding the largest or smallest values of a function."
+            },
+
+            {
+                q: "A critical point occurs when:",
+                options: [
+                    "All first-order partial derivatives are zero or do not exist",
+                    "The function equals zero",
+                    "All second-order partial derivatives are zero",
+                    "The gradient has magnitude one"
+                ],
+                answer: "All first-order partial derivatives are zero or do not exist",
+                explanation: "Critical points occur where the first-order partial derivatives are zero or undefined."
+            },
+
+            {
+                q: "To find the critical points of f(x,y), you solve:",
+                options: [
+                    "fx=0 and fy=0",
+                    "f=0",
+                    "fxx=0 only",
+                    "∇f=1"
+                ],
+                answer: "fx=0 and fy=0",
+                explanation: "Critical points are found by setting the first-order partial derivatives equal to zero."
+            },
+
+            {
+                q: "A local maximum is a point where:",
+                options: [
+                    "The function has a greater value than all nearby points",
+                    "The function has a smaller value than all nearby points",
+                    "The function equals zero",
+                    "The derivative does not exist"
+                ],
+                answer: "The function has a greater value than all nearby points",
+                explanation: "A local maximum is higher than every nearby point."
+            },
+
+            {
+                q: "A local minimum is a point where:",
+                options: [
+                    "The function has a smaller value than all nearby points",
+                    "The function has a greater value than all nearby points",
+                    "The function is undefined",
+                    "The gradient is zero everywhere"
+                ],
+                answer: "The function has a smaller value than all nearby points",
+                explanation: "A local minimum is lower than every nearby point."
+            },
+
+            {
+                q: "A saddle point is:",
+                options: [
+                    "A critical point that is neither a maximum nor a minimum",
+                    "A point where the function is undefined",
+                    "The highest point on a surface",
+                    "The lowest point on a surface"
+                ],
+                answer: "A critical point that is neither a maximum nor a minimum",
+                explanation: "A saddle point increases in some directions and decreases in others."
+            },
+
+            {
+                q: "The function z=x²−y² has a:",
+                options: [
+                    "Saddle point at the origin",
+                    "Local maximum at the origin",
+                    "Local minimum at the origin",
+                    "Vertical asymptote"
+                ],
+                answer: "Saddle point at the origin",
+                explanation: "The surface curves upward in one direction and downward in the other."
+            },
+
+            {
+                q: "The Second Derivative Test is used to:",
+                options: [
+                    "Classify critical points",
+                    "Find the domain",
+                    "Compute definite integrals",
+                    "Evaluate limits"
+                ],
+                answer: "Classify critical points",
+                explanation: "The Second Derivative Test helps determine whether a critical point is a maximum, minimum, or saddle point."
+            },
+
+            {
+                q: "Optimization problems with restrictions are called:",
+                options: [
+                    "Constrained optimization problems",
+                    "Linear approximation problems",
+                    "Directional derivative problems",
+                    "Continuity problems"
+                ],
+                answer: "Constrained optimization problems",
+                explanation: "Constraints limit the possible solutions to an optimization problem."
+            },
+
+            {
+                q: "Which of the following is a common real-world application of optimization?",
+                options: [
+                    "Maximizing profits and minimizing costs",
+                    "Finding the alphabetically first variable",
+                    "Counting the number of derivatives",
+                    "Drawing level curves only"
+                ],
+                answer: "Maximizing profits and minimizing costs",
+                explanation: "Optimization is widely used in business, engineering, science, economics, and machine learning to improve outcomes."
+            }
+
+        ]
+
+    },
+    "calculus3-unit3-review": {
+
+        title: "Unit 3 Review",
+
+        subtitle: "Review Functions of Several Variables and Partial Derivatives before taking the Unit 3 Test.",
+
+        body: `
+
+<h2>Unit 3 Review</h2>
+
+<p>This review summarizes the major concepts from Unit 3. Before taking the unit test, make sure you understand each topic and can solve problems involving multivariable functions, partial derivatives, gradients, tangent planes, and optimization.</p>
+
+<h2>Lesson 1 Review: Functions of Several Variables</h2>
+
+<ul>
+
+<li>Functions may depend on two or more independent variables.</li>
+
+<li>The domain consists of every allowable input.</li>
+
+<li>The graph of a function of two variables is usually a surface.</li>
+
+<li>Level curves are obtained by setting the function equal to a constant.</li>
+
+<li>Functions of several variables appear throughout science, engineering, economics, and computer graphics.</li>
+
+</ul>
+
+<h2>Lesson 2 Review: Limits and Continuity</h2>
+
+<ul>
+
+<li>Limits must approach the same value from every possible path.</li>
+
+<li>Different paths producing different values mean the limit does not exist.</li>
+
+<li>Continuous functions allow direct substitution.</li>
+
+<li>Continuity is essential for defining derivatives and optimization.</li>
+
+</ul>
+
+<h2>Lesson 3 Review: Partial Derivatives</h2>
+
+<ul>
+
+<li>Differentiate with respect to one variable while treating the others as constants.</li>
+
+<li>Higher-order partial derivatives are obtained by differentiating again.</li>
+
+<li>Mixed partial derivatives differentiate with respect to different variables.</li>
+
+<li>Clairaut's Theorem states that mixed partial derivatives are equal when the required continuity conditions are satisfied.</li>
+
+</ul>
+
+<h2>Lesson 4 Review: The Chain Rule and Directional Derivatives</h2>
+
+<ul>
+
+<li>The multivariable Chain Rule computes rates of change when variables depend on other variables.</li>
+
+<li>Directional derivatives measure the rate of change in any specified direction.</li>
+
+<li>Directional derivatives require a unit direction vector.</li>
+
+<li>The gradient vector is used to compute directional derivatives.</li>
+
+</ul>
+
+<h2>Lesson 5 Review: Gradient Vectors, Tangent Planes, and Linear Approximations</h2>
+
+<ul>
+
+<li>The gradient points in the direction of greatest increase.</li>
+
+<li>Tangent planes approximate surfaces near a point.</li>
+
+<li>Normal vectors are perpendicular to tangent planes.</li>
+
+<li>Linear approximations estimate nearby function values.</li>
+
+<li>Differentials estimate small changes and measurement errors.</li>
+
+</ul>
+
+<h2>Lesson 6 Review: Optimization and Applications</h2>
+
+<ul>
+
+<li>Critical points occur where first-order partial derivatives are zero or undefined.</li>
+
+<li>Critical points may be local maxima, local minima, or saddle points.</li>
+
+<li>The Second Derivative Test helps classify critical points.</li>
+
+<li>Optimization is widely used in engineering, economics, robotics, logistics, and machine learning.</li>
+
+</ul>
+
+<h2>Important Concepts to Remember</h2>
+
+<ul>
+
+<li>Functions of several variables</li>
+
+<li>Domains</li>
+
+<li>Level curves</li>
+
+<li>Limits and continuity</li>
+
+<li>Partial derivatives</li>
+
+<li>Higher-order derivatives</li>
+
+<li>Mixed partial derivatives</li>
+
+<li>Clairaut's Theorem</li>
+
+<li>Chain Rule</li>
+
+<li>Directional derivatives</li>
+
+<li>Gradient vectors</li>
+
+<li>Tangent planes</li>
+
+<li>Normal vectors</li>
+
+<li>Linear approximations</li>
+
+<li>Differentials</li>
+
+<li>Critical points</li>
+
+<li>Local maxima</li>
+
+<li>Local minima</li>
+
+<li>Saddle points</li>
+
+<li>Optimization</li>
+
+</ul>
+
+<h2>Mixed Review Questions</h2>
+
+`,
+
+        questions: [
+
+            {
+                q: "A function of several variables has:",
+                options: [
+                    "Two or more independent variables",
+                    "Only one independent variable",
+                    "No variables",
+                    "Only dependent variables"
+                ],
+                answer: "Two or more independent variables",
+                explanation: "Multivariable functions depend on two or more independent variables."
+            },
+
+            {
+                q: "The graph of a function of two variables is generally a:",
+                options: [
+                    "Surface",
+                    "Line",
+                    "Circle",
+                    "Vector"
+                ],
+                answer: "Surface",
+                explanation: "Functions of two variables typically produce surfaces in three-dimensional space."
+            },
+
+            {
+                q: "A level curve is obtained by:",
+                options: [
+                    "Setting the function equal to a constant",
+                    "Taking a derivative",
+                    "Finding the domain",
+                    "Finding the gradient"
+                ],
+                answer: "Setting the function equal to a constant",
+                explanation: "Level curves represent points where the function has a constant value."
+            },
+
+            {
+                q: "A multivariable limit exists only if:",
+                options: [
+                    "All paths approach the same value",
+                    "Only the x-axis gives the same value",
+                    "The function is a polynomial",
+                    "The derivative exists"
+                ],
+                answer: "All paths approach the same value",
+                explanation: "Every possible path must produce the same limiting value."
+            },
+
+            {
+                q: "A function is continuous if:",
+                options: [
+                    "The limit exists, the function exists, and they are equal",
+                    "The derivative equals zero",
+                    "The graph passes through the origin",
+                    "It has no critical points"
+                ],
+                answer: "The limit exists, the function exists, and they are equal",
+                explanation: "These are the three conditions for continuity."
+            },
+
+            {
+                q: "When finding ∂f/∂x, the variable y is treated as:",
+                options: [
+                    "A constant",
+                    "Zero",
+                    "A derivative",
+                    "A function of x"
+                ],
+                answer: "A constant",
+                explanation: "Only x changes while y remains fixed."
+            },
+
+            {
+                q: "Mixed partial derivatives differentiate with respect to:",
+                options: [
+                    "Different variables",
+                    "The same variable twice",
+                    "No variables",
+                    "Only x"
+                ],
+                answer: "Different variables",
+                explanation: "Mixed partial derivatives involve two different variables."
+            },
+
+            {
+                q: "Clairaut's Theorem states that:",
+                options: [
+                    "Mixed partial derivatives are equal when continuous",
+                    "Every derivative equals zero",
+                    "Every function is continuous",
+                    "The gradient always equals zero"
+                ],
+                answer: "Mixed partial derivatives are equal when continuous",
+                explanation: "This theorem applies when the required continuity conditions are satisfied."
+            },
+
+            {
+                q: "The gradient vector points in the direction of:",
+                options: [
+                    "Greatest increase",
+                    "Greatest decrease",
+                    "No change",
+                    "The origin"
+                ],
+                answer: "Greatest increase",
+                explanation: "The gradient points toward the direction of maximum increase."
+            },
+
+            {
+                q: "Critical points are candidates for:",
+                options: [
+                    "Local maxima, local minima, and saddle points",
+                    "Only local maxima",
+                    "Only saddle points",
+                    "Only local minima"
+                ],
+                answer: "Local maxima, local minima, and saddle points",
+                explanation: "Every critical point must be classified before determining its behavior."
+            },
+            {
+                q: "The multivariable Chain Rule is used when:",
+                options: [
+                    "Variables depend on other variables",
+                    "The function has one variable only",
+                    "The derivative is zero",
+                    "The function is constant"
+                ],
+                answer: "Variables depend on other variables",
+                explanation: "The Chain Rule relates the rates of change when variables themselves depend on other variables."
+            },
+
+            {
+                q: "A directional derivative measures:",
+                options: [
+                    "The rate of change in a specified direction",
+                    "The average value of a function",
+                    "The total area under a surface",
+                    "The domain of a function"
+                ],
+                answer: "The rate of change in a specified direction",
+                explanation: "Directional derivatives measure how rapidly a function changes in any chosen direction."
+            },
+
+            {
+                q: "A directional derivative is computed using:",
+                options: [
+                    "The dot product of the gradient and a unit vector",
+                    "The cross product of two vectors",
+                    "The determinant of a matrix",
+                    "The Hessian matrix"
+                ],
+                answer: "The dot product of the gradient and a unit vector",
+                explanation: "The directional derivative equals the gradient dotted with the chosen unit direction vector."
+            },
+
+            {
+                q: "The gradient vector consists of:",
+                options: [
+                    "All first-order partial derivatives",
+                    "All second-order partial derivatives",
+                    "Only the x-derivative",
+                    "The function values"
+                ],
+                answer: "All first-order partial derivatives",
+                explanation: "The gradient combines the first-order partial derivatives into a single vector."
+            },
+
+            {
+                q: "A tangent plane provides:",
+                options: [
+                    "A flat approximation of a surface near a point",
+                    "The exact graph of the function",
+                    "A level curve",
+                    "The domain of the function"
+                ],
+                answer: "A flat approximation of a surface near a point",
+                explanation: "Near the point of tangency, the tangent plane closely approximates the surface."
+            },
+
+            {
+                q: "A normal vector is:",
+                options: [
+                    "Perpendicular to the tangent plane",
+                    "Parallel to every tangent direction",
+                    "The same as the position vector",
+                    "Always a unit vector"
+                ],
+                answer: "Perpendicular to the tangent plane",
+                explanation: "Normal vectors are perpendicular to the tangent plane and help describe the orientation of the surface."
+            },
+
+            {
+                q: "Linear approximations are most accurate:",
+                options: [
+                    "Near the point of tangency",
+                    "Far from the point of tangency",
+                    "Only at the origin",
+                    "Only when the function is linear"
+                ],
+                answer: "Near the point of tangency",
+                explanation: "The tangent plane is a good approximation only near the point where it touches the surface."
+            },
+
+            {
+                q: "A critical point occurs when:",
+                options: [
+                    "All first-order partial derivatives are zero or undefined",
+                    "The function equals zero",
+                    "The gradient has magnitude one",
+                    "The second derivatives are zero"
+                ],
+                answer: "All first-order partial derivatives are zero or undefined",
+                explanation: "Critical points are found where the first-order partial derivatives vanish or fail to exist."
+            },
+
+            {
+                q: "The Second Derivative Test is used to:",
+                options: [
+                    "Classify critical points",
+                    "Find the domain",
+                    "Compute gradients",
+                    "Evaluate limits"
+                ],
+                answer: "Classify critical points",
+                explanation: "The test determines whether a critical point is a local maximum, local minimum, or saddle point."
+            },
+
+            {
+                q: "Which statement best summarizes Unit 3?",
+                options: [
+                    "Multivariable calculus extends single-variable calculus to functions with multiple inputs and uses derivatives to analyze and optimize them.",
+                    "Every multivariable function has only one variable.",
+                    "Partial derivatives eliminate the need for limits.",
+                    "Optimization never uses derivatives."
+                ],
+                answer: "Multivariable calculus extends single-variable calculus to functions with multiple inputs and uses derivatives to analyze and optimize them.",
+                explanation: "Unit 3 introduces functions of several variables, their derivatives, gradients, tangent planes, and optimization techniques."
+            }
+
+        ]
+
+    },
+    "calculus3-unit3-test": {
+
+        title: "Unit 3 Test",
+
+        subtitle: "Test your understanding of Functions of Several Variables, Partial Derivatives, Gradients, and Optimization.",
+
+        body: `
+
+<h2>Unit 3 Test</h2>
+
+<p>This assessment covers everything learned in Unit 3.</p>
+
+<p>The test includes questions from:</p>
+
+<ul>
+
+<li>Functions of Several Variables</li>
+
+<li>Limits and Continuity</li>
+
+<li>Partial Derivatives</li>
+
+<li>The Chain Rule</li>
+
+<li>Directional Derivatives</li>
+
+<li>Gradient Vectors</li>
+
+<li>Tangent Planes</li>
+
+<li>Linear Approximations</li>
+
+<li>Optimization</li>
+
+</ul>
+
+<p>Select the best answer for each question before checking your results.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "A function of several variables has:",
+                options: [
+                    "Two or more independent variables",
+                    "Exactly one independent variable",
+                    "No independent variables",
+                    "Only dependent variables"
+                ],
+                answer: "Two or more independent variables",
+                explanation: "Multivariable functions depend on two or more independent variables."
+            },
+
+            {
+                q: "The graph of a function of two variables is generally a:",
+                options: [
+                    "Surface",
+                    "Line",
+                    "Circle",
+                    "Plane"
+                ],
+                answer: "Surface",
+                explanation: "Functions of two variables are typically represented as surfaces in three-dimensional space."
+            },
+
+            {
+                q: "The domain of a multivariable function is:",
+                options: [
+                    "The set of all allowable input values",
+                    "The range of the function",
+                    "The graph of the function",
+                    "The derivative"
+                ],
+                answer: "The set of all allowable input values",
+                explanation: "The domain consists of every input where the function is defined."
+            },
+
+            {
+                q: "A level curve is found by:",
+                options: [
+                    "Setting the function equal to a constant",
+                    "Taking a derivative",
+                    "Finding the gradient",
+                    "Finding the domain"
+                ],
+                answer: "Setting the function equal to a constant",
+                explanation: "Level curves represent locations where the function has a constant value."
+            },
+
+            {
+                q: "A multivariable limit exists only if:",
+                options: [
+                    "Every path approaches the same value",
+                    "Only one path approaches a value",
+                    "The function is continuous",
+                    "The derivative exists"
+                ],
+                answer: "Every path approaches the same value",
+                explanation: "Different paths giving different values mean the limit does not exist."
+            },
+
+            {
+                q: "A function is continuous at a point when:",
+                options: [
+                    "The limit exists, the function exists, and they are equal",
+                    "The derivative equals zero",
+                    "The graph passes through the origin",
+                    "The function has no critical points"
+                ],
+                answer: "The limit exists, the function exists, and they are equal",
+                explanation: "These are the three requirements for continuity."
+            },
+
+            {
+                q: "When computing ∂f/∂x, the variable y is treated as:",
+                options: [
+                    "A constant",
+                    "Zero",
+                    "A derivative",
+                    "A function of x"
+                ],
+                answer: "A constant",
+                explanation: "Only x changes while all other variables remain fixed."
+            },
+
+            {
+                q: "Higher-order partial derivatives are obtained by:",
+                options: [
+                    "Differentiating more than once",
+                    "Integrating the function",
+                    "Finding the domain",
+                    "Computing limits"
+                ],
+                answer: "Differentiating more than once",
+                explanation: "Second-order and higher-order partial derivatives come from repeated differentiation."
+            },
+
+            {
+                q: "Mixed partial derivatives involve:",
+                options: [
+                    "Different variables",
+                    "The same variable twice",
+                    "No variables",
+                    "Only x"
+                ],
+                answer: "Different variables",
+                explanation: "Mixed partial derivatives differentiate with respect to different variables."
+            },
+
+            {
+                q: "Clairaut's Theorem states that:",
+                options: [
+                    "Mixed partial derivatives are equal under appropriate continuity conditions",
+                    "Every derivative equals zero",
+                    "Every function is continuous",
+                    "Every limit exists"
+                ],
+                answer: "Mixed partial derivatives are equal under appropriate continuity conditions",
+                explanation: "If the required continuity conditions are satisfied, the mixed partial derivatives are equal."
+            },
+
+            {
+                q: "The multivariable Chain Rule is used when:",
+                options: [
+                    "Variables depend on other variables",
+                    "The function is linear",
+                    "The derivative is zero",
+                    "The function is constant"
+                ],
+                answer: "Variables depend on other variables",
+                explanation: "The Chain Rule relates rates of change through intermediate variables."
+            },
+
+            {
+                q: "A directional derivative measures:",
+                options: [
+                    "The rate of change in a chosen direction",
+                    "The average value of a function",
+                    "The maximum value of a function",
+                    "The area under a surface"
+                ],
+                answer: "The rate of change in a chosen direction",
+                explanation: "Directional derivatives generalize partial derivatives to any direction."
+            },
+
+            {
+                q: "Directional derivatives require:",
+                options: [
+                    "A unit vector",
+                    "A matrix",
+                    "A scalar",
+                    "A second derivative"
+                ],
+                answer: "A unit vector",
+                explanation: "The direction vector is normalized so the rate of change is measured per unit distance."
+            },
+            {
+                q: "The gradient vector is composed of:",
+                options: [
+                    "The first-order partial derivatives",
+                    "The second-order partial derivatives",
+                    "The function values",
+                    "The directional derivatives"
+                ],
+                answer: "The first-order partial derivatives",
+                explanation: "The gradient combines all first-order partial derivatives into a single vector."
+            },
+
+            {
+                q: "The gradient points in the direction of:",
+                options: [
+                    "The greatest increase of the function",
+                    "The greatest decrease of the function",
+                    "Zero change",
+                    "The origin"
+                ],
+                answer: "The greatest increase of the function",
+                explanation: "The gradient always points toward the direction where the function increases most rapidly."
+            },
+
+            {
+                q: "For f(x,y)=x²+y², the gradient is:",
+                options: [
+                    "⟨2x,2y⟩",
+                    "⟨x,y⟩",
+                    "⟨2,2⟩",
+                    "⟨x²,y²⟩"
+                ],
+                answer: "⟨2x,2y⟩",
+                explanation: "The partial derivatives are fx=2x and fy=2y."
+            },
+
+            {
+                q: "A tangent plane is:",
+                options: [
+                    "The best flat approximation to a surface near a point",
+                    "A curve that touches a surface",
+                    "A level curve",
+                    "A normal vector"
+                ],
+                answer: "The best flat approximation to a surface near a point",
+                explanation: "A tangent plane closely approximates a smooth surface near the point of tangency."
+            },
+
+            {
+                q: "A vector perpendicular to a tangent plane is called:",
+                options: [
+                    "A normal vector",
+                    "A tangent vector",
+                    "A position vector",
+                    "A direction vector"
+                ],
+                answer: "A normal vector",
+                explanation: "Normal vectors are perpendicular to tangent planes and describe the orientation of the surface."
+            },
+
+            {
+                q: "Linear approximations are most accurate:",
+                options: [
+                    "Near the point of tangency",
+                    "Far from the point of tangency",
+                    "Only at the origin",
+                    "For every point equally"
+                ],
+                answer: "Near the point of tangency",
+                explanation: "The tangent plane provides the best local approximation to a surface."
+            },
+
+            {
+                q: "A critical point occurs where:",
+                options: [
+                    "All first-order partial derivatives are zero or undefined",
+                    "The function equals zero",
+                    "The gradient has magnitude one",
+                    "All second-order partial derivatives equal zero"
+                ],
+                answer: "All first-order partial derivatives are zero or undefined",
+                explanation: "Critical points occur where the first-order partial derivatives vanish or do not exist."
+            },
+
+            {
+                q: "A saddle point is:",
+                options: [
+                    "A critical point that is neither a local maximum nor a local minimum",
+                    "The highest point on a surface",
+                    "The lowest point on a surface",
+                    "A point where the function is undefined"
+                ],
+                answer: "A critical point that is neither a local maximum nor a local minimum",
+                explanation: "Saddle points increase in some directions and decrease in others."
+            },
+
+            {
+                q: "The Second Derivative Test is primarily used to:",
+                options: [
+                    "Classify critical points",
+                    "Find the domain",
+                    "Evaluate limits",
+                    "Calculate directional derivatives"
+                ],
+                answer: "Classify critical points",
+                explanation: "It helps determine whether a critical point is a local maximum, local minimum, or saddle point."
+            },
+
+            {
+                q: "Optimization problems with restrictions are known as:",
+                options: [
+                    "Constrained optimization problems",
+                    "Directional derivative problems",
+                    "Partial differentiation problems",
+                    "Continuity problems"
+                ],
+                answer: "Constrained optimization problems",
+                explanation: "Constraints limit the possible solutions of an optimization problem."
+            },
+
+            {
+                q: "Which technique is commonly used later in Calculus III to solve constrained optimization problems?",
+                options: [
+                    "Lagrange Multipliers",
+                    "Integration by Parts",
+                    "Partial Fractions",
+                    "Euler's Method"
+                ],
+                answer: "Lagrange Multipliers",
+                explanation: "Lagrange Multipliers provide a systematic method for optimizing functions subject to constraints."
+            },
+
+            {
+                q: "Which statement best summarizes Unit 3?",
+                options: [
+                    "Multivariable calculus extends calculus to functions with multiple variables, allowing us to analyze surfaces, compute rates of change, and solve optimization problems.",
+                    "Every multivariable function has exactly one variable.",
+                    "Partial derivatives replace all other calculus concepts.",
+                    "Optimization can only be performed on single-variable functions."
+                ],
+                answer: "Multivariable calculus extends calculus to functions with multiple variables, allowing us to analyze surfaces, compute rates of change, and solve optimization problems.",
+                explanation: "Unit 3 introduced functions of several variables, limits, continuity, partial derivatives, gradients, tangent planes, and optimization."
+
+            }
+
+        ]
+
+    }
+
 
 
 
