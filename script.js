@@ -1,12 +1,75 @@
+// =====================================================
+// BUILDBRIGHT OFFLINE STORAGE
+// =====================================================
+
+const BuildBrightStorage = {
+
+    memory: {},
+
+    set(key, value) {
+        try {
+            localStorage.setItem(key, JSON.stringify(value));
+        } catch (error) {
+            console.warn("Local storage unavailable. Using memory storage.");
+            this.memory[key] = value;
+        }
+    },
+
+    get(key, defaultValue = null) {
+        try {
+            const value = localStorage.getItem(key);
+
+            if (value === null) {
+                return defaultValue;
+            }
+
+            return JSON.parse(value);
+
+        } catch (error) {
+            console.warn("Local storage unavailable. Using memory storage.");
+
+            if (Object.prototype.hasOwnProperty.call(this.memory, key)) {
+                return this.memory[key];
+            }
+
+            return defaultValue;
+        }
+    },
+
+    remove(key) {
+        try {
+            localStorage.removeItem(key);
+        } catch (error) {
+            delete this.memory[key];
+        }
+    },
+
+    clear() {
+        try {
+            localStorage.clear();
+        } catch (error) {
+            this.memory = {};
+        }
+    }
+};
+
+
+
+
+
+
+
+
+
 function updateStreak() {
     const today = new Date().toDateString();
-    const last = localStorage.getItem("last_day");
-    let streak = parseInt(localStorage.getItem("streak") || "0");
+    const last = BuildBrightStorage.get("last_day", null);
+    let streak = parseInt(BuildBrightStorage.get("streak", 0));
 
     if (last !== today) {
         streak += 1;
-        localStorage.setItem("streak", streak);
-        localStorage.setItem("last_day", today);
+        BuildBrightStorage.set("streak", streak);
+        BuildBrightStorage.set("last_day", today);
     }
 
     const el = document.getElementById("streak");
@@ -23,7 +86,8 @@ const lessonBank = {
     algebra2: typeof algebra2Lessons !== "undefined" ? algebra2Lessons : {},
     calculus1: typeof calculus1Lessons !== "undefined" ? calculus1Lessons : {},
     calculus2: typeof calculus2Lessons !== "undefined" ? calculus2Lessons : {},
-    calculus3: typeof calculus3Lessons !== "undefined" ? calculus3Lessons : {}
+    calculus3: typeof calculus3Lessons !== "undefined" ? calculus3Lessons : {},
+    calculus4: typeof calculus4Lessons !== "undefined" ? calculus4Lessons : {},
 };
 
 const topicData = {
@@ -33,7 +97,7 @@ const topicData = {
     calculus1: Object.keys(lessonBank.calculus1),
     calculus2: Object.keys(lessonBank.calculus2),
     calculus3: Object.keys(lessonBank.calculus3),
-    calculus4: []
+    calculus4: Object.keys(lessonBank.calculus4),
 };
 
 function showCourseSelector() {
@@ -87,8 +151,8 @@ function startSelectedLesson() {
         return;
     }
 
-    localStorage.setItem("selectedSubject", subject);
-    localStorage.setItem("selectedTopic", topic);
+    BuildBrightStorage.set("selectedSubject", subject);
+    BuildBrightStorage.set("selectedTopic", topic);
 
     window.location.href =
         "lesson.html?subject=" + subject + "&topic=" + topic;
@@ -305,9 +369,9 @@ function checkTemplateQuiz() {
     const topic = params.get("topic");
     const lessonKey = subject + "_" + topic;
 
-    localStorage.setItem(lessonKey + "_score", score);
-    localStorage.setItem(lessonKey + "_done", "true");
-    localStorage.setItem("last_lesson", lessonKey);
+    BuildBrightStorage.set(lessonKey + "_score", score);
+    BuildBrightStorage.set(lessonKey + "_done", true);
+    BuildBrightStorage.set("last_lesson", lessonKey);
 
     if (score >= passingScore) {
 
@@ -327,9 +391,9 @@ function checkTemplateQuiz() {
         subject === "calculus2" &&
         topic === "calculus2-course-complete"
     ) {
-        localStorage.setItem(
+        BuildBrightStorage.set(
             "calculus2_calculus2-course-complete_done",
-            "true"
+            true
         );
     }
 
@@ -350,12 +414,12 @@ function checkTemplateQuiz() {
 
 
 function getXP() {
-    return parseInt(localStorage.getItem("buildbright_xp") || "0");
+    return parseInt(BuildBrightStorage.get("buildbright_xp", 0));
 }
 
 function addXP(amount) {
     const total = getXP() + amount;
-    localStorage.setItem("buildbright_xp", total);
+    BuildBrightStorage.set("buildbright_xp", total);
     return total;
 }
 
@@ -376,9 +440,9 @@ function updateXPDisplay() {
 function unlockAchievement(id, title, description) {
     const key = "achievement_" + id;
 
-    if (localStorage.getItem(key)) return;
+    if (BuildBrightStorage.get(key, false)) return;
 
-    localStorage.setItem(key, "true");
+    BuildBrightStorage.set(key, true);
 
     const popup = document.createElement("div");
     popup.className = "achievement-popup";
@@ -421,7 +485,7 @@ function updateGlobalProgress() {
     );
     let completed = 0;
     allTopics.forEach(item => {
-        if (localStorage.getItem(item.subject + "_" + item.topic + "_done")) {
+        if (BuildBrightStorage.get(item.subject + "_" + item.topic + "_done", false)) {
             completed++;
         }
     });

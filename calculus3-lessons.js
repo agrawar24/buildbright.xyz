@@ -10156,7 +10156,5136 @@ const calculus3Lessons = {
 
         ]
 
-    }
+    },
+    "calculus3-unit4-lesson1": {
+
+        title: "Double Integrals over Rectangular Regions",
+
+        subtitle: "Learn how double integrals extend single-variable integration to calculate area, volume, and total accumulation over rectangular regions.",
+
+        body: `
+
+<h2>Double Integrals over Rectangular Regions</h2>
+
+<p>In single-variable calculus, a definite integral calculates the accumulated quantity along an interval. In multivariable calculus, a <strong>double integral</strong> extends this idea to functions of two variables, allowing us to measure quantities over entire regions in the plane.</p>
+
+<p>Double integrals are used to calculate:</p>
+
+<ul>
+
+<li>Volumes under surfaces</li>
+
+<li>Areas of regions</li>
+
+<li>Total mass of thin plates</li>
+
+<li>Average values of functions</li>
+
+<li>Probability distributions</li>
+
+<li>Electric charge and heat distributions</li>
+
+</ul>
+
+<h3>From Single to Double Integrals</h3>
+
+<p>A single integral adds infinitely many small line segments together.</p>
+
+<p>A double integral adds infinitely many tiny rectangles together.</p>
+
+<p>Instead of moving along a line, we now integrate over a two-dimensional region.</p>
+
+<h3>Rectangular Regions</h3>
+
+<p>The simplest regions are rectangles.</p>
+
+<p>A rectangular region is bounded by constant values of x and y.</p>
+
+<p>For example, suppose:</p>
+
+<ul>
+
+<li>a ≤ x ≤ b</li>
+
+<li>c ≤ y ≤ d</li>
+
+</ul>
+
+<p>Every point inside these boundaries belongs to the region of integration.</p>
+
+<h3>The Double Integral</h3>
+
+<p>The notation for a double integral is:</p>
+
+<p>∬R f(x,y) dA</p>
+
+<p>Here:</p>
+
+<ul>
+
+<li>R is the region of integration.</li>
+
+<li>f(x,y) is the function being accumulated.</li>
+
+<li>dA represents an infinitesimally small area element.</li>
+
+</ul>
+
+<h3>Iterated Integrals</h3>
+
+<p>Most double integrals are evaluated as <strong>iterated integrals</strong>, meaning we integrate one variable at a time.</p>
+
+<p>For rectangular regions, we may integrate:</p>
+
+<ul>
+
+<li>With respect to x first, then y.</li>
+
+<li>With respect to y first, then x.</li>
+
+</ul>
+
+<p>If the limits are constant, either order produces the same result.</p>
+
+<h3>Example</h3>
+
+<p>Suppose we wish to evaluate:</p>
+
+<p>f(x,y)=x+y</p>
+
+<p>over the rectangle</p>
+
+<ul>
+
+<li>0 ≤ x ≤ 2</li>
+
+<li>0 ≤ y ≤ 3</li>
+
+</ul>
+
+<p>We integrate one variable while treating the other as a constant, then evaluate the remaining integral.</p>
+
+<p>The result represents the total accumulation of the function over the rectangular region.</p>
+
+<h3>Area as a Double Integral</h3>
+
+<p>If the function equals 1 everywhere, the double integral simply computes the area of the region.</p>
+
+<p>This is the multivariable equivalent of summing tiny pieces of area.</p>
+
+<h3>Volume Under a Surface</h3>
+
+<p>If the function is positive, the double integral computes the volume between the surface and the xy-plane.</p>
+
+<p>Higher function values contribute more volume, while lower values contribute less.</p>
+
+<h3>Applications</h3>
+
+<p>Double integrals are widely used in many disciplines.</p>
+
+<ul>
+
+<li>Finding the volume of irregular solids</li>
+
+<li>Computing the mass of thin plates with varying density</li>
+
+<li>Calculating probability over two-dimensional regions</li>
+
+<li>Determining average temperatures across a surface</li>
+
+<li>Modeling rainfall across geographic regions</li>
+
+<li>Engineering stress analysis</li>
+
+<li>Computer graphics</li>
+
+<li>Fluid flow analysis</li>
+
+</ul>
+
+<p>Double integrals provide one of the most important tools in multivariable calculus because they allow us to measure accumulated quantities over entire regions instead of along a single line.</p>
+
+`,
+        questions: [
+
+            {
+                q: "A double integral is used to measure:",
+                options: [
+                    "Accumulation over a two-dimensional region",
+                    "Only the slope of a curve",
+                    "The derivative of a function",
+                    "The length of a line segment"
+                ],
+                answer: "Accumulation over a two-dimensional region",
+                explanation: "A double integral extends integration to functions of two variables and measures accumulated quantities over an area."
+            },
+
+            {
+                q: "A rectangular region is bounded by:",
+                options: [
+                    "Constant values of x and y",
+                    "Curved boundaries only",
+                    "Three variables",
+                    "Polar coordinates"
+                ],
+                answer: "Constant values of x and y",
+                explanation: "Rectangular regions have constant lower and upper bounds for both x and y."
+            },
+
+            {
+                q: "In the notation ∬R f(x,y) dA, the symbol R represents:",
+                options: [
+                    "The region of integration",
+                    "The range of the function",
+                    "The result of the integral",
+                    "The radius of a circle"
+                ],
+                answer: "The region of integration",
+                explanation: "R specifies the area over which the function is integrated."
+            },
+
+            {
+                q: "The symbol dA represents:",
+                options: [
+                    "An infinitesimally small area element",
+                    "A derivative",
+                    "A direction vector",
+                    "A distance measurement"
+                ],
+                answer: "An infinitesimally small area element",
+                explanation: "The notation dA represents a tiny piece of area used in the summation process."
+            },
+
+            {
+                q: "A double integral evaluated as two single integrals is called:",
+                options: [
+                    "An iterated integral",
+                    "A partial derivative",
+                    "A line integral",
+                    "A surface integral"
+                ],
+                answer: "An iterated integral",
+                explanation: "Iterated integrals evaluate one variable at a time."
+            },
+
+            {
+                q: "For a rectangular region with constant limits, the order of integration:",
+                options: [
+                    "Can be reversed without changing the answer",
+                    "Must always be x then y",
+                    "Must always be y then x",
+                    "Cannot be changed"
+                ],
+                answer: "Can be reversed without changing the answer",
+                explanation: "For rectangular regions with constant limits, either order of integration gives the same result."
+            },
+
+            {
+                q: "If f(x,y)=1 everywhere on a region, the double integral computes the:",
+                options: [
+                    "Area of the region",
+                    "Volume of a sphere",
+                    "Slope of the surface",
+                    "Gradient vector"
+                ],
+                answer: "Area of the region",
+                explanation: "Integrating the constant function 1 over a region gives its area."
+            },
+
+            {
+                q: "If f(x,y) is positive over a region, the double integral represents the:",
+                options: [
+                    "Volume under the surface",
+                    "Length of a curve",
+                    "Direction of maximum increase",
+                    "Perimeter of the region"
+                ],
+                answer: "Volume under the surface",
+                explanation: "A positive function produces the volume between the surface and the xy-plane."
+            },
+
+            {
+                q: "When evaluating the inner integral of an iterated integral, the other variable is treated as:",
+                options: [
+                    "A constant",
+                    "Zero",
+                    "A function of time",
+                    "A gradient"
+                ],
+                answer: "A constant",
+                explanation: "The variable not being integrated is treated as a constant during that step."
+            },
+
+            {
+                q: "Which of the following is a common application of double integrals?",
+                options: [
+                    "Finding the mass of a thin plate with varying density",
+                    "Finding the roots of a quadratic equation",
+                    "Computing the slope of a tangent line",
+                    "Solving a system of linear equations"
+                ],
+                answer: "Finding the mass of a thin plate with varying density",
+                explanation: "Double integrals are commonly used to compute mass, volume, probability, heat distribution, and other accumulated quantities over regions."
+            }
+
+        ]
+
+    },
+
+    "calculus3-unit4-lesson2": {
+
+        title: "Double Integrals over General Regions",
+
+        subtitle: "Learn how to evaluate double integrals over non-rectangular regions using variable limits of integration.",
+
+        body: `
+
+<h2>Double Integrals over General Regions</h2>
+
+<p>Not every region in the plane is a rectangle. Many practical problems involve curved boundaries such as circles, parabolas, triangles, or irregular shapes. To integrate over these regions, we use <strong>variable limits of integration</strong>.</p>
+
+<p>General regions allow double integrals to model much more realistic situations in science, engineering, economics, and physics.</p>
+
+<h3>General Regions</h3>
+
+<p>A general region is one whose boundaries are described by equations rather than constant values.</p>
+
+<p>For example, a region may be bounded by:</p>
+
+<ul>
+
+<li>A parabola</li>
+
+<li>A line</li>
+
+<li>A circle</li>
+
+<li>Another curve</li>
+
+</ul>
+
+<p>Unlike rectangular regions, the limits of one variable depend on the value of the other variable.</p>
+
+<h3>Type I Regions</h3>
+
+<p>A <strong>Type I region</strong> is described by vertical slices.</p>
+
+<p>The x-values remain between two constants.</p>
+
+<p>For each x-value, the y-values vary between two functions.</p>
+
+<p>The limits have the general form:</p>
+
+<ul>
+
+<li>a ≤ x ≤ b</li>
+
+<li>g₁(x) ≤ y ≤ g₂(x)</li>
+
+</ul>
+
+<p>We integrate with respect to y first, followed by x.</p>
+
+<h3>Type II Regions</h3>
+
+<p>A <strong>Type II region</strong> is described by horizontal slices.</p>
+
+<p>The y-values remain between two constants.</p>
+
+<p>For each y-value, the x-values vary between two functions.</p>
+
+<p>The limits have the general form:</p>
+
+<ul>
+
+<li>c ≤ y ≤ d</li>
+
+<li>h₁(y) ≤ x ≤ h₂(y)</li>
+
+</ul>
+
+<p>We integrate with respect to x first, followed by y.</p>
+
+<h3>Choosing the Order of Integration</h3>
+
+<p>Many regions can be described using either vertical or horizontal slices.</p>
+
+<p>Choosing the easier order of integration often simplifies the calculations considerably.</p>
+
+<p>Sometimes one order requires complicated limits while the other produces simple expressions.</p>
+
+<h3>Example</h3>
+
+<p>Suppose the region is bounded by:</p>
+
+<ul>
+
+<li>y = x²</li>
+
+<li>y = 4</li>
+
+</ul>
+
+<p>Using vertical slices:</p>
+
+<ul>
+
+<li>x ranges from -2 to 2.</li>
+
+<li>For each x, y ranges from x² to 4.</li>
+
+</ul>
+
+<p>This produces a Type I integral.</p>
+
+<h3>Sketching the Region</h3>
+
+<p>Before evaluating a double integral over a general region, it is helpful to sketch the boundaries.</p>
+
+<p>A sketch helps identify:</p>
+
+<ul>
+
+<li>The shape of the region</li>
+
+<li>The correct limits</li>
+
+<li>The easiest order of integration</li>
+
+</ul>
+
+<p>Drawing a picture can prevent mistakes when determining the limits.</p>
+
+<h3>Applications</h3>
+
+<p>General regions appear naturally in many applications.</p>
+
+<ul>
+
+<li>Calculating the area of irregular regions</li>
+
+<li>Computing the volume under curved surfaces</li>
+
+<li>Finding the mass of objects with curved boundaries</li>
+
+<li>Modeling lakes, forests, and geographic regions</li>
+
+<li>Engineering design involving curved components</li>
+
+<li>Fluid flow through irregular channels</li>
+
+<li>Heat transfer across non-rectangular plates</li>
+
+</ul>
+
+<p>Learning to integrate over general regions prepares us for even more powerful coordinate systems, such as polar coordinates, which will be introduced in the next lesson.</p>
+
+`,
+        questions: [
+
+            {
+                q: "A general region differs from a rectangular region because:",
+                options: [
+                    "Its boundaries may be curves or functions",
+                    "It always has four straight sides",
+                    "It only contains rectangles",
+                    "It cannot be integrated"
+                ],
+                answer: "Its boundaries may be curves or functions",
+                explanation: "General regions often have curved boundaries, requiring variable limits of integration."
+            },
+
+            {
+                q: "The limits of integration for a general region are often:",
+                options: [
+                    "Functions of another variable",
+                    "Always constants",
+                    "Always equal",
+                    "Undefined"
+                ],
+                answer: "Functions of another variable",
+                explanation: "Unlike rectangular regions, one set of limits typically depends on the other variable."
+            },
+
+            {
+                q: "A Type I region is described using:",
+                options: [
+                    "Vertical slices",
+                    "Horizontal slices",
+                    "Circular slices",
+                    "Diagonal slices"
+                ],
+                answer: "Vertical slices",
+                explanation: "Type I regions are divided into vertical slices where y varies between functions of x."
+            },
+
+            {
+                q: "For a Type I region, the x-values usually vary:",
+                options: [
+                    "Between two constants",
+                    "Between two functions of y",
+                    "From negative infinity to positive infinity",
+                    "Along a circle"
+                ],
+                answer: "Between two constants",
+                explanation: "In a Type I region, x is bounded by constants while y varies between functions."
+            },
+
+            {
+                q: "For a Type I region, the y-values vary:",
+                options: [
+                    "Between two functions of x",
+                    "Between two constants",
+                    "Between two circles",
+                    "Only above the x-axis"
+                ],
+                answer: "Between two functions of x",
+                explanation: "Each vertical slice begins and ends at functions of x."
+            },
+
+            {
+                q: "A Type II region is described using:",
+                options: [
+                    "Horizontal slices",
+                    "Vertical slices",
+                    "Polar coordinates",
+                    "Three-dimensional slices"
+                ],
+                answer: "Horizontal slices",
+                explanation: "Type II regions are divided into horizontal slices where x varies between functions of y."
+            },
+
+            {
+                q: "For a Type II region, the y-values usually vary:",
+                options: [
+                    "Between two constants",
+                    "Between two functions of x",
+                    "From negative infinity to positive infinity",
+                    "Along a parabola"
+                ],
+                answer: "Between two constants",
+                explanation: "In a Type II region, y is bounded by constants while x varies between functions."
+            },
+
+            {
+                q: "Before setting up a double integral over a general region, it is usually helpful to:",
+                options: [
+                    "Sketch the region",
+                    "Take the derivative",
+                    "Convert to polar coordinates immediately",
+                    "Compute the gradient"
+                ],
+                answer: "Sketch the region",
+                explanation: "A sketch helps identify the boundaries, limits, and easiest order of integration."
+            },
+
+            {
+                q: "Changing the order of integration may:",
+                options: [
+                    "Simplify the calculation",
+                    "Always change the answer",
+                    "Make the region rectangular",
+                    "Eliminate one variable"
+                ],
+                answer: "Simplify the calculation",
+                explanation: "Choosing the most convenient order of integration often makes the limits much easier to determine."
+            },
+
+            {
+                q: "Double integrals over general regions are commonly used to:",
+                options: [
+                    "Calculate quantities over regions with curved boundaries",
+                    "Find the roots of quadratic equations",
+                    "Compute vector magnitudes",
+                    "Differentiate implicit functions"
+                ],
+                answer: "Calculate quantities over regions with curved boundaries",
+                explanation: "General regions allow us to model realistic shapes found in engineering, science, economics, and physics."
+            }
+
+        ]
+
+    },
+    "calculus3-unit4-lesson3": {
+
+        title: "Double Integrals in Polar Coordinates",
+
+        subtitle: "Learn how polar coordinates simplify double integrals over circular and radially symmetric regions.",
+
+        body: `
+
+<h2>Double Integrals in Polar Coordinates</h2>
+
+<p>Some regions are difficult to describe using rectangular coordinates. Circles, sectors, and other curved regions often require complicated limits when using x and y. In these situations, <strong>polar coordinates</strong> provide a much simpler way to evaluate double integrals.</p>
+
+<p>Instead of locating a point by its horizontal and vertical distances, polar coordinates describe a point using:</p>
+
+<ul>
+
+<li>The distance from the origin (r)</li>
+
+<li>The angle measured from the positive x-axis (θ)</li>
+
+</ul>
+
+<h3>Converting Between Coordinate Systems</h3>
+
+<p>The relationships between rectangular and polar coordinates are:</p>
+
+<ul>
+
+<li>x = r cos θ</li>
+
+<li>y = r sin θ</li>
+
+<li>r² = x² + y²</li>
+
+<li>tan θ = y/x (when defined)</li>
+
+</ul>
+
+<p>These formulas allow us to convert functions and regions between coordinate systems.</p>
+
+<h3>Why Use Polar Coordinates?</h3>
+
+<p>Polar coordinates greatly simplify problems involving:</p>
+
+<ul>
+
+<li>Circles</li>
+
+<li>Disks</li>
+
+<li>Annuli (rings)</li>
+
+<li>Sectors</li>
+
+<li>Radially symmetric regions</li>
+
+</ul>
+
+<p>For example, the circle</p>
+
+<p>x² + y² ≤ 9</p>
+
+<p>becomes simply</p>
+
+<p>0 ≤ r ≤ 3</p>
+
+<p>0 ≤ θ ≤ 2π</p>
+
+<p>These limits are much easier to work with.</p>
+
+<h3>The Area Element in Polar Coordinates</h3>
+
+<p>When changing from rectangular coordinates to polar coordinates, the small area element changes.</p>
+
+<p>Instead of dA = dx dy, we use:</p>
+
+<p>dA = r dr dθ</p>
+
+<p>The extra factor of <strong>r</strong> accounts for the fact that the area of each small polar sector increases as the distance from the origin increases.</p>
+
+<p>It is very important not to forget this factor when evaluating double integrals in polar coordinates.</p>
+
+<h3>Evaluating Double Integrals</h3>
+
+<p>To evaluate a double integral using polar coordinates:</p>
+
+<ol>
+
+<li>Sketch the region.</li>
+
+<li>Determine the limits for r and θ.</li>
+
+<li>Rewrite the function using polar coordinates.</li>
+
+<li>Replace dA with r dr dθ.</li>
+
+<li>Evaluate the iterated integral.</li>
+
+</ol>
+
+<h3>Example</h3>
+
+<p>Suppose we want to integrate over the disk:</p>
+
+<p>x² + y² ≤ 4</p>
+
+<p>In polar coordinates, this becomes:</p>
+
+<ul>
+
+<li>0 ≤ r ≤ 2</li>
+
+<li>0 ≤ θ ≤ 2π</li>
+
+</ul>
+
+<p>The circular region becomes much easier to describe than it would using rectangular coordinates.</p>
+
+<h3>Applications</h3>
+
+<p>Polar coordinates are used whenever circular symmetry appears.</p>
+
+<ul>
+
+<li>Calculating areas of circles and sectors</li>
+
+<li>Finding volumes beneath circular surfaces</li>
+
+<li>Modeling planetary motion</li>
+
+<li>Electromagnetic fields</li>
+
+<li>Fluid flow around pipes</li>
+
+<li>Heat distribution in circular plates</li>
+
+<li>Engineering design</li>
+
+<li>Computer graphics</li>
+
+</ul>
+
+<p>Polar coordinates are one of the most powerful coordinate systems in multivariable calculus because they transform many difficult integrals into much simpler ones.</p>
+
+`,
+        questions: [
+
+            {
+                q: "Polar coordinates describe a point using:",
+                options: [
+                    "A distance and an angle",
+                    "Two horizontal distances",
+                    "Two vertical distances",
+                    "A slope and an intercept"
+                ],
+                answer: "A distance and an angle",
+                explanation: "A point in polar coordinates is identified by its distance from the origin (r) and its angle (θ)."
+            },
+
+            {
+                q: "In polar coordinates, the variable r represents:",
+                options: [
+                    "The distance from the origin",
+                    "The angle from the x-axis",
+                    "The radius of every circle",
+                    "The area of the region"
+                ],
+                answer: "The distance from the origin",
+                explanation: "The variable r measures how far a point is from the origin."
+            },
+
+            {
+                q: "The variable θ represents:",
+                options: [
+                    "The angle measured from the positive x-axis",
+                    "The slope of a line",
+                    "The distance from the origin",
+                    "The circumference of a circle"
+                ],
+                answer: "The angle measured from the positive x-axis",
+                explanation: "The angle θ is measured counterclockwise from the positive x-axis."
+            },
+
+            {
+                q: "Which equation converts polar coordinates to rectangular coordinates?",
+                options: [
+                    "x = r cos θ",
+                    "x = r²",
+                    "x = θ cos r",
+                    "x = r tan θ"
+                ],
+                answer: "x = r cos θ",
+                explanation: "The rectangular x-coordinate is given by x = r cos θ."
+            },
+
+            {
+                q: "Which equation converts polar coordinates to rectangular coordinates?",
+                options: [
+                    "y = r sin θ",
+                    "y = r cos θ",
+                    "y = θ sin r",
+                    "y = r²"
+                ],
+                answer: "y = r sin θ",
+                explanation: "The rectangular y-coordinate is given by y = r sin θ."
+            },
+
+            {
+                q: "The relationship between rectangular and polar coordinates is:",
+                options: [
+                    "r² = x² + y²",
+                    "r = x + y",
+                    "r = x² − y²",
+                    "r = xy"
+                ],
+                answer: "r² = x² + y²",
+                explanation: "The Pythagorean Theorem gives the relationship between r, x, and y."
+            },
+
+            {
+                q: "When changing to polar coordinates, the area element dA becomes:",
+                options: [
+                    "r dr dθ",
+                    "dr dθ",
+                    "dx dy",
+                    "r² dr dθ"
+                ],
+                answer: "r dr dθ",
+                explanation: "The extra factor of r accounts for the increasing area of polar sectors as the distance from the origin increases."
+            },
+
+            {
+                q: "Why is the extra factor of r included in the polar area element?",
+                options: [
+                    "To account for the changing size of area elements farther from the origin",
+                    "To simplify differentiation",
+                    "To eliminate the angle θ",
+                    "To convert the function into a derivative"
+                ],
+                answer: "To account for the changing size of area elements farther from the origin",
+                explanation: "As r increases, the same change in angle covers a larger arc length, so the area element grows proportionally."
+            },
+
+            {
+                q: "Polar coordinates are especially useful for regions shaped like:",
+                options: [
+                    "Circles and sectors",
+                    "Rectangles only",
+                    "Squares only",
+                    "Triangles only"
+                ],
+                answer: "Circles and sectors",
+                explanation: "Circular and radially symmetric regions are much easier to describe using polar coordinates."
+            },
+
+            {
+                q: "Which of the following is a common application of double integrals in polar coordinates?",
+                options: [
+                    "Finding the volume under a circular surface",
+                    "Finding the roots of a quadratic equation",
+                    "Computing the slope of a tangent line",
+                    "Solving systems of linear equations"
+                ],
+                answer: "Finding the volume under a circular surface",
+                explanation: "Polar coordinates simplify many problems involving circular regions, such as computing areas, volumes, and physical quantities."
+            }
+
+        ]
+
+    },
+    "calculus3-unit4-lesson4": {
+
+        title: "Triple Integrals",
+
+        subtitle: "Learn how triple integrals extend double integrals to three-dimensional regions and calculate volume, mass, and other accumulated quantities.",
+
+        body: `
+
+<h2>Triple Integrals</h2>
+
+<p>Just as double integrals extend single-variable integration to two-dimensional regions, <strong>triple integrals</strong> extend integration into three-dimensional space.</p>
+
+<p>Instead of adding tiny line segments or tiny rectangles, triple integrals add together infinitely many tiny boxes that fill a three-dimensional solid.</p>
+
+<p>Triple integrals are used to compute:</p>
+
+<ul>
+
+<li>Volumes of three-dimensional solids</li>
+
+<li>Mass of objects with varying density</li>
+
+<li>Total electric charge</li>
+
+<li>Total heat energy</li>
+
+<li>Probability in three dimensions</li>
+
+<li>Average values over solid regions</li>
+
+</ul>
+
+<h3>Three-Dimensional Regions</h3>
+
+<p>A triple integral is evaluated over a solid region, usually denoted by the letter <strong>E</strong>.</p>
+
+<p>The region may be bounded by planes, cylinders, spheres, cones, or other surfaces.</p>
+
+<p>Each point inside the solid has three coordinates:</p>
+
+<ul>
+
+<li>x</li>
+
+<li>y</li>
+
+<li>z</li>
+
+</ul>
+
+<h3>The Triple Integral</h3>
+
+<p>The notation for a triple integral is:</p>
+
+<p>∭<sub>E</sub> f(x,y,z) dV</p>
+
+<p>Here:</p>
+
+<ul>
+
+<li>E represents the three-dimensional region.</li>
+
+<li>f(x,y,z) is the function being accumulated.</li>
+
+<li>dV represents an infinitesimally small volume element.</li>
+
+</ul>
+
+<h3>Iterated Triple Integrals</h3>
+
+<p>Triple integrals are usually evaluated one variable at a time.</p>
+
+<p>For example, we may integrate in the order:</p>
+
+<ul>
+
+<li>z first</li>
+
+<li>then y</li>
+
+<li>finally x</li>
+
+</ul>
+
+<p>Other orders are also possible, depending on which produces the simplest limits of integration.</p>
+
+<h3>Example Region</h3>
+
+<p>Suppose a solid box is bounded by:</p>
+
+<ul>
+
+<li>0 ≤ x ≤ 2</li>
+
+<li>0 ≤ y ≤ 3</li>
+
+<li>0 ≤ z ≤ 4</li>
+
+</ul>
+
+<p>This is the three-dimensional equivalent of a rectangular region.</p>
+
+<p>The limits are all constant, making the integral straightforward to evaluate.</p>
+
+<h3>Volume Using Triple Integrals</h3>
+
+<p>If the function equals 1 throughout the solid, the triple integral simply computes the volume of the region.</p>
+
+<p>This is similar to using a double integral of 1 to compute area.</p>
+
+<h3>Mass Using Triple Integrals</h3>
+
+<p>If the density varies throughout the object, we integrate the density function over the entire solid.</p>
+
+<p>This allows us to calculate the total mass even when different parts of the object have different densities.</p>
+
+<h3>Changing the Order of Integration</h3>
+
+<p>As with double integrals, the order of integration may often be changed.</p>
+
+<p>Choosing the easiest order can greatly simplify the computation, especially for irregular solids.</p>
+
+<h3>Applications</h3>
+
+<p>Triple integrals are widely used throughout science and engineering.</p>
+
+<ul>
+
+<li>Finding the volume of complex solids</li>
+
+<li>Computing mass with variable density</li>
+
+<li>Modeling groundwater flow</li>
+
+<li>Calculating heat distribution inside materials</li>
+
+<li>Electromagnetic field analysis</li>
+
+<li>Fluid mechanics</li>
+
+<li>Structural engineering</li>
+
+<li>Medical imaging</li>
+
+</ul>
+
+<p>Triple integrals allow mathematicians, engineers, and scientists to analyze quantities distributed throughout three-dimensional space, making them one of the most powerful tools in multivariable calculus.</p>
+
+`,
+        questions: [
+
+            {
+                q: "A triple integral is used to measure accumulation over:",
+                options: [
+                    "A three-dimensional region",
+                    "A two-dimensional region",
+                    "A line segment",
+                    "A single point"
+                ],
+                answer: "A three-dimensional region",
+                explanation: "Triple integrals extend integration to three-dimensional solids."
+            },
+
+            {
+                q: "A triple integral adds together infinitely many tiny:",
+                options: [
+                    "Boxes",
+                    "Rectangles",
+                    "Line segments",
+                    "Circles"
+                ],
+                answer: "Boxes",
+                explanation: "Triple integrals approximate a solid by summing tiny rectangular boxes (volume elements)."
+            },
+
+            {
+                q: "The region of integration for a triple integral is commonly denoted by:",
+                options: [
+                    "E",
+                    "R",
+                    "C",
+                    "S"
+                ],
+                answer: "E",
+                explanation: "The symbol E is commonly used to represent a three-dimensional solid region."
+            },
+
+            {
+                q: "In the notation ∭E f(x,y,z) dV, the symbol dV represents:",
+                options: [
+                    "An infinitesimally small volume element",
+                    "A derivative",
+                    "A direction vector",
+                    "A surface area element"
+                ],
+                answer: "An infinitesimally small volume element",
+                explanation: "The notation dV represents a tiny volume element used to build the entire solid."
+            },
+
+            {
+                q: "A point in three-dimensional space is described by the coordinates:",
+                options: [
+                    "(x, y, z)",
+                    "(x, y)",
+                    "(r, θ)",
+                    "(x)"
+                ],
+                answer: "(x, y, z)",
+                explanation: "Three-dimensional space requires three coordinates: x, y, and z."
+            },
+
+            {
+                q: "If f(x,y,z)=1 throughout a solid region, the triple integral computes the:",
+                options: [
+                    "Volume of the region",
+                    "Surface area of the region",
+                    "Average value of the function",
+                    "Gradient of the function"
+                ],
+                answer: "Volume of the region",
+                explanation: "Integrating the constant function 1 over a solid gives its volume."
+            },
+
+            {
+                q: "If f(x,y,z) represents density, the triple integral computes the:",
+                options: [
+                    "Mass of the solid",
+                    "Surface area of the solid",
+                    "Length of the boundary",
+                    "Maximum density"
+                ],
+                answer: "Mass of the solid",
+                explanation: "Integrating the density function over a solid gives its total mass."
+            },
+
+            {
+                q: "When evaluating a triple integral, the variables are usually integrated:",
+                options: [
+                    "One at a time",
+                    "All simultaneously",
+                    "In alphabetical order only",
+                    "Using only polar coordinates"
+                ],
+                answer: "One at a time",
+                explanation: "Triple integrals are evaluated as iterated integrals, integrating one variable at a time."
+            },
+
+            {
+                q: "Changing the order of integration may:",
+                options: [
+                    "Simplify the computation",
+                    "Always change the answer",
+                    "Make the region two-dimensional",
+                    "Eliminate one variable"
+                ],
+                answer: "Simplify the computation",
+                explanation: "Choosing a different order of integration can make determining the limits and evaluating the integral much easier."
+            },
+
+            {
+                q: "Which of the following is a common application of triple integrals?",
+                options: [
+                    "Finding the mass of a three-dimensional object with varying density",
+                    "Finding the roots of a quadratic equation",
+                    "Calculating the slope of a tangent line",
+                    "Factoring polynomials"
+                ],
+                answer: "Finding the mass of a three-dimensional object with varying density",
+                explanation: "Triple integrals are widely used to calculate mass, volume, heat, charge, and other accumulated quantities throughout three-dimensional regions."
+            }
+
+        ]
+
+    },
+
+    "calculus3-unit4-lesson5": {
+
+        title: "Change of Variables and Jacobians",
+
+        subtitle: "Learn how coordinate transformations and Jacobians simplify multiple integrals over complex regions.",
+
+        body: `
+
+<h2>Change of Variables and Jacobians</h2>
+
+<p>Some multiple integrals are difficult to evaluate because of complicated functions or irregular regions. One powerful technique for simplifying these problems is the <strong>change of variables</strong>. By introducing a new coordinate system, an integral can often become much easier to evaluate.</p>
+
+<p>Changing variables is similar to translating a problem into a language that is easier to understand. The shape of the region may become simpler, and the function itself may be easier to integrate.</p>
+
+<h3>Why Change Variables?</h3>
+
+<p>Many regions have boundaries that are difficult to describe using the original variables.</p>
+
+<p>For example:</p>
+
+<ul>
+
+<li>Ellipses</li>
+
+<li>Rotated regions</li>
+
+<li>Skewed coordinate systems</li>
+
+<li>Curved boundaries</li>
+
+</ul>
+
+<p>Introducing new variables often transforms these complicated regions into simple rectangles or circles.</p>
+
+<h3>Coordinate Transformations</h3>
+
+<p>A coordinate transformation replaces the original variables with new variables.</p>
+
+<p>For example, instead of working with x and y, we might define:</p>
+
+<ul>
+
+<li>x = x(u,v)</li>
+
+<li>y = y(u,v)</li>
+
+</ul>
+
+<p>The variables u and v describe the same points using a different coordinate system.</p>
+
+<h3>The Jacobian</h3>
+
+<p>When changing variables, the small area element also changes size.</p>
+
+<p>To account for this change, we multiply by a quantity called the <strong>Jacobian determinant</strong>.</p>
+
+<p>The Jacobian measures how areas or volumes are stretched or compressed by the transformation.</p>
+
+<p>Without the Jacobian, the integral would produce an incorrect result because the sizes of the small regions would no longer match the new coordinate system.</p>
+
+<h3>The Jacobian Matrix</h3>
+
+<p>For two variables, the Jacobian is computed from the matrix of first-order partial derivatives.</p>
+
+<p>The determinant of this matrix gives the scaling factor used in the integral.</p>
+
+<p>The absolute value of the Jacobian determinant is used because area and volume are always nonnegative.</p>
+
+<h3>Example</h3>
+
+<p>Suppose a transformation converts an ellipse into a unit circle.</p>
+
+<p>Instead of integrating over the complicated ellipse, we integrate over the much simpler circular region.</p>
+
+<p>The Jacobian automatically adjusts for the stretching caused by the transformation.</p>
+
+<h3>Relationship to Polar Coordinates</h3>
+
+<p>Polar coordinates are actually one of the most common examples of a change of variables.</p>
+
+<p>In polar coordinates, the Jacobian contributes the extra factor of <strong>r</strong> in the area element:</p>
+
+<p>dA = r dr dθ</p>
+
+<p>This factor is simply the Jacobian determinant for the polar coordinate transformation.</p>
+
+<h3>Applications</h3>
+
+<p>Change of variables and Jacobians are widely used in mathematics, science, and engineering.</p>
+
+<ul>
+
+<li>Evaluating difficult multiple integrals</li>
+
+<li>Probability and statistics</li>
+
+<li>Fluid dynamics</li>
+
+<li>Electromagnetic field analysis</li>
+
+<li>Mechanical engineering</li>
+
+<li>Computer graphics</li>
+
+<li>Economics</li>
+
+<li>Machine learning</li>
+
+</ul>
+
+<p>Coordinate transformations allow complicated regions and functions to become much simpler, while the Jacobian guarantees that the resulting integral still measures the correct area, volume, mass, or other accumulated quantity.</p>
+
+`,
+        questions: [
+
+            {
+                q: "The primary purpose of a change of variables is to:",
+                options: [
+                    "Simplify an integral by using a new coordinate system",
+                    "Increase the number of variables",
+                    "Eliminate all derivatives",
+                    "Convert an integral into a derivative"
+                ],
+                answer: "Simplify an integral by using a new coordinate system",
+                explanation: "Changing variables often transforms a difficult integral into one that is much easier to evaluate."
+            },
+
+            {
+                q: "A coordinate transformation:",
+                options: [
+                    "Replaces the original variables with new variables",
+                    "Removes variables from the function",
+                    "Always changes the value of the integral",
+                    "Converts an integral into a limit"
+                ],
+                answer: "Replaces the original variables with new variables",
+                explanation: "A coordinate transformation expresses the same points using a different set of variables."
+            },
+
+            {
+                q: "The Jacobian determinant accounts for:",
+                options: [
+                    "How areas or volumes are stretched or compressed",
+                    "The derivative of a single-variable function",
+                    "The slope of a tangent line",
+                    "The value of the function"
+                ],
+                answer: "How areas or volumes are stretched or compressed",
+                explanation: "The Jacobian measures how a transformation changes the size of small area or volume elements."
+            },
+
+            {
+                q: "When changing variables in a multiple integral, the Jacobian is used to:",
+                options: [
+                    "Adjust the area or volume element",
+                    "Find the gradient vector",
+                    "Compute partial derivatives",
+                    "Determine the domain"
+                ],
+                answer: "Adjust the area or volume element",
+                explanation: "The Jacobian ensures the transformed integral correctly represents the original area or volume."
+            },
+
+            {
+                q: "The Jacobian is computed from:",
+                options: [
+                    "A matrix of first-order partial derivatives",
+                    "A matrix of second-order partial derivatives",
+                    "The gradient vector only",
+                    "The Hessian matrix"
+                ],
+                answer: "A matrix of first-order partial derivatives",
+                explanation: "The Jacobian matrix consists of first-order partial derivatives of the transformation."
+            },
+
+            {
+                q: "Why is the absolute value of the Jacobian determinant used?",
+                options: [
+                    "Because area and volume are always nonnegative",
+                    "To simplify differentiation",
+                    "To eliminate negative coordinates",
+                    "To avoid partial derivatives"
+                ],
+                answer: "Because area and volume are always nonnegative",
+                explanation: "The absolute value ensures the scaling factor represents a positive area or volume."
+            },
+
+            {
+                q: "Polar coordinates are an example of:",
+                options: [
+                    "A change of variables",
+                    "A partial derivative",
+                    "A directional derivative",
+                    "A line integral"
+                ],
+                answer: "A change of variables",
+                explanation: "Polar coordinates transform rectangular coordinates into a new coordinate system."
+            },
+
+            {
+                q: "In polar coordinates, the extra factor in the area element is:",
+                options: [
+                    "r",
+                    "θ",
+                    "r²",
+                    "1/r"
+                ],
+                answer: "r",
+                explanation: "The factor r is the Jacobian determinant for the transformation from rectangular to polar coordinates."
+            },
+
+            {
+                q: "Changing variables is especially helpful for regions that are:",
+                options: [
+                    "Complicated, curved, or irregular",
+                    "Always rectangular",
+                    "One-dimensional",
+                    "Already simple to integrate"
+                ],
+                answer: "Complicated, curved, or irregular",
+                explanation: "Coordinate transformations often turn complicated regions into much simpler ones."
+            },
+
+            {
+                q: "Which of the following is a common application of change of variables and Jacobians?",
+                options: [
+                    "Evaluating difficult multiple integrals over complex regions",
+                    "Factoring polynomials",
+                    "Finding roots of quadratic equations",
+                    "Calculating simple arithmetic"
+                ],
+                answer: "Evaluating difficult multiple integrals over complex regions",
+                explanation: "Change of variables is widely used to simplify multiple integrals in mathematics, engineering, physics, probability, and many other fields."
+            }
+
+        ]
+
+    },
+
+    "calculus3-unit4-lesson6": {
+
+        title: "Applications of Multiple Integrals",
+
+        subtitle: "Learn how multiple integrals are used to calculate mass, center of mass, average value, moments of inertia, probability, and other real-world quantities.",
+
+        body: `
+
+<h2>Applications of Multiple Integrals</h2>
+
+<p>Multiple integrals are far more than mathematical exercises—they are powerful tools used to solve real-world problems involving quantities distributed over regions and throughout three-dimensional space.</p>
+
+<p>By integrating a function over an area or volume, we can determine total amounts, averages, centers of mass, probabilities, and many other physical quantities.</p>
+
+<h3>Mass of a Lamina</h3>
+
+<p>A <strong>lamina</strong> is a thin, flat object such as a sheet of metal or a plate.</p>
+
+<p>If every point has the same density, the mass is simply the density multiplied by the area.</p>
+
+<p>However, many objects have varying density.</p>
+
+<p>When density changes from point to point, a double integral computes the total mass by adding the contributions from every small piece of the region.</p>
+
+<h3>Mass of a Solid</h3>
+
+<p>Triple integrals extend this idea into three dimensions.</p>
+
+<p>If the density varies throughout a solid object, a triple integral computes the total mass by summing the density throughout the entire volume.</p>
+
+<p>This is commonly used when designing aircraft, automobiles, bridges, and manufactured components.</p>
+
+<h3>Center of Mass</h3>
+
+<p>The <strong>center of mass</strong> is the balancing point of an object.</p>
+
+<p>If the object were supported exactly at its center of mass, it would balance perfectly.</p>
+
+<p>Multiple integrals allow us to locate the center of mass even when the density is not uniform.</p>
+
+<p>This concept is essential in engineering, robotics, architecture, and biomechanics.</p>
+
+<h3>Average Value of a Function</h3>
+
+<p>Just as a single integral can determine the average value of a function over an interval, multiple integrals compute the average value over an entire region.</p>
+
+<p>This is useful when analyzing quantities such as:</p>
+
+<ul>
+
+<li>Average temperature across a surface</li>
+
+<li>Average rainfall over a geographic area</li>
+
+<li>Average population density</li>
+
+<li>Average pollution levels</li>
+
+</ul>
+
+<h3>Moments of Inertia</h3>
+
+<p>The <strong>moment of inertia</strong> measures how mass is distributed relative to an axis of rotation.</p>
+
+<p>Objects with more mass located farther from the axis require more torque to rotate.</p>
+
+<p>Engineers use multiple integrals to calculate moments of inertia when designing:</p>
+
+<ul>
+
+<li>Vehicle wheels</li>
+
+<li>Flywheels</li>
+
+<li>Mechanical gears</li>
+
+<li>Robotic arms</li>
+
+<li>Wind turbines</li>
+
+</ul>
+
+<h3>Probability</h3>
+
+<p>Multiple integrals are also used in probability and statistics.</p>
+
+<p>If a probability density function describes two or three random variables, integrating over a region determines the probability that the variables fall within that region.</p>
+
+<p>This idea is widely used in finance, economics, artificial intelligence, and data science.</p>
+
+<h3>Engineering and Scientific Applications</h3>
+
+<p>Multiple integrals appear throughout modern science and engineering.</p>
+
+<ul>
+
+<li>Fluid flow through pipes and rivers</li>
+
+<li>Heat transfer within materials</li>
+
+<li>Electromagnetic field analysis</li>
+
+<li>Structural engineering</li>
+
+<li>Medical imaging</li>
+
+<li>Climate modeling</li>
+
+<li>Computer graphics</li>
+
+<li>Machine learning</li>
+
+</ul>
+
+<h3>Summary</h3>
+
+<p>Multiple integrals provide one of the most versatile tools in mathematics. They allow us to measure accumulated quantities over areas and volumes, making it possible to solve complex real-world problems involving mass, balance, motion, energy, probability, and many other phenomena.</p>
+
+`,
+        questions: [
+
+            {
+                q: "Multiple integrals are primarily used to calculate:",
+                options: [
+                    "Accumulated quantities over areas and volumes",
+                    "Only derivatives",
+                    "Only limits",
+                    "Only slopes of curves"
+                ],
+                answer: "Accumulated quantities over areas and volumes",
+                explanation: "Multiple integrals measure accumulated quantities across two-dimensional regions and three-dimensional solids."
+            },
+
+            {
+                q: "A lamina is:",
+                options: [
+                    "A thin, flat object",
+                    "A three-dimensional sphere",
+                    "A curved surface only",
+                    "A line segment"
+                ],
+                answer: "A thin, flat object",
+                explanation: "A lamina is a thin plate or sheet that is treated as having negligible thickness."
+            },
+
+            {
+                q: "If the density of a lamina varies from point to point, its mass is found using:",
+                options: [
+                    "A double integral",
+                    "A single derivative",
+                    "A line integral",
+                    "A partial derivative"
+                ],
+                answer: "A double integral",
+                explanation: "A double integral sums the varying density over the entire two-dimensional region."
+            },
+
+            {
+                q: "If the density varies throughout a three-dimensional solid, its mass is found using:",
+                options: [
+                    "A triple integral",
+                    "A double integral",
+                    "A directional derivative",
+                    "A gradient"
+                ],
+                answer: "A triple integral",
+                explanation: "Triple integrals accumulate density throughout the entire volume of a solid."
+            },
+
+            {
+                q: "The center of mass is:",
+                options: [
+                    "The balancing point of an object",
+                    "The highest point of an object",
+                    "The geometric center only",
+                    "The point of maximum density"
+                ],
+                answer: "The balancing point of an object",
+                explanation: "The center of mass is the point where an object balances, taking its mass distribution into account."
+            },
+
+            {
+                q: "The average value of a function over a region can be computed using:",
+                options: [
+                    "A multiple integral",
+                    "A limit",
+                    "A partial derivative",
+                    "A tangent plane"
+                ],
+                answer: "A multiple integral",
+                explanation: "Multiple integrals are used to compute average values over areas and volumes."
+            },
+
+            {
+                q: "The moment of inertia measures:",
+                options: [
+                    "How mass is distributed relative to an axis of rotation",
+                    "The average density of an object",
+                    "The maximum height of a surface",
+                    "The slope of a tangent plane"
+                ],
+                answer: "How mass is distributed relative to an axis of rotation",
+                explanation: "The moment of inertia describes how difficult it is to rotate an object about an axis."
+            },
+
+            {
+                q: "Multiple integrals are used in probability to determine:",
+                options: [
+                    "The probability that variables lie within a region",
+                    "The derivative of a probability function",
+                    "The slope of a distribution",
+                    "The maximum value of a random variable"
+                ],
+                answer: "The probability that variables lie within a region",
+                explanation: "Integrating a probability density function over a region gives the probability of falling within that region."
+            },
+
+            {
+                q: "Which field commonly uses multiple integrals?",
+                options: [
+                    "Engineering, physics, data science, and medical imaging",
+                    "Only algebra",
+                    "Only geometry",
+                    "Only accounting"
+                ],
+                answer: "Engineering, physics, data science, and medical imaging",
+                explanation: "Multiple integrals have broad applications across science, engineering, technology, and medicine."
+            },
+
+            {
+                q: "Which statement best summarizes the applications of multiple integrals?",
+                options: [
+                    "They calculate quantities such as mass, volume, center of mass, average value, probability, and moments of inertia over regions and solids.",
+                    "They are only used to compute areas of rectangles.",
+                    "They replace all derivatives in calculus.",
+                    "They are only useful in theoretical mathematics."
+                ],
+                answer: "They calculate quantities such as mass, volume, center of mass, average value, probability, and moments of inertia over regions and solids.",
+                explanation: "Multiple integrals are powerful tools for solving a wide variety of real-world problems involving accumulated quantities."
+            }
+
+        ]
+
+    },
+
+    "calculus3-unit4-review": {
+
+        title: "Unit 4 Review",
+
+        subtitle: "Review Multiple Integrals before taking the Unit 4 Test.",
+
+        body: `
+
+<h2>Unit 4 Review</h2>
+
+<p>This review summarizes the major ideas from Unit 4. Multiple integrals extend integration from one dimension to two and three dimensions, allowing us to calculate accumulated quantities over regions and solids.</p>
+
+<h2>Lesson 1 Review: Double Integrals over Rectangular Regions</h2>
+
+<ul>
+
+<li>Double integrals measure accumulation over two-dimensional regions.</li>
+
+<li>Rectangular regions have constant limits for both variables.</li>
+
+<li>Double integrals are evaluated as iterated integrals.</li>
+
+<li>If the function equals 1, the integral computes the area of the region.</li>
+
+<li>If the function is positive, the integral computes the volume beneath the surface.</li>
+
+</ul>
+
+<h2>Lesson 2 Review: Double Integrals over General Regions</h2>
+
+<ul>
+
+<li>General regions often have curved boundaries.</li>
+
+<li>Variable limits describe the region of integration.</li>
+
+<li>Type I regions use vertical slices.</li>
+
+<li>Type II regions use horizontal slices.</li>
+
+<li>Sketching the region helps determine the correct limits.</li>
+
+</ul>
+
+<h2>Lesson 3 Review: Double Integrals in Polar Coordinates</h2>
+
+<ul>
+
+<li>Polar coordinates simplify circular and radially symmetric regions.</li>
+
+<li>x = r cos θ</li>
+
+<li>y = r sin θ</li>
+
+<li>r² = x² + y²</li>
+
+<li>The area element becomes dA = r dr dθ.</li>
+
+<li>The factor r is the Jacobian for the polar transformation.</li>
+
+</ul>
+
+<h2>Lesson 4 Review: Triple Integrals</h2>
+
+<ul>
+
+<li>Triple integrals measure accumulation over three-dimensional solids.</li>
+
+<li>The region is usually denoted by E.</li>
+
+<li>The volume element is dV.</li>
+
+<li>If the function equals 1, the triple integral computes volume.</li>
+
+<li>If the function represents density, the integral computes mass.</li>
+
+</ul>
+
+<h2>Lesson 5 Review: Change of Variables and Jacobians</h2>
+
+<ul>
+
+<li>Coordinate transformations simplify difficult integrals.</li>
+
+<li>The Jacobian accounts for stretching or compression.</li>
+
+<li>The Jacobian is computed from first-order partial derivatives.</li>
+
+<li>The absolute value of the Jacobian determinant is used.</li>
+
+<li>Polar coordinates are one example of a change of variables.</li>
+
+</ul>
+
+<h2>Lesson 6 Review: Applications of Multiple Integrals</h2>
+
+<ul>
+
+<li>Multiple integrals calculate mass and center of mass.</li>
+
+<li>They compute average values over regions.</li>
+
+<li>They determine moments of inertia.</li>
+
+<li>They compute probabilities over regions.</li>
+
+<li>They have important applications in science and engineering.</li>
+
+</ul>
+
+<h2>Important Concepts to Remember</h2>
+
+<ul>
+
+<li>Double integrals</li>
+
+<li>Rectangular regions</li>
+
+<li>General regions</li>
+
+<li>Type I regions</li>
+
+<li>Type II regions</li>
+
+<li>Iterated integrals</li>
+
+<li>Polar coordinates</li>
+
+<li>Coordinate transformations</li>
+
+<li>Jacobians</li>
+
+<li>Triple integrals</li>
+
+<li>Volume</li>
+
+<li>Mass</li>
+
+<li>Center of mass</li>
+
+<li>Average value</li>
+
+<li>Moments of inertia</li>
+
+<li>Probability density</li>
+
+</ul>
+
+<h2>Mixed Review Questions</h2>
+
+`,
+
+        questions: [
+
+            {
+                q: "A double integral measures accumulation over:",
+                options: [
+                    "A two-dimensional region",
+                    "A one-dimensional interval",
+                    "A three-dimensional solid",
+                    "A single point"
+                ],
+                answer: "A two-dimensional region",
+                explanation: "Double integrals accumulate quantities across an entire area."
+            },
+
+            {
+                q: "A rectangular region has:",
+                options: [
+                    "Constant limits of integration",
+                    "Curved boundaries only",
+                    "Variable limits only",
+                    "No boundaries"
+                ],
+                answer: "Constant limits of integration",
+                explanation: "Rectangular regions have constant lower and upper bounds."
+            },
+
+            {
+                q: "A double integral of f(x,y)=1 computes the:",
+                options: [
+                    "Area of the region",
+                    "Volume of a sphere",
+                    "Surface area",
+                    "Gradient"
+                ],
+                answer: "Area of the region",
+                explanation: "Integrating the constant function 1 over a region gives its area."
+            },
+
+            {
+                q: "General regions usually have:",
+                options: [
+                    "Variable limits of integration",
+                    "Constant limits only",
+                    "No limits",
+                    "Only circular boundaries"
+                ],
+                answer: "Variable limits of integration",
+                explanation: "General regions often require one set of limits to depend on another variable."
+            },
+
+            {
+                q: "Type I regions are described using:",
+                options: [
+                    "Vertical slices",
+                    "Horizontal slices",
+                    "Polar slices",
+                    "Three-dimensional slices"
+                ],
+                answer: "Vertical slices",
+                explanation: "Type I regions use vertical slices where y varies between functions of x."
+            },
+
+            {
+                q: "Type II regions are described using:",
+                options: [
+                    "Horizontal slices",
+                    "Vertical slices",
+                    "Circular slices",
+                    "Diagonal slices"
+                ],
+                answer: "Horizontal slices",
+                explanation: "Type II regions use horizontal slices where x varies between functions of y."
+            },
+
+            {
+                q: "Polar coordinates describe a point using:",
+                options: [
+                    "A distance and an angle",
+                    "Two distances",
+                    "Two angles",
+                    "Three coordinates"
+                ],
+                answer: "A distance and an angle",
+                explanation: "Polar coordinates use r and θ to locate points."
+            },
+
+            {
+                q: "The polar area element is:",
+                options: [
+                    "r dr dθ",
+                    "dr dθ",
+                    "dx dy",
+                    "r² dr dθ"
+                ],
+                answer: "r dr dθ",
+                explanation: "The Jacobian contributes the factor r."
+            },
+
+            {
+                q: "A triple integral measures accumulation over:",
+                options: [
+                    "A three-dimensional region",
+                    "A line",
+                    "A plane only",
+                    "A circle"
+                ],
+                answer: "A three-dimensional region",
+                explanation: "Triple integrals extend integration into three-dimensional space."
+            },
+
+            {
+                q: "If f(x,y,z)=1, a triple integral computes:",
+                options: [
+                    "The volume of the solid",
+                    "The surface area",
+                    "The density",
+                    "The gradient"
+                ],
+                answer: "The volume of the solid",
+                explanation: "Integrating the constant function 1 over a solid gives its volume."
+            },
+            {
+                q: "The symbol dV represents:",
+                options: [
+                    "An infinitesimally small volume element",
+                    "A derivative",
+                    "A direction vector",
+                    "A surface area element"
+                ],
+                answer: "An infinitesimally small volume element",
+                explanation: "The notation dV represents a tiny piece of volume used in a triple integral."
+            },
+
+            {
+                q: "The Jacobian determinant accounts for:",
+                options: [
+                    "The stretching or compression of area or volume",
+                    "The slope of a tangent line",
+                    "The value of the function",
+                    "The derivative of the function"
+                ],
+                answer: "The stretching or compression of area or volume",
+                explanation: "The Jacobian adjusts the area or volume element after a change of variables."
+            },
+
+            {
+                q: "The Jacobian is computed from:",
+                options: [
+                    "A matrix of first-order partial derivatives",
+                    "A matrix of second-order partial derivatives",
+                    "The gradient vector",
+                    "The Hessian matrix"
+                ],
+                answer: "A matrix of first-order partial derivatives",
+                explanation: "The Jacobian matrix contains the first-order partial derivatives of the coordinate transformation."
+            },
+
+            {
+                q: "When changing variables, we use the absolute value of the Jacobian because:",
+                options: [
+                    "Area and volume must remain nonnegative",
+                    "It makes differentiation easier",
+                    "It removes negative coordinates",
+                    "It eliminates one variable"
+                ],
+                answer: "Area and volume must remain nonnegative",
+                explanation: "The absolute value ensures the scaling factor correctly represents positive area or volume."
+            },
+
+            {
+                q: "Polar coordinates are an example of:",
+                options: [
+                    "A change of variables",
+                    "A line integral",
+                    "A directional derivative",
+                    "A partial derivative"
+                ],
+                answer: "A change of variables",
+                explanation: "Polar coordinates transform rectangular coordinates into a new coordinate system."
+            },
+
+            {
+                q: "The center of mass is:",
+                options: [
+                    "The balancing point of an object",
+                    "The highest point of an object",
+                    "The geometric center only",
+                    "The point of greatest density"
+                ],
+                answer: "The balancing point of an object",
+                explanation: "The center of mass accounts for how mass is distributed throughout an object."
+            },
+
+            {
+                q: "The moment of inertia measures:",
+                options: [
+                    "How mass is distributed relative to an axis of rotation",
+                    "The average density of an object",
+                    "The total surface area",
+                    "The probability of an event"
+                ],
+                answer: "How mass is distributed relative to an axis of rotation",
+                explanation: "The moment of inertia describes an object's resistance to rotational motion."
+            },
+
+            {
+                q: "Multiple integrals can be used to compute:",
+                options: [
+                    "The average value of a function over a region",
+                    "Only derivatives",
+                    "Only limits",
+                    "Only tangent planes"
+                ],
+                answer: "The average value of a function over a region",
+                explanation: "Multiple integrals allow us to calculate average values over two- and three-dimensional regions."
+            },
+
+            {
+                q: "In probability, integrating a probability density function over a region gives:",
+                options: [
+                    "The probability that the variables lie within that region",
+                    "The derivative of the probability",
+                    "The average density",
+                    "The maximum probability"
+                ],
+                answer: "The probability that the variables lie within that region",
+                explanation: "The integral of a probability density function over a region equals the probability of the variables falling within that region."
+            },
+
+            {
+                q: "Which coordinate system is often the best choice for circular regions?",
+                options: [
+                    "Polar coordinates",
+                    "Rectangular coordinates",
+                    "Spherical coordinates only",
+                    "Cylindrical coordinates only"
+                ],
+                answer: "Polar coordinates",
+                explanation: "Polar coordinates greatly simplify integrals over circles, disks, sectors, and other radially symmetric regions."
+            },
+
+            {
+                q: "Which statement about multiple integrals is TRUE?",
+                options: [
+                    "They can be used to calculate area, volume, mass, probability, and many other accumulated quantities.",
+                    "They are only used to calculate area.",
+                    "They can only be evaluated over rectangular regions.",
+                    "They always require polar coordinates."
+                ],
+                answer: "They can be used to calculate area, volume, mass, probability, and many other accumulated quantities.",
+                explanation: "Multiple integrals are versatile tools used across mathematics, science, engineering, economics, and data science."
+            },
+
+            {
+                q: "Sketching the region before setting up an integral helps determine:",
+                options: [
+                    "The correct limits of integration",
+                    "The derivative of the function",
+                    "The gradient vector",
+                    "The Jacobian matrix"
+                ],
+                answer: "The correct limits of integration",
+                explanation: "A sketch makes it much easier to identify boundaries and choose the appropriate order of integration."
+            },
+
+            {
+                q: "Changing the order of integration is useful because it:",
+                options: [
+                    "May simplify the computation",
+                    "Always changes the answer",
+                    "Removes one variable",
+                    "Eliminates the Jacobian"
+                ],
+                answer: "May simplify the computation",
+                explanation: "Choosing a different order often makes the limits easier to describe and the integral easier to evaluate."
+            },
+
+            {
+                q: "The extra factor r in the polar area element comes from:",
+                options: [
+                    "The Jacobian of the polar coordinate transformation",
+                    "The derivative of θ",
+                    "The radius of the circle only",
+                    "The gradient vector"
+                ],
+                answer: "The Jacobian of the polar coordinate transformation",
+                explanation: "The Jacobian determinant for polar coordinates is r, producing the area element r dr dθ."
+            },
+
+            {
+                q: "Which statement best summarizes Unit 4?",
+                options: [
+                    "Multiple integrals extend integration to regions and solids, allowing us to compute quantities such as area, volume, mass, probability, center of mass, and moments of inertia.",
+                    "They are only useful for finding areas of rectangles.",
+                    "They replace derivatives in multivariable calculus.",
+                    "They apply only to theoretical mathematics."
+                ],
+                answer: "Multiple integrals extend integration to regions and solids, allowing us to compute quantities such as area, volume, mass, probability, center of mass, and moments of inertia.",
+                explanation: "Unit 4 introduced double and triple integrals, coordinate transformations, Jacobians, and many practical applications of multiple integration."
+            }
+
+        ]
+
+    },
+
+    "calculus3-unit4-test": {
+
+        title: "Unit 4 Test",
+
+        subtitle: "Test your understanding of Multiple Integrals, Coordinate Transformations, and Applications.",
+
+        body: `
+
+<h2>Unit 4 Test</h2>
+
+<p>This assessment covers everything learned in Unit 4.</p>
+
+<p>The test includes questions from:</p>
+
+<ul>
+
+<li>Double Integrals over Rectangular Regions</li>
+
+<li>Double Integrals over General Regions</li>
+
+<li>Double Integrals in Polar Coordinates</li>
+
+<li>Triple Integrals</li>
+
+<li>Change of Variables and Jacobians</li>
+
+<li>Applications of Multiple Integrals</li>
+
+</ul>
+
+<p>Select the best answer for each question before checking your results.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "A double integral measures accumulation over:",
+                options: [
+                    "A two-dimensional region",
+                    "A line segment",
+                    "A three-dimensional solid",
+                    "A single point"
+                ],
+                answer: "A two-dimensional region",
+                explanation: "Double integrals extend integration over areas."
+            },
+
+            {
+                q: "A rectangular region has:",
+                options: [
+                    "Constant limits of integration",
+                    "Curved boundaries",
+                    "Variable limits only",
+                    "No boundaries"
+                ],
+                answer: "Constant limits of integration",
+                explanation: "Rectangular regions are bounded by constant values of x and y."
+            },
+
+            {
+                q: "The notation ∬R f(x,y) dA represents:",
+                options: [
+                    "A double integral over a region",
+                    "A triple integral",
+                    "A line integral",
+                    "A partial derivative"
+                ],
+                answer: "A double integral over a region",
+                explanation: "The symbol ∬ denotes integration over a two-dimensional region."
+            },
+
+            {
+                q: "If f(x,y)=1 everywhere on a region, the double integral computes:",
+                options: [
+                    "The area of the region",
+                    "The volume of a solid",
+                    "The gradient",
+                    "The average value"
+                ],
+                answer: "The area of the region",
+                explanation: "Integrating the constant function 1 over a region gives its area."
+            },
+
+            {
+                q: "General regions usually require:",
+                options: [
+                    "Variable limits of integration",
+                    "Constant limits only",
+                    "No limits",
+                    "Polar coordinates only"
+                ],
+                answer: "Variable limits of integration",
+                explanation: "Curved boundaries are described using limits that depend on another variable."
+            },
+
+            {
+                q: "Type I regions are described using:",
+                options: [
+                    "Vertical slices",
+                    "Horizontal slices",
+                    "Circular slices",
+                    "Diagonal slices"
+                ],
+                answer: "Vertical slices",
+                explanation: "Type I regions use vertical slices where y varies between functions of x."
+            },
+
+            {
+                q: "Type II regions are described using:",
+                options: [
+                    "Horizontal slices",
+                    "Vertical slices",
+                    "Polar slices",
+                    "Spherical slices"
+                ],
+                answer: "Horizontal slices",
+                explanation: "Type II regions use horizontal slices where x varies between functions of y."
+            },
+
+            {
+                q: "Before setting up a double integral over a general region, it is usually best to:",
+                options: [
+                    "Sketch the region",
+                    "Compute the derivative",
+                    "Find the gradient",
+                    "Change variables immediately"
+                ],
+                answer: "Sketch the region",
+                explanation: "A sketch helps determine the boundaries and correct limits of integration."
+            },
+
+            {
+                q: "Polar coordinates describe a point using:",
+                options: [
+                    "A distance and an angle",
+                    "Two distances",
+                    "Three coordinates",
+                    "A slope and an intercept"
+                ],
+                answer: "A distance and an angle",
+                explanation: "Polar coordinates use r and θ."
+            },
+
+            {
+                q: "Which equation relates rectangular and polar coordinates?",
+                options: [
+                    "r²=x²+y²",
+                    "r=x+y",
+                    "r=x²−y²",
+                    "r=xy"
+                ],
+                answer: "r²=x²+y²",
+                explanation: "The Pythagorean Theorem gives the relationship between rectangular and polar coordinates."
+            },
+
+            {
+                q: "When converting to polar coordinates, dA becomes:",
+                options: [
+                    "r dr dθ",
+                    "dr dθ",
+                    "dx dy",
+                    "r² dr dθ"
+                ],
+                answer: "r dr dθ",
+                explanation: "The extra factor r is the Jacobian determinant."
+            },
+
+            {
+                q: "The extra factor r appears because:",
+                options: [
+                    "The area element changes size",
+                    "The derivative changes",
+                    "The function becomes linear",
+                    "The limits become constant"
+                ],
+                answer: "The area element changes size",
+                explanation: "The Jacobian accounts for stretching of the coordinate system."
+            },
+
+            {
+                q: "A triple integral measures accumulation over:",
+                options: [
+                    "A three-dimensional solid",
+                    "A two-dimensional region",
+                    "A curve",
+                    "A point"
+                ],
+                answer: "A three-dimensional solid",
+                explanation: "Triple integrals extend integration into three dimensions."
+            },
+            {
+                q: "The symbol E usually represents:",
+                options: [
+                    "A three-dimensional region of integration",
+                    "A two-dimensional region",
+                    "The error in an approximation",
+                    "The expected value"
+                ],
+                answer: "A three-dimensional region of integration",
+                explanation: "The letter E commonly denotes the solid region over which a triple integral is evaluated."
+            },
+
+            {
+                q: "The symbol dV represents:",
+                options: [
+                    "An infinitesimally small volume element",
+                    "A derivative",
+                    "A direction vector",
+                    "A surface area element"
+                ],
+                answer: "An infinitesimally small volume element",
+                explanation: "The notation dV represents a tiny piece of volume used to build the entire solid."
+            },
+
+            {
+                q: "If f(x,y,z)=1 throughout a solid, the triple integral computes:",
+                options: [
+                    "The volume of the solid",
+                    "The mass of the solid",
+                    "The surface area",
+                    "The density"
+                ],
+                answer: "The volume of the solid",
+                explanation: "Integrating the constant function 1 over a three-dimensional region gives its volume."
+            },
+
+            {
+                q: "If f(x,y,z) represents density, a triple integral computes the:",
+                options: [
+                    "Mass of the solid",
+                    "Surface area of the solid",
+                    "Average density",
+                    "Center of mass"
+                ],
+                answer: "Mass of the solid",
+                explanation: "Integrating a density function over a solid gives the total mass."
+            },
+
+            {
+                q: "The primary purpose of a change of variables is to:",
+                options: [
+                    "Simplify the integral by using a different coordinate system",
+                    "Increase the number of variables",
+                    "Remove the need for integration",
+                    "Convert every integral into polar coordinates"
+                ],
+                answer: "Simplify the integral by using a different coordinate system",
+                explanation: "Changing variables often transforms a difficult region or function into a much simpler one."
+            },
+
+            {
+                q: "The Jacobian determinant measures:",
+                options: [
+                    "How area or volume changes under a transformation",
+                    "The slope of a tangent plane",
+                    "The value of a function",
+                    "The direction of maximum increase"
+                ],
+                answer: "How area or volume changes under a transformation",
+                explanation: "The Jacobian accounts for stretching or compression caused by a coordinate transformation."
+            },
+
+            {
+                q: "The Jacobian is computed from:",
+                options: [
+                    "A matrix of first-order partial derivatives",
+                    "A matrix of second-order partial derivatives",
+                    "The Hessian matrix",
+                    "A matrix of function values"
+                ],
+                answer: "A matrix of first-order partial derivatives",
+                explanation: "The Jacobian matrix consists of first-order partial derivatives of the transformation."
+            },
+
+            {
+                q: "Which quantity is multiplied into a multiple integral after changing variables?",
+                options: [
+                    "The absolute value of the Jacobian determinant",
+                    "The gradient",
+                    "The Laplacian",
+                    "The directional derivative"
+                ],
+                answer: "The absolute value of the Jacobian determinant",
+                explanation: "The absolute value of the Jacobian correctly scales the area or volume element."
+            },
+
+            {
+                q: "Multiple integrals are commonly used to compute:",
+                options: [
+                    "Center of mass",
+                    "Roots of quadratic equations",
+                    "Polynomial factors",
+                    "Complex roots only"
+                ],
+                answer: "Center of mass",
+                explanation: "One important application of multiple integrals is locating the balancing point of an object."
+            },
+
+            {
+                q: "The moment of inertia describes:",
+                options: [
+                    "How mass is distributed relative to an axis of rotation",
+                    "The average temperature of an object",
+                    "The slope of a surface",
+                    "The probability of an event"
+                ],
+                answer: "How mass is distributed relative to an axis of rotation",
+                explanation: "Moment of inertia measures an object's resistance to rotational motion."
+            },
+
+            {
+                q: "Multiple integrals can be used to compute probabilities by integrating:",
+                options: [
+                    "A probability density function over a region",
+                    "A derivative over an interval",
+                    "A tangent plane",
+                    "A gradient field"
+                ],
+                answer: "A probability density function over a region",
+                explanation: "The integral of a probability density function over a region equals the probability of the variables lying in that region."
+            },
+
+            {
+                q: "Which statement best summarizes Unit 4?",
+                options: [
+                    "Multiple integrals extend integration to areas and volumes, allowing us to compute quantities such as area, volume, mass, probability, center of mass, and moments of inertia.",
+                    "They are only used to calculate the area of rectangles.",
+                    "They replace derivatives in multivariable calculus.",
+                    "They apply only to theoretical mathematics."
+                ],
+                answer: "Multiple integrals extend integration to areas and volumes, allowing us to compute quantities such as area, volume, mass, probability, center of mass, and moments of inertia.",
+                explanation: "Unit 4 introduced double integrals, triple integrals, coordinate transformations, Jacobians, and their many practical applications."
+            }
+
+        ]
+
+    },
+
+    "calculus3-unit5-lesson1": {
+
+        title: "Vector Fields",
+
+        subtitle: "Learn how vector fields assign vectors to every point in space and model physical phenomena such as fluid flow, gravity, and electric fields.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>In previous units, we studied scalar-valued functions, where each point was assigned a single number. For example, the temperature at every location in a room can be represented by a scalar function. In many scientific and engineering applications, however, each point is associated with both a magnitude and a direction. These are described by <strong>vector fields</strong>.</p>
+
+<p>Vector fields are fundamental to physics, engineering, computer graphics, meteorology, robotics, machine learning, and many other disciplines. They describe wind patterns, ocean currents, electric and magnetic fields, gravitational forces, fluid flow, and even the direction of optimization algorithms.</p>
+
+<h2>What Is a Vector Field?</h2>
+
+<p>A vector field assigns a vector to every point in a region.</p>
+
+<p>In two dimensions, a vector field has the form</p>
+
+<p><strong>F(x, y) = P(x, y)i + Q(x, y)j</strong></p>
+
+<p>where:</p>
+
+<ul>
+
+<li>P(x, y) is the x-component.</li>
+
+<li>Q(x, y) is the y-component.</li>
+
+<li>i and j are the standard unit vectors.</li>
+
+</ul>
+
+<p>Every point (x, y) has its own vector.</p>
+
+<h2>Three-Dimensional Vector Fields</h2>
+
+<p>In three dimensions, vector fields are written as</p>
+
+<p><strong>F(x, y, z) = P(x, y, z)i + Q(x, y, z)j + R(x, y, z)k</strong></p>
+
+<p>where:</p>
+
+<ul>
+
+<li>P is the x-component.</li>
+
+<li>Q is the y-component.</li>
+
+<li>R is the z-component.</li>
+
+<li>k is the unit vector in the z-direction.</li>
+
+</ul>
+
+<p>Each point in space is assigned a three-dimensional vector.</p>
+
+<h2>Visualizing Vector Fields</h2>
+
+<p>Vector fields are commonly represented by drawing small arrows throughout a region.</p>
+
+<ul>
+
+<li>The direction of each arrow represents the direction of the vector.</li>
+
+<li>The length of each arrow represents its magnitude.</li>
+
+<li>Longer arrows indicate stronger fields.</li>
+
+<li>Shorter arrows indicate weaker fields.</li>
+
+</ul>
+
+<p>Although infinitely many vectors exist, diagrams show only a representative sample.</p>
+
+<h2>Magnitude of a Vector Field</h2>
+
+<p>For a two-dimensional field</p>
+
+<p><strong>F(x,y)=⟨P,Q⟩</strong></p>
+
+<p>the magnitude is</p>
+
+<p><strong>|F| = √(P² + Q²)</strong></p>
+
+<p>For three dimensions,</p>
+
+<p><strong>|F| = √(P² + Q² + R²)</strong></p>
+
+<p>The magnitude measures the strength of the field at a point.</p>
+
+<h2>Example 1</h2>
+
+<p>Consider</p>
+
+<p><strong>F(x,y)=⟨x,y⟩</strong></p>
+
+<p>At several points:</p>
+
+<ul>
+
+<li>F(1,0)=⟨1,0⟩</li>
+
+<li>F(0,2)=⟨0,2⟩</li>
+
+<li>F(-2,1)=⟨-2,1⟩</li>
+
+</ul>
+
+<p>The vectors point directly away from the origin, and their lengths increase as the distance from the origin increases.</p>
+
+<h2>Example 2</h2>
+
+<p>Consider</p>
+
+<p><strong>F(x,y)=⟨-y,x⟩</strong></p>
+
+<p>The vectors rotate around the origin.</p>
+
+<ul>
+
+<li>At (1,0), the vector points upward.</li>
+
+<li>At (0,1), the vector points left.</li>
+
+<li>At (-1,0), the vector points downward.</li>
+
+<li>At (0,-1), the vector points right.</li>
+
+</ul>
+
+<p>This field models circular motion around the origin.</p>
+
+<h2>Conservative and Non-Conservative Fields</h2>
+
+<p>Some vector fields represent the gradient of a scalar function. These are called <strong>conservative vector fields</strong>.</p>
+
+<p>Conservative fields have important properties:</p>
+
+<ul>
+
+<li>Path-independent line integrals.</li>
+
+<li>Potential functions exist.</li>
+
+<li>Mechanical energy is conserved in many physical systems.</li>
+
+</ul>
+
+<p>Other vector fields are non-conservative and often describe rotational behavior such as vortices or circulating fluids.</p>
+
+<h2>Applications</h2>
+
+<p>Vector fields appear throughout mathematics and science.</p>
+
+<ul>
+
+<li>Wind speed and direction.</li>
+
+<li>Ocean currents.</li>
+
+<li>Electric fields.</li>
+
+<li>Magnetic fields.</li>
+
+<li>Gravitational fields.</li>
+
+<li>Fluid dynamics.</li>
+
+<li>Robot navigation.</li>
+
+<li>Computer graphics.</li>
+
+<li>Machine learning optimization.</li>
+
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+
+<li>A vector field assigns a vector to every point.</li>
+
+<li>Vectors have both magnitude and direction.</li>
+
+<li>Arrow plots visualize vector fields.</li>
+
+<li>The magnitude measures field strength.</li>
+
+<li>Some vector fields are conservative.</li>
+
+<li>Vector fields model many real-world phenomena.</li>
+
+</ul>
+
+`,
+
+        questions: [{
+            q: "A vector field assigns:",
+            options: [
+                "A vector to every point in a region",
+                "A single number to every point",
+                "A curve to every point",
+                "A surface to every point"
+            ],
+            answer: "A vector to every point in a region",
+            explanation: "Unlike scalar fields, vector fields assign both a magnitude and a direction to every point in a region."
+        },
+
+        {
+            q: "Which of the following is the standard form of a two-dimensional vector field?",
+            options: [
+                "F(x,y)=P(x,y)i+Q(x,y)j",
+                "F(x,y)=P(x,y)+Q(x,y)",
+                "F(x,y)=P(x,y)k",
+                "F(x,y)=P(x,y)i"
+            ],
+            answer: "F(x,y)=P(x,y)i+Q(x,y)j",
+            explanation: "A two-dimensional vector field has x- and y-components represented by the unit vectors i and j."
+        },
+
+        {
+            q: "In a three-dimensional vector field, which unit vector represents the z-direction?",
+            options: [
+                "k",
+                "i",
+                "j",
+                "r"
+            ],
+            answer: "k",
+            explanation: "The standard basis vectors are i for the x-axis, j for the y-axis, and k for the z-axis."
+        },
+
+        {
+            q: "On a vector field diagram, the direction of each arrow represents:",
+            options: [
+                "The direction of the vector",
+                "The magnitude of the vector only",
+                "The coordinates of the point",
+                "The derivative of the field"
+            ],
+            answer: "The direction of the vector",
+            explanation: "Each arrow points in the direction of the vector assigned to that location."
+        },
+
+        {
+            q: "The length of an arrow in a vector field represents its:",
+            options: [
+                "Magnitude",
+                "Angle only",
+                "Position",
+                "Curvature"
+            ],
+            answer: "Magnitude",
+            explanation: "Longer arrows indicate larger magnitudes, while shorter arrows indicate weaker fields."
+        },
+
+        {
+            q: "The magnitude of the two-dimensional vector field F(x,y)=⟨P,Q⟩ is:",
+            options: [
+                "√(P²+Q²)",
+                "P²+Q²",
+                "√(P+Q)",
+                "P+Q"
+            ],
+            answer: "√(P²+Q²)",
+            explanation: "The magnitude of a two-dimensional vector is found using the Pythagorean Theorem."
+        },
+
+        {
+            q: "The vector field F(x,y)=⟨x,y⟩ has vectors that:",
+            options: [
+                "Point directly away from the origin",
+                "Point toward the origin",
+                "Rotate around the origin",
+                "Always point upward"
+            ],
+            answer: "Point directly away from the origin",
+            explanation: "Each vector points from the origin toward its corresponding point, creating a radial field."
+        },
+
+        {
+            q: "The vector field F(x,y)=⟨-y,x⟩ primarily models:",
+            options: [
+                "Circular motion around the origin",
+                "Motion directly away from the origin",
+                "Motion toward the origin",
+                "Motion along the x-axis only"
+            ],
+            answer: "Circular motion around the origin",
+            explanation: "This vector field produces vectors tangent to circles centered at the origin, indicating rotational motion."
+        },
+
+        {
+            q: "A conservative vector field is one that:",
+            options: [
+                "Can be written as the gradient of a scalar function",
+                "Always has zero magnitude",
+                "Contains only constant vectors",
+                "Exists only in three dimensions"
+            ],
+            answer: "Can be written as the gradient of a scalar function",
+            explanation: "Conservative vector fields are gradients of potential functions and have path-independent line integrals."
+        },
+
+        {
+            q: "Which of the following is a common real-world application of vector fields?",
+            options: [
+                "Modeling wind speed and direction",
+                "Factoring quadratic polynomials",
+                "Solving linear equations only",
+                "Finding the roots of a polynomial"
+            ],
+            answer: "Modeling wind speed and direction",
+            explanation: "Vector fields naturally represent quantities that have both magnitude and direction, such as wind, fluid flow, gravity, and electric fields."
+        }
+
+        ]
+
+    },
+    "calculus3-unit5-lesson2": {
+
+        title: "Line Integrals",
+
+        subtitle: "Learn how to integrate scalar and vector fields along curves and understand applications such as work, mass, and fluid flow.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>In single-variable calculus, integrals are computed over intervals on the real line. In multivariable calculus, we often need to integrate along curved paths instead of straight intervals. These integrals are called <strong>line integrals</strong>.</p>
+
+<p>A line integral accumulates quantities as we move along a curve. Depending on what is being integrated, a line integral can calculate mass, work, circulation, or other physical quantities.</p>
+
+<p>There are two primary types of line integrals:</p>
+
+<ul>
+
+<li>Line integrals of scalar fields.</li>
+
+<li>Line integrals of vector fields.</li>
+
+</ul>
+
+<h2>Curves in Space</h2>
+
+<p>Before computing a line integral, we describe the curve using a parameter.</p>
+
+<p>A curve is commonly written as</p>
+
+<p><strong>r(t)=⟨x(t),y(t),z(t)⟩</strong></p>
+
+<p>where t varies over an interval</p>
+
+<p><strong>a ≤ t ≤ b</strong></p>
+
+<p>As t changes, the point moves along the curve.</p>
+
+<h2>Differential Arc Length</h2>
+
+<p>The small distance traveled along the curve is called the differential arc length.</p>
+
+<p>It is written as</p>
+
+<p><strong>ds = |r'(t)| dt</strong></p>
+
+<p>where |r'(t)| is the speed along the curve.</p>
+
+<p>This converts integration with respect to distance into integration with respect to the parameter.</p>
+
+<h2>Line Integrals of Scalar Fields</h2>
+
+<p>If a scalar function f(x,y,z) is defined along a curve C, the line integral is</p>
+
+<p><strong>∫<sub>C</sub> f ds</strong></p>
+
+<p>After parameterizing the curve, this becomes</p>
+
+<p><strong>∫<sub>a</sub><sup>b</sup> f(r(t)) |r'(t)| dt</strong></p>
+
+<p>This integral accumulates scalar quantities along the curve.</p>
+
+<h2>Applications of Scalar Line Integrals</h2>
+
+<ul>
+
+<li>Mass of a thin wire with varying density.</li>
+
+<li>Total heat along a path.</li>
+
+<li>Charge distributed along a wire.</li>
+
+<li>Average values along curves.</li>
+
+</ul>
+
+<h2>Example: Mass of a Wire</h2>
+
+<p>Suppose a wire follows a curve C and has density ρ(x,y).</p>
+
+<p>The total mass is</p>
+
+<p><strong>Mass = ∫<sub>C</sub> ρ ds</strong></p>
+
+<p>The density is accumulated along the entire length of the wire.</p>
+
+<h2>Line Integrals of Vector Fields</h2>
+
+<p>Suppose a vector field is</p>
+
+<p><strong>F(x,y,z)=⟨P,Q,R⟩</strong></p>
+
+<p>The line integral is written as</p>
+
+<p><strong>∫<sub>C</sub> F · dr</strong></p>
+
+<p>where</p>
+
+<p><strong>dr = r'(t) dt</strong></p>
+
+<p>After parameterization, the integral becomes</p>
+
+<p><strong>∫<sub>a</sub><sup>b</sup> F(r(t)) · r'(t) dt</strong></p>
+
+<h2>Physical Meaning: Work</h2>
+
+<p>One of the most important applications of vector line integrals is computing work.</p>
+
+<p>If a force field acts on an object moving along a curve, the work performed is</p>
+
+<p><strong>Work = ∫<sub>C</sub> F · dr</strong></p>
+
+<p>The dot product measures how much of the force acts in the direction of motion.</p>
+
+<ul>
+
+<li>If the force points with the motion, work is positive.</li>
+
+<li>If the force opposes the motion, work is negative.</li>
+
+<li>If the force is perpendicular to the motion, no work is done.</li>
+
+</ul>
+
+<h2>Example</h2>
+
+<p>A constant force field</p>
+
+<p><strong>F=⟨2,3⟩</strong></p>
+
+<p>acts on an object moving in the direction</p>
+
+<p><strong>dr=⟨1,0⟩</strong></p>
+
+<p>The work contribution is</p>
+
+<p><strong>F·dr=2</strong></p>
+
+<p>Only the component of the force parallel to the motion contributes to the work.</p>
+
+<h2>Orientation Matters</h2>
+
+<p>Reversing the direction of a curve changes the sign of a vector line integral.</p>
+
+<ul>
+
+<li>Following the curve forward gives one value.</li>
+
+<li>Traversing the same curve backward gives the negative of that value.</li>
+
+</ul>
+
+<p>Scalar line integrals are not affected by orientation because distance is always positive.</p>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Mechanical work.</li>
+
+<li>Fluid flow.</li>
+
+<li>Electric fields.</li>
+
+<li>Magnetic fields.</li>
+
+<li>Mass of wires.</li>
+
+<li>Charge distributions.</li>
+
+<li>Circulation of fluids.</li>
+
+<li>Engineering design.</li>
+
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+
+<li>Line integrals accumulate quantities along curves.</li>
+
+<li>Curves are parameterized using r(t).</li>
+
+<li>Scalar line integrals use ds.</li>
+
+<li>Vector line integrals use dr.</li>
+
+<li>Work is computed using ∫C F·dr.</li>
+
+<li>The orientation of a curve affects vector line integrals.</li>
+
+<li>Line integrals have many applications in physics and engineering.</li>
+
+</ul>
+
+`,
+
+        questions: [
+
+
+
+
+
+
+
+            {
+                q: "A line integral accumulates quantities along a:",
+                options: [
+                    "Curve",
+                    "Plane",
+                    "Volume",
+                    "Single point"
+                ],
+                answer: "Curve",
+                explanation: "Unlike ordinary integrals that accumulate over intervals, line integrals accumulate quantities as we move along a curve."
+            },
+
+            {
+                q: "A curve in space is commonly parameterized as:",
+                options: [
+                    "r(t)=⟨x(t),y(t),z(t)⟩",
+                    "r=x+y+z",
+                    "F(x,y)=P+Q",
+                    "r=x²+y²"
+                ],
+                answer: "r(t)=⟨x(t),y(t),z(t)⟩",
+                explanation: "A parameterization expresses each coordinate as a function of the parameter t."
+            },
+
+            {
+                q: "The differential arc length is given by:",
+                options: [
+                    "ds=|r'(t)|dt",
+                    "ds=r(t)dt",
+                    "ds=F(r(t))dt",
+                    "ds=dr/dt"
+                ],
+                answer: "ds=|r'(t)|dt",
+                explanation: "The magnitude of the velocity vector gives the rate at which arc length changes with respect to the parameter."
+            },
+
+            {
+                q: "A scalar line integral is written as:",
+                options: [
+                    "∫C f ds",
+                    "∫C F·dr",
+                    "∬R f dA",
+                    "∭E f dV"
+                ],
+                answer: "∫C f ds",
+                explanation: "Scalar line integrals accumulate scalar quantities along the length of a curve."
+            },
+
+            {
+                q: "A vector line integral is written as:",
+                options: [
+                    "∫C F·dr",
+                    "∫C f ds",
+                    "∬R F dA",
+                    "∭E F dV"
+                ],
+                answer: "∫C F·dr",
+                explanation: "Vector line integrals compute the accumulation of a vector field along a curve using the dot product."
+            },
+
+            {
+                q: "Which quantity is commonly computed using a vector line integral?",
+                options: [
+                    "Work",
+                    "Area",
+                    "Volume",
+                    "Partial derivative"
+                ],
+                answer: "Work",
+                explanation: "The work done by a force field along a path is computed using the line integral ∫C F·dr."
+            },
+
+            {
+                q: "The dot product in a vector line integral measures:",
+                options: [
+                    "How much of the force acts in the direction of motion",
+                    "The length of the curve",
+                    "The curvature of the path",
+                    "The density of the field"
+                ],
+                answer: "How much of the force acts in the direction of motion",
+                explanation: "Only the component of the force parallel to the direction of motion contributes to the work."
+            },
+
+            {
+                q: "If a force is perpendicular to the direction of motion, the work done is:",
+                options: [
+                    "Zero",
+                    "Positive",
+                    "Negative",
+                    "Maximum"
+                ],
+                answer: "Zero",
+                explanation: "The dot product of perpendicular vectors is zero, so no work is performed."
+            },
+
+            {
+                q: "Reversing the orientation of a curve changes a vector line integral by:",
+                options: [
+                    "Changing its sign",
+                    "Doubling its value",
+                    "Making it zero",
+                    "Leaving it unchanged"
+                ],
+                answer: "Changing its sign",
+                explanation: "Traversing the curve in the opposite direction reverses the direction of dr, producing the negative of the original integral."
+            },
+
+            {
+                q: "Which of the following is an application of scalar line integrals?",
+                options: [
+                    "Finding the mass of a wire with varying density",
+                    "Finding the volume of a sphere",
+                    "Computing a partial derivative",
+                    "Finding the gradient of a function"
+                ],
+                answer: "Finding the mass of a wire with varying density",
+                explanation: "A scalar line integral accumulates density along a wire to compute its total mass."
+            }
+
+        ]
+
+    },
+
+    "calculus3-unit5-lesson3": {
+
+        title: "Fundamental Theorem for Line Integrals",
+
+        subtitle: "Learn how conservative vector fields and potential functions make many line integrals easy to evaluate.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>Computing a line integral directly often requires parameterizing a curve and evaluating an integral. Fortunately, many vector fields have a special property that makes this unnecessary. If a vector field is <strong>conservative</strong>, the value of the line integral depends only on the starting and ending points—not on the path taken.</p>
+
+<p>This powerful result is called the <strong>Fundamental Theorem for Line Integrals</strong>. It is one of the most important theorems in vector calculus because it greatly simplifies many calculations.</p>
+
+<h2>Conservative Vector Fields</h2>
+
+<p>A vector field is conservative if it can be written as the gradient of a scalar function.</p>
+
+<p>That is, if there exists a scalar function f such that</p>
+
+<p><strong>F = ∇f</strong></p>
+
+<p>then F is called a conservative vector field.</p>
+
+<p>The scalar function f is called the <strong>potential function</strong>.</p>
+
+<h2>The Gradient</h2>
+
+<p>For a function f(x,y), the gradient is</p>
+
+<p><strong>∇f = ⟨∂f/∂x, ∂f/∂y⟩</strong></p>
+
+<p>For three variables,</p>
+
+<p><strong>∇f = ⟨∂f/∂x, ∂f/∂y, ∂f/∂z⟩</strong></p>
+
+<p>The gradient points in the direction of the greatest increase of the scalar function.</p>
+
+<h2>The Fundamental Theorem</h2>
+
+<p>If F is a conservative vector field with potential function f, then</p>
+
+<p><strong>∫<sub>C</sub> F · dr = f(B) − f(A)</strong></p>
+
+<p>where:</p>
+
+<ul>
+
+<li>A is the starting point.</li>
+
+<li>B is the ending point.</li>
+
+<li>C is any path connecting them.</li>
+
+</ul>
+
+<p>Notice that the path itself never appears in the final calculation.</p>
+
+<h2>Path Independence</h2>
+
+<p>For conservative vector fields, every path between the same two points produces exactly the same line integral.</p>
+
+<ul>
+
+<li>Straight lines.</li>
+
+<li>Curved paths.</li>
+
+<li>Piecewise smooth curves.</li>
+
+</ul>
+
+<p>All give the same answer as long as the endpoints are identical.</p>
+
+<h2>Example</h2>
+
+<p>Suppose</p>
+
+<p><strong>f(x,y)=x²+y²</strong></p>
+
+<p>Then</p>
+
+<p><strong>∇f=⟨2x,2y⟩</strong></p>
+
+<p>Therefore</p>
+
+<p><strong>F=⟨2x,2y⟩</strong></p>
+
+<p>To compute the work from (1,1) to (3,2):</p>
+
+<ul>
+
+<li>f(3,2)=3²+2²=13</li>
+
+<li>f(1,1)=1²+1²=2</li>
+
+</ul>
+
+<p>The line integral equals</p>
+
+<p><strong>13−2=11</strong></p>
+
+<p>No parameterization of the curve is necessary.</p>
+
+<h2>Closed Curves</h2>
+
+<p>A closed curve starts and ends at the same point.</p>
+
+<p>Since the starting and ending points are identical,</p>
+
+<p><strong>f(B)−f(A)=0</strong></p>
+
+<p>Therefore, for every conservative vector field,</p>
+
+<p><strong>∮ F·dr = 0</strong></p>
+
+<p>This is an important test for conservative fields.</p>
+
+<h2>Finding a Potential Function</h2>
+
+<p>To determine whether a vector field is conservative, we often try to find its potential function.</p>
+
+<p>The general process is:</p>
+
+<ol>
+
+<li>Integrate the x-component with respect to x.</li>
+
+<li>Differentiate the result with respect to y.</li>
+
+<li>Compare it with the y-component.</li>
+
+<li>Determine any missing functions or constants.</li>
+
+<li>Verify that the gradient reproduces the original vector field.</li>
+
+</ol>
+
+<h2>Testing for Conservativeness</h2>
+
+<p>For a two-dimensional vector field</p>
+
+<p><strong>F=⟨P,Q⟩</strong></p>
+
+<p>defined on a simply connected region, a common test is</p>
+
+<p><strong>∂P/∂y = ∂Q/∂x</strong></p>
+
+<p>If these mixed partial derivatives are equal everywhere in the region, the field is conservative.</p>
+
+<p>This test is sufficient only when the region has no holes.</p>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Mechanical work.</li>
+
+<li>Gravitational fields.</li>
+
+<li>Electric potential.</li>
+
+<li>Energy conservation.</li>
+
+<li>Fluid mechanics.</li>
+
+<li>Optimization.</li>
+
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+
+<li>A conservative vector field is the gradient of a scalar function.</li>
+
+<li>The scalar function is called the potential function.</li>
+
+<li>The Fundamental Theorem for Line Integrals replaces an integral with the difference of potential values.</li>
+
+<li>Conservative fields have path-independent line integrals.</li>
+
+<li>The line integral around any closed curve in a conservative field equals zero.</li>
+
+<li>Mixed partial derivatives help test whether a vector field is conservative.</li>
+
+</ul>
+
+`,
+
+        questions: [{
+            q: "A conservative vector field can be written as:",
+            options: [
+                "The gradient of a scalar function",
+                "The curl of a scalar function",
+                "A constant vector only",
+                "A line integral"
+            ],
+            answer: "The gradient of a scalar function",
+            explanation: "A vector field is conservative if it can be expressed as the gradient of a scalar-valued potential function."
+        },
+
+        {
+            q: "The scalar function whose gradient equals a conservative vector field is called the:",
+            options: [
+                "Potential function",
+                "Directional function",
+                "Jacobian",
+                "Vector potential"
+            ],
+            answer: "Potential function",
+            explanation: "The potential function generates the conservative vector field through its gradient."
+        },
+
+        {
+            q: "The Fundamental Theorem for Line Integrals states that:",
+            options: [
+                "The line integral equals the difference in the potential function evaluated at the endpoints",
+                "Every line integral equals zero",
+                "The value depends only on the length of the curve",
+                "Every vector field is conservative"
+            ],
+            answer: "The line integral equals the difference in the potential function evaluated at the endpoints",
+            explanation: "For a conservative vector field, ∫C F·dr = f(B) − f(A), where f is the potential function."
+        },
+
+        {
+            q: "For a conservative vector field, the value of a line integral depends only on:",
+            options: [
+                "The starting and ending points",
+                "The exact path taken",
+                "The length of the curve",
+                "The speed of travel"
+            ],
+            answer: "The starting and ending points",
+            explanation: "This property is known as path independence."
+        },
+
+        {
+            q: "The gradient of a scalar function points in the direction of:",
+            options: [
+                "The greatest increase of the function",
+                "The greatest decrease of the function",
+                "Constant function value",
+                "Zero change"
+            ],
+            answer: "The greatest increase of the function",
+            explanation: "The gradient vector always points in the direction of the steepest ascent."
+        },
+
+        {
+            q: "If a conservative vector field is integrated around a closed curve, the result is:",
+            options: [
+                "0",
+                "1",
+                "The area enclosed",
+                "The length of the curve"
+            ],
+            answer: "0",
+            explanation: "Since the starting and ending points are the same, the potential difference is zero."
+        },
+
+        {
+            q: "A closed curve is one that:",
+            options: [
+                "Starts and ends at the same point",
+                "Is always circular",
+                "Has no endpoints",
+                "Contains only straight lines"
+            ],
+            answer: "Starts and ends at the same point",
+            explanation: "A closed curve returns to its starting point."
+        },
+
+        {
+            q: "For a two-dimensional vector field F=⟨P,Q⟩ defined on a simply connected region, which condition indicates the field is conservative?",
+            options: [
+                "∂P/∂y = ∂Q/∂x",
+                "∂P/∂x = ∂Q/∂y",
+                "P = Q",
+                "∂P/∂x = ∂P/∂y"
+            ],
+            answer: "∂P/∂y = ∂Q/∂x",
+            explanation: "Equality of these mixed partial derivatives is a common test for conservativeness on simply connected regions."
+        },
+
+        {
+            q: "Which of the following is NOT required when using the Fundamental Theorem for Line Integrals on a conservative field?",
+            options: [
+                "Parameterizing the curve",
+                "Knowing the endpoints",
+                "Finding the potential function",
+                "Evaluating the potential at the endpoints"
+            ],
+            answer: "Parameterizing the curve",
+            explanation: "Once a potential function is known, only the endpoints are needed to evaluate the line integral."
+        },
+
+        {
+            q: "One important application of conservative vector fields is:",
+            options: [
+                "Modeling energy-conserving systems such as gravitational and electric fields",
+                "Finding the roots of quadratic equations",
+                "Computing matrix inverses",
+                "Constructing Taylor polynomials"
+            ],
+            answer: "Modeling energy-conserving systems such as gravitational and electric fields",
+            explanation: "Many physical force fields, including gravitational and electrostatic fields, are conservative and can be analyzed using potential functions."
+        }
+
+        ]
+
+    },
+
+    "calculus3-unit5-lesson4": {
+
+        title: "Green's Theorem",
+
+        subtitle: "Learn how Green's Theorem connects line integrals around closed curves with double integrals over the enclosed region.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>One of the most beautiful results in vector calculus is <strong>Green's Theorem</strong>. It transforms a line integral around a closed curve into a double integral over the region enclosed by that curve.</p>
+
+<p>Instead of evaluating a potentially difficult line integral, Green's Theorem often allows us to compute an equivalent double integral that is much easier.</p>
+
+<p>This theorem provides the foundation for more advanced results such as Stokes' Theorem and the Divergence Theorem.</p>
+
+<h2>Closed Curves</h2>
+
+<p>Green's Theorem applies only to <strong>simple closed curves</strong>.</p>
+
+<p>A simple closed curve:</p>
+
+<ul>
+
+<li>Starts and ends at the same point.</li>
+
+<li>Does not intersect itself.</li>
+
+<li>Encloses a region in the plane.</li>
+
+</ul>
+
+<p>The enclosed region is usually denoted by <strong>R</strong>.</p>
+
+<h2>Positive Orientation</h2>
+
+<p>The boundary curve must be traversed in the positive (counterclockwise) direction.</p>
+
+<p>As you move along the curve:</p>
+
+<ul>
+
+<li>The enclosed region always remains on your left.</li>
+
+<li>This orientation is called positive orientation.</li>
+
+</ul>
+
+<p>Traversing the curve clockwise changes the sign of the integral.</p>
+
+<h2>Statement of Green's Theorem</h2>
+
+<p>Suppose</p>
+
+<p><strong>F=⟨P,Q⟩</strong></p>
+
+<p>is a vector field whose components have continuous first partial derivatives.</p>
+
+<p>Then</p>
+
+<p><strong>∮<sub>C</sub> P dx + Q dy = ∬<sub>R</sub> (∂Q/∂x − ∂P/∂y) dA</strong></p>
+
+<p>where:</p>
+
+<ul>
+
+<li>C is the positively oriented boundary.</li>
+
+<li>R is the enclosed region.</li>
+
+</ul>
+
+<h2>Meaning of the Theorem</h2>
+
+<p>The left side measures the circulation of the vector field around the boundary.</p>
+
+<p>The right side measures the total rotation, or <strong>curl</strong>, throughout the interior of the region.</p>
+
+<p>Green's Theorem says these two quantities are exactly equal.</p>
+
+<h2>Circulation</h2>
+
+<p>Circulation measures how strongly a vector field moves around a closed path.</p>
+
+<ul>
+
+<li>Positive circulation indicates counterclockwise rotation.</li>
+
+<li>Negative circulation indicates clockwise rotation.</li>
+
+<li>Zero circulation indicates little or no net rotation.</li>
+
+</ul>
+
+<h2>Example</h2>
+
+<p>Consider</p>
+
+<p><strong>F=⟨−y,x⟩</strong></p>
+
+<p>Then</p>
+
+<ul>
+
+<li>∂Q/∂x = 1</li>
+
+<li>∂P/∂y = −1</li>
+
+</ul>
+
+<p>Therefore</p>
+
+<p><strong>∂Q/∂x − ∂P/∂y = 2</strong></p>
+
+<p>If R is the unit disk, Green's Theorem becomes</p>
+
+<p><strong>∮ F·dr = ∬ 2 dA</strong></p>
+
+<p>Since the area of the unit disk is π, the circulation equals</p>
+
+<p><strong>2π</strong></p>
+
+<p>Notice that evaluating the double integral is much simpler than directly computing the line integral.</p>
+
+<h2>Conditions for Green's Theorem</h2>
+
+<ul>
+
+<li>The curve must be closed.</li>
+
+<li>The curve must not cross itself.</li>
+
+<li>The vector field must have continuous first partial derivatives.</li>
+
+<li>The enclosed region should not contain holes unless additional boundaries are included.</li>
+
+</ul>
+
+<h2>Flux Form of Green's Theorem</h2>
+
+<p>Green's Theorem also has a flux form.</p>
+
+<p>It relates the outward flow across a boundary to the divergence inside the region.</p>
+
+<p>This version serves as the two-dimensional precursor to the Divergence Theorem.</p>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Fluid circulation.</li>
+
+<li>Electromagnetic fields.</li>
+
+<li>Aerodynamics.</li>
+
+<li>Robot motion planning.</li>
+
+<li>Computer graphics.</li>
+
+<li>Mechanical engineering.</li>
+
+<li>Weather and ocean current modeling.</li>
+
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+
+<li>Green's Theorem converts a line integral into a double integral.</li>
+
+<li>It applies to positively oriented simple closed curves.</li>
+
+<li>The theorem relates circulation around a boundary to rotation inside the region.</li>
+
+<li>Counterclockwise orientation is positive.</li>
+
+<li>Clockwise orientation changes the sign.</li>
+
+<li>Green's Theorem often makes difficult line integrals much easier to evaluate.</li>
+
+</ul>
+
+`,
+
+        questions: [{
+            q: "Green's Theorem converts:",
+            options: [
+                "A line integral around a closed curve into a double integral over the enclosed region",
+                "A double integral into a triple integral",
+                "A line integral into a surface integral",
+                "A partial derivative into a line integral"
+            ],
+            answer: "A line integral around a closed curve into a double integral over the enclosed region",
+            explanation: "Green's Theorem relates circulation around a closed curve to a double integral over the region enclosed by the curve."
+        },
+
+        {
+            q: "Green's Theorem applies to:",
+            options: [
+                "Simple closed curves",
+                "Any open curve",
+                "Only straight line segments",
+                "Only circles"
+            ],
+            answer: "Simple closed curves",
+            explanation: "The boundary must be a simple closed curve that encloses a region in the plane."
+        },
+
+        {
+            q: "A positively oriented curve is traversed:",
+            options: [
+                "Counterclockwise",
+                "Clockwise",
+                "From right to left",
+                "From top to bottom"
+            ],
+            answer: "Counterclockwise",
+            explanation: "Positive orientation means the enclosed region remains on your left as you travel around the boundary."
+        },
+
+        {
+            q: "If a closed curve is traversed clockwise instead of counterclockwise, the value of the line integral:",
+            options: [
+                "Changes sign",
+                "Remains unchanged",
+                "Becomes zero",
+                "Doubles"
+            ],
+            answer: "Changes sign",
+            explanation: "Reversing the orientation of the boundary reverses the sign of the line integral."
+        },
+
+        {
+            q: "The left side of Green's Theorem measures:",
+            options: [
+                "The circulation around the boundary",
+                "The area of the region",
+                "The volume enclosed",
+                "The gradient of the field"
+            ],
+            answer: "The circulation around the boundary",
+            explanation: "The line integral around the closed curve measures the field's circulation."
+        },
+
+        {
+            q: "The quantity ∂Q/∂x − ∂P/∂y represents the field's:",
+            options: [
+                "Rotation (scalar curl)",
+                "Gradient",
+                "Divergence",
+                "Potential"
+            ],
+            answer: "Rotation (scalar curl)",
+            explanation: "This expression measures the tendency of the vector field to rotate in two dimensions."
+        },
+
+        {
+            q: "For Green's Theorem to apply, the vector field should have:",
+            options: [
+                "Continuous first partial derivatives",
+                "Continuous second partial derivatives only",
+                "Constant components",
+                "Zero curl everywhere"
+            ],
+            answer: "Continuous first partial derivatives",
+            explanation: "Continuous first partial derivatives are one of the standard conditions required for Green's Theorem."
+        },
+
+        {
+            q: "One advantage of Green's Theorem is that it often:",
+            options: [
+                "Replaces a difficult line integral with an easier double integral",
+                "Eliminates the need for integration entirely",
+                "Converts every problem into polar coordinates",
+                "Computes derivatives automatically"
+            ],
+            answer: "Replaces a difficult line integral with an easier double integral",
+            explanation: "Many line integrals are significantly easier to evaluate after converting them into double integrals."
+        },
+
+        {
+            q: "The flux form of Green's Theorem relates the outward flow across a boundary to the:",
+            options: [
+                "Divergence inside the region",
+                "Gradient inside the region",
+                "Potential function",
+                "Arc length of the boundary"
+            ],
+            answer: "Divergence inside the region",
+            explanation: "The flux form connects the outward flux across the boundary with the divergence over the enclosed region."
+        },
+
+        {
+            q: "Which of the following is a common application of Green's Theorem?",
+            options: [
+                "Analyzing fluid circulation around closed boundaries",
+                "Factoring polynomials",
+                "Finding eigenvalues of matrices",
+                "Computing Taylor series"
+            ],
+            answer: "Analyzing fluid circulation around closed boundaries",
+            explanation: "Green's Theorem is widely used in fluid dynamics, electromagnetism, engineering, and other fields involving circulation and flux."
+        }
+
+        ]
+
+    },
+
+    "calculus3-unit5-lesson5": {
+
+        title: "Surface Integrals",
+
+        subtitle: "Learn how to integrate scalar and vector fields over surfaces and compute quantities such as surface area and flux.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>Double integrals accumulate quantities over flat regions, while triple integrals accumulate quantities throughout volumes. Sometimes, however, we are interested in quantities distributed across a <strong>surface</strong>. Surface integrals extend integration to curved two-dimensional surfaces embedded in three-dimensional space.</p>
+
+<p>Surface integrals are used to compute surface area, mass distributed over a surface, electric flux, fluid flow through a surface, heat transfer, and many other important physical quantities.</p>
+
+<h2>What Is a Surface?</h2>
+
+<p>A surface is a two-dimensional object that exists in three-dimensional space.</p>
+
+<p>Examples include:</p>
+
+<ul>
+
+<li>The surface of a sphere.</li>
+
+<li>The side of a cylinder.</li>
+
+<li>A paraboloid.</li>
+
+<li>A plane.</li>
+
+<li>A curved sheet of metal.</li>
+
+</ul>
+
+<p>Unlike a solid, a surface has negligible thickness.</p>
+
+<h2>Parameterizing a Surface</h2>
+
+<p>Just as curves are parameterized by one variable, surfaces are parameterized by two variables.</p>
+
+<p>A surface is commonly written as</p>
+
+<p><strong>r(u,v)=⟨x(u,v),y(u,v),z(u,v)⟩</strong></p>
+
+<p>where (u,v) varies over a region D in the parameter plane.</p>
+
+<p>Each pair (u,v) corresponds to one point on the surface.</p>
+
+<h2>Tangent Vectors</h2>
+
+<p>The partial derivatives of the parameterization produce two tangent vectors:</p>
+
+<ul>
+
+<li>r<sub>u</sub> = ∂r/∂u</li>
+
+<li>r<sub>v</sub> = ∂r/∂v</li>
+
+</ul>
+
+<p>These vectors lie tangent to the surface and describe how the surface changes in each parameter direction.</p>
+
+<h2>Surface Element</h2>
+
+<p>The surface element is</p>
+
+<p><strong>dS = |r<sub>u</sub> × r<sub>v</sub>| du dv</strong></p>
+
+<p>The cross product produces a vector perpendicular to the surface.</p>
+
+<p>Its magnitude equals the area of a tiny parallelogram on the surface.</p>
+
+<h2>Surface Integrals of Scalar Fields</h2>
+
+<p>If a scalar function f(x,y,z) is defined on a surface S, then the surface integral is</p>
+
+<p><strong>∬<sub>S</sub> f dS</strong></p>
+
+<p>After parameterization, it becomes</p>
+
+<p><strong>∬<sub>D</sub> f(r(u,v)) |r<sub>u</sub> × r<sub>v</sub>| du dv</strong></p>
+
+<p>This accumulates scalar quantities over the surface.</p>
+
+<h2>Applications of Scalar Surface Integrals</h2>
+
+<ul>
+
+<li>Surface area.</li>
+
+<li>Mass of a thin shell.</li>
+
+<li>Heat distributed over a surface.</li>
+
+<li>Charge on a conducting surface.</li>
+
+</ul>
+
+<h2>Surface Integrals of Vector Fields</h2>
+
+<p>If F is a vector field, the surface integral computes the <strong>flux</strong> through the surface.</p>
+
+<p>The integral is written as</p>
+
+<p><strong>∬<sub>S</sub> F · n dS</strong></p>
+
+<p>where n is a unit normal vector to the surface.</p>
+
+<p>The dot product measures how much of the field passes through the surface.</p>
+
+<h2>Understanding Flux</h2>
+
+<p>Flux measures the amount of a vector field flowing through a surface.</p>
+
+<ul>
+
+<li>Positive flux means the field points generally in the direction of the normal vector.</li>
+
+<li>Negative flux means the field points opposite the normal vector.</li>
+
+<li>Zero flux means the field is tangent to the surface.</li>
+
+</ul>
+
+<h2>Example</h2>
+
+<p>Imagine wind blowing through an open window.</p>
+
+<ul>
+
+<li>If the wind blows directly through the window, the flux is large.</li>
+
+<li>If the wind blows parallel to the window, almost no air passes through it.</li>
+
+<li>The angle between the field and the surface determines the flux.</li>
+
+</ul>
+
+<h2>Orientation of a Surface</h2>
+
+<p>Every surface has two possible normal directions.</p>
+
+<ul>
+
+<li>An upward normal.</li>
+
+<li>A downward normal.</li>
+
+</ul>
+
+<p>Changing the orientation reverses the sign of a vector surface integral.</p>
+
+<p>For closed surfaces, the outward-pointing normal is the standard orientation.</p>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Fluid flow through membranes.</li>
+
+<li>Electromagnetic fields.</li>
+
+<li>Heat transfer.</li>
+
+<li>Solar radiation.</li>
+
+<li>Aerodynamics.</li>
+
+<li>Engineering design.</li>
+
+<li>Computer graphics.</li>
+
+<li>Medical imaging.</li>
+
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+
+<li>Surface integrals extend integration to curved surfaces.</li>
+
+<li>Surfaces are parameterized using two variables.</li>
+
+<li>The cross product of tangent vectors determines the surface element.</li>
+
+<li>Scalar surface integrals accumulate quantities distributed over a surface.</li>
+
+<li>Vector surface integrals compute flux.</li>
+
+<li>Surface orientation affects the sign of vector surface integrals.</li>
+
+<li>Surface integrals have many applications in science and engineering.</li>
+
+</ul>
+
+`,
+
+        questions: [{
+            q: "Surface integrals are used to integrate over:",
+            options: [
+                "Curved surfaces",
+                "Only straight lines",
+                "Only volumes",
+                "Only rectangular regions"
+            ],
+            answer: "Curved surfaces",
+            explanation: "Surface integrals extend integration to two-dimensional surfaces embedded in three-dimensional space."
+        },
+
+        {
+            q: "A surface is commonly parameterized using:",
+            options: [
+                "Two variables",
+                "One variable",
+                "Three variables",
+                "No variables"
+            ],
+            answer: "Two variables",
+            explanation: "A surface is described by two parameters, usually denoted by u and v."
+        },
+
+        {
+            q: "A parameterized surface is commonly written as:",
+            options: [
+                "r(u,v)=⟨x(u,v),y(u,v),z(u,v)⟩",
+                "r(t)=⟨x(t),y(t),z(t)⟩",
+                "F(x,y)=⟨P,Q⟩",
+                "z=f(x)"
+            ],
+            answer: "r(u,v)=⟨x(u,v),y(u,v),z(u,v)⟩",
+            explanation: "Each pair (u,v) corresponds to a point on the surface."
+        },
+
+        {
+            q: "The vectors rᵤ and rᵥ are:",
+            options: [
+                "Tangent vectors to the surface",
+                "Normal vectors to the surface",
+                "Gradient vectors",
+                "Velocity vectors"
+            ],
+            answer: "Tangent vectors to the surface",
+            explanation: "The partial derivatives with respect to u and v lie tangent to the surface."
+        },
+
+        {
+            q: "The surface element dS is computed using:",
+            options: [
+                "|rᵤ × rᵥ| du dv",
+                "|rᵤ + rᵥ| du dv",
+                "|rᵤ · rᵥ| du dv",
+                "r(u,v) du dv"
+            ],
+            answer: "|rᵤ × rᵥ| du dv",
+            explanation: "The magnitude of the cross product gives the area of a small parallelogram on the surface."
+        },
+
+        {
+            q: "A scalar surface integral is written as:",
+            options: [
+                "∬S f dS",
+                "∬R f dA",
+                "∭E f dV",
+                "∫C f ds"
+            ],
+            answer: "∬S f dS",
+            explanation: "Scalar surface integrals accumulate scalar quantities distributed over a surface."
+        },
+
+        {
+            q: "A vector surface integral primarily computes:",
+            options: [
+                "Flux through a surface",
+                "Surface area only",
+                "Arc length",
+                "Volume"
+            ],
+            answer: "Flux through a surface",
+            explanation: "Vector surface integrals measure the flow of a vector field through a surface."
+        },
+
+        {
+            q: "If a vector field is tangent to a surface everywhere, the flux is:",
+            options: [
+                "Zero",
+                "Maximum",
+                "Positive",
+                "Negative"
+            ],
+            answer: "Zero",
+            explanation: "Only the component of the field perpendicular to the surface contributes to the flux."
+        },
+
+        {
+            q: "For a closed surface, the standard orientation uses the:",
+            options: [
+                "Outward-pointing normal vector",
+                "Inward-pointing normal vector",
+                "Upward tangent vector",
+                "Direction of greatest curvature"
+            ],
+            answer: "Outward-pointing normal vector",
+            explanation: "Closed surfaces are conventionally oriented using outward-pointing normal vectors."
+        },
+
+        {
+            q: "Which of the following is a common application of surface integrals?",
+            options: [
+                "Calculating fluid flow through a surface",
+                "Factoring polynomials",
+                "Finding roots of equations",
+                "Computing Taylor series"
+            ],
+            answer: "Calculating fluid flow through a surface",
+            explanation: "Surface integrals are widely used to compute flux in fluid dynamics, electromagnetism, and engineering."
+        }
+
+        ]
+
+    },
+
+
+
+
+    "calculus3-unit5-lesson6": {
+
+        title: "Stokes' Theorem and the Divergence Theorem",
+
+        subtitle: "Learn how Stokes' Theorem and the Divergence Theorem connect line integrals, surface integrals, and volume integrals into a unified framework.",
+
+        body: `
+
+<h2>Introduction</h2>
+
+<p>Green's Theorem showed that a line integral around a closed curve can be converted into a double integral over the enclosed region. Two even more powerful results extend this idea to three dimensions:</p>
+
+<ul>
+
+<li><strong>Stokes' Theorem</strong></li>
+
+<li><strong>The Divergence Theorem</strong></li>
+
+</ul>
+
+<p>Together, these theorems form the foundation of vector calculus by connecting integrals over boundaries with integrals over the regions they enclose.</p>
+
+<h2>Review of the Big Picture</h2>
+
+<p>The major integral theorems of vector calculus are closely related.</p>
+
+<ul>
+
+<li>The Fundamental Theorem of Calculus connects derivatives and ordinary integrals.</li>
+
+<li>Green's Theorem connects line integrals and double integrals.</li>
+
+<li>Stokes' Theorem connects line integrals and surface integrals.</li>
+
+<li>The Divergence Theorem connects surface integrals and triple integrals.</li>
+
+</ul>
+
+<p>Each theorem transforms an integral over a boundary into an integral over the enclosed region.</p>
+
+<h2>Stokes' Theorem</h2>
+
+<p>Suppose S is an oriented surface whose boundary curve is C.</p>
+
+<p>Stokes' Theorem states</p>
+
+<p><strong>∮<sub>C</sub> F · dr = ∬<sub>S</sub> (∇ × F) · n dS</strong></p>
+
+<p>where:</p>
+
+<ul>
+
+<li>C is the positively oriented boundary curve.</li>
+
+<li>S is the surface bounded by C.</li>
+
+<li>∇ × F is the curl of the vector field.</li>
+
+<li>n is the unit normal vector.</li>
+
+</ul>
+
+<h2>Meaning of Stokes' Theorem</h2>
+
+<p>The left side measures the circulation around the boundary.</p>
+
+<p>The right side measures the total rotation (curl) across the entire surface.</p>
+
+<p>Stokes' Theorem states that these two quantities are equal.</p>
+
+<h2>The Curl</h2>
+
+<p>The curl measures the tendency of a vector field to rotate.</p>
+
+<ul>
+
+<li>Large curl indicates strong local rotation.</li>
+
+<li>Zero curl indicates little or no local rotation.</li>
+
+<li>Curl plays an important role in fluid mechanics and electromagnetism.</li>
+
+</ul>
+
+<h2>Orientation for Stokes' Theorem</h2>
+
+<p>The surface and boundary must have compatible orientations.</p>
+
+<p>The correct orientation is determined using the <strong>right-hand rule</strong>.</p>
+
+<ul>
+
+<li>Point the thumb of your right hand along the chosen normal vector.</li>
+
+<li>Your fingers curl in the positive direction around the boundary.</li>
+
+</ul>
+
+<h2>Divergence Theorem</h2>
+
+<p>The Divergence Theorem applies to closed surfaces.</p>
+
+<p>Suppose S is a closed surface enclosing a solid E.</p>
+
+<p>The theorem states</p>
+
+<p><strong>∯<sub>S</sub> F · n dS = ∭<sub>E</sub> (∇ · F) dV</strong></p>
+
+<p>where:</p>
+
+<ul>
+
+<li>S is the closed surface.</li>
+
+<li>E is the enclosed solid.</li>
+
+<li>∇ · F is the divergence.</li>
+
+</ul>
+
+<h2>Meaning of the Divergence Theorem</h2>
+
+<p>The left side measures the total outward flux through the surface.</p>
+
+<p>The right side measures the total divergence throughout the volume.</p>
+
+<p>The theorem states that the total outward flow through the boundary equals the total amount of flow generated inside the solid.</p>
+
+<h2>The Divergence</h2>
+
+<p>Divergence measures how much a vector field spreads outward from a point.</p>
+
+<ul>
+
+<li>Positive divergence indicates a source.</li>
+
+<li>Negative divergence indicates a sink.</li>
+
+<li>Zero divergence indicates no net expansion or contraction.</li>
+
+</ul>
+
+<h2>Example</h2>
+
+<p>Imagine air filling a balloon.</p>
+
+<ul>
+
+<li>If air is produced inside the balloon, positive divergence occurs.</li>
+
+<li>The total air leaving the balloon's surface equals the total air generated inside.</li>
+
+<li>This is exactly what the Divergence Theorem describes.</li>
+
+</ul>
+
+<h2>Comparing the Major Theorems</h2>
+
+<table>
+
+<tr>
+<th>Theorem</th>
+<th>Boundary Integral</th>
+<th>Interior Integral</th>
+</tr>
+
+<tr>
+<td>Green's Theorem</td>
+<td>Line Integral</td>
+<td>Double Integral</td>
+</tr>
+
+<tr>
+<td>Stokes' Theorem</td>
+<td>Line Integral</td>
+<td>Surface Integral</td>
+</tr>
+
+<tr>
+<td>Divergence Theorem</td>
+<td>Surface Integral</td>
+<td>Triple Integral</td>
+</tr>
+
+</table>
+
+<p>Each theorem transforms an integral over a boundary into one over the enclosed region.</p>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Fluid dynamics.</li>
+
+<li>Electromagnetic theory.</li>
+
+<li>Heat transfer.</li>
+
+<li>Aerodynamics.</li>
+
+<li>Weather prediction.</li>
+
+<li>Computer simulation.</li>
+
+<li>Engineering.</li>
+
+<li>Physics.</li>
+
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+
+<li>Stokes' Theorem relates circulation around a boundary to the curl over a surface.</li>
+
+<li>The Divergence Theorem relates outward flux through a closed surface to divergence inside a volume.</li>
+
+<li>Curl measures rotation.</li>
+
+<li>Divergence measures sources and sinks.</li>
+
+<li>The right-hand rule determines orientation in Stokes' Theorem.</li>
+
+<li>These theorems unify many concepts from multivariable calculus.</li>
+
+</ul>
+
+`,
+
+        questions: [{
+            q: "Stokes' Theorem relates:",
+            options: [
+                "A line integral around a closed curve to a surface integral of the curl",
+                "A surface integral to a triple integral",
+                "A double integral to a line integral",
+                "A line integral to a volume integral"
+            ],
+            answer: "A line integral around a closed curve to a surface integral of the curl",
+            explanation: "Stokes' Theorem states that the circulation around a boundary curve equals the surface integral of the curl over the enclosed surface."
+        },
+
+        {
+            q: "The curl of a vector field measures:",
+            options: [
+                "The tendency of the field to rotate",
+                "The outward flow from a point",
+                "The length of a curve",
+                "The area of a surface"
+            ],
+            answer: "The tendency of the field to rotate",
+            explanation: "Curl measures the local rotational behavior of a vector field."
+        },
+
+        {
+            q: "The orientation used in Stokes' Theorem is determined by the:",
+            options: [
+                "Right-hand rule",
+                "Left-hand rule",
+                "Pythagorean Theorem",
+                "Chain rule"
+            ],
+            answer: "Right-hand rule",
+            explanation: "The right-hand rule ensures the surface normal and boundary orientation are compatible."
+        },
+
+        {
+            q: "In the right-hand rule, your thumb points in the direction of the:",
+            options: [
+                "Surface normal vector",
+                "Boundary curve",
+                "Gradient vector",
+                "Velocity vector"
+            ],
+            answer: "Surface normal vector",
+            explanation: "Your thumb indicates the positive normal direction, while your fingers curl in the positive boundary orientation."
+        },
+
+        {
+            q: "The Divergence Theorem applies to:",
+            options: [
+                "Closed surfaces enclosing a volume",
+                "Open curves",
+                "Any plane region",
+                "Straight line segments"
+            ],
+            answer: "Closed surfaces enclosing a volume",
+            explanation: "The theorem relates the outward flux through a closed surface to the divergence throughout the enclosed volume."
+        },
+
+        {
+            q: "The Divergence Theorem relates a surface integral to a:",
+            options: [
+                "Triple integral",
+                "Double integral",
+                "Line integral",
+                "Derivative"
+            ],
+            answer: "Triple integral",
+            explanation: "It converts the flux through a closed surface into a triple integral over the enclosed solid."
+        },
+
+        {
+            q: "The divergence of a vector field measures:",
+            options: [
+                "How much the field spreads outward from a point",
+                "The tendency of the field to rotate",
+                "The length of a curve",
+                "The curvature of a surface"
+            ],
+            answer: "How much the field spreads outward from a point",
+            explanation: "Divergence measures the net outward flow from a small region surrounding a point."
+        },
+
+        {
+            q: "A point with positive divergence behaves like a:",
+            options: [
+                "Source",
+                "Sink",
+                "Vortex",
+                "Boundary"
+            ],
+            answer: "Source",
+            explanation: "Positive divergence indicates that more field leaves the point than enters it, making it behave like a source."
+        },
+
+        {
+            q: "A point with negative divergence behaves like a:",
+            options: [
+                "Sink",
+                "Source",
+                "Maximum",
+                "Saddle point"
+            ],
+            answer: "Sink",
+            explanation: "Negative divergence indicates that more field enters the point than leaves it."
+        },
+
+        {
+            q: "Which theorem relates outward flux through a closed surface to divergence inside a volume?",
+            options: [
+                "The Divergence Theorem",
+                "Green's Theorem",
+                "Stokes' Theorem",
+                "The Fundamental Theorem for Line Integrals"
+            ],
+            answer: "The Divergence Theorem",
+            explanation: "The Divergence Theorem equates the outward flux across a closed surface with the triple integral of the divergence over the enclosed volume."
+        }
+
+        ]
+
+    },
+
+    "calculus3-unit5-review": {
+
+        title: "Unit 5 Review",
+
+        subtitle: "Review Vector Calculus before taking the Unit 5 Test.",
+
+        body: `
+
+<h2>Unit 5 Review</h2>
+
+<p>This review summarizes the major concepts from Unit 5. Vector calculus extends multivariable calculus to vector fields and provides powerful theorems that connect line, surface, and volume integrals.</p>
+
+<h2>Lesson 1 Review: Vector Fields</h2>
+
+<ul>
+
+<li>A vector field assigns a vector to every point in a region.</li>
+
+<li>Two-dimensional vector fields have x- and y-components.</li>
+
+<li>Three-dimensional vector fields also include a z-component.</li>
+
+<li>The magnitude measures the strength of the field.</li>
+
+<li>Arrow plots visualize both direction and magnitude.</li>
+
+<li>Vector fields model wind, gravity, electricity, magnetism, and fluid flow.</li>
+
+</ul>
+
+<h2>Lesson 2 Review: Line Integrals</h2>
+
+<ul>
+
+<li>Line integrals accumulate quantities along curves.</li>
+
+<li>Curves are parameterized using r(t).</li>
+
+<li>Scalar line integrals use ds.</li>
+
+<li>Vector line integrals use dr.</li>
+
+<li>Work is computed using ∫C F·dr.</li>
+
+<li>The orientation of the curve affects vector line integrals.</li>
+
+</ul>
+
+<h2>Lesson 3 Review: Fundamental Theorem for Line Integrals</h2>
+
+<ul>
+
+<li>Conservative vector fields are gradients of potential functions.</li>
+
+<li>Line integrals in conservative fields are path independent.</li>
+
+<li>The value depends only on the endpoints.</li>
+
+<li>Closed-path integrals equal zero.</li>
+
+<li>Potential functions simplify many calculations.</li>
+
+</ul>
+
+<h2>Lesson 4 Review: Green's Theorem</h2>
+
+<ul>
+
+<li>Green's Theorem converts a line integral into a double integral.</li>
+
+<li>The boundary must be a positively oriented simple closed curve.</li>
+
+<li>It relates circulation around a boundary to rotation within the enclosed region.</li>
+
+<li>Counterclockwise orientation is positive.</li>
+
+</ul>
+
+<h2>Lesson 5 Review: Surface Integrals</h2>
+
+<ul>
+
+<li>Surface integrals accumulate quantities over surfaces.</li>
+
+<li>Surfaces are parameterized using two variables.</li>
+
+<li>The cross product of tangent vectors determines the surface element.</li>
+
+<li>Vector surface integrals compute flux.</li>
+
+<li>Surface orientation determines the sign of flux.</li>
+
+</ul>
+
+<h2>Lesson 6 Review: Stokes' Theorem and the Divergence Theorem</h2>
+
+<ul>
+
+<li>Stokes' Theorem relates circulation around a boundary to curl over a surface.</li>
+
+<li>The right-hand rule determines the correct orientation.</li>
+
+<li>The Divergence Theorem relates outward flux through a closed surface to divergence inside a volume.</li>
+
+<li>Curl measures rotation.</li>
+
+<li>Divergence measures sources and sinks.</li>
+
+</ul>
+
+<h2>Important Concepts to Remember</h2>
+
+<ul>
+
+<li>Vector fields</li>
+
+<li>Magnitude</li>
+
+<li>Line integrals</li>
+
+<li>Scalar fields</li>
+
+<li>Vector fields</li>
+
+<li>Work</li>
+
+<li>Conservative fields</li>
+
+<li>Potential functions</li>
+
+<li>Path independence</li>
+
+<li>Green's Theorem</li>
+
+<li>Surface integrals</li>
+
+<li>Flux</li>
+
+<li>Curl</li>
+
+<li>Divergence</li>
+
+<li>Stokes' Theorem</li>
+
+<li>Divergence Theorem</li>
+
+<li>Right-hand rule</li>
+
+</ul>
+
+<h2>Mixed Review Questions</h2>
+
+`,
+
+        questions: [
+
+            {
+                q: "A vector field assigns:",
+                options: [
+                    "A vector to every point in a region",
+                    "A scalar to every point",
+                    "A curve to every point",
+                    "A surface to every point"
+                ],
+                answer: "A vector to every point in a region",
+                explanation: "A vector field assigns both a magnitude and direction to every point."
+            },
+
+            {
+                q: "The magnitude of a vector field represents:",
+                options: [
+                    "The strength of the field",
+                    "The curvature of the field",
+                    "The area enclosed",
+                    "The potential function"
+                ],
+                answer: "The strength of the field",
+                explanation: "The magnitude tells us how large the vector is at a particular point."
+            },
+
+            {
+                q: "A line integral accumulates quantities along:",
+                options: [
+                    "A curve",
+                    "A volume",
+                    "A plane",
+                    "A single point"
+                ],
+                answer: "A curve",
+                explanation: "Line integrals sum quantities as we move along a path."
+            },
+
+            {
+                q: "The work done by a force field is computed using:",
+                options: [
+                    "∫C F·dr",
+                    "∬R f dA",
+                    "∭E f dV",
+                    "∫ f(x) dx"
+                ],
+                answer: "∫C F·dr",
+                explanation: "A vector line integral computes the work performed by a force field."
+            },
+
+            {
+                q: "A conservative vector field is:",
+                options: [
+                    "The gradient of a scalar function",
+                    "A constant vector",
+                    "A vector with zero magnitude",
+                    "A tangent vector"
+                ],
+                answer: "The gradient of a scalar function",
+                explanation: "Conservative vector fields can be expressed as gradients of potential functions."
+            },
+
+            {
+                q: "For a conservative vector field, the value of a line integral depends only on:",
+                options: [
+                    "The endpoints",
+                    "The exact path",
+                    "The speed of travel",
+                    "The length of the path"
+                ],
+                answer: "The endpoints",
+                explanation: "This property is known as path independence."
+            },
+
+            {
+                q: "Green's Theorem converts a line integral into a:",
+                options: [
+                    "Double integral",
+                    "Triple integral",
+                    "Surface integral",
+                    "Derivative"
+                ],
+                answer: "Double integral",
+                explanation: "Green's Theorem relates circulation around a closed curve to a double integral over the enclosed region."
+            },
+
+            {
+                q: "Surface integrals are evaluated over:",
+                options: [
+                    "Surfaces",
+                    "Curves",
+                    "Volumes",
+                    "Intervals"
+                ],
+                answer: "Surfaces",
+                explanation: "Surface integrals accumulate quantities across two-dimensional surfaces in three-dimensional space."
+            },
+
+            {
+                q: "A vector surface integral computes:",
+                options: [
+                    "Flux",
+                    "Area only",
+                    "Mass only",
+                    "Arc length"
+                ],
+                answer: "Flux",
+                explanation: "Flux measures the amount of a vector field passing through a surface."
+            },
+
+            {
+                q: "Stokes' Theorem relates a line integral to:",
+                options: [
+                    "A surface integral of the curl",
+                    "A triple integral",
+                    "A double integral",
+                    "A derivative"
+                ],
+                answer: "A surface integral of the curl",
+                explanation: "Stokes' Theorem equates circulation around a boundary with the surface integral of the curl."
+            },
+            {
+                q: "The Divergence Theorem relates:",
+                options: [
+                    "A surface integral to a triple integral",
+                    "A line integral to a double integral",
+                    "A double integral to a line integral",
+                    "A derivative to an integral"
+                ],
+                answer: "A surface integral to a triple integral",
+                explanation: "The Divergence Theorem converts the outward flux through a closed surface into a triple integral over the enclosed volume."
+            },
+
+            {
+                q: "The curl of a vector field measures:",
+                options: [
+                    "The tendency of the field to rotate",
+                    "The outward flow from a point",
+                    "The length of a vector",
+                    "The area of a surface"
+                ],
+                answer: "The tendency of the field to rotate",
+                explanation: "Curl measures the local rotational behavior of a vector field."
+            },
+
+            {
+                q: "The divergence of a vector field measures:",
+                options: [
+                    "How much the field spreads outward from a point",
+                    "The rotation of the field",
+                    "The slope of the field",
+                    "The speed of the field"
+                ],
+                answer: "How much the field spreads outward from a point",
+                explanation: "Positive divergence indicates a source, while negative divergence indicates a sink."
+            },
+
+            {
+                q: "The right-hand rule is primarily used with:",
+                options: [
+                    "Stokes' Theorem",
+                    "Green's Theorem",
+                    "The Fundamental Theorem of Calculus",
+                    "Taylor's Theorem"
+                ],
+                answer: "Stokes' Theorem",
+                explanation: "The right-hand rule determines the compatible orientation between a surface normal and its boundary curve."
+            },
+
+            {
+                q: "A line integral around a closed curve in a conservative vector field is:",
+                options: [
+                    "Zero",
+                    "Positive",
+                    "Negative",
+                    "Equal to the area enclosed"
+                ],
+                answer: "Zero",
+                explanation: "Since the starting and ending points are the same, the potential difference is zero."
+            },
+
+            {
+                q: "Green's Theorem requires the boundary curve to be:",
+                options: [
+                    "A positively oriented simple closed curve",
+                    "An open curve",
+                    "A straight line",
+                    "A three-dimensional curve"
+                ],
+                answer: "A positively oriented simple closed curve",
+                explanation: "The theorem applies to simple closed curves traversed counterclockwise."
+            },
+
+            {
+                q: "The cross product rᵤ × rᵥ is used to compute:",
+                options: [
+                    "The surface element",
+                    "The gradient",
+                    "The divergence",
+                    "The parameterization"
+                ],
+                answer: "The surface element",
+                explanation: "Its magnitude gives the area of a small parallelogram on the surface."
+            },
+
+            {
+                q: "Flux measures:",
+                options: [
+                    "The amount of a vector field passing through a surface",
+                    "The distance along a curve",
+                    "The curvature of a path",
+                    "The average value of a function"
+                ],
+                answer: "The amount of a vector field passing through a surface",
+                explanation: "Flux quantifies how much of a vector field passes through a surface."
+            },
+
+            {
+                q: "Which theorem extends Green's Theorem to surfaces in three dimensions?",
+                options: [
+                    "Stokes' Theorem",
+                    "The Divergence Theorem",
+                    "The Chain Rule",
+                    "The Mean Value Theorem"
+                ],
+                answer: "Stokes' Theorem",
+                explanation: "Stokes' Theorem generalizes Green's Theorem by relating circulation around a boundary curve to the curl over a surface."
+            },
+
+            {
+                q: "Which theorem relates outward flux through a closed surface to divergence inside a volume?",
+                options: [
+                    "The Divergence Theorem",
+                    "Green's Theorem",
+                    "Stokes' Theorem",
+                    "The Fundamental Theorem for Line Integrals"
+                ],
+                answer: "The Divergence Theorem",
+                explanation: "The Divergence Theorem equates the total outward flux through a closed surface with the triple integral of the divergence over the enclosed volume."
+            },
+
+            {
+                q: "Which statement about conservative vector fields is TRUE?",
+                options: [
+                    "They have path-independent line integrals.",
+                    "They always have positive divergence.",
+                    "They always have nonzero curl.",
+                    "They can only exist in two dimensions."
+                ],
+                answer: "They have path-independent line integrals.",
+                explanation: "For conservative vector fields, the value of a line integral depends only on the endpoints of the path."
+            },
+
+            {
+                q: "Which quantity is associated with Stokes' Theorem?",
+                options: [
+                    "Curl",
+                    "Divergence",
+                    "Gradient",
+                    "Jacobian"
+                ],
+                answer: "Curl",
+                explanation: "Stokes' Theorem relates circulation around a boundary to the surface integral of the curl."
+            },
+
+            {
+                q: "Which quantity is associated with the Divergence Theorem?",
+                options: [
+                    "Divergence",
+                    "Curl",
+                    "Gradient",
+                    "Potential"
+                ],
+                answer: "Divergence",
+                explanation: "The Divergence Theorem relates outward flux to the divergence within the enclosed volume."
+            },
+
+            {
+                q: "A positive divergence indicates that a point behaves like a:",
+                options: [
+                    "Source",
+                    "Sink",
+                    "Vortex",
+                    "Boundary"
+                ],
+                answer: "Source",
+                explanation: "Positive divergence means there is net outward flow from the point."
+            },
+
+            {
+                q: "Which statement best summarizes Unit 5?",
+                options: [
+                    "Vector calculus studies vector fields and uses line, surface, and volume integrals together with Green's, Stokes', and the Divergence Theorem to analyze circulation, flux, and flow.",
+                    "Vector calculus only studies derivatives of scalar functions.",
+                    "Vector calculus is limited to two-dimensional geometry.",
+                    "Vector calculus is only used in theoretical mathematics."
+                ],
+                answer: "Vector calculus studies vector fields and uses line, surface, and volume integrals together with Green's, Stokes', and the Divergence Theorem to analyze circulation, flux, and flow.",
+                explanation: "Unit 5 introduced vector fields, line and surface integrals, conservative fields, Green's Theorem, Stokes' Theorem, and the Divergence Theorem, which together form the core of vector calculus."
+            }
+
+        ]
+
+    },
+
+
+
+
+
+    "calculus3-unit5-test": {
+
+        title: "Unit 5 Test",
+
+        subtitle: "Test your understanding of Vector Calculus, Line Integrals, Surface Integrals, and the Major Integral Theorems.",
+
+        body: `
+
+<h2>Unit 5 Test</h2>
+
+<p>This assessment covers everything learned in Unit 5.</p>
+
+<p>The test includes questions from:</p>
+
+<ul>
+
+<li>Vector Fields</li>
+
+<li>Line Integrals</li>
+
+<li>Fundamental Theorem for Line Integrals</li>
+
+<li>Green's Theorem</li>
+
+<li>Surface Integrals</li>
+
+<li>Stokes' Theorem and the Divergence Theorem</li>
+
+</ul>
+
+<p>Select the best answer for each question before checking your results.</p>
+
+`,
+
+        questions: [
+
+            {
+                q: "A vector field assigns:",
+                options: [
+                    "A vector to every point in a region",
+                    "A scalar to every point",
+                    "A curve to every point",
+                    "A surface to every point"
+                ],
+                answer: "A vector to every point in a region",
+                explanation: "A vector field assigns both magnitude and direction to every point in a region."
+            },
+
+            {
+                q: "The magnitude of a vector field represents its:",
+                options: [
+                    "Strength",
+                    "Direction only",
+                    "Curvature",
+                    "Potential"
+                ],
+                answer: "Strength",
+                explanation: "The magnitude measures how large or strong the vector is at a given point."
+            },
+
+            {
+                q: "The standard form of a two-dimensional vector field is:",
+                options: [
+                    "F(x,y)=P(x,y)i+Q(x,y)j",
+                    "F(x,y)=P(x,y)+Q(x,y)",
+                    "F(x,y)=P(x,y)k",
+                    "F(x,y)=x+y"
+                ],
+                answer: "F(x,y)=P(x,y)i+Q(x,y)j",
+                explanation: "A two-dimensional vector field has x- and y-components represented by i and j."
+            },
+
+            {
+                q: "A line integral accumulates quantities along:",
+                options: [
+                    "A curve",
+                    "A surface",
+                    "A volume",
+                    "A point"
+                ],
+                answer: "A curve",
+                explanation: "Line integrals sum quantities as we move along a path."
+            },
+
+            {
+                q: "A scalar line integral is written as:",
+                options: [
+                    "∫C f ds",
+                    "∫C F·dr",
+                    "∬R f dA",
+                    "∭E f dV"
+                ],
+                answer: "∫C f ds",
+                explanation: "Scalar line integrals accumulate scalar quantities along a curve."
+            },
+
+            {
+                q: "A vector line integral is commonly used to compute:",
+                options: [
+                    "Work",
+                    "Area",
+                    "Volume",
+                    "Surface area"
+                ],
+                answer: "Work",
+                explanation: "The work done by a force field along a path is computed using a vector line integral."
+            },
+
+            {
+                q: "If a force is perpendicular to the direction of motion, the work done is:",
+                options: [
+                    "Zero",
+                    "Maximum",
+                    "Positive",
+                    "Negative"
+                ],
+                answer: "Zero",
+                explanation: "Perpendicular vectors have a dot product of zero, so no work is performed."
+            },
+
+            {
+                q: "A conservative vector field is:",
+                options: [
+                    "The gradient of a scalar function",
+                    "A constant vector",
+                    "A unit vector",
+                    "A tangent vector"
+                ],
+                answer: "The gradient of a scalar function",
+                explanation: "Every conservative vector field is the gradient of a potential function."
+            },
+
+            {
+                q: "The scalar function associated with a conservative vector field is called the:",
+                options: [
+                    "Potential function",
+                    "Jacobian",
+                    "Divergence",
+                    "Curl"
+                ],
+                answer: "Potential function",
+                explanation: "The gradient of the potential function equals the conservative vector field."
+            },
+
+            {
+                q: "For a conservative vector field, a line integral depends only on:",
+                options: [
+                    "The endpoints",
+                    "The exact path",
+                    "The speed of travel",
+                    "The curve length"
+                ],
+                answer: "The endpoints",
+                explanation: "Conservative vector fields have path-independent line integrals."
+            },
+
+            {
+                q: "A line integral around a closed curve in a conservative field equals:",
+                options: [
+                    "Zero",
+                    "One",
+                    "The area enclosed",
+                    "The length of the curve"
+                ],
+                answer: "Zero",
+                explanation: "The starting and ending points coincide, so the potential difference is zero."
+            },
+
+            {
+                q: "Green's Theorem converts a line integral into a:",
+                options: [
+                    "Double integral",
+                    "Triple integral",
+                    "Surface integral",
+                    "Derivative"
+                ],
+                answer: "Double integral",
+                explanation: "Green's Theorem relates circulation around a closed curve to a double integral over the enclosed region."
+            },
+
+            {
+                q: "Green's Theorem requires the boundary to be:",
+                options: [
+                    "A positively oriented simple closed curve",
+                    "An open curve",
+                    "A straight line",
+                    "A three-dimensional path"
+                ],
+                answer: "A positively oriented simple closed curve",
+                explanation: "The curve must be simple, closed, and traversed counterclockwise."
+            },
+            {
+                q: "Surface integrals are evaluated over:",
+                options: [
+                    "Surfaces",
+                    "Curves",
+                    "Volumes",
+                    "Intervals"
+                ],
+                answer: "Surfaces",
+                explanation: "Surface integrals accumulate scalar or vector quantities over two-dimensional surfaces embedded in three-dimensional space."
+            },
+
+            {
+                q: "A surface is commonly parameterized using:",
+                options: [
+                    "Two variables",
+                    "One variable",
+                    "Three variables",
+                    "No variables"
+                ],
+                answer: "Two variables",
+                explanation: "A parameterized surface is described by two parameters, usually denoted by u and v."
+            },
+
+            {
+                q: "The surface element dS is computed using:",
+                options: [
+                    "|rᵤ × rᵥ| du dv",
+                    "|rᵤ + rᵥ| du dv",
+                    "|rᵤ · rᵥ| du dv",
+                    "|r| du dv"
+                ],
+                answer: "|rᵤ × rᵥ| du dv",
+                explanation: "The magnitude of the cross product of the tangent vectors gives the area of a small surface element."
+            },
+
+            {
+                q: "A vector surface integral primarily computes:",
+                options: [
+                    "Flux",
+                    "Surface area",
+                    "Arc length",
+                    "Volume"
+                ],
+                answer: "Flux",
+                explanation: "Vector surface integrals measure how much of a vector field passes through a surface."
+            },
+
+            {
+                q: "Stokes' Theorem relates a line integral to:",
+                options: [
+                    "A surface integral of the curl",
+                    "A triple integral",
+                    "A double integral",
+                    "A derivative"
+                ],
+                answer: "A surface integral of the curl",
+                explanation: "Stokes' Theorem states that the circulation around a closed curve equals the surface integral of the curl over the enclosed surface."
+            },
+
+            {
+                q: "The right-hand rule is used to determine:",
+                options: [
+                    "The compatible orientation of a surface and its boundary",
+                    "The magnitude of a vector",
+                    "The gradient of a function",
+                    "The divergence of a field"
+                ],
+                answer: "The compatible orientation of a surface and its boundary",
+                explanation: "The right-hand rule ensures that the surface normal vector and boundary curve have consistent orientations."
+            },
+
+            {
+                q: "The Divergence Theorem relates:",
+                options: [
+                    "A surface integral to a triple integral",
+                    "A line integral to a double integral",
+                    "A double integral to a line integral",
+                    "A derivative to an integral"
+                ],
+                answer: "A surface integral to a triple integral",
+                explanation: "The Divergence Theorem converts the outward flux through a closed surface into a triple integral over the enclosed volume."
+            },
+
+            {
+                q: "The divergence of a vector field measures:",
+                options: [
+                    "How much the field spreads outward from a point",
+                    "The tendency of the field to rotate",
+                    "The length of a vector",
+                    "The curvature of a surface"
+                ],
+                answer: "How much the field spreads outward from a point",
+                explanation: "Divergence measures the net outward flow from a point. Positive divergence indicates a source, while negative divergence indicates a sink."
+            },
+
+            {
+                q: "A point with positive divergence behaves like a:",
+                options: [
+                    "Source",
+                    "Sink",
+                    "Vortex",
+                    "Boundary"
+                ],
+                answer: "Source",
+                explanation: "Positive divergence means more of the vector field leaves the point than enters it."
+            },
+
+            {
+                q: "A point with negative divergence behaves like a:",
+                options: [
+                    "Sink",
+                    "Source",
+                    "Maximum",
+                    "Saddle point"
+                ],
+                answer: "Sink",
+                explanation: "Negative divergence means more of the vector field enters the point than leaves it."
+            },
+
+            {
+                q: "Which theorem generalizes Green's Theorem to surfaces in three dimensions?",
+                options: [
+                    "Stokes' Theorem",
+                    "The Divergence Theorem",
+                    "The Fundamental Theorem for Line Integrals",
+                    "The Chain Rule"
+                ],
+                answer: "Stokes' Theorem",
+                explanation: "Stokes' Theorem extends Green's Theorem by relating circulation around a boundary curve to the curl over a surface."
+            },
+
+            {
+                q: "Which statement best summarizes Unit 5?",
+                options: [
+                    "Vector calculus studies vector fields and uses line, surface, and volume integrals together with Green's, Stokes', and the Divergence Theorem to analyze circulation, flux, and flow.",
+                    "Vector calculus only studies derivatives of scalar functions.",
+                    "Vector calculus is limited to two-dimensional geometry.",
+                    "Vector calculus only applies to theoretical mathematics."
+                ],
+                answer: "Vector calculus studies vector fields and uses line, surface, and volume integrals together with Green's, Stokes', and the Divergence Theorem to analyze circulation, flux, and flow.",
+                explanation: "Unit 5 combined vector fields, line integrals, surface integrals, conservative fields, Green's Theorem, Stokes' Theorem, and the Divergence Theorem into a unified framework for analyzing vector-valued phenomena."
+            }
+
+        ]
+
+    },
 
 
 
