@@ -4,109 +4,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildBright Courses</title>
+
+    <title>BuildBright Mathematics</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
-<body class="courses-page">
+<body class="math-courses-page">
 
-    <header class="top-nav">
+    <header class="math-nav">
 
-        <div class="logo" onclick="window.location.href='index.html'">
-            BuildBright
-        </div>
+        <a href="index.html" class="math-logo">BuildBright</a>
 
         <nav>
-            <a href="index.html">Home</a>
+            <a href="courses.html" class="active">Math</a>
+            <a href="index.html#jee">JEE Prep</a>
+            <a href="index.html#about">About</a>
         </nav>
 
     </header>
 
-    <main class="courses-container">
 
-        <h1>Choose Your Course</h1>
+    <main>
 
-        <p class="courses-subtitle">
-            Select a course to begin your learning journey.
-        </p>
+        <section class="math-page-hero">
 
-        <div class="course-grid">
+            <div class="math-page-hero-inner">
 
-            <div class="course-card" onclick="window.location.href='course.html?subject=algebra1'">
+                <span class="math-page-label">
+                    BUILDBRIGHT MATHEMATICS
+                </span>
 
-                <div class="course-icon">📘</div>
+                <h1>
+                    Build your foundation.<br>
+                    Go further.
+                </h1>
 
-                <h2>Algebra 1</h2>
-
-                <p>Master equations, graphs, inequalities and functions.</p>
-
-            </div>
-
-            <div class="course-card" onclick="window.location.href='course.html?subject=geometry'">
-
-                <div class="course-icon">📐</div>
-
-                <h2>Geometry</h2>
-
-                <p>Lines, angles, triangles, circles and coordinate geometry.</p>
+                <p>
+                    A complete mathematics pathway from foundational
+                    algebra through advanced calculus.
+                </p>
 
             </div>
 
-            <div class="course-card" onclick="window.location.href='course.html?subject=algebra2'">
-                <div class="course-icon">📈</div>
-                <h2>Algebra 2</h2>
-                <p>Quadratics, polynomials, radicals, logarithms, systems, and functions.</p>
+        </section>
+
+
+        <section class="math-course-section">
+
+            <div class="math-course-heading">
+
+                <div>
+                    <span>YOUR PATH</span>
+                    <h2>Mathematics Courses</h2>
+                </div>
+
+                <p>
+                    Start where you are. Progress at your own pace.
+                </p>
+
             </div>
 
-        </div>
 
-        <div class="course-card" onclick="window.location.href='course.html?subject=calculus1'">
+            <div class="new-course-list">
 
-            <div class="course-icon">∫</div>
 
-            <h2>Calculus 1</h2>
+                <!-- ALGEBRA 1 -->
 
-            <p>Limits, derivatives, applications of derivatives, and introductory integration.</p>
+                <a href="course.html?subject=algebra1"
+                   class="new-course-row">
 
-        </div>
+                    <div class="new-course-icon algebra1-icon">
+                        x
+                    </div>
 
-        <div class="course-card" onclick="window.location.href='course.html?subject=calculus2'">
+                    <div class="new-course-number">
+                        01
+                    </div>
 
-            <div class="course-icon">∫</div>
+                    <div class="new-course-info">
 
-            <h2>Calculus 2</h2>
+                        <span class="course-level">
+                            FOUNDATION
+                        </span>
 
-            <p>Advanced integration, applications of integration, parametric equations, polar coordinates, sequences,
-                and series.</p>
+                        <h3>Algebra 1</h3>
 
-        </div>
+                        <p>
+                            Equations, inequalities, functions,
+                            graphs and the foundations of algebra.
+                        </p>
 
-        <div id="calculus3-card" class="course-card" onclick="window.location.href='course.html?subject=calculus3'">
+                    </div>
 
-            <div class="course-icon">∫</div>
+                    <div class="new-course-arrow">
+                        →
+                    </div>
 
-            <h2>Calculus 3</h2>
+                </a>
 
-            <p>Multivariable calculus, vectors, partial derivatives, multiple integrals, and vector calculus.</p>
 
-        </div>
+                <!-- GEOMETRY -->
 
-        <div id="calculus4-card" class="course-card" onclick="window.location.href='course.html?subject=calculus4'">
+                <a href="course.html?subject=geometry"
+                   class="new-course-row">
 
-            <div class="course-icon">∫</div>
+                    <div class="new-course-icon geometry-icon">
+                        △
+                    </div>
 
-            <h2>Calculus 4</h2>
+                    <div class="new-course-number">
+                        02
+                    </div>
 
-            <p>Differential Equations, Laplace Transforms, Systems of Differential Equations, and Partial Differential
-                Equations.</p>
+                    <div class="new-course-info">
 
-        </div>
+                        <span class="course-level">
+                            FOUNDATION
+                        </span>
 
-        </div>
+                        <h3>Geometry</h3>
+
+                        <p>
+                            Lines, angles, triangles, circles,
+                            proofs and coordinate geometry.
+                        </p>
+
+                    </div>
+
+                    <div class="new-course-arrow">
+                        →
+                    </div>
+
+                </a>
+
+
+                <!-- ALGEBRA 2 -->
+
+                <a href="course.html?subject=algebra2"
+                   class="new-course-row">
+
+                    <div class="new-course-icon algebra2-icon">
+                        x²
+                    </div>
+
+                    <div class="new-course-number">
+                        03
+                    </div>
+
+                    <div class="new-course-info">
+
+                        <span class="course-level">
+                            INTERMEDIATE
+                        </span>
+
+                        <h3>Algebra 2</h3>
+
+                        <p>
+                            Quadratics, polynomials, radicals,
+                            logarithms, systems and advanced functions.
+                        </p>
+
+                    </div>
+
+                    <div class="new-course-arrow">
+                        →
+                    </div>
+
+                </a>
+
+
+                <!-- CALCULUS 1 -->
+
+                <a href="course.html?subject=calculus1"
+                   class="new-course-row">
+
+                    <div class="new-course-icon calculus1-icon">
+                        ∫
+                    </div>
+
+                    <div class="new-course-number">
+                        04
+                    </div>
+
+                    <div class="new-course-info">
+
+                        <span class="course-level">
+                            ADVANCED
+                        </span>
+
+                        <h3>Calculus I</h3>
+
+                        <p>
+                            Limits, derivatives, applications of
+                            derivatives and introductory integration.
+                        </p>
+
+                    </div>
+
+                    <div class="new-course-arrow">
+                        →
+                    </div>
+
+                </a>
+
+
+                <!-- CALCULUS 2 -->
+
+                <a href="course.html?subject=calculus2"
+                   class="new-course-row">
+
+                    <div class="new-course-icon calculus2-icon">
+                        ∑
+                    </div>
+
+                    <div class="new-course-number">
+                        05
+                    </div>
+
+                    <div class="new-course-info">
+
+                        <span class="course-level">
+                            ADVANCED
+                        </span>
+
+                        <h3>Calculus II</h3>
+
+                        <p>
+                            Advanced integration, parametric equations,
+                            polar coordinates, sequences and series.
+                        </p>
+
+                    </div>
+
+                    <div class="new-course-arrow">
+                        →
+                    </div>
+
+                </a>
+
+
+                <!-- CALCULUS 3 -->
+
+                <a href="course.html?subject=calculus3"
+                   class="new-course-row">
+
+                    <div class="new-course-icon calculus3-icon">
+                        ∇
+                    </div>
+
+                    <div class="new-course-number">
+                        06
+                    </div>
+
+                    <div class="new-course-info">
+
+                        <span class="course-level">
+                            ADVANCED
+                        </span>
+
+                        <h3>Calculus III</h3>
+
+                        <p>
+                            Multivariable calculus, vectors,
+                            partial derivatives and multiple integrals.
+                        </p>
+
+                    </div>
+
+                    <div class="new-course-arrow">
+                        →
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="math-bottom-cta">
+
+            <span>BUILDBRIGHT</span>
+
+            <h2>
+                Learn deeply.<br>
+                Aim higher.
+            </h2>
+
+            <p>
+                Build the mathematical foundation you need
+                for advanced study and challenging problems.
+            </p>
+
+            <a href="index.html#jee" class="math-cta-button">
+                Explore JEE Preparation →
+            </a>
+
+        </section>
 
     </main>
+
+
+    <footer class="math-page-footer">
+
+        <a href="index.html" class="footer-math-logo">
+            BuildBright
+        </a>
+
+        <span>
+            © 2026 BuildBright
+        </span>
+
+    </footer>
 
 </body>
 
