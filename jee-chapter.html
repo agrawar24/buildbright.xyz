@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body class="jee-chapter-page">
 
     <header class="jee-nav">
@@ -30,10 +29,6 @@
 
     <main>
 
-        <!-- ========================================
-         CHAPTER HERO
-    ========================================= -->
-
         <section class="chapter-page-hero">
 
             <div class="chapter-hero-inner">
@@ -44,79 +39,49 @@
 
                 <div class="chapter-breadcrumb">
 
-                    <span id="breadcrumbSubject">
-                        Physics
-                    </span>
-
+                    <span id="breadcrumbSubject">Physics</span>
                     <span>›</span>
-
-                    <span id="breadcrumbCategory">
-                        Mechanics
-                    </span>
+                    <span id="breadcrumbCategory">Mechanics</span>
 
                 </div>
-
 
                 <h1 id="chapterTitle">
                     Kinematics
                 </h1>
 
-
                 <p id="chapterDescription">
-                    Build a complete understanding of this chapter
-                    through concepts, worked examples and JEE-level
-                    problem solving.
+                    Build a complete understanding of this chapter through
+                    concepts, worked examples and JEE-level problem solving.
                 </p>
-
 
                 <div class="chapter-overview-stats">
 
                     <div>
-                        <strong id="lessonCount">
-                            0
-                        </strong>
-
+                        <strong id="lessonCount">0</strong>
                         <span>Lessons</span>
                     </div>
 
                     <div>
-                        <strong>
-                            Practice
-                        </strong>
-
+                        <strong>Practice</strong>
                         <span>JEE Problems</span>
                     </div>
 
                     <div>
-                        <strong>
-                            Test
-                        </strong>
-
+                        <strong>Test</strong>
                         <span>Chapter Assessment</span>
                     </div>
 
                 </div>
 
-
                 <div class="chapter-main-progress">
 
                     <div>
-
-                        <strong>
-                            Chapter Progress
-                        </strong>
-
-                        <span id="chapterProgressText">
-                            0% complete
-                        </span>
-
+                        <strong>Chapter Progress</strong>
+                        <span id="chapterProgressText">0% complete</span>
                     </div>
 
                     <div class="chapter-main-progress-track">
-
-                        <div id="chapterProgressFill">
-                        </div>
-
+                        <div id="chapterProgressFill"></div>
                     </div>
 
                 </div>
@@ -126,24 +91,13 @@
         </section>
 
 
-        <!-- ========================================
-         LESSONS
-    ========================================= -->
-
         <section class="chapter-content">
 
             <div class="chapter-content-heading">
 
                 <div>
-
-                    <span>
-                        CHAPTER CONTENT
-                    </span>
-
-                    <h2>
-                        Learn the Chapter
-                    </h2>
-
+                    <span>CHAPTER CONTENT</span>
+                    <h2>Learn the Chapter</h2>
                 </div>
 
                 <p>
@@ -158,25 +112,15 @@
             </div>
 
 
-            <!-- ====================================
-             PRACTICE + TEST
-        ===================================== -->
-
             <div class="chapter-actions">
 
                 <a id="practiceLink" href="#" class="chapter-action-card practice">
 
-                    <div class="chapter-action-icon">
-                        ✓
-                    </div>
+                    <div class="chapter-action-icon">✓</div>
 
-                    <span>
-                        AFTER THE LESSONS
-                    </span>
+                    <span>AFTER THE LESSONS</span>
 
-                    <h3>
-                        Chapter Practice
-                    </h3>
+                    <h3>Chapter Practice</h3>
 
                     <p>
                         Apply what you learned with
@@ -192,17 +136,11 @@
 
                 <a id="testLink" href="#" class="chapter-action-card test">
 
-                    <div class="chapter-action-icon">
-                        ★
-                    </div>
+                    <div class="chapter-action-icon">★</div>
 
-                    <span>
-                        CHECK YOUR MASTERY
-                    </span>
+                    <span>CHECK YOUR MASTERY</span>
 
-                    <h3>
-                        Chapter Test
-                    </h3>
+                    <h3>Chapter Test</h3>
 
                     <p>
                         Test your understanding under
@@ -225,33 +163,21 @@
     <footer class="jee-footer">
 
         <div>
-
-            <a href="index.html">
-                BuildBright
-            </a>
-
-            <p>
-                Learn deeply. Aim higher.
-            </p>
-
+            <a href="index.html">BuildBright</a>
+            <p>Learn deeply. Aim higher.</p>
         </div>
 
-        <span>
-            © 2026 BuildBright
-        </span>
+        <span>© 2026 BuildBright</span>
 
     </footer>
 
 
-    <script>
+    <script src="jee-physics-lessons.js"></script>
 
-        /* =========================================================
-           CHAPTER PAGE
-           ========================================================= */
+    <script>
 
         const params =
             new URLSearchParams(window.location.search);
-
 
         const subject =
             params.get("subject") || "physics";
@@ -263,37 +189,21 @@
             params.get("chapter") || "Kinematics";
 
 
-        /* =========================================================
-           SUBJECT NAMES
-           ========================================================= */
-
         const subjectNames = {
-
             mathematics: "Mathematics",
-
             physics: "Physics",
-
             chemistry: "Chemistry"
-
         };
-
 
         const subjectName =
             subjectNames[subject] || "JEE";
 
 
         /* =========================================================
-           DEFAULT LESSON STRUCTURE
+           DEFAULT LESSONS
            ========================================================= */
 
-        /*
-           For now every chapter receives the same learning structure.
-        
-           Later, when we build the actual curriculum,
-           each chapter will receive its own real lesson list.
-        */
-
-        const lessons = [
+        const defaultLessons = [
 
             {
                 title: "Introduction and Core Concepts",
@@ -335,32 +245,58 @@
 
 
         /* =========================================================
+           LOAD REAL CHAPTER DATA WHEN AVAILABLE
+           ========================================================= */
+
+        let chapterData = null;
+
+        if (
+            subject === "physics" &&
+            typeof jeePhysicsLessons !== "undefined" &&
+            jeePhysicsLessons[chapter]
+        ) {
+            chapterData =
+                jeePhysicsLessons[chapter];
+        }
+
+
+        const lessons =
+            chapterData
+                ? chapterData.lessons
+                : defaultLessons;
+
+
+        /* =========================================================
            HEADER
            ========================================================= */
 
         document.title =
-            chapter +
-            " | BuildBright JEE";
-
+            chapter + " | BuildBright JEE";
 
         document.getElementById("breadcrumbSubject")
             .textContent =
             subjectName;
 
-
         document.getElementById("breadcrumbCategory")
             .textContent =
             category;
-
 
         document.getElementById("chapterTitle")
             .textContent =
             chapter;
 
-
         document.getElementById("lessonCount")
             .textContent =
             lessons.length;
+
+
+        if (chapterData && chapterData.description) {
+
+            document.getElementById("chapterDescription")
+                .textContent =
+                chapterData.description;
+
+        }
 
 
         /* =========================================================
@@ -373,6 +309,71 @@
 
 
         /* =========================================================
+           COMPLETION
+           ========================================================= */
+
+        function lessonCompletionKey(number) {
+
+            return (
+                "jee-complete-" +
+                subject + "-" +
+                category + "-" +
+                chapter + "-" +
+                number
+            );
+
+        }
+
+
+        function isLessonComplete(number) {
+
+            try {
+
+                return (
+                    localStorage.getItem(
+                        lessonCompletionKey(number)
+                    ) === "true"
+                );
+
+            } catch (error) {
+
+                return false;
+
+            }
+
+        }
+
+
+        let completedLessons = 0;
+
+        lessons.forEach((lesson, index) => {
+
+            if (isLessonComplete(index + 1)) {
+                completedLessons++;
+            }
+
+        });
+
+
+        const progressPercent =
+            lessons.length
+                ? Math.round(
+                    (completedLessons / lessons.length) * 100
+                )
+                : 0;
+
+
+        document.getElementById("chapterProgressText")
+            .textContent =
+            progressPercent + "% complete";
+
+
+        document.getElementById("chapterProgressFill")
+            .style.width =
+            progressPercent + "%";
+
+
+        /* =========================================================
            LESSON LIST
            ========================================================= */
 
@@ -381,6 +382,13 @@
 
 
         lessons.forEach((lesson, index) => {
+
+            const lessonNumber =
+                index + 1;
+
+            const completed =
+                isLessonComplete(lessonNumber);
+
 
             const lessonRow =
                 document.createElement("a");
@@ -401,22 +409,19 @@
                 encodeURIComponent(chapter) +
 
                 "&lesson=" +
-                encodeURIComponent(index + 1);
+                lessonNumber;
 
 
             lessonRow.innerHTML = `
 
         <div class="lesson-number">
-
-            ${String(index + 1).padStart(2, "0")}
-
+            ${String(lessonNumber).padStart(2, "0")}
         </div>
-
 
         <div class="lesson-row-info">
 
             <span>
-                LESSON ${index + 1}
+                LESSON ${lessonNumber}
             </span>
 
             <h3>
@@ -429,15 +434,13 @@
 
         </div>
 
-
         <div class="lesson-status">
 
             <span>
-                NOT STARTED
+                ${completed ? "COMPLETED" : "NOT STARTED"}
             </span>
 
         </div>
-
 
         <div class="lesson-arrow">
             →
@@ -452,7 +455,7 @@
 
 
         /* =========================================================
-           FUTURE PRACTICE LINKS
+           PRACTICE + TEST
            ========================================================= */
 
         const query =
@@ -475,7 +478,6 @@
             "jee-test.html" + query;
 
     </script>
-
 
 </body>
 
