@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BuildBright JEE Subject</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="jee-subject-page">
+
+    <header class="jee-nav">
+        <a href="index.html" class="jee-logo">BuildBright</a>
+
+        <nav>
+            <a href="courses.html">Math</a>
+            <a href="jee.html" class="active">JEE Prep</a>
+            <a href="index.html#about">About</a>
+        </nav>
+    </header>
+
+
+    <div class="jee-subject-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="jee-subject-sidebar">
+
+            <a href="jee.html" class="subject-back">
+                ← JEE Prep
+            </a>
+
+            <div class="subject-sidebar-heading">
+                <span>BUILDBRIGHT JEE</span>
+                <h2 id="sidebarSubject">Mathematics</h2>
+            </div>
+
+            <nav id="categoryList" class="subject-category-list">
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="jee-subject-main">
+
+            <section class="subject-header">
+
+                <span class="subject-header-label">
+                    JEE PREPARATION
+                </span>
+
+                <h1 id="subjectTitle">
+                    Mathematics
+                </h1>
+
+                <p id="subjectDescription">
+                    Master the concepts and problem-solving skills required
+                    for JEE Main and JEE Advanced.
+                </p>
+
+                <div class="subject-progress-box">
+
+                    <div>
+                        <strong>Your Progress</strong>
+                        <span id="progressText">0% complete</span>
+                    </div>
+
+                    <div class="subject-progress-track">
+                        <div id="subjectProgressBar" class="subject-progress-fill">
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="subject-chapters">
+
+                <div class="subject-chapter-heading">
+
+                    <div>
+                        <span id="categoryLabel">
+                            ALGEBRA
+                        </span>
+
+                        <h2 id="categoryTitle">
+                            Algebra
+                        </h2>
+                    </div>
+
+                    <p id="chapterCount">
+                        0 chapters
+                    </p>
+
+                </div>
+
+
+                <div id="chapterList" class="subject-chapter-list">
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script>
+
+        /* =========================================================
+           JEE SUBJECT DATA
+           ========================================================= */
+
+        const jeeSubjects = {
+
+            mathematics: {
+
+                title: "Mathematics",
+
+                description:
+                    "Master algebra, calculus, geometry and advanced problem-solving for JEE Main and JEE Advanced.",
+
+                categories: {
+
+                    "Algebra": [
+                        "Sets, Relations and Functions",
+                        "Complex Numbers",
+                        "Quadratic Equations",
+                        "Sequences and Series",
+                        "Permutations and Combinations",
+                        "Binomial Theorem",
+                        "Matrices and Determinants"
+                    ],
+
+                    "Coordinate Geometry": [
+                        "Straight Lines",
+                        "Circles",
+                        "Parabola",
+                        "Ellipse",
+                        "Hyperbola"
+                    ],
+
+                    "Calculus": [
+                        "Limits and Continuity",
+                        "Differentiability",
+                        "Applications of Derivatives",
+                        "Indefinite Integration",
+                        "Definite Integration",
+                        "Area Under Curves",
+                        "Differential Equations"
+                    ],
+
+                    "Vectors & 3D Geometry": [
+                        "Vectors",
+                        "Vector Algebra",
+                        "Three-Dimensional Geometry",
+                        "Lines in Space",
+                        "Planes"
+                    ],
+
+                    "Trigonometry": [
+                        "Trigonometric Functions",
+                        "Trigonometric Identities",
+                        "Inverse Trigonometric Functions"
+                    ],
+
+                    "Probability & Statistics": [
+                        "Probability",
+                        "Statistics"
+                    ]
+
+                }
+            },
+
+
+            physics: {
+
+                title: "Physics",
+
+                description:
+                    "Develop deep physical intuition and the mathematical problem-solving skills required for JEE.",
+
+                categories: {
+
+                    "Mechanics": [
+                        "Units and Measurements",
+                        "Kinematics",
+                        "Laws of Motion",
+                        "Work, Energy and Power",
+                        "Centre of Mass",
+                        "Rotational Motion",
+                        "Gravitation"
+                    ],
+
+                    "Thermodynamics": [
+                        "Thermal Properties of Matter",
+                        "Kinetic Theory of Gases",
+                        "Thermodynamics"
+                    ],
+
+                    "Waves & Oscillations": [
+                        "Simple Harmonic Motion",
+                        "Mechanical Waves",
+                        "Sound Waves"
+                    ],
+
+                    "Electrostatics": [
+                        "Electric Charges and Fields",
+                        "Electric Potential",
+                        "Capacitance"
+                    ],
+
+                    "Current Electricity": [
+                        "Electric Current",
+                        "Resistance",
+                        "Electrical Circuits"
+                    ],
+
+                    "Magnetism": [
+                        "Moving Charges and Magnetism",
+                        "Magnetism and Matter",
+                        "Electromagnetic Induction",
+                        "Alternating Current"
+                    ],
+
+                    "Optics": [
+                        "Ray Optics",
+                        "Wave Optics"
+                    ],
+
+                    "Modern Physics": [
+                        "Dual Nature of Matter",
+                        "Atoms",
+                        "Nuclei",
+                        "Semiconductors"
+                    ]
+
+                }
+            },
+
+
+            chemistry: {
+
+                title: "Chemistry",
+
+                description:
+                    "Build mastery across physical, organic and inorganic chemistry for JEE preparation.",
+
+                categories: {
+
+                    "Physical Chemistry": [
+                        "Some Basic Concepts of Chemistry",
+                        "Atomic Structure",
+                        "States of Matter",
+                        "Chemical Thermodynamics",
+                        "Chemical Equilibrium",
+                        "Ionic Equilibrium",
+                        "Redox Reactions",
+                        "Electrochemistry",
+                        "Chemical Kinetics",
+                        "Solutions"
+                    ],
+
+                    "Organic Chemistry": [
+                        "General Organic Chemistry",
+                        "Hydrocarbons",
+                        "Haloalkanes and Haloarenes",
+                        "Alcohols, Phenols and Ethers",
+                        "Aldehydes and Ketones",
+                        "Carboxylic Acids",
+                        "Amines",
+                        "Biomolecules"
+                    ],
+
+                    "Inorganic Chemistry": [
+                        "Periodic Classification",
+                        "Chemical Bonding",
+                        "Hydrogen",
+                        "s-Block Elements",
+                        "p-Block Elements",
+                        "d- and f-Block Elements",
+                        "Coordination Compounds"
+                    ]
+
+                }
+            }
+
+        };
+
+
+        /* =========================================================
+           READ SUBJECT FROM URL
+           ========================================================= */
+
+        const params = new URLSearchParams(window.location.search);
+
+        let subjectKey = params.get("subject") || "mathematics";
+
+        if (!jeeSubjects[subjectKey]) {
+            subjectKey = "mathematics";
+        }
+
+        const subject = jeeSubjects[subjectKey];
+
+
+        /* =========================================================
+           PAGE HEADER
+           ========================================================= */
+
+        document.getElementById("subjectTitle").textContent =
+            subject.title;
+
+        document.getElementById("sidebarSubject").textContent =
+            subject.title;
+
+        document.getElementById("subjectDescription").textContent =
+            subject.description;
+
+        document.title =
+            "BuildBright JEE " + subject.title;
+
+
+        /* =========================================================
+           CATEGORIES
+           ========================================================= */
+
+        const categoryList =
+            document.getElementById("categoryList");
+
+        const chapterList =
+            document.getElementById("chapterList");
+
+        const categories =
+            Object.keys(subject.categories);
+
+
+        function renderCategories() {
+
+            categoryList.innerHTML = "";
+
+            categories.forEach((category, index) => {
+
+                const button =
+                    document.createElement("button");
+
+                button.className =
+                    "subject-category-button";
+
+                button.textContent =
+                    category;
+
+                if (index === 0) {
+                    button.classList.add("active");
+                }
+
+                button.addEventListener("click", () => {
+
+                    document
+                        .querySelectorAll(".subject-category-button")
+                        .forEach(btn =>
+                            btn.classList.remove("active")
+                        );
+
+                    button.classList.add("active");
+
+                    renderChapters(category);
+
+                });
+
+                categoryList.appendChild(button);
+
+            });
+
+        }
+
+
+        /* =========================================================
+           CHAPTERS
+           ========================================================= */
+
+        function renderChapters(category) {
+
+            const chapters =
+                subject.categories[category];
+
+            document.getElementById("categoryLabel").textContent =
+                category.toUpperCase();
+
+            document.getElementById("categoryTitle").textContent =
+                category;
+
+            document.getElementById("chapterCount").textContent =
+                chapters.length +
+                (chapters.length === 1 ? " chapter" : " chapters");
+
+            chapterList.innerHTML = "";
+
+
+            chapters.forEach((chapter, index) => {
+
+                const chapterRow =
+                    document.createElement("a");
+
+                chapterRow.className =
+                    "subject-chapter-row";
+
+                /*
+                Future lesson page:
+        
+                jee-chapter.html
+                    ?subject=physics
+                    &category=Mechanics
+                    &chapter=Kinematics
+                */
+
+                chapterRow.href =
+                    "jee-chapter.html?subject=" +
+                    encodeURIComponent(subjectKey) +
+                    "&category=" +
+                    encodeURIComponent(category) +
+                    "&chapter=" +
+                    encodeURIComponent(chapter);
+
+
+                chapterRow.innerHTML = `
+
+            <div class="chapter-index">
+                ${String(index + 1).padStart(2, "0")}
+            </div>
+
+            <div class="chapter-info">
+
+                <span>
+                    CHAPTER ${index + 1}
+                </span>
+
+                <h3>
+                    ${chapter}
+                </h3>
+
+                <p>
+                    Learn concepts, study examples and
+                    practice JEE-level problems.
+                </p>
+
+            </div>
+
+            <div class="chapter-progress">
+
+                <span>0%</span>
+
+                <div>
+                    <i></i>
+                </div>
+
+            </div>
+
+            <div class="chapter-arrow">
+                →
+            </div>
+
+        `;
+
+                chapterList.appendChild(chapterRow);
+
+            });
+
+        }
+
+
+        /* =========================================================
+           INITIAL PAGE
+           ========================================================= */
+
+        renderCategories();
+
+        renderChapters(categories[0]);
+
+    </script>
+
+</body>
+
+</html>
