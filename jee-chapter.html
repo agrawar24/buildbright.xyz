@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BuildBright JEE Chapter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="jee-chapter-page">
+
+    <header class="jee-nav">
+
+        <a href="index.html" class="jee-logo">
+            BuildBright
+        </a>
+
+        <nav>
+            <a href="courses.html">Math</a>
+            <a href="jee.html" class="active">JEE Prep</a>
+            <a href="index.html#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ========================================
+         CHAPTER HERO
+    ========================================= -->
+
+        <section class="chapter-page-hero">
+
+            <div class="chapter-hero-inner">
+
+                <a id="backToSubject" href="jee.html" class="chapter-back">
+                    ← Back to Subject
+                </a>
+
+                <div class="chapter-breadcrumb">
+
+                    <span id="breadcrumbSubject">
+                        Physics
+                    </span>
+
+                    <span>›</span>
+
+                    <span id="breadcrumbCategory">
+                        Mechanics
+                    </span>
+
+                </div>
+
+
+                <h1 id="chapterTitle">
+                    Kinematics
+                </h1>
+
+
+                <p id="chapterDescription">
+                    Build a complete understanding of this chapter
+                    through concepts, worked examples and JEE-level
+                    problem solving.
+                </p>
+
+
+                <div class="chapter-overview-stats">
+
+                    <div>
+                        <strong id="lessonCount">
+                            0
+                        </strong>
+
+                        <span>Lessons</span>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Practice
+                        </strong>
+
+                        <span>JEE Problems</span>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Test
+                        </strong>
+
+                        <span>Chapter Assessment</span>
+                    </div>
+
+                </div>
+
+
+                <div class="chapter-main-progress">
+
+                    <div>
+
+                        <strong>
+                            Chapter Progress
+                        </strong>
+
+                        <span id="chapterProgressText">
+                            0% complete
+                        </span>
+
+                    </div>
+
+                    <div class="chapter-main-progress-track">
+
+                        <div id="chapterProgressFill">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+         LESSONS
+    ========================================= -->
+
+        <section class="chapter-content">
+
+            <div class="chapter-content-heading">
+
+                <div>
+
+                    <span>
+                        CHAPTER CONTENT
+                    </span>
+
+                    <h2>
+                        Learn the Chapter
+                    </h2>
+
+                </div>
+
+                <p>
+                    Work through the lessons in order,
+                    then test your understanding.
+                </p>
+
+            </div>
+
+
+            <div id="lessonList" class="chapter-lesson-list">
+            </div>
+
+
+            <!-- ====================================
+             PRACTICE + TEST
+        ===================================== -->
+
+            <div class="chapter-actions">
+
+                <a id="practiceLink" href="#" class="chapter-action-card practice">
+
+                    <div class="chapter-action-icon">
+                        ✓
+                    </div>
+
+                    <span>
+                        AFTER THE LESSONS
+                    </span>
+
+                    <h3>
+                        Chapter Practice
+                    </h3>
+
+                    <p>
+                        Apply what you learned with
+                        JEE-style practice problems.
+                    </p>
+
+                    <div class="chapter-action-link">
+                        Start Practice →
+                    </div>
+
+                </a>
+
+
+                <a id="testLink" href="#" class="chapter-action-card test">
+
+                    <div class="chapter-action-icon">
+                        ★
+                    </div>
+
+                    <span>
+                        CHECK YOUR MASTERY
+                    </span>
+
+                    <h3>
+                        Chapter Test
+                    </h3>
+
+                    <p>
+                        Test your understanding under
+                        timed conditions.
+                    </p>
+
+                    <div class="chapter-action-link">
+                        Take Chapter Test →
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="jee-footer">
+
+        <div>
+
+            <a href="index.html">
+                BuildBright
+            </a>
+
+            <p>
+                Learn deeply. Aim higher.
+            </p>
+
+        </div>
+
+        <span>
+            © 2026 BuildBright
+        </span>
+
+    </footer>
+
+
+    <script>
+
+        /* =========================================================
+           CHAPTER PAGE
+           ========================================================= */
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+
+        const subject =
+            params.get("subject") || "physics";
+
+        const category =
+            params.get("category") || "Mechanics";
+
+        const chapter =
+            params.get("chapter") || "Kinematics";
+
+
+        /* =========================================================
+           SUBJECT NAMES
+           ========================================================= */
+
+        const subjectNames = {
+
+            mathematics: "Mathematics",
+
+            physics: "Physics",
+
+            chemistry: "Chemistry"
+
+        };
+
+
+        const subjectName =
+            subjectNames[subject] || "JEE";
+
+
+        /* =========================================================
+           DEFAULT LESSON STRUCTURE
+           ========================================================= */
+
+        /*
+           For now every chapter receives the same learning structure.
+        
+           Later, when we build the actual curriculum,
+           each chapter will receive its own real lesson list.
+        */
+
+        const lessons = [
+
+            {
+                title: "Introduction and Core Concepts",
+                description:
+                    "Understand the fundamental ideas and terminology."
+            },
+
+            {
+                title: "Key Principles and Formulas",
+                description:
+                    "Learn the important relationships, rules and formulas."
+            },
+
+            {
+                title: "Worked Examples",
+                description:
+                    "Study step-by-step solutions to representative problems."
+            },
+
+            {
+                title: "JEE Main Problem Solving",
+                description:
+                    "Apply the chapter concepts to JEE Main-level questions."
+            },
+
+            {
+                title: "JEE Advanced Problem Solving",
+                description:
+                    "Develop deeper reasoning with challenging multi-concept problems."
+            },
+
+            {
+                title: "Chapter Review",
+                description:
+                    "Review the most important ideas before practice and testing."
+            }
+
+        ];
+
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        document.title =
+            chapter +
+            " | BuildBright JEE";
+
+
+        document.getElementById("breadcrumbSubject")
+            .textContent =
+            subjectName;
+
+
+        document.getElementById("breadcrumbCategory")
+            .textContent =
+            category;
+
+
+        document.getElementById("chapterTitle")
+            .textContent =
+            chapter;
+
+
+        document.getElementById("lessonCount")
+            .textContent =
+            lessons.length;
+
+
+        /* =========================================================
+           BACK BUTTON
+           ========================================================= */
+
+        document.getElementById("backToSubject").href =
+            "jee-subject.html?subject=" +
+            encodeURIComponent(subject);
+
+
+        /* =========================================================
+           LESSON LIST
+           ========================================================= */
+
+        const lessonList =
+            document.getElementById("lessonList");
+
+
+        lessons.forEach((lesson, index) => {
+
+            const lessonRow =
+                document.createElement("a");
+
+
+            lessonRow.className =
+                "chapter-lesson-row";
+
+
+            lessonRow.href =
+                "jee-lesson.html?subject=" +
+                encodeURIComponent(subject) +
+
+                "&category=" +
+                encodeURIComponent(category) +
+
+                "&chapter=" +
+                encodeURIComponent(chapter) +
+
+                "&lesson=" +
+                encodeURIComponent(index + 1);
+
+
+            lessonRow.innerHTML = `
+
+        <div class="lesson-number">
+
+            ${String(index + 1).padStart(2, "0")}
+
+        </div>
+
+
+        <div class="lesson-row-info">
+
+            <span>
+                LESSON ${index + 1}
+            </span>
+
+            <h3>
+                ${lesson.title}
+            </h3>
+
+            <p>
+                ${lesson.description}
+            </p>
+
+        </div>
+
+
+        <div class="lesson-status">
+
+            <span>
+                NOT STARTED
+            </span>
+
+        </div>
+
+
+        <div class="lesson-arrow">
+            →
+        </div>
+
+    `;
+
+
+            lessonList.appendChild(lessonRow);
+
+        });
+
+
+        /* =========================================================
+           FUTURE PRACTICE LINKS
+           ========================================================= */
+
+        const query =
+
+            "?subject=" +
+            encodeURIComponent(subject) +
+
+            "&category=" +
+            encodeURIComponent(category) +
+
+            "&chapter=" +
+            encodeURIComponent(chapter);
+
+
+        document.getElementById("practiceLink").href =
+            "jee-practice.html" + query;
+
+
+        document.getElementById("testLink").href =
+            "jee-test.html" + query;
+
+    </script>
+
+
+</body>
+
+</html>
