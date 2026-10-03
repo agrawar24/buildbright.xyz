@@ -6169,3 +6169,529 @@ body.jee-test-page {
         box-sizing: border-box;
     }
 }
+
+/* =========================================================
+   BUILDBRIGHT JEE PROGRESS
+   ========================================================= */
+
+body.jee-progress-page {
+    margin: 0;
+    background: #f4f7fb;
+    color: #071d35;
+}
+
+.progress-hero {
+    background:
+        radial-gradient(circle at 75% 20%,
+            rgba(8, 123, 255, .18),
+            transparent 30%),
+        #071d35;
+}
+
+.progress-hero-inner {
+    width: min(1100px, calc(100% - 40px));
+    margin: auto;
+    padding: 55px 0 65px;
+}
+
+.progress-back {
+    display: inline-block;
+    margin-bottom: 45px;
+    color: #8499af;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.progress-back:hover {
+    color: white;
+}
+
+.progress-eyebrow {
+    display: block;
+    color: #58a9ff;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .16em;
+}
+
+.progress-hero h1 {
+    margin: 10px 0 0;
+    color: white;
+    font-size: clamp(48px, 7vw, 72px);
+    line-height: .98;
+    letter-spacing: -.055em;
+}
+
+.progress-hero p {
+    max-width: 600px;
+    margin: 18px 0 0;
+    color: #92a5ba;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* DASHBOARD */
+
+.progress-dashboard {
+    width: min(1100px, calc(100% - 40px));
+    margin: auto;
+    padding: 35px 0 90px;
+}
+
+
+/* SUMMARY */
+
+.progress-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.progress-summary-card {
+    padding: 22px;
+    border: 1px solid #dce4ed;
+    border-radius: 10px;
+    background: white;
+}
+
+.progress-summary-card>span {
+    color: #8493a5;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .08em;
+}
+
+.progress-summary-card>strong {
+    display: block;
+    margin-top: 10px;
+    color: #087bff;
+    font-size: 32px;
+    letter-spacing: -.04em;
+}
+
+.progress-summary-card p {
+    margin: 4px 0 0;
+    color: #8493a5;
+    font-size: 9px;
+}
+
+
+/* PANEL */
+
+.progress-panel {
+    margin-top: 12px;
+    padding: 28px;
+    border-radius: 11px;
+    background: #071d35;
+}
+
+.progress-panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.progress-panel-heading span {
+    color: #58a9ff;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .12em;
+}
+
+.progress-panel-heading h2 {
+    margin: 5px 0 0;
+    color: white;
+    font-size: 23px;
+}
+
+.progress-panel-heading>strong {
+    color: #58a9ff;
+    font-size: 29px;
+}
+
+.dashboard-progress-track {
+    height: 7px;
+    margin-top: 22px;
+    overflow: hidden;
+    border-radius: 100px;
+    background: #173a5e;
+}
+
+.dashboard-progress-track>div {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: #087bff;
+    transition: width .4s ease;
+}
+
+.progress-panel-note {
+    margin: 11px 0 0;
+    color: #8298ae;
+    font-size: 9px;
+}
+
+
+/* HEADINGS */
+
+.progress-subject-section,
+.progress-chapter-section,
+.progress-results-section {
+    margin-top: 55px;
+}
+
+.progress-section-heading>span {
+    color: #087bff;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .14em;
+}
+
+.progress-section-heading h2 {
+    margin: 6px 0 22px;
+    color: #102a45;
+    font-size: 29px;
+    letter-spacing: -.03em;
+}
+
+
+/* SUBJECTS */
+
+.progress-subject-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.progress-subject-card {
+    padding: 23px;
+    border: 1px solid #dce4ed;
+    border-radius: 10px;
+    background: white;
+}
+
+.progress-subject-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-subject-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.progress-subject-icon.math {
+    background: #eaf2ff;
+    color: #2c6fe7;
+}
+
+.progress-subject-icon.physics {
+    background: #e8f8f2;
+    color: #189366;
+}
+
+.progress-subject-icon.chemistry {
+    background: #f3ebff;
+    color: #8251cf;
+}
+
+.progress-subject-top span {
+    color: #8b98a8;
+    font-size: 7px;
+    font-weight: 900;
+}
+
+.progress-subject-top h3 {
+    margin: 3px 0 0;
+    color: #17314c;
+    font-size: 16px;
+}
+
+.progress-subject-bar,
+.progress-small-track {
+    height: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 100px;
+    background: #e5eaf0;
+}
+
+.progress-subject-bar>div,
+.progress-small-track>div {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: #087bff;
+}
+
+.progress-subject-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 8px;
+    color: #7f8ea0;
+    font-size: 9px;
+}
+
+.progress-subject-stats strong {
+    color: #17314c;
+}
+
+.progress-subject-card>a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #087bff;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+
+/* CHAPTER */
+
+.progress-chapter-card {
+    padding: 30px;
+    border: 1px solid #dce4ed;
+    border-radius: 12px;
+    background: white;
+}
+
+.progress-chapter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.progress-chapter-header>div:first-child span {
+    color: #087bff;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+
+.progress-chapter-header h3 {
+    margin: 5px 0 0;
+    color: #102a45;
+    font-size: 27px;
+}
+
+.progress-chapter-percent {
+    text-align: right;
+}
+
+.progress-chapter-percent strong {
+    display: block;
+    color: #087bff;
+    font-size: 30px;
+}
+
+.progress-chapter-percent span {
+    color: #8b98a8;
+    font-size: 8px;
+}
+
+.progress-chapter-main-track {
+    height: 8px;
+    margin-top: 23px;
+    overflow: hidden;
+    border-radius: 100px;
+    background: #e4eaf0;
+}
+
+.progress-chapter-main-track>div {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: #087bff;
+}
+
+.progress-milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.progress-milestone-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.progress-milestone-heading span {
+    color: #8493a5;
+    font-size: 8px;
+    font-weight: 900;
+}
+
+.progress-milestone-heading strong {
+    color: #17314c;
+    font-size: 9px;
+}
+
+
+/* NEXT STEP */
+
+.progress-next-step {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 30px;
+    padding: 22px;
+    border-radius: 9px;
+    background: #edf6ff;
+}
+
+.progress-next-step span {
+    color: #087bff;
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+
+.progress-next-step h3 {
+    margin: 5px 0 0;
+    color: #173a60;
+    font-size: 18px;
+}
+
+.progress-next-step p {
+    margin: 5px 0 0;
+    color: #688099;
+    font-size: 10px;
+}
+
+.progress-next-step>a {
+    flex: 0 0 auto;
+    padding: 11px 16px;
+    border-radius: 7px;
+    background: #087bff;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+
+/* RECENT RESULTS */
+
+.progress-results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.progress-result-card {
+    padding: 25px;
+    border: 1px solid #dce4ed;
+    border-radius: 10px;
+    background: white;
+}
+
+.progress-result-card>span {
+    color: #8493a5;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .08em;
+}
+
+.progress-result-card>strong {
+    display: block;
+    margin-top: 8px;
+    color: #087bff;
+    font-size: 34px;
+}
+
+.progress-result-card p {
+    color: #74869a;
+    font-size: 10px;
+}
+
+.progress-result-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #087bff;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .progress-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .progress-subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-milestone-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .progress-hero-inner,
+    .progress-dashboard {
+        width: auto;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    .progress-summary-grid,
+    .progress-results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-chapter-card {
+        padding: 22px 18px;
+    }
+
+    .progress-next-step {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-next-step>a {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+}
+
+/* Make clickable JEE tool cards keep the BuildBright card design */
+
+a.jee-tool-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.jee-tool-card:hover {
+    transform: translateY(-3px);
+    border-color: #087bff;
+}
+
+a.jee-tool-card .jee-tool-status {
+    color: #087bff;
+}

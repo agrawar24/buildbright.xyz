@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JEE Progress | BuildBright</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="jee-progress-page">
+
+    <header class="jee-nav">
+
+        <a href="index.html" class="jee-logo">
+            BuildBright
+        </a>
+
+        <nav>
+            <a href="courses.html">Math</a>
+            <a href="jee.html" class="active">JEE Prep</a>
+            <a href="index.html#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================================
+         HERO
+    ========================================== -->
+
+        <section class="progress-hero">
+
+            <div class="progress-hero-inner">
+
+                <a href="jee.html" class="progress-back">
+
+                    ← Back to JEE Prep
+
+                </a>
+
+                <span class="progress-eyebrow">
+                    BUILDBRIGHT JEE
+                </span>
+
+                <h1>
+                    Track Your Progress
+                </h1>
+
+                <p>
+                    See what you've completed, how you're performing,
+                    and where to focus next.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+         DASHBOARD
+    ========================================== -->
+
+        <section class="progress-dashboard">
+
+            <!-- SUMMARY -->
+
+            <div class="progress-summary-grid">
+
+                <article class="progress-summary-card">
+
+                    <span>LESSONS COMPLETED</span>
+
+                    <strong id="totalLessonsCompleted">
+                        0
+                    </strong>
+
+                    <p>
+                        Lessons finished
+                    </p>
+
+                </article>
+
+
+                <article class="progress-summary-card">
+
+                    <span>PRACTICE ACCURACY</span>
+
+                    <strong id="overallPracticeAccuracy">
+                        —
+                    </strong>
+
+                    <p>
+                        Latest completed practice
+                    </p>
+
+                </article>
+
+
+                <article class="progress-summary-card">
+
+                    <span>TEST ACCURACY</span>
+
+                    <strong id="overallTestAccuracy">
+                        —
+                    </strong>
+
+                    <p>
+                        Latest chapter test
+                    </p>
+
+                </article>
+
+
+                <article class="progress-summary-card">
+
+                    <span>CHAPTERS MASTERED</span>
+
+                    <strong id="chaptersMastered">
+                        0
+                    </strong>
+
+                    <p>
+                        80%+ chapter test
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- OVERALL -->
+
+            <section class="progress-panel">
+
+                <div class="progress-panel-heading">
+
+                    <div>
+
+                        <span>OVERVIEW</span>
+
+                        <h2>
+                            JEE Preparation
+                        </h2>
+
+                    </div>
+
+                    <strong id="overallProgressText">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="dashboard-progress-track">
+
+                    <div id="overallProgressFill">
+                    </div>
+
+                </div>
+
+
+                <p class="progress-panel-note">
+                    Your current progress is based on available
+                    BuildBright JEE lessons, practice and chapter tests.
+                </p>
+
+            </section>
+
+
+            <!-- SUBJECTS -->
+
+            <section class="progress-subject-section">
+
+                <div class="progress-section-heading">
+
+                    <span>
+                        SUBJECTS
+                    </span>
+
+                    <h2>
+                        Your JEE Progress
+                    </h2>
+
+                </div>
+
+
+                <div class="progress-subject-grid">
+
+
+                    <!-- MATHEMATICS -->
+
+                    <article class="progress-subject-card">
+
+                        <div class="progress-subject-top">
+
+                            <div class="progress-subject-icon math">
+                                ∑
+                            </div>
+
+                            <div>
+
+                                <span>JEE SUBJECT</span>
+
+                                <h3>
+                                    Mathematics
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-subject-bar">
+
+                            <div style="width: 0%">
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-subject-stats">
+
+                            <span>
+                                Content coming next
+                            </span>
+
+                            <strong>
+                                0%
+                            </strong>
+
+                        </div>
+
+
+                        <a href="jee-subject.html?subject=mathematics">
+                            View Mathematics →
+                        </a>
+
+                    </article>
+
+
+                    <!-- PHYSICS -->
+
+                    <article class="progress-subject-card">
+
+                        <div class="progress-subject-top">
+
+                            <div class="progress-subject-icon physics">
+                                ⚡
+                            </div>
+
+                            <div>
+
+                                <span>JEE SUBJECT</span>
+
+                                <h3>
+                                    Physics
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-subject-bar">
+
+                            <div id="physicsProgressFill">
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-subject-stats">
+
+                            <span id="physicsProgressLabel">
+                                0 of 6 Kinematics lessons
+                            </span>
+
+                            <strong id="physicsProgressPercent">
+                                0%
+                            </strong>
+
+                        </div>
+
+
+                        <a href="jee-subject.html?subject=physics">
+                            Continue Physics →
+                        </a>
+
+                    </article>
+
+
+                    <!-- CHEMISTRY -->
+
+                    <article class="progress-subject-card">
+
+                        <div class="progress-subject-top">
+
+                            <div class="progress-subject-icon chemistry">
+                                ◇
+                            </div>
+
+                            <div>
+
+                                <span>JEE SUBJECT</span>
+
+                                <h3>
+                                    Chemistry
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-subject-bar">
+
+                            <div style="width: 0%">
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-subject-stats">
+
+                            <span>
+                                Content coming next
+                            </span>
+
+                            <strong>
+                                0%
+                            </strong>
+
+                        </div>
+
+
+                        <a href="jee-subject.html?subject=chemistry">
+                            View Chemistry →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- KINEMATICS -->
+
+            <section class="progress-chapter-section">
+
+                <div class="progress-section-heading">
+
+                    <span>
+                        ACTIVE CHAPTER
+                    </span>
+
+                    <h2>
+                        Kinematics
+                    </h2>
+
+                </div>
+
+
+                <article class="progress-chapter-card">
+
+                    <div class="progress-chapter-header">
+
+                        <div>
+
+                            <span>
+                                PHYSICS · MECHANICS
+                            </span>
+
+                            <h3>
+                                Kinematics
+                            </h3>
+
+                        </div>
+
+
+                        <div class="progress-chapter-percent">
+
+                            <strong id="kinematicsOverallPercent">
+                                0%
+                            </strong>
+
+                            <span>
+                                complete
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-chapter-main-track">
+
+                        <div id="kinematicsOverallFill">
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-milestone-grid">
+
+
+                        <!-- LESSONS -->
+
+                        <div class="progress-milestone">
+
+                            <div class="progress-milestone-heading">
+
+                                <span>
+                                    LESSONS
+                                </span>
+
+                                <strong id="kinematicsLessonCount">
+                                    0/6
+                                </strong>
+
+                            </div>
+
+
+                            <div class="progress-small-track">
+
+                                <div id="kinematicsLessonFill">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PRACTICE -->
+
+                        <div class="progress-milestone">
+
+                            <div class="progress-milestone-heading">
+
+                                <span>
+                                    PRACTICE
+                                </span>
+
+                                <strong id="kinematicsPracticeScore">
+                                    Not completed
+                                </strong>
+
+                            </div>
+
+
+                            <div class="progress-small-track">
+
+                                <div id="kinematicsPracticeFill">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TEST -->
+
+                        <div class="progress-milestone">
+
+                            <div class="progress-milestone-heading">
+
+                                <span>
+                                    CHAPTER TEST
+                                </span>
+
+                                <strong id="kinematicsTestScore">
+                                    Not completed
+                                </strong>
+
+                            </div>
+
+
+                            <div class="progress-small-track">
+
+                                <div id="kinematicsTestFill">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-next-step">
+
+                        <div>
+
+                            <span>
+                                RECOMMENDED NEXT STEP
+                            </span>
+
+                            <h3 id="nextStepTitle">
+                                Continue Kinematics
+                            </h3>
+
+                            <p id="nextStepText">
+                                Complete your next lesson.
+                            </p>
+
+                        </div>
+
+
+                        <a id="nextStepLink" href="#">
+
+                            Continue →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- RECENT RESULTS -->
+
+            <section class="progress-results-section">
+
+                <div class="progress-section-heading">
+
+                    <span>
+                        PERFORMANCE
+                    </span>
+
+                    <h2>
+                        Recent Results
+                    </h2>
+
+                </div>
+
+
+                <div class="progress-results-grid">
+
+
+                    <article class="progress-result-card">
+
+                        <span>
+                            KINEMATICS PRACTICE
+                        </span>
+
+                        <strong id="recentPracticeScore">
+                            —
+                        </strong>
+
+                        <p id="recentPracticeText">
+                            Complete chapter practice to see your result.
+                        </p>
+
+                        <a href="jee-practice.html?subject=physics&category=Mechanics&chapter=Kinematics">
+                            Practice →
+                        </a>
+
+                    </article>
+
+
+                    <article class="progress-result-card">
+
+                        <span>
+                            KINEMATICS TEST
+                        </span>
+
+                        <strong id="recentTestScore">
+                            —
+                        </strong>
+
+                        <p id="recentTestText">
+                            Complete the chapter test to see your result.
+                        </p>
+
+                        <a href="jee-test.html?subject=physics&category=Mechanics&chapter=Kinematics">
+                            Chapter Test →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <footer class="jee-footer">
+
+        <div>
+
+            <a href="index.html">
+                BuildBright
+            </a>
+
+            <p>
+                Learn deeply. Aim higher.
+            </p>
+
+        </div>
+
+        <span>
+            © 2026 BuildBright
+        </span>
+
+    </footer>
+
+
+    <script>
+
+        /* =========================================================
+           SAFE STORAGE
+        ========================================================= */
+
+        function getStoredValue(key) {
+
+            try {
+
+                return localStorage.getItem(key);
+
+            } catch (error) {
+
+                return null;
+
+            }
+
+        }
+
+
+        function getStoredJSON(key) {
+
+            try {
+
+                const value =
+                    localStorage.getItem(key);
+
+
+                if (!value) {
+                    return null;
+                }
+
+
+                return JSON.parse(value);
+
+            } catch (error) {
+
+                return null;
+
+            }
+
+        }
+
+
+        /* =========================================================
+           KINEMATICS LESSONS
+        ========================================================= */
+
+        const subject =
+            "physics";
+
+        const category =
+            "Mechanics";
+
+        const chapter =
+            "Kinematics";
+
+        const totalLessons =
+            6;
+
+
+        let completedLessons =
+            0;
+
+
+        for (
+            let lesson = 1;
+            lesson <= totalLessons;
+            lesson++
+        ) {
+
+            const key =
+
+                "jee-complete-" +
+                subject + "-" +
+                category + "-" +
+                chapter + "-" +
+                lesson;
+
+
+            if (
+                getStoredValue(key) === "true"
+            ) {
+
+                completedLessons++;
+
+            }
+
+        }
+
+
+        const lessonPercent =
+            Math.round(
+                (completedLessons / totalLessons) * 100
+            );
+
+
+        /* =========================================================
+           PRACTICE
+        ========================================================= */
+
+        const practiceKey =
+
+            "jee-practice-" +
+            subject + "-" +
+            category + "-" +
+            chapter;
+
+
+        const practiceResult =
+            getStoredJSON(practiceKey);
+
+
+        const practiceComplete =
+            practiceResult &&
+            practiceResult.completed;
+
+
+        const practiceAccuracy =
+            practiceComplete
+                ? Number(practiceResult.accuracy) || 0
+                : 0;
+
+
+        /* =========================================================
+           TEST
+        ========================================================= */
+
+        const testKey =
+
+            "jee-test-" +
+            subject + "-" +
+            category + "-" +
+            chapter;
+
+
+        const testResult =
+            getStoredJSON(testKey);
+
+
+        const testComplete =
+            testResult &&
+            testResult.completed;
+
+
+        const testAccuracy =
+            testComplete
+                ? Number(testResult.accuracy) || 0
+                : 0;
+
+
+        /* =========================================================
+           SUMMARY CARDS
+        ========================================================= */
+
+        document.getElementById(
+            "totalLessonsCompleted"
+        ).textContent =
+            completedLessons;
+
+
+        document.getElementById(
+            "overallPracticeAccuracy"
+        ).textContent =
+
+            practiceComplete
+                ? practiceAccuracy + "%"
+                : "—";
+
+
+        document.getElementById(
+            "overallTestAccuracy"
+        ).textContent =
+
+            testComplete
+                ? testAccuracy + "%"
+                : "—";
+
+
+        document.getElementById(
+            "chaptersMastered"
+        ).textContent =
+
+            testComplete &&
+                testAccuracy >= 80
+
+                ? "1"
+
+                : "0";
+
+
+        /* =========================================================
+           PHYSICS PROGRESS
+        ========================================================= */
+
+        document.getElementById(
+            "physicsProgressFill"
+        ).style.width =
+            lessonPercent + "%";
+
+
+        document.getElementById(
+            "physicsProgressPercent"
+        ).textContent =
+            lessonPercent + "%";
+
+
+        document.getElementById(
+            "physicsProgressLabel"
+        ).textContent =
+
+            completedLessons +
+            " of " +
+            totalLessons +
+            " Kinematics lessons";
+
+
+        /* =========================================================
+           CHAPTER MILESTONES
+        ========================================================= */
+
+        document.getElementById(
+            "kinematicsLessonCount"
+        ).textContent =
+
+            completedLessons +
+            "/" +
+            totalLessons;
+
+
+        document.getElementById(
+            "kinematicsLessonFill"
+        ).style.width =
+            lessonPercent + "%";
+
+
+        if (practiceComplete) {
+
+            document.getElementById(
+                "kinematicsPracticeScore"
+            ).textContent =
+                practiceAccuracy + "%";
+
+
+            document.getElementById(
+                "kinematicsPracticeFill"
+            ).style.width =
+                practiceAccuracy + "%";
+
+        }
+
+
+        if (testComplete) {
+
+            document.getElementById(
+                "kinematicsTestScore"
+            ).textContent =
+                testAccuracy + "%";
+
+
+            document.getElementById(
+                "kinematicsTestFill"
+            ).style.width =
+                testAccuracy + "%";
+
+        }
+
+
+        /* =========================================================
+           CHAPTER COMPLETION
+        ========================================================= */
+
+        /*
+           BuildBright chapter completion currently uses:
+        
+           Lessons  = 60%
+           Practice = 20%
+           Test     = 20%
+        
+           Practice/test credit is awarded when completed.
+        */
+
+        const lessonContribution =
+            (completedLessons / totalLessons) * 60;
+
+
+        const practiceContribution =
+            practiceComplete
+                ? 20
+                : 0;
+
+
+        const testContribution =
+            testComplete
+                ? 20
+                : 0;
+
+
+        const chapterPercent =
+            Math.round(
+                lessonContribution +
+                practiceContribution +
+                testContribution
+            );
+
+
+        document.getElementById(
+            "kinematicsOverallPercent"
+        ).textContent =
+            chapterPercent + "%";
+
+
+        document.getElementById(
+            "kinematicsOverallFill"
+        ).style.width =
+            chapterPercent + "%";
+
+
+        document.getElementById(
+            "overallProgressText"
+        ).textContent =
+            chapterPercent + "%";
+
+
+        document.getElementById(
+            "overallProgressFill"
+        ).style.width =
+            chapterPercent + "%";
+
+
+        /* =========================================================
+           RECENT RESULTS
+        ========================================================= */
+
+        if (practiceComplete) {
+
+            document.getElementById(
+                "recentPracticeScore"
+            ).textContent =
+                practiceAccuracy + "%";
+
+
+            document.getElementById(
+                "recentPracticeText"
+            ).textContent =
+
+                practiceResult.correct +
+                " of " +
+                practiceResult.total +
+                " questions correct.";
+
+        }
+
+
+        if (testComplete) {
+
+            document.getElementById(
+                "recentTestScore"
+            ).textContent =
+                testAccuracy + "%";
+
+
+            document.getElementById(
+                "recentTestText"
+            ).textContent =
+
+                testResult.correct +
+                " of " +
+                testResult.total +
+                " questions correct.";
+
+        }
+
+
+        /* =========================================================
+           NEXT STEP
+        ========================================================= */
+
+        const nextTitle =
+            document.getElementById(
+                "nextStepTitle"
+            );
+
+
+        const nextText =
+            document.getElementById(
+                "nextStepText"
+            );
+
+
+        const nextLink =
+            document.getElementById(
+                "nextStepLink"
+            );
+
+
+        const chapterQuery =
+
+            "?subject=physics" +
+            "&category=Mechanics" +
+            "&chapter=Kinematics";
+
+
+        if (completedLessons < totalLessons) {
+
+            const nextLesson =
+                completedLessons + 1;
+
+
+            nextTitle.textContent =
+                "Continue Kinematics";
+
+
+            nextText.textContent =
+
+                "Continue with Lesson " +
+                nextLesson +
+                " of " +
+                totalLessons +
+                ".";
+
+
+            nextLink.href =
+
+                "jee-lesson.html" +
+                chapterQuery +
+                "&lesson=" +
+                nextLesson;
+
+
+        } else if (!practiceComplete) {
+
+            nextTitle.textContent =
+                "Start Chapter Practice";
+
+
+            nextText.textContent =
+                "You've completed the lessons. Apply what you learned with Kinematics practice.";
+
+
+            nextLink.href =
+
+                "jee-practice.html" +
+                chapterQuery;
+
+
+        } else if (!testComplete) {
+
+            nextTitle.textContent =
+                "Take the Chapter Test";
+
+
+            nextText.textContent =
+                "Your lessons and practice are complete. Test your Kinematics mastery.";
+
+
+            nextLink.href =
+
+                "jee-test.html" +
+                chapterQuery;
+
+
+        } else if (testAccuracy < 80) {
+
+            nextTitle.textContent =
+                "Strengthen Kinematics";
+
+
+            nextText.textContent =
+                "Review your missed questions, practice again, and retake the chapter test.";
+
+
+            nextLink.href =
+
+                "jee-test.html" +
+                chapterQuery;
+
+
+        } else {
+
+            nextTitle.textContent =
+                "Kinematics Complete";
+
+
+            nextText.textContent =
+                "You've completed the current BuildBright Kinematics learning path.";
+
+
+            nextLink.href =
+
+                "jee-subject.html?subject=physics";
+
+
+            nextLink.textContent =
+                "Continue Physics →";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
