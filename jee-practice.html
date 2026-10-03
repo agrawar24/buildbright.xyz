@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BuildBright JEE Practice</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="jee-practice-page">
+
+    <header class="jee-nav">
+
+        <a href="index.html" class="jee-logo">
+            BuildBright
+        </a>
+
+        <nav>
+            <a href="courses.html">Math</a>
+            <a href="jee.html" class="active">JEE Prep</a>
+            <a href="index.html#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <main class="practice-page-main">
+
+        <!-- ==========================================
+         SETUP SCREEN
+    =========================================== -->
+
+        <section id="practiceSetup" class="practice-setup">
+
+            <a id="backToChapter" href="#" class="practice-back">
+
+                ← Back to Chapter
+
+            </a>
+
+
+            <span class="practice-eyebrow">
+                BUILDBRIGHT JEE PRACTICE
+            </span>
+
+
+            <h1 id="practiceTitle">
+                Kinematics Practice
+            </h1>
+
+
+            <p class="practice-intro">
+                Strengthen your understanding with targeted
+                JEE-style questions and detailed explanations.
+            </p>
+
+
+            <div class="practice-info-grid">
+
+                <div>
+                    <span>SUBJECT</span>
+                    <strong id="practiceSubject">
+                        Physics
+                    </strong>
+                </div>
+
+                <div>
+                    <span>CHAPTER</span>
+                    <strong id="practiceChapter">
+                        Kinematics
+                    </strong>
+                </div>
+
+                <div>
+                    <span>QUESTIONS</span>
+                    <strong id="practiceQuestionCount">
+                        10
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="practice-start-card">
+
+                <span>
+                    CHAPTER PRACTICE
+                </span>
+
+                <h2>
+                    Ready to practice?
+                </h2>
+
+                <p>
+                    Answer each question and receive immediate
+                    feedback with a detailed explanation.
+                </p>
+
+                <button id="startPracticeButton" class="practice-primary-button">
+
+                    Start Practice →
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+         QUESTION SCREEN
+    =========================================== -->
+
+        <section id="practiceQuestionScreen" class="practice-question-screen hidden">
+
+            <div class="practice-topbar">
+
+                <div>
+
+                    <span id="questionProgress">
+                        QUESTION 1 OF 10
+                    </span>
+
+                    <strong id="questionChapter">
+                        Kinematics
+                    </strong>
+
+                </div>
+
+
+                <div class="practice-score">
+
+                    Score
+
+                    <strong id="liveScore">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="practice-progress-track">
+
+                <div id="practiceProgressFill">
+                </div>
+
+            </div>
+
+
+            <article class="practice-question-card">
+
+                <div class="practice-question-meta">
+
+                    <span id="questionDifficulty">
+                        FOUNDATION
+                    </span>
+
+                    <span id="questionTopic">
+                        Motion
+                    </span>
+
+                </div>
+
+
+                <h2 id="questionText">
+                </h2>
+
+
+                <div id="practiceOptions" class="practice-options">
+                </div>
+
+
+                <div id="practiceFeedback" class="practice-feedback hidden">
+
+                    <strong id="feedbackTitle">
+                    </strong>
+
+                    <p id="feedbackExplanation">
+                    </p>
+
+                </div>
+
+
+                <div class="practice-question-actions">
+
+                    <button id="nextQuestionButton" class="practice-primary-button hidden">
+
+                        Next Question →
+
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- ==========================================
+         RESULTS
+    =========================================== -->
+
+        <section id="practiceResults" class="practice-results hidden">
+
+            <span class="practice-eyebrow">
+                PRACTICE COMPLETE
+            </span>
+
+
+            <h1>
+                Your Result
+            </h1>
+
+
+            <div class="practice-result-score">
+
+                <strong id="finalScore">
+                    0/10
+                </strong>
+
+                <span>
+                    Correct Answers
+                </span>
+
+            </div>
+
+
+            <div class="practice-result-grid">
+
+                <div>
+
+                    <span>ACCURACY</span>
+
+                    <strong id="finalAccuracy">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>CORRECT</span>
+
+                    <strong id="finalCorrect">
+                        0
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>INCORRECT</span>
+
+                    <strong id="finalIncorrect">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="practice-result-message">
+
+                <h2 id="resultHeading">
+                    Keep building.
+                </h2>
+
+                <p id="resultMessage">
+                </p>
+
+            </div>
+
+
+            <div class="practice-result-actions">
+
+                <button id="retryPracticeButton" class="practice-secondary-button">
+
+                    Try Again
+                </button>
+
+
+                <a id="returnToChapter" href="#" class="practice-primary-link">
+
+                    Return to Chapter →
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        /* =========================================================
+           URL
+           ========================================================= */
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+
+        const subject =
+            params.get("subject") || "physics";
+
+        const category =
+            params.get("category") || "Mechanics";
+
+        const chapter =
+            params.get("chapter") || "Kinematics";
+
+
+        const subjectNames = {
+
+            mathematics: "Mathematics",
+            physics: "Physics",
+            chemistry: "Chemistry"
+
+        };
+
+
+        const subjectName =
+            subjectNames[subject] || "JEE";
+
+
+        /* =========================================================
+           KINEMATICS PRACTICE BANK
+           ========================================================= */
+
+        const kinematicsQuestions = [
+
+            {
+                topic: "Displacement",
+                difficulty: "Foundation",
+
+                question:
+                    "A particle moves 8 m east and then 3 m west. What is its displacement?",
+
+                options: [
+                    "11 m east",
+                    "5 m east",
+                    "5 m west",
+                    "11 m west"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Take east as positive. The displacement is +8 m − 3 m = +5 m, so the particle is displaced 5 m east."
+            },
+
+
+            {
+                topic: "Distance & Displacement",
+                difficulty: "Foundation",
+
+                question:
+                    "A runner completes one full 400 m lap and stops at the starting point. What are the distance and displacement?",
+
+                options: [
+                    "400 m and 400 m",
+                    "0 m and 400 m",
+                    "400 m and 0 m",
+                    "0 m and 0 m"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Distance is the complete path traveled, so it is 400 m. The initial and final positions are identical, so displacement is 0 m."
+            },
+
+
+            {
+                topic: "Average Velocity",
+                difficulty: "Foundation",
+
+                question:
+                    "A car moves 60 m east in 5 s and then 20 m west in 5 s. What is its average velocity?",
+
+                options: [
+                    "4 m/s east",
+                    "8 m/s east",
+                    "4 m/s west",
+                    "6 m/s east"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "Net displacement is 60 − 20 = 40 m east. Total time is 10 s. Average velocity = 40/10 = 4 m/s east."
+            },
+
+
+            {
+                topic: "Average Speed",
+                difficulty: "Medium",
+
+                question:
+                    "A particle travels equal distances at 30 m/s and 60 m/s. What is its average speed?",
+
+                options: [
+                    "40 m/s",
+                    "45 m/s",
+                    "50 m/s",
+                    "90 m/s"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "For equal distances, average speed = 2v₁v₂/(v₁+v₂). Therefore 2(30)(60)/(30+60) = 40 m/s."
+            },
+
+
+            {
+                topic: "Acceleration",
+                difficulty: "Foundation",
+
+                question:
+                    "The velocity of a car increases from 5 m/s to 25 m/s in 4 s. What is its average acceleration?",
+
+                options: [
+                    "4 m/s²",
+                    "5 m/s²",
+                    "6 m/s²",
+                    "20 m/s²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Average acceleration = change in velocity / time = (25 − 5)/4 = 5 m/s²."
+            },
+
+
+            {
+                topic: "Equations of Motion",
+                difficulty: "Medium",
+
+                question:
+                    "A body starts from rest and accelerates uniformly at 3 m/s² for 4 s. What distance does it travel?",
+
+                options: [
+                    "12 m",
+                    "18 m",
+                    "24 m",
+                    "48 m"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Using s = ut + ½at² with u = 0: s = ½(3)(4²) = 24 m."
+            },
+
+
+            {
+                topic: "Equations of Motion",
+                difficulty: "Medium",
+
+                question:
+                    "A particle moving at 10 m/s accelerates uniformly at 2 m/s² for 5 s. What is its final velocity?",
+
+                options: [
+                    "12 m/s",
+                    "15 m/s",
+                    "20 m/s",
+                    "25 m/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Using v = u + at: v = 10 + (2)(5) = 20 m/s."
+            },
+
+
+            {
+                topic: "Motion Graphs",
+                difficulty: "Medium",
+
+                question:
+                    "What does the slope of a velocity-time graph represent?",
+
+                options: [
+                    "Displacement",
+                    "Acceleration",
+                    "Distance",
+                    "Position"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Acceleration is the rate of change of velocity with time, so it is represented by the slope of a velocity-time graph."
+            },
+
+
+            {
+                topic: "Motion Graphs",
+                difficulty: "Medium",
+
+                question:
+                    "What does the area under a velocity-time graph represent?",
+
+                options: [
+                    "Acceleration",
+                    "Speed",
+                    "Displacement",
+                    "Force"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "The signed area under a velocity-time graph over a time interval gives the displacement during that interval."
+            },
+
+
+            {
+                topic: "Vertical Motion",
+                difficulty: "JEE Level",
+
+                question:
+                    "A ball is thrown vertically upward with a speed of 30 m/s. Taking g = 10 m/s², how long does it take to reach maximum height?",
+
+                options: [
+                    "1 s",
+                    "2 s",
+                    "3 s",
+                    "6 s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "At maximum height the velocity is zero. Using v = u + at: 0 = 30 − 10t, giving t = 3 s."
+            }
+
+        ];
+
+
+        /* =========================================================
+           QUESTION BANK
+           ========================================================= */
+
+        let questions;
+
+
+        if (
+            subject === "physics" &&
+            chapter === "Kinematics"
+        ) {
+
+            questions =
+                kinematicsQuestions;
+
+        } else {
+
+            questions = [
+
+                {
+                    topic: chapter,
+                    difficulty: "Foundation",
+
+                    question:
+                        "Practice questions for this chapter are currently being developed.",
+
+                    options: [
+                        "Continue",
+                        "Return later",
+                        "Review the chapter",
+                        "BuildBright"
+                    ],
+
+                    answer: 0,
+
+                    explanation:
+                        "This chapter will receive its complete JEE practice bank as the curriculum is developed."
+                }
+
+            ];
+
+        }
+
+
+        /* =========================================================
+           PAGE INFORMATION
+           ========================================================= */
+
+        document.title =
+            chapter + " Practice | BuildBright";
+
+
+        document.getElementById("practiceTitle")
+            .textContent =
+            chapter + " Practice";
+
+
+        document.getElementById("practiceSubject")
+            .textContent =
+            subjectName;
+
+
+        document.getElementById("practiceChapter")
+            .textContent =
+            chapter;
+
+
+        document.getElementById("practiceQuestionCount")
+            .textContent =
+            questions.length;
+
+
+        document.getElementById("questionChapter")
+            .textContent =
+            chapter;
+
+
+        /* =========================================================
+           CHAPTER LINK
+           ========================================================= */
+
+        const chapterQuery =
+
+            "?subject=" +
+            encodeURIComponent(subject) +
+
+            "&category=" +
+            encodeURIComponent(category) +
+
+            "&chapter=" +
+            encodeURIComponent(chapter);
+
+
+        const chapterURL =
+            "jee-chapter.html" +
+            chapterQuery;
+
+
+        document.getElementById("backToChapter").href =
+            chapterURL;
+
+
+        document.getElementById("returnToChapter").href =
+            chapterURL;
+
+
+        /* =========================================================
+           STATE
+           ========================================================= */
+
+        let currentQuestion = 0;
+
+        let score = 0;
+
+        let answered = false;
+
+
+        /* =========================================================
+           ELEMENTS
+           ========================================================= */
+
+        const setup =
+            document.getElementById("practiceSetup");
+
+        const questionScreen =
+            document.getElementById("practiceQuestionScreen");
+
+        const results =
+            document.getElementById("practiceResults");
+
+        const startButton =
+            document.getElementById("startPracticeButton");
+
+        const nextButton =
+            document.getElementById("nextQuestionButton");
+
+        const retryButton =
+            document.getElementById("retryPracticeButton");
+
+        const optionsContainer =
+            document.getElementById("practiceOptions");
+
+        const feedback =
+            document.getElementById("practiceFeedback");
+
+
+        /* =========================================================
+           START
+           ========================================================= */
+
+        startButton.addEventListener("click", () => {
+
+            setup.classList.add("hidden");
+
+            results.classList.add("hidden");
+
+            questionScreen.classList.remove("hidden");
+
+            currentQuestion = 0;
+
+            score = 0;
+
+            answered = false;
+
+            renderQuestion();
+
+        });
+
+
+        /* =========================================================
+           RENDER QUESTION
+           ========================================================= */
+
+        function renderQuestion() {
+
+            answered = false;
+
+            nextButton.classList.add("hidden");
+
+            feedback.classList.add("hidden");
+
+            feedback.classList.remove(
+                "correct",
+                "incorrect"
+            );
+
+
+            const question =
+                questions[currentQuestion];
+
+
+            document.getElementById("questionProgress")
+                .textContent =
+
+                "QUESTION " +
+                (currentQuestion + 1) +
+                " OF " +
+                questions.length;
+
+
+            document.getElementById("questionDifficulty")
+                .textContent =
+                question.difficulty.toUpperCase();
+
+
+            document.getElementById("questionTopic")
+                .textContent =
+                question.topic;
+
+
+            document.getElementById("questionText")
+                .textContent =
+                question.question;
+
+
+            document.getElementById("liveScore")
+                .textContent =
+                score;
+
+
+            const progress =
+                ((currentQuestion + 1) / questions.length) * 100;
+
+
+            document.getElementById("practiceProgressFill")
+                .style.width =
+                progress + "%";
+
+
+            optionsContainer.innerHTML = "";
+
+
+            question.options.forEach(
+                (option, index) => {
+
+                    const button =
+                        document.createElement("button");
+
+
+                    button.className =
+                        "practice-option";
+
+
+                    button.innerHTML = `
+
+                <span>
+                    ${String.fromCharCode(65 + index)}
+                </span>
+
+                <div>
+                    ${option}
+                </div>
+
+            `;
+
+
+                    button.addEventListener(
+                        "click",
+                        () => selectAnswer(
+                            button,
+                            index
+                        )
+                    );
+
+
+                    optionsContainer.appendChild(button);
+
+                }
+            );
+
+        }
+
+
+        /* =========================================================
+           ANSWER
+           ========================================================= */
+
+        function selectAnswer(button, index) {
+
+            if (answered) {
+                return;
+            }
+
+
+            answered = true;
+
+
+            const question =
+                questions[currentQuestion];
+
+
+            const buttons =
+                document.querySelectorAll(
+                    ".practice-option"
+                );
+
+
+            buttons.forEach(
+                (item, itemIndex) => {
+
+                    item.disabled = true;
+
+
+                    if (
+                        itemIndex === question.answer
+                    ) {
+
+                        item.classList.add(
+                            "correct"
+                        );
+
+                    }
+
+                }
+            );
+
+
+            if (index === question.answer) {
+
+                score++;
+
+                button.classList.add(
+                    "correct"
+                );
+
+
+                document.getElementById("feedbackTitle")
+                    .textContent =
+                    "Correct";
+
+
+                feedback.classList.add(
+                    "correct"
+                );
+
+            } else {
+
+                button.classList.add(
+                    "incorrect"
+                );
+
+
+                document.getElementById("feedbackTitle")
+                    .textContent =
+                    "Not quite";
+
+
+                feedback.classList.add(
+                    "incorrect"
+                );
+
+            }
+
+
+            document.getElementById("feedbackExplanation")
+                .textContent =
+                question.explanation;
+
+
+            document.getElementById("liveScore")
+                .textContent =
+                score;
+
+
+            feedback.classList.remove(
+                "hidden"
+            );
+
+
+            nextButton.classList.remove(
+                "hidden"
+            );
+
+
+            if (
+                currentQuestion ===
+                questions.length - 1
+            ) {
+
+                nextButton.textContent =
+                    "See Results →";
+
+            } else {
+
+                nextButton.textContent =
+                    "Next Question →";
+
+            }
+
+        }
+
+
+        /* =========================================================
+           NEXT
+           ========================================================= */
+
+        nextButton.addEventListener("click", () => {
+
+            if (
+                currentQuestion <
+                questions.length - 1
+            ) {
+
+                currentQuestion++;
+
+                renderQuestion();
+
+            } else {
+
+                showResults();
+
+            }
+
+        });
+
+
+        /* =========================================================
+           RESULTS
+           ========================================================= */
+
+        function showResults() {
+
+            questionScreen.classList.add(
+                "hidden"
+            );
+
+
+            results.classList.remove(
+                "hidden"
+            );
+
+
+            const accuracy =
+                Math.round(
+                    (score / questions.length) * 100
+                );
+
+
+            document.getElementById("finalScore")
+                .textContent =
+                score + "/" + questions.length;
+
+
+            document.getElementById("finalAccuracy")
+                .textContent =
+                accuracy + "%";
+
+
+            document.getElementById("finalCorrect")
+                .textContent =
+                score;
+
+
+            document.getElementById("finalIncorrect")
+                .textContent =
+                questions.length - score;
+
+
+            const heading =
+                document.getElementById("resultHeading");
+
+
+            const message =
+                document.getElementById("resultMessage");
+
+
+            if (accuracy >= 90) {
+
+                heading.textContent =
+                    "Excellent work.";
+
+                message.textContent =
+                    "You demonstrated strong command of the core Kinematics concepts. Continue to the chapter test when you are ready.";
+
+            } else if (accuracy >= 70) {
+
+                heading.textContent =
+                    "Strong progress.";
+
+                message.textContent =
+                    "You understand most of the chapter. Review the questions you missed before moving to the chapter test.";
+
+            } else {
+
+                heading.textContent =
+                    "Keep building.";
+
+                message.textContent =
+                    "Review the Kinematics lessons and worked examples, then try the practice set again.";
+
+            }
+
+
+            savePracticeResult(
+                score,
+                questions.length,
+                accuracy
+            );
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        /* =========================================================
+           SAVE RESULT
+           ========================================================= */
+
+        function savePracticeResult(
+            correct,
+            total,
+            accuracy
+        ) {
+
+            const key =
+
+                "jee-practice-" +
+                subject + "-" +
+                category + "-" +
+                chapter;
+
+
+            const result = {
+
+                correct: correct,
+
+                total: total,
+
+                accuracy: accuracy,
+
+                completed: true,
+
+                date:
+                    new Date().toISOString()
+
+            };
+
+
+            try {
+
+                localStorage.setItem(
+                    key,
+                    JSON.stringify(result)
+                );
+
+            } catch (error) {
+
+                console.warn(
+                    "Unable to save practice result."
+                );
+
+            }
+
+        }
+
+
+        /* =========================================================
+           RETRY
+           ========================================================= */
+
+        retryButton.addEventListener("click", () => {
+
+            results.classList.add(
+                "hidden"
+            );
+
+
+            questionScreen.classList.remove(
+                "hidden"
+            );
+
+
+            currentQuestion = 0;
+
+            score = 0;
+
+            answered = false;
+
+
+            renderQuestion();
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
