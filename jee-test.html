@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BuildBright JEE Chapter Test</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="jee-test-page">
+
+    <header class="jee-nav">
+
+        <a href="index.html" class="jee-logo">
+            BuildBright
+        </a>
+
+        <nav>
+            <a href="courses.html">Math</a>
+            <a href="jee.html" class="active">JEE Prep</a>
+            <a href="index.html#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <main class="test-page-main">
+
+        <!-- =====================================================
+         TEST SETUP
+    ====================================================== -->
+
+        <section id="testSetup" class="test-setup">
+
+            <a id="backToChapter" href="#" class="test-back">
+
+                ← Back to Chapter
+
+            </a>
+
+            <span class="test-eyebrow">
+                BUILDBRIGHT JEE
+            </span>
+
+            <h1 id="setupTitle">
+                Kinematics Chapter Test
+            </h1>
+
+            <p class="test-intro">
+                Test your understanding under timed conditions.
+                You can move between questions before submitting.
+            </p>
+
+
+            <div class="test-info-grid">
+
+                <div>
+                    <span>QUESTIONS</span>
+                    <strong id="setupQuestionCount">
+                        10
+                    </strong>
+                </div>
+
+                <div>
+                    <span>TIME LIMIT</span>
+                    <strong>
+                        20 Minutes
+                    </strong>
+                </div>
+
+                <div>
+                    <span>FORMAT</span>
+                    <strong>
+                        Multiple Choice
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="test-instructions">
+
+                <span>BEFORE YOU BEGIN</span>
+
+                <h2>
+                    Chapter Test Instructions
+                </h2>
+
+                <p>
+                    Choose one answer for each question. You may move
+                    between questions using the question navigator.
+                    The test will submit automatically when time expires.
+                </p>
+
+                <button id="startTestButton" class="test-primary-button">
+
+                    Start Test →
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+         ACTIVE TEST
+    ====================================================== -->
+
+        <section id="activeTest" class="active-test hidden">
+
+            <div class="test-header">
+
+                <div>
+
+                    <span>
+                        CHAPTER TEST
+                    </span>
+
+                    <strong id="activeChapter">
+                        Kinematics
+                    </strong>
+
+                </div>
+
+
+                <div class="test-timer">
+
+                    <span>
+                        TIME REMAINING
+                    </span>
+
+                    <strong id="timer">
+                        20:00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-workspace">
+
+                <!-- QUESTION AREA -->
+
+                <div class="test-question-area">
+
+                    <div class="test-question-meta">
+
+                        <span id="testQuestionNumber">
+                            QUESTION 1 OF 10
+                        </span>
+
+                        <span id="testQuestionTopic">
+                            Motion
+                        </span>
+
+                    </div>
+
+
+                    <h2 id="testQuestionText">
+                    </h2>
+
+
+                    <div id="testOptions" class="test-options">
+                    </div>
+
+
+                    <div class="test-question-navigation">
+
+                        <button id="previousTestQuestion" class="test-secondary-button">
+
+                            ← Previous
+
+                        </button>
+
+
+                        <button id="nextTestQuestion" class="test-primary-button">
+
+                            Next →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION NAVIGATOR -->
+
+                <aside class="test-navigator">
+
+                    <span class="test-navigator-label">
+                        QUESTIONS
+                    </span>
+
+
+                    <div id="testQuestionGrid" class="test-question-grid">
+                    </div>
+
+
+                    <div class="test-legend">
+
+                        <div>
+                            <i class="answered"></i>
+                            Answered
+                        </div>
+
+                        <div>
+                            <i></i>
+                            Not Answered
+                        </div>
+
+                    </div>
+
+
+                    <button id="submitTestButton" class="test-submit-button">
+
+                        Submit Test
+
+                    </button>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+         RESULTS
+    ====================================================== -->
+
+        <section id="testResults" class="test-results hidden">
+
+            <span class="test-eyebrow">
+                CHAPTER TEST COMPLETE
+            </span>
+
+            <h1>
+                Your Result
+            </h1>
+
+
+            <div class="test-result-hero">
+
+                <div class="test-score-circle">
+
+                    <strong id="testFinalScore">
+                        0/10
+                    </strong>
+
+                    <span>
+                        Correct
+                    </span>
+
+                </div>
+
+
+                <div class="test-result-summary">
+
+                    <span>
+                        KINEMATICS
+                    </span>
+
+                    <h2 id="testResultHeading">
+                        Keep building.
+                    </h2>
+
+                    <p id="testResultMessage">
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="test-result-stats">
+
+                <div>
+
+                    <span>ACCURACY</span>
+
+                    <strong id="testAccuracy">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>CORRECT</span>
+
+                    <strong id="testCorrect">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>INCORRECT</span>
+
+                    <strong id="testIncorrect">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>UNANSWERED</span>
+
+                    <strong id="testUnanswered">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- REVIEW -->
+
+            <section class="test-review-section">
+
+                <div class="test-review-heading">
+
+                    <span>
+                        REVIEW
+                    </span>
+
+                    <h2>
+                        Review Your Answers
+                    </h2>
+
+                </div>
+
+
+                <div id="testReviewList" class="test-review-list">
+                </div>
+
+            </section>
+
+
+            <div class="test-result-actions">
+
+                <button id="retryTestButton" class="test-secondary-button">
+
+                    Retake Test
+                </button>
+
+
+                <a id="resultChapterLink" href="#" class="test-primary-link">
+
+                    Return to Chapter →
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+     SUBMIT MODAL
+========================================================= -->
+
+    <div id="submitModal" class="test-modal hidden">
+
+        <div class="test-modal-card">
+
+            <span>
+                SUBMIT TEST
+            </span>
+
+            <h2>
+                Ready to finish?
+            </h2>
+
+            <p id="submitModalMessage">
+                Make sure you have answered every question.
+            </p>
+
+
+            <div class="test-modal-actions">
+
+                <button id="cancelSubmitButton" class="test-secondary-button">
+
+                    Keep Working
+                </button>
+
+
+                <button id="confirmSubmitButton" class="test-primary-button">
+
+                    Submit Test
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* =========================================================
+           URL
+        ========================================================= */
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+
+        const subject =
+            params.get("subject") || "physics";
+
+        const category =
+            params.get("category") || "Mechanics";
+
+        const chapter =
+            params.get("chapter") || "Kinematics";
+
+
+        /* =========================================================
+           KINEMATICS TEST
+        ========================================================= */
+
+        const kinematicsTest = [
+
+            {
+                topic: "Displacement",
+
+                question:
+                    "A particle moves 10 m east, 6 m west and then 4 m east. What is its displacement?",
+
+                options: [
+                    "0 m",
+                    "8 m east",
+                    "20 m east",
+                    "12 m east"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Taking east as positive, displacement = 10 − 6 + 4 = 8 m east."
+            },
+
+
+            {
+                topic: "Average Velocity",
+
+                question:
+                    "A particle moves from x = 5 m to x = 35 m in 6 s. What is its average velocity?",
+
+                options: [
+                    "5 m/s",
+                    "6 m/s",
+                    "30 m/s",
+                    "40 m/s"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "Displacement = 35 − 5 = 30 m. Average velocity = 30/6 = 5 m/s."
+            },
+
+
+            {
+                topic: "Average Speed",
+
+                question:
+                    "A car travels 120 km at 60 km/h and another 120 km at 40 km/h. What is the average speed for the complete journey?",
+
+                options: [
+                    "45 km/h",
+                    "48 km/h",
+                    "50 km/h",
+                    "52 km/h"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "The distances are equal, so average speed = 2v₁v₂/(v₁+v₂) = 2(60)(40)/100 = 48 km/h."
+            },
+
+
+            {
+                topic: "Acceleration",
+
+                question:
+                    "A particle has velocity +12 m/s and acceleration −3 m/s². What is happening to its speed at that instant?",
+
+                options: [
+                    "It is increasing",
+                    "It is decreasing",
+                    "It must be zero",
+                    "It remains constant"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Velocity and acceleration have opposite signs, so acceleration opposes the motion and the speed decreases."
+            },
+
+
+            {
+                topic: "Equations of Motion",
+
+                question:
+                    "A body starts from rest with constant acceleration 5 m/s². What is its velocity after 6 s?",
+
+                options: [
+                    "11 m/s",
+                    "25 m/s",
+                    "30 m/s",
+                    "36 m/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Using v = u + at with u = 0: v = 5 × 6 = 30 m/s."
+            },
+
+
+            {
+                topic: "Equations of Motion",
+
+                question:
+                    "A car moving at 20 m/s comes to rest uniformly in 5 s. What is its acceleration?",
+
+                options: [
+                    "−4 m/s²",
+                    "4 m/s²",
+                    "−5 m/s²",
+                    "5 m/s²"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "a = (v − u)/t = (0 − 20)/5 = −4 m/s²."
+            },
+
+
+            {
+                topic: "Displacement",
+
+                question:
+                    "A particle starts from rest and accelerates uniformly at 2 m/s². How far does it travel in 5 s?",
+
+                options: [
+                    "10 m",
+                    "20 m",
+                    "25 m",
+                    "50 m"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "s = ut + ½at² = 0 + ½(2)(25) = 25 m."
+            },
+
+
+            {
+                topic: "Motion Graphs",
+
+                question:
+                    "A horizontal line on a velocity-time graph above the time axis represents:",
+
+                options: [
+                    "Constant positive velocity",
+                    "Constant positive acceleration",
+                    "Increasing velocity",
+                    "Zero velocity"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "A horizontal velocity-time graph has zero slope, meaning zero acceleration. Above the axis means the velocity is positive."
+            },
+
+
+            {
+                topic: "Motion Graphs",
+
+                question:
+                    "A velocity-time graph forms a triangle with base 8 s and height 12 m/s. What displacement is represented by the triangle?",
+
+                options: [
+                    "20 m",
+                    "48 m",
+                    "96 m",
+                    "6 m"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Displacement equals the area under the velocity-time graph. Triangle area = ½ × 8 × 12 = 48 m."
+            },
+
+
+            {
+                topic: "Vertical Motion",
+
+                question:
+                    "A ball is thrown vertically upward at 40 m/s. Taking g = 10 m/s², what maximum height does it reach above the launch point?",
+
+                options: [
+                    "40 m",
+                    "60 m",
+                    "80 m",
+                    "160 m"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "At maximum height v = 0. Using v² = u² + 2as: 0 = 1600 − 20s, so s = 80 m."
+            }
+
+        ];
+
+
+        /* =========================================================
+           QUESTION BANK
+        ========================================================= */
+
+        let questions;
+
+
+        if (
+            subject === "physics" &&
+            chapter === "Kinematics"
+        ) {
+
+            questions =
+                kinematicsTest;
+
+        } else {
+
+            questions = [
+
+                {
+                    topic: chapter,
+
+                    question:
+                        "The chapter test for this topic is currently being developed.",
+
+                    options: [
+                        "Continue",
+                        "Review",
+                        "Practice",
+                        "BuildBright"
+                    ],
+
+                    answer: 0,
+
+                    explanation:
+                        "A complete chapter test will be added as this curriculum is developed."
+                }
+
+            ];
+
+        }
+
+
+        /* =========================================================
+           ELEMENTS
+        ========================================================= */
+
+        const setup =
+            document.getElementById("testSetup");
+
+        const activeTest =
+            document.getElementById("activeTest");
+
+        const results =
+            document.getElementById("testResults");
+
+        const modal =
+            document.getElementById("submitModal");
+
+
+        /* =========================================================
+           PAGE SETUP
+        ========================================================= */
+
+        document.title =
+            chapter + " Chapter Test | BuildBright";
+
+
+        document.getElementById("setupTitle")
+            .textContent =
+            chapter + " Chapter Test";
+
+
+        document.getElementById("activeChapter")
+            .textContent =
+            chapter;
+
+
+        document.getElementById("setupQuestionCount")
+            .textContent =
+            questions.length;
+
+
+        const chapterQuery =
+
+            "?subject=" +
+            encodeURIComponent(subject) +
+
+            "&category=" +
+            encodeURIComponent(category) +
+
+            "&chapter=" +
+            encodeURIComponent(chapter);
+
+
+        const chapterURL =
+            "jee-chapter.html" +
+            chapterQuery;
+
+
+        document.getElementById("backToChapter").href =
+            chapterURL;
+
+
+        document.getElementById("resultChapterLink").href =
+            chapterURL;
+
+
+        /* =========================================================
+           TEST STATE
+        ========================================================= */
+
+        let currentQuestion = 0;
+
+        let answers =
+            new Array(questions.length).fill(null);
+
+        let secondsRemaining =
+            20 * 60;
+
+        let timerInterval = null;
+
+
+        /* =========================================================
+           START TEST
+        ========================================================= */
+
+        document.getElementById("startTestButton")
+            .addEventListener("click", startTest);
+
+
+        function startTest() {
+
+            currentQuestion = 0;
+
+            answers =
+                new Array(questions.length).fill(null);
+
+            secondsRemaining =
+                20 * 60;
+
+
+            setup.classList.add("hidden");
+
+            results.classList.add("hidden");
+
+            activeTest.classList.remove("hidden");
+
+
+            createNavigator();
+
+            renderQuestion();
+
+            updateTimer();
+
+            clearInterval(timerInterval);
+
+
+            timerInterval =
+                setInterval(() => {
+
+                    secondsRemaining--;
+
+                    updateTimer();
+
+
+                    if (secondsRemaining <= 0) {
+
+                        clearInterval(timerInterval);
+
+                        submitTest();
+
+                    }
+
+                }, 1000);
+
+        }
+
+
+        /* =========================================================
+           TIMER
+        ========================================================= */
+
+        function updateTimer() {
+
+            const minutes =
+                Math.floor(secondsRemaining / 60);
+
+            const seconds =
+                secondsRemaining % 60;
+
+
+            document.getElementById("timer")
+                .textContent =
+
+                String(minutes).padStart(2, "0") +
+                ":" +
+                String(seconds).padStart(2, "0");
+
+
+            if (secondsRemaining <= 300) {
+
+                document.getElementById("timer")
+                    .classList.add("warning");
+
+            } else {
+
+                document.getElementById("timer")
+                    .classList.remove("warning");
+
+            }
+
+        }
+
+
+        /* =========================================================
+           NAVIGATOR
+        ========================================================= */
+
+        function createNavigator() {
+
+            const grid =
+                document.getElementById("testQuestionGrid");
+
+
+            grid.innerHTML = "";
+
+
+            questions.forEach((question, index) => {
+
+                const button =
+                    document.createElement("button");
+
+
+                button.textContent =
+                    index + 1;
+
+
+                button.addEventListener("click", () => {
+
+                    currentQuestion =
+                        index;
+
+                    renderQuestion();
+
+                });
+
+
+                grid.appendChild(button);
+
+            });
+
+
+            updateNavigator();
+
+        }
+
+
+        function updateNavigator() {
+
+            const buttons =
+                document.querySelectorAll(
+                    "#testQuestionGrid button"
+                );
+
+
+            buttons.forEach((button, index) => {
+
+                button.classList.remove(
+                    "active",
+                    "answered"
+                );
+
+
+                if (index === currentQuestion) {
+
+                    button.classList.add(
+                        "active"
+                    );
+
+                }
+
+
+                if (answers[index] !== null) {
+
+                    button.classList.add(
+                        "answered"
+                    );
+
+                }
+
+            });
+
+        }
+
+
+        /* =========================================================
+           RENDER QUESTION
+        ========================================================= */
+
+        function renderQuestion() {
+
+            const question =
+                questions[currentQuestion];
+
+
+            document.getElementById("testQuestionNumber")
+                .textContent =
+
+                "QUESTION " +
+                (currentQuestion + 1) +
+                " OF " +
+                questions.length;
+
+
+            document.getElementById("testQuestionTopic")
+                .textContent =
+                question.topic;
+
+
+            document.getElementById("testQuestionText")
+                .textContent =
+                question.question;
+
+
+            const options =
+                document.getElementById("testOptions");
+
+
+            options.innerHTML = "";
+
+
+            question.options.forEach(
+                (option, index) => {
+
+                    const button =
+                        document.createElement("button");
+
+
+                    button.className =
+                        "test-option";
+
+
+                    if (
+                        answers[currentQuestion] === index
+                    ) {
+
+                        button.classList.add(
+                            "selected"
+                        );
+
+                    }
+
+
+                    button.innerHTML = `
+
+                <span>
+                    ${String.fromCharCode(65 + index)}
+                </span>
+
+                <div>
+                    ${option}
+                </div>
+
+            `;
+
+
+                    button.addEventListener("click", () => {
+
+                        answers[currentQuestion] =
+                            index;
+
+                        renderQuestion();
+
+                    });
+
+
+                    options.appendChild(button);
+
+                }
+            );
+
+
+            document.getElementById("previousTestQuestion")
+                .disabled =
+                currentQuestion === 0;
+
+
+            document.getElementById("nextTestQuestion")
+                .textContent =
+
+                currentQuestion ===
+                    questions.length - 1
+
+                    ? "Review Answers →"
+
+                    : "Next →";
+
+
+            updateNavigator();
+
+        }
+
+
+        /* =========================================================
+           PREVIOUS / NEXT
+        ========================================================= */
+
+        document.getElementById("previousTestQuestion")
+            .addEventListener("click", () => {
+
+                if (currentQuestion > 0) {
+
+                    currentQuestion--;
+
+                    renderQuestion();
+
+                }
+
+            });
+
+
+        document.getElementById("nextTestQuestion")
+            .addEventListener("click", () => {
+
+                if (
+                    currentQuestion <
+                    questions.length - 1
+                ) {
+
+                    currentQuestion++;
+
+                    renderQuestion();
+
+                } else {
+
+                    openSubmitModal();
+
+                }
+
+            });
+
+
+        /* =========================================================
+           SUBMIT MODAL
+        ========================================================= */
+
+        document.getElementById("submitTestButton")
+            .addEventListener(
+                "click",
+                openSubmitModal
+            );
+
+
+        function openSubmitModal() {
+
+            const unanswered =
+                answers.filter(
+                    answer => answer === null
+                ).length;
+
+
+            const message =
+                document.getElementById(
+                    "submitModalMessage"
+                );
+
+
+            if (unanswered === 0) {
+
+                message.textContent =
+                    "You answered every question. Submit when you are ready.";
+
+            } else {
+
+                message.textContent =
+
+                    "You still have " +
+                    unanswered +
+                    (unanswered === 1
+                        ? " unanswered question."
+                        : " unanswered questions.");
+
+            }
+
+
+            modal.classList.remove("hidden");
+
+        }
+
+
+        document.getElementById("cancelSubmitButton")
+            .addEventListener("click", () => {
+
+                modal.classList.add("hidden");
+
+            });
+
+
+        document.getElementById("confirmSubmitButton")
+            .addEventListener("click", () => {
+
+                modal.classList.add("hidden");
+
+                submitTest();
+
+            });
+
+
+        /* =========================================================
+           SUBMIT
+        ========================================================= */
+
+        function submitTest() {
+
+            clearInterval(timerInterval);
+
+
+            activeTest.classList.add("hidden");
+
+            modal.classList.add("hidden");
+
+            results.classList.remove("hidden");
+
+
+            let correct = 0;
+
+            let unanswered = 0;
+
+
+            questions.forEach((question, index) => {
+
+                if (answers[index] === null) {
+
+                    unanswered++;
+
+                } else if (
+                    answers[index] === question.answer
+                ) {
+
+                    correct++;
+
+                }
+
+            });
+
+
+            const incorrect =
+                questions.length -
+                correct -
+                unanswered;
+
+
+            const accuracy =
+                Math.round(
+                    (correct / questions.length) * 100
+                );
+
+
+            document.getElementById("testFinalScore")
+                .textContent =
+                correct + "/" + questions.length;
+
+
+            document.getElementById("testAccuracy")
+                .textContent =
+                accuracy + "%";
+
+
+            document.getElementById("testCorrect")
+                .textContent =
+                correct;
+
+
+            document.getElementById("testIncorrect")
+                .textContent =
+                incorrect;
+
+
+            document.getElementById("testUnanswered")
+                .textContent =
+                unanswered;
+
+
+            setResultMessage(accuracy);
+
+            createReview();
+
+            saveTestResult(
+                correct,
+                incorrect,
+                unanswered,
+                accuracy
+            );
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        /* =========================================================
+           RESULT MESSAGE
+        ========================================================= */
+
+        function setResultMessage(accuracy) {
+
+            const heading =
+                document.getElementById(
+                    "testResultHeading"
+                );
+
+
+            const message =
+                document.getElementById(
+                    "testResultMessage"
+                );
+
+
+            if (accuracy >= 90) {
+
+                heading.textContent =
+                    "Excellent command.";
+
+                message.textContent =
+                    "You demonstrated strong understanding of Kinematics. Review any missed questions and continue building on this foundation.";
+
+            } else if (accuracy >= 70) {
+
+                heading.textContent =
+                    "Strong progress.";
+
+                message.textContent =
+                    "You understand most of the chapter. Review the mistakes below and revisit the related lessons before moving forward.";
+
+            } else {
+
+                heading.textContent =
+                    "Keep building.";
+
+                message.textContent =
+                    "Return to the Kinematics lessons and chapter practice, strengthen the concepts you missed, and then retake the test.";
+
+            }
+
+        }
+
+
+        /* =========================================================
+           REVIEW
+        ========================================================= */
+
+        function createReview() {
+
+            const review =
+                document.getElementById(
+                    "testReviewList"
+                );
+
+
+            review.innerHTML = "";
+
+
+            questions.forEach((question, index) => {
+
+                const userAnswer =
+                    answers[index];
+
+
+                const correct =
+                    userAnswer === question.answer;
+
+
+                const item =
+                    document.createElement("article");
+
+
+                item.className =
+                    "test-review-item";
+
+
+                if (correct) {
+
+                    item.classList.add("correct");
+
+                } else {
+
+                    item.classList.add("incorrect");
+
+                }
+
+
+                let yourAnswer;
+
+
+                if (userAnswer === null) {
+
+                    yourAnswer =
+                        "Not answered";
+
+                } else {
+
+                    yourAnswer =
+
+                        String.fromCharCode(
+                            65 + userAnswer
+                        ) +
+                        ". " +
+                        question.options[userAnswer];
+
+                }
+
+
+                const correctAnswer =
+
+                    String.fromCharCode(
+                        65 + question.answer
+                    ) +
+                    ". " +
+                    question.options[question.answer];
+
+
+                item.innerHTML = `
+
+            <div class="test-review-number">
+                ${index + 1}
+            </div>
+
+            <div class="test-review-content">
+
+                <span>
+                    ${question.topic}
+                </span>
+
+                <h3>
+                    ${question.question}
+                </h3>
+
+                <p class="review-your-answer">
+                    <strong>Your answer:</strong>
+                    ${yourAnswer}
+                </p>
+
+                <p class="review-correct-answer">
+                    <strong>Correct answer:</strong>
+                    ${correctAnswer}
+                </p>
+
+                <p class="review-explanation">
+                    ${question.explanation}
+                </p>
+
+            </div>
+
+        `;
+
+
+                review.appendChild(item);
+
+            });
+
+        }
+
+
+        /* =========================================================
+           SAVE RESULT
+        ========================================================= */
+
+        function saveTestResult(
+            correct,
+            incorrect,
+            unanswered,
+            accuracy
+        ) {
+
+            const key =
+
+                "jee-test-" +
+                subject + "-" +
+                category + "-" +
+                chapter;
+
+
+            const result = {
+
+                correct: correct,
+
+                incorrect: incorrect,
+
+                unanswered: unanswered,
+
+                total: questions.length,
+
+                accuracy: accuracy,
+
+                completed: true,
+
+                date:
+                    new Date().toISOString()
+
+            };
+
+
+            try {
+
+                localStorage.setItem(
+                    key,
+                    JSON.stringify(result)
+                );
+
+            } catch (error) {
+
+                console.warn(
+                    "Unable to save test result."
+                );
+
+            }
+
+        }
+
+
+        /* =========================================================
+           RETAKE
+        ========================================================= */
+
+        document.getElementById("retryTestButton")
+            .addEventListener("click", () => {
+
+                results.classList.add("hidden");
+
+                setup.classList.remove("hidden");
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            });
+
+    </script>
+
+</body>
+
+</html>
