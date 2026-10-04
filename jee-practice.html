@@ -297,6 +297,7 @@
 
     </main>
 
+    <script src="jee-physics-questions.js"></script>
 
     <script>
 
@@ -332,244 +333,34 @@
 
 
         /* =========================================================
-           KINEMATICS PRACTICE BANK
-           ========================================================= */
-
-        const kinematicsQuestions = [
-
-            {
-                topic: "Displacement",
-                difficulty: "Foundation",
-
-                question:
-                    "A particle moves 8 m east and then 3 m west. What is its displacement?",
-
-                options: [
-                    "11 m east",
-                    "5 m east",
-                    "5 m west",
-                    "11 m west"
-                ],
-
-                answer: 1,
-
-                explanation:
-                    "Take east as positive. The displacement is +8 m − 3 m = +5 m, so the particle is displaced 5 m east."
-            },
-
-
-            {
-                topic: "Distance & Displacement",
-                difficulty: "Foundation",
-
-                question:
-                    "A runner completes one full 400 m lap and stops at the starting point. What are the distance and displacement?",
-
-                options: [
-                    "400 m and 400 m",
-                    "0 m and 400 m",
-                    "400 m and 0 m",
-                    "0 m and 0 m"
-                ],
-
-                answer: 2,
-
-                explanation:
-                    "Distance is the complete path traveled, so it is 400 m. The initial and final positions are identical, so displacement is 0 m."
-            },
-
-
-            {
-                topic: "Average Velocity",
-                difficulty: "Foundation",
-
-                question:
-                    "A car moves 60 m east in 5 s and then 20 m west in 5 s. What is its average velocity?",
-
-                options: [
-                    "4 m/s east",
-                    "8 m/s east",
-                    "4 m/s west",
-                    "6 m/s east"
-                ],
-
-                answer: 0,
-
-                explanation:
-                    "Net displacement is 60 − 20 = 40 m east. Total time is 10 s. Average velocity = 40/10 = 4 m/s east."
-            },
-
-
-            {
-                topic: "Average Speed",
-                difficulty: "Medium",
-
-                question:
-                    "A particle travels equal distances at 30 m/s and 60 m/s. What is its average speed?",
-
-                options: [
-                    "40 m/s",
-                    "45 m/s",
-                    "50 m/s",
-                    "90 m/s"
-                ],
-
-                answer: 0,
-
-                explanation:
-                    "For equal distances, average speed = 2v₁v₂/(v₁+v₂). Therefore 2(30)(60)/(30+60) = 40 m/s."
-            },
-
-
-            {
-                topic: "Acceleration",
-                difficulty: "Foundation",
-
-                question:
-                    "The velocity of a car increases from 5 m/s to 25 m/s in 4 s. What is its average acceleration?",
-
-                options: [
-                    "4 m/s²",
-                    "5 m/s²",
-                    "6 m/s²",
-                    "20 m/s²"
-                ],
-
-                answer: 1,
-
-                explanation:
-                    "Average acceleration = change in velocity / time = (25 − 5)/4 = 5 m/s²."
-            },
-
-
-            {
-                topic: "Equations of Motion",
-                difficulty: "Medium",
-
-                question:
-                    "A body starts from rest and accelerates uniformly at 3 m/s² for 4 s. What distance does it travel?",
-
-                options: [
-                    "12 m",
-                    "18 m",
-                    "24 m",
-                    "48 m"
-                ],
-
-                answer: 2,
-
-                explanation:
-                    "Using s = ut + ½at² with u = 0: s = ½(3)(4²) = 24 m."
-            },
-
-
-            {
-                topic: "Equations of Motion",
-                difficulty: "Medium",
-
-                question:
-                    "A particle moving at 10 m/s accelerates uniformly at 2 m/s² for 5 s. What is its final velocity?",
-
-                options: [
-                    "12 m/s",
-                    "15 m/s",
-                    "20 m/s",
-                    "25 m/s"
-                ],
-
-                answer: 2,
-
-                explanation:
-                    "Using v = u + at: v = 10 + (2)(5) = 20 m/s."
-            },
-
-
-            {
-                topic: "Motion Graphs",
-                difficulty: "Medium",
-
-                question:
-                    "What does the slope of a velocity-time graph represent?",
-
-                options: [
-                    "Displacement",
-                    "Acceleration",
-                    "Distance",
-                    "Position"
-                ],
-
-                answer: 1,
-
-                explanation:
-                    "Acceleration is the rate of change of velocity with time, so it is represented by the slope of a velocity-time graph."
-            },
-
-
-            {
-                topic: "Motion Graphs",
-                difficulty: "Medium",
-
-                question:
-                    "What does the area under a velocity-time graph represent?",
-
-                options: [
-                    "Acceleration",
-                    "Speed",
-                    "Displacement",
-                    "Force"
-                ],
-
-                answer: 2,
-
-                explanation:
-                    "The signed area under a velocity-time graph over a time interval gives the displacement during that interval."
-            },
-
-
-            {
-                topic: "Vertical Motion",
-                difficulty: "JEE Level",
-
-                question:
-                    "A ball is thrown vertically upward with a speed of 30 m/s. Taking g = 10 m/s², how long does it take to reach maximum height?",
-
-                options: [
-                    "1 s",
-                    "2 s",
-                    "3 s",
-                    "6 s"
-                ],
-
-                answer: 2,
-
-                explanation:
-                    "At maximum height the velocity is zero. Using v = u + at: 0 = 30 − 10t, giving t = 3 s."
-            }
-
-        ];
-
-
-        /* =========================================================
            QUESTION BANK
            ========================================================= */
 
-        let questions;
+        let questions = [];
 
 
         if (
             subject === "physics" &&
-            chapter === "Kinematics"
+            typeof jeePhysicsQuestions !== "undefined" &&
+            jeePhysicsQuestions[chapter] &&
+            jeePhysicsQuestions[chapter].practice
         ) {
 
             questions =
-                kinematicsQuestions;
+                jeePhysicsQuestions[chapter].practice;
 
-        } else {
+        }
+
+
+        if (questions.length === 0) {
 
             questions = [
 
                 {
+                    id: "coming-soon",
+
                     topic: chapter,
+
                     difficulty: "Foundation",
 
                     question:
@@ -1021,7 +812,9 @@
                     "Excellent work.";
 
                 message.textContent =
-                    "You demonstrated strong command of the core Kinematics concepts. Continue to the chapter test when you are ready.";
+                    "You demonstrated strong command of the core " +
+                    chapter +
+                    " concepts. Continue to the chapter test when you are ready.";
 
             } else if (accuracy >= 70) {
 
@@ -1037,7 +830,9 @@
                     "Keep building.";
 
                 message.textContent =
-                    "Review the Kinematics lessons and worked examples, then try the practice set again.";
+                    "Review the " +
+                    chapter +
+                    " lessons and worked examples, then try the practice set again.";
 
             }
 
