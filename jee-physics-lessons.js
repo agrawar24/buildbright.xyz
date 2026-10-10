@@ -3736,9 +3736,747 @@ const jeePhysicsLessons = {
                     "Always check dimensions, units and significant figures."
             }
 
+
+        ]
+
+    },
+
+    "Thermal Properties of Matter": {
+
+        description:
+            "Explore temperature, thermal expansion, heat transfer, calorimetry, phase changes and Newton's law of cooling.",
+
+        lessons: [
+
+            // LESSON 1
+            {
+                title: "Temperature and Thermal Equilibrium",
+                description: "Understand temperature scales and the zeroth law of thermodynamics.",
+                intro: "Temperature determines the direction of spontaneous heat transfer between bodies.",
+                conceptTitle: "Thermal equilibrium and temperature",
+                conceptText: "Two bodies in thermal equilibrium have the same temperature and exchange no net heat.",
+                body: "The zeroth law of thermodynamics states that if two systems are separately in thermal equilibrium with a third system, they are in thermal equilibrium with each other. This principle makes thermometers possible. Celsius and kelvin have equal-sized temperature intervals, but different zero points. A temperature difference of 1°C equals a temperature difference of 1 K.",
+                keyIdeas: [
+                    {
+                        label: "KELVIN CONVERSION",
+                        formula: "T(K) = t(°C) + 273.15",
+                        text: "Convert Celsius temperature to absolute temperature."
+                    },
+                    {
+                        label: "FAHRENHEIT",
+                        formula: "F = (9/5)C + 32",
+                        text: "Convert Celsius to Fahrenheit."
+                    },
+                    {
+                        label: "ZEROTH LAW",
+                        formula: "Tₐ = Tᵦ and Tᵦ = T꜀ ⇒ Tₐ = T꜀",
+                        text: "Thermal equilibrium is transitive."
+                    }
+                ],
+                example: {
+                    problem: "Convert 27°C to kelvin and Fahrenheit.",
+                    steps: [
+                        "Kelvin temperature = 27 + 273.15 = 300.15 K.",
+                        "Fahrenheit temperature = (9/5)(27) + 32.",
+                        "Fahrenheit temperature = 80.6°F."
+                    ]
+                },
+                jeeQuestion: "At what temperature do Celsius and Fahrenheit scales show the same numerical value?",
+                jeeOptions: [
+                    "0°",
+                    "−40°",
+                    "32°",
+                    "100°"
+                ],
+                jeeAnswer: 1,
+                jeeExplanation: "Set F = C in F = 9C/5 + 32. Solving gives C = −40.",
+                checkQuestion: "What does the zeroth law of thermodynamics establish?",
+                checkOptions: [
+                    { text: "Conservation of energy", correct: false },
+                    { text: "The concept of thermal equilibrium", correct: true },
+                    { text: "The direction of mechanical motion", correct: false },
+                    { text: "Conservation of momentum", correct: false }
+                ],
+                correctFeedback: "Correct. The zeroth law establishes thermal equilibrium as the basis for measuring temperature.",
+                incorrectFeedback: "The zeroth law concerns thermal equilibrium and temperature measurement."
+            },
+
+            // LESSON 2
+            {
+                title: "Thermal Expansion",
+                description: "Study linear, area and volume expansion of materials.",
+                intro: "Most materials expand when heated because their average interparticle separation increases.",
+                conceptTitle: "Thermal expansion coefficients",
+                conceptText: "For small temperature changes, expansion is approximately proportional to the original dimension and temperature change.",
+                body: "Linear expansion describes changes in length, area expansion describes changes in surface area, and volume expansion describes changes in volume. For isotropic solids and small expansions, the area expansion coefficient is approximately 2α and the volume expansion coefficient is approximately 3α, where α is the linear expansion coefficient. A hole in a uniformly heated metal plate expands as though it were filled with the same material.",
+                keyIdeas: [
+                    {
+                        label: "LINEAR EXPANSION",
+                        formula: "ΔL = αL₀ΔT",
+                        text: "α is the coefficient of linear expansion."
+                    },
+                    {
+                        label: "AREA EXPANSION",
+                        formula: "ΔA ≈ 2αA₀ΔT",
+                        text: "Valid for isotropic solids with small expansion."
+                    },
+                    {
+                        label: "VOLUME EXPANSION",
+                        formula: "ΔV ≈ 3αV₀ΔT",
+                        text: "The volume expansion coefficient is approximately 3α."
+                    }
+                ],
+                example: {
+                    problem: "A 2 m metal rod has α = 1.2 × 10⁻⁵ K⁻¹. Find its expansion for a temperature rise of 50 K.",
+                    steps: [
+                        "Use ΔL = αL₀ΔT.",
+                        "Substitute ΔL = (1.2 × 10⁻⁵)(2)(50).",
+                        "ΔL = 1.2 × 10⁻³ m.",
+                        "The rod expands by 1.2 mm."
+                    ]
+                },
+                jeeQuestion: "An isotropic solid has linear expansion coefficient α. Its approximate volume expansion coefficient is:",
+                jeeOptions: [
+                    "α/3",
+                    "α",
+                    "2α",
+                    "3α"
+                ],
+                jeeAnswer: 3,
+                jeeExplanation: "For an isotropic solid undergoing a small temperature change, the volume expansion coefficient is approximately 3α.",
+                checkQuestion: "What happens to a circular hole in a metal plate when the plate is heated uniformly?",
+                checkOptions: [
+                    { text: "The hole becomes smaller", correct: false },
+                    { text: "The hole becomes larger", correct: true },
+                    { text: "The hole remains exactly unchanged", correct: false },
+                    { text: "The hole disappears", correct: false }
+                ],
+                correctFeedback: "Correct. The hole expands along with the plate.",
+                incorrectFeedback: "Imagine the hole filled with the same metal. That imaginary material would expand when heated."
+            },
+
+            // LESSON 3
+            {
+                title: "Specific Heat and Calorimetry",
+                description: "Calculate heat exchange and final equilibrium temperatures.",
+                intro: "Different substances require different amounts of energy to change their temperatures.",
+                conceptTitle: "Heat capacity and specific heat",
+                conceptText: "Specific heat capacity is the energy needed to raise the temperature of unit mass by one kelvin.",
+                body: "The heat absorbed or released without a phase change is Q = mcΔT, where m is mass and c is specific heat capacity. Heat capacity C = mc applies to an entire body. In an insulated calorimetry problem, total heat lost equals total heat gained, provided no energy escapes to the surroundings. The calorimeter's own heat capacity must be included if it is significant.",
+                keyIdeas: [
+                    {
+                        label: "HEAT EXCHANGE",
+                        formula: "Q = mcΔT",
+                        text: "Use when specific heat is approximately constant and no phase change occurs."
+                    },
+                    {
+                        label: "HEAT CAPACITY",
+                        formula: "C = mc",
+                        text: "Heat capacity has SI units J/K."
+                    },
+                    {
+                        label: "CALORIMETRY",
+                        formula: "ΣQ = 0",
+                        text: "In an insulated system, the algebraic sum of heat transfers is zero."
+                    }
+                ],
+                example: {
+                    problem: "Mix 200 g of water at 80°C with 300 g of water at 20°C in an insulated container. Neglect the container's heat capacity. Find the final temperature.",
+                    steps: [
+                        "Both samples have the same specific heat.",
+                        "Heat lost by hot water = heat gained by cold water.",
+                        "200(80 − T) = 300(T − 20).",
+                        "16000 − 200T = 300T − 6000.",
+                        "T = 44°C."
+                    ]
+                },
+                jeeQuestion: "How much heat is required to raise 0.5 kg of water by 10 K? Take c = 4200 J/(kg·K).",
+                jeeOptions: [
+                    "2100 J",
+                    "4200 J",
+                    "21000 J",
+                    "42000 J"
+                ],
+                jeeAnswer: 2,
+                jeeExplanation: "Q = mcΔT = 0.5 × 4200 × 10 = 21000 J.",
+                checkQuestion: "What is the SI unit of specific heat capacity?",
+                checkOptions: [
+                    { text: "J/K", correct: false },
+                    { text: "J/(kg·K)", correct: true },
+                    { text: "W/K", correct: false },
+                    { text: "kg·K/J", correct: false }
+                ],
+                correctFeedback: "Correct. Specific heat capacity is measured in joules per kilogram per kelvin.",
+                incorrectFeedback: "Use c = Q/(mΔT) to determine its SI unit."
+            },
+
+            // LESSON 4
+            {
+                title: "Change of State and Latent Heat",
+                description: "Understand melting, freezing, boiling and vaporization.",
+                intro: "During a phase change at constant pressure, energy can be transferred without changing the substance's temperature.",
+                conceptTitle: "Latent heat",
+                conceptText: "Latent heat is energy absorbed or released during a phase change at the transition temperature.",
+                body: "The heat involved in a phase change is Q = mL, where L is specific latent heat. During melting or boiling of a pure substance at constant pressure, the temperature remains constant while the phase transition occurs. The specific latent heat of fusion refers to melting or freezing, while the specific latent heat of vaporization refers to boiling or condensation. Multi-stage heating problems may require both mcΔT and mL terms.",
+                keyIdeas: [
+                    {
+                        label: "LATENT HEAT",
+                        formula: "Q = mL",
+                        text: "L is measured in J/kg."
+                    },
+                    {
+                        label: "SENSIBLE HEAT",
+                        formula: "Q = mcΔT",
+                        text: "Used when temperature changes without a phase transition."
+                    },
+                    {
+                        label: "MULTI-STAGE HEATING",
+                        formula: "Qₜₒₜₐₗ = Σ(mcΔT) + Σ(mL)",
+                        text: "Add energy for warming and for phase changes."
+                    }
+                ],
+                example: {
+                    problem: "How much energy is needed to melt 0.2 kg of ice at 0°C? Take latent heat of fusion as 3.34 × 10⁵ J/kg.",
+                    steps: [
+                        "The ice is already at its melting point.",
+                        "Use Q = mL.",
+                        "Q = 0.2 × 3.34 × 10⁵.",
+                        "Q = 6.68 × 10⁴ J."
+                    ]
+                },
+                jeeQuestion: "A pure substance melts at constant pressure. While melting, its temperature generally:",
+                jeeOptions: [
+                    "Increases continuously",
+                    "Decreases continuously",
+                    "Remains constant until melting is complete",
+                    "Becomes zero kelvin"
+                ],
+                jeeAnswer: 2,
+                jeeExplanation: "At constant pressure, the heat supplied during melting is latent heat, so temperature remains at the melting point until the transition is complete.",
+                checkQuestion: "Which equation gives the heat needed for a phase change?",
+                checkOptions: [
+                    { text: "Q = mL", correct: true },
+                    { text: "Q = mv", correct: false },
+                    { text: "Q = ma", correct: false },
+                    { text: "Q = Pt²", correct: false }
+                ],
+                correctFeedback: "Correct. Phase-change heat is mass multiplied by specific latent heat.",
+                incorrectFeedback: "Use Q = mL for latent heat during a phase change."
+            },
+
+            // LESSON 5
+            {
+                title: "Heat Transfer",
+                description: "Compare conduction, convection and radiation.",
+                intro: "Heat can move through materials, moving fluids and electromagnetic radiation.",
+                conceptTitle: "Three mechanisms of heat transfer",
+                conceptText: "Conduction transfers energy through a material, convection involves bulk fluid motion, and radiation transfers energy by electromagnetic waves.",
+                body: "For steady one-dimensional conduction through a uniform slab, the heat-transfer rate is H = kAΔT/L. Here k is thermal conductivity, A is cross-sectional area and L is thickness. Thermal radiation does not require a material medium. The net radiated power of a body surrounded by an environment at temperature Tₛ is P = εσA(T⁴ − Tₛ⁴), using absolute temperatures. Convection occurs in liquids and gases through fluid motion.",
+                keyIdeas: [
+                    {
+                        label: "CONDUCTION",
+                        formula: "H = kAΔT/L",
+                        text: "Steady heat-transfer rate through a uniform slab."
+                    },
+                    {
+                        label: "RADIATION",
+                        formula: "P = εσA(T⁴ − Tₛ⁴)",
+                        text: "Net radiative power exchange with surroundings."
+                    },
+                    {
+                        label: "THERMAL RESISTANCE",
+                        formula: "Rₜₕ = L/(kA)",
+                        text: "For steady conduction, H = ΔT/Rₜₕ."
+                    }
+                ],
+                example: {
+                    problem: "A slab has k = 0.5 W/(m·K), area 2 m², thickness 0.1 m and a temperature difference of 20 K. Find the steady heat-transfer rate.",
+                    steps: [
+                        "Use H = kAΔT/L.",
+                        "H = (0.5)(2)(20)/0.1.",
+                        "H = 200 W."
+                    ]
+                },
+                jeeQuestion: "If the thickness of a uniform slab doubles while all other factors remain unchanged, its steady conductive heat-transfer rate:",
+                jeeOptions: [
+                    "Doubles",
+                    "Becomes half",
+                    "Becomes four times",
+                    "Remains unchanged"
+                ],
+                jeeAnswer: 1,
+                jeeExplanation: "H = kAΔT/L. Doubling L halves the conduction rate.",
+                checkQuestion: "Which heat-transfer mechanism can operate through a vacuum?",
+                checkOptions: [
+                    { text: "Conduction only", correct: false },
+                    { text: "Convection only", correct: false },
+                    { text: "Radiation", correct: true },
+                    { text: "None of them", correct: false }
+                ],
+                correctFeedback: "Correct. Electromagnetic radiation can travel through a vacuum.",
+                incorrectFeedback: "Radiation does not require a material medium."
+            },
+
+            // LESSON 6
+            {
+                title: "Newton's Law of Cooling and Chapter Review",
+                description: "Apply cooling laws and review thermal-property calculations.",
+                intro: "The rate at which an object cools depends on its temperature difference from its surroundings.",
+                conceptTitle: "Newton's law of cooling",
+                conceptText: "For modest temperature differences and approximately constant conditions, the cooling rate is proportional to the temperature difference.",
+                body: "Newton's law of cooling can be written dT/dt = −k(T − Tₛ), where Tₛ is the constant surrounding temperature and k is a positive cooling constant. Its solution is T − Tₛ = (T₀ − Tₛ)e⁻ᵏᵗ. The approximation works when the effective heat-transfer coefficient and the object's heat capacity remain approximately constant. Chapter problems may combine temperature conversion, thermal expansion, calorimetry, latent heat and conduction.",
+                keyIdeas: [
+                    {
+                        label: "COOLING LAW",
+                        formula: "dT/dt = −k(T − Tₛ)",
+                        text: "Cooling rate depends on temperature difference."
+                    },
+                    {
+                        label: "COOLING SOLUTION",
+                        formula: "T − Tₛ = (T₀ − Tₛ)e⁻ᵏᵗ",
+                        text: "Temperature approaches the surroundings exponentially."
+                    },
+                    {
+                        label: "HEAT BALANCE",
+                        formula: "ΣQ = 0",
+                        text: "Apply energy conservation in insulated calorimetry problems."
+                    }
+                ],
+                example: {
+                    problem: "A hot object cools in surroundings at 20°C. Its temperature difference above the surroundings falls from 60°C to 30°C in 5 minutes. Assuming Newton's law of cooling, find the time for the difference to fall from 30°C to 15°C.",
+                    steps: [
+                        "Newton's law gives exponential decay of temperature difference.",
+                        "The difference halves from 60°C to 30°C in 5 minutes.",
+                        "For constant k, each halving takes the same time.",
+                        "The next halving from 30°C to 15°C also takes 5 minutes."
+                    ]
+                },
+                jeeQuestion: "A body at 80°C is cooling in surroundings at 20°C. Later, its temperature is 50°C. Under Newton's law of cooling, the magnitude of its cooling rate at 50°C compared with its initial rate is:",
+                jeeOptions: [
+                    "One-fourth",
+                    "One-half",
+                    "Twice",
+                    "The same"
+                ],
+                jeeAnswer: 1,
+                jeeExplanation: "Cooling rate magnitude is proportional to T − Tₛ. Initially the difference is 60°C; later it is 30°C, so the rate is halved.",
+                checkQuestion: "Under Newton's law of cooling, what happens as an object's temperature approaches the surrounding temperature?",
+                checkOptions: [
+                    { text: "Its cooling rate increases without limit", correct: false },
+                    { text: "Its cooling rate approaches zero", correct: true },
+                    { text: "Its temperature must become 0 K", correct: false },
+                    { text: "Its heat capacity becomes zero", correct: false }
+                ],
+                correctFeedback: "Correct. The temperature difference and cooling rate approach zero.",
+                incorrectFeedback: "Cooling rate is proportional to the temperature difference from the surroundings."
+            }
+
+
+        ]
+
+    },
+
+    "Thermal Properties of Matter": {
+
+        description:
+            "Learn temperature scales, thermal expansion, calorimetry, phase changes, heat transfer and Newton's law of cooling.",
+
+        lessons: [
+
+            // LESSON 1
+            {
+                title: "Temperature and Thermal Equilibrium",
+                description:
+                    "Understand temperature scales and the zeroth law of thermodynamics.",
+                intro:
+                    "Temperature determines the direction of spontaneous heat transfer between bodies.",
+                conceptTitle:
+                    "Temperature and thermal equilibrium",
+                conceptText:
+                    "Bodies in thermal equilibrium have the same temperature and exchange no net heat.",
+                body:
+                    "The zeroth law of thermodynamics states that if two systems are separately in thermal equilibrium with a third system, they are in thermal equilibrium with each other. This principle makes temperature measurement possible. The kelvin is the SI base unit of temperature. Celsius and kelvin have equal-sized intervals, but different zero points.",
+                keyIdeas: [
+                    {
+                        label: "KELVIN",
+                        formula: "T(K) = t(°C) + 273.15",
+                        text: "Convert Celsius to absolute temperature."
+                    },
+                    {
+                        label: "FAHRENHEIT",
+                        formula: "F = 9C/5 + 32",
+                        text: "Convert Celsius to Fahrenheit."
+                    },
+                    {
+                        label: "THERMAL EQUILIBRIUM",
+                        formula: "T₁ = T₂",
+                        text: "No net heat flows between bodies at equal temperatures."
+                    }
+                ],
+                example: {
+                    problem:
+                        "Convert 27°C into kelvin and Fahrenheit.",
+                    steps: [
+                        "T = 27 + 273.15 = 300.15 K.",
+                        "F = (9/5)(27) + 32.",
+                        "F = 80.6°F."
+                    ]
+                },
+                jeeQuestion:
+                    "At what temperature do Celsius and Fahrenheit scales have the same numerical reading?",
+                jeeOptions: [
+                    "0°",
+                    "−40°",
+                    "32°",
+                    "100°"
+                ],
+                jeeAnswer: 1,
+                jeeExplanation:
+                    "Set F = C. Then C = 9C/5 + 32, giving C = −40.",
+                checkQuestion:
+                    "Which law provides the basis for measuring temperature using a thermometer?",
+                checkOptions: [
+                    { text: "Newton's second law", correct: false },
+                    { text: "Zeroth law of thermodynamics", correct: true },
+                    { text: "Law of gravitation", correct: false },
+                    { text: "Conservation of momentum", correct: false }
+                ],
+                correctFeedback:
+                    "Correct. The zeroth law establishes thermal equilibrium.",
+                incorrectFeedback:
+                    "The zeroth law of thermodynamics is the basis of temperature measurement."
+            },
+
+            // LESSON 2
+            {
+                title: "Thermal Expansion",
+                description:
+                    "Study linear, area and volume expansion of solids.",
+                intro:
+                    "Most solids expand when heated because their average interatomic separation increases.",
+                conceptTitle:
+                    "Expansion depends on temperature change.",
+                conceptText:
+                    "For small temperature changes, expansion is approximately proportional to the original dimension and the temperature change.",
+                body:
+                    "Linear expansion changes length, area expansion changes surface area, and volume expansion changes volume. For isotropic solids undergoing small expansion, the area expansion coefficient is approximately 2α and the volume expansion coefficient is approximately 3α, where α is the linear expansion coefficient. A hole in a uniformly heated plate also expands.",
+                keyIdeas: [
+                    {
+                        label: "LINEAR EXPANSION",
+                        formula: "ΔL = αL₀ΔT",
+                        text: "α is the coefficient of linear expansion."
+                    },
+                    {
+                        label: "AREA EXPANSION",
+                        formula: "ΔA ≈ 2αA₀ΔT",
+                        text: "Approximation for small expansion in isotropic solids."
+                    },
+                    {
+                        label: "VOLUME EXPANSION",
+                        formula: "ΔV ≈ 3αV₀ΔT",
+                        text: "The volume expansion coefficient is approximately 3α."
+                    }
+                ],
+                example: {
+                    problem:
+                        "A metal rod is 2 m long and has α = 1.2 × 10⁻⁵ K⁻¹. Find its increase in length for a temperature rise of 50 K.",
+                    steps: [
+                        "Use ΔL = αL₀ΔT.",
+                        "ΔL = (1.2 × 10⁻⁵)(2)(50) m.",
+                        "ΔL = 1.2 × 10⁻³ m.",
+                        "Increase in length = 1.2 mm."
+                    ]
+                },
+                jeeQuestion:
+                    "A circular hole in a metal plate is heated uniformly. What happens to the diameter of the hole?",
+                jeeOptions: [
+                    "It decreases",
+                    "It remains unchanged",
+                    "It increases",
+                    "It becomes zero"
+                ],
+                jeeAnswer: 2,
+                jeeExplanation:
+                    "The hole expands as though it were filled with the same material.",
+                checkQuestion:
+                    "For an isotropic solid with small thermal expansion, the volume expansion coefficient is approximately:",
+                checkOptions: [
+                    { text: "α/3", correct: false },
+                    { text: "α", correct: false },
+                    { text: "2α", correct: false },
+                    { text: "3α", correct: true }
+                ],
+                correctFeedback:
+                    "Correct. The volume expansion coefficient is approximately 3α.",
+                incorrectFeedback:
+                    "For small expansion in isotropic solids, β ≈ 3α."
+            },
+
+            // LESSON 3
+            {
+                title: "Specific Heat Capacity and Calorimetry",
+                description:
+                    "Calculate heat exchange and equilibrium temperature.",
+                intro:
+                    "Different materials require different amounts of heat to produce the same temperature change.",
+                conceptTitle:
+                    "Heat exchange and specific heat",
+                conceptText:
+                    "Specific heat capacity is the heat required per unit mass per unit temperature rise.",
+                body:
+                    "When a body changes temperature without changing phase, the heat transferred is Q = mcΔT. In an isolated calorimetry system, total heat lost equals total heat gained, provided heat absorbed by the container and surroundings is negligible or properly included. Heat is energy in transfer due to temperature difference, not a substance stored inside an object.",
+                keyIdeas: [
+                    {
+                        label: "HEAT TRANSFER",
+                        formula: "Q = mcΔT",
+                        text: "c is specific heat capacity in J/(kg·K)."
+                    },
+                    {
+                        label: "HEAT CAPACITY",
+                        formula: "C = mc",
+                        text: "Heat capacity is measured in J/K."
+                    },
+                    {
+                        label: "CALORIMETRY",
+                        formula: "Qₗₒₛₜ + Qgₐᵢₙₑd = 0",
+                        text: "Energy is conserved in an isolated system."
+                    }
+                ],
+                example: {
+                    problem:
+                        "How much heat is required to raise 0.5 kg of water from 20°C to 40°C? Take c = 4200 J/(kg·K).",
+                    steps: [
+                        "Use Q = mcΔT.",
+                        "ΔT = 40 − 20 = 20 K.",
+                        "Q = 0.5 × 4200 × 20.",
+                        "Q = 42,000 J = 42 kJ."
+                    ]
+                },
+                jeeQuestion:
+                    "Equal masses of two substances receive equal heat. Substance A has twice the specific heat capacity of B. What is the ratio of their temperature rises ΔTₐ/ΔTᵦ?",
+                jeeOptions: [
+                    "1/4",
+                    "1/2",
+                    "2",
+                    "4"
+                ],
+                jeeAnswer: 1,
+                jeeExplanation:
+                    "Since ΔT = Q/(mc), temperature rise is inversely proportional to specific heat capacity.",
+                checkQuestion:
+                    "What is the SI unit of specific heat capacity?",
+                checkOptions: [
+                    { text: "J/kg", correct: false },
+                    { text: "J/(kg·K)", correct: true },
+                    { text: "J/K²", correct: false },
+                    { text: "kg·K/J", correct: false }
+                ],
+                correctFeedback:
+                    "Correct. Specific heat capacity is measured in J/(kg·K).",
+                incorrectFeedback:
+                    "From Q = mcΔT, c = Q/(mΔT)."
+            },
+
+            // LESSON 4
+            {
+                title: "Change of State and Latent Heat",
+                description:
+                    "Understand melting, boiling and energy transfer during phase changes.",
+                intro:
+                    "A substance can absorb heat without increasing its temperature while changing phase.",
+                conceptTitle:
+                    "Latent heat changes the physical state.",
+                conceptText:
+                    "At a fixed pressure, an idealized pure substance changes phase at a characteristic temperature while absorbing or releasing latent heat.",
+                body:
+                    "Melting changes solid to liquid, while vaporization changes liquid to gas. During a phase change at constant pressure, heat is used to change the state rather than raise the temperature. Specific latent heat is the energy required to change the phase of one kilogram of substance. The latent heat of fusion applies to melting and freezing, while the latent heat of vaporization applies to boiling and condensation.",
+                keyIdeas: [
+                    {
+                        label: "LATENT HEAT",
+                        formula: "Q = mL",
+                        text: "L is specific latent heat in J/kg."
+                    },
+                    {
+                        label: "HEATING WITHOUT PHASE CHANGE",
+                        formula: "Q = mcΔT",
+                        text: "Use specific heat capacity when temperature changes."
+                    },
+                    {
+                        label: "MULTISTAGE HEATING",
+                        formula: "Qₜₒₜₐₗ = Q₁ + Q₂ + ...",
+                        text: "Add sensible and latent heat for each stage."
+                    }
+                ],
+                example: {
+                    problem:
+                        "Find the heat needed to melt 0.2 kg of ice at 0°C. Take the specific latent heat of fusion as 3.34 × 10⁵ J/kg.",
+                    steps: [
+                        "Use Q = mL.",
+                        "Q = 0.2 × 3.34 × 10⁵.",
+                        "Q = 6.68 × 10⁴ J.",
+                        "Required heat = 66.8 kJ."
+                    ]
+                },
+                jeeQuestion:
+                    "A 0.1 kg block of ice at 0°C is completely melted into water at 0°C. If L = 3.34 × 10⁵ J/kg, how much heat is absorbed?",
+                jeeOptions: [
+                    "3.34 kJ",
+                    "33.4 kJ",
+                    "334 kJ",
+                    "3340 kJ"
+                ],
+                jeeAnswer: 1,
+                jeeExplanation:
+                    "Q = mL = 0.1 × 3.34 × 10⁵ = 33,400 J = 33.4 kJ.",
+                checkQuestion:
+                    "During melting of a pure substance at constant pressure, what happens to its temperature while solid and liquid coexist in equilibrium?",
+                checkOptions: [
+                    { text: "It rises continuously", correct: false },
+                    { text: "It falls continuously", correct: false },
+                    { text: "It remains constant", correct: true },
+                    { text: "It becomes absolute zero", correct: false }
+                ],
+                correctFeedback:
+                    "Correct. Added heat is used for the phase change.",
+                incorrectFeedback:
+                    "During equilibrium melting at fixed pressure, the temperature stays at the melting point."
+            },
+
+            // LESSON 5
+            {
+                title: "Conduction, Convection and Radiation",
+                description:
+                    "Understand the three mechanisms of heat transfer.",
+                intro:
+                    "Thermal energy can travel through matter or across empty space.",
+                conceptTitle:
+                    "Three modes of heat transfer",
+                conceptText:
+                    "Conduction transfers energy through microscopic interactions, convection involves bulk fluid motion, and radiation uses electromagnetic waves.",
+                body:
+                    "In one-dimensional steady conduction through a uniform slab, the rate of heat transfer is proportional to thermal conductivity, area and temperature difference, and inversely proportional to thickness. Convection involves the movement of liquids or gases. Thermal radiation does not require a material medium. The Stefan–Boltzmann law gives the net radiative power exchanged with surroundings under suitable conditions.",
+                keyIdeas: [
+                    {
+                        label: "CONDUCTION",
+                        formula: "P = kAΔT/L",
+                        text: "Steady heat flow through a uniform slab."
+                    },
+                    {
+                        label: "RADIATION",
+                        formula: "Pₙₑₜ = εσA(T⁴ − Tₛ⁴)",
+                        text: "Absolute temperatures must be in kelvin."
+                    },
+                    {
+                        label: "THERMAL RESISTANCE",
+                        formula: "Rₜₕ = L/(kA)",
+                        text: "For conduction, P = ΔT/Rₜₕ."
+                    }
+                ],
+                example: {
+                    problem:
+                        "A slab has thermal conductivity 0.5 W/(m·K), area 2 m², thickness 0.1 m and a temperature difference of 20 K. Find the steady heat-transfer rate.",
+                    steps: [
+                        "Use P = kAΔT/L.",
+                        "P = (0.5 × 2 × 20)/0.1.",
+                        "P = 200 W."
+                    ]
+                },
+                jeeQuestion:
+                    "The thickness of a uniform slab is doubled while its area, conductivity and temperature difference remain unchanged. What happens to its steady conductive heat-transfer rate?",
+                jeeOptions: [
+                    "It doubles",
+                    "It becomes half",
+                    "It becomes four times",
+                    "It remains unchanged"
+                ],
+                jeeAnswer: 1,
+                jeeExplanation:
+                    "Since P = kAΔT/L, doubling L halves P.",
+                checkQuestion:
+                    "Which mode of heat transfer can occur through a vacuum?",
+                checkOptions: [
+                    { text: "Conduction only", correct: false },
+                    { text: "Convection only", correct: false },
+                    { text: "Radiation", correct: true },
+                    { text: "Conduction and convection only", correct: false }
+                ],
+                correctFeedback:
+                    "Correct. Electromagnetic radiation can travel through a vacuum.",
+                incorrectFeedback:
+                    "Radiation does not require a material medium."
+            },
+
+            // LESSON 6
+            {
+                title: "Newton's Law of Cooling and Chapter Review",
+                description:
+                    "Apply Newton's law of cooling and review thermal physics concepts.",
+                intro:
+                    "A hot object generally cools faster when the temperature difference between it and its surroundings is larger.",
+                conceptTitle:
+                    "Cooling rate depends on temperature difference.",
+                conceptText:
+                    "Under suitable conditions, Newton's law of cooling states that the rate of temperature change is proportional to the temperature difference from the surroundings.",
+                body:
+                    "Newton's law of cooling is an approximation valid when the surroundings remain at constant temperature and the effective heat-transfer coefficient is approximately constant. It leads to exponential cooling for an object whose temperature is nearly uniform. This chapter connects temperature measurement, thermal expansion, heat capacity, latent heat, heat-transfer mechanisms and cooling.",
+                keyIdeas: [
+                    {
+                        label: "NEWTON'S LAW",
+                        formula: "dT/dt = −k(T − Tₛ)",
+                        text: "k is a positive cooling constant."
+                    },
+                    {
+                        label: "COOLING SOLUTION",
+                        formula: "T − Tₛ = (T₀ − Tₛ)e⁻ᵏᵗ",
+                        text: "Temperature difference decreases exponentially."
+                    },
+                    {
+                        label: "HEAT BALANCE",
+                        formula: "ΣQ = 0",
+                        text: "For an isolated system, total heat exchanged sums to zero."
+                    }
+                ],
+                example: {
+                    problem:
+                        "A body is initially at 80°C in surroundings at 20°C. After 10 minutes, its temperature is 50°C. Assuming Newton's law of cooling, find its temperature after another 10 minutes.",
+                    steps: [
+                        "Initial temperature difference = 80 − 20 = 60°C.",
+                        "After 10 minutes, the difference = 50 − 20 = 30°C.",
+                        "The temperature difference halves every 10 minutes.",
+                        "After another 10 minutes, the difference = 15°C.",
+                        "Temperature = 20 + 15 = 35°C."
+                    ]
+                },
+                jeeQuestion:
+                    "A body cools in constant-temperature surroundings according to Newton's law of cooling. Its excess temperature above the surroundings falls from 40 K to 20 K in 5 minutes. What will its excess temperature be after another 5 minutes?",
+                jeeOptions: [
+                    "5 K",
+                    "10 K",
+                    "15 K",
+                    "20 K"
+                ],
+                jeeAnswer: 1,
+                jeeExplanation:
+                    "The excess temperature follows exponential decay. It halves every 5 minutes, so the next value is 10 K.",
+                checkQuestion:
+                    "Under Newton's law of cooling, what happens to the magnitude of the cooling rate as the body's temperature approaches the surroundings' temperature?",
+                checkOptions: [
+                    { text: "It increases indefinitely", correct: false },
+                    { text: "It remains constant", correct: false },
+                    { text: "It decreases toward zero", correct: true },
+                    { text: "It reverses every minute", correct: false }
+                ],
+                correctFeedback:
+                    "Correct. The cooling rate decreases as the temperature difference shrinks.",
+                incorrectFeedback:
+                    "The magnitude of the cooling rate is proportional to the excess temperature."
+            }
+
         ]
 
     }
 
 };
+
+
 
