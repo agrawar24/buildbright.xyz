@@ -1761,8 +1761,872 @@ const jeePhysicsQuestions = {
                     "Energy conservation gives Mgh = ½Mv² + ½(½MR²)(v²/R²) = ¾Mv². Thus v² = 4gh/3 = 4 × 10 × 3/3 = 40, so v = √40 m/s."
             }
 
+
+        ]
+
+    },
+
+    "Gravitation": {
+
+        /* ==========================================
+           PRACTICE — 10 QUESTIONS
+           ========================================== */
+
+        practice: [
+
+            {
+                id: "grav-p-001",
+                topic: "Newton's Law of Gravitation",
+                difficulty: "Foundation",
+
+                question:
+                    "The gravitational force between two point masses is F. If one mass is doubled and the separation between them is also doubled, what is the new force?",
+
+                options: [
+                    "F/4",
+                    "F/2",
+                    "F",
+                    "2F"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "F = Gm₁m₂/r². Doubling one mass multiplies the force by 2, while doubling the separation divides it by 4. Therefore F' = 2F/4 = F/2."
+            },
+
+            {
+                id: "grav-p-002",
+                topic: "Gravitational Field",
+                difficulty: "Foundation",
+
+                question:
+                    "The gravitational acceleration at Earth's surface is g. What is its value at a height equal to Earth's radius above the surface?",
+
+                options: [
+                    "g/2",
+                    "g/4",
+                    "g/8",
+                    "g/16"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "At height h = R, the distance from Earth's centre is 2R. Thus g' = GM/(2R)² = g/4."
+            },
+
+            {
+                id: "grav-p-003",
+                topic: "Gravitational Potential",
+                difficulty: "Foundation",
+
+                question:
+                    "The gravitational potential at a point is −40 J/kg. What is the potential energy of a 5 kg mass placed there?",
+
+                options: [
+                    "−200 J",
+                    "−40 J",
+                    "40 J",
+                    "200 J"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "Potential energy U = mV = 5 × (−40) = −200 J."
+            },
+
+            {
+                id: "grav-p-004",
+                topic: "Escape Velocity",
+                difficulty: "Foundation",
+
+                question:
+                    "At a certain distance from a planet, the circular orbital speed is 5 km/s. What is the escape speed from that distance?",
+
+                options: [
+                    "5/√2 km/s",
+                    "5 km/s",
+                    "5√2 km/s",
+                    "10 km/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Escape speed vₑ = √2vₒ = 5√2 km/s, approximately 7.07 km/s."
+            },
+
+            {
+                id: "grav-p-005",
+                topic: "Kepler's Third Law",
+                difficulty: "Medium",
+
+                question:
+                    "Two satellites move in circular orbits around the same planet. If the second satellite's orbital radius is four times the first, what is the ratio T₂/T₁?",
+
+                options: [
+                    "2",
+                    "4",
+                    "8",
+                    "16"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Kepler's third law gives T ∝ r^(3/2). Therefore T₂/T₁ = 4^(3/2) = 8."
+            },
+
+            {
+                id: "grav-p-006",
+                topic: "Gravity Inside a Planet",
+                difficulty: "Medium",
+
+                question:
+                    "Assume Earth is a sphere of uniform density and surface gravitational acceleration is g. What is the gravitational acceleration at a depth R/2 below its surface?",
+
+                options: [
+                    "0",
+                    "g/4",
+                    "g/2",
+                    "g"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "For a uniform-density sphere, g(d) = g(1 − d/R). At d = R/2, g(d) = g/2."
+            },
+
+            {
+                id: "grav-p-007",
+                topic: "Gravitational Potential Energy",
+                difficulty: "Medium",
+
+                question:
+                    "Two point masses have gravitational potential energy U = −100 J when separated by distance r. What is their potential energy when the separation becomes 2r?",
+
+                options: [
+                    "−200 J",
+                    "−100 J",
+                    "−50 J",
+                    "50 J"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "U = −Gm₁m₂/r. Doubling r halves the magnitude, so U' = −50 J."
+            },
+
+            {
+                id: "grav-p-008",
+                topic: "Orbital Speed",
+                difficulty: "Medium",
+
+                question:
+                    "A satellite moves in a circular orbit of radius r at speed v. If it is transferred to a circular orbit of radius 4r around the same planet, what is its new orbital speed?",
+
+                options: [
+                    "v/4",
+                    "v/2",
+                    "2v",
+                    "4v"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Circular orbital speed v = √(GM/r), so v ∝ 1/√r. Increasing the radius to 4r reduces the speed to v/2."
+            },
+
+            {
+                id: "grav-p-009",
+                topic: "Gravitational Potential Difference",
+                difficulty: "Advanced",
+
+                question:
+                    "A particle of mass m is moved slowly from distance R to distance 2R from the centre of a planet of mass M. What is the change in gravitational potential energy?",
+
+                options: [
+                    "−GMm/(2R)",
+                    "GMm/(2R)",
+                    "GMm/R",
+                    "2GMm/R"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "ΔU = Ufinal − Uinitial = −GMm/(2R) − [−GMm/R] = +GMm/(2R)."
+            },
+
+            {
+                id: "grav-p-010",
+                topic: "Circular Orbital Energy",
+                difficulty: "Advanced",
+
+                question:
+                    "A satellite of mass m moves in a circular orbit of radius r around a planet of mass M. What is its total mechanical energy?",
+
+                options: [
+                    "−GMm/r",
+                    "−GMm/(2r)",
+                    "GMm/(2r)",
+                    "GMm/r"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "For a circular orbit, K = GMm/(2r) and U = −GMm/r. Therefore E = K + U = −GMm/(2r)."
+            }
+
+        ],
+
+        /* ==========================================
+           TIMED CHAPTER TEST — 10 QUESTIONS
+           ========================================== */
+
+        test: [
+
+            {
+                id: "grav-t-001",
+                topic: "Newton's Law of Gravitation",
+
+                question:
+                    "Two point masses m and 2m are separated by distance r. The force between them is F. If both masses are doubled and their separation becomes 2r, what is the new force?",
+
+                options: [
+                    "F/2",
+                    "F",
+                    "2F",
+                    "4F"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Doubling both masses multiplies the force by 4. Doubling separation divides it by 4. Thus F' = F."
+            },
+
+            {
+                id: "grav-t-002",
+                topic: "Gravitational Field Superposition",
+
+                question:
+                    "Two identical point masses M are fixed at x = −a and x = +a. What is the net gravitational field at the origin?",
+
+                options: [
+                    "Zero",
+                    "GM/a² toward +x",
+                    "GM/a² toward −x",
+                    "2GM/a² toward +x"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "Each mass produces a field of magnitude GM/a² at the origin. The fields point in opposite directions and cancel."
+            },
+
+            {
+                id: "grav-t-003",
+                topic: "Gravitational Potential",
+
+                question:
+                    "Two identical point masses M are fixed at x = −a and x = +a. What is the gravitational potential at the origin, taking zero potential at infinity?",
+
+                options: [
+                    "0",
+                    "−GM/a",
+                    "−2GM/a",
+                    "2GM/a"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Gravitational potential is a scalar. Each mass contributes −GM/a, so the total is −2GM/a. Unlike the fields, the potentials do not cancel."
+            },
+
+            {
+                id: "grav-t-004",
+                topic: "Gravitational Acceleration",
+
+                question:
+                    "A planet has the same average density as Earth but twice Earth's radius. Neglect rotation. What is the ratio of its surface gravitational acceleration to Earth's?",
+
+                options: [
+                    "1/2",
+                    "1",
+                    "2",
+                    "4"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "For equal density, M ∝ R³. Since g = GM/R², surface gravity is proportional to R. Doubling radius doubles g."
+            },
+
+            {
+                id: "grav-t-005",
+                topic: "Escape Velocity",
+
+                question:
+                    "A planet has four times Earth's mass and twice Earth's radius. What is its surface escape speed compared with Earth's?",
+
+                options: [
+                    "The same",
+                    "√2 times",
+                    "2 times",
+                    "4 times"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Escape speed vₑ = √(2GM/R). The ratio is √[(4M/2R)/(M/R)] = √2."
+            },
+
+            {
+                id: "grav-t-006",
+                topic: "Kepler's Third Law",
+
+                question:
+                    "Two planets orbit the same star. Their orbital semi-major axes are in the ratio 1:9. What is the ratio of their orbital periods?",
+
+                options: [
+                    "1:3",
+                    "1:9",
+                    "1:27",
+                    "1:81"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Kepler's third law gives T ∝ a^(3/2). Therefore T₁:T₂ = 1^(3/2):9^(3/2) = 1:27."
+            },
+
+            {
+                id: "grav-t-007",
+                topic: "Orbital Energy",
+
+                question:
+                    "A satellite of mass m is in a circular orbit of radius r around a planet of mass M. How much external work must be supplied to move it into a circular orbit of radius 2r, assuming the satellite begins and ends in the specified circular orbits?",
+
+                options: [
+                    "GMm/(8r)",
+                    "GMm/(4r)",
+                    "GMm/(2r)",
+                    "GMm/r"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Initial total energy E₁ = −GMm/(2r). Final total energy E₂ = −GMm/(4r). Required external work is ΔE = E₂ − E₁ = GMm/(4r)."
+            },
+
+            {
+                id: "grav-t-008",
+                topic: "Gravitational Potential Energy",
+
+                question:
+                    "A mass m is released from rest at distance 2R from the centre of a spherical planet of mass M and radius R. Neglect air resistance. What is its speed when it reaches the surface?",
+
+                options: [
+                    "√(GM/(2R))",
+                    "√(GM/R)",
+                    "√(2GM/R)",
+                    "2√(GM/R)"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Energy conservation gives −GMm/(2R) = ½mv² − GMm/R. Thus ½mv² = GMm/(2R), so v² = GM/R."
+            },
+
+            {
+                id: "grav-t-009",
+                topic: "Circular Orbital Motion",
+
+                question:
+                    "A satellite moves in a circular orbit of radius r around a planet. If the orbital radius becomes 9r, what happens to its orbital speed and period?",
+
+                options: [
+                    "Speed becomes v/3; period becomes 27T",
+                    "Speed becomes v/9; period becomes 9T",
+                    "Speed becomes 3v; period becomes T/27",
+                    "Speed becomes v/3; period becomes 9T"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "Orbital speed v ∝ r^(−1/2), so v' = v/3. Orbital period T ∝ r^(3/2), so T' = 9^(3/2)T = 27T."
+            },
+
+            {
+                id: "grav-t-010",
+                topic: "Combined Gravitation Concepts",
+
+                question:
+                    "A satellite of mass 200 kg moves in a circular orbit of radius 2 × 10⁷ m around Earth. If GM = 4 × 10¹⁴ m³/s², what is its total mechanical energy?",
+
+                options: [
+                    "−4 × 10⁹ J",
+                    "−2 × 10⁹ J",
+                    "−1 × 10⁹ J",
+                    "+2 × 10⁹ J"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "E = −GMm/(2r) = −[(4 × 10¹⁴)(200)]/[2(2 × 10⁷)] = −2 × 10⁹ J."
+            }
+
+
+        ]
+
+    },
+
+    "Units and Measurements": {
+
+        /* ==========================================
+           PRACTICE — 10 QUESTIONS
+           ========================================== */
+
+        practice: [
+
+            {
+                id: "units-p-001",
+                topic: "SI Units",
+                difficulty: "Foundation",
+
+                question:
+                    "Which of the following is an SI base unit?",
+
+                options: [
+                    "Newton",
+                    "Joule",
+                    "Kelvin",
+                    "Pascal"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Kelvin is the SI base unit of thermodynamic temperature. Newton, joule and pascal are derived units."
+            },
+
+            {
+                id: "units-p-002",
+                topic: "Derived Units",
+                difficulty: "Foundation",
+
+                question:
+                    "Which expression represents the SI unit of force in base units?",
+
+                options: [
+                    "kg·m/s",
+                    "kg·m/s²",
+                    "kg·m²/s²",
+                    "kg·m²/s³"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "From F = ma, the SI unit of force is kg·m/s²."
+            },
+
+            {
+                id: "units-p-003",
+                topic: "Dimensional Formula",
+                difficulty: "Foundation",
+
+                question:
+                    "What is the dimensional formula of pressure?",
+
+                options: [
+                    "MLT⁻²",
+                    "ML²T⁻²",
+                    "ML⁻¹T⁻²",
+                    "M⁻¹LT⁻²"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Pressure = force/area. Therefore [P] = [MLT⁻²]/[L²] = ML⁻¹T⁻²."
+            },
+
+            {
+                id: "units-p-004",
+                topic: "Unit Conversion",
+                difficulty: "Foundation",
+
+                question:
+                    "Convert 90 km/h into m/s.",
+
+                options: [
+                    "15 m/s",
+                    "20 m/s",
+                    "25 m/s",
+                    "30 m/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Multiply by 5/18: 90 × 5/18 = 25 m/s."
+            },
+
+            {
+                id: "units-p-005",
+                topic: "Significant Figures",
+                difficulty: "Foundation",
+
+                question:
+                    "How many significant figures are present in 0.005060?",
+
+                options: [
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "The significant digits are 5, 0, 6 and the final 0. Leading zeros are not significant. Therefore there are four significant figures."
+            },
+
+            {
+                id: "units-p-006",
+                topic: "Dimensional Analysis",
+                difficulty: "Medium",
+
+                question:
+                    "A physical quantity has dimensions [ML²T⁻²]. Which quantity could it represent?",
+
+                options: [
+                    "Force",
+                    "Momentum",
+                    "Energy",
+                    "Power"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Energy = force × displacement, so [E] = [MLT⁻²][L] = ML²T⁻²."
+            },
+
+            {
+                id: "units-p-007",
+                topic: "Measurement Errors",
+                difficulty: "Medium",
+
+                question:
+                    "The radius of a sphere has a maximum percentage uncertainty of 2%. What is the approximate maximum percentage uncertainty in its volume?",
+
+                options: [
+                    "2%",
+                    "4%",
+                    "6%",
+                    "8%"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Volume is proportional to r³. Therefore maximum percentage uncertainty ≈ 3 × 2% = 6%."
+            },
+
+            {
+                id: "units-p-008",
+                topic: "Significant Figures",
+                difficulty: "Medium",
+
+                question:
+                    "Calculate 3.24 × 2.1 and report the result to the appropriate number of significant figures.",
+
+                options: [
+                    "6.804",
+                    "6.80",
+                    "6.8",
+                    "7"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "3.24 × 2.1 = 6.804. The least precise input has two significant figures, so the result is 6.8."
+            },
+
+            {
+                id: "units-p-009",
+                topic: "Dimensional Applications",
+                difficulty: "Advanced",
+
+                question:
+                    "The period T of a simple pendulum is assumed to depend only on its length l and gravitational acceleration g. Which relationship is dimensionally consistent?",
+
+                options: [
+                    "T ∝ l/g",
+                    "T ∝ √(l/g)",
+                    "T ∝ √(g/l)",
+                    "T ∝ lg"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "[l/g] = L/(LT⁻²) = T². Therefore √(l/g) has dimensions of time."
+            },
+
+            {
+                id: "units-p-010",
+                topic: "Error Propagation",
+                difficulty: "Advanced",
+
+                question:
+                    "A quantity Q is calculated using Q = a²b³. If a and b have maximum percentage uncertainties of 1% and 2%, respectively, what is the approximate maximum percentage uncertainty in Q?",
+
+                options: [
+                    "3%",
+                    "5%",
+                    "8%",
+                    "10%"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Maximum percentage uncertainty ≈ 2(1%) + 3(2%) = 8%."
+            }
+
+        ],
+
+        /* ==========================================
+           TIMED CHAPTER TEST — 10 QUESTIONS
+           ========================================== */
+
+        test: [
+
+            {
+                id: "units-t-001",
+                topic: "Dimensional Formula",
+
+                question:
+                    "What is the dimensional formula of the gravitational constant G?",
+
+                options: [
+                    "ML³T⁻²",
+                    "M⁻¹L³T⁻²",
+                    "M⁻¹L²T⁻²",
+                    "ML⁻³T²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "From F = Gm₁m₂/r², G = Fr²/(m₁m₂). Therefore [G] = [MLT⁻²][L²]/[M²] = M⁻¹L³T⁻²."
+            },
+
+            {
+                id: "units-t-002",
+                topic: "Dimensional Homogeneity",
+
+                question:
+                    "Which of the following equations is dimensionally incorrect? Here u and v are velocities, a is acceleration, s is displacement and t is time.",
+
+                options: [
+                    "v = u + at",
+                    "v² = u² + 2as",
+                    "s = ut + ½at²",
+                    "v = u + at²"
+                ],
+
+                answer: 3,
+
+                explanation:
+                    "In v = u + at², the term at² has dimensions of length, while u and v have dimensions of velocity. Therefore the equation is dimensionally inconsistent."
+            },
+
+            {
+                id: "units-t-003",
+                topic: "Dimensional Analysis",
+
+                question:
+                    "The speed v of a wave on a stretched string depends on tension F and linear mass density μ. Which expression has the dimensions of speed?",
+
+                options: [
+                    "√(Fμ)",
+                    "√(F/μ)",
+                    "F/μ",
+                    "μ/F"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "[F] = MLT⁻² and [μ] = ML⁻¹. Thus [F/μ] = L²T⁻², and √(F/μ) has dimensions LT⁻¹."
+            },
+
+            {
+                id: "units-t-004",
+                topic: "Significant Figures",
+
+                question:
+                    "How many significant figures are present in 0.02030?",
+
+                options: [
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "The significant digits are 2, 0, 3 and the final 0. Thus 0.02030 has four significant figures."
+            },
+
+            {
+                id: "units-t-005",
+                topic: "Measurement Uncertainty",
+
+                question:
+                    "A measured length is (25.0 ± 0.5) cm. What is its percentage uncertainty?",
+
+                options: [
+                    "0.5%",
+                    "1%",
+                    "2%",
+                    "5%"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Percentage uncertainty = (0.5/25.0) × 100 = 2%."
+            },
+
+            {
+                id: "units-t-006",
+                topic: "Error Propagation",
+
+                question:
+                    "A rectangle has length (20.0 ± 0.2) cm and width (10.0 ± 0.1) cm. What is the approximate maximum absolute uncertainty in its calculated area?",
+
+                options: [
+                    "±1 cm²",
+                    "±2 cm²",
+                    "±4 cm²",
+                    "±8 cm²"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Area = 200 cm². Maximum fractional uncertainty ≈ 0.2/20 + 0.1/10 = 0.02. Thus ΔA ≈ 0.02 × 200 = 4 cm²."
+            },
+
+            {
+                id: "units-t-007",
+                topic: "Dimensions of Power",
+
+                question:
+                    "What is the dimensional formula of power?",
+
+                options: [
+                    "ML²T⁻²",
+                    "ML²T⁻³",
+                    "MLT⁻²",
+                    "ML⁻¹T⁻²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Power = energy/time. Since energy has dimensions ML²T⁻², power has dimensions ML²T⁻³."
+            },
+
+            {
+                id: "units-t-008",
+                topic: "Dimensional Constants",
+
+                question:
+                    "The equation F = kv² describes a resistive force F acting on an object moving at speed v. What are the dimensions of k?",
+
+                options: [
+                    "ML⁻¹",
+                    "ML",
+                    "MT⁻¹",
+                    "ML⁻¹T⁻²"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "k = F/v². Therefore [k] = [MLT⁻²]/[L²T⁻²] = ML⁻¹."
+            },
+
+            {
+                id: "units-t-009",
+                topic: "Significant Figures in Calculations",
+
+                question:
+                    "Two measured lengths are 12.35 cm and 2.1 cm. What is their sum reported using the correct decimal-place rule?",
+
+                options: [
+                    "14.45 cm",
+                    "14.5 cm",
+                    "14 cm",
+                    "14.450 cm"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "12.35 + 2.1 = 14.45 cm. In addition, round to the least precise decimal place, which is tenths. Therefore the answer is 14.5 cm."
+            },
+
+            {
+                id: "units-t-010",
+                topic: "Combined Error Propagation",
+
+                question:
+                    "A physical quantity Q is given by Q = A²B/C³. The maximum percentage uncertainties in A, B and C are 1%, 2% and 1%, respectively. What is the approximate maximum percentage uncertainty in Q?",
+
+                options: [
+                    "4%",
+                    "5%",
+                    "7%",
+                    "9%"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Maximum percentage uncertainty ≈ 2(1%) + 1(2%) + 3(1%) = 7%."
+            }
+
         ]
 
     }
 
 };
+
+

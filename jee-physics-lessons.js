@@ -2715,6 +2715,1027 @@ const jeePhysicsLessons = {
                     "Remember that pure rolling connects centre-of-mass speed and angular speed."
             }
 
+
+        ]
+
+    },
+
+    "Gravitation": {
+
+        description:
+            "Explore gravitational forces, fields, potential energy, planetary motion, satellites and escape velocity.",
+
+        lessons: [
+
+            // LESSON 1
+            {
+                title: "Newton's Law of Universal Gravitation",
+
+                description:
+                    "Understand gravitational attraction between masses and apply Newton's inverse-square law.",
+
+                intro:
+                    "Every object with mass attracts every other object with mass. Newton's universal law of gravitation describes this interaction.",
+
+                conceptTitle:
+                    "Gravitational force depends on both masses and their separation.",
+
+                conceptText:
+                    "For two point masses, the gravitational force is proportional to the product of their masses and inversely proportional to the square of the distance between them.",
+
+                body:
+                    "Newton's law of universal gravitation applies to point masses and to spherically symmetric bodies when their centre-to-centre separation is used and they do not overlap. The force is always attractive and acts along the line joining the centres. The gravitational constant G is approximately 6.67 × 10⁻¹¹ N·m²/kg². If separation doubles, the force becomes one-fourth as large.",
+
+                keyIdeas: [
+                    {
+                        label: "GRAVITATIONAL FORCE",
+                        formula: "F = Gm₁m₂/r²",
+                        text:
+                            "Magnitude of the attractive force between two point masses."
+                    },
+                    {
+                        label: "INVERSE-SQUARE LAW",
+                        formula: "F ∝ 1/r²",
+                        text:
+                            "Doubling the separation reduces the force to one-fourth."
+                    },
+                    {
+                        label: "GRAVITATIONAL CONSTANT",
+                        formula: "G ≈ 6.67 × 10⁻¹¹ N·m²/kg²",
+                        text:
+                            "Universal constant in Newton's gravitational law."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "Two point masses of 10 kg and 20 kg are separated by 2 m. Find the magnitude of their gravitational attraction. Take G = 6.67 × 10⁻¹¹ N·m²/kg².",
+
+                    steps: [
+                        "Use F = Gm₁m₂/r².",
+                        "Substitute F = 6.67 × 10⁻¹¹ × 10 × 20 / 2².",
+                        "F = 6.67 × 10⁻¹¹ × 50.",
+                        "F = 3.335 × 10⁻⁹ N."
+                    ]
+                },
+
+                jeeQuestion:
+                    "If the distance between two point masses is tripled without changing their masses, the gravitational force becomes:",
+
+                jeeOptions: [
+                    "One-third of the original",
+                    "One-sixth of the original",
+                    "One-ninth of the original",
+                    "Nine times the original"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "Because F ∝ 1/r², tripling r makes the force 1/9 of its original value.",
+
+                checkQuestion:
+                    "Which statement correctly describes Newtonian gravitational force?",
+
+                checkOptions: [
+                    {
+                        text: "It is always repulsive.",
+                        correct: false
+                    },
+                    {
+                        text: "It acts along the line joining the masses.",
+                        correct: true
+                    },
+                    {
+                        text: "It does not depend on distance.",
+                        correct: false
+                    },
+                    {
+                        text: "It acts only on planets.",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Gravitational attraction acts along the line joining the masses.",
+
+                incorrectFeedback:
+                    "Gravity is attractive and follows the inverse-square law."
+            },
+
+            // LESSON 2
+            {
+                title: "Gravitational Field and Acceleration Due to Gravity",
+
+                description:
+                    "Calculate gravitational field strength and understand how gravity changes with altitude and depth.",
+
+                intro:
+                    "A massive body creates a gravitational field around it. Another mass placed in that field experiences a gravitational force.",
+
+                conceptTitle:
+                    "Gravitational field strength is force per unit mass.",
+
+                conceptText:
+                    "Outside a spherically symmetric body, gravitational field magnitude equals GM/r² and points toward the body's centre.",
+
+                body:
+                    "Near Earth's surface, gravitational field strength is approximately 9.8 N/kg, numerically equal to free-fall acceleration in m/s². Above Earth's surface, gravity decreases with increasing distance from Earth's centre. Inside a uniform-density spherical planet, gravitational field strength decreases linearly with distance from the centre; this depth relation is a model approximation, not an exact description of Earth.",
+
+                keyIdeas: [
+                    {
+                        label: "GRAVITATIONAL FIELD",
+                        formula: "g = GM/r²",
+                        text:
+                            "Field magnitude outside a spherical body of mass M."
+                    },
+                    {
+                        label: "AT ALTITUDE h",
+                        formula: "gₕ = g₀[R/(R + h)]²",
+                        text:
+                            "Gravity at height h above a planet of radius R."
+                    },
+                    {
+                        label: "AT DEPTH d",
+                        formula: "g𝒅 = g₀(1 − d/R)",
+                        text:
+                            "Approximation for a uniform-density spherical planet."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A satellite is located at a height equal to Earth's radius above the surface. What is the gravitational acceleration there in terms of surface gravity g₀?",
+
+                    steps: [
+                        "The satellite's distance from Earth's centre is R + h.",
+                        "Here h = R, so r = 2R.",
+                        "Use gₕ = g₀[R/(R + h)]².",
+                        "gₕ = g₀(R/2R)² = g₀/4."
+                    ]
+                },
+
+                jeeQuestion:
+                    "At a height equal to Earth's radius above the surface, gravitational acceleration is approximately:",
+
+                jeeOptions: [
+                    "g",
+                    "g/2",
+                    "g/4",
+                    "g/8"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "At height R, distance from Earth's centre is 2R. Therefore g' = GM/(2R)² = g/4.",
+
+                checkQuestion:
+                    "What is the direction of the gravitational field due to an isolated spherical planet?",
+
+                checkOptions: [
+                    {
+                        text: "Radially outward",
+                        correct: false
+                    },
+                    {
+                        text: "Tangential to the surface",
+                        correct: false
+                    },
+                    {
+                        text: "Toward the planet's centre",
+                        correct: true
+                    },
+                    {
+                        text: "Always vertically upward",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. The gravitational field points toward the attracting mass.",
+
+                incorrectFeedback:
+                    "Gravity is attractive, so the field points toward the planet."
+            },
+
+            // LESSON 3
+            {
+                title: "Gravitational Potential and Potential Energy",
+
+                description:
+                    "Distinguish gravitational potential from potential energy and calculate work in gravitational fields.",
+
+                intro:
+                    "Gravitational potential describes energy per unit mass, while gravitational potential energy describes the energy of an interacting system.",
+
+                conceptTitle:
+                    "Gravitational potential is negative when zero is chosen at infinity.",
+
+                conceptText:
+                    "For a point mass M, gravitational potential at distance r is −GM/r. The potential energy of another mass m is −GMm/r.",
+
+                body:
+                    "Gravitational potential is a scalar quantity measured in J/kg. Potential energy is measured in joules. With zero potential at infinity, both are negative for attractive gravitational interactions. The work done by gravity equals the negative change in gravitational potential energy. Near Earth's surface, changes in potential energy can be approximated using mgh when height changes are small compared with Earth's radius.",
+
+                keyIdeas: [
+                    {
+                        label: "GRAVITATIONAL POTENTIAL",
+                        formula: "V = −GM/r",
+                        text:
+                            "Potential per unit mass outside a spherical body, taking V = 0 at infinity."
+                    },
+                    {
+                        label: "POTENTIAL ENERGY",
+                        formula: "U = −GMm/r",
+                        text:
+                            "Potential energy of two point masses with zero at infinite separation."
+                    },
+                    {
+                        label: "WORK BY GRAVITY",
+                        formula: "W = −ΔU",
+                        text:
+                            "Gravitational work is the negative change in potential energy."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A 2 kg mass is placed at a location where gravitational potential is −30 J/kg. Find its gravitational potential energy.",
+
+                    steps: [
+                        "Use U = mV.",
+                        "Substitute m = 2 kg and V = −30 J/kg.",
+                        "U = 2 × (−30).",
+                        "U = −60 J."
+                    ]
+                },
+
+                jeeQuestion:
+                    "The gravitational potential at a point is −50 J/kg. What is the potential energy of a 3 kg mass placed there?",
+
+                jeeOptions: [
+                    "−150 J",
+                    "−50 J",
+                    "50 J",
+                    "150 J"
+                ],
+
+                jeeAnswer: 0,
+
+                jeeExplanation:
+                    "U = mV = 3 × (−50) = −150 J.",
+
+                checkQuestion:
+                    "What is the SI unit of gravitational potential?",
+
+                checkOptions: [
+                    {
+                        text: "Joule",
+                        correct: false
+                    },
+                    {
+                        text: "Joule per kilogram",
+                        correct: true
+                    },
+                    {
+                        text: "Newton-meter squared",
+                        correct: false
+                    },
+                    {
+                        text: "Kilogram per joule",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Gravitational potential is energy per unit mass.",
+
+                incorrectFeedback:
+                    "Potential V = U/m, so its unit is J/kg."
+            },
+
+            // LESSON 4
+            {
+                title: "Escape Velocity and Orbital Velocity",
+
+                description:
+                    "Derive the speeds required for circular orbit and escape from a planet.",
+
+                intro:
+                    "A satellite can orbit a planet because gravity continuously changes the direction of its velocity. Escape requires sufficient energy to reach infinity without returning.",
+
+                conceptTitle:
+                    "Orbital speed and escape speed follow from Newtonian mechanics.",
+
+                conceptText:
+                    "For a circular orbit of radius r, orbital speed is √(GM/r). The minimum escape speed from radius r is √(2GM/r), neglecting drag and propulsion after launch.",
+
+                body:
+                    "For a circular orbit, gravity supplies the required centripetal force. Escape speed follows from conservation of mechanical energy by setting total energy equal to zero at infinity. Escape speed is √2 times the circular orbital speed at the same radius. These ideal formulas assume a spherical central body and neglect atmospheric drag and other gravitational influences.",
+
+                keyIdeas: [
+                    {
+                        label: "CIRCULAR ORBITAL SPEED",
+                        formula: "vₒ = √(GM/r)",
+                        text:
+                            "Speed required for a circular orbit of radius r."
+                    },
+                    {
+                        label: "ESCAPE SPEED",
+                        formula: "vₑ = √(2GM/r)",
+                        text:
+                            "Minimum speed to reach infinity with zero final speed."
+                    },
+                    {
+                        label: "SPEED RELATION",
+                        formula: "vₑ = √2 vₒ",
+                        text:
+                            "Escape speed is √2 times circular orbital speed at the same radius."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "At a certain distance from a planet, the circular orbital speed is 6 km/s. What is the escape speed from that distance?",
+
+                    steps: [
+                        "Use vₑ = √2 vₒ.",
+                        "Substitute vₒ = 6 km/s.",
+                        "vₑ = 6√2 km/s.",
+                        "vₑ ≈ 8.49 km/s."
+                    ]
+                },
+
+                jeeQuestion:
+                    "If the circular orbital speed at a certain radius is v, the escape speed from that radius is:",
+
+                jeeOptions: [
+                    "v/√2",
+                    "v",
+                    "√2v",
+                    "2v"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "vₑ = √(2GM/r) and vₒ = √(GM/r), so vₑ = √2vₒ.",
+
+                checkQuestion:
+                    "Which statement is correct for a circular satellite orbit?",
+
+                checkOptions: [
+                    {
+                        text: "Gravity supplies the centripetal force.",
+                        correct: true
+                    },
+                    {
+                        text: "No force acts on the satellite.",
+                        correct: false
+                    },
+                    {
+                        text: "The satellite moves in a straight line.",
+                        correct: false
+                    },
+                    {
+                        text: "Its speed must equal escape speed.",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Gravity provides the centripetal acceleration.",
+
+                incorrectFeedback:
+                    "A circular orbit requires centripetal acceleration supplied by gravity."
+            },
+
+            // LESSON 5
+            {
+                title: "Satellites and Kepler's Laws",
+
+                description:
+                    "Understand orbital periods, satellite motion and Kepler's three laws.",
+
+                intro:
+                    "Kepler described planetary motion using three laws. Newton later explained these patterns through gravitational attraction.",
+
+                conceptTitle:
+                    "Orbital period depends on orbital size and central mass.",
+
+                conceptText:
+                    "For a circular orbit around mass M, the orbital period is 2π√(r³/GM). Kepler's third law generalizes this relationship to elliptical orbits using the semi-major axis.",
+
+                body:
+                    "Kepler's first law states that planets move in ellipses with the Sun at one focus. The second law states that the line joining a planet and the Sun sweeps out equal areas in equal times. The third law states that orbital period squared is proportional to the cube of the semi-major axis for bodies orbiting the same dominant central mass. A geostationary satellite has an approximately circular equatorial orbit with the same angular velocity and direction as Earth's rotation.",
+
+                keyIdeas: [
+                    {
+                        label: "KEPLER'S FIRST LAW",
+                        formula: "Orbit = ellipse",
+                        text:
+                            "The central attracting body lies at one focus of an ideal two-body elliptical orbit."
+                    },
+                    {
+                        label: "KEPLER'S SECOND LAW",
+                        formula: "dA/dt = constant",
+                        text:
+                            "Equal areas are swept out in equal time intervals."
+                    },
+                    {
+                        label: "KEPLER'S THIRD LAW",
+                        formula: "T² ∝ a³",
+                        text:
+                            "For a fixed central mass, orbital period squared scales with the cube of semi-major axis."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "Two satellites orbit the same planet in circular orbits. The second satellite's orbital radius is four times that of the first. Find the ratio of their orbital periods.",
+
+                    steps: [
+                        "Use Kepler's third law: T² ∝ r³ for circular orbits.",
+                        "Therefore T ∝ r^(3/2).",
+                        "T₂/T₁ = (r₂/r₁)^(3/2).",
+                        "T₂/T₁ = 4^(3/2) = 8.",
+                        "The second satellite's period is eight times the first."
+                    ]
+                },
+
+                jeeQuestion:
+                    "If the radius of a circular orbit around the same planet doubles, the orbital period becomes:",
+
+                jeeOptions: [
+                    "√2 times",
+                    "2 times",
+                    "2√2 times",
+                    "4 times"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "T ∝ r^(3/2), so doubling r gives T'/T = 2^(3/2) = 2√2.",
+
+                checkQuestion:
+                    "Which statement is Kepler's second law?",
+
+                checkOptions: [
+                    {
+                        text: "All orbits must be circular.",
+                        correct: false
+                    },
+                    {
+                        text: "Equal areas are swept out in equal times.",
+                        correct: true
+                    },
+                    {
+                        text: "All planets have the same orbital period.",
+                        correct: false
+                    },
+                    {
+                        text: "Orbital speed is always constant in an ellipse.",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Kepler's second law expresses conservation of angular momentum.",
+
+                incorrectFeedback:
+                    "Kepler's second law is the equal-areas-in-equal-times law."
+            },
+
+            // LESSON 6
+            {
+                title: "Gravitation Review",
+
+                description:
+                    "Combine gravitational force, fields, energy, orbital motion and Kepler's laws.",
+
+                intro:
+                    "Gravitation questions often connect several concepts. Identify whether the problem concerns force, field, energy or orbital motion before selecting an equation.",
+
+                conceptTitle:
+                    "Choose the gravitational model that matches the physical situation.",
+
+                conceptText:
+                    "Use the inverse-square law for forces and fields, energy conservation for escape, and centripetal motion for circular orbits.",
+
+                body:
+                    "Remember that orbital radius is measured from the centre of the planet, not from its surface. Use consistent SI units and distinguish gravitational potential from potential energy. For circular orbits, orbital speed decreases as radius increases, while orbital period increases. For escape, total mechanical energy must be at least zero in the ideal two-body model.",
+
+                keyIdeas: [
+                    {
+                        label: "GRAVITATIONAL FORCE",
+                        formula: "F = GMm/r²",
+                        text:
+                            "Force between a spherical central mass and an external point mass."
+                    },
+                    {
+                        label: "TOTAL ORBITAL ENERGY",
+                        formula: "E = −GMm/(2r)",
+                        text:
+                            "Total mechanical energy of a circular orbit."
+                    },
+                    {
+                        label: "ORBITAL PERIOD",
+                        formula: "T = 2π√(r³/GM)",
+                        text:
+                            "Period of a circular orbit around central mass M."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A satellite of mass 100 kg moves in a circular orbit of radius 2 × 10⁷ m around Earth. Take GM = 4 × 10¹⁴ m³/s². Find its orbital speed and total mechanical energy.",
+
+                    steps: [
+                        "Orbital speed is v = √(GM/r).",
+                        "v = √[(4 × 10¹⁴)/(2 × 10⁷)] = √(2 × 10⁷).",
+                        "v ≈ 4.47 × 10³ m/s.",
+                        "Total orbital energy E = −GMm/(2r).",
+                        "E = −[(4 × 10¹⁴) × 100]/[2 × (2 × 10⁷)].",
+                        "E = −1 × 10⁹ J."
+                    ]
+                },
+
+                jeeQuestion:
+                    "A satellite moves in a circular orbit. If its orbital radius increases while the central mass stays the same, which statement is correct?",
+
+                jeeOptions: [
+                    "Its orbital speed increases.",
+                    "Its orbital period decreases.",
+                    "Its orbital speed decreases and period increases.",
+                    "Its orbital speed and period both decrease."
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "v ∝ r^(−1/2), so orbital speed decreases with radius. T ∝ r^(3/2), so period increases.",
+
+                checkQuestion:
+                    "What is the total mechanical energy of a satellite in a bound circular gravitational orbit, taking potential energy as zero at infinity?",
+
+                checkOptions: [
+                    {
+                        text: "Positive",
+                        correct: false
+                    },
+                    {
+                        text: "Zero",
+                        correct: false
+                    },
+                    {
+                        text: "Negative",
+                        correct: true
+                    },
+                    {
+                        text: "Always equal to its kinetic energy",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. A bound circular orbit has negative total mechanical energy.",
+
+                incorrectFeedback:
+                    "For a circular orbit, E = −GMm/(2r), which is negative."
+            }
+
+
+        ]
+
+    },
+
+    "Units and Measurements": {
+
+        description:
+            "Master SI units, dimensional analysis, measurement errors, significant figures and experimental precision.",
+
+        lessons: [
+
+            // LESSON 1
+            {
+                title: "Physical Quantities and SI Units",
+                description:
+                    "Understand fundamental quantities, derived quantities and the SI system.",
+                intro:
+                    "Physics begins with measurement. Every physical measurement consists of a numerical value and a unit.",
+                conceptTitle:
+                    "Physical quantities are expressed using standard units.",
+                conceptText:
+                    "The International System of Units (SI) defines seven base units from which derived units can be constructed.",
+                body:
+                    "The seven SI base quantities are length, mass, time, electric current, thermodynamic temperature, amount of substance and luminous intensity. Their units are metre, kilogram, second, ampere, kelvin, mole and candela. Derived quantities such as force, energy and pressure are expressed in combinations of base units. Always distinguish the physical quantity from the unit used to measure it.",
+                keyIdeas: [
+                    {
+                        label: "FORCE",
+                        formula: "1 N = 1 kg·m/s²",
+                        text: "The newton is the SI derived unit of force."
+                    },
+                    {
+                        label: "ENERGY",
+                        formula: "1 J = 1 kg·m²/s²",
+                        text: "The joule is the SI derived unit of energy."
+                    },
+                    {
+                        label: "PRESSURE",
+                        formula: "1 Pa = 1 N/m²",
+                        text: "The pascal is the SI derived unit of pressure."
+                    }
+                ],
+                example: {
+                    problem:
+                        "Express a force of 12 N in SI base units.",
+                    steps: [
+                        "Use Newton's second law: F = ma.",
+                        "Mass has unit kg and acceleration has unit m/s².",
+                        "Therefore 1 N = 1 kg·m/s².",
+                        "12 N = 12 kg·m/s²."
+                    ]
+                },
+                jeeQuestion:
+                    "Which expression represents one joule in SI base units?",
+                jeeOptions: [
+                    "kg·m/s",
+                    "kg·m²/s²",
+                    "kg·m/s²",
+                    "kg·m²/s³"
+                ],
+                jeeAnswer: 1,
+                jeeExplanation:
+                    "Energy = force × displacement, so 1 J = 1 N·m = 1 kg·m²/s².",
+                checkQuestion:
+                    "Which of the following is an SI base unit?",
+                checkOptions: [
+                    { text: "Newton", correct: false },
+                    { text: "Joule", correct: false },
+                    { text: "Kelvin", correct: true },
+                    { text: "Pascal", correct: false }
+                ],
+                correctFeedback:
+                    "Correct. Kelvin is the SI base unit of thermodynamic temperature.",
+                incorrectFeedback:
+                    "Newton, joule and pascal are derived units. Kelvin is a base unit."
+            },
+
+            // LESSON 2
+            {
+                title: "Dimensions of Physical Quantities",
+                description:
+                    "Determine dimensional formulas and test equations for dimensional consistency.",
+                intro:
+                    "Dimensional analysis helps us understand how physical quantities depend on mass, length, time and other base quantities.",
+                conceptTitle:
+                    "Dimensions describe the physical nature of a quantity.",
+                conceptText:
+                    "A dimensional formula expresses a physical quantity in powers of fundamental dimensions such as M, L and T.",
+                body:
+                    "For mechanical quantities, mass, length and time are represented by M, L and T. Velocity has dimensions [LT⁻¹], acceleration [LT⁻²], force [MLT⁻²] and energy [ML²T⁻²]. Every term added or subtracted in a valid physical equation must have the same dimensions. Dimensional consistency is necessary but does not prove an equation is correct.",
+                keyIdeas: [
+                    {
+                        label: "VELOCITY",
+                        formula: "[v] = LT⁻¹",
+                        text: "Velocity is displacement divided by time."
+                    },
+                    {
+                        label: "FORCE",
+                        formula: "[F] = MLT⁻²",
+                        text: "Force equals mass multiplied by acceleration."
+                    },
+                    {
+                        label: "ENERGY",
+                        formula: "[E] = ML²T⁻²",
+                        text: "Work equals force multiplied by displacement."
+                    }
+                ],
+                example: {
+                    problem:
+                        "Find the dimensions of pressure.",
+                    steps: [
+                        "Pressure = force/area.",
+                        "Force has dimensions [MLT⁻²].",
+                        "Area has dimensions [L²].",
+                        "[P] = [MLT⁻²]/[L²] = [ML⁻¹T⁻²]."
+                    ]
+                },
+                jeeQuestion:
+                    "What is the dimensional formula of momentum?",
+                jeeOptions: [
+                    "MLT⁻¹",
+                    "MLT⁻²",
+                    "ML²T⁻¹",
+                    "ML²T⁻²"
+                ],
+                jeeAnswer: 0,
+                jeeExplanation:
+                    "Momentum = mass × velocity, so [p] = M × LT⁻¹ = MLT⁻¹.",
+                checkQuestion:
+                    "Which statement about dimensional analysis is correct?",
+                checkOptions: [
+                    {
+                        text: "It can prove any equation is physically correct.",
+                        correct: false
+                    },
+                    {
+                        text: "It can identify dimensionally inconsistent equations.",
+                        correct: true
+                    },
+                    {
+                        text: "It determines all numerical constants.",
+                        correct: false
+                    },
+                    {
+                        text: "It works only for velocity.",
+                        correct: false
+                    }
+                ],
+                correctFeedback:
+                    "Correct. Dimensional analysis is a consistency check.",
+                incorrectFeedback:
+                    "Matching dimensions is necessary but not sufficient for physical correctness."
+            },
+
+            // LESSON 3
+            {
+                title: "Dimensional Analysis and Applications",
+                description:
+                    "Use dimensions to derive relationships and convert physical units.",
+                intro:
+                    "Dimensions can help predict relationships between physical quantities, even before a complete derivation is available.",
+                conceptTitle:
+                    "Dimensional homogeneity constrains possible physical formulas.",
+                conceptText:
+                    "If a quantity depends on other physical quantities, their dimensional powers can sometimes be determined by matching dimensions.",
+                body:
+                    "Suppose the period of a simple pendulum depends only on its length l and gravitational acceleration g. Assume T = klᵃgᵇ, where k is dimensionless. Comparing powers of length and time gives a = 1/2 and b = −1/2. Thus T is proportional to √(l/g). Dimensional analysis cannot determine the numerical factor 2π or account for variables omitted from the original assumption.",
+                keyIdeas: [
+                    {
+                        label: "DIMENSIONAL HOMOGENEITY",
+                        formula: "[LHS] = [RHS]",
+                        text: "Both sides of a physical equation must have identical dimensions."
+                    },
+                    {
+                        label: "PENDULUM PERIOD",
+                        formula: "T ∝ √(l/g)",
+                        text: "Dimensional analysis predicts the length and gravity dependence."
+                    },
+                    {
+                        label: "UNIT CONVERSION",
+                        formula: "1 km/h = 5/18 m/s",
+                        text: "Convert numerical values while preserving the physical quantity."
+                    }
+                ],
+                example: {
+                    problem:
+                        "Assuming a pendulum's period depends only on length l and gravitational acceleration g, find its dimensional dependence.",
+                    steps: [
+                        "Assume T = klᵃgᵇ.",
+                        "Dimensions: [T] = [L]ᵃ[LT⁻²]ᵇ.",
+                        "Equating time powers gives −2b = 1, so b = −1/2.",
+                        "Equating length powers gives a + b = 0, so a = 1/2.",
+                        "Therefore T ∝ √(l/g)."
+                    ]
+                },
+                jeeQuestion:
+                    "A quantity Q has dimensions [L²T⁻²]. Which expression has the same dimensions?",
+                jeeOptions: [
+                    "Acceleration × time",
+                    "Velocity squared",
+                    "Force × distance",
+                    "Momentum ÷ mass"
+                ],
+                jeeAnswer: 1,
+                jeeExplanation:
+                    "Velocity has dimensions [LT⁻¹], so velocity squared has dimensions [L²T⁻²].",
+                checkQuestion:
+                    "What cannot generally be determined using dimensional analysis alone?",
+                checkOptions: [
+                    { text: "Dimensions of force", correct: false },
+                    { text: "Whether terms have matching dimensions", correct: false },
+                    { text: "A dimensionless numerical factor such as 2π", correct: true },
+                    { text: "Dimensions of acceleration", correct: false }
+                ],
+                correctFeedback:
+                    "Correct. Dimensional analysis cannot generally determine dimensionless constants.",
+                incorrectFeedback:
+                    "Dimensions cannot distinguish numerical factors such as 2 or 2π."
+            },
+
+            // LESSON 4
+            {
+                title: "Errors in Measurement",
+                description:
+                    "Understand absolute, relative and percentage errors and their propagation.",
+                intro:
+                    "Every experimental measurement has uncertainty. Understanding that uncertainty is essential for interpreting results.",
+                conceptTitle:
+                    "Measurement errors describe uncertainty in measured values.",
+                conceptText:
+                    "Absolute error is expressed in the same units as the measured quantity. Relative error compares the absolute error with the measured value.",
+                body:
+                    "Random errors cause variations between repeated measurements. Systematic errors consistently bias measurements because of factors such as incorrect calibration. For independent small uncertainties, the maximum fractional error in a product or quotient is approximately the sum of the absolute fractional errors. When a quantity is raised to a power, its fractional error is multiplied by the absolute value of that power. These are first-order maximum-error rules, not statistical uncertainty formulas.",
+                keyIdeas: [
+                    {
+                        label: "RELATIVE ERROR",
+                        formula: "Relative error = Δx/|x|",
+                        text: "Compare absolute uncertainty with the magnitude of the measured value."
+                    },
+                    {
+                        label: "PERCENTAGE ERROR",
+                        formula: "% error = (Δx/|x|) × 100",
+                        text: "Express relative uncertainty as a percentage."
+                    },
+                    {
+                        label: "POWER RULE",
+                        formula: "Q = xⁿ ⇒ ΔQ/|Q| ≈ |n|Δx/|x|",
+                        text: "Approximate maximum fractional uncertainty for a power."
+                    }
+                ],
+                example: {
+                    problem:
+                        "The radius of a circle is measured as (10.0 ± 0.1) cm. Find the approximate maximum percentage uncertainty in its area.",
+                    steps: [
+                        "Area A = πr².",
+                        "For A proportional to r², ΔA/A ≈ 2Δr/r.",
+                        "Δr/r = 0.1/10.0 = 0.01.",
+                        "Percentage uncertainty in area ≈ 2 × 0.01 × 100 = 2%."
+                    ]
+                },
+                jeeQuestion:
+                    "A cube's side length has a maximum percentage uncertainty of 2%. What is the approximate maximum percentage uncertainty in its volume?",
+                jeeOptions: [
+                    "2%",
+                    "4%",
+                    "6%",
+                    "8%"
+                ],
+                jeeAnswer: 2,
+                jeeExplanation:
+                    "Volume V = a³, so ΔV/V ≈ 3Δa/a. The maximum percentage uncertainty is approximately 3 × 2% = 6%.",
+                checkQuestion:
+                    "Which type of error can result from an incorrectly calibrated measuring instrument?",
+                checkOptions: [
+                    { text: "Systematic error", correct: true },
+                    { text: "Only random error", correct: false },
+                    { text: "No measurement error", correct: false },
+                    { text: "Only rounding error", correct: false }
+                ],
+                correctFeedback:
+                    "Correct. Incorrect calibration can produce systematic error.",
+                incorrectFeedback:
+                    "A consistent calibration bias is a systematic error."
+            },
+
+            // LESSON 5
+            {
+                title: "Significant Figures and Precision",
+                description:
+                    "Apply significant-figure rules and distinguish accuracy from precision.",
+                intro:
+                    "A measurement should communicate only the precision supported by the measuring instrument.",
+                conceptTitle:
+                    "Significant figures communicate measurement precision.",
+                conceptText:
+                    "The number of significant figures depends on which digits are meaningful in a reported measurement.",
+                body:
+                    "All nonzero digits are significant. Zeros between nonzero digits are significant. Leading zeros are not significant, while trailing zeros after a decimal point are significant. In multiplication and division, the final result is generally rounded to the fewest significant figures among the measured inputs. In addition and subtraction, round to the least precise decimal place. Accuracy refers to closeness to the true value; precision refers to repeatability or resolution.",
+                keyIdeas: [
+                    {
+                        label: "LEADING ZEROS",
+                        formula: "0.0045 → 2 significant figures",
+                        text: "Zeros before the first nonzero digit are not significant."
+                    },
+                    {
+                        label: "DECIMAL TRAILING ZEROS",
+                        formula: "2.500 → 4 significant figures",
+                        text: "Trailing zeros after a decimal point are significant."
+                    },
+                    {
+                        label: "MULTIPLICATION",
+                        formula: "2.5 × 3.42 = 8.6",
+                        text: "Round to two significant figures because 2.5 has two."
+                    }
+                ],
+                example: {
+                    problem:
+                        "Calculate 4.56 × 2.1 and report the result with the correct number of significant figures.",
+                    steps: [
+                        "Multiply: 4.56 × 2.1 = 9.576.",
+                        "4.56 has three significant figures.",
+                        "2.1 has two significant figures.",
+                        "Round the product to two significant figures.",
+                        "Final answer = 9.6."
+                    ]
+                },
+                jeeQuestion:
+                    "How many significant figures are present in 0.003040?",
+                jeeOptions: [
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                jeeAnswer: 2,
+                jeeExplanation:
+                    "The significant digits are 3, 0, 4 and the final 0. Therefore 0.003040 has four significant figures.",
+                checkQuestion:
+                    "Which measurement has exactly three significant figures?",
+                checkOptions: [
+                    { text: "0.004", correct: false },
+                    { text: "2.50", correct: true },
+                    { text: "0.02000", correct: false },
+                    { text: "12.345", correct: false }
+                ],
+                correctFeedback:
+                    "Correct. The trailing zero in 2.50 is significant.",
+                incorrectFeedback:
+                    "Count nonzero digits, internal zeros and trailing decimal zeros."
+            },
+
+            // LESSON 6
+            {
+                title: "Units and Measurements Review",
+                description:
+                    "Combine dimensional analysis, unit conversion, significant figures and uncertainty calculations.",
+                intro:
+                    "JEE questions frequently combine multiple measurement concepts in one problem.",
+                conceptTitle:
+                    "Check units, dimensions and precision before finalizing an answer.",
+                conceptText:
+                    "A reliable solution uses consistent units, dimensionally valid equations and appropriately reported precision.",
+                body:
+                    "Convert quantities to consistent units before substituting into formulas. Check dimensional homogeneity to catch incorrect expressions. Apply error-propagation rules when measurement uncertainty is given. Finally, report numerical answers with appropriate significant figures. Dimensional correctness alone does not guarantee physical correctness.",
+                keyIdeas: [
+                    {
+                        label: "DIMENSIONAL CHECK",
+                        formula: "[Energy] = ML²T⁻²",
+                        text: "Verify that expressions for energy have the correct dimensions."
+                    },
+                    {
+                        label: "ERROR PROPAGATION",
+                        formula: "Q = ab² ⇒ ΔQ/|Q| ≈ Δa/|a| + 2Δb/|b|",
+                        text: "Approximate maximum fractional uncertainty for independent small measurement errors."
+                    },
+                    {
+                        label: "SPEED CONVERSION",
+                        formula: "72 km/h = 20 m/s",
+                        text: "Convert kilometre per hour to metre per second by multiplying by 5/18."
+                    }
+                ],
+                example: {
+                    problem:
+                        "A rectangle has measured length (20.0 ± 0.2) cm and width (10.0 ± 0.1) cm. Find its area and approximate maximum absolute uncertainty.",
+                    steps: [
+                        "Area A = length × width = 20.0 × 10.0 = 200.0 cm².",
+                        "Relative uncertainty in length = 0.2/20.0 = 0.01.",
+                        "Relative uncertainty in width = 0.1/10.0 = 0.01.",
+                        "Maximum relative uncertainty in area ≈ 0.01 + 0.01 = 0.02.",
+                        "Absolute uncertainty ≈ 0.02 × 200.0 = 4 cm².",
+                        "Report the result as approximately (200 ± 4) cm²."
+                    ]
+                },
+                jeeQuestion:
+                    "A physical quantity Q is given by Q = a²b³. If the maximum percentage uncertainties in a and b are 1% and 2%, respectively, what is the approximate maximum percentage uncertainty in Q?",
+                jeeOptions: [
+                    "3%",
+                    "5%",
+                    "8%",
+                    "10%"
+                ],
+                jeeAnswer: 2,
+                jeeExplanation:
+                    "Maximum percentage uncertainty ≈ 2 × 1% + 3 × 2% = 8%.",
+                checkQuestion:
+                    "Which is the best final step when reporting a calculated experimental result?",
+                checkOptions: [
+                    {
+                        text: "Ignore all units.",
+                        correct: false
+                    },
+                    {
+                        text: "Report every calculator digit.",
+                        correct: false
+                    },
+                    {
+                        text: "Check units and use appropriate precision.",
+                        correct: true
+                    },
+                    {
+                        text: "Round every value to an integer.",
+                        correct: false
+                    }
+                ],
+                correctFeedback:
+                    "Correct. Units and precision are essential to meaningful measurements.",
+                incorrectFeedback:
+                    "Always check dimensions, units and significant figures."
+            }
+
         ]
 
     }
