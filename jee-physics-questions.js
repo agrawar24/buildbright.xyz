@@ -1330,6 +1330,437 @@ const jeePhysicsQuestions = {
                     "Useful work = mgh = 100 × 10 × 6 = 6000 J. Useful power = 600 W. Input power = 600/0.75 = 800 W."
             }
 
+
+        ]
+
+    },
+
+    "System of Particles and Rotational Motion": {
+
+        /* ==========================================
+           PRACTICE — 10 QUESTIONS
+           ========================================== */
+
+        practice: [
+
+            {
+                id: "rot-p-001",
+                topic: "Centre of Mass",
+                difficulty: "Foundation",
+
+                question:
+                    "Two particles of masses 2 kg and 3 kg are placed at x = 0 m and x = 10 m. Find their centre of mass.",
+
+                options: [
+                    "4 m",
+                    "5 m",
+                    "6 m",
+                    "8 m"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "xCM = (2 × 0 + 3 × 10)/(2 + 3) = 30/5 = 6 m."
+            },
+
+            {
+                id: "rot-p-002",
+                topic: "Centre-of-Mass Velocity",
+                difficulty: "Foundation",
+
+                question:
+                    "A 2 kg particle moves at +4 m/s and a 3 kg particle moves at +6 m/s along the x-axis. What is their centre-of-mass velocity?",
+
+                options: [
+                    "4.0 m/s",
+                    "5.0 m/s",
+                    "5.2 m/s",
+                    "6.0 m/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "vCM = (2 × 4 + 3 × 6)/5 = 26/5 = 5.2 m/s."
+            },
+
+            {
+                id: "rot-p-003",
+                topic: "External Force",
+                difficulty: "Foundation",
+
+                question:
+                    "A system of total mass 8 kg experiences a net external force of 24 N. What is its centre-of-mass acceleration?",
+
+                options: [
+                    "2 m/s²",
+                    "3 m/s²",
+                    "4 m/s²",
+                    "6 m/s²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Fext = MaCM, so aCM = 24/8 = 3 m/s²."
+            },
+
+            {
+                id: "rot-p-004",
+                topic: "Torque",
+                difficulty: "Foundation",
+
+                question:
+                    "A 15 N force acts perpendicular to a 0.4 m lever arm. Find the torque magnitude about the pivot.",
+
+                options: [
+                    "3 N·m",
+                    "6 N·m",
+                    "15 N·m",
+                    "37.5 N·m"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Torque magnitude = rF sin 90° = 0.4 × 15 = 6 N·m."
+            },
+
+            {
+                id: "rot-p-005",
+                topic: "Angular Momentum",
+                difficulty: "Medium",
+
+                question:
+                    "A particle of mass 2 kg moves at 3 m/s perpendicular to its position vector of length 4 m. What is its angular momentum magnitude about the origin?",
+
+                options: [
+                    "6 kg·m²/s",
+                    "12 kg·m²/s",
+                    "24 kg·m²/s",
+                    "48 kg·m²/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "L = rmv sin 90° = 4 × 2 × 3 = 24 kg·m²/s."
+            },
+
+            {
+                id: "rot-p-006",
+                topic: "Moment of Inertia",
+                difficulty: "Foundation",
+
+                question:
+                    "A point mass of 4 kg is located 0.5 m from a rotation axis. Find its moment of inertia.",
+
+                options: [
+                    "0.5 kg·m²",
+                    "1 kg·m²",
+                    "2 kg·m²",
+                    "4 kg·m²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "I = mr² = 4 × (0.5)² = 1 kg·m²."
+            },
+
+            {
+                id: "rot-p-007",
+                topic: "Parallel-Axis Theorem",
+                difficulty: "Medium",
+
+                question:
+                    "A rigid body has mass 3 kg and moment of inertia 2 kg·m² about an axis through its centre of mass. What is its moment of inertia about a parallel axis 2 m away?",
+
+                options: [
+                    "8 kg·m²",
+                    "12 kg·m²",
+                    "14 kg·m²",
+                    "18 kg·m²"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "I = ICM + Md² = 2 + 3 × 2² = 14 kg·m²."
+            },
+
+            {
+                id: "rot-p-008",
+                topic: "Rotational Dynamics",
+                difficulty: "Medium",
+
+                question:
+                    "A rigid wheel with moment of inertia 5 kg·m² experiences a net torque of 20 N·m about its fixed axis. What is its angular acceleration?",
+
+                options: [
+                    "2 rad/s²",
+                    "4 rad/s²",
+                    "5 rad/s²",
+                    "10 rad/s²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "τ = Iα, so α = 20/5 = 4 rad/s²."
+            },
+
+            {
+                id: "rot-p-009",
+                topic: "Rotational Kinetic Energy",
+                difficulty: "Medium",
+
+                question:
+                    "A wheel has moment of inertia 2 kg·m² and angular speed 5 rad/s. Find its rotational kinetic energy.",
+
+                options: [
+                    "10 J",
+                    "20 J",
+                    "25 J",
+                    "50 J"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Krot = ½Iω² = ½ × 2 × 5² = 25 J."
+            },
+
+            {
+                id: "rot-p-010",
+                topic: "Pure Rolling",
+                difficulty: "Foundation",
+
+                question:
+                    "A wheel of radius 0.25 m rolls without slipping at 5 m/s. Find its angular speed.",
+
+                options: [
+                    "5 rad/s",
+                    "10 rad/s",
+                    "20 rad/s",
+                    "25 rad/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "For pure rolling, v = ωR. Thus ω = 5/0.25 = 20 rad/s."
+            }
+
+        ],
+
+        /* ==========================================
+           TIMED CHAPTER TEST — 10 QUESTIONS
+           ========================================== */
+
+        test: [
+
+            {
+                id: "rot-t-001",
+                topic: "Centre of Mass",
+
+                question:
+                    "Three particles of masses 1 kg, 2 kg and 3 kg are located at x = 0 m, 3 m and 6 m respectively. What is their centre-of-mass position?",
+
+                options: [
+                    "3 m",
+                    "4 m",
+                    "5 m",
+                    "6 m"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "xCM = (1 × 0 + 2 × 3 + 3 × 6)/(1 + 2 + 3) = 24/6 = 4 m."
+            },
+
+            {
+                id: "rot-t-002",
+                topic: "Momentum Conservation",
+
+                question:
+                    "Two particles of masses 2 kg and 3 kg move along the x-axis at +5 m/s and −2 m/s respectively. What is their centre-of-mass velocity?",
+
+                options: [
+                    "0.4 m/s",
+                    "0.8 m/s",
+                    "1.2 m/s",
+                    "2.0 m/s"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Total momentum = 2 × 5 + 3 × (−2) = 4 kg·m/s. Total mass = 5 kg, so vCM = 4/5 = +0.8 m/s."
+            },
+
+            {
+                id: "rot-t-003",
+                topic: "Torque and Angle",
+
+                question:
+                    "A 20 N force acts at an angle of 30° to a position vector of magnitude 2 m. What is the torque magnitude?",
+
+                options: [
+                    "10 N·m",
+                    "20 N·m",
+                    "30 N·m",
+                    "40 N·m"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "τ = rF sin θ = 2 × 20 × sin 30° = 20 N·m."
+            },
+
+            {
+                id: "rot-t-004",
+                topic: "Angular Momentum Conservation",
+
+                question:
+                    "A rotating system has moment of inertia 4 kg·m² and angular speed 3 rad/s. Its moment of inertia decreases to 2 kg·m² with zero net external torque. What is its new angular speed?",
+
+                options: [
+                    "1.5 rad/s",
+                    "3 rad/s",
+                    "6 rad/s",
+                    "12 rad/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Angular momentum is conserved: I₁ω₁ = I₂ω₂. Therefore 4 × 3 = 2 × ω₂, giving ω₂ = 6 rad/s."
+            },
+
+            {
+                id: "rot-t-005",
+                topic: "Moment of Inertia",
+
+                question:
+                    "A uniform solid disk has mass 4 kg and radius 0.5 m. What is its moment of inertia about its central symmetry axis?",
+
+                options: [
+                    "0.25 kg·m²",
+                    "0.5 kg·m²",
+                    "1.0 kg·m²",
+                    "2.0 kg·m²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "For a uniform solid disk, I = ½MR² = ½ × 4 × (0.5)² = 0.5 kg·m²."
+            },
+
+            {
+                id: "rot-t-006",
+                topic: "Parallel-Axis Theorem",
+
+                question:
+                    "A uniform thin rod has mass 3 kg and length 2 m. Its moment of inertia about an axis through its centre, perpendicular to its length, is ML²/12. What is its moment of inertia about a parallel axis through one end?",
+
+                options: [
+                    "0.5 kg·m²",
+                    "1 kg·m²",
+                    "2 kg·m²",
+                    "4 kg·m²"
+                ],
+
+                answer: 3,
+
+                explanation:
+                    "ICM = ML²/12 = 3 × 4/12 = 1 kg·m². The parallel-axis theorem gives Iend = 1 + 3 × 1² = 4 kg·m²."
+            },
+
+            {
+                id: "rot-t-007",
+                topic: "Rotational Dynamics",
+
+                question:
+                    "A wheel initially at rest has moment of inertia 2 kg·m². A constant net torque of 6 N·m acts for 4 seconds. What is its final angular speed?",
+
+                options: [
+                    "6 rad/s",
+                    "9 rad/s",
+                    "12 rad/s",
+                    "24 rad/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Angular acceleration α = τ/I = 6/2 = 3 rad/s². Starting from rest, ω = αt = 3 × 4 = 12 rad/s."
+            },
+
+            {
+                id: "rot-t-008",
+                topic: "Rotational Kinetic Energy",
+
+                question:
+                    "A rigid body rotating about a fixed axis has moment of inertia 8 kg·m² and rotational kinetic energy 100 J. What is its angular speed?",
+
+                options: [
+                    "2 rad/s",
+                    "4 rad/s",
+                    "5 rad/s",
+                    "10 rad/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "K = ½Iω². Thus 100 = ½ × 8 × ω² = 4ω², so ω² = 25 and ω = 5 rad/s."
+            },
+
+            {
+                id: "rot-t-009",
+                topic: "Rolling Motion",
+
+                question:
+                    "A uniform solid cylinder of mass 2 kg rolls without slipping at a centre-of-mass speed of 4 m/s. What is its total kinetic energy? Use ICM = ½MR².",
+
+                options: [
+                    "16 J",
+                    "20 J",
+                    "24 J",
+                    "32 J"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Total kinetic energy = ½Mv² + ½Iω². With I = ½MR² and ω = v/R, K = ¾Mv² = ¾ × 2 × 16 = 24 J."
+            },
+
+            {
+                id: "rot-t-010",
+                topic: "Rolling Energy Conservation",
+
+                question:
+                    "A uniform solid cylinder rolls without slipping down an incline through a vertical height of 3 m, starting from rest. Ignore energy losses. What is its speed at the bottom? Take g = 10 m/s² and ICM = ½MR².",
+
+                options: [
+                    "√20 m/s",
+                    "√30 m/s",
+                    "√40 m/s",
+                    "√60 m/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Energy conservation gives Mgh = ½Mv² + ½(½MR²)(v²/R²) = ¾Mv². Thus v² = 4gh/3 = 4 × 10 × 3/3 = 40, so v = √40 m/s."
+            }
+
         ]
 
     }

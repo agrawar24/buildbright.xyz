@@ -2125,8 +2125,599 @@ const jeePhysicsLessons = {
                     "Include the work done by friction or other non-conservative forces in the energy equation."
             }
 
+
+        ]
+
+    },
+
+    "System of Particles and Rotational Motion": {
+
+        description:
+            "Understand the motion of systems of particles, torque, angular momentum, rotational inertia and rolling motion.",
+
+        lessons: [
+
+            // LESSON 1
+            {
+                title: "Centre of Mass",
+
+                description:
+                    "Find the centre of mass of systems of particles and understand its physical significance.",
+
+                intro:
+                    "A system of many particles can often be described using one special point called its centre of mass.",
+
+                conceptTitle:
+                    "The centre of mass is the mass-weighted average position.",
+
+                conceptText:
+                    "The centre of mass depends on how mass is distributed throughout a system.",
+
+                body:
+                    "For discrete particles, multiply each particle's position by its mass, add these products and divide by the total mass. The centre of mass may lie outside the physical material of an object, such as at the centre of a ring.",
+
+                keyIdeas: [
+                    {
+                        label: "TWO PARTICLES",
+                        formula: "x꜀ₘ = (m₁x₁ + m₂x₂)/(m₁ + m₂)",
+                        text:
+                            "The centre of mass of two particles is the weighted average of their positions."
+                    },
+                    {
+                        label: "MULTIPLE PARTICLES",
+                        formula: "r꜀ₘ = (Σmᵢrᵢ)/(Σmᵢ)",
+                        text:
+                            "The vector position of the centre of mass is the mass-weighted average position."
+                    },
+                    {
+                        label: "SYMMETRY",
+                        formula: "Uniform symmetric body → geometric centre",
+                        text:
+                            "For a uniform body with suitable symmetry, the centre of mass lies at its geometric centre."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "Two particles of masses 2 kg and 3 kg are placed at x = 0 m and x = 10 m. Find their centre of mass.",
+
+                    steps: [
+                        "Use x꜀ₘ = (m₁x₁ + m₂x₂)/(m₁ + m₂).",
+                        "Substitute the values: x꜀ₘ = (2 × 0 + 3 × 10)/(2 + 3).",
+                        "x꜀ₘ = 30/5 = 6 m.",
+                        "The centre of mass is 6 m from the origin."
+                    ]
+                },
+
+                jeeQuestion:
+                    "Two particles of masses 1 kg and 3 kg are located at x = 0 m and x = 8 m. Where is their centre of mass?",
+
+                jeeOptions: [
+                    "2 m",
+                    "4 m",
+                    "6 m",
+                    "8 m"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "x꜀ₘ = (1 × 0 + 3 × 8)/4 = 6 m.",
+
+                checkQuestion:
+                    "What determines the centre of mass of a system?",
+
+                checkOptions: [
+                    {
+                        text: "Only the total mass",
+                        correct: false
+                    },
+                    {
+                        text: "Masses and positions of the particles",
+                        correct: true
+                    },
+                    {
+                        text: "Only the largest particle",
+                        correct: false
+                    },
+                    {
+                        text: "Only the speed of the particles",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Centre of mass depends on mass distribution.",
+
+                incorrectFeedback:
+                    "Use the mass-weighted average of particle positions."
+            },
+
+            // LESSON 2
+            {
+                title: "Motion of the Centre of Mass",
+
+                description:
+                    "Relate the motion of a system's centre of mass to external forces and total momentum.",
+
+                intro:
+                    "Even when particles move in complicated ways, their centre of mass follows a simple rule determined by external forces.",
+
+                conceptTitle:
+                    "Only the net external force accelerates the centre of mass.",
+
+                conceptText:
+                    "Internal forces cancel in the total momentum balance for a system, leaving the net external force to determine centre-of-mass acceleration.",
+
+                body:
+                    "The total linear momentum of a system equals its total mass multiplied by the centre-of-mass velocity. For a system of constant total mass, the net external force equals total mass times centre-of-mass acceleration. If the net external force is zero, the centre of mass moves with constant velocity.",
+
+                keyIdeas: [
+                    {
+                        label: "TOTAL MOMENTUM",
+                        formula: "P = Mv꜀ₘ",
+                        text:
+                            "Total momentum equals total mass times centre-of-mass velocity."
+                    },
+                    {
+                        label: "EXTERNAL FORCE",
+                        formula: "Fₑₓₜ = Ma꜀ₘ",
+                        text:
+                            "Net external force determines centre-of-mass acceleration."
+                    },
+                    {
+                        label: "MOMENTUM CONSERVATION",
+                        formula: "Fₑₓₜ = 0 ⇒ P = constant",
+                        text:
+                            "Total momentum remains constant when net external force is zero."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A system has a total mass of 10 kg. A net external force of 30 N acts on it. Find the acceleration of its centre of mass.",
+
+                    steps: [
+                        "Use Fₑₓₜ = Ma꜀ₘ.",
+                        "Substitute 30 = 10a꜀ₘ.",
+                        "a꜀ₘ = 30/10.",
+                        "The acceleration is 3 m/s²."
+                    ]
+                },
+
+                jeeQuestion:
+                    "Two particles of masses 2 kg and 3 kg move in the same direction at 4 m/s and 6 m/s. What is their centre-of-mass velocity?",
+
+                jeeOptions: [
+                    "4.0 m/s",
+                    "5.0 m/s",
+                    "5.2 m/s",
+                    "6.0 m/s"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "v꜀ₘ = (2 × 4 + 3 × 6)/5 = 26/5 = 5.2 m/s.",
+
+                checkQuestion:
+                    "What happens to centre-of-mass velocity when the net external force is zero?",
+
+                checkOptions: [
+                    {
+                        text: "It must become zero",
+                        correct: false
+                    },
+                    {
+                        text: "It remains constant",
+                        correct: true
+                    },
+                    {
+                        text: "It continuously increases",
+                        correct: false
+                    },
+                    {
+                        text: "It changes direction every second",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Zero net external force means constant total momentum.",
+
+                incorrectFeedback:
+                    "Remember that Fₑₓₜ = Ma꜀ₘ."
+            },
+
+            // LESSON 3
+            {
+                title: "Torque and Angular Momentum",
+
+                description:
+                    "Understand the turning effect of forces and the conservation of angular momentum.",
+
+                intro:
+                    "Forces can cause objects to rotate. Torque measures how effectively a force produces rotation.",
+
+                conceptTitle:
+                    "Torque changes angular momentum.",
+
+                conceptText:
+                    "Torque is the cross product of position vector and force. Net external torque equals the rate of change of angular momentum about a fixed inertial origin.",
+
+                body:
+                    "The magnitude of torque is rF sin θ, where θ is the angle between the position vector and force. Angular momentum of a particle about an origin is r × p. When net external torque about that origin is zero, angular momentum is conserved.",
+
+                keyIdeas: [
+                    {
+                        label: "TORQUE",
+                        formula: "τ = rF sin θ",
+                        text:
+                            "Torque depends on force, lever arm and angle."
+                    },
+                    {
+                        label: "ANGULAR MOMENTUM",
+                        formula: "L = r × p",
+                        text:
+                            "Angular momentum of a particle is the cross product of position and linear momentum."
+                    },
+                    {
+                        label: "ROTATIONAL LAW",
+                        formula: "τₑₓₜ = dL/dt",
+                        text:
+                            "Net external torque changes angular momentum."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A perpendicular force of 20 N acts at a distance of 0.5 m from a fixed pivot. Find the torque magnitude.",
+
+                    steps: [
+                        "Use τ = rF sin θ.",
+                        "The force is perpendicular, so θ = 90°.",
+                        "τ = 0.5 × 20 × 1.",
+                        "Torque magnitude = 10 N·m."
+                    ]
+                },
+
+                jeeQuestion:
+                    "A 10 N force acts perpendicular to a 2 m lever arm. What torque does it produce?",
+
+                jeeOptions: [
+                    "5 N·m",
+                    "10 N·m",
+                    "20 N·m",
+                    "40 N·m"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "τ = rF sin 90° = 2 × 10 = 20 N·m.",
+
+                checkQuestion:
+                    "When is angular momentum conserved about a fixed inertial origin?",
+
+                checkOptions: [
+                    {
+                        text: "When net external torque is zero",
+                        correct: true
+                    },
+                    {
+                        text: "Whenever a force acts",
+                        correct: false
+                    },
+                    {
+                        text: "Only when the object is at rest",
+                        correct: false
+                    },
+                    {
+                        text: "Whenever kinetic energy increases",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Zero net external torque means angular momentum is conserved.",
+
+                incorrectFeedback:
+                    "Use the relationship τₑₓₜ = dL/dt."
+            },
+
+            // LESSON 4
+            {
+                title: "Moment of Inertia",
+
+                description:
+                    "Calculate rotational inertia and understand how mass distribution affects rotation.",
+
+                intro:
+                    "Objects with the same mass can resist changes in rotational motion differently because their mass is distributed differently.",
+
+                conceptTitle:
+                    "Moment of inertia is rotational resistance to angular acceleration.",
+
+                conceptText:
+                    "Moment of inertia depends on the chosen axis of rotation and the distances of mass elements from that axis.",
+
+                body:
+                    "For discrete particles, moment of inertia is the sum of mr². For continuous bodies, use integration. The parallel-axis theorem relates the moment of inertia about an axis through the centre of mass to that about a parallel displaced axis.",
+
+                keyIdeas: [
+                    {
+                        label: "POINT MASSES",
+                        formula: "I = Σmᵢrᵢ²",
+                        text:
+                            "Each particle contributes mass times squared perpendicular distance from the axis."
+                    },
+                    {
+                        label: "PARALLEL-AXIS THEOREM",
+                        formula: "I = I꜀ₘ + Md²",
+                        text:
+                            "Shift from a centre-of-mass axis by distance d."
+                    },
+                    {
+                        label: "UNIFORM SOLID DISK",
+                        formula: "I = ½MR²",
+                        text:
+                            "Moment of inertia about the central symmetry axis."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "Two point masses of 2 kg each are located 0.5 m from a rotation axis. Find the total moment of inertia.",
+
+                    steps: [
+                        "Use I = Σmr².",
+                        "Each mass contributes 2 × (0.5)².",
+                        "Each contribution equals 0.5 kg·m².",
+                        "Total moment of inertia = 1 kg·m²."
+                    ]
+                },
+
+                jeeQuestion:
+                    "A point mass of 4 kg is located 0.5 m from a rotation axis. What is its moment of inertia?",
+
+                jeeOptions: [
+                    "0.5 kg·m²",
+                    "1 kg·m²",
+                    "2 kg·m²",
+                    "4 kg·m²"
+                ],
+
+                jeeAnswer: 1,
+
+                jeeExplanation:
+                    "I = mr² = 4 × (0.5)² = 1 kg·m².",
+
+                checkQuestion:
+                    "What happens to a point mass's moment of inertia if its distance from the rotation axis doubles?",
+
+                checkOptions: [
+                    {
+                        text: "It doubles",
+                        correct: false
+                    },
+                    {
+                        text: "It becomes four times as large",
+                        correct: true
+                    },
+                    {
+                        text: "It becomes half as large",
+                        correct: false
+                    },
+                    {
+                        text: "It stays unchanged",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Moment of inertia is proportional to r².",
+
+                incorrectFeedback:
+                    "Use I = mr² to determine how distance affects rotational inertia."
+            },
+
+            // LESSON 5
+            {
+                title: "Rotational Dynamics",
+
+                description:
+                    "Connect torque, angular acceleration and rotational kinetic energy.",
+
+                intro:
+                    "Rotational dynamics describes how torques change the rotational motion of rigid bodies.",
+
+                conceptTitle:
+                    "Torque plays a role similar to force in linear motion.",
+
+                conceptText:
+                    "For rotation about a fixed principal axis of a rigid body with constant moment of inertia, net torque equals I times angular acceleration.",
+
+                body:
+                    "Angular velocity measures how rapidly angular position changes. Angular acceleration measures the rate of change of angular velocity. Rotational kinetic energy is ½Iω². For a rigid body rotating about a fixed axis, the work done by torque changes its rotational kinetic energy.",
+
+                keyIdeas: [
+                    {
+                        label: "ROTATIONAL NEWTON'S LAW",
+                        formula: "τₙₑₜ = Iα",
+                        text:
+                            "Net torque equals moment of inertia times angular acceleration for fixed-axis rotation."
+                    },
+                    {
+                        label: "ROTATIONAL KINETIC ENERGY",
+                        formula: "Kᵣₒₜ = ½Iω²",
+                        text:
+                            "Energy associated with rotation about a fixed axis."
+                    },
+                    {
+                        label: "ANGULAR ACCELERATION",
+                        formula: "α = Δω/Δt",
+                        text:
+                            "Average angular acceleration is change in angular velocity divided by time."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A wheel has a moment of inertia of 2 kg·m². A net torque of 10 N·m acts about its fixed axis. Find its angular acceleration.",
+
+                    steps: [
+                        "Use τₙₑₜ = Iα.",
+                        "Substitute 10 = 2α.",
+                        "α = 10/2.",
+                        "Angular acceleration = 5 rad/s²."
+                    ]
+                },
+
+                jeeQuestion:
+                    "A rigid wheel has moment of inertia 3 kg·m² and angular speed 4 rad/s. What is its rotational kinetic energy?",
+
+                jeeOptions: [
+                    "12 J",
+                    "18 J",
+                    "24 J",
+                    "48 J"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "Kᵣₒₜ = ½Iω² = ½ × 3 × 16 = 24 J.",
+
+                checkQuestion:
+                    "For fixed-axis rotation, which equation relates net torque and angular acceleration?",
+
+                checkOptions: [
+                    {
+                        text: "τ = Iα",
+                        correct: true
+                    },
+                    {
+                        text: "τ = mv",
+                        correct: false
+                    },
+                    {
+                        text: "τ = mgh",
+                        correct: false
+                    },
+                    {
+                        text: "τ = P/t",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Net torque equals Iα for fixed-axis rotation.",
+
+                incorrectFeedback:
+                    "The rotational analogue of F = ma is τ = Iα."
+            },
+
+            // LESSON 6
+            {
+                title: "Rolling Motion and Chapter Review",
+
+                description:
+                    "Combine translation, rotation and energy conservation in rolling-motion problems.",
+
+                intro:
+                    "A rolling object can move forward while simultaneously rotating about its centre of mass.",
+
+                conceptTitle:
+                    "Pure rolling combines translation and rotation without slipping.",
+
+                conceptText:
+                    "For rolling without slipping on a stationary surface, the centre-of-mass speed equals angular speed times radius.",
+
+                body:
+                    "The kinetic energy of a rolling rigid body is the sum of translational and rotational kinetic energy about its centre of mass. On a fixed incline, static friction can provide torque while doing no work on a rigid body in pure rolling. Energy conservation can determine the speed of a rolling object when dissipative losses are negligible.",
+
+                keyIdeas: [
+                    {
+                        label: "PURE ROLLING",
+                        formula: "v꜀ₘ = ωR",
+                        text:
+                            "The no-slip condition relates translational and angular speed."
+                    },
+                    {
+                        label: "TOTAL KINETIC ENERGY",
+                        formula: "K = ½Mv꜀ₘ² + ½I꜀ₘω²",
+                        text:
+                            "Rolling kinetic energy includes translation and rotation."
+                    },
+                    {
+                        label: "ANGULAR MOMENTUM",
+                        formula: "τₑₓₜ = dL/dt",
+                        text:
+                            "Net external torque controls changes in angular momentum."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A uniform solid disk of mass 2 kg and radius 0.5 m rolls without slipping at 4 m/s. Find its total kinetic energy.",
+
+                    steps: [
+                        "For a solid disk, I꜀ₘ = ½MR².",
+                        "I꜀ₘ = ½ × 2 × (0.5)² = 0.25 kg·m².",
+                        "Pure rolling gives ω = v/R = 4/0.5 = 8 rad/s.",
+                        "Translational kinetic energy = ½ × 2 × 4² = 16 J.",
+                        "Rotational kinetic energy = ½ × 0.25 × 8² = 8 J.",
+                        "Total kinetic energy = 16 + 8 = 24 J."
+                    ]
+                },
+
+                jeeQuestion:
+                    "A wheel of radius 0.25 m rolls without slipping at 5 m/s. What is its angular speed?",
+
+                jeeOptions: [
+                    "5 rad/s",
+                    "10 rad/s",
+                    "20 rad/s",
+                    "25 rad/s"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "ω = v/R = 5/0.25 = 20 rad/s.",
+
+                checkQuestion:
+                    "Which statement is true for pure rolling without slipping?",
+
+                checkOptions: [
+                    {
+                        text: "v꜀ₘ = ωR",
+                        correct: true
+                    },
+                    {
+                        text: "Angular speed must be zero",
+                        correct: false
+                    },
+                    {
+                        text: "Translational kinetic energy must be zero",
+                        correct: false
+                    },
+                    {
+                        text: "The object must have zero mass",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Pure rolling satisfies v꜀ₘ = ωR.",
+
+                incorrectFeedback:
+                    "Remember that pure rolling connects centre-of-mass speed and angular speed."
+            }
+
         ]
 
     }
 
 };
+

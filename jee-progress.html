@@ -4,237 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>JEE Progress | BuildBright</title>
-
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .progress-chapter-list {
+            display: grid;
+            gap: 20px;
+        }
+    </style>
 </head>
 
 <body class="jee-progress-page">
 
     <header class="jee-nav">
-
-        <a href="index.html" class="jee-logo">
-            BuildBright
-        </a>
+        <a href="index.html" class="jee-logo">BuildBright</a>
 
         <nav>
             <a href="courses.html">Math</a>
             <a href="jee.html" class="active">JEE Prep</a>
             <a href="index.html#about">About</a>
         </nav>
-
     </header>
-
 
     <main>
 
-        <!-- =========================================
-         HERO
-    ========================================== -->
-
+        <!-- HERO -->
         <section class="progress-hero">
-
             <div class="progress-hero-inner">
-
                 <a href="jee.html" class="progress-back">
-
                     ← Back to JEE Prep
-
                 </a>
 
-                <span class="progress-eyebrow">
-                    BUILDBRIGHT JEE
-                </span>
+                <span class="progress-eyebrow">BUILDBRIGHT JEE</span>
 
-                <h1>
-                    Track Your Progress
-                </h1>
+                <h1>Track Your Progress</h1>
 
                 <p>
                     See what you've completed, how you're performing,
                     and where to focus next.
                 </p>
-
             </div>
-
         </section>
 
-
-        <!-- =========================================
-         DASHBOARD
-    ========================================== -->
-
+        <!-- DASHBOARD -->
         <section class="progress-dashboard">
 
             <!-- SUMMARY -->
-
             <div class="progress-summary-grid">
 
                 <article class="progress-summary-card">
-
                     <span>LESSONS COMPLETED</span>
-
-                    <strong id="totalLessonsCompleted">
-                        0
-                    </strong>
-
-                    <p>
-                        Lessons finished
-                    </p>
-
+                    <strong id="totalLessonsCompleted">0/24</strong>
+                    <p>Available Physics lessons</p>
                 </article>
 
-
                 <article class="progress-summary-card">
-
                     <span>PRACTICE ACCURACY</span>
-
-                    <strong id="overallPracticeAccuracy">
-                        —
-                    </strong>
-
-                    <p>
-                        Latest completed practice
-                    </p>
-
+                    <strong id="overallPracticeAccuracy">—</strong>
+                    <p>Average completed practice</p>
                 </article>
 
-
                 <article class="progress-summary-card">
-
                     <span>TEST ACCURACY</span>
-
-                    <strong id="overallTestAccuracy">
-                        —
-                    </strong>
-
-                    <p>
-                        Latest chapter test
-                    </p>
-
+                    <strong id="overallTestAccuracy">—</strong>
+                    <p>Average completed tests</p>
                 </article>
 
-
                 <article class="progress-summary-card">
-
                     <span>CHAPTERS MASTERED</span>
-
-                    <strong id="chaptersMastered">
-                        0
-                    </strong>
-
-                    <p>
-                        80%+ chapter test
-                    </p>
-
+                    <strong id="chaptersMastered">0/4</strong>
+                    <p>Chapter tests scoring 80%+</p>
                 </article>
 
             </div>
 
-
-            <!-- OVERALL -->
-
+            <!-- OVERALL PROGRESS -->
             <section class="progress-panel">
 
                 <div class="progress-panel-heading">
-
                     <div>
-
                         <span>OVERVIEW</span>
-
-                        <h2>
-                            JEE Preparation
-                        </h2>
-
+                        <h2>Available JEE Content</h2>
                     </div>
 
-                    <strong id="overallProgressText">
-                        0%
-                    </strong>
-
+                    <strong id="overallProgressText">0%</strong>
                 </div>
 
-
                 <div class="dashboard-progress-track">
-
-                    <div id="overallProgressFill">
-                    </div>
-
+                    <div id="overallProgressFill"></div>
                 </div>
 
 
                 <p class="progress-panel-note">
-                    Your current progress is based on available
-                    BuildBright JEE lessons, practice and chapter tests.
+                    Completion is calculated from the four available Physics chapters:
+                    Kinematics, Laws of Motion, Work, Energy and Power, and
+                    System of Particles and Rotational Motion.
+
+                    Each chapter includes six lessons, practice, and a chapter test.
+                    This represents available BuildBright content, not the full JEE syllabus.
                 </p>
 
             </section>
 
-
             <!-- SUBJECTS -->
-
             <section class="progress-subject-section">
 
                 <div class="progress-section-heading">
-
-                    <span>
-                        SUBJECTS
-                    </span>
-
-                    <h2>
-                        Your JEE Progress
-                    </h2>
-
+                    <span>SUBJECTS</span>
+                    <h2>Your JEE Progress</h2>
                 </div>
-
 
                 <div class="progress-subject-grid">
 
-
                     <!-- MATHEMATICS -->
-
                     <article class="progress-subject-card">
 
                         <div class="progress-subject-top">
-
-                            <div class="progress-subject-icon math">
-                                ∑
-                            </div>
+                            <div class="progress-subject-icon math">∑</div>
 
                             <div>
-
                                 <span>JEE SUBJECT</span>
-
-                                <h3>
-                                    Mathematics
-                                </h3>
-
+                                <h3>Mathematics</h3>
                             </div>
-
                         </div>
-
 
                         <div class="progress-subject-bar">
-
-                            <div style="width: 0%">
-                            </div>
-
+                            <div style="width: 0%"></div>
                         </div>
-
 
                         <div class="progress-subject-stats">
-
-                            <span>
-                                Content coming next
-                            </span>
-
-                            <strong>
-                                0%
-                            </strong>
-
+                            <span>Content coming next</span>
+                            <strong>—</strong>
                         </div>
-
 
                         <a href="jee-subject.html?subject=mathematics">
                             View Mathematics →
@@ -242,50 +144,29 @@
 
                     </article>
 
-
                     <!-- PHYSICS -->
-
                     <article class="progress-subject-card">
 
                         <div class="progress-subject-top">
-
-                            <div class="progress-subject-icon physics">
-                                ⚡
-                            </div>
+                            <div class="progress-subject-icon physics">⚡</div>
 
                             <div>
-
                                 <span>JEE SUBJECT</span>
-
-                                <h3>
-                                    Physics
-                                </h3>
-
+                                <h3>Physics</h3>
                             </div>
-
                         </div>
-
 
                         <div class="progress-subject-bar">
-
-                            <div id="physicsProgressFill">
-                            </div>
-
+                            <div id="physicsProgressFill"></div>
                         </div>
-
 
                         <div class="progress-subject-stats">
-
                             <span id="physicsProgressLabel">
-                                0 of 6 Kinematics lessons
+                                0 of 24 lessons · 4 chapters
                             </span>
 
-                            <strong id="physicsProgressPercent">
-                                0%
-                            </strong>
-
+                            <strong id="physicsProgressPercent">0%</strong>
                         </div>
-
 
                         <a href="jee-subject.html?subject=physics">
                             Continue Physics →
@@ -293,50 +174,26 @@
 
                     </article>
 
-
                     <!-- CHEMISTRY -->
-
                     <article class="progress-subject-card">
 
                         <div class="progress-subject-top">
-
-                            <div class="progress-subject-icon chemistry">
-                                ◇
-                            </div>
+                            <div class="progress-subject-icon chemistry">◇</div>
 
                             <div>
-
                                 <span>JEE SUBJECT</span>
-
-                                <h3>
-                                    Chemistry
-                                </h3>
-
+                                <h3>Chemistry</h3>
                             </div>
-
                         </div>
-
 
                         <div class="progress-subject-bar">
-
-                            <div style="width: 0%">
-                            </div>
-
+                            <div style="width: 0%"></div>
                         </div>
-
 
                         <div class="progress-subject-stats">
-
-                            <span>
-                                Content coming next
-                            </span>
-
-                            <strong>
-                                0%
-                            </strong>
-
+                            <span>Content coming next</span>
+                            <strong>—</strong>
                         </div>
-
 
                         <a href="jee-subject.html?subject=chemistry">
                             View Chemistry →
@@ -348,243 +205,28 @@
 
             </section>
 
-
-            <!-- KINEMATICS -->
-
+            <!-- CHAPTER PROGRESS -->
             <section class="progress-chapter-section">
 
                 <div class="progress-section-heading">
-
-                    <span>
-                        ACTIVE CHAPTER
-                    </span>
-
-                    <h2>
-                        Kinematics
-                    </h2>
-
+                    <span>ACTIVE CHAPTERS</span>
+                    <h2>Physics · Mechanics</h2>
                 </div>
 
-
-                <article class="progress-chapter-card">
-
-                    <div class="progress-chapter-header">
-
-                        <div>
-
-                            <span>
-                                PHYSICS · MECHANICS
-                            </span>
-
-                            <h3>
-                                Kinematics
-                            </h3>
-
-                        </div>
-
-
-                        <div class="progress-chapter-percent">
-
-                            <strong id="kinematicsOverallPercent">
-                                0%
-                            </strong>
-
-                            <span>
-                                complete
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="progress-chapter-main-track">
-
-                        <div id="kinematicsOverallFill">
-                        </div>
-
-                    </div>
-
-
-                    <div class="progress-milestone-grid">
-
-
-                        <!-- LESSONS -->
-
-                        <div class="progress-milestone">
-
-                            <div class="progress-milestone-heading">
-
-                                <span>
-                                    LESSONS
-                                </span>
-
-                                <strong id="kinematicsLessonCount">
-                                    0/6
-                                </strong>
-
-                            </div>
-
-
-                            <div class="progress-small-track">
-
-                                <div id="kinematicsLessonFill">
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- PRACTICE -->
-
-                        <div class="progress-milestone">
-
-                            <div class="progress-milestone-heading">
-
-                                <span>
-                                    PRACTICE
-                                </span>
-
-                                <strong id="kinematicsPracticeScore">
-                                    Not completed
-                                </strong>
-
-                            </div>
-
-
-                            <div class="progress-small-track">
-
-                                <div id="kinematicsPracticeFill">
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- TEST -->
-
-                        <div class="progress-milestone">
-
-                            <div class="progress-milestone-heading">
-
-                                <span>
-                                    CHAPTER TEST
-                                </span>
-
-                                <strong id="kinematicsTestScore">
-                                    Not completed
-                                </strong>
-
-                            </div>
-
-
-                            <div class="progress-small-track">
-
-                                <div id="kinematicsTestFill">
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="progress-next-step">
-
-                        <div>
-
-                            <span>
-                                RECOMMENDED NEXT STEP
-                            </span>
-
-                            <h3 id="nextStepTitle">
-                                Continue Kinematics
-                            </h3>
-
-                            <p id="nextStepText">
-                                Complete your next lesson.
-                            </p>
-
-                        </div>
-
-
-                        <a id="nextStepLink" href="#">
-
-                            Continue →
-
-                        </a>
-
-                    </div>
-
-                </article>
+                <div id="trackedChapterCards" class="progress-chapter-list">
+                </div>
 
             </section>
 
-
             <!-- RECENT RESULTS -->
-
             <section class="progress-results-section">
 
                 <div class="progress-section-heading">
-
-                    <span>
-                        PERFORMANCE
-                    </span>
-
-                    <h2>
-                        Recent Results
-                    </h2>
-
+                    <span>PERFORMANCE</span>
+                    <h2>Chapter Results</h2>
                 </div>
 
-
-                <div class="progress-results-grid">
-
-
-                    <article class="progress-result-card">
-
-                        <span>
-                            KINEMATICS PRACTICE
-                        </span>
-
-                        <strong id="recentPracticeScore">
-                            —
-                        </strong>
-
-                        <p id="recentPracticeText">
-                            Complete chapter practice to see your result.
-                        </p>
-
-                        <a href="jee-practice.html?subject=physics&category=Mechanics&chapter=Kinematics">
-                            Practice →
-                        </a>
-
-                    </article>
-
-
-                    <article class="progress-result-card">
-
-                        <span>
-                            KINEMATICS TEST
-                        </span>
-
-                        <strong id="recentTestScore">
-                            —
-                        </strong>
-
-                        <p id="recentTestText">
-                            Complete the chapter test to see your result.
-                        </p>
-
-                        <a href="jee-test.html?subject=physics&category=Mechanics&chapter=Kinematics">
-                            Chapter Test →
-                        </a>
-
-                    </article>
-
+                <div id="trackedResults" class="progress-results-grid">
                 </div>
 
             </section>
@@ -593,526 +235,627 @@
 
     </main>
 
-
     <footer class="jee-footer">
-
         <div>
-
-            <a href="index.html">
-                BuildBright
-            </a>
-
-            <p>
-                Learn deeply. Aim higher.
-            </p>
-
+            <a href="index.html">BuildBright</a>
+            <p>Learn deeply. Aim higher.</p>
         </div>
 
-        <span>
-            © 2026 BuildBright
-        </span>
-
+        <span>© 2026 BuildBright</span>
     </footer>
 
-
     <script>
+        /* ==========================================
+           BUILDBRIGHT JEE PROGRESS DASHBOARD
+           ========================================== */
 
-        /* =========================================================
-           SAFE STORAGE
-        ========================================================= */
+        /* Available chapters */
 
-        function getStoredValue(key) {
 
-            try {
 
-                return localStorage.getItem(key);
-
-            } catch (error) {
-
-                return null;
-
+        const chapterDefinitions = [
+            {
+                subject: "physics",
+                category: "Mechanics",
+                chapter: "Kinematics",
+                lessons: 6
+            },
+            {
+                subject: "physics",
+                category: "Mechanics",
+                chapter: "Laws of Motion",
+                lessons: 6
+            },
+            {
+                subject: "physics",
+                category: "Mechanics",
+                chapter: "Work, Energy and Power",
+                lessons: 6
+            },
+            {
+                subject: "physics",
+                category: "Mechanics",
+                chapter: "System of Particles and Rotational Motion",
+                lessons: 6
             }
+        ];
 
+
+
+
+        /* ==========================================
+           STORAGE HELPERS
+           ========================================== */
+
+        function readStorage(key) {
+            try {
+                return localStorage.getItem(key);
+            } catch (error) {
+                return null;
+            }
         }
 
+        function readJSON(key) {
+            const raw = readStorage(key);
 
-        function getStoredJSON(key) {
+            if (!raw) return null;
 
             try {
+                const data = JSON.parse(raw);
 
-                const value =
-                    localStorage.getItem(key);
-
-
-                if (!value) {
-                    return null;
+                if (
+                    data &&
+                    typeof data === "object" &&
+                    data.completed === true
+                ) {
+                    return data;
                 }
 
-
-                return JSON.parse(value);
-
-            } catch (error) {
-
                 return null;
 
+            } catch (error) {
+                return null;
+            }
+        }
+
+        function isLessonComplete(key) {
+            const value = readStorage(key);
+
+            return (
+                value === "true" ||
+                value === "1" ||
+                value === "completed" ||
+                value === '"true"'
+            );
+        }
+
+        function clampPercent(value) {
+            const number = Number(value);
+
+            if (!Number.isFinite(number)) {
+                return 0;
             }
 
+            return Math.max(
+                0,
+                Math.min(100, Math.round(number))
+            );
+        }
+
+        function getAccuracy(result) {
+            if (!result) return null;
+
+            const value = Number(result.accuracy);
+
+            if (!Number.isFinite(value)) {
+                return null;
+            }
+
+            return clampPercent(value);
         }
 
 
-        /* =========================================================
-           KINEMATICS LESSONS
-        ========================================================= */
+        /* ==========================================
+           BUILD CHAPTER LINKS
+           ========================================== */
 
-        const subject =
-            "physics";
+        function chapterURL(filename, chapter, lessonNumber) {
 
-        const category =
-            "Mechanics";
+            const params = new URLSearchParams({
+                subject: chapter.subject,
+                category: chapter.category,
+                chapter: chapter.chapter
+            });
 
-        const chapter =
-            "Kinematics";
-
-        const totalLessons =
-            6;
-
-
-        let completedLessons =
-            0;
-
-
-        for (
-            let lesson = 1;
-            lesson <= totalLessons;
-            lesson++
-        ) {
-
-            const key =
-
-                "jee-complete-" +
-                subject + "-" +
-                category + "-" +
-                chapter + "-" +
-                lesson;
-
-
-            if (
-                getStoredValue(key) === "true"
-            ) {
-
-                completedLessons++;
-
+            if (lessonNumber !== undefined) {
+                params.set("lesson", String(lessonNumber));
             }
 
+            return filename + "?" + params.toString();
         }
 
 
-        const lessonPercent =
-            Math.round(
-                (completedLessons / totalLessons) * 100
+        /* ==========================================
+           READ CHAPTER PROGRESS
+           ========================================== */
+
+        function getChapterProgress(chapter) {
+
+            const prefix = [
+                chapter.subject,
+                chapter.category,
+                chapter.chapter
+            ].join("-");
+
+            const lessonStatuses = [];
+
+            for (let i = 1; i <= chapter.lessons; i++) {
+
+                const key = "jee-complete-" + prefix + "-" + i;
+
+                lessonStatuses.push(isLessonComplete(key));
+            }
+
+            const completedLessons =
+                lessonStatuses.filter(Boolean).length;
+
+            const practice = readJSON(
+                "jee-practice-" + prefix
             );
 
+            const test = readJSON(
+                "jee-test-" + prefix
+            );
 
-        /* =========================================================
-           PRACTICE
-        ========================================================= */
-
-        const practiceKey =
-
-            "jee-practice-" +
-            subject + "-" +
-            category + "-" +
-            chapter;
-
-
-        const practiceResult =
-            getStoredJSON(practiceKey);
-
-
-        const practiceComplete =
-            practiceResult &&
-            practiceResult.completed;
-
-
-        const practiceAccuracy =
-            practiceComplete
-                ? Number(practiceResult.accuracy) || 0
-                : 0;
-
-
-        /* =========================================================
-           TEST
-        ========================================================= */
-
-        const testKey =
-
-            "jee-test-" +
-            subject + "-" +
-            category + "-" +
-            chapter;
-
-
-        const testResult =
-            getStoredJSON(testKey);
-
-
-        const testComplete =
-            testResult &&
-            testResult.completed;
-
-
-        const testAccuracy =
-            testComplete
-                ? Number(testResult.accuracy) || 0
-                : 0;
-
-
-        /* =========================================================
-           SUMMARY CARDS
-        ========================================================= */
-
-        document.getElementById(
-            "totalLessonsCompleted"
-        ).textContent =
-            completedLessons;
-
-
-        document.getElementById(
-            "overallPracticeAccuracy"
-        ).textContent =
-
-            practiceComplete
-                ? practiceAccuracy + "%"
-                : "—";
-
-
-        document.getElementById(
-            "overallTestAccuracy"
-        ).textContent =
-
-            testComplete
-                ? testAccuracy + "%"
-                : "—";
-
-
-        document.getElementById(
-            "chaptersMastered"
-        ).textContent =
-
-            testComplete &&
-                testAccuracy >= 80
-
-                ? "1"
-
-                : "0";
-
-
-        /* =========================================================
-           PHYSICS PROGRESS
-        ========================================================= */
-
-        document.getElementById(
-            "physicsProgressFill"
-        ).style.width =
-            lessonPercent + "%";
-
-
-        document.getElementById(
-            "physicsProgressPercent"
-        ).textContent =
-            lessonPercent + "%";
-
-
-        document.getElementById(
-            "physicsProgressLabel"
-        ).textContent =
-
-            completedLessons +
-            " of " +
-            totalLessons +
-            " Kinematics lessons";
-
-
-        /* =========================================================
-           CHAPTER MILESTONES
-        ========================================================= */
-
-        document.getElementById(
-            "kinematicsLessonCount"
-        ).textContent =
-
-            completedLessons +
-            "/" +
-            totalLessons;
-
-
-        document.getElementById(
-            "kinematicsLessonFill"
-        ).style.width =
-            lessonPercent + "%";
-
-
-        if (practiceComplete) {
-
-            document.getElementById(
-                "kinematicsPracticeScore"
-            ).textContent =
-                practiceAccuracy + "%";
-
-
-            document.getElementById(
-                "kinematicsPracticeFill"
-            ).style.width =
-                practiceAccuracy + "%";
-
-        }
-
-
-        if (testComplete) {
-
-            document.getElementById(
-                "kinematicsTestScore"
-            ).textContent =
-                testAccuracy + "%";
-
-
-            document.getElementById(
-                "kinematicsTestFill"
-            ).style.width =
-                testAccuracy + "%";
-
-        }
-
-
-        /* =========================================================
-           CHAPTER COMPLETION
-        ========================================================= */
-
-        /*
-           BuildBright chapter completion currently uses:
+            /*
+               Completion weighting:
+               Lessons: 60%
+               Practice: 20%
+               Chapter test: 20%
         
-           Lessons  = 60%
-           Practice = 20%
-           Test     = 20%
-        
-           Practice/test credit is awarded when completed.
-        */
+               Scores do not affect completion.
+            */
 
-        const lessonContribution =
-            (completedLessons / totalLessons) * 60;
+            const lessonContribution =
+                (completedLessons / chapter.lessons) * 60;
 
+            const practiceContribution = practice ? 20 : 0;
 
-        const practiceContribution =
-            practiceComplete
-                ? 20
-                : 0;
+            const testContribution = test ? 20 : 0;
 
-
-        const testContribution =
-            testComplete
-                ? 20
-                : 0;
-
-
-        const chapterPercent =
-            Math.round(
+            const completion = Math.round(
                 lessonContribution +
                 practiceContribution +
                 testContribution
             );
 
+            return {
+                ...chapter,
+                lessonStatuses,
+                completedLessons,
+                practice,
+                test,
+                completion
+            };
+        }
+
+
+        /* ==========================================
+           CALCULATE OVERALL PROGRESS
+           ========================================== */
+
+        const chapters = chapterDefinitions.map(
+            getChapterProgress
+        );
+
+        const totalLessons = chapters.reduce(
+            (sum, chapter) => sum + chapter.lessons,
+            0
+        );
+
+        const completedLessons = chapters.reduce(
+            (sum, chapter) => sum + chapter.completedLessons,
+            0
+        );
+
+        const overallProgress = Math.round(
+            chapters.reduce(
+                (sum, chapter) => sum + chapter.completion,
+                0
+            ) / chapters.length
+        );
+
+
+        /* ==========================================
+           CALCULATE PRACTICE / TEST ACCURACY
+           ========================================== */
+
+        function averageAccuracy(type) {
+
+            const scores = chapters
+                .map(chapter => getAccuracy(chapter[type]))
+                .filter(score => score !== null);
+
+            if (scores.length === 0) {
+                return null;
+            }
+
+            const total = scores.reduce(
+                (sum, score) => sum + score,
+                0
+            );
+
+            return Math.round(total / scores.length);
+        }
+
+        const practiceAccuracy = averageAccuracy("practice");
+
+        const testAccuracy = averageAccuracy("test");
+
+        const masteredChapters = chapters.filter(chapter => {
+
+            const accuracy = getAccuracy(chapter.test);
+
+            return accuracy !== null && accuracy >= 80;
+
+        }).length;
+
+
+        /* ==========================================
+           UPDATE SUMMARY CARDS
+           ========================================== */
 
         document.getElementById(
-            "kinematicsOverallPercent"
-        ).textContent =
-            chapterPercent + "%";
-
+            "totalLessonsCompleted"
+        ).textContent = completedLessons + "/" + totalLessons;
 
         document.getElementById(
-            "kinematicsOverallFill"
-        ).style.width =
-            chapterPercent + "%";
+            "overallPracticeAccuracy"
+        ).textContent = practiceAccuracy === null
+                ? "—"
+                : practiceAccuracy + "%";
 
+        document.getElementById(
+            "overallTestAccuracy"
+        ).textContent = testAccuracy === null
+                ? "—"
+                : testAccuracy + "%";
+
+        document.getElementById(
+            "chaptersMastered"
+        ).textContent = masteredChapters + "/" + chapters.length;
+
+
+        /* ==========================================
+           UPDATE OVERALL PROGRESS
+           ========================================== */
 
         document.getElementById(
             "overallProgressText"
-        ).textContent =
-            chapterPercent + "%";
-
+        ).textContent = overallProgress + "%";
 
         document.getElementById(
             "overallProgressFill"
-        ).style.width =
-            chapterPercent + "%";
+        ).style.width = overallProgress + "%";
+
+        document.getElementById(
+            "physicsProgressFill"
+        ).style.width = overallProgress + "%";
+
+        document.getElementById(
+            "physicsProgressPercent"
+        ).textContent = overallProgress + "%";
+
+        document.getElementById(
+            "physicsProgressLabel"
+        ).textContent =
+            completedLessons + " of " + totalLessons +
+            " lessons · " + chapters.length + " chapters";
 
 
-        /* =========================================================
-           RECENT RESULTS
-        ========================================================= */
+        /* ==========================================
+           RECOMMEND NEXT ACTIVITY
+           ========================================== */
 
-        if (practiceComplete) {
+        function getNextStep(chapter) {
 
-            document.getElementById(
-                "recentPracticeScore"
-            ).textContent =
-                practiceAccuracy + "%";
+            // Find the FIRST incomplete lesson,
+            // even if lessons were completed out of order.
 
+            const firstIncomplete =
+                chapter.lessonStatuses.findIndex(
+                    completed => !completed
+                );
 
-            document.getElementById(
-                "recentPracticeText"
-            ).textContent =
+            if (firstIncomplete !== -1) {
 
-                practiceResult.correct +
-                " of " +
-                practiceResult.total +
-                " questions correct.";
+                const lessonNumber = firstIncomplete + 1;
 
+                return {
+                    title: "Continue " + chapter.chapter,
+
+                    description:
+                        "Complete Lesson " +
+                        lessonNumber +
+                        " of " +
+                        chapter.lessons +
+                        ".",
+
+                    url: chapterURL(
+                        "jee-lesson.html",
+                        chapter,
+                        lessonNumber
+                    ),
+
+                    button: "Continue →"
+                };
+            }
+
+            if (!chapter.practice) {
+
+                return {
+                    title: "Start Chapter Practice",
+
+                    description:
+                        "Apply what you learned in " +
+                        chapter.chapter +
+                        ".",
+
+                    url: chapterURL(
+                        "jee-practice.html",
+                        chapter
+                    ),
+
+                    button: "Practice →"
+                };
+            }
+
+            if (!chapter.test) {
+
+                return {
+                    title: "Take the Chapter Test",
+
+                    description:
+                        "Your lessons and practice are complete.",
+
+                    url: chapterURL(
+                        "jee-test.html",
+                        chapter
+                    ),
+
+                    button: "Take Test →"
+                };
+            }
+
+            const testScore = getAccuracy(chapter.test);
+
+            if (testScore !== null && testScore < 80) {
+
+                return {
+                    title: "Review " + chapter.chapter,
+
+                    description:
+                        "Review your mistakes and retake the test.",
+
+                    url: chapterURL(
+                        "jee-test.html",
+                        chapter
+                    ),
+
+                    button: "Retake Test →"
+                };
+            }
+
+            return {
+                title: chapter.chapter + " Complete",
+
+                description:
+                    "You have completed this chapter's learning path.",
+
+                url: "jee-subject.html?subject=physics",
+
+                button: "Continue Physics →"
+            };
         }
 
 
-        if (testComplete) {
+        /* ==========================================
+           CREATE CHAPTER CARDS
+           ========================================== */
 
-            document.getElementById(
-                "recentTestScore"
-            ).textContent =
-                testAccuracy + "%";
+        function renderChapterCards() {
 
+            const container = document.getElementById(
+                "trackedChapterCards"
+            );
 
-            document.getElementById(
-                "recentTestText"
-            ).textContent =
+            container.innerHTML = "";
 
-                testResult.correct +
-                " of " +
-                testResult.total +
-                " questions correct.";
+            chapters.forEach(chapter => {
 
+                const nextStep = getNextStep(chapter);
+
+                const lessonPercent = Math.round(
+                    chapter.completedLessons /
+                    chapter.lessons * 100
+                );
+
+                const practiceScore = getAccuracy(
+                    chapter.practice
+                );
+
+                const testScore = getAccuracy(
+                    chapter.test
+                );
+
+                const practiceText = practiceScore === null
+                    ? "Not completed"
+                    : practiceScore + "%";
+
+                const testText = testScore === null
+                    ? "Not completed"
+                    : testScore + "%";
+
+                const card = document.createElement("article");
+
+                card.className = "progress-chapter-card";
+
+                card.innerHTML = `
+            <div class="progress-chapter-header">
+
+                <div>
+                    <span>PHYSICS · MECHANICS</span>
+                    <h3>${chapter.chapter}</h3>
+                </div>
+
+                <div class="progress-chapter-percent">
+                    <strong>${chapter.completion}%</strong>
+                    <span>complete</span>
+                </div>
+
+            </div>
+
+            <div class="progress-chapter-main-track">
+                <div style="width: ${chapter.completion}%"></div>
+            </div>
+
+            <div class="progress-milestone-grid">
+
+                <div class="progress-milestone">
+
+                    <div class="progress-milestone-heading">
+                        <span>LESSONS</span>
+                        <strong>
+                            ${chapter.completedLessons}/${chapter.lessons}
+                        </strong>
+                    </div>
+
+                    <div class="progress-small-track">
+                        <div style="width: ${lessonPercent}%"></div>
+                    </div>
+
+                </div>
+
+                <div class="progress-milestone">
+
+                    <div class="progress-milestone-heading">
+                        <span>PRACTICE</span>
+                        <strong>${practiceText}</strong>
+                    </div>
+
+                    <div class="progress-small-track">
+                        <div style="width: ${practiceScore ?? 0}%"></div>
+                    </div>
+
+                </div>
+
+                <div class="progress-milestone">
+
+                    <div class="progress-milestone-heading">
+                        <span>CHAPTER TEST</span>
+                        <strong>${testText}</strong>
+                    </div>
+
+                    <div class="progress-small-track">
+                        <div style="width: ${testScore ?? 0}%"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="progress-next-step">
+
+                <div>
+                    <span>RECOMMENDED NEXT STEP</span>
+
+                    <h3>${nextStep.title}</h3>
+
+                    <p>${nextStep.description}</p>
+                </div>
+
+                <a href="${nextStep.url}">
+                    ${nextStep.button}
+                </a>
+
+            </div>
+        `;
+
+                container.appendChild(card);
+            });
         }
 
 
-        /* =========================================================
-           NEXT STEP
-        ========================================================= */
+        /* ==========================================
+           CREATE RESULT CARDS
+           ========================================== */
 
-        const nextTitle =
-            document.getElementById(
-                "nextStepTitle"
+        function renderResults() {
+
+            const container = document.getElementById(
+                "trackedResults"
             );
 
+            container.innerHTML = "";
 
-        const nextText =
-            document.getElementById(
-                "nextStepText"
-            );
+            chapters.forEach(chapter => {
 
+                ["practice", "test"].forEach(type => {
 
-        const nextLink =
-            document.getElementById(
-                "nextStepLink"
-            );
+                    const result = chapter[type];
 
+                    const accuracy = getAccuracy(result);
 
-        const chapterQuery =
+                    const label = type === "practice"
+                        ? "PRACTICE"
+                        : "CHAPTER TEST";
 
-            "?subject=physics" +
-            "&category=Mechanics" +
-            "&chapter=Kinematics";
+                    const filename = type === "practice"
+                        ? "jee-practice.html"
+                        : "jee-test.html";
 
+                    const buttonText = type === "practice"
+                        ? "Practice →"
+                        : "Chapter Test →";
 
-        if (completedLessons < totalLessons) {
+                    const scoreText = accuracy === null
+                        ? "—"
+                        : accuracy + "%";
 
-            const nextLesson =
-                completedLessons + 1;
+                    const detailText = result
+                        ? `${result.correct} of ${result.total} questions correct.`
+                        : "Complete this activity to see your result.";
 
+                    const card = document.createElement("article");
 
-            nextTitle.textContent =
-                "Continue Kinematics";
+                    card.className = "progress-result-card";
 
+                    card.innerHTML = `
+                <span>
+                    ${chapter.chapter.toUpperCase()} ${label}
+                </span>
 
-            nextText.textContent =
+                <strong>${scoreText}</strong>
 
-                "Continue with Lesson " +
-                nextLesson +
-                " of " +
-                totalLessons +
-                ".";
+                <p>${detailText}</p>
 
+                <a href="${chapterURL(filename, chapter)}">
+                    ${buttonText}
+                </a>
+            `;
 
-            nextLink.href =
-
-                "jee-lesson.html" +
-                chapterQuery +
-                "&lesson=" +
-                nextLesson;
-
-
-        } else if (!practiceComplete) {
-
-            nextTitle.textContent =
-                "Start Chapter Practice";
-
-
-            nextText.textContent =
-                "You've completed the lessons. Apply what you learned with Kinematics practice.";
-
-
-            nextLink.href =
-
-                "jee-practice.html" +
-                chapterQuery;
-
-
-        } else if (!testComplete) {
-
-            nextTitle.textContent =
-                "Take the Chapter Test";
-
-
-            nextText.textContent =
-                "Your lessons and practice are complete. Test your Kinematics mastery.";
-
-
-            nextLink.href =
-
-                "jee-test.html" +
-                chapterQuery;
-
-
-        } else if (testAccuracy < 80) {
-
-            nextTitle.textContent =
-                "Strengthen Kinematics";
-
-
-            nextText.textContent =
-                "Review your missed questions, practice again, and retake the chapter test.";
-
-
-            nextLink.href =
-
-                "jee-test.html" +
-                chapterQuery;
-
-
-        } else {
-
-            nextTitle.textContent =
-                "Kinematics Complete";
-
-
-            nextText.textContent =
-                "You've completed the current BuildBright Kinematics learning path.";
-
-
-            nextLink.href =
-
-                "jee-subject.html?subject=physics";
-
-
-            nextLink.textContent =
-                "Continue Physics →";
-
+                    container.appendChild(card);
+                });
+            });
         }
+
+
+        /* ==========================================
+           INITIALIZE DASHBOARD
+           ========================================== */
+
+        renderChapterCards();
+        renderResults();
 
     </script>
 
