@@ -451,6 +451,887 @@ const jeePhysicsQuestions = {
 
         ]
 
+    },
+
+
+    "Laws of Motion": {
+
+        /* =================================================
+           CHAPTER PRACTICE
+           ================================================= */
+
+        practice: [
+
+            {
+                id: "lom-p-001",
+                topic: "Newton's First Law",
+                difficulty: "Foundation",
+
+                question:
+                    "A body moves with constant velocity in a straight line. What can be concluded about the net external force acting on it?",
+
+                options: [
+                    "It is zero",
+                    "It acts in the direction of motion",
+                    "It acts opposite to the direction of motion",
+                    "It continuously increases"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "Constant velocity means zero acceleration. From Newton's second law, ΣF = ma, so the net external force is zero."
+            },
+
+
+            {
+                id: "lom-p-002",
+                topic: "Newton's Second Law",
+                difficulty: "Foundation",
+
+                question:
+                    "A net force of 24 N acts on a 6 kg block. What is the acceleration of the block?",
+
+                options: [
+                    "2 m/s²",
+                    "4 m/s²",
+                    "6 m/s²",
+                    "144 m/s²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Using ΣF = ma, acceleration a = F/m = 24/6 = 4 m/s²."
+            },
+
+
+            {
+                id: "lom-p-003",
+                topic: "Net Force",
+                difficulty: "Foundation",
+
+                question:
+                    "Two horizontal forces of 18 N and 10 N act in opposite directions on a 4 kg block. What is the magnitude of its acceleration?",
+
+                options: [
+                    "2 m/s²",
+                    "4 m/s²",
+                    "7 m/s²",
+                    "28 m/s²"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "The net force is 18 − 10 = 8 N. Therefore a = 8/4 = 2 m/s²."
+            },
+
+
+            {
+                id: "lom-p-004",
+                topic: "Normal Force",
+                difficulty: "Foundation",
+
+                question:
+                    "A 7 kg block rests on a horizontal table. Taking g = 10 m/s² and assuming no other vertical forces act, what is the normal force?",
+
+                options: [
+                    "7 N",
+                    "10 N",
+                    "70 N",
+                    "700 N"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "The block has zero vertical acceleration. Therefore N = mg = 7 × 10 = 70 N."
+            },
+
+
+            {
+                id: "lom-p-005",
+                topic: "Static Friction",
+                difficulty: "Medium",
+
+                question:
+                    "A 10 kg block rests on a horizontal surface with coefficient of static friction 0.4. Taking g = 10 m/s², what is the maximum static friction?",
+
+                options: [
+                    "4 N",
+                    "25 N",
+                    "40 N",
+                    "100 N"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "N = mg = 100 N. Therefore maximum static friction is fₛ,max = μₛN = 0.4 × 100 = 40 N."
+            },
+
+
+            {
+                id: "lom-p-006",
+                topic: "Static Friction",
+                difficulty: "Medium",
+
+                question:
+                    "A horizontal force of 20 N is applied to a block that remains at rest. If the maximum possible static friction is 35 N, what is the actual static friction force?",
+
+                options: [
+                    "0 N",
+                    "15 N",
+                    "20 N",
+                    "35 N"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Static friction adjusts to the value required to prevent relative motion, up to its maximum. Since 20 N is below 35 N, the actual friction force is 20 N."
+            },
+
+
+            {
+                id: "lom-p-007",
+                topic: "Kinetic Friction",
+                difficulty: "Medium",
+
+                question:
+                    "A 5 kg block slides on a horizontal surface with coefficient of kinetic friction 0.2. Taking g = 10 m/s², what is the kinetic friction force?",
+
+                options: [
+                    "5 N",
+                    "10 N",
+                    "20 N",
+                    "50 N"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "N = mg = 50 N. Kinetic friction is fₖ = μₖN = 0.2 × 50 = 10 N."
+            },
+
+
+            {
+                id: "lom-p-008",
+                topic: "Newton's Third Law",
+                difficulty: "Medium",
+
+                question:
+                    "A person pushes a wall with a force of 100 N. According to Newton's third law, what force does the wall exert on the person?",
+
+                options: [
+                    "0 N",
+                    "50 N in the same direction",
+                    "100 N in the same direction",
+                    "100 N in the opposite direction"
+                ],
+
+                answer: 3,
+
+                explanation:
+                    "Newton's third law states that interaction forces have equal magnitudes and opposite directions. The wall therefore exerts 100 N on the person in the opposite direction."
+            },
+
+
+            {
+                id: "lom-p-009",
+                topic: "Connected Bodies",
+                difficulty: "JEE Level",
+
+                question:
+                    "Two blocks of masses 2 kg and 3 kg are connected by a light string on a frictionless horizontal surface. A 15 N horizontal force pulls the system. What is the acceleration?",
+
+                options: [
+                    "1 m/s²",
+                    "2 m/s²",
+                    "3 m/s²",
+                    "5 m/s²"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Treat both blocks as one system. Total mass = 2 + 3 = 5 kg. Therefore a = 15/5 = 3 m/s²."
+            },
+
+
+            {
+                id: "lom-p-010",
+                topic: "Force and Friction",
+                difficulty: "JEE Level",
+
+                question:
+                    "A 4 kg block is pulled horizontally by a 20 N force. A kinetic friction force of 8 N opposes the motion. What is the acceleration of the block?",
+
+                options: [
+                    "2 m/s²",
+                    "3 m/s²",
+                    "5 m/s²",
+                    "7 m/s²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Net force = 20 − 8 = 12 N. Therefore a = F_net/m = 12/4 = 3 m/s²."
+            }
+
+        ],
+
+
+        /* =================================================
+           CHAPTER TEST
+           ================================================= */
+
+        test: [
+
+            {
+                id: "lom-t-001",
+                topic: "Newton's First Law",
+
+                question:
+                    "An object is moving to the right at constant velocity. Which statement must be true?",
+
+                options: [
+                    "A net force acts to the right",
+                    "A net force acts to the left",
+                    "The net external force is zero",
+                    "No individual forces act on the object"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Constant velocity means zero acceleration. Therefore the vector sum of all external forces is zero."
+            },
+
+
+            {
+                id: "lom-t-002",
+                topic: "Newton's Second Law",
+
+                question:
+                    "A 5 kg object experiences a net force of 30 N. What is its acceleration?",
+
+                options: [
+                    "5 m/s²",
+                    "6 m/s²",
+                    "25 m/s²",
+                    "150 m/s²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Using F_net = ma, a = 30/5 = 6 m/s²."
+            },
+
+
+            {
+                id: "lom-t-003",
+                topic: "Force Components",
+
+                question:
+                    "A 10 kg block has a horizontal acceleration of 2 m/s². What net horizontal force acts on it?",
+
+                options: [
+                    "5 N",
+                    "10 N",
+                    "20 N",
+                    "50 N"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Using ΣFₓ = maₓ, the net horizontal force is 10 × 2 = 20 N."
+            },
+
+
+            {
+                id: "lom-t-004",
+                topic: "Free-Body Diagrams",
+
+                question:
+                    "Which force is always perpendicular to a contact surface?",
+
+                options: [
+                    "Weight",
+                    "Tension",
+                    "Normal force",
+                    "Friction"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "The normal force exerted by a surface acts perpendicular to that surface."
+            },
+
+
+            {
+                id: "lom-t-005",
+                topic: "Static Friction",
+
+                question:
+                    "A 20 kg block rests on a horizontal surface with μₛ = 0.3. Take g = 10 m/s². What is the maximum static friction?",
+
+                options: [
+                    "6 N",
+                    "20 N",
+                    "60 N",
+                    "200 N"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "N = mg = 200 N. Thus fₛ,max = μₛN = 0.3 × 200 = 60 N."
+            },
+
+
+            {
+                id: "lom-t-006",
+                topic: "Friction",
+
+                question:
+                    "A block remains at rest when a 25 N horizontal force is applied. The maximum static friction is 40 N. What is the magnitude of the friction force?",
+
+                options: [
+                    "0 N",
+                    "15 N",
+                    "25 N",
+                    "40 N"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Because the block remains at rest and 25 N is below the limiting friction, static friction adjusts to 25 N."
+            },
+
+
+            {
+                id: "lom-t-007",
+                topic: "Newton's Third Law",
+
+                question:
+                    "Which statement correctly describes a Newton's third-law pair?",
+
+                options: [
+                    "The two forces act on the same object",
+                    "The two forces have equal magnitude and act on different objects",
+                    "One force occurs before the other",
+                    "The larger object exerts the larger force"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Third-law forces are equal in magnitude and opposite in direction, and they act on different interacting objects."
+            },
+
+
+            {
+                id: "lom-t-008",
+                topic: "Connected Bodies",
+
+                question:
+                    "Blocks of 4 kg and 6 kg are connected on a frictionless horizontal surface. A 30 N horizontal external force acts on the system. What is their common acceleration?",
+
+                options: [
+                    "2 m/s²",
+                    "3 m/s²",
+                    "5 m/s²",
+                    "10 m/s²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Total mass = 4 + 6 = 10 kg. Therefore a = 30/10 = 3 m/s²."
+            },
+
+
+            {
+                id: "lom-t-009",
+                topic: "Connected Bodies",
+
+                question:
+                    "Two blocks of 2 kg and 3 kg are connected by a light string on a frictionless horizontal surface. A 20 N force pulls the 3 kg block. What is the tension in the string?",
+
+                options: [
+                    "4 N",
+                    "8 N",
+                    "12 N",
+                    "20 N"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "The system acceleration is 20/(2+3) = 4 m/s². For the 2 kg block, T = ma = 2 × 4 = 8 N."
+            },
+
+
+            {
+                id: "lom-t-010",
+                topic: "Force and Friction",
+
+                question:
+                    "A 6 kg block is pulled horizontally with a force of 30 N while kinetic friction of 12 N opposes its motion. What is its acceleration?",
+
+                options: [
+                    "2 m/s²",
+                    "3 m/s²",
+                    "5 m/s²",
+                    "7 m/s²"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "The net horizontal force is 30 − 12 = 18 N. Therefore a = 18/6 = 3 m/s²."
+            }
+
+
+        ]
+
+    },
+
+    "Work, Energy and Power": {
+
+        /* ==========================================
+           CHAPTER PRACTICE — 10 QUESTIONS
+           ========================================== */
+
+        practice: [
+
+            {
+                id: "wep-p-001",
+                topic: "Work Done",
+                difficulty: "Foundation",
+
+                question:
+                    "A constant horizontal force of 15 N moves an object 4 m in the direction of the force. How much work is done?",
+
+                options: [
+                    "15 J",
+                    "30 J",
+                    "60 J",
+                    "75 J"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "W = Fs cos θ. Here θ = 0°, so W = 15 × 4 = 60 J."
+            },
+
+            {
+                id: "wep-p-002",
+                topic: "Work and Angle",
+                difficulty: "Foundation",
+
+                question:
+                    "A force of 20 N acts at 60° to a displacement of 5 m. Find the work done by the force.",
+
+                options: [
+                    "25 J",
+                    "50 J",
+                    "75 J",
+                    "100 J"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "W = Fs cos θ = 20 × 5 × cos 60° = 50 J."
+            },
+
+            {
+                id: "wep-p-003",
+                topic: "Kinetic Energy",
+                difficulty: "Foundation",
+
+                question:
+                    "What is the kinetic energy of a 4 kg body moving at 5 m/s?",
+
+                options: [
+                    "20 J",
+                    "40 J",
+                    "50 J",
+                    "100 J"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "K = ½mv² = ½ × 4 × 25 = 50 J."
+            },
+
+            {
+                id: "wep-p-004",
+                topic: "Work–Energy Theorem",
+                difficulty: "Medium",
+
+                question:
+                    "A 2 kg body initially at rest experiences 36 J of net work. What is its final speed?",
+
+                options: [
+                    "3 m/s",
+                    "4 m/s",
+                    "6 m/s",
+                    "9 m/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Wnet = ΔK = ½mv². Therefore 36 = ½ × 2 × v², giving v = 6 m/s."
+            },
+
+            {
+                id: "wep-p-005",
+                topic: "Gravitational Potential Energy",
+                difficulty: "Foundation",
+
+                question:
+                    "A 3 kg object is raised vertically by 4 m. Find the increase in gravitational potential energy. Take g = 10 m/s².",
+
+                options: [
+                    "12 J",
+                    "40 J",
+                    "120 J",
+                    "300 J"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "ΔU = mgh = 3 × 10 × 4 = 120 J."
+            },
+
+            {
+                id: "wep-p-006",
+                topic: "Elastic Potential Energy",
+                difficulty: "Medium",
+
+                question:
+                    "A spring with spring constant 200 N/m is compressed by 0.10 m. How much elastic potential energy is stored?",
+
+                options: [
+                    "0.5 J",
+                    "1 J",
+                    "2 J",
+                    "10 J"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "U = ½kx² = ½ × 200 × (0.10)² = 1 J."
+            },
+
+            {
+                id: "wep-p-007",
+                topic: "Conservation of Energy",
+                difficulty: "Medium",
+
+                question:
+                    "A ball is dropped from rest from a height of 20 m. Ignoring air resistance, find its speed just before impact. Take g = 10 m/s².",
+
+                options: [
+                    "10 m/s",
+                    "15 m/s",
+                    "20 m/s",
+                    "40 m/s"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "mgh = ½mv², so v = √(2gh) = √400 = 20 m/s."
+            },
+
+            {
+                id: "wep-p-008",
+                topic: "Friction and Energy",
+                difficulty: "Medium",
+
+                question:
+                    "A frictional force of 5 N opposes a block moving through 8 m. What is the work done by friction?",
+
+                options: [
+                    "−40 J",
+                    "−13 J",
+                    "0 J",
+                    "40 J"
+                ],
+
+                answer: 0,
+
+                explanation:
+                    "Friction opposes displacement, so W = −fd = −5 × 8 = −40 J."
+            },
+
+            {
+                id: "wep-p-009",
+                topic: "Power",
+                difficulty: "Foundation",
+
+                question:
+                    "A motor performs 1200 J of work in 6 seconds. What is its average power?",
+
+                options: [
+                    "100 W",
+                    "200 W",
+                    "600 W",
+                    "7200 W"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Average power P = W/t = 1200/6 = 200 W."
+            },
+
+            {
+                id: "wep-p-010",
+                topic: "Efficiency",
+                difficulty: "Medium",
+
+                question:
+                    "A machine receives 800 J of energy and produces 600 J of useful output energy. What is its efficiency?",
+
+                options: [
+                    "60%",
+                    "70%",
+                    "75%",
+                    "80%"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Efficiency = (useful output/input) × 100 = (600/800) × 100 = 75%."
+            }
+
+        ],
+
+        /* ==========================================
+           CHAPTER TEST — 10 QUESTIONS
+           ========================================== */
+
+        test: [
+
+            {
+                id: "wep-t-001",
+                topic: "Variable Force",
+
+                question:
+                    "A force F = 4x N acts along the x-axis, where x is measured in meters. How much work is done as the object moves from x = 0 to x = 3 m?",
+
+                options: [
+                    "6 J",
+                    "12 J",
+                    "18 J",
+                    "36 J"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Work is the area under the force–position graph. W = ∫(0 to 3) 4x dx = 2x² evaluated from 0 to 3 = 18 J."
+            },
+
+            {
+                id: "wep-t-002",
+                topic: "Work–Energy Theorem",
+
+                question:
+                    "A 5 kg object increases its speed from 2 m/s to 6 m/s. What is the net work done on it?",
+
+                options: [
+                    "40 J",
+                    "60 J",
+                    "80 J",
+                    "100 J"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Wnet = ½m(v² − u²) = ½ × 5 × (36 − 4) = 80 J."
+            },
+
+            {
+                id: "wep-t-003",
+                topic: "Energy Conservation",
+
+                question:
+                    "A 2 kg block slides from rest down a frictionless track through a vertical height of 5 m. Find its speed at the bottom. Take g = 10 m/s².",
+
+                options: [
+                    "5 m/s",
+                    "10 m/s",
+                    "15 m/s",
+                    "20 m/s"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "mgh = ½mv². Therefore v = √(2 × 10 × 5) = 10 m/s."
+            },
+
+            {
+                id: "wep-t-004",
+                topic: "Spring Energy",
+
+                question:
+                    "An ideal spring with spring constant 400 N/m is compressed by 0.20 m. What energy is stored in the spring?",
+
+                options: [
+                    "4 J",
+                    "8 J",
+                    "16 J",
+                    "40 J"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "U = ½kx² = ½ × 400 × (0.20)² = 8 J."
+            },
+
+            {
+                id: "wep-t-005",
+                topic: "Friction and Energy",
+
+                question:
+                    "A 2 kg block moves at 10 m/s on a horizontal surface. A constant frictional force of 5 N brings it to rest. How far does it travel before stopping?",
+
+                options: [
+                    "10 m",
+                    "15 m",
+                    "20 m",
+                    "25 m"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Initial kinetic energy = ½ × 2 × 10² = 100 J. Friction removes this energy, so 5d = 100 and d = 20 m."
+            },
+
+            {
+                id: "wep-t-006",
+                topic: "Power",
+
+                question:
+                    "A constant force of 50 N acts in the direction of motion of an object traveling at 4 m/s. What instantaneous power does the force deliver?",
+
+                options: [
+                    "50 W",
+                    "100 W",
+                    "200 W",
+                    "400 W"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "P = Fv cos θ = 50 × 4 × cos 0° = 200 W."
+            },
+
+            {
+                id: "wep-t-007",
+                topic: "Gravitational Energy",
+
+                question:
+                    "A 1 kg object is thrown vertically upward at 20 m/s. Ignoring air resistance, what maximum height does it reach above its release point? Take g = 10 m/s².",
+
+                options: [
+                    "10 m",
+                    "20 m",
+                    "30 m",
+                    "40 m"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "At maximum height, final kinetic energy is zero. ½mu² = mgh, so h = u²/(2g) = 400/20 = 20 m."
+            },
+
+            {
+                id: "wep-t-008",
+                topic: "Non-Conservative Work",
+
+                question:
+                    "A 4 kg block starts from rest at a height of 10 m and slides to the bottom of a track. Friction does −80 J of work. Find its kinetic energy at the bottom. Take g = 10 m/s².",
+
+                options: [
+                    "240 J",
+                    "320 J",
+                    "400 J",
+                    "480 J"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Initial gravitational potential energy = mgh = 400 J. Final kinetic energy = 400 − 80 = 320 J."
+            },
+
+            {
+                id: "wep-t-009",
+                topic: "Conservative Forces",
+
+                question:
+                    "Which statement about a conservative force is correct?",
+
+                options: [
+                    "Its work always depends on the path length.",
+                    "Its work around any closed path is zero.",
+                    "Its work must always be positive.",
+                    "It always reduces mechanical energy."
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "For a conservative force, work depends only on the initial and final positions. The work done around a closed path is zero."
+            },
+
+            {
+                id: "wep-t-010",
+                topic: "Combined Energy and Power",
+
+                question:
+                    "A motor lifts a 100 kg load vertically through 6 m in 10 s at constant speed. If its efficiency is 75%, what is its average input power? Take g = 10 m/s².",
+
+                options: [
+                    "450 W",
+                    "600 W",
+                    "800 W",
+                    "1000 W"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Useful work = mgh = 100 × 10 × 6 = 6000 J. Useful power = 600 W. Input power = 600/0.75 = 800 W."
+            }
+
+        ]
+
     }
 
 };

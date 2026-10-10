@@ -674,6 +674,1459 @@ const jeePhysicsLessons = {
 
         ]
 
+    },
+
+
+    "Laws of Motion": {
+
+        description:
+            "Understand forces and motion using Newton's laws, free-body diagrams, friction, tension and connected-body systems.",
+
+        lessons: [
+
+            /* =================================================
+               LESSON 1
+               ================================================= */
+
+            {
+                title:
+                    "Force, Inertia and Newton's First Law",
+
+                description:
+                    "Understand force, inertia, equilibrium and why an object does not need a net force to keep moving.",
+
+                intro:
+                    "Newton's laws connect the forces acting on an object with changes in its motion. The first law establishes the idea of inertia and defines the special role of inertial reference frames.",
+
+                conceptTitle:
+                    "Newton's First Law",
+
+                conceptText:
+                    "An object remains at rest or continues moving with constant velocity unless acted upon by a non-zero net external force.",
+
+                body:
+                    "Force is an interaction capable of changing an object's velocity. If all external forces balance, the net force is zero and acceleration is zero. This does not necessarily mean the object is at rest; it may move with constant velocity.",
+
+                keyIdeas: [
+
+                    {
+                        label: "Net Force",
+
+                        formula:
+                            "F_net = ΣF",
+
+                        text:
+                            "The net force is the vector sum of all external forces acting on the object."
+                    },
+
+                    {
+                        label: "Equilibrium",
+
+                        formula:
+                            "ΣF = 0",
+
+                        text:
+                            "When the net external force is zero, acceleration is zero."
+                    },
+
+                    {
+                        label: "Inertia",
+
+                        formula:
+                            "Inertia ∝ mass",
+
+                        text:
+                            "Mass measures an object's resistance to changes in its velocity."
+                    }
+
+                ],
+
+                example: {
+
+                    problem:
+                        "A car moves along a straight horizontal road at a constant velocity of 20 m/s. What is the net force on the car?",
+
+                    steps: [
+
+                        "The velocity is constant.",
+
+                        "Therefore the acceleration is zero.",
+
+                        "From Newton's laws, zero acceleration means the net external force is zero.",
+
+                        "The engine may still exert a forward force, but it is balanced by resistive forces.",
+
+                        "Net force = 0 N."
+
+                    ]
+
+                },
+
+                jeeQuestion:
+                    "A block moves with constant velocity across a rough horizontal surface while being pulled horizontally. Which statement is correct?",
+
+                jeeOptions: [
+
+                    "No forces act on the block.",
+
+                    "The pulling force is greater than friction.",
+
+                    "The pulling force equals the friction force.",
+
+                    "The friction force is zero."
+
+                ],
+
+                jeeAnswer:
+                    2,
+
+                jeeExplanation:
+                    "Constant velocity means acceleration is zero, so the net horizontal force must be zero. Therefore the pulling force and friction have equal magnitudes and opposite directions.",
+
+                checkQuestion:
+                    "If the net external force on an object is zero, which statement must be true?",
+
+                checkOptions: [
+
+                    {
+                        text:
+                            "The object must be at rest.",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "The object's acceleration is zero.",
+                        correct: true
+                    },
+
+                    {
+                        text:
+                            "The object's velocity is zero.",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "No individual forces can act on the object.",
+                        correct: false
+                    }
+
+                ],
+
+                correctFeedback:
+                    "Correct. Zero net force means zero acceleration.",
+
+                incorrectFeedback:
+                    "Remember that zero net force means velocity does not change. The velocity itself does not have to be zero."
+            },
+
+
+            /* =================================================
+               LESSON 2
+               ================================================= */
+
+            {
+                title:
+                    "Newton's Second Law",
+
+                description:
+                    "Use net force and mass to determine acceleration.",
+
+                intro:
+                    "Newton's second law gives the quantitative relationship between force and acceleration and is the central equation used in force problems.",
+
+                conceptTitle:
+                    "Net Force Produces Acceleration",
+
+                conceptText:
+                    "The acceleration of an object is determined by the net external force acting on it and its mass.",
+
+                body:
+                    "Newton's second law is a vector equation. Forces must therefore be resolved into components when they act in different directions. The equation should be applied separately along each chosen coordinate axis.",
+
+                keyIdeas: [
+
+                    {
+                        label:
+                            "Newton's Second Law",
+
+                        formula:
+                            "ΣF = ma",
+
+                        text:
+                            "The vector sum of external forces equals mass multiplied by acceleration."
+                    },
+
+                    {
+                        label:
+                            "Horizontal Direction",
+
+                        formula:
+                            "ΣF_x = ma_x",
+
+                        text:
+                            "Apply Newton's second law independently along the x-axis."
+                    },
+
+                    {
+                        label:
+                            "Vertical Direction",
+
+                        formula:
+                            "ΣF_y = ma_y",
+
+                        text:
+                            "Apply Newton's second law independently along the y-axis."
+                    }
+
+                ],
+
+                example: {
+
+                    problem:
+                        "A net horizontal force of 18 N acts on a 6 kg block. Find its acceleration.",
+
+                    steps: [
+
+                        "Use Newton's second law: F_net = ma.",
+
+                        "Substitute F_net = 18 N and m = 6 kg.",
+
+                        "18 = 6a.",
+
+                        "a = 3 m/s²."
+
+                    ]
+
+                },
+
+                jeeQuestion:
+                    "Two horizontal forces of 20 N and 8 N act in opposite directions on a 4 kg block. What is the magnitude of its acceleration?",
+
+                jeeOptions: [
+
+                    "2 m/s²",
+
+                    "3 m/s²",
+
+                    "5 m/s²",
+
+                    "7 m/s²"
+
+                ],
+
+                jeeAnswer:
+                    1,
+
+                jeeExplanation:
+                    "The net force is 20 − 8 = 12 N. Therefore a = F_net/m = 12/4 = 3 m/s².",
+
+                checkQuestion:
+                    "The same net force is applied separately to masses m and 2m. How does the acceleration of 2m compare with that of m?",
+
+                checkOptions: [
+
+                    {
+                        text:
+                            "It is twice as large.",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "It is four times as large.",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "It is half as large.",
+                        correct: true
+                    },
+
+                    {
+                        text:
+                            "It is the same.",
+                        correct: false
+                    }
+
+                ],
+
+                correctFeedback:
+                    "Correct. For a fixed net force, acceleration is inversely proportional to mass.",
+
+                incorrectFeedback:
+                    "Use a = F/m. Doubling the mass while keeping force fixed halves the acceleration."
+            },
+
+
+            /* =================================================
+               LESSON 3
+               ================================================= */
+
+            {
+                title:
+                    "Free-Body Diagrams and Common Forces",
+
+                description:
+                    "Identify weight, normal force, tension and applied forces using free-body diagrams.",
+
+                intro:
+                    "Most Newton's-law problems become easier once every external force acting on the chosen object is identified correctly.",
+
+                conceptTitle:
+                    "Isolate the Object",
+
+                conceptText:
+                    "A free-body diagram represents one chosen object and shows only the external forces acting directly on that object.",
+
+                body:
+                    "Common forces include gravitational force, normal force, tension and friction. A normal force acts perpendicular to a contact surface. Tension acts along a taut string or rope. Weight acts vertically downward near Earth's surface.",
+
+                keyIdeas: [
+
+                    {
+                        label:
+                            "Weight",
+
+                        formula:
+                            "W = mg",
+
+                        text:
+                            "Near Earth's surface, gravitational force has magnitude mg and acts downward."
+                    },
+
+                    {
+                        label:
+                            "Normal Force",
+
+                        formula:
+                            "N ⟂ surface",
+
+                        text:
+                            "The normal force is perpendicular to the contact surface."
+                    },
+
+                    {
+                        label:
+                            "Tension",
+
+                        formula:
+                            "T along string",
+
+                        text:
+                            "For an ideal light string, tension acts along the string."
+                    }
+
+                ],
+
+                example: {
+
+                    problem:
+                        "A 5 kg block rests on a horizontal table. Taking g = 10 m/s², find the normal force.",
+
+                    steps: [
+
+                        "The block has no vertical acceleration.",
+
+                        "Weight acts downward: W = mg = 5 × 10 = 50 N.",
+
+                        "The normal force acts upward.",
+
+                        "Vertical equilibrium gives N − 50 = 0.",
+
+                        "N = 50 N."
+
+                    ]
+
+                },
+
+                jeeQuestion:
+                    "A block rests on a horizontal surface. Which pair of forces acts directly on the block in the vertical direction?",
+
+                jeeOptions: [
+
+                    "Weight downward and normal force upward",
+
+                    "Weight upward and normal force downward",
+
+                    "Friction downward and weight upward",
+
+                    "Tension upward and friction downward"
+
+                ],
+
+                jeeAnswer:
+                    0,
+
+                jeeExplanation:
+                    "The Earth exerts the gravitational force downward and the surface exerts the normal force upward.",
+
+                checkQuestion:
+                    "Which statement about the normal force is generally correct?",
+
+                checkOptions: [
+
+                    {
+                        text:
+                            "It always equals mg.",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "It always acts vertically upward.",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "It acts perpendicular to the contact surface.",
+                        correct: true
+                    },
+
+                    {
+                        text:
+                            "It is always greater than weight.",
+                        correct: false
+                    }
+
+                ],
+
+                correctFeedback:
+                    "Correct. The normal force is defined by its direction perpendicular to the contact surface.",
+
+                incorrectFeedback:
+                    "The normal force is not automatically equal to mg. Its defining feature is that it acts perpendicular to the contact surface."
+            },
+
+
+            /* =================================================
+               LESSON 4
+               ================================================= */
+
+            {
+                title:
+                    "Friction",
+
+                description:
+                    "Distinguish static and kinetic friction and solve limiting-friction problems.",
+
+                intro:
+                    "Friction acts between contacting surfaces and opposes relative motion or the tendency of relative motion.",
+
+                conceptTitle:
+                    "Static and Kinetic Friction",
+
+                conceptText:
+                    "Static friction adjusts up to a limiting value, while kinetic friction acts when surfaces slide relative to each other.",
+
+                body:
+                    "A common mistake is to assume static friction always equals μₛN. In fact, static friction takes whatever value is required to prevent slipping, up to the maximum value μₛN.",
+
+                keyIdeas: [
+
+                    {
+                        label:
+                            "Static Friction",
+
+                        formula:
+                            "f_s ≤ μ_s N",
+
+                        text:
+                            "Static friction varies from zero up to its limiting value."
+                    },
+
+                    {
+                        label:
+                            "Maximum Static Friction",
+
+                        formula:
+                            "f_s,max = μ_s N",
+
+                        text:
+                            "This is the largest possible static friction before slipping begins."
+                    },
+
+                    {
+                        label:
+                            "Kinetic Friction",
+
+                        formula:
+                            "f_k = μ_k N",
+
+                        text:
+                            "Kinetic friction applies when the surfaces are sliding."
+                    }
+
+                ],
+
+                example: {
+
+                    problem:
+                        "A 10 kg block rests on a horizontal surface with coefficient of static friction 0.4. Taking g = 10 m/s², find the maximum static friction.",
+
+                    steps: [
+
+                        "On the horizontal surface, N = mg.",
+
+                        "N = 10 × 10 = 100 N.",
+
+                        "Maximum static friction is μₛN.",
+
+                        "f_s,max = 0.4 × 100.",
+
+                        "f_s,max = 40 N."
+
+                    ]
+
+                },
+
+                jeeQuestion:
+                    "A 10 kg block rests on a horizontal rough surface with μₛ = 0.5. A horizontal force of 30 N is applied. Take g = 10 m/s². What is the static friction force?",
+
+                jeeOptions: [
+
+                    "0 N",
+
+                    "30 N",
+
+                    "50 N",
+
+                    "100 N"
+
+                ],
+
+                jeeAnswer:
+                    1,
+
+                jeeExplanation:
+                    "The maximum static friction is μₛN = 0.5 × 100 = 50 N. Since only 30 N is required to prevent motion, static friction is 30 N.",
+
+                checkQuestion:
+                    "A block remains at rest while a 15 N horizontal force is applied. If the maximum possible static friction is 40 N, what is the actual friction force?",
+
+                checkOptions: [
+
+                    {
+                        text:
+                            "15 N",
+                        correct: true
+                    },
+
+                    {
+                        text:
+                            "25 N",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "40 N",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "0 N",
+                        correct: false
+                    }
+
+                ],
+
+                correctFeedback:
+                    "Correct. Static friction adjusts to 15 N because that is all that is required to prevent motion.",
+
+                incorrectFeedback:
+                    "μₛN gives the maximum static friction, not necessarily the actual friction force."
+            },
+
+
+            /* =================================================
+               LESSON 5
+               ================================================= */
+
+            {
+                title:
+                    "Newton's Third Law and Connected Bodies",
+
+                description:
+                    "Apply action-reaction pairs and analyze connected blocks and tension.",
+
+                intro:
+                    "Newton's third law describes interactions between two bodies. Connected-body problems then combine these interactions with Newton's second law.",
+
+                conceptTitle:
+                    "Forces Come in Interaction Pairs",
+
+                conceptText:
+                    "If object A exerts a force on object B, object B simultaneously exerts an equal-magnitude, opposite-direction force on object A.",
+
+                body:
+                    "Third-law forces act on different objects, so they do not cancel on a single free-body diagram. For connected blocks, treating the entire system first can simplify the acceleration calculation. Individual blocks can then be analyzed to find tension.",
+
+                keyIdeas: [
+
+                    {
+                        label:
+                            "Third Law",
+
+                        formula:
+                            "F_AB = −F_BA",
+
+                        text:
+                            "Interaction forces have equal magnitude and opposite direction."
+                    },
+
+                    {
+                        label:
+                            "System Acceleration",
+
+                        formula:
+                            "a = F_ext / M_total",
+
+                        text:
+                            "For a connected system, internal tensions cancel when the whole system is considered."
+                    },
+
+                    {
+                        label:
+                            "Ideal String",
+
+                        formula:
+                            "T = constant",
+
+                        text:
+                            "For a massless ideal string over ideal connections, the tension is the same throughout the string."
+                    }
+
+                ],
+
+                example: {
+
+                    problem:
+                        "Blocks of 2 kg and 3 kg are connected on a frictionless horizontal surface. A horizontal external force of 10 N pulls the system. Find the acceleration.",
+
+                    steps: [
+
+                        "Treat both blocks as one system.",
+
+                        "Total mass = 2 + 3 = 5 kg.",
+
+                        "The external horizontal force is 10 N.",
+
+                        "Use F = ma.",
+
+                        "10 = 5a.",
+
+                        "a = 2 m/s²."
+
+                    ]
+
+                },
+
+                jeeQuestion:
+                    "Two blocks of 2 kg and 3 kg are connected by a light string on a frictionless horizontal surface. A 10 N force pulls the 3 kg block. What is the tension in the string?",
+
+                jeeOptions: [
+
+                    "2 N",
+
+                    "4 N",
+
+                    "6 N",
+
+                    "10 N"
+
+                ],
+
+                jeeAnswer:
+                    1,
+
+                jeeExplanation:
+                    "The system acceleration is 10/(2+3) = 2 m/s². The only horizontal force on the 2 kg block is tension, so T = 2 × 2 = 4 N.",
+
+                checkQuestion:
+                    "Why do Newton's third-law force pairs not cancel each other on the free-body diagram of one object?",
+
+                checkOptions: [
+
+                    {
+                        text:
+                            "They have different magnitudes.",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "They act at different times.",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "They act on different objects.",
+                        correct: true
+                    },
+
+                    {
+                        text:
+                            "They point in the same direction.",
+                        correct: false
+                    }
+
+                ],
+
+                correctFeedback:
+                    "Correct. A third-law pair consists of forces acting on two different objects.",
+
+                incorrectFeedback:
+                    "Third-law forces are equal and opposite, but they act on different objects."
+            },
+
+
+            /* =================================================
+               LESSON 6
+               ================================================= */
+
+            {
+                title:
+                    "Laws of Motion Review",
+
+                description:
+                    "Combine Newton's laws, free-body diagrams, friction and connected-body reasoning.",
+
+                intro:
+                    "JEE mechanics problems often require several ideas at once. The most reliable strategy is to choose the object or system, draw the forces, choose axes and then apply Newton's second law.",
+
+                conceptTitle:
+                    "A Systematic Force-Problem Strategy",
+
+                conceptText:
+                    "Choose the system, identify external forces, draw a free-body diagram, resolve forces along convenient axes and apply ΣF = ma.",
+
+                body:
+                    "Do not begin by selecting a formula. Begin by identifying the physical system and the forces acting on it. On inclined surfaces, axes parallel and perpendicular to the incline are often the most useful.",
+
+                keyIdeas: [
+
+                    {
+                        label:
+                            "Step 1",
+
+                        formula:
+                            "Choose system",
+
+                        text:
+                            "Decide exactly which object or collection of objects you are analyzing."
+                    },
+
+                    {
+                        label:
+                            "Step 2",
+
+                        formula:
+                            "Draw FBD",
+
+                        text:
+                            "Include only external forces acting on the selected system."
+                    },
+
+                    {
+                        label:
+                            "Step 3",
+
+                        formula:
+                            "ΣF = ma",
+
+                        text:
+                            "Resolve forces and apply Newton's second law along each useful axis."
+                    }
+
+                ],
+
+                example: {
+
+                    problem:
+                        "A 5 kg block slides on a horizontal surface with coefficient of kinetic friction 0.2. A horizontal force of 20 N pulls it. Taking g = 10 m/s², find its acceleration.",
+
+                    steps: [
+
+                        "Normal force N = mg = 50 N.",
+
+                        "Kinetic friction fₖ = μₖN = 0.2 × 50 = 10 N.",
+
+                        "Net horizontal force = 20 − 10 = 10 N.",
+
+                        "Use F_net = ma.",
+
+                        "10 = 5a.",
+
+                        "a = 2 m/s²."
+
+                    ]
+
+                },
+
+                jeeQuestion:
+                    "A 4 kg block is pulled horizontally by a 20 N force on a surface where kinetic friction is 8 N. What is its acceleration?",
+
+                jeeOptions: [
+
+                    "2 m/s²",
+
+                    "3 m/s²",
+
+                    "5 m/s²",
+
+                    "7 m/s²"
+
+                ],
+
+                jeeAnswer:
+                    1,
+
+                jeeExplanation:
+                    "The net force is 20 − 8 = 12 N. Therefore a = 12/4 = 3 m/s².",
+
+                checkQuestion:
+                    "Which should normally be done before writing Newton's second-law equations for a mechanics problem?",
+
+                checkOptions: [
+
+                    {
+                        text:
+                            "Assume the normal force equals mg.",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "Identify the system and the forces acting on it.",
+                        correct: true
+                    },
+
+                    {
+                        text:
+                            "Set friction equal to μN in every problem.",
+                        correct: false
+                    },
+
+                    {
+                        text:
+                            "Assume acceleration is in the direction of velocity.",
+                        correct: false
+                    }
+
+                ],
+
+                correctFeedback:
+                    "Correct. Choosing the system and identifying its external forces comes first.",
+
+                incorrectFeedback:
+                    "Start by identifying the system and drawing the forces. The equations follow from that model."
+            }
+
+
+        ]
+
+    },
+
+    "Work, Energy and Power": {
+
+        description:
+            "Learn how forces transfer energy, how energy is stored and conserved, and how quickly work is performed.",
+
+        lessons: [
+
+            // LESSON 1
+            {
+                title: "Work and the Work–Energy Theorem",
+
+                description:
+                    "Understand work done by a force and its connection to changes in kinetic energy.",
+
+                intro:
+                    "In physics, work occurs when a force acts through a displacement. The amount of work depends on the force, displacement and angle between them.",
+
+                conceptTitle:
+                    "Work transfers energy between a system and its surroundings.",
+
+                conceptText:
+                    "For a constant force, work is the dot product of force and displacement. Net work equals the change in kinetic energy.",
+
+                body:
+                    "Work is positive when the force has a component along displacement, negative when it opposes displacement, and zero when it is perpendicular. The SI unit of work is the joule (J). The work–energy theorem is valid even when multiple forces act on an object.",
+
+                keyIdeas: [
+                    {
+                        label: "WORK",
+                        formula: "W = Fs cos θ",
+                        text:
+                            "Work by a constant force equals force times displacement times the cosine of the angle between them."
+                    },
+                    {
+                        label: "NET WORK",
+                        formula: "Wₙₑₜ = ΔK",
+                        text:
+                            "The total work done by all forces equals the change in kinetic energy."
+                    },
+                    {
+                        label: "ZERO WORK",
+                        formula: "θ = 90° ⇒ W = 0",
+                        text:
+                            "A force perpendicular to displacement performs no work."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A 5 kg block initially at rest is pulled horizontally through 4 m by a constant net force of 10 N. Find its final speed.",
+
+                    steps: [
+                        "Net work = Fs = 10 × 4 = 40 J.",
+                        "By the work–energy theorem, Wₙₑₜ = ΔK.",
+                        "Since the block starts from rest, 40 = ½mv².",
+                        "40 = ½ × 5 × v².",
+                        "v² = 16, so v = 4 m/s."
+                    ]
+                },
+
+                jeeQuestion:
+                    "A force of 20 N acts at 60° to a displacement of 5 m. How much work does the force perform?",
+
+                jeeOptions: [
+                    "25 J",
+                    "50 J",
+                    "100 J",
+                    "200 J"
+                ],
+
+                jeeAnswer: 1,
+
+                jeeExplanation:
+                    "W = Fs cos θ = 20 × 5 × cos 60° = 50 J.",
+
+                checkQuestion:
+                    "Which statement correctly describes net work?",
+
+                checkOptions: [
+                    {
+                        text: "Net work always equals the initial kinetic energy.",
+                        correct: false
+                    },
+                    {
+                        text: "Net work equals the change in kinetic energy.",
+                        correct: true
+                    },
+                    {
+                        text: "Net work is always positive.",
+                        correct: false
+                    },
+                    {
+                        text: "Net work depends only on time.",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. The work–energy theorem states Wₙₑₜ = ΔK.",
+
+                incorrectFeedback:
+                    "Remember that net work changes an object's kinetic energy."
+            },
+
+            // LESSON 2
+            {
+                title: "Kinetic and Potential Energy",
+
+                description:
+                    "Calculate the energy associated with motion, height and elastic deformation.",
+
+                intro:
+                    "Objects can possess energy because they move or because of their position or configuration.",
+
+                conceptTitle:
+                    "Kinetic energy depends on speed; potential energy depends on configuration.",
+
+                conceptText:
+                    "Kinetic energy is associated with motion. Gravitational and elastic potential energies are associated with interactions and stored configurations.",
+
+                body:
+                    "Kinetic energy is proportional to the square of speed. Near Earth's surface, gravitational potential energy changes with height. An ideal spring stores elastic potential energy when stretched or compressed. Potential energy belongs to the interacting system, such as an object and Earth or a mass and spring.",
+
+                keyIdeas: [
+                    {
+                        label: "KINETIC ENERGY",
+                        formula: "K = ½mv²",
+                        text:
+                            "Energy associated with motion."
+                    },
+                    {
+                        label: "GRAVITATIONAL POTENTIAL ENERGY",
+                        formula: "U = mgh",
+                        text:
+                            "Potential energy relative to a chosen reference height near Earth's surface."
+                    },
+                    {
+                        label: "ELASTIC POTENTIAL ENERGY",
+                        formula: "U = ½kx²",
+                        text:
+                            "Energy stored in an ideal spring stretched or compressed by x."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A 2 kg object moves at 6 m/s at a height of 5 m. Find its kinetic and gravitational potential energies. Take g = 10 m/s² and zero potential energy at ground level.",
+
+                    steps: [
+                        "Kinetic energy K = ½mv².",
+                        "K = ½ × 2 × 6² = 36 J.",
+                        "Gravitational potential energy U = mgh.",
+                        "U = 2 × 10 × 5 = 100 J.",
+                        "Total mechanical energy = 36 + 100 = 136 J."
+                    ]
+                },
+
+                jeeQuestion:
+                    "If the speed of an object doubles while its mass stays constant, its kinetic energy becomes:",
+
+                jeeOptions: [
+                    "Twice the original",
+                    "Three times the original",
+                    "Four times the original",
+                    "Eight times the original"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "Kinetic energy is proportional to v². Doubling speed multiplies kinetic energy by four.",
+
+                checkQuestion:
+                    "Which quantity determines the elastic potential energy stored in an ideal spring?",
+
+                checkOptions: [
+                    {
+                        text: "Only the mass attached to the spring",
+                        correct: false
+                    },
+                    {
+                        text: "Spring constant and squared deformation",
+                        correct: true
+                    },
+                    {
+                        text: "Only the velocity of the spring",
+                        correct: false
+                    },
+                    {
+                        text: "Only the time of compression",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Elastic potential energy is U = ½kx².",
+
+                incorrectFeedback:
+                    "Review the elastic potential energy equation U = ½kx²."
+            },
+
+            // LESSON 3
+            {
+                title: "Conservative and Non-Conservative Forces",
+
+                description:
+                    "Distinguish path-independent forces from forces that change mechanical energy.",
+
+                intro:
+                    "Some forces do work that depends only on the starting and ending positions. Other forces can do different amounts of work along different paths.",
+
+                conceptTitle:
+                    "Conservative forces have path-independent work.",
+
+                conceptText:
+                    "Gravity and ideal spring forces are conservative. Kinetic friction is non-conservative because its work depends on the distance traveled.",
+
+                body:
+                    "For a conservative force, work equals the negative change in its associated potential energy. Over a closed path, the total work done by a conservative force is zero. Non-conservative forces, such as kinetic friction, can transform mechanical energy into thermal energy. Total energy is still conserved when all forms of energy are included.",
+
+                keyIdeas: [
+                    {
+                        label: "CONSERVATIVE WORK",
+                        formula: "W꜀ = −ΔU",
+                        text:
+                            "Work by a conservative force is the negative change in potential energy."
+                    },
+                    {
+                        label: "CLOSED PATH",
+                        formula: "W꜀ = 0",
+                        text:
+                            "A conservative force does zero net work over a closed path."
+                    },
+                    {
+                        label: "FRICTION",
+                        formula: "W𝒇 = −fₖd",
+                        text:
+                            "Kinetic friction opposes sliding and performs negative work over sliding distance d."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A 3 kg object moves downward through 4 m. Find the work done by gravity. Take g = 10 m/s².",
+
+                    steps: [
+                        "Gravity acts downward with magnitude mg.",
+                        "The displacement is also downward.",
+                        "W = mgd cos 0°.",
+                        "W = 3 × 10 × 4 = 120 J.",
+                        "The work is positive because force and displacement are aligned."
+                    ]
+                },
+
+                jeeQuestion:
+                    "Which of the following is a conservative force?",
+
+                jeeOptions: [
+                    "Kinetic friction",
+                    "Air resistance",
+                    "Gravitational force",
+                    "Viscous drag"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "Gravitational force is conservative; its work depends only on the initial and final positions.",
+
+                checkQuestion:
+                    "What is the work done by a conservative force around a closed path?",
+
+                checkOptions: [
+                    {
+                        text: "Always positive",
+                        correct: false
+                    },
+                    {
+                        text: "Always negative",
+                        correct: false
+                    },
+                    {
+                        text: "Zero",
+                        correct: true
+                    },
+                    {
+                        text: "Equal to the total distance",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Conservative forces do zero work over a closed path.",
+
+                incorrectFeedback:
+                    "A conservative force depends only on the endpoints, so a closed path gives zero net work."
+            },
+
+            // LESSON 4
+            {
+                title: "Conservation of Mechanical Energy",
+
+                description:
+                    "Use energy conservation to solve motion problems without calculating time.",
+
+                intro:
+                    "When only conservative forces do work on a system, its mechanical energy remains constant.",
+
+                conceptTitle:
+                    "Energy can change form without changing the total mechanical energy.",
+
+                conceptText:
+                    "Kinetic and potential energy may increase or decrease, but their sum stays constant when no non-conservative work is done.",
+
+                body:
+                    "Mechanical energy is the sum of kinetic and potential energy. For a freely falling object without air resistance, gravitational potential energy converts into kinetic energy. For a spring–mass system without friction, elastic potential energy can convert into kinetic energy. When non-conservative forces do work, their work equals the change in mechanical energy.",
+
+                keyIdeas: [
+                    {
+                        label: "MECHANICAL ENERGY",
+                        formula: "E = K + U",
+                        text:
+                            "Mechanical energy combines kinetic and potential energy."
+                    },
+                    {
+                        label: "CONSERVATION",
+                        formula: "Kᵢ + Uᵢ = K𝒇 + U𝒇",
+                        text:
+                            "Mechanical energy is conserved when only conservative forces do work."
+                    },
+                    {
+                        label: "NON-CONSERVATIVE WORK",
+                        formula: "Wₙ꜀ = Δ(K + U)",
+                        text:
+                            "Work by non-conservative forces changes mechanical energy."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A ball is dropped from rest at a height of 20 m. Find its speed just before reaching the ground. Ignore air resistance and take g = 10 m/s².",
+
+                    steps: [
+                        "Choose gravitational potential energy to be zero at ground level.",
+                        "Initially Kᵢ = 0 and Uᵢ = mgh.",
+                        "Just before impact, U𝒇 = 0 and K𝒇 = ½mv².",
+                        "Conservation gives mgh = ½mv².",
+                        "Cancel m: v² = 2gh = 2 × 10 × 20 = 400.",
+                        "Therefore v = 20 m/s."
+                    ]
+                },
+
+                jeeQuestion:
+                    "A body falls freely from rest through a height of 5 m. What is its speed after falling this distance? Take g = 10 m/s².",
+
+                jeeOptions: [
+                    "5 m/s",
+                    "10 m/s",
+                    "15 m/s",
+                    "20 m/s"
+                ],
+
+                jeeAnswer: 1,
+
+                jeeExplanation:
+                    "v = √(2gh) = √(2 × 10 × 5) = 10 m/s.",
+
+                checkQuestion:
+                    "When is mechanical energy conserved?",
+
+                checkOptions: [
+                    {
+                        text: "Whenever the object moves",
+                        correct: false
+                    },
+                    {
+                        text: "When only conservative forces do work",
+                        correct: true
+                    },
+                    {
+                        text: "Whenever friction is present",
+                        correct: false
+                    },
+                    {
+                        text: "Only when kinetic energy is zero",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Mechanical energy is conserved when non-conservative work is zero.",
+
+                incorrectFeedback:
+                    "Mechanical energy remains constant when only conservative forces perform work."
+            },
+
+            // LESSON 5
+            {
+                title: "Power and Efficiency",
+
+                description:
+                    "Calculate the rate of doing work and the efficiency of energy conversion.",
+
+                intro:
+                    "Two machines may perform the same amount of work but take different amounts of time. Power measures how quickly work is performed.",
+
+                conceptTitle:
+                    "Power is the rate of energy transfer.",
+
+                conceptText:
+                    "Average power is work divided by elapsed time. Instantaneous mechanical power equals the dot product of force and velocity.",
+
+                body:
+                    "The SI unit of power is the watt, equal to one joule per second. A machine with greater power can transfer energy faster. Efficiency compares useful output energy or power with total input energy or power. Efficiency cannot exceed 100% for a real energy-conversion device.",
+
+                keyIdeas: [
+                    {
+                        label: "AVERAGE POWER",
+                        formula: "P = W/t",
+                        text:
+                            "Average power is work divided by the time interval."
+                    },
+                    {
+                        label: "INSTANTANEOUS POWER",
+                        formula: "P = Fv cos θ",
+                        text:
+                            "Instantaneous mechanical power depends on force and velocity."
+                    },
+                    {
+                        label: "EFFICIENCY",
+                        formula: "η = (Useful output/Input) × 100%",
+                        text:
+                            "Efficiency measures the fraction of input energy or power delivered usefully."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A motor lifts a 50 kg load vertically through 4 m in 5 s. Find its average useful power. Take g = 10 m/s².",
+
+                    steps: [
+                        "Useful work done = mgh.",
+                        "W = 50 × 10 × 4 = 2000 J.",
+                        "Average power = W/t.",
+                        "P = 2000/5 = 400 W.",
+                        "The motor delivers 400 W of average useful power."
+                    ]
+                },
+
+                jeeQuestion:
+                    "A machine receives 500 W of input power and delivers 400 W of useful output power. What is its efficiency?",
+
+                jeeOptions: [
+                    "60%",
+                    "70%",
+                    "80%",
+                    "90%"
+                ],
+
+                jeeAnswer: 2,
+
+                jeeExplanation:
+                    "Efficiency = (400/500) × 100% = 80%.",
+
+                checkQuestion:
+                    "What is the SI unit of power?",
+
+                checkOptions: [
+                    {
+                        text: "Joule",
+                        correct: false
+                    },
+                    {
+                        text: "Newton",
+                        correct: false
+                    },
+                    {
+                        text: "Watt",
+                        correct: true
+                    },
+                    {
+                        text: "Meter",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. One watt equals one joule per second.",
+
+                incorrectFeedback:
+                    "Power is measured in watts (W), where 1 W = 1 J/s."
+            },
+
+            // LESSON 6
+            {
+                title: "Work, Energy and Power Review",
+
+                description:
+                    "Combine work, energy conservation, friction and power to solve multi-step problems.",
+
+                intro:
+                    "JEE mechanics problems often combine several ideas. Choosing the right energy principle can make a complicated problem much simpler.",
+
+                conceptTitle:
+                    "Identify the system, forces and energy changes before calculating.",
+
+                conceptText:
+                    "Use the work–energy theorem for net work, mechanical energy conservation when only conservative forces do work, and the general energy equation when friction or other non-conservative work is present.",
+
+                body:
+                    "Start by identifying the initial and final states. Determine whether the system contains gravitational or elastic potential energy. Check for friction and other non-conservative forces. Write an energy equation, substitute the known quantities, and verify that the units and physical result make sense.",
+
+                keyIdeas: [
+                    {
+                        label: "WORK–ENERGY THEOREM",
+                        formula: "Wₙₑₜ = ΔK",
+                        text:
+                            "Use when net work changes kinetic energy."
+                    },
+                    {
+                        label: "MECHANICAL ENERGY",
+                        formula: "Kᵢ + Uᵢ + Wₙ꜀ = K𝒇 + U𝒇",
+                        text:
+                            "Include non-conservative work when mechanical energy changes."
+                    },
+                    {
+                        label: "POWER",
+                        formula: "P = dW/dt",
+                        text:
+                            "Power is the rate of doing work."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A 2 kg block starts from rest and slides down a track through a vertical height of 5 m. Friction does −20 J of work. Find its speed at the bottom. Take g = 10 m/s².",
+
+                    steps: [
+                        "Choose zero gravitational potential energy at the bottom.",
+                        "Initial energy = mgh = 2 × 10 × 5 = 100 J.",
+                        "Work done by friction = −20 J.",
+                        "Final kinetic energy = 100 − 20 = 80 J.",
+                        "½mv² = 80.",
+                        "½ × 2 × v² = 80, so v² = 80.",
+                        "v = √80 ≈ 8.94 m/s."
+                    ]
+                },
+
+                jeeQuestion:
+                    "A 4 kg object starts from rest and gains 200 J of kinetic energy. What is its final speed?",
+
+                jeeOptions: [
+                    "5 m/s",
+                    "10 m/s",
+                    "15 m/s",
+                    "20 m/s"
+                ],
+
+                jeeAnswer: 1,
+
+                jeeExplanation:
+                    "½mv² = 200. Therefore ½ × 4 × v² = 200, giving v² = 100 and v = 10 m/s.",
+
+                checkQuestion:
+                    "Which equation is most useful when friction changes a system's mechanical energy?",
+
+                checkOptions: [
+                    {
+                        text: "Kᵢ + Uᵢ = K𝒇 + U𝒇 in every situation",
+                        correct: false
+                    },
+                    {
+                        text: "Kᵢ + Uᵢ + Wₙ꜀ = K𝒇 + U𝒇",
+                        correct: true
+                    },
+                    {
+                        text: "Power always equals zero",
+                        correct: false
+                    },
+                    {
+                        text: "Potential energy must remain constant",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct. Non-conservative work accounts for changes in mechanical energy.",
+
+                incorrectFeedback:
+                    "Include the work done by friction or other non-conservative forces in the energy equation."
+            }
+
+        ]
+
     }
 
 };
