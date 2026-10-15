@@ -418,6 +418,9 @@
     </div>
 
     <script src="jee-physics-questions.js"></script>
+    <script src="jee-math-questions.js"></script>
+    <script src="jee-chemistry-questions.js"></script>
+    <script src="jee-question-loader.js"></script>
 
     <script>
 
@@ -448,17 +451,7 @@
         let questions = [];
 
 
-        if (
-            subject === "physics" &&
-            typeof jeePhysicsQuestions !== "undefined" &&
-            jeePhysicsQuestions[chapter] &&
-            jeePhysicsQuestions[chapter].test
-        ) {
-
-            questions =
-                jeePhysicsQuestions[chapter].test;
-
-        }
+        questions = getJeeQuestions(subject, chapter, "test");
 
 
         if (questions.length === 0) {

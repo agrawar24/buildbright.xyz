@@ -14526,3 +14526,295 @@ body.new-home .path-card::after {
 body.new-home .choose-path-heading {
     color: #d6ef9f !important;
 }
+
+/* JEE LANDING PAGE — INTERACTIVE PRACTICE CARDS */
+
+body.jee-page .jee-practice-grid a.jee-tool-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+body.jee-page .jee-practice-grid a.jee-tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(60, 40, 80, 0.12);
+}
+
+body.jee-page .jee-practice-grid a.jee-tool-card .jee-tool-status {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 22px;
+    font-weight: 800;
+}
+
+body.jee-page .jee-practice-grid a.jee-tool-card:focus-visible {
+    outline: 3px solid #7652ac;
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   BUILDBRIGHT — JEE QUESTION BANK
+   ========================================== */
+
+body.jee-questions-page {
+    background: #f8f6f0;
+    color: #191919;
+    font-family: "DM Sans", sans-serif;
+}
+
+body.jee-questions-page .question-bank-main {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 45px 24px 100px;
+}
+
+body.jee-questions-page .question-bank-hero {
+    background: #e8dcff;
+    padding: 45px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+
+body.jee-questions-page .question-bank-back {
+    display: inline-block;
+    margin-bottom: 35px;
+    color: #665080;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+body.jee-questions-page .question-bank-label,
+body.jee-questions-page .question-bank-heading span {
+    display: block;
+    color: #7652ac;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+}
+
+body.jee-questions-page .question-bank-hero h1 {
+    color: #191919;
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(36px, 6vw, 65px);
+    line-height: 1.08;
+    letter-spacing: -0.05em;
+    margin: 15px 0;
+}
+
+body.jee-questions-page .question-bank-hero p {
+    color: #584c66;
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+body.jee-questions-page .question-bank-note {
+    display: inline-block;
+    background: #ffffff;
+    color: #665080;
+    padding: 10px 15px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+body.jee-questions-page .question-bank-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+body.jee-questions-page .question-bank-heading h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(26px, 4vw, 40px);
+    letter-spacing: -0.04em;
+    margin: 10px 0 0;
+}
+
+body.jee-questions-page #questionCount {
+    color: #665080;
+    font-weight: 700;
+}
+
+body.jee-questions-page .question-bank-filters {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    background: #ffffff;
+    padding: 25px;
+    border: 1px solid #e9e3ef;
+    border-radius: 24px;
+    margin-bottom: 30px;
+}
+
+body.jee-questions-page .question-bank-filters label {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    color: #49346d;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+body.jee-questions-page .question-bank-filters select,
+body.jee-questions-page .question-bank-filters input {
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    background: #f8f6f0;
+    border: 1px solid #e1d9e9;
+    border-radius: 12px;
+    color: #191919;
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+}
+
+body.jee-questions-page .question-bank-list {
+    display: grid;
+    gap: 20px;
+}
+
+body.jee-questions-page .question-bank-card {
+    background: #ffffff;
+    border: 1px solid #e9e3ef;
+    border-radius: 24px;
+    padding: 30px;
+}
+
+body.jee-questions-page .question-bank-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+body.jee-questions-page .question-bank-meta span {
+    background: #e8dcff;
+    color: #49346d;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+body.jee-questions-page .question-bank-meta span:nth-child(2) {
+    background: #d6ef9f;
+    color: #30441c;
+}
+
+body.jee-questions-page .question-bank-card h3 {
+    color: #191919;
+    font-family: "Outfit", sans-serif;
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+body.jee-questions-page .question-bank-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+body.jee-questions-page .question-bank-option {
+    background: #f8f6f0;
+    color: #49346d;
+    border: 2px solid #e9e3ef;
+    border-radius: 14px;
+    padding: 16px;
+    text-align: left;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+body.jee-questions-page .question-bank-option:hover:not(:disabled) {
+    background: #f3e9ff;
+    border-color: #bda0e5;
+}
+
+body.jee-questions-page .question-bank-option.correct {
+    background: #d6ef9f;
+    color: #30441c;
+    border-color: #91bc59;
+}
+
+body.jee-questions-page .question-bank-option.incorrect {
+    background: #f6dce9;
+    color: #9c3d61;
+    border-color: #df90b3;
+}
+
+body.jee-questions-page .question-bank-option:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+body.jee-questions-page .question-bank-feedback {
+    display: none;
+    background: #f3e9ff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #49346d;
+    line-height: 1.7;
+}
+
+body.jee-questions-page .question-bank-feedback.visible {
+    display: block;
+}
+
+body.jee-questions-page .question-bank-feedback p {
+    margin: 10px 0 0;
+}
+
+body.jee-questions-page .question-bank-empty {
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    color: #665080;
+}
+
+body.jee-questions-page button:focus-visible,
+body.jee-questions-page input:focus-visible,
+body.jee-questions-page select:focus-visible {
+    outline: 3px solid #8660c2;
+    outline-offset: 3px;
+}
+
+@media (max-width: 850px) {
+    body.jee-questions-page .question-bank-filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    body.jee-questions-page .question-bank-main {
+        padding: 25px 15px 65px;
+    }
+
+    body.jee-questions-page .question-bank-hero {
+        padding: 28px 22px;
+    }
+
+    body.jee-questions-page .question-bank-heading {
+        display: block;
+    }
+
+    body.jee-questions-page .question-bank-filters,
+    body.jee-questions-page .question-bank-options {
+        grid-template-columns: 1fr;
+    }
+
+    body.jee-questions-page .question-bank-card {
+        padding: 22px;
+    }
+}

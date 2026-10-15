@@ -312,6 +312,9 @@
     </main>
 
     <script src="jee-physics-questions.js"></script>
+    <script src="jee-math-questions.js"></script>
+    <script src="jee-chemistry-questions.js"></script>
+    <script src="jee-question-loader.js"></script>
 
     <script>
 
@@ -352,18 +355,7 @@
 
         let questions = [];
 
-
-        if (
-            subject === "physics" &&
-            typeof jeePhysicsQuestions !== "undefined" &&
-            jeePhysicsQuestions[chapter] &&
-            jeePhysicsQuestions[chapter].practice
-        ) {
-
-            questions =
-                jeePhysicsQuestions[chapter].practice;
-
-        }
+        questions = getJeeQuestions(subject, chapter, "practice");
 
 
         if (questions.length === 0) {

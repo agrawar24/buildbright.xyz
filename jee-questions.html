@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>JEE Question Bank | BuildBright</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="jee-physics-questions.js" defer></script>
+    <script src="jee-questions.js" defer></script>
+</head>
+
+<body class="jee-questions-page">
+
+    <header class="jee-nav">
+
+        <a href="index.html" class="jee-logo">
+            BuildBright
+        </a>
+
+        <nav>
+            <a href="courses.html">Math</a>
+            <a href="jee.html" class="active">JEE Prep</a>
+            <a href="jee-progress.html">Progress</a>
+        </nav>
+
+    </header>
+
+    <main class="question-bank-main">
+
+        <section class="question-bank-hero">
+
+            <a href="jee.html" class="question-bank-back">
+                ← Back to JEE Prep
+            </a>
+
+            <span class="question-bank-label">
+                BUILDBRIGHT JEE
+            </span>
+
+            <h1>Practice makes progress.</h1>
+
+            <p>
+                Browse original JEE-style Physics questions,
+                test your understanding, and review detailed
+                explanations.
+            </p>
+
+            <span class="question-bank-note">
+                Original practice questions · Not verified PYQs
+            </span>
+
+        </section>
+
+        <section class="question-bank-content">
+
+            <div class="question-bank-heading">
+
+                <div>
+                    <span>EXPLORE QUESTIONS</span>
+                    <h2>Choose what to practice.</h2>
+                </div>
+
+                <p id="questionCount" aria-live="polite">
+                    Loading questions...
+                </p>
+
+            </div>
+
+            <div class="question-bank-filters">
+
+                <label>
+                    Subject
+
+                    <select id="questionSubject">
+                        <option value="Physics">Physics</option>
+                    </select>
+                </label>
+
+                <label>
+                    Chapter
+
+                    <select id="questionChapter">
+                        <option value="all">All Chapters</option>
+                    </select>
+                </label>
+
+                <label>
+                    Difficulty
+
+                    <select id="questionDifficulty">
+                        <option value="all">All Difficulties</option>
+                    </select>
+                </label>
+
+                <label>
+                    Search
+
+                    <input id="questionSearch" type="search" placeholder="Search questions or topics">
+                </label>
+
+            </div>
+
+            <div id="questionList" class="question-bank-list" aria-live="polite">
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
