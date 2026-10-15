@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuildBright Lesson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
     <script src="algebra1-lessons.js" defer></script>
@@ -23,44 +30,61 @@
         Progress: <span id="global-progress">0%</span>
     </div>
 
-    <main class="lesson-container">
+    <div class="math-lesson-page-heading">
 
-        <section class="lesson-content-card">
+        <a href="courses.html" class="math-lesson-back">
+            ← Mathematics Courses
+        </a>
 
-            <h1 id="lesson-title">Lesson Title</h1>
-            <p id="lesson-subtitle">Learn with clarity.</p>
+        <span class="math-lesson-eyebrow">
+            BUILDBRIGHT MATHEMATICS
+        </span>
 
-            <div id="lesson-body"></div>
+        <h2>Learn it. Practice it. Master it.</h2>
 
-            <button id="start-quiz-btn" onclick="startQuiz()">
-                Next: Start Questions
-            </button>
+        <p>
+            Explore the lesson, work through the examples,
+            and test your understanding.
+        </p>
 
-        </section>
+    </div>
 
-        <section id="quiz-section" class="quiz-card" style="display: none;">
+    <section class="lesson-content-card">
 
-            <h2>Practice Questions</h2>
-            <p>20 questions: 5 easy, 5 medium, 10 hard.</p>
+        <h1 id="lesson-title">Lesson Title</h1>
+        <p id="lesson-subtitle">Learn with clarity.</p>
 
-            <div id="quiz"></div>
+        <div id="lesson-body"></div>
 
-            <button id="submit-btn" onclick="checkTemplateQuiz()">
-                Submit Answers
-            </button>
+        <button id="start-quiz-btn" onclick="startQuiz()">
+            Next: Start Questions
+        </button>
+
+    </section>
+
+    <section id="quiz-section" class="quiz-card" style="display: none;">
+
+        <h2>Practice Questions</h2>
+        <p>20 questions: 5 easy, 5 medium, 10 hard.</p>
+
+        <div id="quiz"></div>
+
+        <button id="submit-btn" onclick="checkTemplateQuiz()">
+            Submit Answers
+        </button>
 
 
-            <button id="retry-btn" onclick="location.reload()" style="display: none;">
-                Retry Quiz
-            </button>
-            <button id="next-topic-btn" onclick="goToNextTopic()" style="display: none;">
-                Next Topic
-            </button>
+        <button id="retry-btn" onclick="location.reload()" style="display: none;">
+            Retry Quiz
+        </button>
+        <button id="next-topic-btn" onclick="goToNextTopic()" style="display: none;">
+            Next Topic
+        </button>
 
-            <h2 id="score"></h2>
-            <pre id="feedback"></pre>
+        <h2 id="score"></h2>
+        <pre id="feedback"></pre>
 
-        </section>
+    </section>
 
     </main>
 

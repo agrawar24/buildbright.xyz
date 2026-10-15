@@ -3744,341 +3744,6 @@ const jeePhysicsLessons = {
     "Thermal Properties of Matter": {
 
         description:
-            "Explore temperature, thermal expansion, heat transfer, calorimetry, phase changes and Newton's law of cooling.",
-
-        lessons: [
-
-            // LESSON 1
-            {
-                title: "Temperature and Thermal Equilibrium",
-                description: "Understand temperature scales and the zeroth law of thermodynamics.",
-                intro: "Temperature determines the direction of spontaneous heat transfer between bodies.",
-                conceptTitle: "Thermal equilibrium and temperature",
-                conceptText: "Two bodies in thermal equilibrium have the same temperature and exchange no net heat.",
-                body: "The zeroth law of thermodynamics states that if two systems are separately in thermal equilibrium with a third system, they are in thermal equilibrium with each other. This principle makes thermometers possible. Celsius and kelvin have equal-sized temperature intervals, but different zero points. A temperature difference of 1°C equals a temperature difference of 1 K.",
-                keyIdeas: [
-                    {
-                        label: "KELVIN CONVERSION",
-                        formula: "T(K) = t(°C) + 273.15",
-                        text: "Convert Celsius temperature to absolute temperature."
-                    },
-                    {
-                        label: "FAHRENHEIT",
-                        formula: "F = (9/5)C + 32",
-                        text: "Convert Celsius to Fahrenheit."
-                    },
-                    {
-                        label: "ZEROTH LAW",
-                        formula: "Tₐ = Tᵦ and Tᵦ = T꜀ ⇒ Tₐ = T꜀",
-                        text: "Thermal equilibrium is transitive."
-                    }
-                ],
-                example: {
-                    problem: "Convert 27°C to kelvin and Fahrenheit.",
-                    steps: [
-                        "Kelvin temperature = 27 + 273.15 = 300.15 K.",
-                        "Fahrenheit temperature = (9/5)(27) + 32.",
-                        "Fahrenheit temperature = 80.6°F."
-                    ]
-                },
-                jeeQuestion: "At what temperature do Celsius and Fahrenheit scales show the same numerical value?",
-                jeeOptions: [
-                    "0°",
-                    "−40°",
-                    "32°",
-                    "100°"
-                ],
-                jeeAnswer: 1,
-                jeeExplanation: "Set F = C in F = 9C/5 + 32. Solving gives C = −40.",
-                checkQuestion: "What does the zeroth law of thermodynamics establish?",
-                checkOptions: [
-                    { text: "Conservation of energy", correct: false },
-                    { text: "The concept of thermal equilibrium", correct: true },
-                    { text: "The direction of mechanical motion", correct: false },
-                    { text: "Conservation of momentum", correct: false }
-                ],
-                correctFeedback: "Correct. The zeroth law establishes thermal equilibrium as the basis for measuring temperature.",
-                incorrectFeedback: "The zeroth law concerns thermal equilibrium and temperature measurement."
-            },
-
-            // LESSON 2
-            {
-                title: "Thermal Expansion",
-                description: "Study linear, area and volume expansion of materials.",
-                intro: "Most materials expand when heated because their average interparticle separation increases.",
-                conceptTitle: "Thermal expansion coefficients",
-                conceptText: "For small temperature changes, expansion is approximately proportional to the original dimension and temperature change.",
-                body: "Linear expansion describes changes in length, area expansion describes changes in surface area, and volume expansion describes changes in volume. For isotropic solids and small expansions, the area expansion coefficient is approximately 2α and the volume expansion coefficient is approximately 3α, where α is the linear expansion coefficient. A hole in a uniformly heated metal plate expands as though it were filled with the same material.",
-                keyIdeas: [
-                    {
-                        label: "LINEAR EXPANSION",
-                        formula: "ΔL = αL₀ΔT",
-                        text: "α is the coefficient of linear expansion."
-                    },
-                    {
-                        label: "AREA EXPANSION",
-                        formula: "ΔA ≈ 2αA₀ΔT",
-                        text: "Valid for isotropic solids with small expansion."
-                    },
-                    {
-                        label: "VOLUME EXPANSION",
-                        formula: "ΔV ≈ 3αV₀ΔT",
-                        text: "The volume expansion coefficient is approximately 3α."
-                    }
-                ],
-                example: {
-                    problem: "A 2 m metal rod has α = 1.2 × 10⁻⁵ K⁻¹. Find its expansion for a temperature rise of 50 K.",
-                    steps: [
-                        "Use ΔL = αL₀ΔT.",
-                        "Substitute ΔL = (1.2 × 10⁻⁵)(2)(50).",
-                        "ΔL = 1.2 × 10⁻³ m.",
-                        "The rod expands by 1.2 mm."
-                    ]
-                },
-                jeeQuestion: "An isotropic solid has linear expansion coefficient α. Its approximate volume expansion coefficient is:",
-                jeeOptions: [
-                    "α/3",
-                    "α",
-                    "2α",
-                    "3α"
-                ],
-                jeeAnswer: 3,
-                jeeExplanation: "For an isotropic solid undergoing a small temperature change, the volume expansion coefficient is approximately 3α.",
-                checkQuestion: "What happens to a circular hole in a metal plate when the plate is heated uniformly?",
-                checkOptions: [
-                    { text: "The hole becomes smaller", correct: false },
-                    { text: "The hole becomes larger", correct: true },
-                    { text: "The hole remains exactly unchanged", correct: false },
-                    { text: "The hole disappears", correct: false }
-                ],
-                correctFeedback: "Correct. The hole expands along with the plate.",
-                incorrectFeedback: "Imagine the hole filled with the same metal. That imaginary material would expand when heated."
-            },
-
-            // LESSON 3
-            {
-                title: "Specific Heat and Calorimetry",
-                description: "Calculate heat exchange and final equilibrium temperatures.",
-                intro: "Different substances require different amounts of energy to change their temperatures.",
-                conceptTitle: "Heat capacity and specific heat",
-                conceptText: "Specific heat capacity is the energy needed to raise the temperature of unit mass by one kelvin.",
-                body: "The heat absorbed or released without a phase change is Q = mcΔT, where m is mass and c is specific heat capacity. Heat capacity C = mc applies to an entire body. In an insulated calorimetry problem, total heat lost equals total heat gained, provided no energy escapes to the surroundings. The calorimeter's own heat capacity must be included if it is significant.",
-                keyIdeas: [
-                    {
-                        label: "HEAT EXCHANGE",
-                        formula: "Q = mcΔT",
-                        text: "Use when specific heat is approximately constant and no phase change occurs."
-                    },
-                    {
-                        label: "HEAT CAPACITY",
-                        formula: "C = mc",
-                        text: "Heat capacity has SI units J/K."
-                    },
-                    {
-                        label: "CALORIMETRY",
-                        formula: "ΣQ = 0",
-                        text: "In an insulated system, the algebraic sum of heat transfers is zero."
-                    }
-                ],
-                example: {
-                    problem: "Mix 200 g of water at 80°C with 300 g of water at 20°C in an insulated container. Neglect the container's heat capacity. Find the final temperature.",
-                    steps: [
-                        "Both samples have the same specific heat.",
-                        "Heat lost by hot water = heat gained by cold water.",
-                        "200(80 − T) = 300(T − 20).",
-                        "16000 − 200T = 300T − 6000.",
-                        "T = 44°C."
-                    ]
-                },
-                jeeQuestion: "How much heat is required to raise 0.5 kg of water by 10 K? Take c = 4200 J/(kg·K).",
-                jeeOptions: [
-                    "2100 J",
-                    "4200 J",
-                    "21000 J",
-                    "42000 J"
-                ],
-                jeeAnswer: 2,
-                jeeExplanation: "Q = mcΔT = 0.5 × 4200 × 10 = 21000 J.",
-                checkQuestion: "What is the SI unit of specific heat capacity?",
-                checkOptions: [
-                    { text: "J/K", correct: false },
-                    { text: "J/(kg·K)", correct: true },
-                    { text: "W/K", correct: false },
-                    { text: "kg·K/J", correct: false }
-                ],
-                correctFeedback: "Correct. Specific heat capacity is measured in joules per kilogram per kelvin.",
-                incorrectFeedback: "Use c = Q/(mΔT) to determine its SI unit."
-            },
-
-            // LESSON 4
-            {
-                title: "Change of State and Latent Heat",
-                description: "Understand melting, freezing, boiling and vaporization.",
-                intro: "During a phase change at constant pressure, energy can be transferred without changing the substance's temperature.",
-                conceptTitle: "Latent heat",
-                conceptText: "Latent heat is energy absorbed or released during a phase change at the transition temperature.",
-                body: "The heat involved in a phase change is Q = mL, where L is specific latent heat. During melting or boiling of a pure substance at constant pressure, the temperature remains constant while the phase transition occurs. The specific latent heat of fusion refers to melting or freezing, while the specific latent heat of vaporization refers to boiling or condensation. Multi-stage heating problems may require both mcΔT and mL terms.",
-                keyIdeas: [
-                    {
-                        label: "LATENT HEAT",
-                        formula: "Q = mL",
-                        text: "L is measured in J/kg."
-                    },
-                    {
-                        label: "SENSIBLE HEAT",
-                        formula: "Q = mcΔT",
-                        text: "Used when temperature changes without a phase transition."
-                    },
-                    {
-                        label: "MULTI-STAGE HEATING",
-                        formula: "Qₜₒₜₐₗ = Σ(mcΔT) + Σ(mL)",
-                        text: "Add energy for warming and for phase changes."
-                    }
-                ],
-                example: {
-                    problem: "How much energy is needed to melt 0.2 kg of ice at 0°C? Take latent heat of fusion as 3.34 × 10⁵ J/kg.",
-                    steps: [
-                        "The ice is already at its melting point.",
-                        "Use Q = mL.",
-                        "Q = 0.2 × 3.34 × 10⁵.",
-                        "Q = 6.68 × 10⁴ J."
-                    ]
-                },
-                jeeQuestion: "A pure substance melts at constant pressure. While melting, its temperature generally:",
-                jeeOptions: [
-                    "Increases continuously",
-                    "Decreases continuously",
-                    "Remains constant until melting is complete",
-                    "Becomes zero kelvin"
-                ],
-                jeeAnswer: 2,
-                jeeExplanation: "At constant pressure, the heat supplied during melting is latent heat, so temperature remains at the melting point until the transition is complete.",
-                checkQuestion: "Which equation gives the heat needed for a phase change?",
-                checkOptions: [
-                    { text: "Q = mL", correct: true },
-                    { text: "Q = mv", correct: false },
-                    { text: "Q = ma", correct: false },
-                    { text: "Q = Pt²", correct: false }
-                ],
-                correctFeedback: "Correct. Phase-change heat is mass multiplied by specific latent heat.",
-                incorrectFeedback: "Use Q = mL for latent heat during a phase change."
-            },
-
-            // LESSON 5
-            {
-                title: "Heat Transfer",
-                description: "Compare conduction, convection and radiation.",
-                intro: "Heat can move through materials, moving fluids and electromagnetic radiation.",
-                conceptTitle: "Three mechanisms of heat transfer",
-                conceptText: "Conduction transfers energy through a material, convection involves bulk fluid motion, and radiation transfers energy by electromagnetic waves.",
-                body: "For steady one-dimensional conduction through a uniform slab, the heat-transfer rate is H = kAΔT/L. Here k is thermal conductivity, A is cross-sectional area and L is thickness. Thermal radiation does not require a material medium. The net radiated power of a body surrounded by an environment at temperature Tₛ is P = εσA(T⁴ − Tₛ⁴), using absolute temperatures. Convection occurs in liquids and gases through fluid motion.",
-                keyIdeas: [
-                    {
-                        label: "CONDUCTION",
-                        formula: "H = kAΔT/L",
-                        text: "Steady heat-transfer rate through a uniform slab."
-                    },
-                    {
-                        label: "RADIATION",
-                        formula: "P = εσA(T⁴ − Tₛ⁴)",
-                        text: "Net radiative power exchange with surroundings."
-                    },
-                    {
-                        label: "THERMAL RESISTANCE",
-                        formula: "Rₜₕ = L/(kA)",
-                        text: "For steady conduction, H = ΔT/Rₜₕ."
-                    }
-                ],
-                example: {
-                    problem: "A slab has k = 0.5 W/(m·K), area 2 m², thickness 0.1 m and a temperature difference of 20 K. Find the steady heat-transfer rate.",
-                    steps: [
-                        "Use H = kAΔT/L.",
-                        "H = (0.5)(2)(20)/0.1.",
-                        "H = 200 W."
-                    ]
-                },
-                jeeQuestion: "If the thickness of a uniform slab doubles while all other factors remain unchanged, its steady conductive heat-transfer rate:",
-                jeeOptions: [
-                    "Doubles",
-                    "Becomes half",
-                    "Becomes four times",
-                    "Remains unchanged"
-                ],
-                jeeAnswer: 1,
-                jeeExplanation: "H = kAΔT/L. Doubling L halves the conduction rate.",
-                checkQuestion: "Which heat-transfer mechanism can operate through a vacuum?",
-                checkOptions: [
-                    { text: "Conduction only", correct: false },
-                    { text: "Convection only", correct: false },
-                    { text: "Radiation", correct: true },
-                    { text: "None of them", correct: false }
-                ],
-                correctFeedback: "Correct. Electromagnetic radiation can travel through a vacuum.",
-                incorrectFeedback: "Radiation does not require a material medium."
-            },
-
-            // LESSON 6
-            {
-                title: "Newton's Law of Cooling and Chapter Review",
-                description: "Apply cooling laws and review thermal-property calculations.",
-                intro: "The rate at which an object cools depends on its temperature difference from its surroundings.",
-                conceptTitle: "Newton's law of cooling",
-                conceptText: "For modest temperature differences and approximately constant conditions, the cooling rate is proportional to the temperature difference.",
-                body: "Newton's law of cooling can be written dT/dt = −k(T − Tₛ), where Tₛ is the constant surrounding temperature and k is a positive cooling constant. Its solution is T − Tₛ = (T₀ − Tₛ)e⁻ᵏᵗ. The approximation works when the effective heat-transfer coefficient and the object's heat capacity remain approximately constant. Chapter problems may combine temperature conversion, thermal expansion, calorimetry, latent heat and conduction.",
-                keyIdeas: [
-                    {
-                        label: "COOLING LAW",
-                        formula: "dT/dt = −k(T − Tₛ)",
-                        text: "Cooling rate depends on temperature difference."
-                    },
-                    {
-                        label: "COOLING SOLUTION",
-                        formula: "T − Tₛ = (T₀ − Tₛ)e⁻ᵏᵗ",
-                        text: "Temperature approaches the surroundings exponentially."
-                    },
-                    {
-                        label: "HEAT BALANCE",
-                        formula: "ΣQ = 0",
-                        text: "Apply energy conservation in insulated calorimetry problems."
-                    }
-                ],
-                example: {
-                    problem: "A hot object cools in surroundings at 20°C. Its temperature difference above the surroundings falls from 60°C to 30°C in 5 minutes. Assuming Newton's law of cooling, find the time for the difference to fall from 30°C to 15°C.",
-                    steps: [
-                        "Newton's law gives exponential decay of temperature difference.",
-                        "The difference halves from 60°C to 30°C in 5 minutes.",
-                        "For constant k, each halving takes the same time.",
-                        "The next halving from 30°C to 15°C also takes 5 minutes."
-                    ]
-                },
-                jeeQuestion: "A body at 80°C is cooling in surroundings at 20°C. Later, its temperature is 50°C. Under Newton's law of cooling, the magnitude of its cooling rate at 50°C compared with its initial rate is:",
-                jeeOptions: [
-                    "One-fourth",
-                    "One-half",
-                    "Twice",
-                    "The same"
-                ],
-                jeeAnswer: 1,
-                jeeExplanation: "Cooling rate magnitude is proportional to T − Tₛ. Initially the difference is 60°C; later it is 30°C, so the rate is halved.",
-                checkQuestion: "Under Newton's law of cooling, what happens as an object's temperature approaches the surrounding temperature?",
-                checkOptions: [
-                    { text: "Its cooling rate increases without limit", correct: false },
-                    { text: "Its cooling rate approaches zero", correct: true },
-                    { text: "Its temperature must become 0 K", correct: false },
-                    { text: "Its heat capacity becomes zero", correct: false }
-                ],
-                correctFeedback: "Correct. The temperature difference and cooling rate approach zero.",
-                incorrectFeedback: "Cooling rate is proportional to the temperature difference from the surroundings."
-            }
-
-
-        ]
-
-    },
-
-    "Thermal Properties of Matter": {
-
-        description:
             "Learn temperature scales, thermal expansion, calorimetry, phase changes, heat transfer and Newton's law of cooling.",
 
         lessons: [
@@ -4474,9 +4139,236 @@ const jeePhysicsLessons = {
 
         ]
 
+    },
+
+    "Kinetic Theory of Gases": {
+
+        description:
+            "Understand the microscopic behavior of gases, molecular motion, pressure, temperature, kinetic energy, degrees of freedom and heat capacities.",
+
+        lessons: [
+
+            {
+                title: "Introduction to Kinetic Theory",
+
+                description:
+                    "Understand how the motion of gas molecules explains the macroscopic properties of gases.",
+
+                intro:
+                    "Why does a gas exert pressure on the walls of its container? Why does pressure increase when a gas is heated at constant volume? Kinetic theory explains these observations by studying the motion of individual gas molecules.",
+
+                conceptTitle:
+                    "The macroscopic behavior of a gas arises from the random motion of its molecules.",
+
+                conceptText:
+                    "Kinetic theory connects microscopic molecular motion with measurable properties such as pressure, volume and temperature.",
+
+                body:
+                    "According to the kinetic theory of ideal gases, a gas consists of a very large number of molecules moving continuously and randomly. The molecules are treated as point particles whose own volume is negligible compared with the volume of the container. They obey Newton's laws of motion. Collisions between molecules and with the container walls are perfectly elastic. Except during collisions, intermolecular forces are assumed negligible. The average translational kinetic energy of gas molecules depends only on the absolute temperature.",
+
+                keyIdeas: [
+                    {
+                        label: "MOLECULAR MOTION",
+                        formula: "v ≠ 0",
+                        text:
+                            "Gas molecules are in continuous random motion."
+                    },
+                    {
+                        label: "IDEAL GAS EQUATION",
+                        formula: "PV = nRT",
+                        text:
+                            "Pressure, volume and absolute temperature are related by the ideal gas law."
+                    },
+                    {
+                        label: "AVERAGE KINETIC ENERGY",
+                        formula: "KE(avg) = (3/2)kBT",
+                        text:
+                            "Average translational kinetic energy is proportional to absolute temperature."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "Two samples of ideal gas are at temperatures of 300 K and 600 K. Find the ratio of their average translational kinetic energies per molecule.",
+
+                    steps: [
+                        "Average translational kinetic energy is (3/2)kBT.",
+                        "Therefore, kinetic energy is directly proportional to absolute temperature.",
+                        "KE₁/KE₂ = T₁/T₂.",
+                        "KE₁/KE₂ = 300/600 = 1/2.",
+                        "The ratio is 1:2."
+                    ]
+                },
+
+                jeeQuestion:
+                    "The absolute temperature of an ideal gas is doubled. What happens to the average translational kinetic energy of its molecules?",
+
+                jeeOptions: [
+                    "It remains unchanged",
+                    "It doubles",
+                    "It becomes four times",
+                    "It becomes half"
+                ],
+
+                jeeAnswer: 1,
+
+                jeeExplanation:
+                    "Average translational kinetic energy is directly proportional to absolute temperature, so doubling the temperature doubles the average kinetic energy.",
+
+                checkQuestion:
+                    "Which assumption is made in the kinetic theory of an ideal gas?",
+
+                checkOptions: [
+                    {
+                        text: "Molecules remain stationary",
+                        correct: false
+                    },
+                    {
+                        text: "Collisions are perfectly elastic",
+                        correct: true
+                    },
+                    {
+                        text: "Molecules continuously attract each other strongly",
+                        correct: false
+                    },
+                    {
+                        text: "All molecules have identical speeds",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct! Ideal gas collisions conserve total kinetic energy.",
+
+                incorrectFeedback:
+                    "Recall that ideal gas molecules undergo perfectly elastic collisions and move randomly."
+            },
+
+            {
+                title: "Ideal Gas Equation",
+
+                description:
+                    "Understand the fundamental gas laws and how pressure, volume, temperature, and amount of gas are related.",
+
+                intro:
+                    "Imagine trapping air inside a cylinder with a movable piston. What happens when you compress the gas? What happens when you heat it? The ideal gas equation allows us to predict these changes mathematically.",
+
+                conceptTitle:
+                    "The ideal gas equation connects the macroscopic properties of gases.",
+
+                conceptText:
+                    "An ideal gas follows the relationship PV = nRT, where P is pressure, V is volume, n is the number of moles, R is the universal gas constant, and T is absolute temperature.",
+
+                body:
+                    "The ideal gas equation is derived by combining several experimental gas laws. Boyle's Law states that pressure is inversely proportional to volume when temperature and the amount of gas remain constant. Charles's Law states that volume is directly proportional to absolute temperature at constant pressure and amount of gas. Gay-Lussac's Law states that pressure is directly proportional to absolute temperature at constant volume and amount of gas. Avogadro's Law states that volume is proportional to the number of moles when pressure and temperature remain constant. Combining these laws gives PV = nRT. The universal gas constant is R = 8.314 J/(mol·K). Temperature must always be expressed in kelvin. The equation can also be written as PV = NkBT, where N represents the number of molecules and kB = 1.380649 × 10⁻²³ J/K is Boltzmann's constant. Ideal gas behavior is most accurate at relatively low pressures and high temperatures, away from condensation.",
+
+                keyIdeas: [
+                    {
+                        label: "IDEAL GAS EQUATION",
+                        formula: "PV = nRT",
+                        text:
+                            "Relates pressure, volume, number of moles, and absolute temperature."
+                    },
+                    {
+                        label: "BOYLE'S LAW",
+                        formula: "P₁V₁ = P₂V₂",
+                        text:
+                            "At constant temperature and fixed amount of gas, pressure is inversely proportional to volume."
+                    },
+                    {
+                        label: "CHARLES'S LAW",
+                        formula: "V₁/T₁ = V₂/T₂",
+                        text:
+                            "At constant pressure and fixed amount of gas, volume is proportional to absolute temperature."
+                    },
+                    {
+                        label: "GAY-LUSSAC'S LAW",
+                        formula: "P₁/T₁ = P₂/T₂",
+                        text:
+                            "At constant volume and fixed amount of gas, pressure is proportional to absolute temperature."
+                    },
+                    {
+                        label: "AVOGADRO'S LAW",
+                        formula: "V ∝ n",
+                        text:
+                            "At constant pressure and temperature, volume is proportional to the number of moles."
+                    },
+                    {
+                        label: "COMBINED GAS LAW",
+                        formula: "P₁V₁/T₁ = P₂V₂/T₂",
+                        text:
+                            "Relates two gas states when the amount of gas remains constant."
+                    },
+                    {
+                        label: "MOLECULAR FORM",
+                        formula: "PV = NkBT",
+                        text:
+                            "Expresses the ideal gas equation in terms of the number of molecules."
+                    }
+                ],
+
+                example: {
+                    problem:
+                        "A container holds 2 moles of an ideal gas at 300 K. If its volume is 0.05 m³, calculate the pressure. Take R = 8.314 J/(mol·K).",
+
+                    steps: [
+                        "Step 1: Write the ideal gas equation: PV = nRT.",
+                        "Step 2: Rearrange for pressure: P = nRT/V.",
+                        "Step 3: Identify the values: n = 2 mol, T = 300 K, V = 0.05 m³.",
+                        "Step 4: Substitute: P = (2 × 8.314 × 300)/0.05.",
+                        "Step 5: Calculate: P = 99,768 Pa.",
+                        "Final answer: P ≈ 9.98 × 10⁴ Pa."
+                    ]
+                },
+
+                jeeQuestion:
+                    "An ideal gas occupies 4 L at a pressure of 2 atm and temperature of 300 K. If the pressure increases to 4 atm and the temperature increases to 600 K, what is the new volume?",
+
+                jeeOptions: [
+                    "2 L",
+                    "4 L",
+                    "6 L",
+                    "8 L"
+                ],
+
+                jeeAnswer: 1,
+
+                jeeExplanation:
+                    "Use P₁V₁/T₁ = P₂V₂/T₂. Rearranging gives V₂ = P₁V₁T₂/(P₂T₁). Substituting: V₂ = (2 × 4 × 600)/(4 × 300) = 4 L. The pressure and absolute temperature both double, so the volume remains unchanged.",
+
+                checkQuestion:
+                    "An ideal gas is compressed to half its original volume at constant temperature. What happens to its pressure?",
+
+                checkOptions: [
+                    {
+                        text: "Pressure becomes half",
+                        correct: false
+                    },
+                    {
+                        text: "Pressure doubles",
+                        correct: true
+                    },
+                    {
+                        text: "Pressure remains unchanged",
+                        correct: false
+                    },
+                    {
+                        text: "Pressure becomes four times",
+                        correct: false
+                    }
+                ],
+
+                correctFeedback:
+                    "Correct! Boyle's Law states that pressure is inversely proportional to volume at constant temperature.",
+
+                incorrectFeedback:
+                    "Use Boyle's Law: P₁V₁ = P₂V₂. Halving the volume doubles the pressure when temperature and the amount of gas remain constant."
+            }
+
+        ]
+
     }
 
 };
-
 
 

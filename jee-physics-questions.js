@@ -2625,6 +2625,141 @@ const jeePhysicsQuestions = {
 
         ]
 
+    },
+
+    "Thermal Properties of Matter": {
+
+        practice: [
+
+            {
+                id: "thermal-p-001",
+                topic: "Temperature Conversion",
+                difficulty: "Foundation",
+
+                question:
+                    "What is 27°C in Kelvin?",
+
+                options: [
+                    "273 K",
+                    "300 K",
+                    "310 K",
+                    "327 K"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "K = °C + 273.15. Therefore, 27°C = 300.15 K, approximately 300 K."
+            },
+
+            {
+                id: "thermal-p-002",
+                topic: "Specific Heat Capacity",
+                difficulty: "Foundation",
+
+                question:
+                    "How much heat is required to raise the temperature of 2 kg of water by 5°C? Take c = 4200 J/kg°C.",
+
+                options: [
+                    "4200 J",
+                    "8400 J",
+                    "21000 J",
+                    "42000 J"
+                ],
+
+                answer: 3,
+
+                explanation:
+                    "Q = mcΔT = 2 × 4200 × 5 = 42000 J."
+            },
+
+            {
+                id: "thermal-p-003",
+                topic: "Linear Expansion",
+                difficulty: "Foundation",
+
+                question:
+                    "A rod of length 2 m has a coefficient of linear expansion of 2 × 10⁻⁵ /°C. Find its increase in length for a temperature rise of 50°C.",
+
+                options: [
+                    "0.2 mm",
+                    "1 mm",
+                    "2 mm",
+                    "4 mm"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "ΔL = αLΔT = 2 × 10⁻⁵ × 2 × 50 = 0.002 m = 2 mm."
+            }
+
+        ],
+
+        test: [
+
+            {
+                id: "thermal-t-001",
+                topic: "Calorimetry",
+
+                question:
+                    "A 0.5 kg metal block of specific heat 400 J/kg°C is heated through 20°C. How much heat does it absorb?",
+
+                options: [
+                    "2000 J",
+                    "4000 J",
+                    "8000 J",
+                    "10000 J"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Q = mcΔT = 0.5 × 400 × 20 = 4000 J."
+            },
+
+            {
+                id: "thermal-t-002",
+                topic: "Thermal Expansion",
+
+                question:
+                    "If the coefficient of linear expansion is α, what is the approximate coefficient of volume expansion for an isotropic solid?",
+
+                options: [
+                    "α",
+                    "2α",
+                    "3α",
+                    "α/3"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "For an isotropic solid, the coefficient of volume expansion is approximately 3α."
+            },
+
+            {
+                id: "thermal-t-003",
+                topic: "Heat Transfer",
+
+                question:
+                    "Which mode of heat transfer does not require a material medium?",
+
+                options: [
+                    "Conduction",
+                    "Convection",
+                    "Radiation",
+                    "All three"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Radiation transfers energy through electromagnetic waves and can occur through a vacuum."
+            }
+
+        ]
+
     }
 
 };

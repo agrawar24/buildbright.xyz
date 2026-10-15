@@ -116,7 +116,15 @@ function loadDynamicLesson() {
 
     const lessonKeys = Object.keys(lessonBank[subject]);
     const currentIndex = lessonKeys.indexOf(topic);
-    const progressPercent = Math.round(((currentIndex + 1) / lessonKeys.length) * 100);
+    const completedInCourse = lessonKeys.filter(key => {
+        return localStorage.getItem(
+            subject + "_" + key + "_done"
+        ) === "true";
+    }).length;
+
+    const progressPercent = lessonKeys.length > 0
+        ? Math.round((completedInCourse / lessonKeys.length) * 100)
+        : 0;
 
     const upgradedHeader = `
         <section class="lesson-header">
@@ -140,7 +148,7 @@ function loadDynamicLesson() {
             <div class="lesson-progress-wrap">
                 <div class="lesson-progress-info">
                     <span>Course Progress</span>
-                    <span>${currentIndex + 1}/${lessonKeys.length}</span>
+                    <span>${completedInCourse}/${lessonKeys.length} completed</span>
                 </div>
 
                 <div class="lesson-progress-bar">
@@ -260,6 +268,13 @@ function checkTemplateQuiz() {
     });
 
     const passingScore = Math.ceil(templateQuestions.length * 0.7);
+    const quizParams = new URLSearchParams(window.location.search);
+
+    const quizLessonKey =
+        quizParams.get("subject") + "_" + quizParams.get("topic");
+
+    const wasCompletedBeforeQuiz =
+        localStorage.getItem(quizLessonKey + "_done") === "true";
 
     if (scoreBox) {
         scoreBox.innerText = "Score: " + score + "/" + templateQuestions.length;
@@ -274,7 +289,11 @@ function checkTemplateQuiz() {
 
                 <p>Score: ${score}/${templateQuestions.length}</p>
 
-                <div class="lesson-complete-xp">⭐ +25 XP</div>
+                <div class="lesson-complete-xp">
+    ${wasCompletedBeforeQuiz
+                    ? "✅ Lesson Reviewed"
+                    : "⭐ +25 XP"}
+</div>
 
                 <p>Great job! You passed this lesson.</p>
 
@@ -306,25 +325,45 @@ function checkTemplateQuiz() {
     const topic = params.get("topic");
     const lessonKey = subject + "_" + topic;
 
+    // Save the latest quiz score.
     localStorage.setItem(lessonKey + "_score", score);
-    localStorage.setItem(lessonKey + "_done", "true");
-    localStorage.setItem("last_lesson", lessonKey);
+
+    // Check whether this lesson was already completed.
+    const alreadyCompleted =
+        localStorage.getItem(lessonKey + "_done") === "true";
 
     if (score >= passingScore) {
 
-        const xpEarned = 25;
+        // A passing score marks the lesson complete.
+        localStorage.setItem(lessonKey + "_done", "true");
+        localStorage.setItem("last_lesson", lessonKey);
 
-        const newXP = addXP(xpEarned);
+        if (!alreadyCompleted) {
 
-        checkAchievements(score, templateQuestions.length);
+            // Award XP only for the first successful completion.
+            const xpEarned = 25;
+            const newXP = addXP(xpEarned);
 
-        feedback += "\n\n⭐ You earned " + xpEarned + " XP!";
-        feedback += "\n🏆 Total XP: " + newXP;
+            checkAchievements(score, templateQuestions.length);
+
+            feedback += "\n\n⭐ You earned " + xpEarned + " XP!";
+            feedback += "\n🏆 Total XP: " + newXP;
+
+        } else {
+
+            // Reviewing a completed lesson does not award XP again.
+            checkAchievements(score, templateQuestions.length);
+
+            feedback += "\n\n✅ Lesson reviewed successfully!";
+            feedback += "\n🏆 Total XP: " + getXP();
+
+        }
 
     }
 
     // Mark course as completed when the congratulations lesson is passed
     if (
+        score >= passingScore &&
         subject === "calculus2" &&
         topic === "calculus2-course-complete"
     ) {
@@ -417,22 +456,59 @@ function checkAchievements(score, totalQuestions) {
 }
 
 function updateGlobalProgress() {
-    const allTopics = Object.entries(topicData).flatMap(([subject, topics]) =>
-        topics.map(topic => ({ subject, topic }))
-    );
-    let completed = 0;
-    allTopics.forEach(item => {
-        if (localStorage.getItem(item.subject + "_" + item.topic + "_done")) {
-            completed++;
-        }
+
+    // All available Mathematics courses.
+    const subjects = [
+        "algebra1",
+        "geometry",
+        "algebra2",
+        "calculus1",
+        "calculus2",
+        "calculus3"
+    ];
+
+    // Use a Set to prevent duplicate lesson IDs.
+    const allLessons = new Set();
+
+    subjects.forEach(subject => {
+
+        const topics = topicData[subject] || [];
+
+        topics.forEach(topic => {
+            allLessons.add(subject + "_" + topic);
+        });
+
     });
-    const percent = allTopics.length
-        ? Math.round((completed / allTopics.length) * 100)
+
+    let completedLessons = 0;
+
+    allLessons.forEach(lessonKey => {
+
+        // Only an explicit completion flag counts.
+        const isCompleted =
+            localStorage.getItem(lessonKey + "_done") === "true";
+
+        if (isCompleted) {
+            completedLessons++;
+        }
+
+    });
+
+    const totalLessons = allLessons.size;
+
+    const progressPercent = totalLessons > 0
+        ? Math.round((completedLessons / totalLessons) * 100)
         : 0;
+
     const tracker = document.getElementById("global-progress");
+
     if (tracker) {
-        tracker.innerText = percent + "%";
+        tracker.innerText = progressPercent + "%";
+        tracker.title =
+            completedLessons + " of " + totalLessons +
+            " Mathematics lessons completed";
     }
+
 }
 function goToNextTopic() {
     const params = new URLSearchParams(window.location.search);
@@ -526,18 +602,24 @@ function loadCoursePage() {
 
     lessonList.innerHTML = "";
 
-    lessonKeys.forEach((key, index) => {
-        if (lessonKeys.length === 0) {
-            lessonList.innerHTML = `
+    if (lessonKeys.length === 0) {
+        lessonList.innerHTML = `
         <div class="lesson-list-card">
             <div class="lesson-list-info">
                 <h3>Lessons Coming Soon</h3>
-                <p>We're preparing the Calculus III course. Check back soon!</p>
+                <p>
+                    We're preparing lessons for this course.
+                    Please check back soon!
+                </p>
             </div>
         </div>
     `;
-            return;
-        }
+
+        return;
+    }
+
+    lessonKeys.forEach((key, index) => {
+
 
 
         const lesson = lessons[key];

@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuildBright Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
     <script src="algebra1-lessons.js" defer></script>
@@ -30,13 +37,42 @@
 
     <main class="course-container">
 
-        <h1 id="course-title">Course</h1>
+        <section class="math-course-hero">
+            <div class="math-course-hero-inner">
 
-        <p id="course-subtitle" class="courses-subtitle">
-            Choose a lesson to begin.
-        </p>
+                <a href="courses.html" class="math-course-back">
+                    ← All Mathematics Courses
+                </a>
 
-        <div id="lesson-list" class="lesson-list"></div>
+                <span class="math-course-eyebrow">
+                    BUILDBRIGHT MATHEMATICS
+                </span>
+
+                <h1 id="course-title">Course</h1>
+
+                <p id="course-subtitle" class="courses-subtitle">
+                    Choose a lesson to begin.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="math-course-lessons">
+            <div class="math-course-section-heading">
+
+                <span>YOUR LEARNING PATH</span>
+
+                <h2>Explore the lessons.</h2>
+
+                <p>
+                    Learn each concept step by step, and revisit
+                    completed lessons whenever you need a refresher.
+                </p>
+
+            </div>
+
+            <div id="lesson-list" class="lesson-list"></div>
+        </section>
 
     </main>
 

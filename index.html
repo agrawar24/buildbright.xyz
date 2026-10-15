@@ -7,6 +7,17 @@
 
     <title>BuildBright | Learn Deeper. Aim Higher.</title>
 
+
+
+
+
+    <!-- BUILDBRIGHT TYPOGRAPHY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <script src="algebra1-lessons.js" defer></script>
@@ -25,18 +36,17 @@
     ========================== -->
 
     <header class="home-nav">
-
         <a class="home-logo" href="index.html">
-            BuildBright
+            <span class="bb-logo-mark" aria-hidden="true">✳</span>
+            BuildBright<span class="bb-logo-dot">.</span>
         </a>
 
-        <nav class="home-nav-links">
-            <a href="courses.html">Math</a>
+        <nav class="home-nav-links" aria-label="Main navigation">
+            <a href="courses.html">Mathematics</a>
             <a href="jee.html">JEE Prep</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">Our Mission</a>
+            <a href="#contact" class="bb-nav-contact">Get in Touch <span aria-hidden="true">↗</span></a>
         </nav>
-
     </header>
 
 
@@ -47,37 +57,42 @@
         ========================== -->
 
         <section class="home-hero">
-
             <div class="home-hero-content">
 
                 <div class="home-eyebrow">
-                    LEARN • PRACTICE • MASTER
+                    <span aria-hidden="true">✳</span>
+                    FREE LEARNING. BIG POSSIBILITIES.
                 </div>
 
                 <h1>
-                    LEARN DEEPLY.<br>
-                    <span>AIM HIGHER.</span>
+                    BIG IDEAS.<br>
+                    <span>BRIGHTER</span> FUTURES.
                 </h1>
 
                 <p>
-                    Rigorous mathematics and JEE preparation built
-                    for students ready to go further.
+                    From mathematical foundations to JEE preparation,
+                    discover learning that makes big dreams feel possible.
                 </p>
 
                 <div class="home-hero-buttons">
-
                     <a class="home-btn home-btn-primary" href="courses.html">
-                        Explore Math
+                        Explore Mathematics <span aria-hidden="true">↗</span>
                     </a>
 
                     <a class="home-btn home-btn-secondary" href="jee.html">
-                        JEE Prep
+                        Explore JEE Prep <span aria-hidden="true">↗</span>
                     </a>
-
                 </div>
 
+                <div class="bb-hero-note">
+                    <span class="bb-note-star" aria-hidden="true">✳</span>
+                    MADE FOR CURIOUS MINDS
+                </div>
             </div>
 
+            <div class="bb-hero-doodle bb-doodle-left" aria-hidden="true">✦</div>
+            <div class="bb-hero-doodle bb-doodle-right" aria-hidden="true">✳</div>
+            <div class="bb-hero-doodle bb-doodle-bottom" aria-hidden="true">✧</div>
         </section>
 
 
@@ -90,7 +105,7 @@
             <div class="home-section-heading">
                 <span>START HERE</span>
 
-                <h2>Choose Your Path</h2>
+                <h2 class="choose-path-heading">Choose Your Path</h2>
 
                 <p>
                     Build your mathematical foundation or prepare
@@ -132,12 +147,13 @@
                             Explore Math <span>→</span>
                         </div>
 
-                    </div>
+                    </div> <!-- Closes path-card-content -->
 
-                </a>
+                </a> <!-- Closes Mathematics card -->
 
 
                 <!-- JEE -->
+
 
                 <a href="jee.html" class="path-card jee-path">
 
@@ -170,6 +186,8 @@
 
                     </div>
 
+
+
                 </a>
 
             </div>
@@ -181,57 +199,91 @@
              MATHEMATICS
         ========================== -->
 
-        <section class="home-section home-math-section">
+
+        <!-- =========================
+     MATHEMATICS ROADMAP
+========================== -->
+
+        <section class="home-section home-math-section" id="mathematics">
 
             <div class="home-section-heading">
+                <span>YOUR MATHEMATICS JOURNEY</span>
 
-                <span>BUILDBRIGHT MATHEMATICS</span>
-
-                <h2>Build the Foundation.</h2>
+                <h2>
+                    Start small.<br>
+                    <span class="bb-math-heading-accent">Think big.</span>
+                </h2>
 
                 <p>
-                    A complete mathematics pathway designed to take
-                    students from fundamentals to advanced calculus.
+                    Every big breakthrough begins with the basics.
+                    Follow a clear path from Algebra to Calculus,
+                    one concept at a time.
                 </p>
-
             </div>
-
 
             <div class="math-roadmap">
 
+                <!-- STAGE 1 -->
                 <div class="roadmap-course">
                     <div class="roadmap-number">01</div>
-                    <div>
+
+                    <div class="bb-roadmap-art" aria-hidden="true">
+                        x²
+                    </div>
+
+                    <div class="bb-roadmap-copy">
+                        <span class="bb-roadmap-label">THE BEGINNING</span>
                         <strong>Algebra 1</strong>
                         <span>Build the fundamentals</span>
                     </div>
                 </div>
 
-                <div class="roadmap-arrow">→</div>
+                <div class="roadmap-arrow" aria-hidden="true">→</div>
 
+                <!-- STAGE 2 -->
                 <div class="roadmap-course">
                     <div class="roadmap-number">02</div>
-                    <div>
+
+                    <div class="bb-roadmap-art" aria-hidden="true">
+                        △
+                    </div>
+
+                    <div class="bb-roadmap-copy">
+                        <span class="bb-roadmap-label">EXPLORE SHAPES</span>
                         <strong>Geometry</strong>
                         <span>Develop spatial reasoning</span>
                     </div>
                 </div>
 
-                <div class="roadmap-arrow">→</div>
+                <div class="roadmap-arrow" aria-hidden="true">→</div>
 
+                <!-- STAGE 3 -->
                 <div class="roadmap-course">
                     <div class="roadmap-number">03</div>
-                    <div>
+
+                    <div class="bb-roadmap-art" aria-hidden="true">
+                        ƒ(x)
+                    </div>
+
+                    <div class="bb-roadmap-copy">
+                        <span class="bb-roadmap-label">LEVEL UP</span>
                         <strong>Algebra 2</strong>
                         <span>Advance your algebra</span>
                     </div>
                 </div>
 
-                <div class="roadmap-arrow">→</div>
+                <div class="roadmap-arrow" aria-hidden="true">→</div>
 
+                <!-- STAGE 4 -->
                 <div class="roadmap-course">
                     <div class="roadmap-number">04</div>
-                    <div>
+
+                    <div class="bb-roadmap-art" aria-hidden="true">
+                        ∫
+                    </div>
+
+                    <div class="bb-roadmap-copy">
+                        <span class="bb-roadmap-label">GO FURTHER</span>
                         <strong>Calculus</strong>
                         <span>Calculus I through IV</span>
                     </div>
@@ -239,16 +291,15 @@
 
             </div>
 
-
             <div class="home-center-button">
-
-                <a class="home-btn home-btn-primary" href="courses.html">
-                    View Math Courses
+                <a class="home-btn home-btn-primary bb-roadmap-cta" href="courses.html">
+                    Explore All Math Courses
+                    <span aria-hidden="true">↗</span>
                 </a>
-
             </div>
 
         </section>
+
 
 
         <!-- =========================
@@ -273,7 +324,7 @@
 
             <div class="jee-subject-grid">
 
-                <div class="jee-subject-card">
+                <a href="jee-subject.html?subject=mathematics" class="jee-subject-card">
 
                     <div class="subject-symbol">
                         π
@@ -287,13 +338,13 @@
                     </p>
 
                     <span class="coming-soon">
-                        Coming Soon
+                        Explore Lessons →
                     </span>
 
-                </div>
+                </a>
 
 
-                <div class="jee-subject-card">
+                <a href="jee-subject.html?subject=physics" class="jee-subject-card">
 
                     <div class="subject-symbol">
                         F
@@ -307,13 +358,12 @@
                     </p>
 
                     <span class="coming-soon">
-                        Coming Soon
+                        Explore Lessons →
                     </span>
 
-                </div>
+                </a>
 
-
-                <div class="jee-subject-card">
+                <a href="jee-subject.html?subject=chemistry" class="jee-subject-card">
 
                     <div class="subject-symbol">
                         ⚗
@@ -327,10 +377,10 @@
                     </p>
 
                     <span class="coming-soon">
-                        Coming Soon
+                        Explore Lessons ->
                     </span>
 
-                </div>
+                </a>
 
             </div>
 
@@ -372,7 +422,7 @@
              FEATURES
         ========================== -->
 
-        <section class="home-section">
+        <section class="home-section bb-features-section">
 
             <div class="home-section-heading">
 
@@ -430,30 +480,129 @@
              MISSION
         ========================== -->
 
-        <section class="mission-section" id="about">
 
-            <div class="mission-content">
+        <!-- =========================
+     BUILDBRIGHT MISSION
+========================== -->
 
-                <span>WHY BUILDBRIGHT</span>
+        <section class="mission-section bb-mission-section" id="about">
+
+            <div class="bb-mission-layout">
+
+                <!-- LEFT: Mission content -->
+                <div class="mission-content">
+
+                    <span class="bb-mission-eyebrow">
+                        ✳ WHY BUILDBRIGHT EXISTS
+                    </span>
+
+                    <h2>
+                        Big dreams.<br>
+                        <span>Zero barriers.</span>
+                    </h2>
+
+                    <p class="bb-mission-description">
+                        Ambition shouldn't come with a price tag.
+                        We're building rigorous mathematics education
+                        and JEE preparation that everyone can access,
+                        without tuition, subscriptions, or expensive coaching.
+                    </p>
+
+                    <a class="bb-mission-button" href="courses.html">
+                        Start Learning
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                </div>
+
+                <!-- RIGHT: Decorative illustration -->
+                <div class="bb-mission-art" aria-hidden="true">
+
+                    <div class="bb-mission-art-circle"></div>
+
+                    <div class="bb-mission-art-card">
+
+                        <span class="bb-art-spark">✳</span>
+
+                        <div class="bb-art-book">
+                            <span>BUILD</span>
+                            <span>BRIGHT</span>
+                        </div>
+
+                        <div class="bb-art-caption">
+                            LEARNING FOR EVERYONE
+                        </div>
+
+                    </div>
+
+                    <div class="bb-mission-art-star">✦</div>
+
+                    <div class="bb-mission-art-dot"></div>
+
+                </div>
+
+            </div>
+
+            <div class="bb-mission-footer">
+                <span>MADE FOR CURIOUS MINDS</span>
+                <span>BUILT FOR BIG DREAMS ✳</span>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =========================
+     FINAL CALL TO ACTION
+========================== -->
+
+        <section class="bb-final-cta" id="start-learning">
+
+            <div class="bb-cta-decoration bb-deco-one" aria-hidden="true"></div>
+            <div class="bb-cta-decoration bb-deco-two" aria-hidden="true"></div>
+            <div class="bb-cta-decoration bb-deco-three" aria-hidden="true"></div>
+            <div class="bb-cta-decoration bb-deco-four" aria-hidden="true"></div>
+
+            <div class="bb-final-cta-content">
+
+                <span class="bb-cta-eyebrow">
+                    YOUR NEXT CHAPTER STARTS HERE
+                </span>
 
                 <h2>
-                    Ambition shouldn't<br>
-                    come with a price tag.
+                    Let's build your<br>
+                    <span>brighter future.</span>
                 </h2>
 
                 <p>
-                    BuildBright is building rigorous mathematics
-                    education and JEE preparation without tuition,
-                    subscriptions or expensive coaching.
+                    Big dreams start with small steps.
+                    Explore mathematics, strengthen your skills,
+                    and discover what you're capable of.
                 </p>
 
-                <a class="home-btn home-btn-light" href="courses.html">
-                    Start Learning
-                </a>
+                <div class="bb-cta-buttons">
+
+                    <a href="courses.html" class="bb-cta-button">
+                        Explore Mathematics
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="jee.html" class="bb-cta-button bb-cta-secondary">
+                        Explore JEE Prep
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                </div>
+
+                <div class="bb-cta-bottom-note">
+                    ✳ LEARN MORE. DREAM BIGGER.
+                </div>
 
             </div>
 
         </section>
+
 
     </main>
 
@@ -461,6 +610,7 @@
     <!-- =========================
          FOOTER
     ========================== -->
+
 
     <footer class="home-footer" id="contact">
 
@@ -487,8 +637,64 @@
             © 2026 BuildBright
         </div>
 
-    </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
 
+                const elements = document.querySelectorAll(
+                    ".home-section-heading > *, " +
+                    ".path-card, " +
+                    ".roadmap-course, " +
+                    ".roadmap-arrow, " +
+                    ".jee-home-section h2, " +
+                    ".jee-home-section h3, " +
+                    ".jee-home-section p, " +
+                    ".jee-home-section .home-btn, " +
+                    ".mission-section h2, " +
+                    ".mission-section h3, " +
+                    ".mission-section p, " +
+                    ".mission-section a, " +
+                    ".home-footer > *, " +
+                    ".home-section > h2, " +
+                    ".home-section > p"
+                );
+
+                if (!("IntersectionObserver" in window)) {
+                    return;
+                }
+
+                elements.forEach(function (element) {
+                    element.classList.add("scroll-reveal");
+                });
+
+                const observer = new IntersectionObserver(
+                    function (entries) {
+
+                        entries.forEach(function (entry) {
+
+                            if (entry.isIntersecting) {
+
+                                entry.target.classList.add("is-visible");
+
+                                observer.unobserve(entry.target);
+                            }
+
+                        });
+
+                    },
+                    {
+                        threshold: 0.08,
+                        rootMargin: "0px 0px -30px 0px"
+                    }
+                );
+
+                elements.forEach(function (element) {
+                    observer.observe(element);
+                });
+
+            });
+        </script>
+
+    </footer>
 </body>
 
 </html>
