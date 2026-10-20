@@ -19,36 +19,92 @@ document.addEventListener("DOMContentLoaded", () => {
     const questionCount =
         document.getElementById("questionCount");
 
-    // Read the existing Physics question bank.
-    const bank = typeof jeePhysicsQuestions !== "undefined"
-        ? jeePhysicsQuestions
-        : {};
+    // Read all three subject question banks.
+    const subjectSelect =
+        document.getElementById("questionSubject");
+
+    const banks = {
+        physics:
+            typeof jeePhysicsQuestions !== "undefined"
+                ? jeePhysicsQuestions
+                : {},
+
+        mathematics:
+            typeof jeeMathQuestions !== "undefined"
+                ? jeeMathQuestions
+                : {},
+
+        chemistry:
+            typeof jeeChemistryQuestions !== "undefined"
+                ? jeeChemistryQuestions
+                : {}
+    };
 
     const questions = [];
 
-    // Build a list from the existing practice questions.
-    Object.entries(bank).forEach(([chapter, data]) => {
+    // Combine practice questions from every subject.
+    Object.entries(banks).forEach(([subject, bank]) => {
 
-        if (!Array.isArray(data.practice)) {
-            return;
-        }
+        Object.entries(bank).forEach(([chapter, data]) => {
 
-        data.practice.forEach((question, index) => {
+            if (!Array.isArray(data.practice)) {
+                return;
+            }
 
-            questions.push({
-                ...question,
-                chapter,
-                uniqueId: chapter + "-" + (question.id || index)
+            data.practice.forEach((question, index) => {
+
+                if (
+                    !question ||
+                    typeof question.question !== "string" ||
+                    !Array.isArray(question.options) ||
+                    question.options.length !== 4 ||
+                    !Number.isInteger(question.answer) ||
+                    question.answer < 0 ||
+                    question.answer > 3
+                ) {
+                    return;
+                }
+
+                questions.push({
+                    ...question,
+                    subject,
+                    chapter,
+                    uniqueId:
+                        subject + "-" + chapter + "-" +
+                        (question.id || index)
+                });
+
             });
 
         });
 
     });
 
-    // Add available chapters to the dropdown.
-    [...new Set(questions.map(q => q.chapter))]
-        .sort()
-        .forEach(chapter => {
+    // Show chapters belonging to the selected subject.
+    function updateChapterOptions() {
+
+        const selectedSubject = subjectSelect.value;
+
+        const availableChapters = [
+            ...new Set(
+                questions
+                    .filter(q =>
+                        selectedSubject === "all" ||
+                        q.subject === selectedSubject
+                    )
+                    .map(q => q.chapter)
+            )
+        ].sort();
+
+        chapterSelect.replaceChildren();
+
+        const allOption = document.createElement("option");
+        allOption.value = "all";
+        allOption.textContent = "All Chapters";
+
+        chapterSelect.appendChild(allOption);
+
+        availableChapters.forEach(chapter => {
 
             const option = document.createElement("option");
 
@@ -59,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
+    }
     // Add available difficulty levels.
     [...new Set(
         questions.map(q => q.difficulty).filter(Boolean)
@@ -77,12 +134,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderQuestions() {
 
+
+        const selectedSubject = subjectSelect.value;
         const selectedChapter = chapterSelect.value;
         const selectedDifficulty = difficultySelect.value;
         const searchTerm = searchInput.value.trim().toLowerCase();
 
         const filtered = questions.filter(q => {
 
+
+            const matchesSubject =
+                selectedSubject === "all" ||
+                q.subject === selectedSubject;
             const matchesChapter =
                 selectedChapter === "all" ||
                 q.chapter === selectedChapter;
@@ -100,7 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const matchesSearch =
                 searchableText.includes(searchTerm);
 
-            return matchesChapter &&
+            return matchesSubject &&
+                matchesChapter &&
                 matchesDifficulty &&
                 matchesSearch;
 
@@ -131,6 +195,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const meta = document.createElement("div");
             meta.className = "question-bank-meta";
+            const subjectBadge = document.createElement("span");
+
+            subjectBadge.textContent =
+                question.subject.charAt(0).toUpperCase() +
+                question.subject.slice(1);
+
+            meta.appendChild(subjectBadge);
 
             const chapter = document.createElement("span");
             chapter.textContent = question.chapter;
@@ -226,10 +297,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
+    subjectSelect.addEventListener("change", () => {
+
+        updateChapterOptions();
+        renderQuestions();
+
+    });
     chapterSelect.addEventListener("change", renderQuestions);
     difficultySelect.addEventListener("change", renderQuestions);
     searchInput.addEventListener("input", renderQuestions);
 
+    updateChapterOptions();
     renderQuestions();
 
 });

@@ -25,8 +25,6 @@ body {
     margin-bottom: 24px;
 }
 
-
-
 .button,
 button {
     display: inline-flex;
@@ -14816,5 +14814,66 @@ body.jee-questions-page select:focus-visible {
 
     body.jee-questions-page .question-bank-card {
         padding: 22px;
+    }
+}
+
+/* =========================================
+   BUILDBRIGHT — COLORFUL MATH LESSONS
+   ========================================= */
+
+body:has(.lesson-content) {
+    background: #f8f6f0;
+}
+
+/* Main lesson content */
+
+.lesson-content {
+    background: transparent;
+}
+
+/* Lesson headings */
+
+.lesson-content h2 {
+    color: #302545;
+}
+
+/* Individual lesson sections */
+
+.lesson-content>section,
+.lesson-content>article {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 28px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(90, 65, 125, 0.08);
+    box-shadow: 0 6px 20px rgba(70, 45, 100, 0.04);
+}
+
+/* Lavender sections */
+
+.lesson-content>section:nth-of-type(3n + 1) {
+    background: #e8dcff;
+}
+
+/* Green sections */
+
+.lesson-content>section:nth-of-type(3n + 2) {
+    background: #e6f3c8;
+}
+
+/* Pink sections */
+
+.lesson-content>section:nth-of-type(3n) {
+    background: #f6dce9;
+}
+
+/* Mobile layout */
+
+@media (max-width: 768px) {
+
+    .lesson-content>section,
+    .lesson-content>article {
+        padding: 20px;
+        border-radius: 18px;
     }
 }
